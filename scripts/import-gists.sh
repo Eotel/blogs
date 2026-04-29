@@ -73,8 +73,9 @@ while IFS= read -r gist_json; do
         TITLE=$(echo "$CONTENT" | grep -m1 '^#' | sed 's/^#\+\s*//' || echo "$FILENAME")
     fi
 
-    # Escape quotes in title for YAML
-    TITLE=$(echo "$TITLE" | sed 's/"/\\"/g')
+    # Encode title as a JSON string (valid YAML, since YAML 1.2 is a JSON superset).
+    # This safely handles ", \, `, $, newlines, leading ---, control chars, etc.
+    TITLE_YAML=$(jq -Rn --arg t "$TITLE" '$t')
 
     # Remove leading heading if it matches title (avoid duplication)
     BODY="$CONTENT"
@@ -88,7 +89,7 @@ while IFS= read -r gist_json; do
     # Write Hugo post
     cat > "$POST_FILE" << FRONTMATTER
 ---
-title: "$TITLE"
+title: $TITLE_YAML
 date: ${DATE}
 lastmod: $(echo "$UPDATED" | cut -c1-10)
 draft: false
