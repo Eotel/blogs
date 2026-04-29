@@ -1,15 +1,22 @@
 #!/usr/bin/env python3
 """Auto-categorize Hugo blog posts based on title and content keywords."""
 
-import os
-import re
-import glob
+from __future__ import annotations
 
-POSTS_DIR = os.path.join(os.path.dirname(__file__), '..', 'content', 'posts')
+import re
+import sys
+from pathlib import Path
+from typing import Any
+
+import yaml
+
+POSTS_DIR = Path(__file__).resolve().parent.parent / "content" / "posts"
+
+FRONTMATTER_RE = re.compile(r"^---\n(.*?)\n---\n(.*)\Z", re.DOTALL)
 
 # Category rules: (category, [keywords])
 # Order matters - first match wins for primary category
-CATEGORY_RULES = [
+CATEGORY_RULES: list[tuple[str, list[str]]] = [
     # AI/LLM
     ("AI/LLM", [
         "claude", "gpt", "chatgpt", "llm", "ai ", "ai-", "aiエージェント",
@@ -86,7 +93,7 @@ CATEGORY_RULES = [
 ]
 
 # Tag extraction rules
-TAG_RULES = [
+TAG_RULES: list[tuple[str, list[str]]] = [
     ("claude-code", ["claude code", "claude-code"]),
     ("claude", ["claude"]),
     ("chatgpt", ["chatgpt", "gpt-4", "gpt-3"]),
@@ -130,122 +137,117 @@ TAG_RULES = [
 ]
 
 
-def parse_frontmatter(filepath):
-    """Parse Hugo frontmatter and content."""
-    with open(filepath, 'r', encoding='utf-8') as f:
-        content = f.read()
-
-    match = re.match(r'^---\n(.*?)\n---\n(.*)', content, re.DOTALL)
+def split_frontmatter(text: str) -> tuple[str, str] | None:
+    """Split a Hugo post into (frontmatter_text, body). Return None if no frontmatter."""
+    match = FRONTMATTER_RE.match(text)
     if not match:
-        return None, None, content
-
-    fm_text = match.group(1)
-    body = match.group(2)
-
-    # Simple YAML-like parse
-    fm = {}
-    for line in fm_text.split('\n'):
-        if ':' in line:
-            key, _, value = line.partition(':')
-            key = key.strip()
-            value = value.strip()
-            fm[key] = value
-
-    return fm, fm_text, body
+        return None
+    return match.group(1), match.group(2)
 
 
-def categorize(title, body_preview):
+def parse_frontmatter(fm_text: str) -> dict[str, Any]:
+    """Parse frontmatter YAML safely. Return empty dict on failure."""
+    try:
+        data = yaml.safe_load(fm_text)
+    except yaml.YAMLError:
+        return {}
+    return data if isinstance(data, dict) else {}
+
+
+def categorize(title: str, body_preview: str) -> str:
     """Assign category based on title and first 500 chars of body."""
     text = (title + " " + body_preview[:500]).lower()
-
     for category, keywords in CATEGORY_RULES:
         for kw in keywords:
             if kw.lower() in text:
                 return category
-
     return "その他"
 
 
-def extract_tags(title, body_preview):
-    """Extract tags based on title and content."""
+def extract_tags(title: str, body_preview: str) -> list[str]:
+    """Extract up to 5 tags based on title and content."""
     text = (title + " " + body_preview[:1000]).lower()
-    tags = []
-
+    tags: list[str] = []
     for tag, keywords in TAG_RULES:
         for kw in keywords:
             if kw.lower() in text:
                 tags.append(tag)
                 break
+    return tags[:5]
 
-    return tags[:5]  # Max 5 tags
+
+def is_empty_list(value: Any) -> bool:
+    """True if value is missing, None, or an empty list."""
+    return value is None or (isinstance(value, list) and len(value) == 0)
 
 
-def update_post(filepath):
-    """Update a post's frontmatter with category and tags."""
-    with open(filepath, 'r', encoding='utf-8') as f:
-        content = f.read()
+def update_post(filepath: Path) -> tuple[bool, str | None]:
+    """Update a post's frontmatter with category and tags.
 
-    match = re.match(r'^---\n(.*?)\n---\n(.*)', content, re.DOTALL)
-    if not match:
-        return False
+    Returns (updated, category). category is None if the post was skipped.
+    """
+    text = filepath.read_text(encoding="utf-8")
+    split = split_frontmatter(text)
+    if split is None:
+        return False, None
+    fm_text, body = split
 
-    fm_text = match.group(1)
-    body = match.group(2)
+    fm = parse_frontmatter(fm_text)
 
-    # Skip if already categorized
-    if 'categories: [' in fm_text:
-        cat_match = re.search(r'categories: \[(.*?)\]', fm_text)
-        if cat_match and cat_match.group(1).strip():
-            return False  # Already has categories
+    # Skip if already categorized (non-empty list)
+    if not is_empty_list(fm.get("categories")):
+        return False, None
 
-    # Get title
-    title_match = re.search(r'title:\s*"(.*?)"', fm_text)
-    if not title_match:
-        title_match = re.search(r'title:\s*(.*)', fm_text)
-    title = title_match.group(1) if title_match else ""
-
+    title = str(fm.get("title", ""))
     category = categorize(title, body)
     tags = extract_tags(title, body)
 
-    # Update frontmatter
     cat_str = f'["{category}"]'
     tag_str = "[" + ", ".join(f'"{t}"' for t in tags) + "]" if tags else "[]"
 
-    new_fm = re.sub(r'categories: \[\]', f'categories: {cat_str}', fm_text)
-    new_fm = re.sub(r'tags: \[\]', f'tags: {tag_str}', new_fm)
+    # Replace empty arrays only on top-level lines (start-of-line anchored).
+    new_fm = re.sub(
+        r"(?m)^categories:\s*\[\s*\]\s*$", f"categories: {cat_str}", fm_text
+    )
+    new_fm = re.sub(
+        r"(?m)^tags:\s*\[\s*\]\s*$", f"tags: {tag_str}", new_fm
+    )
 
-    new_content = f"---\n{new_fm}\n---\n{body}"
+    if new_fm == fm_text:
+        # Nothing to substitute (e.g., categories field uses different syntax).
+        return False, None
 
-    with open(filepath, 'w', encoding='utf-8') as f:
-        f.write(new_content)
-
-    return True
+    filepath.write_text(f"---\n{new_fm}\n---\n{body}", encoding="utf-8")
+    return True, category
 
 
-def main():
-    posts = sorted(glob.glob(os.path.join(POSTS_DIR, '**', '*.md'), recursive=True))
+def iter_posts(posts_dir: Path) -> list[Path]:
+    """Return all post files except section index files."""
+    return sorted(
+        p for p in posts_dir.rglob("*.md") if p.name != "_index.md"
+    )
+
+
+def main() -> int:
+    if not POSTS_DIR.is_dir():
+        print(f"Posts directory not found: {POSTS_DIR}", file=sys.stderr)
+        return 1
+
     updated = 0
-    category_counts = {}
+    category_counts: dict[str, int] = {}
 
-    for filepath in posts:
-        if os.path.basename(filepath) == '_index.md':
-            continue
-        if update_post(filepath):
+    for filepath in iter_posts(POSTS_DIR):
+        changed, category = update_post(filepath)
+        if changed and category is not None:
             updated += 1
-
-            # Count categories for summary
-            with open(filepath, 'r') as f:
-                content = f.read()
-            cat_match = re.search(r'categories: \["(.*?)"\]', content)
-            if cat_match:
-                cat = cat_match.group(1)
-                category_counts[cat] = category_counts.get(cat, 0) + 1
+            category_counts[category] = category_counts.get(category, 0) + 1
 
     print(f"Updated {updated} posts")
     print("\nCategory distribution:")
     for cat, count in sorted(category_counts.items(), key=lambda x: -x[1]):
         print(f"  {cat}: {count}")
+    return 0
 
 
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    sys.exit(main())
