@@ -6,8 +6,8 @@
 # This avoids passing URLs as command arguments, which triggers security checks.
 #
 # Example:
-#   echo "https://github.com/hdknr/blogs/pull/138" > .claude/temp/pr-url.txt
-#   bash .claude/scripts/update-issue-comment.sh hdknr blogs 4129378712 .claude/temp/pr-url.txt
+#   echo "https://github.com/Eotel/blogs/pull/138" > .claude/temp/pr-url.txt
+#   bash .claude/scripts/update-issue-comment.sh Eotel blogs 4129378712 .claude/temp/pr-url.txt
 
 set -euo pipefail
 

@@ -1,7 +1,7 @@
-baseURL = 'https://hdknr.github.io/blogs/'
+baseURL = 'https://eotel.github.io/blogs/'
 languageCode = 'ja'
 defaultContentLanguage = 'ja'
-title = 'hdknr blog'
+title = 'Eotel blog'
 theme = 'PaperMod'
 paginate = 10
 
@@ -14,10 +14,11 @@ paginate = 10
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
   ShowToc = true
+  defaultAuthor = 'eotel'
 
   [params.homeInfoParams]
-    Title = 'hdknr blog'
-    Content = 'Gist ブログのまとめサイト'
+    Title = 'Eotel blog'
+    Content = 'Gist と Issue から自動生成する個人ブログ。historical post は hdknr 由来。'
 
 [permalinks]
   [permalinks.page]
@@ -26,6 +27,7 @@ paginate = 10
 [taxonomies]
   category = 'categories'
   tag = 'tags'
+  author = 'author'
 
 [menu]
   [[menu.main]]
@@ -38,6 +40,11 @@ paginate = 10
     name = 'タグ'
     url = '/tags/'
     weight = 20
+  [[menu.main]]
+    identifier = 'authors'
+    name = '著者'
+    url = '/author/'
+    weight = 25
   [[menu.main]]
     identifier = 'wiki'
     name = 'Wiki'

@@ -1,0 +1,26 @@
+{
+  "_comment": "Author allowlist for the blog ingestion pipeline. Used by import-gists.sh, blog-batch.sh, and backfill_authors.py. Fields: id=canonical short key (lowercase, used as the `author` frontmatter value), github_login=GitHub username for gh api, display_name=shown on rendered posts, url=profile, gist_import=true means import-gists.sh auto-crawls public gists for files matching `*.blog.md` (opt-in convention); false means no automatic crawl (existing posts under content/posts/ are preserved either way).",
+  "authors": [
+    {
+      "id": "hdknr",
+      "github_login": "hdknr",
+      "display_name": "hdknr",
+      "url": "https://github.com/hdknr",
+      "gist_import": false
+    },
+    {
+      "id": "eotel",
+      "github_login": "Eotel",
+      "display_name": "Eotel",
+      "url": "https://github.com/Eotel",
+      "gist_import": true
+    },
+    {
+      "id": "karpathy",
+      "github_login": "karpathy",
+      "display_name": "Andrej Karpathy",
+      "url": "https://karpathy.ai",
+      "gist_import": false
+    }
+  ]
+}

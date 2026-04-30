@@ -21,7 +21,15 @@
 
 set -euo pipefail
 
-REPO="hdknr/blogs"
+BLOG_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+AUTHORS_FILE="$BLOG_DIR/scripts/authors.json"
+
+if [ ! -f "$AUTHORS_FILE" ]; then
+  echo "ERROR: authors config not found: $AUTHORS_FILE" >&2
+  exit 1
+fi
+
+REPO="Eotel/blogs"
 ISSUE_NUMBER="${1:?Usage: blog-batch.sh <issue_number> [--dry-run] [--limit N] [--skip-review] [--model MODEL] [--interval SECS] [--overnight]}"
 shift
 
@@ -58,10 +66,14 @@ LOG_FILE=".claude/temp/blog-batch-${TIMESTAMP}.log"
 REPORT_FILE=".claude/temp/blog-batch-report-${TIMESTAMP}.md"
 
 # --- 未ブログ化コメント取得 ---
+# Allowlist of GitHub logins to accept (built from authors.json).
+ALLOWED_LOGINS=$(jq -c '[.authors[].github_login]' "$AUTHORS_FILE")
+
 echo "=== Issue #${ISSUE_NUMBER} の未ブログ化コメントを取得中... ==="
+echo "    投稿者 allowlist: ${ALLOWED_LOGINS}"
 COMMENTS_JSON=$(gh api "repos/${REPO}/issues/${ISSUE_NUMBER}/comments" \
   --paginate \
-  --jq '[.[] | select(.reactions.rocket == 0) | {id: .id, url: .html_url, body: .body}]')
+  --jq "[.[] | select(.reactions.rocket == 0) | select(.user.login as \$u | ${ALLOWED_LOGINS} | index(\$u)) | {id: .id, url: .html_url, body: .body, login: .user.login}]")
 
 # jq で配列を結合（--paginate は複数の配列を出力する）
 COMMENTS=$(echo "$COMMENTS_JSON" | jq -s 'add')
@@ -144,14 +156,25 @@ for i in $(seq 0 $((PROCESS_COUNT - 1))); do
   COMMENT=$(echo "$COMMENTS" | jq -r ".[$i]")
   COMMENT_ID=$(echo "$COMMENT" | jq -r '.id')
   COMMENT_URL=$(echo "$COMMENT" | jq -r '.url')
+  COMMENT_LOGIN=$(echo "$COMMENT" | jq -r '.login')
   BODY_PREVIEW=$(echo "$COMMENT" | jq -r '.body' | head -1 | cut -c1-80)
   NUM=$((i + 1))
 
-  echo "[${NUM}/${PROCESS_COUNT}] $(date '+%H:%M:%S') ${COMMENT_URL}"
+  # Resolve GitHub login -> author id via authors.json
+  AUTHOR_ID=$(jq -r --arg l "$COMMENT_LOGIN" '.authors[] | select(.github_login == $l) | .id' "$AUTHORS_FILE")
+  if [ -z "$AUTHOR_ID" ] || [ "$AUTHOR_ID" = "null" ]; then
+    AUTHOR_ID="$COMMENT_LOGIN"
+  fi
+
+  echo "[${NUM}/${PROCESS_COUNT}] $(date '+%H:%M:%S') ${COMMENT_URL} (author: ${AUTHOR_ID})"
   echo "    ${BODY_PREVIEW}"
 
   # claude -p でブログ作成
-  PROMPT="/blog ${COMMENT_URL}"
+  PROMPT="/blog ${COMMENT_URL}
+
+このコメントの投稿者は GitHub login \"${COMMENT_LOGIN}\" (author id \"${AUTHOR_ID}\") です。
+作成する記事のフロントマターに必ず以下を含めてください：
+  author: \"${AUTHOR_ID}\""
   if [[ -n "$SKIP_REVIEW_PROMPT" ]]; then
     PROMPT="${PROMPT}
 ${SKIP_REVIEW_PROMPT}"
@@ -163,7 +186,7 @@ ${SKIP_REVIEW_PROMPT}"
 
   if claude -p \
     --model "$MODEL" \
-    --dangerously-skip-permissions \
+    --permission-mode acceptEdits \
     --max-budget-usd 2.00 \
     "$PROMPT" \
     > "$RESULT_FILE" 2>&1; then
