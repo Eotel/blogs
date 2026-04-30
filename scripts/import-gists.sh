@@ -137,37 +137,25 @@ while IFS= read -r AUTHOR_ID; do
                 continue
             fi
 
-            # Title precedence: gist description > first heading in body > basename
-            TITLE="$DESCRIPTION"
-            if [ -z "$TITLE" ] || [ "$TITLE" = "$FILENAME" ]; then
-                TITLE=$(echo "$CONTENT" | grep -m1 '^#' | sed 's/^#\+\s*//' || echo "$BASE_NAME")
-            fi
+            # Delegate frontmatter merge + body extraction to a Python helper.
+            # The gist file may optionally start with its own YAML frontmatter
+            # (title/draft/categories/tags/aliases/source_url/description); that
+            # takes precedence over the auto-generated metadata for content
+            # fields, while system fields (date/lastmod/author/gist_*) are
+            # always set from the args below.
+            LASTMOD=$(echo "$UPDATED" | cut -c1-10)
+            GIST_URL_VAL="https://gist.github.com/${OWNER_LOGIN}/${GIST_ID}"
 
-            # Encode title as a JSON string (valid YAML, since YAML 1.2 ⊃ JSON).
-            TITLE_YAML=$(jq -Rn --arg t "$TITLE" '$t')
-
-            BODY="$CONTENT"
-            FIRST_HEADING=$(echo "$CONTENT" | grep -m1 '^#' | sed 's/^#\+\s*//' || echo "")
-            if [ -n "$FIRST_HEADING" ]; then
-                BODY=$(echo "$CONTENT" | sed '0,/^#/{/^#/d;}')
-            fi
-
-            cat > "$POST_FILE" << FRONTMATTER
----
-title: $TITLE_YAML
-date: ${DATE}
-lastmod: $(echo "$UPDATED" | cut -c1-10)
-draft: false
-author: "${AUTHOR_ID}"
-gist_id: "${GIST_ID}"
-gist_url: "https://gist.github.com/${OWNER_LOGIN}/${GIST_ID}"
-gist_file: "${FILENAME}"
-categories: []
-tags: []
----
-
-$BODY
-FRONTMATTER
+            printf '%s' "$CONTENT" | python3 "$BLOG_DIR/scripts/merge_gist_frontmatter.py" \
+                --gist-id "$GIST_ID" \
+                --gist-url "$GIST_URL_VAL" \
+                --gist-file "$FILENAME" \
+                --author "$AUTHOR_ID" \
+                --date "$DATE" \
+                --lastmod "$LASTMOD" \
+                --description "$DESCRIPTION" \
+                --basename "$BASE_NAME" \
+                > "$POST_FILE"
 
             IMPORTED=$((IMPORTED + 1))
         done
