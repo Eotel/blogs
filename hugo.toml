@@ -14,7 +14,7 @@ paginate = 10
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
   ShowToc = true
-  defaultAuthor = 'eotel'
+  author = 'Eotel'
 
   [params.homeInfoParams]
     Title = 'Eotel blog'
