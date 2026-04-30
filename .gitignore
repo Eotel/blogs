@@ -8,3 +8,11 @@ resources/_gen/
 .mcp.json
 __pycache__/
 *.pyc
+
+# secrets / credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.key
