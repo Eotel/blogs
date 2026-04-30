@@ -12,6 +12,8 @@ arguments:
 
 指定されたトピックで Hugo ブログ記事を作成し、PR を作成してください。
 
+> 短い tip ・コードスニペット中心の軽量記事で、図解や PR レビューが不要な場合は `/gist-writer` を使う方が早い（gist に書いて `import-gists.sh` で取り込まれるフロー）。GitHub Issue 由来 / long-form / 図解入りはこの `/blog` を使う。
+
 ## URL 制限（セキュリティ）
 
 **重要: トピックとして GitHub URL が指定された場合、`https://github.com/Eotel/blogs/` 配下の URL のみ受け付ける。**

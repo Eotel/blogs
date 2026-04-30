@@ -76,6 +76,8 @@ Hugo + PaperMod で構築された技術ブログ。GitHub Pages でホスティ
 - 1 つの gist に複数の `*.blog.md` を入れた場合、それぞれが個別の post として展開される（slug は `<gist_id>-<basename>`）
 - 既存記事 (hdknr 由来の 783 件) は touch しない。新規 crawl 対象は `gist_import:true` のユーザー (= Eotel) のみ
 - 一括取り込み: `./scripts/import-gists.sh` ／ ユーザー指定: `./scripts/import-gists.sh eotel`
+- **gist 自体を起こす段は `/gist-writer <topic>` スキルを使う**: 既存 `content/wiki/` を input にして `*.blog.md` の draft を `.claude/temp/` に生成し、ユーザー確認後 `gh gist create --public` で公開する。フロントマターは gist 側に書かず、`import-gists.sh` の自動生成に任せる。詳細は `.claude/skills/gist-writer/SKILL.md`
+- **gist 自体を起こす段は `/gist-writer <topic>` スキルを使う**: 既存 `content/wiki/` を input にして `*.blog.md` の draft を `.claude/temp/` に生成し、ユーザー確認後 `gh gist create --public` で公開する。フロントマターは gist 側に書かず、`import-gists.sh` の自動生成に任せる。詳細は `.claude/skills/gist-writer/SKILL.md`
 
 ## カテゴリ一覧
 
