@@ -52,6 +52,14 @@ cat .claude/temp/blog-batch-report-*.md
 
 ### categorize.py — カテゴリ・タグ自動付与
 
+依存ライブラリ（PyYAML）を初回のみインストール:
+
+```bash
+pip install -r requirements.txt
+```
+
+実行:
+
 ```bash
 python scripts/categorize.py
 ```
