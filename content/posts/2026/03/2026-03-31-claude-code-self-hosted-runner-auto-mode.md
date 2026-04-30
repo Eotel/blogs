@@ -3,6 +3,7 @@ title: "Claude Code + Self-hosted Runner: 「Auto mode is unavailable for your p
 date: 2026-03-31
 lastmod: 2026-03-31
 draft: false
+author: "hdknr"
 categories: ["AI/LLM"]
 tags: ["claude-code", "github-actions"]
 source_url: "https://gist.github.com/hdknr/aa914d314b67a0ef8c1c4eabd1edb654"

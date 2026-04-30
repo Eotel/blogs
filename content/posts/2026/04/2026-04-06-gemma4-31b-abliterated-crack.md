@@ -3,6 +3,7 @@ title: "Gemma 4 31Bの脱獄モデル「CRACK」登場 — Abliteration技術で
 date: 2026-04-06
 lastmod: 2026-04-06
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4194462489"
 categories: ["AI/LLM"]
 description: "Google Gemma 4 31Bの安全性制限を除去した脱獄モデルCRACKの技術解説。Abliteration手法の仕組み、JANG_4M量子化で18GBに収めたスペック、HarmBenchとMMLUのベンチマーク結果を紹介。"

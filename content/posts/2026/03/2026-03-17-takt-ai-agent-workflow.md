@@ -3,6 +3,7 @@ title: "takt — AIコーディングエージェントのワークフローをY
 date: 2026-03-17
 lastmod: 2026-03-17
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4078664295"
 categories: ["AI/LLM"]
 tags: ["Claude Code", "AI agent", "CLI", "workflow", "multi-agent"]

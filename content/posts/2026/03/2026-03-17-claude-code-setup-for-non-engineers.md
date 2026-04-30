@@ -3,6 +3,7 @@ title: "非エンジニアでも1分で始められる Claude Code — CLAUDE.md
 date: 2026-03-17
 lastmod: 2026-03-17
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4077563578"
 categories: ["AI/LLM"]
 tags: ["Claude Code", "Claude", "AI活用", "生産性向上", "CLAUDE.md"]

@@ -3,6 +3,7 @@ title: "Claude Code Skills 構築完全ガイド — Anthropic 公式 33 ペー�
 date: 2026-03-10
 lastmod: 2026-03-10
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4031784046"
 categories: ["AI/LLM"]
 tags: ["claude-code", "claude", "anthropic", "prompt", "agent"]

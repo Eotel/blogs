@@ -4,6 +4,7 @@ date: 2026-04-05
 lastmod: 2026-04-05
 slug: "karpathy-llm-wiki"
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4189722488"
 categories: ["AI/LLM"]
 tags: ["LLM", "Karpathy", "ナレッジマネジメント", "AIエージェント", "RAG"]

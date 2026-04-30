@@ -3,6 +3,7 @@ title: "AIにログを読ませてPDCA計画を立てさせる：深津貴之氏
 date: 2026-03-23
 lastmod: 2026-03-23
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4113586720"
 categories: ["AI/LLM"]
 tags: ["llm", "prompt", "productivity", "pdca"]

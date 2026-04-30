@@ -4,6 +4,7 @@ date: 2026-03-10
 lastmod: 2026-03-18
 slug: "vibe-hacking"
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4031826348"
 categories: ["セキュリティ"]
 tags: ["security", "AI/LLM", "マルウェア"]

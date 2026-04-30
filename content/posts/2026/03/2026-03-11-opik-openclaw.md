@@ -3,6 +3,7 @@ title: "opik-openclaw — OpenClaw の AIエージェント動作を可視化す
 date: 2026-03-11
 lastmod: 2026-03-11
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4041953408"
 categories: ["AI/LLM"]
 tags: ["openclaw", "agent", "llm"]

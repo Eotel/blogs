@@ -3,6 +3,7 @@ title: "Claude Desktop Preview: 画面クリックでDOM要素を直接指定し
 date: 2026-03-23
 lastmod: 2026-03-23
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4113385416"
 categories: ["AI/LLM"]
 tags: ["claude-code", "claude", "claude-desktop", "react", "mcp"]

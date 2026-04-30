@@ -3,6 +3,7 @@ title: "Claude Coworkを「完璧な右腕」に変える最強の初期設定"
 date: 2026-03-17
 lastmod: 2026-03-17
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4077635522"
 categories: ["AI/LLM"]
 tags: ["Claude", "Claude Cowork", "生産性", "初期設定", "自動化"]

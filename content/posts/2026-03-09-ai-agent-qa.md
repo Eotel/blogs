@@ -3,6 +3,7 @@ title: "AI Agent に品質を担保させる — QA 手法の実践ガイド"
 date: 2026-03-09
 lastmod: 2026-03-09
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4026712243"
 categories: ["AI/LLM"]
 tags: ["claude-code", "agent", "security", "github"]

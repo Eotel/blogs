@@ -3,6 +3,7 @@ title: "Claude Code を Level 5 まで育てたら、開発が「指示と確認
 date: 2026-04-21
 lastmod: 2026-04-23
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4291430905"
 categories: ["AI/LLM"]
 tags: ["Claude Code", "CLAUDE.md", "Hooks", "Agents", "VibeCoding", "自動化"]

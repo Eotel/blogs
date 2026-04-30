@@ -4,6 +4,7 @@ date: 2026-04-10
 lastmod: 2026-04-10
 slug: "claude-managed-agents-architecture"
 draft: false
+author: "hdknr"
 description: "Anthropic のエンジニアリングブログに基づき、Claude Managed Agents の内部アーキテクチャを解説。Brain・Session・Hands の3層分離、セキュリティ境界、OpenClaw との設計思想の違いをダイアグラム付きで整理。"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4214253259"
 categories: ["AI/LLM"]

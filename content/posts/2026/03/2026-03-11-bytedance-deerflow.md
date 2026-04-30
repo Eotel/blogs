@@ -3,6 +3,7 @@ title: "ByteDance DeerFlow — オープンソースの SuperAgent 基盤でAI�
 date: 2026-03-11
 lastmod: 2026-03-11
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4035407734"
 categories: ["AI/LLM"]
 tags: ["llm", "agent", "claude-code", "python"]

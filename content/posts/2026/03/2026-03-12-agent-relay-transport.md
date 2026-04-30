@@ -3,6 +3,7 @@ title: "AIエージェント同士をつなぐRelay基盤 — 会話とtransport
 date: 2026-03-12
 lastmod: 2026-03-12
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4045606715"
 categories: ["AI/LLM"]
 tags: ["agent", "mcp", "llm"]

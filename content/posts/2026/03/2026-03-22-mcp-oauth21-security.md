@@ -3,6 +3,7 @@ title: "MCP のセキュリティが OAuth 2.1 で大幅進化：AI エージェ
 date: 2026-03-22
 lastmod: 2026-03-22
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4106918372"
 categories: ["AI/LLM"]
 tags: ["mcp", "agent", "security", "oauth2"]

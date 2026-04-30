@@ -3,6 +3,7 @@ title: "OpenClawスキルの厳選コレクション — AIエージェントを
 date: 2026-03-15
 lastmod: 2026-03-15
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4062012721"
 categories: ["AI/LLM"]
 tags: ["openclaw", "claude-code", "agent", "github"]

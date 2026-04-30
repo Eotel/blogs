@@ -3,6 +3,7 @@ title: "Impeccable — AI コーディングツールのフロントエンド設
 date: 2026-03-09
 lastmod: 2026-03-09
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4020349617"
 categories: ["AI/LLM"]
 tags: ["claude-code", "agent", "ui", "ux"]

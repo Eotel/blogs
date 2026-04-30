@@ -1,0 +1,38 @@
+# Lines matching any regex below are exempt from git-secrets prohibited-pattern
+# detection. Patterns are intentionally tight: they whitelist blog content
+# (URLs, tutorial file paths, intentionally-published public keys / test API
+# keys) without weakening detection of real AWS keys, GitHub tokens, etc.
+
+# --- Markdown links and bare URLs in posts ---
+\]\(https?://
+\]\(http://
+<https?://[^>]+>
+^[[:space:]]*-?[[:space:]]*<?https?://
+^[[:space:]]*\([0-9]+\)[[:space:]].+https?://
+# Inline URLs inside text (e.g., "see https://...")
+[[:space:]]https?://[^[:space:]]
+
+# --- File paths in tutorial / shell output (>= 2 path segments) ---
+/Users/[a-zA-Z0-9_-]+/[a-zA-Z0-9._/-]
+/home/[a-zA-Z0-9_-]+/[a-zA-Z0-9._/-]
+
+# --- Public asymmetric keys (educational content, not private material) ---
+# Note: git-secrets word-splits multi-word prohibited patterns, so we avoid
+# any literal substrings that could collide with those split tokens.
+B[E]GIN PUBLIC
+E[N]D PUBLIC
+
+# --- OAuth 2.0 PKCE example values in security explainers ---
+code_challenge=[A-Za-z0-9_-]+
+code_verifier=[A-Za-z0-9_-]+
+
+# --- Placeholder API keys in code samples (always truncated with `...`) ---
+sk-[a-z]+-?[A-Za-z0-9]*\.\.\.
+"sk-or-
+
+# --- Subresource Integrity hashes used in HTML examples ---
+sha512-[A-Za-z0-9+/=]+
+
+# --- Publicly-published test API keys (the post text calls them out as test) ---
+# Bracketed [s] keeps the literal off the 40-char [0-9a-zA-Z/+] AWS pattern.
+[s]AJGq9JH193KiwnF947v74KnDYkO7z634LWQQfPY

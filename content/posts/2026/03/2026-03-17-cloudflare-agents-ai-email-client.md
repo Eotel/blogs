@@ -3,6 +3,7 @@ title: "Cloudflare Agents × AI が実現する次世代メールクライアン
 date: 2026-03-17
 lastmod: 2026-03-17
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4078661550"
 categories: ["AI/LLM"]
 tags: ["Cloudflare", "AIエージェント", "メール", "エッジコンピューティング", "自動化"]

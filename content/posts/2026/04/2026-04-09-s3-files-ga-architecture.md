@@ -3,6 +3,7 @@ title: "Amazon S3 Files GA：消えるアーキテクチャ層と生まれるア
 date: 2026-04-09
 lastmod: 2026-04-17
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4217192632"
 categories: ["クラウド/インフラ"]
 tags: ["AWS", "S3", "アーキテクチャ", "クラウド", "NFS", "Django", "Terraform"]

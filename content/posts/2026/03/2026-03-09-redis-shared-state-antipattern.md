@@ -4,6 +4,7 @@ date: 2026-03-09
 lastmod: 2026-03-09
 slug: "redis-shared-state-antipattern"
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4022716816"
 categories: ["データベース"]
 tags: ["redis"]

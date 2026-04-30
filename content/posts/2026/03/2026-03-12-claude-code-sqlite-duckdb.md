@@ -3,6 +3,7 @@ title: "Claude Codeで大量データを扱うならSQLite/DuckDBを使おう"
 date: 2026-03-12
 lastmod: 2026-03-12
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4049725427"
 categories: ["AI/LLM"]
 tags: ["claude-code", "sqlite", "duckdb"]

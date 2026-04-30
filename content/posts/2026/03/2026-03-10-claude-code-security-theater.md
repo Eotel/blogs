@@ -4,6 +4,7 @@ date: 2026-03-10
 lastmod: 2026-03-10
 slug: "claude-code-security-theater"
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4045569064"
 categories: ["セキュリティ"]
 tags: ["claude-code", "security", "llm", "prompt"]

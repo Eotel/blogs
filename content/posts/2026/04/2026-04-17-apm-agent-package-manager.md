@@ -3,6 +3,7 @@ title: "APM（Agent Package Manager）— AI エージェント設定を npm の
 date: 2026-04-17
 lastmod: 2026-04-17
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4266529068"
 categories: ["AI/LLM"]
 tags: ["APM", "Claude Code", "AI エージェント", "パッケージ管理", "開発ツール"]

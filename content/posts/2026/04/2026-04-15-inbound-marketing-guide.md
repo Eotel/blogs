@@ -3,6 +3,7 @@ title: "エンジニアのためのインバウンドマーケティング入門
 date: 2026-04-15
 lastmod: 2026-04-15
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/71#issuecomment-4248583317"
 categories: ["ビジネス/キャリア"]
 tags: ["inbound-marketing", "hubspot", "marketing-automation", "content-marketing", "seo"]

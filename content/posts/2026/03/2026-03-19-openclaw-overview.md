@@ -4,6 +4,7 @@ date: 2026-03-19
 lastmod: 2026-03-19
 slug: "openclaw-agent-runtime"
 draft: false
+author: "hdknr"
 categories: ["AI/LLM"]
 tags: ["openclaw", "agent", "claude"]
 ---

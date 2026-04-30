@@ -3,6 +3,7 @@ title: "MONOCO（モノコ）：「使い惚れ」だけを届けるキュレー
 date: 2026-04-08
 lastmod: 2026-04-08
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/217#issuecomment-4204443372"
 categories: ["ビジネス/キャリア"]
 description: "MONOCO（モノコ）は、スタッフが3週間以上使い込んだ「使い惚れ」商品だけを販売するキュレーション型ECサイト。サービスの特徴、大手ECとの違い、創業ストーリーを紹介。"

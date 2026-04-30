@@ -3,6 +3,7 @@ title: "AI が壊す「専門知識のペイウォール」: Claude で床下除
 date: 2026-03-23
 lastmod: 2026-03-23
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4110437991"
 categories: ["AI/LLM"]
 tags: ["Claude", "AI活用", "DIY", "専門知識", "スマートホーム"]

@@ -3,6 +3,7 @@ title: "Figma Make を使いこなす実践テクニック"
 date: 2026-03-09
 lastmod: 2026-03-09
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4026517384"
 categories: ["ツール/開発環境"]
 tags: ["figma"]

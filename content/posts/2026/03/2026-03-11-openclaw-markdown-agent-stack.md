@@ -3,6 +3,7 @@ title: "OpenClaw のマークダウン駆動エージェント運用スタック
 date: 2026-03-11
 lastmod: 2026-03-11
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4041964289"
 categories: ["AI/LLM"]
 tags: ["agent", "openclaw", "llm", "prompt"]

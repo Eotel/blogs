@@ -3,6 +3,7 @@ title: "Claude Code のデフォルト設定でトークンを無駄にしてい
 date: 2026-04-06
 lastmod: 2026-04-17
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4194459252"
 categories: ["AI/LLM"]
 tags: ["Claude", "Claude Code", "トークン最適化", "プロンプトキャッシュ", "コスト削減"]

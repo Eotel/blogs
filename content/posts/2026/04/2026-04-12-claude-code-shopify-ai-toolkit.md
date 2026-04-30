@@ -3,6 +3,7 @@ title: "Claude CodeからShopifyストアを直接操作できる「Shopify AI T
 date: 2026-04-12
 lastmod: 2026-04-12
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4230949842"
 categories: ["ツール/開発環境"]
 tags: ["Claude Code", "Shopify", "MCP", "AI", "EC"]

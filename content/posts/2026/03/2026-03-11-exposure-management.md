@@ -4,6 +4,7 @@ date: 2026-03-11
 lastmod: 2026-03-11
 slug: "exposure-management"
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4041976236"
 categories: ["セキュリティ"]
 tags: ["security"]

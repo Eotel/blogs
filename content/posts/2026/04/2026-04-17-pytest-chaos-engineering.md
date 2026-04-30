@@ -3,6 +3,7 @@ title: "pytest.mark.chaos で始めるカオスエンジニアリング — Pyth
 date: 2026-04-17
 lastmod: 2026-04-17
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/93#issuecomment-4265898247"
 categories: ["プログラミング言語"]
 tags: ["Python", "pytest", "カオスエンジニアリング", "テスト", "障害注入", "Claude Code", "AIエージェント"]

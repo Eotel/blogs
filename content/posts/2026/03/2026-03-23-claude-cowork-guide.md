@@ -3,6 +3,7 @@ title: "Claude Cowork 完全ガイド — 機能解説・料金・活用事例20
 date: 2026-03-23
 lastmod: 2026-03-23
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4107400485"
 categories: ["AI/LLM"]
 description: "Claude Cowork の全機能・料金プラン・セットアップ手順・活用事例20選・セキュリティ対策を網羅解説。月額$20から始められるAI業務自動化ツールの完全ガイド。"

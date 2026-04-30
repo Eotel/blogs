@@ -3,6 +3,7 @@ title: "ジオマーケティングとは？位置情報を活用した集客手
 date: 2026-03-18
 lastmod: 2026-03-18
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/71#issuecomment-4079587710"
 categories: ["ビジネス/キャリア"]
 tags: ["マーケティング", "位置情報", "広告", "HubSpot", "FreakOut"]

@@ -3,6 +3,7 @@ title: "NotebookLMで「20人の専門家」を雇う方法：専門特化型ノ
 date: 2026-03-23
 lastmod: 2026-03-23
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4113387733"
 categories: ["AI/LLM"]
 tags: ["notebooklm", "prompt", "agent"]

@@ -3,6 +3,7 @@ title: "寝る前の2分指示で3,000万円分の仕事をこなす Claude Code
 date: 2026-03-16
 lastmod: 2026-03-16
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4078680188"
 categories: ["AI/LLM"]
 tags: ["Claude Code", "AI エージェント", "生産性", "自動化", "Anthropic"]

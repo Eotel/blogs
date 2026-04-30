@@ -3,6 +3,7 @@ title: "AIモデルは意図的に性能を低下させている？ OpenAI・Goo
 date: 2026-04-11
 lastmod: 2026-04-11
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4229044659"
 categories: ["AI/LLM"]
 tags: ["OpenAI", "Google", "Anthropic", "LLM", "モデル性能"]

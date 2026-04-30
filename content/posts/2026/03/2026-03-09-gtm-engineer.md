@@ -3,6 +3,7 @@ title: "GTMエンジニア — AI時代に生まれた「1人で3チーム分」
 date: 2026-03-09
 lastmod: 2026-03-09
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4020352621"
 categories: ["ビジネス/キャリア"]
 tags: ["agent", "llm", "キャリア"]

@@ -3,6 +3,7 @@ title: "RAGなしでも高精度に動くAgent Harnessの秘密 — コンテキ
 date: 2026-04-17
 lastmod: 2026-04-21
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4274638923"
 categories: ["AI/LLM"]
 tags: ["Claude Code", "RAG", "GraphRAG", "Agent", "LLM", "コンテキストウィンドウ"]

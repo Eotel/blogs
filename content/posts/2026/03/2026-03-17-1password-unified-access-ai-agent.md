@@ -4,6 +4,7 @@ date: 2026-03-17
 lastmod: 2026-03-17
 slug: "1password-unified-access-ai-agent"
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4077558341"
 categories: ["セキュリティ"]
 tags: ["1Password", "AIエージェント", "シークレット管理", "Claude Code", "Cursor"]

@@ -3,6 +3,7 @@ title: "「研究コミュニティをまるごとエミュレートせよ」—
 date: 2026-03-09
 lastmod: 2026-03-09
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4027631113"
 categories: ["AI/LLM"]
 tags: ["agent", "python", "llm", "github"]

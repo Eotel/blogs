@@ -3,6 +3,7 @@ title: "営業向けClaude Code活用術：/mtg-prepで商談準備が5分で終
 date: 2026-03-13
 lastmod: 2026-03-13
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4058375018"
 categories: ["AI/LLM"]
 tags: ["Claude Code", "営業", "生産性向上", "AIエージェント", "自動化"]

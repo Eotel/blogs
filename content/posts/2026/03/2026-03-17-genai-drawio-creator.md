@@ -3,6 +3,7 @@ title: "AWS Japan AI チームが draw.io 図解自動生成を arXiv 論文化�
 date: 2026-03-17
 lastmod: 2026-03-17
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4078673005"
 categories: ["AI/LLM"]
 tags: ["draw.io", "Amazon Bedrock", "Claude", "図解生成", "arXiv"]

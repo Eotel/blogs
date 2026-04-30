@@ -3,6 +3,7 @@ title: "スタッフ0人の税理士がClaude Codeで顧問先60社を1人で回
 date: 2026-03-14
 lastmod: 2026-03-14
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4061222103"
 categories: ["AI/LLM"]
 tags: ["claude-code", "agent", "mcp"]

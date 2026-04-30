@@ -3,6 +3,7 @@ title: "開発サーバーの Let's Encrypt 証明書が切れたので自動更
 date: 2026-03-17
 lastmod: 2026-03-17
 draft: false
+author: "hdknr"
 categories: ["クラウド/インフラ"]
 tags: ["aws", "nginx"]
 source_url: "https://gist.github.com/hdknr/dc0d7b4fd7308222ef4b981c9270a7a4"

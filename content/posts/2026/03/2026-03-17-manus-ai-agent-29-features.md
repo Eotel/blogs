@@ -3,6 +3,7 @@ title: "Manus（マナス）の全29機能を完全解説——AIエージェン
 date: 2026-03-17
 lastmod: 2026-03-17
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4078716085"
 categories: ["AI/LLM"]
 tags: ["Manus", "AIエージェント", "自動化", "Wide Research", "AI活用"]

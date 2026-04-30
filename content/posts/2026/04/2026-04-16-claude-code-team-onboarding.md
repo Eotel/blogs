@@ -3,6 +3,7 @@ title: "Claude Code の /team-onboarding コマンドで新メンバーへの使
 date: 2026-04-16
 lastmod: 2026-04-16
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4266522503"
 categories: ["ツール/開発環境"]
 tags: ["Claude Code", "チームオンボーディング", "AI", "開発効率化", "MCP"]

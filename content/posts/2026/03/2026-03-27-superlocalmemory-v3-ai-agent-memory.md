@@ -3,6 +3,7 @@ title: "AIエージェント記憶検索の限界とSuperLocalMemory V3が挑む
 date: 2026-03-27
 lastmod: 2026-03-27
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4144401868"
 categories: ["AI/LLM"]
 tags: ["AIエージェント", "ベクトル検索", "記憶管理", "コサイン類似度", "SuperLocalMemory"]

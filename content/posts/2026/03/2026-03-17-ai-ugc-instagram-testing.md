@@ -3,6 +3,7 @@ title: "AI生成UGCをInstagramで大量テストして売上を作る仕組み"
 date: 2026-03-17
 lastmod: 2026-03-17
 draft: false
+author: "hdknr"
 description: "Creatify・HeyGenなどのAIツールでUGC動画を量産し、InstagramでA/Bテストを回す広告運用ワークフローを解説。従来比97%のコスト削減事例も紹介。"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4078754469"
 categories: ["AI/LLM"]

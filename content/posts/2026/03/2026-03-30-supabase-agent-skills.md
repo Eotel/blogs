@@ -3,6 +3,7 @@ title: "Supabase × Claude Code: agent-skills でパフォーマンスと RLS �
 date: 2026-03-30
 lastmod: 2026-04-17
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4157861135"
 categories: ["AI/LLM"]
 tags: ["Supabase", "Claude Code", "RLS", "PostgreSQL", "パフォーマンス"]

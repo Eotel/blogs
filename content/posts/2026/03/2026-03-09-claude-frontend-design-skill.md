@@ -3,6 +3,7 @@ title: "Claudeのデザインが急に良くなった理由 ― frontend-design 
 date: 2026-03-09
 lastmod: 2026-03-09
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4026451095"
 categories: ["AI/LLM"]
 tags: ["claude", "claude-code", "prompt"]

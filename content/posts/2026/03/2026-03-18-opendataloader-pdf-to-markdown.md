@@ -3,6 +3,7 @@ title: "OpenDataLoader PDF — CPUだけで毎秒100ページ、PDFをMarkdown�
 date: 2026-03-18
 lastmod: 2026-03-18
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4082929222"
 categories: ["AI/LLM"]
 tags: ["python", "rag", "github", "llm", "pdf"]

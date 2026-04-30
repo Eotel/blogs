@@ -3,6 +3,7 @@ title: "geo-seo-claude：AI検索時代のSEO最適化をClaude Codeで自動化
 date: 2026-03-12
 lastmod: 2026-03-12
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4043632679"
 categories: ["AI/LLM"]
 tags: ["claude-code", "SEO", "GEO", "llm", "agent"]

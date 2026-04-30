@@ -3,6 +3,7 @@ title: "Claude Code のスキルを作るなら skill-creator プラグインを
 date: 2026-03-11
 lastmod: 2026-03-11
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4042055345"
 categories: ["AI/LLM"]
 tags: ["claude-code", "claude", "agent", "prompt"]

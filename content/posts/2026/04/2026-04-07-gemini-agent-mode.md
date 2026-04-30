@@ -3,6 +3,7 @@ title: "Gemini Agentモード：Google Workspaceを丸ごと自動化するAIエ
 date: 2026-04-07
 lastmod: 2026-04-07
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4201963572"
 categories: ["AI/LLM"]
 description: "Google Gemini Agentモードの機能・活用事例・料金を解説。Gmail・カレンダー・Driveを横断する自動化、スケジュール実行、OpenClawとの比較まで網羅。"

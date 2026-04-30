@@ -3,6 +3,7 @@ title: "Claude Code vs Codex：AI コーディングエージェント徹底比�
 date: 2026-03-11
 lastmod: 2026-03-11
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4042856024"
 categories: ["AI/LLM"]
 tags: ["claude-code", "openai", "llm", "agent"]

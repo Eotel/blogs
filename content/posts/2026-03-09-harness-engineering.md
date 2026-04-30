@@ -3,6 +3,7 @@ title: "Harness Engineering ベストプラクティス 2026 — AI コーディ
 date: 2026-03-09
 lastmod: 2026-03-09
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4022922774"
 categories: ["AI/LLM"]
 tags: ["claude-code", "agent", "typescript", "python", "github"]

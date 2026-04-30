@@ -4,6 +4,7 @@ date: 2026-04-05
 lastmod: 2026-04-05
 slug: "autoagent-self-improving-agents"
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4189423123"
 categories: ["AI/LLM"]
 tags: ["agent", "llm", "python", "github", "claude"]

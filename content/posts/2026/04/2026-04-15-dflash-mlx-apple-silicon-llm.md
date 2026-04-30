@@ -3,6 +3,7 @@ title: "MacのローカルLLMが4.1倍速に！Apple Silicon向け新技術「DF
 date: 2026-04-15
 lastmod: 2026-04-15
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4250469862"
 categories: ["AI/LLM"]
 tags: ["Apple Silicon", "MLX", "LLM", "ローカルLLM", "推測デコード", "DFlash"]

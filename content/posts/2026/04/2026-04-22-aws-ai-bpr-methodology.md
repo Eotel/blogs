@@ -3,6 +3,7 @@ title: "AWS が明かした AI エージェント導入失敗の構造と「AI B
 date: 2026-04-22
 lastmod: 2026-04-27
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4304020634"
 categories: ["AI/LLM"]
 tags: ["AWS", "AI エージェント", "BPR", "組織変革", "Appreciative Inquiry", "Cooperrider", "4D サイクル", "ポジティブ・チェンジ"]

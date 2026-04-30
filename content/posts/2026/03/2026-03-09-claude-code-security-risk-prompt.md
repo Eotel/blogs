@@ -3,6 +3,7 @@ title: "Claude Code でツール実行前にセキュリティリスクをパー
 date: 2026-03-09
 lastmod: 2026-03-09
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4026444705"
 categories: ["AI/LLM"]
 tags: ["claude-code", "security", "prompt"]

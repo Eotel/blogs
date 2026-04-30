@@ -3,6 +3,7 @@ title: "Infisical — .env に別れを告げるオープンソース・シー�
 date: 2026-04-21
 lastmod: 2026-04-23
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4287249404"
 categories: ["セキュリティ"]
 tags: ["Infisical", "シークレット管理", "security", "agent", "docker"]

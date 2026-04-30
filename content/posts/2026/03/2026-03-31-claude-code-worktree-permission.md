@@ -3,6 +3,7 @@ title: "Claude Code の sensitive file チェックを回避する — git workt
 date: 2026-03-31
 lastmod: 2026-03-31
 draft: false
+author: "hdknr"
 categories: ["AI/LLM"]
 tags: ["Claude Code", "git worktree", "自動化", "パーミッション"]
 ---

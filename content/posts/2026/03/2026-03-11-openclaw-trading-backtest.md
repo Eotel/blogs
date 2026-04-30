@@ -3,6 +3,7 @@ title: "OpenClaw エージェントでトレーディング戦略を自動バッ
 date: 2026-03-11
 lastmod: 2026-03-11
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4041982166"
 categories: ["AI/LLM"]
 tags: ["agent", "python", "openclaw", "trading", "自動化"]

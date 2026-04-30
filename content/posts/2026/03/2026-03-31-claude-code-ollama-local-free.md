@@ -4,6 +4,7 @@ date: 2026-03-31
 lastmod: 2026-03-31
 slug: "claude-code-ollama-local-free"
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4165254271"
 categories: ["AI/LLM"]
 tags: ["claude-code", "ollama", "llm", "anthropic"]

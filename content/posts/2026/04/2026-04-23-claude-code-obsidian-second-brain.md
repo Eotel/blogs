@@ -3,6 +3,7 @@ title: "Claude Code × Obsidian で「第二の脳」を構築する完全解説
 date: 2026-04-23
 lastmod: 2026-04-23
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4304039550"
 categories: ["AI/LLM"]
 tags: ["Claude Code", "Obsidian", "PKM", "LLM Wiki", "第二の脳", "ナレッジ管理"]

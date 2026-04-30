@@ -4,6 +4,7 @@ date: 2026-03-19
 lastmod: 2026-03-19
 slug: "duckdb-columnar-arrow"
 draft: false
+author: "hdknr"
 categories: ["データベース"]
 tags: ["duckdb", "python"]
 ---

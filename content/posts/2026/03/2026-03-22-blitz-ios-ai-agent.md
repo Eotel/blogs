@@ -3,6 +3,7 @@ title: "iOS開発が完全自動化される時代が来た：オープンソー
 date: 2026-03-22
 lastmod: 2026-03-22
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4106914372"
 categories: ["AI/LLM"]
 tags: ["agent", "mcp", "claude-code", "swift"]

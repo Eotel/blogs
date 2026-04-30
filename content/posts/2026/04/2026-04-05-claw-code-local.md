@@ -3,6 +3,7 @@ title: "claw-code-local — Claude Code風のAIコーディングエージェン
 date: 2026-04-05
 lastmod: 2026-04-05
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4188029033"
 categories: ["AI/LLM"]
 description: "Claude Code風のAIコーディングエージェント claw-code-local の紹介。Ollama や LM Studio でローカルLLMを使い、API費用ゼロ・プライバシー保護でコード生成を実現する方法を解説。"

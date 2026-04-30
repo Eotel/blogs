@@ -3,6 +3,7 @@ title: "Claude Harness v4.0.0 \"Hokage\" — Go ネイティブ化で 30 倍速�
 date: 2026-04-14
 lastmod: 2026-04-14
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4265196767"
 categories: ["ツール/開発環境"]
 tags: ["Claude Code", "Claude Harness", "AI開発", "OSS", "Go"]

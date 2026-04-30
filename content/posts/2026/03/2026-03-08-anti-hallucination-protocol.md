@@ -3,6 +3,7 @@ title: "Claude Codeのハルシネーション対策 — Anti-Hallucination Prot
 date: 2026-03-08
 lastmod: 2026-03-08
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4018466325"
 categories: ["AI/LLM"]
 tags: ["claude-code", "claude", "llm", "agent", "prompt"]

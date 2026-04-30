@@ -3,6 +3,7 @@ title: "dmux：Claude Code / Codex を安全に並列実行するための git w
 date: 2026-04-15
 lastmod: 2026-04-15
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4250488257"
 categories: ["ツール/開発環境"]
 tags: ["dmux", "cmux", "Claude Code", "AI エージェント", "git worktree", "並列実行"]

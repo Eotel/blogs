@@ -3,6 +3,7 @@ title: "Microsoft Agent Governance Toolkit：AIエージェントのセキュリ
 date: 2026-03-14
 lastmod: 2026-03-14
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4061220341"
 categories: ["セキュリティ"]
 tags: ["agent", "security", "llm", "github"]

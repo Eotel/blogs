@@ -3,6 +3,7 @@ title: "Obsidian × Claude Code で「24時間365日動く AI 秘書」を構築
 date: 2026-04-22
 lastmod: 2026-04-22
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4304026053"
 categories: ["AI/LLM"]
 tags: ["Obsidian", "Claude Code", "生産性", "AI秘書", "パーソナルOS"]

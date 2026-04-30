@@ -3,6 +3,7 @@ title: "Karpathy の autoresearch — LLMに「このLLMを訓練して」と丸
 date: 2026-03-13
 lastmod: 2026-03-13
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4058506995"
 categories: ["AI/LLM"]
 tags: ["llm", "agent", "python"]

@@ -3,6 +3,7 @@ title: "AI Brain Fry: AIの使いすぎで脳が焼ける現象とその対策"
 date: 2026-03-31
 lastmod: 2026-03-31
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4165294463"
 categories: ["AI/LLM"]
 tags: ["AI", "メンタルヘルス", "生産性", "BCG", "認知疲労"]

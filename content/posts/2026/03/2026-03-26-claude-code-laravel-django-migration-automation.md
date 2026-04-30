@@ -3,6 +3,7 @@ title: "Claude Code で Laravel→Django 全自動移行をやってみた（2/3
 date: 2026-03-26
 lastmod: 2026-03-26
 draft: false
+author: "hdknr"
 description: "Claude Code を自律実行させるための Bash フレームワーク run-issue.sh の設計を解説。Issue 駆動の実行フロー、サブエージェント活用、Pre-commit Hook と CI による品質保証の実装。"
 categories: ["AI/LLM"]
 tags: ["Claude Code", "Laravel", "Django", "Python", "自動化"]

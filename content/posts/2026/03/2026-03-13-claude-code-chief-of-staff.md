@@ -3,6 +3,7 @@ title: "Claude Codeで「AI チーフ・オブ・スタッフ」を構築する 
 date: 2026-03-13
 lastmod: 2026-03-13
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4054427520"
 categories: ["AI/LLM"]
 tags: ["claude-code", "claude", "agent", "prompt"]

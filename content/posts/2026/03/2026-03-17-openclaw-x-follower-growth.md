@@ -3,6 +3,7 @@ title: "OpenClawでX運用したら10日でフォロワー1800人増えた話"
 date: 2026-03-17
 lastmod: 2026-03-17
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4078648513"
 categories: ["AI/LLM"]
 tags: ["OpenClaw", "X運用", "SNS", "フォロワー増加", "AI活用"]

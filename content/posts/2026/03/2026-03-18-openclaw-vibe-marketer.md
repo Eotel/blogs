@@ -3,6 +3,7 @@ title: "OpenClawを「バイブマーケター」に変えた方法 — AI広告
 date: 2026-03-18
 lastmod: 2026-03-18
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4085418385"
 categories: ["AI/LLM"]
 tags: ["OpenClaw", "バイブマーケティング", "AI広告", "agent", "claude"]

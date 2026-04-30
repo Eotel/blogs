@@ -3,6 +3,7 @@ title: "HuggingFace hf-mount: AIモデルをダウンロードせずに仮想フ
 date: 2026-03-25
 lastmod: 2026-03-25
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4129195588"
 categories: ["AI/LLM"]
 tags: ["llm", "huggingface", "fuse", "kubernetes", "agent"]

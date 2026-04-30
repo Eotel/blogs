@@ -3,6 +3,7 @@ title: "ローカルQwenに個人知識を覚えさせたい — ファインチ
 date: 2026-03-10
 lastmod: 2026-03-10
 draft: false
+author: "hdknr"
 categories: ["AI/LLM"]
 tags: ["qwen", "ollama", "llm", "rag"]
 ---

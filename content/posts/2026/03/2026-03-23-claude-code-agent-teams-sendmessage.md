@@ -4,6 +4,7 @@ date: 2026-03-23
 lastmod: 2026-03-23
 slug: "claude-code-agent-teams"
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4113381313"
 categories: ["AI/LLM"]
 tags: ["claude-code", "claude", "anthropic", "agent", "マルチエージェント"]

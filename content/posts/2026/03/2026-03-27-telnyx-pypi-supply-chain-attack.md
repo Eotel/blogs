@@ -3,6 +3,7 @@ title: "PyPI公式パッケージ telnyx がサプライチェーン攻撃で汚
 date: 2026-03-27
 lastmod: 2026-03-27
 draft: false
+author: "hdknr"
 description: "PyPI公式パッケージ telnyx がTeamPCPのサプライチェーン攻撃で汚染。WAVステガノグラフィ手法の詳細と、Python開発者が今すぐ取るべき対策を解説。"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4145706244"
 categories: ["セキュリティ"]

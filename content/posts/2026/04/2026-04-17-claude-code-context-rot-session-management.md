@@ -3,6 +3,7 @@ title: "Claude Code のコンテキスト管理術 — Context Rot を防ぐ5つ
 date: 2026-04-17
 lastmod: 2026-04-17
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4266527444"
 categories: ["AI/LLM"]
 tags: ["Claude Code", "コンテキスト管理", "Context Rot", "セッション管理", "プロンプトエンジニアリング"]

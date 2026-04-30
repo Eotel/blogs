@@ -3,6 +3,7 @@ title: "agent-skill-bus: AIエージェントのスキル劣化を自動検知�
 date: 2026-03-18
 lastmod: 2026-03-18
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4079182847"
 categories: ["AI/LLM"]
 tags: ["agent", "llm", "claude-code", "github"]

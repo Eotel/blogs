@@ -3,6 +3,7 @@ title: "Claude Code で Laravel→Django 全自動移行をやってみた（3/3
 date: 2026-03-26
 lastmod: 2026-03-26
 draft: false
+author: "hdknr"
 description: "15 Issue を Claude Code で自律実行した結果と教訓。5.5時間で84コミット・199テスト全パスを達成したが、ブランチ分岐問題が発生。次回に活かすべき8つの改善策を共有。"
 categories: ["AI/LLM"]
 tags: ["Claude Code", "Laravel", "Django", "Python", "自動化"]

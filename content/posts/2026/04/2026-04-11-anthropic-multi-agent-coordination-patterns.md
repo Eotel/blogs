@@ -3,6 +3,7 @@ title: "Anthropic が解説するマルチエージェント調整パターン 5
 date: 2026-04-11
 lastmod: 2026-04-11
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4229022963"
 categories: ["AI/LLM"]
 tags: ["マルチエージェント", "エージェント", "Claude", "Anthropic", "AIアーキテクチャ"]

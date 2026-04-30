@@ -3,6 +3,7 @@ title: "Claude Certified Architect試験 完全ガイド"
 date: 2026-03-17
 lastmod: 2026-03-17
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4078722052"
 categories: ["AI/LLM"]
 tags: ["Claude", "Anthropic", "資格", "認定試験", "アーキテクト"]

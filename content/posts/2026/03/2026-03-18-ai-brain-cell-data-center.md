@@ -3,6 +3,7 @@ title: "人間の脳細胞で動く「データセンター」— Cortical Labs 
 date: 2026-03-18
 lastmod: 2026-03-18
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4079198048"
 categories: ["AI/LLM"]
 tags: ["ai", "biocomputing", "data-center", "energy"]

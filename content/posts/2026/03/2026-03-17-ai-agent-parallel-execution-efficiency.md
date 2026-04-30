@@ -3,6 +3,7 @@ title: "AI時代の「ダラダラ働き」のすすめ — AIエージェント
 date: 2026-03-17
 lastmod: 2026-03-17
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4078690143"
 categories: ["AI/LLM"]
 tags: ["AIエージェント", "生産性", "並列処理", "タスク管理", "働き方"]

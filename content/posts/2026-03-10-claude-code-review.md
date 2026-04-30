@@ -3,6 +3,7 @@ title: "Claude Code Review — エージェントチームが PR のバグを狩
 date: 2026-03-10
 lastmod: 2026-03-10
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4028055781"
 categories: ["AI/LLM"]
 tags: ["claude-code", "agent", "github"]

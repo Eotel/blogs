@@ -3,6 +3,7 @@ title: "EDINET XBRLをPythonで扱う — edinet-xbrlライブラリの使い方
 date: 2026-04-06
 lastmod: 2026-04-06
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4195639252"
 categories: ["プログラミング言語"]
 description: "EDINETのXBRLファイルをPythonで解析する方法を解説。edinet-xbrlライブラリのインストールからXBRLパース、EDINET APIでの書類取得まで、サンプルコード付きで紹介"

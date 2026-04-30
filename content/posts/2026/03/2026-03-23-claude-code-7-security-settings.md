@@ -3,6 +3,7 @@ title: "Claude Codeを使うなら最低限やっておきたい「7つのセキ
 date: 2026-03-23
 lastmod: 2026-03-23
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4109770395"
 categories: ["AI/LLM"]
 description: "Claude Code のセキュリティ設定を7つ解説。サンドボックス、deny ルール、機密ファイル保護、ネットワーク制限、hooks、権限棚卸し、Managed Settings の設定方法を実践的にまとめます。"

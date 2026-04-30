@@ -3,6 +3,7 @@ title: "急成長でぶつかったMySQLの罠とその向き合い方 - 7つの
 date: 2026-03-20
 lastmod: 2026-03-20
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4095054896"
 categories: ["データベース"]
 tags: ["MySQL", "Aurora", "デッドロック", "ロック", "DDL"]

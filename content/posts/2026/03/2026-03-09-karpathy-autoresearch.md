@@ -3,6 +3,7 @@ title: "Karpathy の autoresearch — AIが寝ている間に100回実験を回�
 date: 2026-03-09
 lastmod: 2026-03-09
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4026634592"
 categories: ["AI/LLM"]
 tags: ["llm", "agent", "python"]

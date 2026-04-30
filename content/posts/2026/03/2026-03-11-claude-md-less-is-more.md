@@ -4,6 +4,7 @@ date: 2026-03-11
 lastmod: 2026-03-18
 slug: "claude-md-less-is-more"
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4042712659"
 categories: ["AI/LLM"]
 tags: ["claude-code", "claude", "llm", "prompt"]

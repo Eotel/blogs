@@ -3,6 +3,7 @@ title: "Claude Code 新機能「Auto Mode」完全解説"
 date: 2026-03-17
 lastmod: 2026-03-17
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4078718977"
 categories: ["AI/LLM"]
 tags: ["Claude Code", "Auto Mode", "許可管理", "開発ツール", "CLI"]

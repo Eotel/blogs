@@ -3,6 +3,7 @@ title: "Graphite 徹底解説 — スタックドPRとマージキューがAIフ
 date: 2026-04-19
 lastmod: 2026-04-19
 draft: false
+author: "hdknr"
 categories: ["ツール/開発環境"]
 tags: ["Graphite", "GitHub", "スタックドPR", "マージキュー", "AIコードレビュー", "CI/CD", "ハーネスエンジニアリング"]
 ---

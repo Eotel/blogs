@@ -3,6 +3,7 @@ title: "opencli-rs: Rust製の爆速Webスクレイピングツールで55以上
 date: 2026-03-27
 lastmod: 2026-03-27
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4140834709"
 categories: ["ツール/開発環境"]
 tags: ["rust", "agent", "github"]

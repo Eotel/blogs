@@ -3,6 +3,7 @@ title: "MiroFish その後: 3週間で GitHub Star 4.7万超へ — コミュニ
 date: 2026-03-31
 lastmod: 2026-03-31
 draft: false
+author: "hdknr"
 description: "AI 予測エンジン MiroFish が公開3週間で GitHub Star 4.7万超に急成長。オフライン版やデモサイトなどコミュニティの展開と、群体知能アプローチの可能性を追う。"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4165287811"
 categories: ["AI/LLM"]

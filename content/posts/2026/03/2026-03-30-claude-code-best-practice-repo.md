@@ -3,6 +3,7 @@ title: "Claude Codeベストプラクティス疲れに終止符 — claude-code
 date: 2026-03-30
 lastmod: 2026-03-30
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4151383423"
 categories: ["AI/LLM"]
 tags: ["Claude Code", "ベストプラクティス", "CLAUDE.md", "startup hook", "github"]

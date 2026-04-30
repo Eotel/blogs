@@ -4,6 +4,7 @@ date: 2026-03-18
 lastmod: 2026-03-18
 slug: "vibe-coding-skills"
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4085473736"
 categories: ["AI/LLM"]
 tags: ["llm", "vibe-coding", "prompt", "education", "research"]

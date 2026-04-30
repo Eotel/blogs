@@ -3,6 +3,7 @@ title: "Rowboat：100%ローカルで動くオープンソースAI同僚ツー�
 date: 2026-04-12
 lastmod: 2026-04-12
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4230730521"
 categories: ["AI/LLM"]
 tags: ["AI", "エージェント", "オープンソース", "MCP", "ローカルAI"]

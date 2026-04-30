@@ -3,6 +3,7 @@ title: "Claude Code にカオスエンジニアリングエージェントを導
 date: 2026-04-07
 lastmod: 2026-04-07
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4198086645"
 categories: ["ツール/開発環境"]
 tags: ["Claude Code", "カオスエンジニアリング", "AIエージェント", "セキュリティ", "開発効率化"]

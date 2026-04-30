@@ -3,6 +3,7 @@ title: "RTK（Rust Token Killer）でClaude Codeのトークン使用量を60〜
 date: 2026-04-07
 lastmod: 2026-04-17
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4198171626"
 categories: ["ツール/開発環境"]
 tags: ["Claude Code", "Rust", "トークン最適化", "CLI", "開発効率"]

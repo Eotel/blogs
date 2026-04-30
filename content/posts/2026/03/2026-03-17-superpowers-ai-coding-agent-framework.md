@@ -3,6 +3,7 @@ title: "AIコーディングエージェント開発フレームワーク「supe
 date: 2026-03-17
 lastmod: 2026-03-17
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4077626995"
 categories: ["AI/LLM"]
 tags: ["AIエージェント", "Claude Code", "superpowers", "TDD", "Git Worktree"]

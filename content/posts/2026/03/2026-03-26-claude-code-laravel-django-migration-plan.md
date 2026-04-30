@@ -3,6 +3,7 @@ title: "Claude Code で Laravel→Django 全自動移行をやってみた（1/3
 date: 2026-03-26
 lastmod: 2026-03-26
 draft: false
+author: "hdknr"
 description: "Laravel 6 から Django 4.2 への全自動移行プロジェクトの計画編。inspectdb 方式によるモデル生成、8フェーズの段階設計、CLAUDE.md を活用した Claude Code への設計書作成手法を解説。"
 categories: ["AI/LLM"]
 tags: ["Claude Code", "Laravel", "Django", "Python", "自動化"]

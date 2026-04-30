@@ -4,6 +4,7 @@ date: 2026-03-12
 lastmod: 2026-03-12
 slug: "vercel-no-infra-engineer"
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4050663858"
 categories: ["クラウド/インフラ"]
 tags: ["javascript", "react"]

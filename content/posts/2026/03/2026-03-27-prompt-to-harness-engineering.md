@@ -3,6 +3,7 @@ title: "Prompt Engineering から Harness Engineering へ: AI エンジニアリ
 date: 2026-03-27
 lastmod: 2026-03-27
 draft: false
+author: "hdknr"
 description: "Prompt Engineering → Context Engineering → Harness Engineering。AI エンジニアリングの3つのパラダイムの進化を、OpenAI・Anthropic・Martin Fowler の事例とともに解説。"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4140837410"
 categories: ["AI/LLM"]

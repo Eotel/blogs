@@ -3,6 +3,7 @@ title: "MiroFish — 20歳の学生が10日間の Vibe Coding で作った AI �
 date: 2026-03-10
 lastmod: 2026-03-10
 draft: false
+author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4030252864"
 categories: ["AI/LLM"]
 tags: ["agent", "github", "claude-code", "llm"]
