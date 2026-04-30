@@ -6,3 +6,5 @@ resources/_gen/
 .claude/temp/
 .worktrees/
 .mcp.json
+__pycache__/
+*.pyc
