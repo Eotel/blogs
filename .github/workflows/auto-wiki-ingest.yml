@@ -17,12 +17,12 @@ jobs:
       actions: read
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5  # v4
         with:
           fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065  # v5
         with:
           python-version: '3.x'
 
@@ -50,10 +50,18 @@ jobs:
 
       - name: Run /wiki-ingest via Claude Code Action
         if: steps.list.outputs.count != '0'
-        uses: anthropics/claude-code-action@v1
+        # Pinned to v1 commit SHA for supply-chain hygiene; bump together with claude.yml.
+        uses: anthropics/claude-code-action@63322d7b2bc79e7b621b89f41b53ceb8e5a5d314  # v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          claude_args: '--allowed-tools Bash,Edit,Write,Read,Grep,Glob'
+          # Bash is scoped to the commands needed for the ingest flow.
+          # Threat model: prompts are workflow-controlled; the only untrusted
+          # text reaches Claude is post body content. Output is always a PR
+          # (never a direct main push), so a malformed branch is reviewable
+          # before merge.
+          claude_args: >-
+            --allowed-tools
+            Edit,Write,Read,Grep,Glob,Bash(git:*),Bash(gh pr:*),Bash(gh api:*),Bash(gh issue:*),Bash(python:*),Bash(python3:*),Bash(date:*),Bash(mkdir:*),Bash(cat:*),Bash(echo:*),Bash(ls:*),Bash(find:*),Bash(head:*),Bash(tail:*),Bash(wc:*)
           prompt: |
             次の手順を順に実行してください。
 
@@ -69,7 +77,9 @@ jobs:
                  - 処理対象の記事一覧（リンク付き）
                  - 新規作成 / 更新された Wiki ページの一覧
                  - 何も差分が出なかった場合は PR を作らず、その旨を job summary に書く
-            5. hugo --gc が通ることを確認してから push する
 
-            処理対象の記事 (frontmatter date >= ${{ steps.list.outputs.since }}):
+            注: hugo はこの runner にインストールされていない。Hugo の整合性は
+            既存の .github/workflows/deploy.yml が main マージ後に検証する。
+
+            処理対象の記事 (frontmatter date > ${{ steps.list.outputs.since }}):
             ${{ steps.list.outputs.posts }}
