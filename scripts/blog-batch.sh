@@ -1,41 +1,41 @@
 #!/bin/bash
-# blog-batch.sh — 未ブログ化コメントを一括処理する
+# blog-batch.sh — open Issue を 1 topic = 1 記事として bulk で記事化する
 #
 # Usage:
-#   ./scripts/blog-batch.sh <issue_number> [options]
+#   ./scripts/blog-batch.sh [options]
+#
+# デフォルトでは `wip` ラベルが付いていない open Issue 全部を順次 /blog で記事化する。
+# /blog が PR 本文に "Closes #N" を入れるので、PR マージで Issue は自動 close される。
 #
 # Options:
-#   --dry-run         ツイート内容を一覧表示するのみ（ブログ作成しない）
+#   --label LABEL     対象ラベルで絞り込み（例: --label priority:high）
+#   --milestone NAME  マイルストーンで絞り込み
+#   --search QUERY    任意の gh issue list --search クエリ（--label/--milestone の上位互換）
 #   --limit N         処理件数の上限（デフォルト: 全件）
+#   --dry-run         対象一覧表示のみ（ブログ作成しない）
 #   --skip-review     ファクトチェック・エージェントレビューを省略（高速化）
 #   --model MODEL     使用モデル（デフォルト: sonnet）
 #   --interval SECS   処理間のインターバル秒数（デフォルト: 5）
-#   --overnight       夜間バッチモード（nohup 相当 + インターバル60秒 + PRサマリー出力）
+#   --overnight       夜間バッチモード（インターバル60秒 + skip-review 自動有効化）
 #
 # Examples:
-#   ./scripts/blog-batch.sh 1 --dry-run                     # 未ブログ化一覧を確認
-#   ./scripts/blog-batch.sh 1 --limit 3                     # 3件だけ処理
-#   ./scripts/blog-batch.sh 1 --skip-review --limit 5       # レビュー省略で5件処理
-#   ./scripts/blog-batch.sh 1 --overnight                   # 全件を夜間バッチで処理
-#   ./scripts/blog-batch.sh 1 --overnight --interval 120    # 2分間隔で夜間バッチ
+#   ./scripts/blog-batch.sh --dry-run                       # 対象 Issue 一覧
+#   ./scripts/blog-batch.sh --limit 3                       # 3件だけ処理
+#   ./scripts/blog-batch.sh --label priority:high           # 高優先度のみ
+#   ./scripts/blog-batch.sh --overnight                     # 全件夜間処理
+#   nohup ./scripts/blog-batch.sh --overnight > .claude/temp/batch.log 2>&1 &
 
 set -euo pipefail
 
 BLOG_DIR="$(cd "$(dirname "$0")/.." && pwd)"
-AUTHORS_FILE="$BLOG_DIR/scripts/authors.json"
-
-if [ ! -f "$AUTHORS_FILE" ]; then
-  echo "ERROR: authors config not found: $AUTHORS_FILE" >&2
-  exit 1
-fi
-
 REPO="Eotel/blogs"
-ISSUE_NUMBER="${1:?Usage: blog-batch.sh <issue_number> [--dry-run] [--limit N] [--skip-review] [--model MODEL] [--interval SECS] [--overnight]}"
-shift
 
 # --- オプション解析 ---
-DRY_RUN=false
+LABEL=""
+MILESTONE=""
+SEARCH=""
 LIMIT=0
+DRY_RUN=false
 SKIP_REVIEW=false
 MODEL="sonnet"
 INTERVAL=5
@@ -43,50 +43,71 @@ OVERNIGHT=false
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
-    --dry-run)      DRY_RUN=true; shift ;;
+    --label)        LABEL="$2"; shift 2 ;;
+    --milestone)    MILESTONE="$2"; shift 2 ;;
+    --search)       SEARCH="$2"; shift 2 ;;
     --limit)        LIMIT="$2"; shift 2 ;;
+    --dry-run)      DRY_RUN=true; shift ;;
     --skip-review)  SKIP_REVIEW=true; shift ;;
     --model)        MODEL="$2"; shift 2 ;;
     --interval)     INTERVAL="$2"; shift 2 ;;
     --overnight)    OVERNIGHT=true; shift ;;
-    *)              echo "Unknown option: $1"; exit 1 ;;
+    -h|--help)
+      sed -n '2,22p' "$0"
+      exit 0
+      ;;
+    *)              echo "Unknown option: $1" >&2; exit 1 ;;
   esac
 done
 
-# overnight モードのデフォルト設定
+# overnight モードのデフォルト
 if [[ "$OVERNIGHT" == "true" ]]; then
   if [[ "$INTERVAL" -eq 5 ]]; then
-    INTERVAL=60  # デフォルトを60秒に
+    INTERVAL=60
   fi
-  SKIP_REVIEW=true  # 夜間は自動でレビュー省略
+  SKIP_REVIEW=true
+fi
+
+# --- 検索クエリ組み立て ---
+# デフォルトは「wip ラベル除外 + open」。--search が明示指定されたらそれを優先
+if [[ -n "$SEARCH" ]]; then
+  QUERY="$SEARCH"
+else
+  QUERY="-label:wip"
+  if [[ -n "$LABEL" ]]; then
+    QUERY="${QUERY} label:${LABEL}"
+  fi
+  if [[ -n "$MILESTONE" ]]; then
+    QUERY="${QUERY} milestone:\"${MILESTONE}\""
+  fi
 fi
 
 TIMESTAMP=$(date +%Y%m%d-%H%M%S)
-LOG_FILE=".claude/temp/blog-batch-${TIMESTAMP}.log"
-REPORT_FILE=".claude/temp/blog-batch-report-${TIMESTAMP}.md"
+LOG_FILE="${BLOG_DIR}/.claude/temp/blog-batch-${TIMESTAMP}.log"
+REPORT_FILE="${BLOG_DIR}/.claude/temp/blog-batch-report-${TIMESTAMP}.md"
 
-# --- 未ブログ化コメント取得 ---
-# Allowlist of GitHub logins to accept (built from authors.json).
-ALLOWED_LOGINS=$(jq -c '[.authors[].github_login]' "$AUTHORS_FILE")
+mkdir -p "${BLOG_DIR}/.claude/temp"
 
-echo "=== Issue #${ISSUE_NUMBER} の未ブログ化コメントを取得中... ==="
-echo "    投稿者 allowlist: ${ALLOWED_LOGINS}"
-COMMENTS_JSON=$(gh api "repos/${REPO}/issues/${ISSUE_NUMBER}/comments" \
-  --paginate \
-  --jq "[.[] | select(.reactions.rocket == 0) | select(.user.login as \$u | ${ALLOWED_LOGINS} | index(\$u)) | {id: .id, url: .html_url, body: .body, login: .user.login}]")
+# --- 対象 Issue 取得 ---
+echo "=== open Issue を取得中... ==="
+echo "    検索クエリ: state:open ${QUERY}"
 
-# jq で配列を結合（--paginate は複数の配列を出力する）
-COMMENTS=$(echo "$COMMENTS_JSON" | jq -s 'add')
-TOTAL=$(echo "$COMMENTS" | jq 'length')
+ISSUES_JSON=$(gh issue list --repo "$REPO" \
+  --state open \
+  --search "$QUERY" \
+  --limit 1000 \
+  --json number,title,url,labels)
+
+TOTAL=$(echo "$ISSUES_JSON" | jq 'length')
 
 if [[ "$TOTAL" -eq 0 ]]; then
-  echo "✅ 未ブログ化コメントはありません"
+  echo "✅ 対象 Issue はありません"
   exit 0
 fi
 
-echo "📋 未ブログ化コメント: ${TOTAL} 件"
+echo "📋 対象 Issue: ${TOTAL} 件"
 
-if [[ "$LIMIT" -gt 0 ]]; then
+if [[ "$LIMIT" -gt 0 ]] && [[ "$LIMIT" -lt "$TOTAL" ]]; then
   PROCESS_COUNT="$LIMIT"
   echo "📌 処理上限: ${LIMIT} 件"
 else
@@ -96,20 +117,20 @@ fi
 # --- dry-run: 一覧表示 ---
 if [[ "$DRY_RUN" == "true" ]]; then
   echo ""
-  echo "=== 未ブログ化コメント一覧 ==="
+  echo "=== 対象 Issue 一覧 ==="
   echo ""
   for i in $(seq 0 $((TOTAL - 1))); do
-    COMMENT=$(echo "$COMMENTS" | jq -r ".[$i]")
-    URL=$(echo "$COMMENT" | jq -r '.url')
-    BODY=$(echo "$COMMENT" | jq -r '.body' | head -3)
-    echo "[$((i + 1))/${TOTAL}] ${URL}"
-    echo "    ${BODY}"
+    ISSUE=$(echo "$ISSUES_JSON" | jq -r ".[$i]")
+    NUMBER=$(echo "$ISSUE" | jq -r '.number')
+    TITLE=$(echo "$ISSUE" | jq -r '.title')
+    URL=$(echo "$ISSUE" | jq -r '.url')
+    LABELS=$(echo "$ISSUE" | jq -r '[.labels[].name] | join(",")')
+    echo "[$((i + 1))/${TOTAL}] #${NUMBER} ${TITLE}"
+    echo "    ${URL}"
+    [[ -n "$LABELS" ]] && echo "    labels: ${LABELS}"
     echo ""
   done
-  echo "=== ブログ化するには --dry-run を外して実行してください ==="
-  echo ""
-  echo "夜間バッチ例:"
-  echo "  nohup ./scripts/blog-batch.sh ${ISSUE_NUMBER} --overnight > .claude/temp/blog-batch-stdout.log 2>&1 &"
+  echo "=== 記事化するには --dry-run を外して実行してください ==="
   exit 0
 fi
 
@@ -123,14 +144,14 @@ SUCCESS=0
 FAILED=0
 SKIPPED=0
 declare -a PR_URLS=()
-declare -a FAILED_URLS=()
+declare -a FAILED_ISSUES=()
 
 # レポートヘッダー
 cat > "$REPORT_FILE" <<HEADER
 # Blog Batch Report
 
 - **実行日時**: $(date '+%Y-%m-%d %H:%M:%S')
-- **Issue**: #${ISSUE_NUMBER}
+- **検索クエリ**: state:open ${QUERY}
 - **対象件数**: ${PROCESS_COUNT} / ${TOTAL}
 - **モデル**: ${MODEL}
 - **インターバル**: ${INTERVAL}秒
@@ -138,8 +159,8 @@ cat > "$REPORT_FILE" <<HEADER
 
 ## 処理結果
 
-| # | コメント | ステータス | PR |
-|---|---------|-----------|-----|
+| # | Issue | ステータス | PR |
+|---|-------|-----------|-----|
 HEADER
 
 echo ""
@@ -153,34 +174,24 @@ for i in $(seq 0 $((PROCESS_COUNT - 1))); do
     break
   fi
 
-  COMMENT=$(echo "$COMMENTS" | jq -r ".[$i]")
-  COMMENT_ID=$(echo "$COMMENT" | jq -r '.id')
-  COMMENT_URL=$(echo "$COMMENT" | jq -r '.url')
-  COMMENT_LOGIN=$(echo "$COMMENT" | jq -r '.login')
-  BODY_PREVIEW=$(echo "$COMMENT" | jq -r '.body' | head -1 | cut -c1-80)
+  ISSUE=$(echo "$ISSUES_JSON" | jq -r ".[$i]")
+  ISSUE_NUMBER=$(echo "$ISSUE" | jq -r '.number')
+  ISSUE_TITLE=$(echo "$ISSUE" | jq -r '.title')
+  ISSUE_URL=$(echo "$ISSUE" | jq -r '.url')
   NUM=$((i + 1))
 
-  # Resolve GitHub login -> author id via authors.json
-  AUTHOR_ID=$(jq -r --arg l "$COMMENT_LOGIN" '.authors[] | select(.github_login == $l) | .id' "$AUTHORS_FILE")
-  if [ -z "$AUTHOR_ID" ] || [ "$AUTHOR_ID" = "null" ]; then
-    AUTHOR_ID="$COMMENT_LOGIN"
-  fi
+  echo "[${NUM}/${PROCESS_COUNT}] $(date '+%H:%M:%S') #${ISSUE_NUMBER} ${ISSUE_TITLE}"
+  echo "    ${ISSUE_URL}"
 
-  echo "[${NUM}/${PROCESS_COUNT}] $(date '+%H:%M:%S') ${COMMENT_URL} (author: ${AUTHOR_ID})"
-  echo "    ${BODY_PREVIEW}"
-
-  # claude -p でブログ作成
-  PROMPT="/blog ${COMMENT_URL}
-
-このコメントの投稿者は GitHub login \"${COMMENT_LOGIN}\" (author id \"${AUTHOR_ID}\") です。
-作成する記事のフロントマターに必ず以下を含めてください：
-  author: \"${AUTHOR_ID}\""
+  # /blog に Issue URL を投げる。author 解決と Closes #N 付与は /blog skill 側の責務。
+  PROMPT="/blog ${ISSUE_URL}"
   if [[ -n "$SKIP_REVIEW_PROMPT" ]]; then
     PROMPT="${PROMPT}
+
 ${SKIP_REVIEW_PROMPT}"
   fi
 
-  RESULT_FILE=".claude/temp/blog-batch-result-${COMMENT_ID}.txt"
+  RESULT_FILE="${BLOG_DIR}/.claude/temp/blog-batch-result-${ISSUE_NUMBER}.txt"
   STATUS=""
   PR_URL="-"
 
@@ -210,15 +221,15 @@ ${SKIP_REVIEW_PROMPT}"
       echo "    ❌ 失敗 (exit code: ${EXIT_CODE})"
       STATUS="❌ 失敗 (exit ${EXIT_CODE})"
       FAILED=$((FAILED + 1))
-      FAILED_URLS+=("$COMMENT_URL")
+      FAILED_ISSUES+=("$ISSUE_URL")
     fi
   fi
 
   # レポートに行追加
-  echo "| ${NUM} | [${COMMENT_ID}](${COMMENT_URL}) | ${STATUS} | ${PR_URL} |" >> "$REPORT_FILE"
+  echo "| ${NUM} | [#${ISSUE_NUMBER}](${ISSUE_URL}) ${ISSUE_TITLE} | ${STATUS} | ${PR_URL} |" >> "$REPORT_FILE"
 
   # 結果をログに追記
-  echo "=== [${NUM}/${PROCESS_COUNT}] $(date '+%Y-%m-%d %H:%M:%S') ${COMMENT_URL} ===" >> "$LOG_FILE"
+  echo "=== [${NUM}/${PROCESS_COUNT}] $(date '+%Y-%m-%d %H:%M:%S') #${ISSUE_NUMBER} ===" >> "$LOG_FILE"
   cat "$RESULT_FILE" >> "$LOG_FILE" 2>/dev/null
   echo "" >> "$LOG_FILE"
   rm -f "$RESULT_FILE"
@@ -253,10 +264,10 @@ if [[ ${#PR_URLS[@]} -gt 0 ]]; then
 fi
 
 # 失敗一覧
-if [[ ${#FAILED_URLS[@]} -gt 0 ]]; then
-  echo "## 失敗したコメント（要リトライ）" >> "$REPORT_FILE"
+if [[ ${#FAILED_ISSUES[@]} -gt 0 ]]; then
+  echo "## 失敗した Issue（要リトライ）" >> "$REPORT_FILE"
   echo "" >> "$REPORT_FILE"
-  for url in "${FAILED_URLS[@]}"; do
+  for url in "${FAILED_ISSUES[@]}"; do
     echo "- ${url}" >> "$REPORT_FILE"
   done
   echo "" >> "$REPORT_FILE"
