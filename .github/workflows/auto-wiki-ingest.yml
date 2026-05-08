@@ -1,0 +1,75 @@
+name: auto-wiki-ingest
+
+on:
+  schedule:
+    # 毎週日曜 04:00 JST = 土曜 19:00 UTC
+    - cron: '0 19 * * 6'
+  workflow_dispatch:
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: read
+      id-token: write
+      actions: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: List new posts since last ingest
+        id: list
+        run: |
+          LAST=$(cat .claude/wiki-last-ingest.txt 2>/dev/null || echo "1970-01-01")
+          python scripts/list-new-posts-since.py "$LAST" > /tmp/changed-posts.txt
+          COUNT=$(wc -l < /tmp/changed-posts.txt | tr -d ' ')
+          {
+            echo "count=${COUNT}"
+            echo "since=${LAST}"
+            echo "posts<<POSTS_EOF"
+            cat /tmp/changed-posts.txt
+            echo "POSTS_EOF"
+          } >> "$GITHUB_OUTPUT"
+          echo "since=${LAST} count=${COUNT}"
+
+      - name: Skip if no new posts
+        if: steps.list.outputs.count == '0'
+        run: |
+          echo "No new posts since ${SINCE}. Nothing to do."
+        env:
+          SINCE: ${{ steps.list.outputs.since }}
+
+      - name: Run /wiki-ingest via Claude Code Action
+        if: steps.list.outputs.count != '0'
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          claude_args: '--allowed-tools Bash,Edit,Write,Read,Grep,Glob'
+          prompt: |
+            次の手順を順に実行してください。
+
+            1. 以下の記事を /wiki-ingest skill で処理し、必要に応じて
+               content/wiki/{concepts,tools,guides} のページを新規作成・更新する
+               （記事を丸コピーせず、要約・統合した知識として再構成すること）
+            2. 完了後、.claude/wiki-last-ingest.txt を本日の日付 (YYYY-MM-DD) に書き換える
+            3. ブランチ wiki/auto-ingest-$(date +%Y%m%d) を切って差分を commit
+               コミットメッセージ: "chore: auto-ingest wiki updates"
+            4. PR を作成（base: main）
+               - title: "Auto-ingest: weekly wiki update (since ${{ steps.list.outputs.since }})"
+               - body には以下を含める:
+                 - 処理対象の記事一覧（リンク付き）
+                 - 新規作成 / 更新された Wiki ページの一覧
+                 - 何も差分が出なかった場合は PR を作らず、その旨を job summary に書く
+            5. hugo --gc が通ることを確認してから push する
+
+            処理対象の記事 (frontmatter date >= ${{ steps.list.outputs.since }}):
+            ${{ steps.list.outputs.posts }}
