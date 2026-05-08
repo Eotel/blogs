@@ -65,6 +65,7 @@ Hugo + PaperMod で構築された技術ブログ。GitHub Pages でホスティ
 - `/wiki-query "<質問>"` — Wiki と posts に質問を投げて引用付きで回答（**入力 / 検索**）
 - `/wiki-lint` — Wiki の健全性チェック（孤立ページ、欠落リンク、古い記述）
 - Wiki 構造: `content/wiki/concepts/`（概念）、`content/wiki/tools/`（ツール）、`content/wiki/guides/`（手順）
+  - **opt-in セクション**: `content/wiki/qa/` は `/wiki-query --save` 時だけ生成される（v1 ではデフォルト保存しない）
 - Wiki ページのフロントマター: title, description, date, lastmod, aliases, related_posts, tags
 - Wiki ページは記事の丸コピーではなく、要約・統合した知識として再構成する
 - Wiki セクション専用レイアウト: `layouts/wiki/`（single.html, list.html）
