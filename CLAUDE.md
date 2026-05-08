@@ -61,13 +61,15 @@ Hugo + PaperMod で構築された技術ブログ。GitHub Pages でホスティ
 
 ## Wiki 管理（LLM Wiki パターン）
 
-- `/wiki-ingest <対象>` スキルで記事から Wiki ページを自動生成・更新
+- `/wiki-ingest <対象>` — 記事から Wiki ページを自動生成・更新（**出力**）
+- `/wiki-query "<質問>"` — Wiki と posts に質問を投げて引用付きで回答（**入力 / 検索**）
+- `/wiki-lint` — Wiki の健全性チェック（孤立ページ、欠落リンク、古い記述）
 - Wiki 構造: `content/wiki/concepts/`（概念）、`content/wiki/tools/`（ツール）、`content/wiki/guides/`（手順）
+  - **opt-in セクション**: `content/wiki/qa/` は `/wiki-query --save` 時だけ生成される（v1 ではデフォルト保存しない）
 - Wiki ページのフロントマター: title, description, date, lastmod, aliases, related_posts, tags
 - Wiki ページは記事の丸コピーではなく、要約・統合した知識として再構成する
-- `/wiki-lint` スキルで Wiki の健全性チェック（孤立ページ、欠落リンク、古い記述の検出）
 - Wiki セクション専用レイアウト: `layouts/wiki/`（single.html, list.html）
-- 詳細は `.claude/skills/wiki-ingest/SKILL.md`、`.claude/skills/wiki-lint/SKILL.md` を参照
+- 詳細は `.claude/skills/wiki-ingest/SKILL.md`、`.claude/skills/wiki-query/SKILL.md`、`.claude/skills/wiki-lint/SKILL.md` を参照
 
 ## Gist 取り込み運用 (multi-author)
 
