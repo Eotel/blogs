@@ -121,12 +121,18 @@ karpathy LLM Wiki パターンの "Wiki as input" を実現する段。記事執
 
 記事が coding agent による自動執筆の場合、使用したモデルIDをフロントマターに記録する。
 
+auto モードの shell ルール（`$()` 置換禁止）に従い、結果は一時ファイル経由で受け渡す:
+
 ```bash
-MODEL_ID=$(python3 "$PROJECT_DIR/scripts/get_model.py")
+mkdir -p "$PROJECT_DIR/.claude/temp"
+python3 "$PROJECT_DIR/scripts/get_model.py" > "$PROJECT_DIR/.claude/temp/model_id.txt"
 ```
 
-- 値が空の場合はフロントマターから省略してもよい
+書き出した `.claude/temp/model_id.txt` を Read ツールで読み、フロントマターの `model:` に値を入れる。
+
+- ファイル内容が空の場合はフロントマターから `model` を省略してもよい
 - 手動執筆の場合も省略可
+- 走行中の agent を判別できなかった場合、スクリプトは無関係な設定からの推測を避けて空を返す
 
 ### 7. 記事ファイルを作成する
 
