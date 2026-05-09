@@ -119,6 +119,7 @@ title: "記事タイトル"
 draft: false
 categories: ["AI/LLM"]
 tags: ["claude", "hooks"]
+model: "<model id>"     # 任意。coding agent で執筆した場合に記載
 aliases: ["別表記1"]   # 任意。Wiki と用語を揃える時に
 source_url: "https://..."  # 任意。外部記事への明示的な参照
 ---

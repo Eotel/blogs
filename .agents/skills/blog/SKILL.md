@@ -117,13 +117,24 @@ karpathy LLM Wiki パターンの "Wiki as input" を実現する段。記事執
 
    ヒットしなくても作業は止めない。「これは新しい概念で Wiki に未収録」と認識して書く（後で `/wiki-ingest` がこの記事から拾う）。
 
-### 6. 記事ファイルを作成する
+### 6. モデルIDを取得する
+
+記事が coding agent による自動執筆の場合、使用したモデルIDをフロントマターに記録する。
+
+```bash
+MODEL_ID=$(python3 "$PROJECT_DIR/scripts/get_model.py")
+```
+
+- 値が空の場合はフロントマターから省略してもよい
+- 手動執筆の場合も省略可
+
+### 7. 記事ファイルを作成する
 
 - ファイルパス: `content/posts/YYYY/MM/YYYY-MM-DD-<slug>.md`
 - `<slug>` はトピックから生成する（英数字・ハイフンのみ、小文字）
 - 同名ファイルが既に存在する場合はサフィックスを追加する（例: `-2`）
 
-### 7. カテゴリとタグを自動付与する
+### 8. カテゴリとタグを自動付与する
 
 - `scripts/categorize.py` のルールに基づいて、記事の内容からカテゴリとタグを判定する
 - カテゴリは以下から最適なものを1つ選択する:
@@ -142,6 +153,7 @@ date: YYYY-MM-DD
 lastmod: YYYY-MM-DD
 draft: false
 author: "<author id>"   # scripts/authors.json の id。GitHub URL ソースの場合は投稿者の github_login から解決
+model: "<model id>"     # coding agent で執筆した場合は自動設定。手動執筆の場合は省略可
 source_url: "https://github.com/..."
 categories: ["カテゴリ"]
 tags: ["tag1", "tag2"]
@@ -157,6 +169,7 @@ date: YYYY-MM-DD
 lastmod: YYYY-MM-DD
 draft: false
 author: "eotel"   # 手動実行時のデフォルト
+model: "<model id>"     # coding agent で執筆した場合は自動設定。手動執筆の場合は省略可
 categories: ["カテゴリ"]
 tags: ["tag1", "tag2"]
 ---
