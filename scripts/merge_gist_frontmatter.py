@@ -93,6 +93,7 @@ def order_keys(merged: dict[str, Any]) -> dict[str, Any]:
     """Stable, human-friendly ordering for the rendered frontmatter."""
     preferred = [
         "title", "date", "lastmod", "draft", "author",
+        "model",
         "gist_id", "gist_url", "gist_file",
         "description", "aliases", "source_url",
         "categories", "tags",
