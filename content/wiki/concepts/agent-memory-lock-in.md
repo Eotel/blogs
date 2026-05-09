@@ -68,6 +68,7 @@ Claude Agent SDK のように内部でクローズドソースのコードを使
 ## 関連ページ
 
 - [ハーネスエンジニアリング](/blogs/wiki/concepts/harness-engineering/) — ハーネス設計の全体像
+- [エージェントメモリアーキテクチャ](/blogs/wiki/concepts/agent-memory-architecture/) — 偽のメモリ vs 真のメモリの設計論
 - [Claude Managed Agents](/blogs/wiki/tools/claude-managed-agents/) — クラウド側でメモリを管理するアプローチ
 - [AI エージェント](/blogs/wiki/concepts/ai-agent/) — エージェント基盤の概念
 - [MemPalace](/blogs/wiki/tools/mempalace/) — ローカルメモリシステムの実装例
