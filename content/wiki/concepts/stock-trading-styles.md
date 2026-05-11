@@ -82,6 +82,7 @@ tags: ["株式投資", "デイトレード", "スイングトレード", "スキ
 ## 関連ページ
 
 - [財務分析](/blogs/wiki/concepts/financial-analysis/) — 中長期投資の企業分析に関連する概念
+- [Alpaca](/blogs/wiki/tools/alpaca/) — 米国株・ETF 自動売買を実現する証券 API
 
 ## ソース記事
 

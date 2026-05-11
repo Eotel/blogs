@@ -46,6 +46,7 @@ Karpathy は RAG を「毎日同じ本を初めて読む人に質問を投げる
 - [MemPalace](/blogs/wiki/tools/mempalace/) — ベクトル検索による永続メモリシステム
 - [Onyx](/blogs/wiki/tools/onyx/) — 企業内検索とエージェントを統合する OSS RAG プラットフォーム
 - [Supabase](/blogs/wiki/tools/supabase/) — pgvector による RAG 用ベクトルストア基盤
+- [Open-notebook](/blogs/wiki/tools/open-notebook/) — NotebookLM 代替、ローカル LLM でドキュメントを Q&A できる OSS
 
 ## ソース記事
 
