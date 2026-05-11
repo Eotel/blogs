@@ -18,8 +18,16 @@ nix profile install nixpkgs#devenv
 
 # shell に入る (初回は数分かかる)
 devenv shell
+```
 
-# direnv 利用者は cd 時に自動で有効化される
+direnv 経由で `cd` 時に自動有効化したい場合は、初回だけ devenv 公式の direnvrc を
+direnv のユーザー lib に配置する必要がある (これが無いと `use_devenv: command not found` で落ちる):
+
+```bash
+mkdir -p ~/.config/direnv/lib
+devenv direnvrc > ~/.config/direnv/lib/devenv.sh
+
+# プロジェクトの .envrc を許可
 direnv allow
 ```
 
