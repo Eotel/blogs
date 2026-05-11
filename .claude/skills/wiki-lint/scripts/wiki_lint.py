@@ -25,6 +25,25 @@ REQUIRED_FRONTMATTER = [
 ]
 RECOMMENDED_FRONTMATTER = ["aliases"]
 
+# Scalar required keys must have a non-empty value. The parser stores a bare
+# YAML key (e.g. `author:` with no value) as `[]`, so for scalar keys we treat
+# `[]` as missing too — otherwise structurally invalid required scalars would
+# slip through. List-type required keys (`related_posts`, `tags`) may
+# legitimately be empty (`tags: []`), so `[]` is treated as present for them.
+_SCALAR_KEYS = {"title", "description", "date", "lastmod", "author"}
+
+
+def is_missing(fm: dict, key: str) -> bool:
+    if key not in fm:
+        return True
+    v = fm[key]
+    if v is None or v == "":
+        return True
+    if v == [] and key in _SCALAR_KEYS:
+        return True
+    return False
+
+
 FM_RE = re.compile(r"^---\n(.*?)\n---\n", re.DOTALL)
 WIKI_LINK_RE = re.compile(r"\]\((/blogs/wiki/[^)]+)\)")
 POST_LINK_RE = re.compile(r"^/(?:blogs/)?posts/([^#?]*)")
@@ -197,18 +216,16 @@ def main() -> int:
                 stale_pages.append((f, wiki_lastmod, post_lastmod))
 
     fm_issues: list[tuple[Path, list[str], list[str]]] = []
+    fm_required_count = 0  # pages with at least one missing REQUIRED key (fatal)
     for f, fm in pages.items():
         if f.name == "_index.md":
             continue
-        # Treat present-but-empty (e.g. `aliases: []`) as set; only flag truly missing keys.
-        missing = [
-            k for k in REQUIRED_FRONTMATTER if k not in fm or fm[k] in (None, "")
-        ]
-        recommended_missing = [
-            k for k in RECOMMENDED_FRONTMATTER if k not in fm or fm[k] in (None, "")
-        ]
+        missing = [k for k in REQUIRED_FRONTMATTER if is_missing(fm, k)]
+        recommended_missing = [k for k in RECOMMENDED_FRONTMATTER if is_missing(fm, k)]
         if missing or recommended_missing:
             fm_issues.append((f, missing, recommended_missing))
+            if missing:
+                fm_required_count += 1
 
     counts: dict[str, int] = {}
     for f in wiki_files:
@@ -273,14 +290,18 @@ def main() -> int:
         print(f"- {sec}: {counts[sec]}")
 
     # Fatal: structural / referential issues that should block pre-push and CI.
-    # Advisory: orphans / stale pages are surfaced for /wiki-lint review but
-    # don't block pushes (new wiki pages from /wiki-ingest are temporarily
-    # orphan by design until cross-links are added).
-    fatal_issues = len(broken_links) + len(related_post_issues) + len(fm_issues)
-    advisory_issues = len(orphans) + len(stale_pages)
+    #   - broken_links / related_post_issues: dead references
+    #   - fm_required_count: pages missing at least one REQUIRED frontmatter key
+    # Advisory (non-blocking):
+    #   - orphans / stale pages: surfaced by /wiki-lint review, but /wiki-ingest
+    #     output is temporarily orphan by design until cross-links are added
+    #   - fm pages missing only RECOMMENDED keys (e.g. `aliases`)
+    fatal_issues = len(broken_links) + len(related_post_issues) + fm_required_count
+    fm_recommended_only = len(fm_issues) - fm_required_count
+    advisory_issues = len(orphans) + len(stale_pages) + fm_recommended_only
     if advisory_issues:
         print(
-            f"\n(advisory: {advisory_issues} non-blocking finding(s) — see 孤立ページ / 古い可能性のあるページ)"
+            f"\n(advisory: {advisory_issues} non-blocking finding(s) — 孤立 / 古い可能性 / 推奨欠落)"
         )
     return 0 if fatal_issues == 0 else 1
 

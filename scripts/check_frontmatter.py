@@ -32,6 +32,7 @@ def _load_wiki_lint():
 _wl = _load_wiki_lint()
 REQUIRED_FRONTMATTER: list[str] = _wl.REQUIRED_FRONTMATTER
 parse_frontmatter = _wl.parse_frontmatter
+is_missing = _wl.is_missing
 
 POST_REQUIRED = ["title", "date", "author"]
 
@@ -54,7 +55,7 @@ def _validate(path: Path) -> list[str]:
         required = POST_REQUIRED
     else:
         return []
-    missing = [k for k in required if k not in fm or fm[k] in (None, "")]
+    missing = [k for k in required if is_missing(fm, k)]
     return [f"missing required key: {k}" for k in missing]
 
 

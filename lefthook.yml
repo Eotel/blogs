@@ -8,32 +8,37 @@
 #   lefthook run pre-commit
 #   lefthook run pre-commit --files content/wiki/concepts/rag.md
 
-# pre-commit: staged ファイルのみを並列に検査（軽量）
+# pre-commit: staged ファイルのみを検査
+# - auto-fix 系 (ruff --fix / black / markdownlint --fix) は同一ファイルを並列に
+#   書き換えると非決定になるため "piped: true" で直列化する。
+# - 残りの read-only チェックは速いので 1 グループで直列実行する。
+# - glob は lefthook 2.x の gobwas/glob 実装に従う。`*.py` でも subdirectory に
+#   マッチするが、`scripts/**/*.py` は scripts 直下にマッチしないので注意。
 pre-commit:
-  parallel: true
+  piped: true
   commands:
-    git-secrets:
-      run: git secrets --pre_commit_hook -- {staged_files}
-    ruff:
+    01-ruff:
       glob: "*.py"
       run: ruff check --fix {staged_files}
       stage_fixed: true
-    black:
+    02-black:
       glob: "*.py"
       run: black --quiet {staged_files}
       stage_fixed: true
-    shellcheck:
-      glob: "*.sh"
-      run: shellcheck --severity=warning {staged_files}
-    markdownlint:
+    03-markdownlint:
       glob: "content/wiki/**/*.md"
       run: markdownlint-cli2 --fix {staged_files}
       stage_fixed: true
-    frontmatter:
+    04-git-secrets:
+      run: git secrets --pre_commit_hook -- {staged_files}
+    05-shellcheck:
+      glob: "*.sh"
+      run: shellcheck --severity=warning {staged_files}
+    06-frontmatter:
       glob: "content/{posts,wiki}/**/*.md"
       run: python3 scripts/check_frontmatter.py {staged_files}
-    ast-grep:
-      glob: "{scripts,.claude/skills}/**/*.{py,sh}"
+    07-ast-grep:
+      glob: "*.{py,sh}"
       run: ast-grep scan {staged_files}
 
 # commit-msg / prepare-commit-msg: 既存 git-secrets 機能を保全
@@ -48,12 +53,19 @@ prepare-commit-msg:
       run: git secrets --prepare_commit_msg_hook -- {1} {2} {3}
 
 # pre-push: 重いが価値の高い検証
-# hugo がローカルにない環境ではスキップ（CI で必ず検証されるため安全）
+# hugo がローカルにない環境ではスキップ（CI で必ず検証されるため安全）。
+# 注: `command -v hugo && hugo ... || echo ...` だと hugo build 失敗時に echo へ
+# フォールバックして exit 0 になってしまうため、if-else で明示的に分岐する。
 pre-push:
   parallel: false
   commands:
     hugo-build:
-      run: command -v hugo >/dev/null && hugo --gc --quiet --destination .claude/temp/hugo-check || echo "hugo not installed locally — skipping (CI will verify)"
+      run: |
+        if command -v hugo >/dev/null 2>&1; then
+          hugo --gc --quiet --destination .claude/temp/hugo-check
+        else
+          echo "hugo not installed locally — skipping (CI will verify)"
+        fi
     wiki-lint:
       run: python3 .claude/skills/wiki-lint/scripts/wiki_lint.py
     ast-grep-full:

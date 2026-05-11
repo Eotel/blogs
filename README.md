@@ -53,7 +53,7 @@ lefthook install
 
 #### 何が走るか
 
-- **pre-commit** (staged ファイルのみ・並列): `git secrets`、`ruff`、`black --check`、`shellcheck`、`markdownlint-cli2 --fix`、`scripts/check_frontmatter.py`、`ast-grep scan`
+- **pre-commit** (staged ファイルのみ・直列パイプ): `ruff --fix` → `black --quiet` → `markdownlint-cli2 --fix` (ここまで auto-fix + 再 stage) → `git secrets` → `shellcheck` → `scripts/check_frontmatter.py` → `ast-grep scan`
 - **commit-msg / prepare-commit-msg**: `git secrets` でメッセージを検査
 - **pre-push**: `hugo --gc` で build 確認 → `wiki_lint.py` 全体 → `ast-grep scan` 全体
 - **CI** (`.github/workflows/lint.yml`): pre-push 相当を PR で再実行（ローカルスキップ対策）
