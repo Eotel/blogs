@@ -195,7 +195,7 @@ tags: ["tag1", "tag2"]
    - MCP 未接続、aegis 未起動などの場合
 
 3. **`aegis_fetch` の大きな結果の扱い**
-   - 結果がトークン上限を超えると、Claude Code が自動的に `~/.claude/projects/.../tool-results/` に保存する
+   - 結果がトークン上限を超えると、ランタイム側（Claude Code なら `~/.claude/projects/.../tool-results/`、Codex CLI も同様にホーム配下に退避）が自動的に外部ファイルへ保存する
    - このパスは保護対象（sensitive file）のため、`cp` や `Grep` でアクセスすると同意確認が発生する
    - **対処: `.claude/temp/` にコピーしてから Read/Grep する**
      ```bash

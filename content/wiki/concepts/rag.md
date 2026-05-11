@@ -5,7 +5,6 @@ date: 2026-04-06
 lastmod: 2026-04-16
 aliases: ["RAG", "検索拡張生成"]
 related_posts:
-  - "/posts/2024/04/getai-rag/"
   - "/posts/2026/04/karpathy-llm-wiki/"
   - "/posts/2026/03/rag-adaptive-search-strategy/"
 tags: ["RAG", "LLM", "ベクトル検索", "ナレッジマネジメント", "アダプティブ検索"]
@@ -45,9 +44,10 @@ Karpathy は RAG を「毎日同じ本を初めて読む人に質問を投げる
 - [LLM Wiki パターン](/blogs/wiki/concepts/llm-wiki-pattern/) — RAG の限界を超える知識積み上げ型アプローチ
 - [AI エージェント](/blogs/wiki/concepts/ai-agent/) — RAG を内部で利用するシステム
 - [MemPalace](/blogs/wiki/tools/mempalace/) — ベクトル検索による永続メモリシステム
+- [Onyx](/blogs/wiki/tools/onyx/) — 企業内検索とエージェントを統合する OSS RAG プラットフォーム
+- [Supabase](/blogs/wiki/tools/supabase/) — pgvector による RAG 用ベクトルストア基盤
 
 ## ソース記事
 
-- [getAI RAG](/blogs/posts/2024/04/getai-rag/) — 2024-04
 - [Karpathy の LLM Wiki](/blogs/posts/2026/04/karpathy-llm-wiki/) — 2026-04
 - [AIが自分で調べ方を選ぶRAG — モデル推論能力でスケールする新手法](/blogs/posts/2026/03/rag-adaptive-search-strategy/) — 2026-03-17

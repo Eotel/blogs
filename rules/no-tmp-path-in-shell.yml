@@ -1,0 +1,14 @@
+# ast-grep rule: ban /tmp/ paths in shell scripts.
+# CLAUDE.md ルール「`/tmp` を使わない — 一時ファイルは `.claude/temp/` に置く」を機械化。
+id: no-tmp-path-in-shell
+language: bash
+severity: error
+message: /tmp の代わりに .claude/temp/ を使う (CLAUDE.md)
+rule:
+  any:
+    - kind: word
+      regex: '^/tmp/'
+    - kind: string
+      regex: '/tmp/'
+    - kind: raw_string
+      regex: '/tmp/'

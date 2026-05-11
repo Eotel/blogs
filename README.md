@@ -4,6 +4,75 @@ https://hdknr.github.io/blogs/
 
 Hugo + PaperMod で構築された技術ブログ。GitHub Pages でホスティング。
 
+## 開発環境セットアップ
+
+### devenv (推奨)
+
+[devenv](https://devenv.sh) (Nix ベース) で Hugo / Python / lint ツール / drawio export を 1 コマンドで揃えられる。
+`lefthook install`・`pip install -r requirements.txt` は `enterShell` で自動実行されるので、下記の brew 手順を踏まずに済む。
+
+```bash
+# devenv 本体 (未導入なら)
+curl -L https://install.determinate.systems/nix | sh -s -- install
+nix profile install nixpkgs#devenv
+
+# shell に入る (初回は数分かかる)
+devenv shell
+
+# direnv 利用者は cd 時に自動で有効化される
+direnv allow
+```
+
+devenv shell 内で使える便利スクリプト:
+
+| コマンド | 用途 |
+|---|---|
+| `hugo-serve` | `hugo server --buildDrafts` を 0.0.0.0 で起動 |
+| `hugo-check` | `lefthook pre-push` と同等の build チェック |
+| `drawio-export <file.drawio>` | `static/images/*.drawio` を PNG/SVG に変換 (Docker 必須) |
+| `wiki-lint` | `wiki_lint.py` のラッパー |
+
+`drawio-export` は [`rlespinasse/drawio-export`](https://github.com/rlespinasse/drawio-export) Docker イメージを使うので、別途 Docker Desktop か colima を入れておく。
+画像の絶対 pin が必要なら `inputs.nixpkgs` を `devenv.yaml` で固定する。
+
+### Lefthook (pre-commit / pre-push フック)
+
+このリポジトリは [lefthook](https://github.com/evilmartians/lefthook) で commit/push 時の lint を自動化している。
+**devenv shell に入っていれば `lefthook install` は自動実行される**ので下記は brew 単体運用する場合のみ必要。
+
+```bash
+# 初回ツールインストール (devenv を使わない場合)
+brew install lefthook shellcheck markdownlint-cli2
+
+# Python lint (ruff/black) は uv または pip 経由で入れる
+# ast-grep は別途 `brew install ast-grep` などで導入
+
+# git hooks をインストール
+lefthook install
+```
+
+#### 何が走るか
+
+- **pre-commit** (staged ファイルのみ・直列パイプ): `ruff --fix` → `black --quiet` → `markdownlint-cli2 --fix` (ここまで auto-fix + 再 stage) → `git secrets` → `shellcheck` → `scripts/check_frontmatter.py` → `ast-grep scan`
+- **commit-msg / prepare-commit-msg**: `git secrets` でメッセージを検査
+- **pre-push**: `hugo --gc` で build 確認 → `wiki_lint.py` 全体 → `ast-grep scan` 全体
+- **CI** (`.github/workflows/lint.yml`): pre-push 相当を PR で再実行（ローカルスキップ対策）
+
+#### 緊急時に hook を bypass する
+
+```bash
+LEFTHOOK=0 git commit -m "..."
+LEFTHOOK=0 git push
+```
+
+#### 手動で hook を走らせる
+
+```bash
+lefthook run pre-commit                                    # staged 差分
+lefthook run pre-commit --files content/wiki/concepts/rag.md  # 特定ファイル
+lefthook run pre-push
+```
+
 ## スクリプト
 
 ### blog-batch.sh — 未ブログ化コメントの一括処理

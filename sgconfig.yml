@@ -1,0 +1,4 @@
+# ast-grep root configuration
+# Docs: https://ast-grep.github.io/reference/sgconfig.html
+ruleDirs:
+  - rules

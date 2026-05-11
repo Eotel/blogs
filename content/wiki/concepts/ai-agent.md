@@ -57,6 +57,8 @@ LangChain 創設者 Harrison Chase が指摘する重要な概念。エージェ
 - [ハーネスエンジニアリング](/blogs/wiki/concepts/harness-engineering/) — エージェント品質保証の設計パターン
 - [自己改善エージェント](/blogs/wiki/concepts/self-improving-agents/) — エージェントが自律的に改善するパターン
 - [MCP](/blogs/wiki/concepts/mcp/) — エージェントと外部ツールの接続プロトコル
+- [スケーラブル・オーバーサイト](/blogs/wiki/concepts/scalable-oversight/) — 強くなる AI への監督アプローチ
+- [TimesFM](/blogs/wiki/tools/timesfm/) — 時系列予測専用基盤モデル
 
 ## ソース記事
 

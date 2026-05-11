@@ -138,6 +138,9 @@ Claude Code の作者 Boris Cherny は Claude Code 自体を使って Claude Cod
 - [Claude Managed Agents](/blogs/wiki/tools/claude-managed-agents/) — Anthropic のマネージドエージェント基盤
 - [Video Use](/blogs/wiki/tools/video-use/) — Claude Code スキルとして動作する動画編集自動化ツール
 - [Claude Harness](/blogs/wiki/tools/claude-harness/) — Claude Code の拡張機構をワンパッケージで提供する外装プラグイン
+- [APM（Agent Package Manager）](/blogs/wiki/tools/apm/) — Claude Code 向けエージェントパッケージマネージャ
+- [AI エージェント時代のシークレット管理](/blogs/wiki/guides/ai-agent-secret-management/) — Claude Code が .env にアクセスする問題への対策
+- [pytest でカオスエンジニアリング](/blogs/wiki/guides/pytest-chaos-engineering/) — Claude Code 主導でテスト基盤を堅牢化するガイド
 
 ## ソース記事
 

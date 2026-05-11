@@ -1,0 +1,11 @@
+# ast-grep rule: discourage print() in scripts/ — prefer logging.
+# 注: 既存スクリプト (categorize.py, check_frontmatter.py) は CLI 出力として print
+# を使うため、warning レベル運用。フォーマル化は段階的に進める。
+id: no-print-in-scripts
+language: python
+severity: hint
+message: CLI 出力以外では print の代わりに logging を使うことを検討
+files:
+  - "scripts/*.py"
+rule:
+  pattern: print($$$ARGS)

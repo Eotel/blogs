@@ -67,9 +67,9 @@ Do you want to proceed?
 
 以下のファイルを読み取り、現在の許可パターンを把握する:
 
-- `.claude/settings.local.json` の `permissions.allow` 配列
-- CLAUDE.md のルール
-- `.claude/skills/` 配下のスキル定義
+- ランタイムの権限設定ファイル（Claude Code なら `.claude/settings.local.json` の `permissions.allow` 配列、Codex CLI なら `.codex/config.toml` の sandbox 設定など）
+- プロジェクトルールファイル（`CLAUDE.md` / `AGENTS.md`）
+- スキル定義（`.claude/skills/` または symlink 先の `.agents/skills/`）配下の `SKILL.md`
 
 ### 4. 改善提案の作成
 
@@ -146,8 +146,8 @@ Do you want to proceed?
 レポートを提示した後、ユーザーの承認を得てから改善を適用する。
 適用する場合は以下のファイルを更新する:
 
-1. `.claude/settings.local.json` — 許可パターンの追加
-2. `.claude/skills/*/SKILL.md` — コマンド例の修正
-3. `CLAUDE.md` — 必要に応じてルールの追記
+1. ランタイムの権限設定ファイル（Claude Code: `.claude/settings.local.json`、Codex: `.codex/config.toml`） — 許可パターンの追加
+2. `.claude/skills/*/SKILL.md`（`.agents/skills/` は symlink 経由で共有） — コマンド例の修正
+3. プロジェクトルールファイル（`CLAUDE.md` / `AGENTS.md`） — 必要に応じてルールの追記
 
 **重要: 適用前に必ずユーザーの確認を取ること。** 許可パターンの変更はセキュリティに直結するため、自動適用しない。

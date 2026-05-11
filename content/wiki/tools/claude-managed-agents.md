@@ -74,6 +74,7 @@ LangChain 創設者 Harrison Chase が指摘する通り、Claude Managed Agents
 - [AI エージェント](/blogs/wiki/concepts/ai-agent/) — エージェント基盤の概念
 - [MCP](/blogs/wiki/concepts/mcp/) — エージェントと外部ツールの接続プロトコル
 - [OpenClaw](/blogs/wiki/tools/openclaw/) — ローカル自律型エージェントとの対比
+- [Anthropic Conway](/blogs/wiki/tools/conway/) — Anthropic 内製の業務代行エージェント
 
 ## ソース記事
 

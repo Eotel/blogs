@@ -18,3 +18,7 @@ tags: ["メール認証", "SPF", "DKIM", "DMARC", "セキュリティ"]
 
 上場企業 3,745 社調査で DMARC 未設定 34.5%、p=none（監視のみ）52.0%。実効的な reject+quarantine はわずか 13.4%。18か国中最下位。
 
+## 関連ページ
+
+- [FIDO2/パスキー認証](/blogs/wiki/concepts/fido2-passkey/) — フィッシング耐性を持つ次世代認証
+

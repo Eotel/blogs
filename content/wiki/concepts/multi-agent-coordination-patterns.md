@@ -69,6 +69,7 @@ Anthropic が 2026年4月に公開した、複数 AI エージェントを協調
 - [Claude Managed Agents](/blogs/wiki/tools/claude-managed-agents/)
 - [エージェントメモリのロックイン](/blogs/wiki/concepts/agent-memory-lock-in/)
 - [ハーネスエンジニアリング](/blogs/wiki/concepts/harness-engineering/)
+- [社会シミュレーション](/blogs/wiki/concepts/social-simulation/) — マルチエージェントを使った仮想社会のシミュレーション
 
 ## ソース記事
 
