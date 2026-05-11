@@ -1,0 +1,4 @@
+# Keyword auto-linking stoplist.
+# One keyword per line. Lines starting with `#` are comments.
+# Match is case-insensitive against the surface keyword from .claude/temp/keywords.json.
+# Use this for noisy short keywords or generic terms you don't want auto-linked.

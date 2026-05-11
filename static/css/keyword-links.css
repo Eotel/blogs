@@ -1,0 +1,25 @@
+/* Hatena-style auto keyword links injected by scripts/inject_keyword_links.py */
+.post-content a.kw-link {
+  text-decoration: underline dotted;
+  text-decoration-color: var(--secondary, #999);
+  text-underline-offset: 2px;
+  color: inherit;
+  background: none;
+  box-shadow: none;
+}
+
+.post-content a.kw-link:hover,
+.post-content a.kw-link:focus {
+  text-decoration-style: solid;
+  text-decoration-color: var(--primary, currentColor);
+  color: var(--primary, inherit);
+}
+
+.post-content a.kw-link--tag {
+  text-decoration-color: var(--tertiary, #bbb);
+}
+
+.post-content a.kw-link[title]::after {
+  /* hint that this is an auto-linked keyword (screen reader only) */
+  content: "";
+}
