@@ -4,6 +4,7 @@ date: 2026-05-11
 lastmod: 2026-05-11
 draft: false
 author: "eotel"
+slug: "design-md-culture"
 description: "Google Labs が 2026 年 4 月に公開した DESIGN.md の仕様を起点に、AGENTS.md / SKILL.md と並ぶ「外観の SSoT」がどのように立ち上がりつつあるかを整理。refero.design や designmd.app のようなカタログサイト、Impeccable のような上位レイヤ、そして本ブログ (Hugo + PaperMod) に DESIGN.md を置くならどう書くか、までを一本でまとめる。"
 categories: ["AI/LLM"]
 tags: ["design.md", "agents.md", "skill.md", "claude-code", "design-system", "agent"]
