@@ -7,6 +7,7 @@ Designed to be invoked from either:
 
 Detects repo root by walking upward until `content/wiki/` is found.
 """
+
 from __future__ import annotations
 
 import re
@@ -14,8 +15,14 @@ import sys
 from datetime import date, datetime
 from pathlib import Path
 
-
-REQUIRED_FRONTMATTER = ["title", "description", "date", "lastmod", "related_posts", "tags"]
+REQUIRED_FRONTMATTER = [
+    "title",
+    "description",
+    "date",
+    "lastmod",
+    "related_posts",
+    "tags",
+]
 RECOMMENDED_FRONTMATTER = ["aliases"]
 
 FM_RE = re.compile(r"^---\n(.*?)\n---\n", re.DOTALL)
@@ -25,9 +32,13 @@ POST_LINK_RE = re.compile(r"^/(?:blogs/)?posts/([^#?]*)")
 
 def find_repo_root(start: Path) -> Path:
     for candidate in [start, *start.parents]:
-        if (candidate / "content" / "wiki").is_dir() and (candidate / "content" / "posts").is_dir():
+        if (candidate / "content" / "wiki").is_dir() and (
+            candidate / "content" / "posts"
+        ).is_dir():
             return candidate
-    raise SystemExit("Could not find repo root (no content/wiki and content/posts found upward).")
+    raise SystemExit(
+        "Could not find repo root (no content/wiki and content/posts found upward)."
+    )
 
 
 def parse_frontmatter(text: str) -> dict:
@@ -107,7 +118,9 @@ def build_post_slug_index(posts_dir: Path) -> dict[tuple[str, str, str], Path]:
     return idx
 
 
-def post_link_to_path(link: str, slug_index: dict[tuple[str, str, str], Path]) -> Path | None:
+def post_link_to_path(
+    link: str, slug_index: dict[tuple[str, str, str], Path]
+) -> Path | None:
     m = POST_LINK_RE.match(link)
     if not m:
         return None
@@ -121,7 +134,12 @@ def parse_date(s: str | None) -> date | None:
     if not s:
         return None
     s = s.strip().strip('"').strip("'")
-    for fmt in ("%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%dT%H:%M:%SZ", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%d"):
+    for fmt in (
+        "%Y-%m-%dT%H:%M:%S%z",
+        "%Y-%m-%dT%H:%M:%SZ",
+        "%Y-%m-%dT%H:%M:%S",
+        "%Y-%m-%d",
+    ):
         try:
             return datetime.strptime(s, fmt).date()
         except ValueError:
@@ -183,8 +201,12 @@ def main() -> int:
         if f.name == "_index.md":
             continue
         # Treat present-but-empty (e.g. `aliases: []`) as set; only flag truly missing keys.
-        missing = [k for k in REQUIRED_FRONTMATTER if k not in fm or fm[k] in (None, "")]
-        recommended_missing = [k for k in RECOMMENDED_FRONTMATTER if k not in fm or fm[k] in (None, "")]
+        missing = [
+            k for k in REQUIRED_FRONTMATTER if k not in fm or fm[k] in (None, "")
+        ]
+        recommended_missing = [
+            k for k in RECOMMENDED_FRONTMATTER if k not in fm or fm[k] in (None, "")
+        ]
         if missing or recommended_missing:
             fm_issues.append((f, missing, recommended_missing))
 
@@ -225,7 +247,9 @@ def main() -> int:
     print(f"### 古い可能性のあるページ ({len(stale_pages)}件)")
     if stale_pages:
         for f, wlm, plm in stale_pages:
-            print(f"- `{f.relative_to(wiki_dir)}` (lastmod: {wlm}) — ソース記事が {plm} に更新")
+            print(
+                f"- `{f.relative_to(wiki_dir)}` (lastmod: {wlm}) — ソース記事が {plm} に更新"
+            )
     else:
         print("- なし")
     print()
@@ -248,8 +272,17 @@ def main() -> int:
     for sec in sorted(counts):
         print(f"- {sec}: {counts[sec]}")
 
-    total_issues = len(orphans) + len(broken_links) + len(related_post_issues) + len(stale_pages) + len(fm_issues)
-    return 0 if total_issues == 0 else 1
+    # Fatal: structural / referential issues that should block pre-push and CI.
+    # Advisory: orphans / stale pages are surfaced for /wiki-lint review but
+    # don't block pushes (new wiki pages from /wiki-ingest are temporarily
+    # orphan by design until cross-links are added).
+    fatal_issues = len(broken_links) + len(related_post_issues) + len(fm_issues)
+    advisory_issues = len(orphans) + len(stale_pages)
+    if advisory_issues:
+        print(
+            f"\n(advisory: {advisory_issues} non-blocking finding(s) — see 孤立ページ / 古い可能性のあるページ)"
+        )
+    return 0 if fatal_issues == 0 else 1
 
 
 if __name__ == "__main__":

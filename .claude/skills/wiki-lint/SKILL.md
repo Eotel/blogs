@@ -16,7 +16,12 @@ python3 .claude/skills/wiki-lint/scripts/wiki_lint.py
 python3 .agents/skills/wiki-lint/scripts/wiki_lint.py
 ```
 
-スクリプトは実行ファイルの親階層を辿って `content/wiki/` を含むリポジトリルートを自動検出する。出力は下記「出力フォーマット」と同じ Markdown を stdout に書き出し、問題が 0 件なら exit 0、それ以外は exit 1 で終わる。
+スクリプトは実行ファイルの親階層を辿って `content/wiki/` を含むリポジトリルートを自動検出する。出力は下記「出力フォーマット」と同じ Markdown を stdout に書き出す。
+
+終了コードは次の通り（lefthook pre-push / CI で利用）:
+
+- **exit 1 (fatal)**: 欠落リンク / `related_posts` 不整合 / フロントマター不備 — 構造的・参照的な不整合
+- **exit 0 (advisory のみ)**: 孤立ページ / 古い可能性のあるページ — `/wiki-ingest` 直後の新規ページは一時的に孤立しうるため push を止めない
 
 ロジックを変更したい場合は **必ず `scripts/wiki_lint.py` 側を編集する**（SKILL.md は仕様の説明のみ）。
 
