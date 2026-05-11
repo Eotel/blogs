@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ast-grep scan *)",
+      "Bash(curl -sI *)",
+      "Bash(gh search *)",
+      "Bash(git ls-tree *)"
+    ]
+  }
+}
