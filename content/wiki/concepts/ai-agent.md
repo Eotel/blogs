@@ -2,7 +2,7 @@
 title: "AI エージェント"
 description: "自律的にタスク実行できる AI システム。複数ステップの処理を自己制御で進める"
 date: 2026-04-06
-lastmod: 2026-04-15
+lastmod: 2026-05-11
 aliases: ["AI Agent", "エージェント", "autonomous agent"]
 related_posts:
   - "/posts/2026/03/ai-agent-qa/"
@@ -13,6 +13,7 @@ related_posts:
   - "/posts/2026/04/claude-managed-agents-architecture/"
   - "/posts/2026/04/anthropic-vs-openai-harness-strategy/"
   - "/posts/2026/04/agent-harness-memory-lock-in/"
+  - "/posts/2026/05/2026-05-11-aws-agent-toolkit-strands-skills/"
 tags: ["agent", "LLM", "自律実行", "マネージドエージェント"]
 ---
 
@@ -54,6 +55,8 @@ LangChain 創設者 Harrison Chase が指摘する重要な概念。エージェ
 - [Claude Managed Agents](/blogs/wiki/tools/claude-managed-agents/) — Anthropic のマネージドエージェント基盤
 - [Gemini Agent](/blogs/wiki/tools/gemini-agent/) — Google Workspace 連携エージェント
 - [OpenClaw](/blogs/wiki/tools/openclaw/) — ローカル自律型エージェント
+- [Strands Agents](/blogs/wiki/tools/strands-agents/) — AWS が公開したモデル駆動型 SDK
+- [Amazon Bedrock AgentCore](/blogs/wiki/tools/bedrock-agentcore/) — AWS のマネージドエージェント基盤
 - [ハーネスエンジニアリング](/blogs/wiki/concepts/harness-engineering/) — エージェント品質保証の設計パターン
 - [自己改善エージェント](/blogs/wiki/concepts/self-improving-agents/) — エージェントが自律的に改善するパターン
 - [MCP](/blogs/wiki/concepts/mcp/) — エージェントと外部ツールの接続プロトコル
@@ -70,3 +73,4 @@ LangChain 創設者 Harrison Chase が指摘する重要な概念。エージェ
 - [Claude Managed Agents のアーキテクチャ](/blogs/posts/2026/04/claude-managed-agents-architecture/) — 2026-04-10
 - [Anthropic vs OpenAI：Harness 戦略はなぜ真逆なのか](/blogs/posts/2026/04/anthropic-vs-openai-harness-strategy/) — 2026-04-13
 - [エージェントハーネスとメモリのロックイン問題](/blogs/posts/2026/04/agent-harness-memory-lock-in/) — 2026-04-12
+- [AWS が Skills フォーマットに合流 — Agent Toolkit for AWS の Skills を Strands Agents から呼ぶ](/blogs/posts/2026/05/2026-05-11-aws-agent-toolkit-strands-skills/) — 2026-05-11
