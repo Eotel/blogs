@@ -142,7 +142,7 @@ source_url: "https://..."  # 任意。外部記事への明示的な参照
 
 - **frontmatter は書いてよい**。`import-gists.sh` (経由 `merge_gist_frontmatter.py`) が auto-generated とマージする
 - `date` / `lastmod` / `author` / `gist_*` は frontmatter に書かない（書いても無視）
-- `categories` は CLAUDE.md のカテゴリ一覧から 1 つだけ。空配列にすると後段 `categorize.py` がキーワードで自動付与
+- `categories` はプロジェクトルール（`CLAUDE.md` / `AGENTS.md`）のカテゴリ一覧から 1 つだけ。空配列にすると後段 `categorize.py` がキーワードで自動付与
 - `tags` は最大 5 つ程度。確信があれば書く、無ければ空配列で `categorize.py` 任せ
 - 一行目はフロントマター `---` で開始するか、frontmatter 省略時は `# <タイトル>`（H1）から始める
 - 日本語で記述
@@ -197,7 +197,7 @@ echo "$GIST_URL"
 
 ## Bash コマンドの規約（このリポジトリの auto モード対応）
 
-CLAUDE.md の規約をそのまま適用する:
+プロジェクトルール（`CLAUDE.md` / `AGENTS.md`）の規約をそのまま適用する:
 
 - **`&&` や `|` でコマンドを繋がない** — 各コマンドは個別の Bash 呼び出しで実行する
 - **`/tmp` を使わない** — 一時ファイルは `$PROJECT_DIR/.claude/temp/` に置く

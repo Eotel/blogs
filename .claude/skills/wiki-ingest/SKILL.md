@@ -20,13 +20,13 @@ arguments:
 ### tools/ — ツール・サービス・ライブラリ
 
 - 具体的なツール、サービス、フレームワーク、ライブラリの情報
-- 例: Claude Code、Hugo、Docker、Terraform
+- 例: Hugo、Docker、Terraform、PaperMod テーマ
 - ファイル名: `<tool-slug>.md`
 
 ### guides/ — How-to・手順まとめ
 
 - 複数記事にまたがる実践的な手順や設定のまとめ
-- 例: Hugo + GitHub Pages セットアップ、Claude Code カスタマイズ
+- 例: Hugo + GitHub Pages セットアップ、AI コーディングエージェントのカスタマイズ
 - ファイル名: `<guide-slug>.md`
 
 ## Wiki ページのフロントマター
