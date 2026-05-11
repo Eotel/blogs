@@ -50,6 +50,7 @@ AWS はこの手法を以下のような文脈で推奨している:
 ## 関連ページ
 
 - [AI エージェント](/blogs/wiki/concepts/ai-agent/) — AI BPR で再設計の対象となるシステム
+- [HubSpot](/blogs/wiki/tools/hubspot/) — CRM・マーケティングオートメーション SaaS（BPR の典型的適用先）
 
 ## ソース記事
 

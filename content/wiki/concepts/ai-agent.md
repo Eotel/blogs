@@ -62,6 +62,7 @@ LangChain 創設者 Harrison Chase が指摘する重要な概念。エージェ
 - [MCP](/blogs/wiki/concepts/mcp/) — エージェントと外部ツールの接続プロトコル
 - [スケーラブル・オーバーサイト](/blogs/wiki/concepts/scalable-oversight/) — 強くなる AI への監督アプローチ
 - [TimesFM](/blogs/wiki/tools/timesfm/) — 時系列予測専用基盤モデル
+- [エージェントフレンドリー CLI](/blogs/wiki/concepts/agent-friendly-cli/) — LLM エージェントが確実に操作できる CLI の設計原則
 
 ## ソース記事
 

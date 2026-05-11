@@ -141,6 +141,7 @@ Claude Code の作者 Boris Cherny は Claude Code 自体を使って Claude Cod
 - [APM（Agent Package Manager）](/blogs/wiki/tools/apm/) — Claude Code 向けエージェントパッケージマネージャ
 - [AI エージェント時代のシークレット管理](/blogs/wiki/guides/ai-agent-secret-management/) — Claude Code が .env にアクセスする問題への対策
 - [pytest でカオスエンジニアリング](/blogs/wiki/guides/pytest-chaos-engineering/) — Claude Code 主導でテスト基盤を堅牢化するガイド
+- [Claude Code コスト最適化ガイド](/blogs/wiki/guides/claude-code-cost-optimization/) — Plan Mode・原始人プロンプト・vLLM でトークン消費を削減
 
 ## ソース記事
 
