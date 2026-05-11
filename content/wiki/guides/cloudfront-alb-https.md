@@ -3,6 +3,7 @@ title: "CloudFront → ALB → Django の HTTPS 判定"
 description: "ALB が X-Forwarded-Proto を上書きする問題の解決ガイド"
 date: 2026-04-06
 lastmod: 2026-04-06
+aliases: ["CloudFront HTTPS", "ALB X-Forwarded-Proto"]
 related_posts: []
 tags: ["AWS", "CloudFront", "ALB", "Django", "HTTPS"]
 ---

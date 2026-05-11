@@ -4,8 +4,7 @@ description: "高速でモダンな Python Web フレームワーク。自動 AP
 date: 2026-04-06
 lastmod: 2026-04-06
 aliases: ["fastapi"]
-related_posts:
-  - "/posts/2024/06/fastapi/"
+related_posts: []
 tags: ["Python", "API", "Web フレームワーク", "ASGI"]
 ---
 
@@ -17,6 +16,3 @@ Asyncio ネイティブで、型ヒント活用による自動バリデーショ
 
 - [DRF](/blogs/wiki/tools/drf/) — Django 側の REST API フレームワーク
 
-## ソース記事
-
-- [FastAPI](/blogs/posts/2024/06/fastapi/) — 2024-06

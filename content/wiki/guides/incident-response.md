@@ -3,6 +3,7 @@ title: "インシデント対応の5フェーズ"
 description: "準備→検知→対応→振り返り→恒久対応のフレームワーク"
 date: 2026-04-06
 lastmod: 2026-04-06
+aliases: ["インシデント対応", "Incident Response", "ポストモーテム"]
 related_posts: []
 tags: ["SRE", "インシデント管理", "DevOps"]
 ---

@@ -52,6 +52,8 @@ tags: ["財務分析", "四季報", "投資", "ROE", "自己資本比率"]
 
 - [バフェット・コード](/blogs/wiki/tools/buffett-code/) — EDINET データを活用した財務分析ツール
 - [EDINET XBRL Python ガイド](/blogs/wiki/guides/edinet-xbrl-python/) — 財務データの取得・加工
+- [四季報](/blogs/wiki/tools/shikiho/) — 紙とデジタルで使える企業情報リファレンス
+- [株式投資の売買スタイル](/blogs/wiki/concepts/stock-trading-styles/) — 短期〜長期の投資アプローチの違い
 
 ## ソース記事
 
