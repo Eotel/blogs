@@ -1,6 +1,6 @@
-# hdknr blog
+# Eotel blog
 
-https://hdknr.github.io/blogs/
+https://eotel.github.io/blogs/
 
 Hugo + PaperMod で構築された技術ブログ。GitHub Pages でホスティング。
 
@@ -83,25 +83,28 @@ lefthook run pre-push
 
 ## スクリプト
 
-### blog-batch.sh — 未ブログ化コメントの一括処理
+### blog-batch.sh — open Issue の一括ブログ化
 
-Issue コメントのうち、まだブログ化されていないもの（🚀 リアクションなし）を `claude -p` で一括処理する。
+`wip` ラベルが付いていない open Issue を 1 topic = 1 記事として `claude -p` 経由で順次処理する。`/blog` が PR 本文に `Closes #N` を入れるので、PR マージで Issue は自動 close される。
 
 ```bash
-# 未ブログ化コメントの一覧確認
-./scripts/blog-batch.sh 1 --dry-run
+# 対象 Issue 一覧を確認（dry-run）
+./scripts/blog-batch.sh --dry-run
 
-# 3件だけブログ化
-./scripts/blog-batch.sh 1 --limit 3
+# 3件だけ処理
+./scripts/blog-batch.sh --limit 3
+
+# ラベルで絞り込み
+./scripts/blog-batch.sh --label priority:high
 
 # レビュー省略で高速に処理
-./scripts/blog-batch.sh 1 --skip-review --limit 5
+./scripts/blog-batch.sh --skip-review --limit 5
 
 # opus モデルで処理
-./scripts/blog-batch.sh 1 --model opus --limit 3
+./scripts/blog-batch.sh --model opus --limit 3
 
 # 夜間バッチ（帰宅前に実行、翌朝PRレビュー）
-nohup ./scripts/blog-batch.sh 1 --overnight > .claude/temp/blog-batch-stdout.log 2>&1 &
+nohup ./scripts/blog-batch.sh --overnight > .claude/temp/blog-batch-stdout.log 2>&1 &
 
 # 翌朝：レポート確認
 cat .claude/temp/blog-batch-report-*.md
@@ -111,21 +114,25 @@ cat .claude/temp/blog-batch-report-*.md
 
 | オプション | 説明 | デフォルト |
 |---|---|---|
-| `--dry-run` | 一覧表示のみ（ブログ作成しない） | - |
+| `--dry-run` | 対象 Issue 一覧表示のみ（ブログ作成しない） | - |
+| `--label LABEL` | 対象ラベルで絞り込み | - |
+| `--milestone NAME` | マイルストーンで絞り込み | - |
+| `--search QUERY` | 任意の `gh issue list --search` クエリ | - |
 | `--limit N` | 処理件数の上限 | 全件 |
 | `--skip-review` | ファクトチェック・エージェントレビューを省略 | false |
 | `--model MODEL` | 使用モデル | sonnet |
 | `--interval SECS` | 処理間のインターバル（秒） | 5 |
-| `--overnight` | 夜間バッチモード（レビュー省略 + インターバル60秒） | - |
+| `--overnight` | 夜間バッチモード（skip-review + インターバル 60 秒） | - |
 
 #### ブログ化状態の管理
 
-コメントのブログ化状態は GitHub リアクション（🚀）で管理される。
+1 topic = 1 Issue 運用。GitHub の Issue open/close で状態を表す:
 
-- 🚀 あり → ブログ化済み
-- 🚀 なし → 未ブログ化
-- `/blog` スキルで記事作成時に自動付与
-- 重複等でスキップする場合は手動で付与
+- **open + ラベルなし** → 未着手（batch 対象）
+- **open + `wip` ラベル** → 保留・調査中（batch 対象外）
+- **closed** → ブログ化済み（PR の `Closes #N` で自動 close）or 見送り（手動 close + 理由コメント）
+
+ラベルは初回 1 度だけ作成: `bash scripts/setup-labels.sh`
 
 ### categorize.py — カテゴリ・タグ自動付与
 
