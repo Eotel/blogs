@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-20-ntt-data-ai-native-development
 title: "NTTデータが半年間、設計書・コード・テストを全部 AI に書かせて開発してみた"
 date: 2026-04-20
 lastmod: 2026-04-20

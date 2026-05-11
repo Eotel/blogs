@@ -1,4 +1,5 @@
 ---
+slug: 2026-05-11-truss-c-openframeworks-alternative
 title: "TrussC: openFrameworks に着想を得た sokol ベースの C++ クリエイティブコーディングフレームワーク"
 date: 2026-05-11
 lastmod: 2026-05-11

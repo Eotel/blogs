@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-16-ai-agent-harness-confusion
 title: "AIエージェントの「ハーネス」を巡る混乱 — 同じ言葉が指す異なるスコープ"
 date: 2026-04-16
 lastmod: 2026-04-16

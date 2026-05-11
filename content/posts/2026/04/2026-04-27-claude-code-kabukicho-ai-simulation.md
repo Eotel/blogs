@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-27-claude-code-kabukicho-ai-simulation
 title: "Claude Code × 1,255体のAIで歌舞伎町の夜をシミュレーション — 予算超過53.7%、ぼったくり被害23人の衝撃結果"
 date: 2026-04-27
 lastmod: 2026-04-27

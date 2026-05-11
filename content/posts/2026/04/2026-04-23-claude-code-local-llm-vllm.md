@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-23-claude-code-local-llm-vllm
 title: "Claude Code をローカル LLM（vLLM + MiniMax-M2.7）で爆速稼働させる方法"
 date: 2026-04-23
 lastmod: 2026-04-23

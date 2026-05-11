@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-23-harness-engineering-agent-vs-user-harness
 title: "エージェントハーネスとユーザーハーネス — ハーネスエンジニアリングの全体像を正しく理解する"
 date: 2026-04-23
 lastmod: 2026-04-23

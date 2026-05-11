@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-17-ai-first-harness-engineering-creao
 title: "「AIファースト」戦略の本当の意味 — ハーネスエンジニアリングで25人チームが6週間を1日に短縮した方法"
 date: 2026-04-17
 lastmod: 2026-04-17

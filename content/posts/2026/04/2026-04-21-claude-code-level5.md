@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-21-claude-code-level5
 title: "Claude Code を Level 5 まで育てたら、開発が「指示と確認だけ」になった"
 date: 2026-04-21
 lastmod: 2026-04-23

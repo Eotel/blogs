@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-23-google-workspace-mcp-server
 title: "Google Workspace 公式 MCP サーバー登場 — Gmail・Drive・Calendar を AI エージェントから直接操作"
 date: 2026-04-23
 lastmod: 2026-04-23

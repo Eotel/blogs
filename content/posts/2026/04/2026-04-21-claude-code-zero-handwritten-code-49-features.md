@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-21-claude-code-zero-handwritten-code-49-features
 title: "Claude Code で 2 日間に 49 PR を出荷 — 手書きコードゼロを実現する AI 開発ワークフロー"
 date: 2026-04-21
 lastmod: 2026-04-21

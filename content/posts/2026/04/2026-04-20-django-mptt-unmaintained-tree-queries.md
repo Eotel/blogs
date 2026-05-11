@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-20-django-mptt-unmaintained-tree-queries
 title: "django-mptt はなぜ「unmaintained」と書かれているのか — そして django-tree-queries への移行"
 date: 2026-04-20
 lastmod: 2026-04-20

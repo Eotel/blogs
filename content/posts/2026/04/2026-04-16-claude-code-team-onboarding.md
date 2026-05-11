@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-16-claude-code-team-onboarding
 title: "Claude Code の /team-onboarding コマンドで新メンバーへの使い方説明が1コマンドで完結する"
 date: 2026-04-16
 lastmod: 2026-04-16

@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-19-graphite-stacked-prs-merge-queue
 title: "Graphite 徹底解説 — スタックドPRとマージキューがAIファースト開発を加速する理由"
 date: 2026-04-19
 lastmod: 2026-04-19

@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-15-vibe-coding-security-risk
 title: "バイブコーディングの怖い話：AI丸投げ開発が招いた医療データ流出事件"
 date: 2026-04-15
 lastmod: 2026-04-15

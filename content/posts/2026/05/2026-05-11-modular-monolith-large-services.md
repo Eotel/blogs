@@ -1,4 +1,5 @@
 ---
+slug: 2026-05-11-modular-monolith-large-services
 title: "Modular Monolith に回帰する大手サービス — Shopify・Amazon Prime Video・Segment の事例"
 date: 2026-05-11
 lastmod: 2026-05-11

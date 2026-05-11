@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-27-claude-code-stock-trading-automation
 title: "Claude Code で株式投資を自動化する — Alpaca API + 期待値計算で3週間4.19%の実績"
 date: 2026-04-27
 lastmod: 2026-04-28

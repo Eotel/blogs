@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-17-agent-harness-rag-context-size
 title: "RAGなしでも高精度に動くAgent Harnessの秘密 — コンテキストサイズと「100ファイル」の目安"
 date: 2026-04-17
 lastmod: 2026-04-21

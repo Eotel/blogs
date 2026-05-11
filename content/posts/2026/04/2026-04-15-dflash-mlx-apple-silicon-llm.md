@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-15-dflash-mlx-apple-silicon-llm
 title: "MacのローカルLLMが4.1倍速に！Apple Silicon向け新技術「DFlash」"
 date: 2026-04-15
 lastmod: 2026-04-15

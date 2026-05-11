@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-17-pytest-chaos-engineering
 title: "pytest.mark.chaos で始めるカオスエンジニアリング — Python テストに障害注入を組み込む"
 date: 2026-04-17
 lastmod: 2026-04-17

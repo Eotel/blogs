@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-15-claude-code-routines-desktop-update
 title: "Claude Code、1日でアプデ3連発 — Routines・新 Desktop・ストリーム安定性"
 date: 2026-04-15
 lastmod: 2026-04-15

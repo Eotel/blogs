@@ -1,4 +1,5 @@
 ---
+slug: 2026-03-30-claude-code-celery-orchestration
 title: "Claude Code + Celery: LLMが決定論的処理を動的に委譲するオーケストレーション"
 date: 2026-03-30
 lastmod: 2026-03-30

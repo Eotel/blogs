@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-15-anthropic-automated-alignment-researchers
 title: "Anthropic の自動アライメント研究者（AAR）：AIがAIのアライメントを加速する時代"
 date: 2026-04-15
 lastmod: 2026-04-15

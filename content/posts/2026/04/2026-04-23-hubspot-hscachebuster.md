@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-23-hubspot-hscachebuster
 title: "HubSpot CMS のキャッシュをバイパスする hsCacheBuster の使い方と注意点"
 date: 2026-04-23
 lastmod: 2026-04-23

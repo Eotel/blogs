@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-17-video-use-claude-code-video-editing
 title: "Video Use — Claude Code で動画編集を完全自動化するオープンソーススキル"
 date: 2026-04-17
 lastmod: 2026-04-17

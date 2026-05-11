@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-17-apm-agent-package-manager
 title: "APM（Agent Package Manager）— AI エージェント設定を npm のように管理するツール"
 date: 2026-04-17
 lastmod: 2026-04-17
