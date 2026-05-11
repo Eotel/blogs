@@ -40,6 +40,9 @@ pre-commit:
     07-ast-grep:
       glob: "*.{py,sh}"
       run: ast-grep scan {staged_files}
+    08-post-wiki-links:
+      glob: "content/posts/**/*.md"
+      run: python3 .claude/skills/wiki-lint/scripts/wiki_lint.py --post-files {staged_files}
 
 # commit-msg / prepare-commit-msg: 既存 git-secrets 機能を保全
 commit-msg:

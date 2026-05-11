@@ -1,15 +1,22 @@
 #!/usr/bin/env python3
 """Wiki health check: orphans, broken links, dead related_posts, stale pages, frontmatter gaps.
 
+Also checks blog posts for broken /blogs/wiki/... links.
+
 Designed to be invoked from either:
   - .claude/skills/wiki-lint/scripts/wiki_lint.py
   - .agents/skills/wiki-lint/scripts/wiki_lint.py
 
 Detects repo root by walking upward until `content/wiki/` is found.
+
+Usage:
+  wiki_lint.py                          # full check (pre-push)
+  wiki_lint.py --post-files f1.md ...   # check only specified post files for wiki links (pre-commit)
 """
 
 from __future__ import annotations
 
+import argparse
 import re
 import sys
 from datetime import date, datetime
@@ -170,9 +177,39 @@ def parse_date(s: str | None) -> date | None:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(add_help=False)
+    parser.add_argument(
+        "--post-files",
+        nargs="+",
+        metavar="FILE",
+        help="Check only these post files for broken wiki links (pre-commit mode). "
+        "Wiki-only checks are skipped.",
+    )
+    args, _ = parser.parse_known_args()
+
     root = find_repo_root(Path(__file__).resolve().parent)
     wiki_dir = root / "content" / "wiki"
     posts_dir = root / "content" / "posts"
+
+    # --post-files mode: fast check for pre-commit (only post→wiki links)
+    if args.post_files:
+        post_wiki_broken: list[tuple[Path, str]] = []
+        for raw in args.post_files:
+            f = Path(raw).resolve()
+            if not f.exists() or f.suffix != ".md":
+                continue
+            text = f.read_text(encoding="utf-8")
+            for link in WIKI_LINK_RE.findall(text):
+                _, exists = wiki_link_to_path(link, wiki_dir)
+                if not exists:
+                    post_wiki_broken.append((f, link))
+        if post_wiki_broken:
+            print("## Wiki Lint (staged post files)\n")
+            print(f"### 記事内の欠落 Wiki リンク ({len(post_wiki_broken)}件) — FATAL")
+            for f, link in post_wiki_broken:
+                print(f"- `{f.name}` → `{link}` — リンク先 Wiki ページが存在しない")
+            return 1
+        return 0
 
     wiki_files = sorted(p for p in wiki_dir.rglob("*.md"))
     pages: dict[Path, dict] = {}
@@ -288,15 +325,40 @@ def main() -> int:
     print(f"- 総ページ数: {total_pages}")
     for sec in sorted(counts):
         print(f"- {sec}: {counts[sec]}")
+    print()
+
+    # Scan all blog posts for broken /blogs/wiki/... links
+    post_wiki_broken: list[tuple[Path, str]] = []
+    for post_file in posts_dir.rglob("*.md"):
+        if post_file.name == "_index.md":
+            continue
+        try:
+            text = post_file.read_text(encoding="utf-8")
+        except Exception:
+            continue
+        for link in WIKI_LINK_RE.findall(text):
+            _, exists = wiki_link_to_path(link, wiki_dir)
+            if not exists:
+                post_wiki_broken.append((post_file, link))
+
+    print(f"### 記事内の欠落 Wiki リンク ({len(post_wiki_broken)}件)")
+    if post_wiki_broken:
+        for f, link in post_wiki_broken:
+            rel = f.relative_to(posts_dir)
+            print(f"- `posts/{rel}` → `{link}` — リンク先 Wiki ページが存在しない")
+    else:
+        print("- なし")
 
     # Fatal: structural / referential issues that should block pre-push and CI.
-    #   - broken_links / related_post_issues: dead references
+    #   - broken_links / related_post_issues / post_wiki_broken: dead references
     #   - fm_required_count: pages missing at least one REQUIRED frontmatter key
     # Advisory (non-blocking):
     #   - orphans / stale pages: surfaced by /wiki-lint review, but /wiki-ingest
     #     output is temporarily orphan by design until cross-links are added
     #   - fm pages missing only RECOMMENDED keys (e.g. `aliases`)
-    fatal_issues = len(broken_links) + len(related_post_issues) + fm_required_count
+    fatal_issues = (
+        len(broken_links) + len(related_post_issues) + fm_required_count + len(post_wiki_broken)
+    )
     fm_recommended_only = len(fm_issues) - fm_required_count
     advisory_issues = len(orphans) + len(stale_pages) + fm_recommended_only
     if advisory_issues:
