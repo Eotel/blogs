@@ -177,7 +177,9 @@ def parse_date(s: str | None) -> date | None:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(add_help=False)
+    parser = argparse.ArgumentParser(
+        description="Wiki health check. With --post-files, runs a fast post→wiki link check only."
+    )
     parser.add_argument(
         "--post-files",
         nargs="+",
@@ -185,7 +187,7 @@ def main() -> int:
         help="Check only these post files for broken wiki links (pre-commit mode). "
         "Wiki-only checks are skipped.",
     )
-    args, _ = parser.parse_known_args()
+    args = parser.parse_args()
 
     root = find_repo_root(Path(__file__).resolve().parent)
     wiki_dir = root / "content" / "wiki"
@@ -196,7 +198,7 @@ def main() -> int:
         post_wiki_broken: list[tuple[Path, str]] = []
         for raw in args.post_files:
             f = Path(raw).resolve()
-            if not f.exists() or f.suffix != ".md":
+            if not f.exists() or f.suffix != ".md" or f.name == "_index.md":
                 continue
             text = f.read_text(encoding="utf-8")
             for link in WIKI_LINK_RE.findall(text):
