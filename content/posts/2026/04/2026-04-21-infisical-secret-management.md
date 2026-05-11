@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-21-infisical-secret-management
 title: "Infisical — .env に別れを告げるオープンソース・シークレット管理プラットフォーム"
 date: 2026-04-21
 lastmod: 2026-04-23

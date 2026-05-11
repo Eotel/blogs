@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-21-claude-code-auto-memory-skills
 title: "Claude Code の Skills が会話ごとにずれる原因は auto-memory だった — 1行で直す方法"
 date: 2026-04-21
 lastmod: 2026-04-21

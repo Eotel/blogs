@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-23-claude-code-obsidian-second-brain
 title: "Claude Code × Obsidian で「第二の脳」を構築する完全解説 — 海外1,240万views超え、AI記憶設計の新標準"
 date: 2026-04-23
 lastmod: 2026-04-23

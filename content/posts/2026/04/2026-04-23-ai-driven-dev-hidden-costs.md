@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-23-ai-driven-dev-hidden-costs
 title: "AI 駆動開発の生産性向上、現場が静かに支払っているコストの話"
 date: 2026-04-23
 lastmod: 2026-04-23

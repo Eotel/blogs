@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-23-claude-code-plan-mode-cost-reduction
 title: "CLAUDE.md に1行追加するだけで Claude Code のコストが 1/3 に — plan モード強制テクニック"
 date: 2026-04-23
 lastmod: 2026-04-23

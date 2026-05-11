@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-22-open-notebook-notebooklm-oss
 title: "Open-notebook — NotebookLM をセルフホストできる完全ローカル OSS"
 date: 2026-04-22
 lastmod: 2026-04-22

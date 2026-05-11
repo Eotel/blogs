@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-22-canirun-ai-local-model-checker
 title: "CanIRun.ai — ブラウザだけで自分のPCがどのローカルAIを動かせるか即判定"
 date: 2026-04-22
 lastmod: 2026-04-22

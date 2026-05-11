@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-27-claude-code-creator-setup
 title: "Claude Code 作者直伝のワークフロー設計術 — 計画モード・CLAUDE.md・検証ループで品質を上げる"
 date: 2026-04-27
 lastmod: 2026-04-27

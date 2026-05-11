@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-15-ai-agents-virtual-shibuya-simulation
 title: "仮想渋谷にAIエージェントを解き放つ──社会シミュレーションが都市・安全保障・月面開発に活きる理由"
 date: 2026-04-15
 lastmod: 2026-04-15

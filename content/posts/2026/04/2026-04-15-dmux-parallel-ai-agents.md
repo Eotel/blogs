@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-15-dmux-parallel-ai-agents
 title: "dmux：Claude Code / Codex を安全に並列実行するための git worktree 管理ツール"
 date: 2026-04-15
 lastmod: 2026-04-15

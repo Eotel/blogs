@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-22-aws-ai-bpr-methodology
 title: "AWS が明かした AI エージェント導入失敗の構造と「AI BPR」組み直しの方法論"
 date: 2026-04-22
 lastmod: 2026-04-27

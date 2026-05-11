@@ -1,4 +1,5 @@
 ---
+slug: 2026-05-11-aws-agent-toolkit-strands-skills
 title: "AWS が Skills フォーマットに合流 — Agent Toolkit for AWS の Skills を Strands Agents から呼ぶ"
 date: 2026-05-11
 lastmod: 2026-05-11

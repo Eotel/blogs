@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-15-claude-code-routines
 title: "Claude Code Routines リリース — 常駐しないエージェントという新しい設計思想"
 date: 2026-04-15
 lastmod: 2026-04-15

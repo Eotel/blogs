@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-17-claude-caveman-token-reduction
 title: "Claude を「原始人」口調にするとトークンが 80% 減る話"
 date: 2026-04-17
 lastmod: 2026-04-19

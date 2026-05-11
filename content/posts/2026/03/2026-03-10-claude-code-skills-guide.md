@@ -1,4 +1,5 @@
 ---
+slug: 2026-03-10-claude-code-skills-guide
 title: "Claude Code Skills 構築完全ガイド — Anthropic 公式 33 ページの要点まとめ"
 date: 2026-03-10
 lastmod: 2026-03-10

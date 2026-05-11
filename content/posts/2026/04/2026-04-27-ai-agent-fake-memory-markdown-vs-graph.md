@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-27-ai-agent-fake-memory-markdown-vs-graph
 title: "90%のAI Agentの記憶は偽物？Markdownダンプが崩壊する理由とMem0・GraphRAGによる設計"
 date: 2026-04-27
 lastmod: 2026-04-28

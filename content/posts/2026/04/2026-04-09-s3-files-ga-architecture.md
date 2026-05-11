@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-09-s3-files-ga-architecture
 title: "Amazon S3 Files GA：消えるアーキテクチャ層と生まれるアーキテクチャ"
 date: 2026-04-09
 lastmod: 2026-04-17

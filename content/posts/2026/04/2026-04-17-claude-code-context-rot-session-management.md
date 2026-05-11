@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-17-claude-code-context-rot-session-management
 title: "Claude Code のコンテキスト管理術 — Context Rot を防ぐ5つの選択肢"
 date: 2026-04-17
 lastmod: 2026-04-17

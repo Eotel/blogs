@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-28-hubspot-pro-merits
 title: "HubSpot Professional にアップグレードするメリットを 6 Hub 別に整理（Marketing/Sales/Service/Content/Data/Commerce）"
 date: 2026-04-28
 lastmod: 2026-04-28

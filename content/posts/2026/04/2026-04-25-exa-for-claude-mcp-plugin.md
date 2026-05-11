@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-25-exa-for-claude-mcp-plugin
 title: "Exa for Claude — Web・論文・企業情報を標準検索より高速・高精度に扱う MCP プラグイン"
 date: 2026-04-25
 lastmod: 2026-04-27

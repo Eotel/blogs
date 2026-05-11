@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-23-harness-engineering-beyond-rule-files
 title: "ハーネスエンジニアリングとの向き合い方 — ルールファイルを超えて開発プロセスを設計する"
 date: 2026-04-23
 lastmod: 2026-04-23

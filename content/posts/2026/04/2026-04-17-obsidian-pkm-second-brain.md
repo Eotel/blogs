@@ -1,4 +1,5 @@
 ---
+slug: 2026-04-17-obsidian-pkm-second-brain
 title: "Obsidian 完全ガイド — ローカルファーストで「第二の脳」を構築する"
 date: 2026-04-17
 lastmod: 2026-04-17

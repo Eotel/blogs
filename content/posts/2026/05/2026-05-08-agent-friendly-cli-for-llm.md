@@ -1,4 +1,5 @@
 ---
+slug: 2026-05-08-agent-friendly-cli-for-llm
 title: "Agent-friendly CLIとは何か: ncliに学ぶLLM時代のCLI設計"
 description: "ncliを題材に、LLMやCoding Agentが安全に扱えるCLIの設計条件を、MCP・ACP・JSON出力・エラー設計・認証の観点から整理する。"
 date: 2026-05-08
