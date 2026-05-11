@@ -1,0 +1,106 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="DESIGN.md distribution flow">
+    <mxGraphModel dx="1422" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="100" value="DESIGN.md の流通経路" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="20" width="440" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="200" value="ソース: 既存 SaaS / ブランド" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=12;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="90" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="210" value="Linear / Stripe / Vercel / Notion ..." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="220" value="自社 / 自プロジェクト" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="300" value="抽出 / キュレーション" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=12;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="340" y="90" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="310" value="refero.design / styles" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="340" y="120" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="311" value="designmd.app / library" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="340" y="170" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="312" value="getdesign.md" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="340" y="220" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="313" value="awesome-design-md / -jp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="340" y="270" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="314" value="自作 / npx @google/design.md" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="340" y="320" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="400" value="共通フォーマット" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=12;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="640" y="90" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="410" value="DESIGN.md&#10;YAML + Markdown" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="180" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="500" value="語彙 / 検証 レイヤ" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=12;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="640" y="290" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="510" value="Impeccable&#10;(slash commands / lint)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="640" y="320" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="600" value="消費するエージェント" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=12;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="880" y="90" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="610" value="Claude Code" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="880" y="120" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="611" value="Cursor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="880" y="170" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="612" value="Kiro / Windsurf" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="880" y="220" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="613" value="Google Stitch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="880" y="270" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="700" edge="1" source="210" target="310" style="endArrow=classic;html=1;strokeWidth=1.5;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="701" edge="1" source="210" target="313" style="endArrow=classic;html=1;strokeWidth=1.5;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="702" edge="1" source="220" target="314" style="endArrow=classic;html=1;strokeWidth=1.5;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="703" edge="1" source="310" target="410" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#6c8ebf;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="704" edge="1" source="311" target="410" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#6c8ebf;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="705" edge="1" source="312" target="410" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#6c8ebf;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="706" edge="1" source="313" target="410" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#6c8ebf;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="707" edge="1" source="314" target="410" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#6c8ebf;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="708" edge="1" source="410" target="510" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#b85450;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="709" edge="1" source="410" target="610" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#b85450;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="710" edge="1" source="410" target="611" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#b85450;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="711" edge="1" source="410" target="612" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#b85450;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="712" edge="1" source="410" target="613" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#b85450;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
