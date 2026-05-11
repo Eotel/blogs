@@ -161,17 +161,23 @@ typography:
     fontFamily: "ui-monospace, 'SF Mono', 'JetBrains Mono', monospace"
     fontSize: 0.92rem
 spacing:
-  scale: [4, 8, 12, 16, 24, 32, 48]
+  xs: 4px
+  sm: 8px
+  md: 12px
+  lg: 16px
+  xl: 24px
+  2xl: 32px
+  3xl: 48px
 rounded:
-  card: 6
-  button: 4
+  card: 6px
+  button: 4px
 components:
   link:
     color: "{colors.accent}"
     textDecoration: underline-dotted
   code-block:
     backgroundColor: "{colors.code-bg}"
-    padding: "{spacing.3}"
+    padding: "{spacing.md}"
 ---
 
 ## Overview
