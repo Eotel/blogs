@@ -1,0 +1,22 @@
+{
+  "config": {
+    "default": true,
+    "MD013": false,
+    "MD041": false,
+    "MD033": false,
+    "MD024": { "siblings_only": true },
+    "MD036": false,
+    "MD034": false,
+    "MD040": false,
+    "MD025": false,
+    "MD012": { "maximum": 2 },
+    "MD060": false
+  },
+  "ignores": [
+    "themes/**",
+    "public/**",
+    "resources/**",
+    ".claude/temp/**",
+    ".worktrees/**"
+  ]
+}

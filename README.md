@@ -4,6 +4,46 @@ https://hdknr.github.io/blogs/
 
 Hugo + PaperMod で構築された技術ブログ。GitHub Pages でホスティング。
 
+## 開発環境セットアップ
+
+### Lefthook (pre-commit / pre-push フック)
+
+このリポジトリは [lefthook](https://github.com/evilmartians/lefthook) で commit/push 時の lint を自動化している。
+クローン直後または `lefthook.yml` を更新したあとは下記を実行する。
+
+```bash
+# 初回ツールインストール
+brew install lefthook shellcheck markdownlint-cli2
+
+# Python lint (ruff/black) は uv または pip 経由で入れる
+# ast-grep は別途 `brew install ast-grep` などで導入
+
+# git hooks をインストール
+lefthook install
+```
+
+#### 何が走るか
+
+- **pre-commit** (staged ファイルのみ・並列): `git secrets`、`ruff`、`black --check`、`shellcheck`、`markdownlint-cli2 --fix`、`scripts/check_frontmatter.py`、`ast-grep scan`
+- **commit-msg / prepare-commit-msg**: `git secrets` でメッセージを検査
+- **pre-push**: `hugo --gc` で build 確認 → `wiki_lint.py` 全体 → `ast-grep scan` 全体
+- **CI** (`.github/workflows/lint.yml`): pre-push 相当を PR で再実行（ローカルスキップ対策）
+
+#### 緊急時に hook を bypass する
+
+```bash
+LEFTHOOK=0 git commit -m "..."
+LEFTHOOK=0 git push
+```
+
+#### 手動で hook を走らせる
+
+```bash
+lefthook run pre-commit                                    # staged 差分
+lefthook run pre-commit --files content/wiki/concepts/rag.md  # 特定ファイル
+lefthook run pre-push
+```
+
 ## スクリプト
 
 ### blog-batch.sh — 未ブログ化コメントの一括処理

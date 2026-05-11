@@ -1,0 +1,60 @@
+# Lefthook configuration
+# Docs: https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md
+#
+# Skip hooks for an emergency commit/push:
+#   LEFTHOOK=0 git commit ...
+#
+# Run a hook manually:
+#   lefthook run pre-commit
+#   lefthook run pre-commit --files content/wiki/concepts/rag.md
+
+# pre-commit: staged ファイルのみを並列に検査（軽量）
+pre-commit:
+  parallel: true
+  commands:
+    git-secrets:
+      run: git secrets --pre_commit_hook -- {staged_files}
+    ruff:
+      glob: "*.py"
+      run: ruff check --fix {staged_files}
+      stage_fixed: true
+    black:
+      glob: "*.py"
+      run: black --quiet {staged_files}
+      stage_fixed: true
+    shellcheck:
+      glob: "*.sh"
+      run: shellcheck --severity=warning {staged_files}
+    markdownlint:
+      glob: "content/wiki/**/*.md"
+      run: markdownlint-cli2 --fix {staged_files}
+      stage_fixed: true
+    frontmatter:
+      glob: "content/{posts,wiki}/**/*.md"
+      run: python3 scripts/check_frontmatter.py {staged_files}
+    ast-grep:
+      glob: "{scripts,.claude/skills}/**/*.{py,sh}"
+      run: ast-grep scan {staged_files}
+
+# commit-msg / prepare-commit-msg: 既存 git-secrets 機能を保全
+commit-msg:
+  commands:
+    git-secrets:
+      run: git secrets --commit_msg_hook -- {1}
+
+prepare-commit-msg:
+  commands:
+    git-secrets:
+      run: git secrets --prepare_commit_msg_hook -- {1} {2} {3}
+
+# pre-push: 重いが価値の高い検証
+# hugo がローカルにない環境ではスキップ（CI で必ず検証されるため安全）
+pre-push:
+  parallel: false
+  commands:
+    hugo-build:
+      run: command -v hugo >/dev/null && hugo --gc --quiet --destination .claude/temp/hugo-check || echo "hugo not installed locally — skipping (CI will verify)"
+    wiki-lint:
+      run: python3 .claude/skills/wiki-lint/scripts/wiki_lint.py
+    ast-grep-full:
+      run: ast-grep scan
