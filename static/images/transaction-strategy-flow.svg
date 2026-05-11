@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" font-family="-apple-system, 'Hiragino Sans', sans-serif" font-size="14">
+  <style>
+    .box { fill: #ffffff; stroke: #2c3e50; stroke-width: 1.5; }
+    .decision { fill: #fff8e1; stroke: #f57c00; stroke-width: 1.5; }
+    .result { fill: #e3f2fd; stroke: #1565c0; stroke-width: 1.5; }
+    .warn { fill: #fce4ec; stroke: #c2185b; stroke-width: 1.5; }
+    .cross { fill: #e8f5e9; stroke: #2e7d32; stroke-width: 1.5; stroke-dasharray: 5 3; }
+    .label { fill: #2c3e50; text-anchor: middle; }
+    .small { font-size: 12px; fill: #555; }
+    .arrow { stroke: #555; stroke-width: 1.5; fill: none; marker-end: url(#arr); }
+    .yes { fill: #2e7d32; font-weight: bold; font-size: 12px; }
+    .no { fill: #c62828; font-weight: bold; font-size: 12px; }
+  </style>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#555"/>
+    </marker>
+  </defs>
+
+  <text x="480" y="28" text-anchor="middle" font-size="18" font-weight="bold">トランザクション戦略の選択フロー</text>
+
+  <rect class="box" x="400" y="60" width="160" height="42" rx="6"/>
+  <text class="label" x="480" y="86">トランザクションが必要</text>
+
+  <polygon class="decision" points="480,130 620,180 480,230 340,180"/>
+  <text class="label" x="480" y="178">単一 DB で完結？</text>
+  <text class="label small" x="480" y="196">（同一プロセス可？）</text>
+
+  <rect class="result" x="80" y="158" width="200" height="44" rx="6"/>
+  <text class="label" x="180" y="184" font-weight="bold">ローカル ACID</text>
+  <text class="label small" x="180" y="198">BEGIN / COMMIT で完結</text>
+
+  <polygon class="decision" points="760,130 900,180 760,230 620,180" transform="translate(-40,0)"/>
+  <text class="label" x="720" y="178">強整合性が必須？</text>
+  <text class="label small" x="720" y="196">（待たせて良い？）</text>
+
+  <rect class="warn" x="820" y="158" width="130" height="60" rx="6"/>
+  <text class="label" x="885" y="180" font-weight="bold">2PC / XA</text>
+  <text class="label small" x="885" y="198">SPOF・ブロッキング</text>
+  <text class="label small" x="885" y="212">採用は最小限</text>
+
+  <polygon class="decision" points="480,290 620,340 480,390 340,340"/>
+  <text class="label" x="480" y="338">補償アクションを</text>
+  <text class="label small" x="480" y="356">用意できる？</text>
+
+  <rect class="result" x="80" y="318" width="200" height="44" rx="6"/>
+  <text class="label" x="180" y="344" font-weight="bold">Saga パターン</text>
+  <text class="label small" x="180" y="358">Choreography / Orchestration</text>
+
+  <polygon class="decision" points="720,290 860,340 720,390 580,340"/>
+  <text class="label" x="720" y="338">予約状態を持てる？</text>
+  <text class="label small" x="720" y="356">（残高ホールド系）</text>
+
+  <rect class="result" x="820" y="408" width="130" height="44" rx="6"/>
+  <text class="label" x="885" y="434" font-weight="bold">TCC</text>
+  <text class="label small" x="885" y="448">Try–Confirm–Cancel</text>
+
+  <rect class="warn" x="560" y="408" width="160" height="44" rx="6"/>
+  <text class="label" x="640" y="430" font-weight="bold">境界を見直す</text>
+  <text class="label small" x="640" y="446">サービス分割を再考</text>
+
+  <rect class="cross" x="80" y="540" width="800" height="120" rx="8"/>
+  <text class="label" x="480" y="568" font-weight="bold" font-size="15">どの戦略でも必要な横串パターン</text>
+  <text class="label" x="200" y="600" font-weight="bold">Outbox</text>
+  <text class="label small" x="200" y="618">DB と broker の</text>
+  <text class="label small" x="200" y="634">二重書き込み回避</text>
+  <text class="label" x="480" y="600" font-weight="bold">Inbox</text>
+  <text class="label small" x="480" y="618">重複配送を受信側で</text>
+  <text class="label small" x="480" y="634">冪等に吸収</text>
+  <text class="label" x="760" y="600" font-weight="bold">Idempotency Key</text>
+  <text class="label small" x="760" y="618">クライアント由来の重複</text>
+  <text class="label small" x="760" y="634">再送に対する保険</text>
+
+  <path class="arrow" d="M 480 102 L 480 128"/>
+  <path class="arrow" d="M 340 180 L 280 180"/>
+  <text class="yes" x="305" y="172">Yes</text>
+  <path class="arrow" d="M 620 180 L 680 180"/>
+  <text class="no" x="645" y="172">No</text>
+  <path class="arrow" d="M 760 180 L 820 180"/>
+  <text class="yes" x="785" y="172">Yes</text>
+  <path class="arrow" d="M 720 230 L 580 290"/>
+  <text class="no" x="640" y="262">No</text>
+  <path class="arrow" d="M 340 340 L 280 340"/>
+  <text class="yes" x="305" y="332">Yes</text>
+  <path class="arrow" d="M 620 340 L 580 340"/>
+  <text class="no" x="595" y="332">No</text>
+  <path class="arrow" d="M 720 390 L 850 408"/>
+  <text class="yes" x="800" y="395">Yes</text>
+  <path class="arrow" d="M 660 390 L 640 408"/>
+  <text class="no" x="630" y="402">No</text>
+</svg>
