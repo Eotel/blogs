@@ -1,0 +1,14 @@
+/* post-meta-ai.css
+ * 記事メタ行の「執筆 AI モデル」ラベル。
+ * author など他のメタ項目と並ぶときに浮かないよう、プレーンテキストで扱う。
+ * "by" 部分だけ少し弱めて、本体（モデル名）を読ませる。
+ */
+
+.post-meta .post-meta-ai {
+  font-variant-numeric: tabular-nums;
+}
+
+.post-meta .post-meta-ai::first-letter,
+.post-meta .post-meta-ai {
+  /* hover/title 属性のヒント用、見た目は他のメタと同じ */
+}

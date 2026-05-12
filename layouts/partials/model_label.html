@@ -1,0 +1,63 @@
+{{- /* model_label.html — front matter の model ID を表示用ラベルに正規化する。
+       入力: モデル ID 文字列 (例: "claude-opus-4-7", "gpt-5.1", "kimi-k2", "glm-4.6")
+       出力: 表示文字列 (例: "Claude Opus 4.7")。
+       未知の ID はそのまま返す。 */ -}}
+{{- $id := lower (trim (string .) " \"'") -}}
+{{- $out := "" -}}
+
+{{- /* Claude 系: claude-<family>-<major>-<minor>[-suffix] */ -}}
+{{- if hasPrefix $id "claude-" -}}
+  {{- $rest := strings.TrimPrefix "claude-" $id -}}
+  {{- $parts := split $rest "-" -}}
+  {{- if ge (len $parts) 3 -}}
+    {{- $family := index $parts 0 -}}
+    {{- $major := index $parts 1 -}}
+    {{- $minor := index $parts 2 -}}
+    {{- $out = printf "Claude %s %s.%s" (title $family) $major $minor -}}
+  {{- else -}}
+    {{- $out = printf "Claude %s" (title $rest) -}}
+  {{- end -}}
+
+{{- /* GPT 系 */ -}}
+{{- else if hasPrefix $id "gpt-" -}}
+  {{- $out = printf "GPT-%s" (strings.TrimPrefix "gpt-" $id) -}}
+
+{{- /* OpenAI o 系 (o1, o3, o4) */ -}}
+{{- else if or (hasPrefix $id "o1") (hasPrefix $id "o3") (hasPrefix $id "o4") -}}
+  {{- $out = upper $id -}}
+
+{{- /* Gemini */ -}}
+{{- else if hasPrefix $id "gemini-" -}}
+  {{- $out = printf "Gemini %s" (strings.TrimPrefix "gemini-" $id) -}}
+
+{{- /* Kimi (Moonshot) */ -}}
+{{- else if hasPrefix $id "kimi" -}}
+  {{- $out = printf "Kimi %s" (upper (strings.TrimPrefix "kimi-" $id)) -}}
+  {{- if eq $id "kimi" -}}{{- $out = "Kimi" -}}{{- end -}}
+
+{{- /* GLM (Zhipu) */ -}}
+{{- else if hasPrefix $id "glm-" -}}
+  {{- $out = printf "GLM-%s" (strings.TrimPrefix "glm-" $id) -}}
+
+{{- /* Qwen */ -}}
+{{- else if hasPrefix $id "qwen" -}}
+  {{- $out = printf "Qwen %s" (strings.TrimPrefix "qwen-" $id) -}}
+
+{{- /* DeepSeek */ -}}
+{{- else if hasPrefix $id "deepseek" -}}
+  {{- $out = printf "DeepSeek %s" (strings.TrimPrefix "deepseek-" $id) -}}
+
+{{- /* Grok */ -}}
+{{- else if hasPrefix $id "grok-" -}}
+  {{- $out = printf "Grok %s" (strings.TrimPrefix "grok-" $id) -}}
+
+{{- /* よくある単発のショートエイリアス */ -}}
+{{- else if eq $id "sonnet" -}}{{- $out = "Claude Sonnet" -}}
+{{- else if eq $id "opus" -}}{{- $out = "Claude Opus" -}}
+{{- else if eq $id "haiku" -}}{{- $out = "Claude Haiku" -}}
+
+{{- /* 未知の ID は raw のまま (lowercase でなく原文を表示) */ -}}
+{{- else -}}
+  {{- $out = trim (string .) " \"'" -}}
+{{- end -}}
+{{- $out -}}
