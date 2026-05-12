@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4061225843"
 categories: ["ビジネス/キャリア"]
 tags: ["営業", "キーエンス", "商談", "コミュニケーション"]
+slug: "2026-03-14-keyence-sales-aq-technique"
 ---
 
 キーエンス出身の営業パーソン・あさひ氏が共有していた「A&Q（Answer & Question）」という商談テクニックが非常に実践的だったので紹介する。

@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4041982166"
 categories: ["AI/LLM"]
 tags: ["agent", "python", "openclaw", "trading", "自動化"]
+slug: "2026-03-11-openclaw-trading-backtest"
 ---
 
 OpenClaw エージェントを使って、TradingView の指標を自動スクレイピングし、Pine Script から Python に変換してバックテストまで全自動で実行する手法が話題になっています。

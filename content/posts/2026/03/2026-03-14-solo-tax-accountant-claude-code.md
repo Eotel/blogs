@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4061222103"
 categories: ["AI/LLM"]
 tags: ["claude-code", "agent", "mcp"]
+slug: "2026-03-14-solo-tax-accountant-claude-code"
 ---
 
 スタッフ6人体制から0人へ。年間人件費3,000万円を削減しながら、顧問先60社の経理業務を1人でこなす税理士の事例が話題になっている。その武器は Claude Code だ。

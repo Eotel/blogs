@@ -6,6 +6,7 @@ draft: false
 author: "hdknr"
 categories: ["AI/LLM"]
 tags: ["qwen", "ollama", "llm", "rag"]
+slug: "2026-03-10-qwen-finetuning-vs-rag"
 ---
 
 ローカルで Ollama + Qwen を動かしている Mac Studio（M3 Ultra / 96GB）に、NAS 上の PDF やテキストなどのドキュメントを学習させて「個人の知識ベース」として活用したい——そんなとき、ファインチューニングと RAG のどちらを選ぶべきかを整理する。

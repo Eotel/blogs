@@ -8,6 +8,7 @@ description: "AI 予測エンジン MiroFish が公開3週間で GitHub Star 4.7
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4165287811"
 categories: ["AI/LLM"]
 tags: ["agent", "llm", "github", "rag"]
+slug: "2026-03-31-mirofish-ai-prediction-engine"
 ---
 
 [以前の記事](/posts/2026/03/2026-03-10-mirofish-vibe-coding/)で紹介した AI 予測エンジン「MiroFish」が、公開から約3週間で GitHub Star 4.7万超にまで急成長しています。本記事では、その後の動向とコミュニティの広がりを追います。

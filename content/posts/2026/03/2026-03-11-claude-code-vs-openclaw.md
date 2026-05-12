@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4036921380"
 categories: ["AI/LLM"]
 tags: ["claude-code", "openclaw", "agent", "llm"]
+slug: "2026-03-11-claude-code-vs-openclaw"
 ---
 
 AI コーディングエージェントの選択肢が増えるなか、「Claude Code と OpenClaw、どっちを勉強すべき？」という疑問を抱く人が増えている。AI駆動塾（[@L_go_mrk](https://x.com/L_go_mrk)）が両方を実際に触った上での[比較記事](https://note.com/l_mrk/n/n435e046b6a67)を公開した。本記事では、この比較を起点に両ツールの位置づけを整理する。

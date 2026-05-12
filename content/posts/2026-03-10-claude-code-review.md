@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4028055781"
 categories: ["AI/LLM"]
 tags: ["claude-code", "agent", "github"]
+slug: "2026-03-10-claude-code-review"
 ---
 
 Anthropic が Claude Code の新機能「Code Review」を発表した。PR が開かれると、**複数のエージェントがチームとして並列にコードレビューを実行**し、人間が見落としがちなバグを検出する。開発者の Boris Cherny 氏（[@bcherny](https://x.com/bcherny)）は「数週間使って、自分では気づかなかった本物のバグを何度も見つけてくれた」と[報告している](https://x.com/bcherny/status/2031089411820228645)。

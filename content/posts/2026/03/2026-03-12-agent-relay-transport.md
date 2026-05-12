@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4045606715"
 categories: ["AI/LLM"]
 tags: ["agent", "mcp", "llm"]
+slug: "2026-03-12-agent-relay-transport"
 ---
 
 AIエージェントが単独で動く時代から、複数のエージェントが協調して動く時代へ移行しつつある。エージェント間の通信を設計するとき、「会話（何を話すか）」と「transport（どう届けるか）」を分離する考え方が重要になっている。本記事では、2026年に整備が進むエージェント間通信プロトコルの全体像と、Relay基盤のアーキテクチャを整理する。

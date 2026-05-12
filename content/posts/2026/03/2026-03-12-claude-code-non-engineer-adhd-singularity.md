@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4049839698"
 categories: ["AI/LLM"]
 tags: ["claude-code", "claude", "llm", "agent", "prompt"]
+slug: "2026-03-12-claude-code-non-engineer-adhd-singularity"
 ---
 
 動画広告分析Proを運営する@masapark95氏が、非エンジニア・ADHDという立場から2ヶ月間Claude Codeを使い倒した体験談が話題になっている。「分身が生まれた」「シンギュラリティーに入った」という表現が印象的なこのポストから、非エンジニアがClaude Codeを活用するためのヒントを読み解く。

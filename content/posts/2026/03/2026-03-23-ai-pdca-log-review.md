@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4113586720"
 categories: ["AI/LLM"]
 tags: ["llm", "prompt", "productivity", "pdca"]
+slug: "2026-03-23-ai-pdca-log-review"
 ---
 
 note CXO・THE GUILD 代表の深津貴之氏（[@fladdict](https://x.com/fladdict)）が、AI を使った日次・週次の振り返り手法を紹介している。やり方は極めてシンプルで、「昨日（先週）のログを AI に読み込ませて、PDCA 計画を策定させる」だけだという。

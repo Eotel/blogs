@@ -71,6 +71,7 @@ class PostDoc:
     body: str
     url: str
     alt_urls: set[str] = field(default_factory=set)
+    has_slug: bool = False
 
 
 @dataclass
@@ -216,6 +217,8 @@ def load_post(path: Path, posts_dir: Path) -> PostDoc | None:
     text = path.read_text(encoding="utf-8")
     fm, body = parse_frontmatter(text)
     url, alt_urls = post_urls(path, posts_dir, fm)
+    slug_value = fm.get("slug")
+    has_slug = isinstance(slug_value, str) and bool(slug_value.strip())
     return PostDoc(
         path=path,
         rel_path=str(path.relative_to(posts_dir.parent.parent)),
@@ -228,6 +231,7 @@ def load_post(path: Path, posts_dir: Path) -> PostDoc | None:
         body=body.strip(),
         url=url,
         alt_urls=alt_urls,
+        has_slug=has_slug,
     )
 
 
@@ -542,6 +546,7 @@ def build_plan(
     counts: dict[str, int] = {}
     for item in articles:
         counts[item["status"]] = counts.get(item["status"], 0) + 1
+    missing_slug = [str(p.path.relative_to(root)) for p in posts if not p.has_slug]
     return {
         "target": target,
         "since": since.isoformat() if since else None,
@@ -550,6 +555,7 @@ def build_plan(
         "counts": dict(sorted(counts.items())),
         "articles": articles,
         "index": str(db_path.relative_to(root)),
+        "missing_slug": missing_slug,
     }
 
 
@@ -563,8 +569,20 @@ def markdown(plan: dict[str, Any]) -> str:
         f"- wiki_pages: {plan['wiki_pages']}",
         f"- index: `{plan['index']}`",
         "",
-        "### Summary",
     ]
+    missing_slug = plan.get("missing_slug") or []
+    if missing_slug:
+        lines.append(f"### ⚠️ slug 欠落 ({len(missing_slug)}件)")
+        lines.append("")
+        lines.append(
+            "次の記事は `slug:` を持たないため、Hugo は title 由来 slug にフォールバックする。"
+            "wiki-ingest が生成する related_posts URL (filename ベース) と一致せず 404 を生む。"
+            "ingest 前に `slug:` を埋めること。"
+        )
+        for rel in missing_slug:
+            lines.append(f"- `{rel}`")
+        lines.append("")
+    lines.append("### Summary")
     if plan["counts"]:
         for key, count in plan["counts"].items():
             lines.append(f"- {key}: {count}")

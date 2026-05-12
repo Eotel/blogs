@@ -5,6 +5,7 @@ author: "hdknr"
 categories: ["お知らせ"]
 tags: ["hugo", "github-pages"]
 summary: "Hugo + GitHub Pages でブログサイトを構築しました"
+slug: "hello"
 ---
 
 ## ブログサイトを開設しました

@@ -8,6 +8,7 @@ source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4152191071"
 categories: ["AI/LLM"]
 tags: ["Claude Code", "AIエージェント", "マルチエージェント", "組織設計", "プロンプトエンジニアリング"]
 description: "Claude Codeでエージェント40体を1ヶ月運用して全部やめた実体験レポート。Context Rot、Compaction、指示の限界という3つの構造的問題と、壊れないAIエージェント設計の考え方を解説。"
+slug: "2026-03-30-ai-agents-40-failure"
 ---
 
 Claude Code のエージェントを40体つくり、役割を分けてルールを書いて階層もつくった。1ヶ月後、ぜんぶやめた。こはく氏（[@Kohaku_NFT](https://x.com/Kohaku_NFT)）の実体験レポートから、AIエージェント大量運用が構造的に壊れる理由と、そこから見えた「壊れない設計」の考え方を整理する。

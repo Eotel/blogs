@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4144401868"
 categories: ["AI/LLM"]
 tags: ["AIエージェント", "ベクトル検索", "記憶管理", "コサイン類似度", "SuperLocalMemory"]
+slug: "2026-03-27-superlocalmemory-v3-ai-agent-memory"
 ---
 
 30以上のAIエージェント記憶システムを調査した結果、Mem0・MemGPT・Letta・Zepを含むすべてのシステムがコサイン類似度を採用していることが明らかになった。さらに2020〜2026年のNeurIPS・ICML・ACLの主要論文を調べても、これを研究上の問題として指摘した論文は1本も存在しないという。

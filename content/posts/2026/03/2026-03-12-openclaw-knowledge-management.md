@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4049844370"
 categories: ["AI/LLM"]
 tags: ["claude-code", "agent", "prompt"]
+slug: "2026-03-12-openclaw-knowledge-management"
 ---
 
 「OpenClawを使ってみたけど、うまくいかなかった」という声をよく聞く。しかし、それはツールの問題ではなく「使い方」の問題かもしれない。@ichiaimarketer氏（いち＠OpenClawガチ勢）のポストから、AIエージェントツールを活用するための本質的なポイントを整理する。

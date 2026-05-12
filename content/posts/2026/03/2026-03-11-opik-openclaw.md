@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4041953408"
 categories: ["AI/LLM"]
 tags: ["openclaw", "agent", "llm"]
+slug: "2026-03-11-opik-openclaw"
 ---
 
 OpenClaw を使っていると「AI が裏で何をしているのか分からない」と感じることはありませんか？Comet が開発した **opik-openclaw** は、OpenClaw のエージェント動作をトレース・可視化するオープンソースプラグインです。AI を「ブラックボックス」から「ガラスボックス」に変えてくれます。

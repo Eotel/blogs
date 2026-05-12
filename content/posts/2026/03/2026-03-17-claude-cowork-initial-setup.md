@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4077635522"
 categories: ["AI/LLM"]
 tags: ["Claude", "Claude Cowork", "生産性", "初期設定", "自動化"]
+slug: "2026-03-17-claude-cowork-initial-setup"
 ---
 
 Claude Coworkは今年最強の生産性ツールだ。しかし9割の人はインストールして10分ほど適当に触り、「へえ、すごいね」と言って結局ChatGPTに戻ってしまう。

@@ -7,6 +7,7 @@ author: "hdknr"
 categories: ["クラウド/インフラ"]
 tags: ["aws", "dms", "serverless", "eventbridge", "cloudwatch", "terraform", "監視"]
 source_url: "https://gist.github.com/hdknr/43e385fbfa822e3ee1214a71564fd7a9"
+slug: "2026-03-26-dms-oom-recovery"
 ---
 
 AWS DMS Serverless Replication（CDC モード）が OOM（Out of Memory）で `failed` 状態になり、自動再起動の仕組みが検知できずに長期間停止していた問題について、根本原因と対策をまとめます。

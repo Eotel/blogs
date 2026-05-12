@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4026517384"
 categories: ["ツール/開発環境"]
 tags: ["figma"]
+slug: "2026-03-09-figma-make-tips"
 ---
 
 Figma が提供する AI デザイン機能「Figma Make」を実務で活用するための実践的なコツをまとめる。1000 回以上のプロンプト作成を通じて見つかった知見や、効率的なワークフローを紹介する。

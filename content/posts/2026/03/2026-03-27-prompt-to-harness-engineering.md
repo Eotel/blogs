@@ -8,6 +8,7 @@ description: "Prompt Engineering → Context Engineering → Harness Engineering
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4140837410"
 categories: ["AI/LLM"]
 tags: ["Harness Engineering", "Context Engineering", "agent", "openai", "anthropic"]
+slug: "2026-03-27-prompt-to-harness-engineering"
 ---
 
 AI エンジニアリングの中心概念が急速に変化している。2022年の「Prompt Engineering」から2025年の「Context Engineering」を経て、2026年は「Harness Engineering」の年になった。Anthropic、OpenAI、そして Martin Fowler まで、業界のキープレイヤーが揃ってこの概念を公式に取り上げている。

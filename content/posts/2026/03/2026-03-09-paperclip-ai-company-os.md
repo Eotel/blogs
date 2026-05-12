@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4026638699"
 categories: ["AI/LLM"]
 tags: ["agent", "claude", "llm", "github"]
+slug: "2026-03-09-paperclip-ai-company-os"
 ---
 
 AIエージェントに役職・組織図・予算・目標を与え、24時間自律的に会社を運営させる——そんなコンセプトのオープンソースプロジェクト「**Paperclip**」が公開され、注目を集めている。

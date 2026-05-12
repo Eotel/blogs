@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4041964289"
 categories: ["AI/LLM"]
 tags: ["agent", "openclaw", "llm", "prompt"]
+slug: "2026-03-11-openclaw-markdown-agent-stack"
 ---
 
 Google のシニア AI プロダクトマネージャー Shubham Saboo 氏が、OpenClaw エージェントを 40 日間運用した経験から導き出した「マークダウンファイル駆動のエージェント運用スタック」について紹介する。モデルを変えず、蓄積されたマークダウンファイルだけでエージェントが成長していくというアプローチだ。

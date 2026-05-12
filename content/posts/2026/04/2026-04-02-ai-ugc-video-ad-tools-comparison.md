@@ -6,6 +6,7 @@ draft: false
 author: "hdknr"
 categories: ["AI/LLM"]
 tags: ["AI広告", "UGC", "動画生成", "マーケティング自動化", "ツール比較"]
+slug: "2026-04-02-ai-ugc-video-ad-tools-comparison"
 ---
 
 AIで動画広告を自動生成するツールが急増している。中でも UGC（ユーザー生成コンテンツ）スタイルの広告動画は、SNS 広告のパフォーマンスを左右する重要な要素だ。本記事では、この領域の主要4ツール — Arcads、Creatify、HeyGen、Synthesia — を機能・料金・API・ユースケースの観点から徹底比較する。

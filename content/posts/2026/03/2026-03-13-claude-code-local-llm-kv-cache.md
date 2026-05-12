@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4051391820"
 categories: ["AI/LLM"]
 tags: ["claude-code", "llm", "ollama"]
+slug: "2026-03-13-claude-code-local-llm-kv-cache"
 ---
 
 Claude Code をローカルLLM（llama.cpp、Ollama など）で使う際に、**毎回プロンプト処理に異常な時間がかかる**という問題が報告されています。原因は Claude Code が付加する「Attribution Header」によるKVキャッシュの無効化です。設定一つで解決できるので、対処法をまとめます。

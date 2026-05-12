@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4050706670"
 categories: ["AI/LLM"]
 tags: ["llm", "agent", "claude-code", "prompt"]
+slug: "2026-03-12-codified-context"
 ---
 
 LLMベースのコーディングエージェント（Claude Code、Cursor など）は、セッションが変わるたびにプロジェクトの規約や過去のミスを忘れてしまう。小さなプロトタイプなら問題にならないが、10万行を超える大規模コードベースでは「毎回同じ説明をする」「直したはずのバグパターンが再発する」といったコストが無視できなくなる。

@@ -8,6 +8,7 @@ source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4194462489"
 categories: ["AI/LLM"]
 description: "Google Gemma 4 31Bの安全性制限を除去した脱獄モデルCRACKの技術解説。Abliteration手法の仕組み、JANG_4M量子化で18GBに収めたスペック、HarmBenchとMMLUのベンチマーク結果を紹介。"
 tags: ["Gemma", "Abliteration", "MLX", "Apple Silicon", "AI安全性"]
+slug: "2026-04-06-gemma4-31b-abliterated-crack"
 ---
 
 Google の Gemma 4 31B モデルをベースに、安全性制限を除去した「**Gemma-4-31B-JANG_4M-CRACK**」が [Hugging Face で公開](https://huggingface.co/dealignai/Gemma-4-31B-JANG_4M-CRACK)された。開発元の dealignai は、**Abliteration**（アブリテレーション）と呼ばれる手法でモデルの拒否行動を除去した。知識性能の劣化は MMLU で **-2.0%** にとどまる。

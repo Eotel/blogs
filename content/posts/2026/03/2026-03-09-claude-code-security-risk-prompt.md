@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4026444705"
 categories: ["AI/LLM"]
 tags: ["claude-code", "security", "prompt"]
+slug: "2026-03-09-claude-code-security-risk-prompt"
 ---
 
 Claude Code でツール実行の許可を求められるたびに、セキュリティリスクをパーセンテージで表示させる CLAUDE.md の設定が話題になっています。「なんかやばそうだけど…まあいいか」で Yes を連打してしまう問題への対策です。

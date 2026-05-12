@@ -8,6 +8,7 @@ source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4151756782"
 categories: ["ビジネス/キャリア"]
 tags: ["トレード", "利確", "投資", "メンタル管理", "リスク管理"]
 description: "トレードで最も難しい利確を、感情ではなく設計で上手くする4つのテクニックを紹介。逆ポジ質問、50/50決済、前提固定利確など、納得できる利確ルールの作り方を解説します。"
+slug: "2026-03-30-profit-taking-by-design"
 ---
 
 {{< x user="FxRumasan" id="2036579870533361779" >}}

@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4058375018"
 categories: ["AI/LLM"]
 tags: ["Claude Code", "営業", "生産性向上", "AIエージェント", "自動化"]
+slug: "2026-03-13-claude-code-sales-mtg-prep"
 ---
 
 DAIJOBU CEO の山中裕貴（[@0xfene](https://x.com/0xfene)）氏が、Claude Code のカスタムスキル機能を営業業務に活用し、商談準備を劇的に効率化した事例を紹介している。

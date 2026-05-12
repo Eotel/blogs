@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4078669274"
 categories: ["AI/LLM"]
 tags: ["AIエージェント", "マーケティング", "Okara", "CMO", "自律エージェント"]
+slug: "2026-03-17-okara-ai-cmo"
 ---
 
 Okaraが「世界初のAI CMO」を発表した。Webサイトを入力するだけでエージェント群がデプロイされ、X（Twitter）やRedditでのマーケティングタスクを自律的に実行してくれるというサービスだ。

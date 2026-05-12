@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4026522698"
 categories: ["AI/LLM"]
 tags: ["agent", "claude-code", "security"]
+slug: "2026-03-09-shenzhen-openclaw-opc"
 ---
 
 深圳市龍崗区が「OpenClaw および OPC（One-Person Company）発展支援に関する若干の措置」を発表した。AI エージェントフレームワーク OpenClaw と「一人企業」モデルを対象にした政府支援策としては、中国初、おそらく世界初の試みだ。荒井健一氏（[@aarai666](https://x.com/aarai666)）の[ツイート](https://x.com/aarai666/status/2030988166770077789)で紹介されたこの政策の要点を整理する。

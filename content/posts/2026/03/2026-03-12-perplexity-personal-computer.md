@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4044242848"
 categories: ["AI/LLM"]
 tags: ["agent", "llm", "openclaw"]
+slug: "2026-03-12-perplexity-personal-computer"
 ---
 
 Perplexity が開発者カンファレンス「Ask 2026」で発表した **Personal Computer** は、Mac mini を 24 時間稼働の AI エージェントに変えるサービスです。OpenClaw と同じ「コンピュータ操作型 AI」の領域に参入しつつ、クラウド管理・サブスクリプション型という独自のアプローチを採っています。

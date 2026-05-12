@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4058462947"
 categories: ["AI/LLM"]
 tags: ["agent", "llm"]
+slug: "2026-03-13-ai-video-editing-automation"
 ---
 
 動画編集者のカズマル氏（株式会社ブイスト）が、300日以上かけて50種類以上のAIツールに500万円以上を課金して検証した「AI動画編集 自動化のカラクリ」が話題になっている。AIによる自動カットと自動テロップで、動画編集のワークフローがどう変わるのかを整理する。

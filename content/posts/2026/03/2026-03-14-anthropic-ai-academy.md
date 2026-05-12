@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4061231014"
 categories: ["AI/LLM"]
 tags: ["anthropic", "claude", "claude-code", "mcp", "agent"]
+slug: "2026-03-14-anthropic-ai-academy"
 ---
 
 Anthropic が公式の学習プラットフォーム「**Anthropic Academy**」を無料公開しました。Claude Code、API、MCP、エージェントスキルなど、13コースが完全無料で受講でき、修了証も取得可能です。

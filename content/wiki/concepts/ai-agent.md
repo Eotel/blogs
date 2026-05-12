@@ -50,6 +50,11 @@ related_posts:
   - "/posts/2026/03/2026-03-09-openai-symphony/"
   - "/posts/2026/03/2026-03-09-paperclip-ai-company-os/"
   - "/posts/2026/03/2026-03-09-shenzhen-openclaw-opc/"
+  - "/posts/2026/03/2026-03-09-agents-md-less-is-more/"
+  - "/posts/2026/03/2026-03-09-karpathy-autoresearch/"
+  - "/posts/2026/03/2026-03-10-karpathy-autoresearch/"
+  - "/posts/2026/03/2026-03-11-ai-moat-sor-soa/"
+  - "/posts/2026/03/2026-03-11-codex-subagent-swarm/"
   - "/posts/2026/03/2026-03-10-openclaw-tiktok-marketing/"
   - "/posts/2026/03/2026-03-10-openclaw-xiaohongshu-agent/"
   - "/posts/2026/03/2026-03-11-bytedance-deerflow/"
@@ -189,6 +194,11 @@ LangChain 創設者 Harrison Chase が指摘する重要な概念。エージェ
 - [OpenAI Symphony — AI エージェントを自律的にオーケストレーションするオープンソースフレームワーク](/blogs/posts/2026/03/2026-03-09-openai-symphony/) — 2026-03-09
 - [Paperclip — AIエージェントで会社を自律運営するオープンソースOS](/blogs/posts/2026/03/2026-03-09-paperclip-ai-company-os/) — 2026-03-09
 - [深圳が世界初の OpenClaw・一人企業支援策を発表 — AI エージェント時代のソロ起業を後押し](/blogs/posts/2026/03/2026-03-09-shenzhen-openclaw-opc/) — 2026-03-09
+- [AGENTS.md は詳しすぎると逆効果 — ETH Zurich の138リポジトリ研究が示す「書かない」原則](/blogs/posts/2026/03/2026-03-09-agents-md-less-is-more/) — 2026-03-09
+- [Karpathy の autoresearch — AIが寝ている間に100回実験を回す仕組み](/blogs/posts/2026/03/2026-03-09-karpathy-autoresearch/) — 2026-03-09
+- [Karpathy の autoresearch — 寝ている間にAIが100回実験して朝にはモデルが賢くなっている世界](/blogs/posts/2026/03/2026-03-10-karpathy-autoresearch/) — 2026-03-10
+- [AI が生み出す新たな Moat：SoR から SoA への構造転換](/blogs/posts/2026/03/2026-03-11-ai-moat-sor-soa/) — 2026-03-11
+- [OpenAI Codex の SubAgent（Swarm）が変える AI コーディングの未来](/blogs/posts/2026/03/2026-03-11-codex-subagent-swarm/) — 2026-03-11
 - [OpenClaw × TikTok — AIエージェントでショート動画マーケティングを自動化する方法](/blogs/posts/2026/03/2026-03-10-openclaw-tiktok-marketing/) — 2026-03-10
 - [OpenClaw × 小紅書 — AI エージェントが SNS アカウントを完全自動運営する時代](/blogs/posts/2026/03/2026-03-10-openclaw-xiaohongshu-agent/) — 2026-03-10
 - [ByteDance DeerFlow — オープンソースの SuperAgent 基盤でAIエージェントを自律運用する](/blogs/posts/2026/03/2026-03-11-bytedance-deerflow/) — 2026-03-11

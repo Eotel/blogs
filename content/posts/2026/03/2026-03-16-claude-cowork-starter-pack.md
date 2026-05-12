@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4065904115"
 categories: ["AI/LLM"]
 tags: ["claude", "agent", "prompt"]
+slug: "2026-03-16-claude-cowork-starter-pack"
 ---
 
 Corey Ganim 氏が公開した「Ultimate Claude Cowork Starter Pack」が話題になっています。Claude Cowork を単なるチャットボットではなく、本格的な生産性ツールとして活用するための設定方法を体系的にまとめた記事です。本稿ではその要点を日本語で紹介します。

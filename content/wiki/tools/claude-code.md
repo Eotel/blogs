@@ -180,6 +180,8 @@ related_posts:
   - "/posts/2026/03/2026-03-04-b8b0f06e9ac13cce154f50e510c2fdc7/"
   - "/posts/2026/03/2026-03-17-claude-cowork-initial-setup/"
   - "/posts/2026/03/2026-03-18-ai-design-workflow/"
+  - "/posts/2026/02/2026-02-27-61e0abd5ba76e70dabc257c5f0e6560b/"
+  - "/posts/2026/04/2026-04-14-2026-ai-engineer-roadmap/"
 tags: ["claude-code", "claude", "anthropic", "AIエージェント"]
 ---
 
@@ -478,3 +480,5 @@ Claude Code の作者 Boris Cherny は Claude Code 自体を使って Claude Cod
 - [Anthropic、ChatGPT からの移行ツール提供開始 --- メモリインポートと App Store 1位の背景](/blogs/posts/2026/03/2026-03-04-b8b0f06e9ac13cce154f50e510c2fdc7/) — 2026-03-04
 - [Claude Coworkを「完璧な右腕」に変える最強の初期設定](/blogs/posts/2026/03/2026-03-17-claude-cowork-initial-setup/) — 2026-03-17
 - [デザイナーのためのAI活用術5選 — 制作スピードを劇的に上げる実践テクニック](/blogs/posts/2026/03/2026-03-18-ai-design-workflow/) — 2026-03-18
+- [AI は会話が長くなるほど「迷子」になる — Microsoft × Salesforce の研究解説](/blogs/posts/2026/02/2026-02-27-61e0abd5ba76e70dabc257c5f0e6560b/) — 2026-02-27
+- [2026年に求められるAIエンジニアのロードマップ — 350万インプレッション超の話題スレッドを解説](/blogs/posts/2026/04/2026-04-14-2026-ai-engineer-roadmap/) — 2026-04-14

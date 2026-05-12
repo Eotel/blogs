@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4078654700"
 categories: ["AI/LLM"]
 tags: ["エージェント", "オーケストレーション", "自律AI", "TypeScript", "OSS"]
+slug: "2026-03-17-paperclipai-zero-human-company"
 ---
 
 AIエージェントを使った「0人会社（zero-human company）」のコンセプトが現実に近づいている。

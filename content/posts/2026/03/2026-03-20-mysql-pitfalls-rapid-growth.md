@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4095054896"
 categories: ["データベース"]
 tags: ["MySQL", "Aurora", "デッドロック", "ロック", "DDL"]
+slug: "2026-03-20-mysql-pitfalls-rapid-growth"
 ---
 
 Timee のプラットフォームエンジニアリングチームの徳富博氏による発表「[急成長でぶつかったMySQLの罠とその向き合い方](https://speakerdeck.com/hirosi1900day/ji-cheng-chang-debutukatutamysqlnomin-tosonoxiang-kihe-ifang)」から、Aurora MySQL 運用で遭遇した 7 つの重要な課題とその対策をまとめます。

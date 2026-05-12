@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4041973646"
 categories: ["AI/LLM"]
 tags: ["github", "vscode", "copilot", "claude-code", "openai"]
+slug: "2026-03-11-ai-coding-assistant-vscode-installs"
 ---
 
 VS Code マーケットプレイスにおける AI コーディングアシスタントの日次インストール数を示すグラフが話題になっている。GitHub Copilot のインストール数が急激に落ち込む「崖」が鮮明に表れており、SaaS 事業者やプロダクトマネージャーにとって示唆に富む内容だ。

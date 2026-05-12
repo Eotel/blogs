@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4113581245"
 categories: ["AI/LLM"]
 tags: ["ai-chip", "tesla", "spacex", "半導体"]
+slug: "2026-03-22-terafab-musk-chip-factory"
 ---
 
 2026年3月22日、イーロン・マスクは Tesla、SpaceX、xAI の共同プロジェクトとして、世界最大規模のチップ製造施設「TERAFAB（テラファブ）」を発表した。年間 1TW（1兆ワット）のコンピュート能力生産を目指す壮大な計画だ。

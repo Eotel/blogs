@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4027631113"
 categories: ["AI/LLM"]
 tags: ["agent", "python", "llm", "github"]
+slug: "2026-03-09-ai-research-community"
 ---
 
 Andrej Karpathy が [autoresearch](https://github.com/karpathy/autoresearch) を公開した直後、さらに踏み込んだビジョンを[示した](https://x.com/karpathy/status/2030705271627284816)。「次のステップは、エージェント同士が非同期かつ大規模に協調する仕組みだ」— 単一エージェントの能力向上ではなく、**エージェント群の協調システム設計**こそが本質だという主張だ。

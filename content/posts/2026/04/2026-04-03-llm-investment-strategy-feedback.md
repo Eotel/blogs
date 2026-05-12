@@ -8,6 +8,7 @@ source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4183330138"
 categories: ["AI/LLM"]
 description: "松尾研が8つのLLM（Claude・Gemini・GPT）で株式投資戦略を自動生成する72パターンの実験結果。フィードバック設計よりモデル選択が重要という知見を解説"
 tags: ["llm", "claude", "gemini", "openai"]
+slug: "2026-04-03-llm-investment-strategy-feedback"
 ---
 
 東京大学・松尾研究所の研究グループが、LLM（大規模言語モデル）に株式投資戦略を自動生成・改善させる実験を行い、その結果を人工知能学会 金融情報学研究会（SIG-FIN-036）で発表しました。8つの LLM と3種類のフィードバック条件を組み合わせた72パターンの実験から、「フィードバックの設計よりモデル選択のほうが戦略改善に大きく影響する」という知見が得られています。

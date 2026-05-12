@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4018466325"
 categories: ["AI/LLM"]
 tags: ["claude-code", "claude", "llm", "agent", "prompt"]
+slug: "2026-03-08-anti-hallucination-protocol"
 ---
 
 Claude Code などの LLM エージェントを業務で使う際、最大のリスクは**ハルシネーション（幻覚）**です。プロンプトの改善ばかりが注目されがちですが、本当に必要なのは「仕組みで縛る」アプローチです。

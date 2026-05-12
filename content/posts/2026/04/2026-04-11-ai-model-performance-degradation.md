@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4229044659"
 categories: ["AI/LLM"]
 tags: ["OpenAI", "Google", "Anthropic", "LLM", "モデル性能"]
+slug: "2026-04-11-ai-model-performance-degradation"
 ---
 
 AIモデルのリリース後、時間が経つにつれてパフォーマンスが落ちた気がする——そんな経験をしたユーザーは少なくないだろう。最近、SNS上でこの「体感」に関する興味深い主張が話題になった。

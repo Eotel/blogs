@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4034084623"
 categories: ["AI/LLM"]
 tags: ["openclaw", "agent", "mcp"]
+slug: "2026-03-10-openclaw-xiaohongshu-agent"
 ---
 
 中国の SNS「小紅書（Xiaohongshu / RED）」で、**AI エージェントがアカウントを完全自動運営している事例**が話題になっている。いち氏（[@ichiaimarketer](https://x.com/ichiaimarketer)）が[紹介したツイート](https://x.com/ichiaimarketer/status/2031135692210807291)によると、「虾薯（シャーシュー）」というアカウントは人間ではなく AI エージェントが運営しており、投稿の作成から公開、コメント返信、バズったコンテンツの分析・再現まで、すべて自動で行われている。

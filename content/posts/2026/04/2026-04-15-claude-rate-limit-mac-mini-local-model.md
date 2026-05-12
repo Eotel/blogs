@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4250484856"
 categories: ["AI/LLM"]
 tags: ["Claude", "ローカルLLM", "Mac Mini", "エージェント", "自動化"]
+slug: "2026-04-15-claude-rate-limit-mac-mini-local-model"
 ---
 
 ## Claude Max のレート制限問題と現実的な解決策

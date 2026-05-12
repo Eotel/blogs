@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4113445430"
 categories: ["AI/LLM"]
 tags: ["llm", "openai", "agent", "python", "github"]
+slug: "2026-03-23-autoresearch"
 ---
 
 OpenAI初期メンバーであるAndrej Karpathyが、**autoresearch**というオープンソースツールを公開しました。わずか630行のPythonスクリプトで、寝ている間にAIエージェントが約100の機械学習実験を自律的に実行してくれるというものです。

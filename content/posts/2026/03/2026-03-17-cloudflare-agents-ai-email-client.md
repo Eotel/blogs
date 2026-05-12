@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4078661550"
 categories: ["AI/LLM"]
 tags: ["Cloudflare", "AIエージェント", "メール", "エッジコンピューティング", "自動化"]
+slug: "2026-03-17-cloudflare-agents-ai-email-client"
 ---
 
 Cloudflare の最新インフラ技術「Cloudflare Agents」と AI を組み合わせることで、従来のメールクライアントを大きく超えた「次世代メール体験」が実現しつつあります。本記事では、その仕組みと注目すべきポイントを解説します。

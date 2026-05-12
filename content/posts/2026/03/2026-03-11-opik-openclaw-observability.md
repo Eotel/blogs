@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4041953408"
 categories: ["AI/LLM"]
 tags: ["agent", "llm"]
+slug: "2026-03-11-opik-openclaw-observability"
 ---
 
 OpenClaw で AI エージェントを運用していると、「エージェントが内部で何をしているのか分からない」という課題に直面します。Comet チームが開発した **opik-openclaw** は、OpenClaw のエージェント動作をトレース・評価・監視できるオブザーバビリティプラグインです。AI の「ブラックボックス」を「ガラスボックス」に変えるツールとして注目されています。

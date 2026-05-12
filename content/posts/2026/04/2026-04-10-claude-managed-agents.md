@@ -8,6 +8,7 @@ source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4214253259"
 description: "Anthropic が公開した Claude Managed Agents のパブリックベータを解説。セキュアなサンドボックス、長時間実行セッション、MCP 統合などの機能、料金体系、導入事例を紹介。"
 categories: ["AI/LLM"]
 tags: ["claude", "anthropic", "agent", "mcp", "llm"]
+slug: "2026-04-10-claude-managed-agents"
 ---
 
 2026年4月8日、Anthropicが「Claude Managed Agents」をパブリックベータとして公開した。AIエージェントの本番運用に必要なインフラをすべてマネージドで提供するサービスで、エージェント構築のコストと期間を劇的に削減する。

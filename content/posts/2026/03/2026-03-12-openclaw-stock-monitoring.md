@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4043402411"
 categories: ["AI/LLM"]
 tags: ["agent", "openclaw", "python", "github"]
+slug: "2026-03-12-openclaw-stock-monitoring"
 ---
 
 オープンソースの AI エージェント基盤 **OpenClaw** を使って、保有銘柄の株価アラート・決算通知・ニュース収集を自動化した実装事例を紹介します。Zenn の実践記事を元に、設計思想と実装パターンを整理しました。

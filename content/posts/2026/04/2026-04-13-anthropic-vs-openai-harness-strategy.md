@@ -8,6 +8,7 @@ description: "Anthropic（Managed Agent）と OpenAI（Codex + Symphony）の Ha
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4239418055"
 categories: ["AI/LLM"]
 tags: ["anthropic", "openai", "claude-code", "codex", "agent", "Harness Engineering", "Managed Agent"]
+slug: "2026-04-13-anthropic-vs-openai-harness-strategy"
 ---
 
 AI コーディングエージェントの設計思想において、Anthropic と OpenAI は「Harness（ハーネス）」という同じキーワードを使いながら、まったく異なる方向に進んでいます。この記事では、両社の戦略の違いを整理し、それぞれが目指す未来像を考察します。

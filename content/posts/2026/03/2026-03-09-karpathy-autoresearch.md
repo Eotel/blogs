@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4026634592"
 categories: ["AI/LLM"]
 tags: ["llm", "agent", "python"]
+slug: "2026-03-09-karpathy-autoresearch"
 ---
 
 Andrej Karpathy が公開した [autoresearch](https://github.com/karpathy/autoresearch) は、AI エージェントが単一 GPU 上で自律的に ML 実験を繰り返すツールです。わずか約630行の Python コードで「コード修正 → 学習 → 評価 → 改善」のループを自動化し、研究の競争軸を「コード品質」から「改善ループの速度」へと変えようとしています。

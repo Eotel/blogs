@@ -8,6 +8,7 @@ source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4239444953"
 categories: ["AI/LLM"]
 tags: ["MemPalace", "LLM メモリ", "LongMemEval", "ChromaDB", "MCP"]
 description: "MemPalace は LLM に永続メモリを提供するオープンソースシステム。LongMemEval 96.6%のベンチマークスコアの実態、宮殿構造のアーキテクチャ、MCP 対応、コミュニティからの批判を詳しく解説。"
+slug: "2026-04-13-mempalace-ai-memory"
 ---
 
 2026年4月、GitHub で爆発的に注目を集めた AI メモリシステム「MemPalace」。LongMemEval ベンチマークで 96.6% というスコアを叩き出し、わずか1週間で 45,000 スター以上を獲得した。女優ミラ・ジョヴォヴィッチと開発者 Ben Sigman による共同プロジェクトという異色の出自も話題を呼んだ。

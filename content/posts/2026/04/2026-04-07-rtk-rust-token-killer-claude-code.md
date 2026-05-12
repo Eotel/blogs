@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4198171626"
 categories: ["ツール/開発環境"]
 tags: ["Claude Code", "Rust", "トークン最適化", "CLI", "開発効率"]
+slug: "2026-04-07-rtk-rust-token-killer-claude-code"
 ---
 
 Claude Code を使い続けると、トークン消費が思いのほか速く、使用制限に達してしまうことがある。その主な原因のひとつが、ターミナルコマンドの出力だ。`git status` や `npm install` が吐き出すプログレスバー・警告・ログといったノイズが、そのままコンテキストに流れ込んでいる。

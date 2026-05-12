@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/72#issuecomment-4078882891"
 categories: ["ビジネス/キャリア"]
 tags: ["建設DX", "SaaS", "スタートアップ", "AI", "業務効率化"]
+slug: "2026-03-18-digitalbillder-construction-dx"
 ---
 
 東大松尾研発の AI スタートアップ「燈株式会社（Akari Inc.）」が提供する、建設業に完全特化した管理業務 DX サービス「Digital Billder（デジタルビルダー）」を紹介します。

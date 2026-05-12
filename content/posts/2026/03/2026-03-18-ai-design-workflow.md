@@ -8,6 +8,7 @@ source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4081016108"
 categories: ["AI/LLM"]
 description: "Claude Code × Figma 連携、AI モックアップ、AI 素材生成など、デザイナーの制作スピードを劇的に上げる AI 活用術5選を解説。"
 tags: ["figma", "claude-code", "ai-design", "prompt"]
+slug: "2026-03-18-ai-design-workflow"
 ---
 
 デザイナーの仕事が AI で「本当にすぐ終わる」時代が来ている。21歳でデザイン会社を経営するコンドウハルキ氏が X で共有した AI 活用術が大きな反響を呼んでいる。本記事では、同氏が紹介した 5 つの実践的な AI 活用ユースケースを掘り下げる。

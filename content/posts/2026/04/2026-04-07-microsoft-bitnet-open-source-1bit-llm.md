@@ -8,6 +8,7 @@ source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4202483765"
 categories: ["AI/LLM"]
 description: "Microsoft BitNet b1.58のオープンソース化を解説。1-bit量子化でGPU不要のCPU推論を実現するbitnet.cppの仕組み、ベンチマーク、セットアップ方法を紹介。"
 tags: ["BitNet", "Microsoft", "1-bit LLM", "CPU推論", "量子化", "ローカルLLM"]
+slug: "2026-04-07-microsoft-bitnet-open-source-1bit-llm"
 ---
 
 Microsoftが開発した1-bit LLM推論フレームワーク「**BitNet**」が完全にオープンソース化されました。bitnet.cppを使えば、**1000億パラメータ規模のLLMをGPUなしでCPU上で実行**できます。

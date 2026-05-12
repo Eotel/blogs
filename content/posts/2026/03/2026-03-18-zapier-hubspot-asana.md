@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/71#issuecomment-4079051187"
 categories: ["ビジネス/キャリア"]
 tags: ["Zapier", "HubSpot", "Asana", "自動化", "ノーコード"]
+slug: "2026-03-18-zapier-hubspot-asana"
 ---
 
 Zapier を使って HubSpot と Asana を連携させる方法と、Code by Zapier で集計ロジックを追加するテクニックを紹介します。

@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4113456196"
 categories: ["ビジネス/キャリア"]
 tags: ["フリーランス", "キャリア", "独立", "ビジネス戦略"]
+slug: "2026-03-23-freelance-survival-commitment"
 ---
 
 X（旧 Twitter）で [VIA(@Via00Via)](https://x.com/Via00Via) 氏が投稿した、フリーランスの厳しい生存率と月収100万円の壁を超えるための「覚悟」についての記事が話題になっている。中小企業白書のデータを交えながら、その要点を整理する。

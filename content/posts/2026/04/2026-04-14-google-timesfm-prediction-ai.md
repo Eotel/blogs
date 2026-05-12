@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4246789955"
 categories: ["AI/LLM"]
 tags: ["TimesFM", "Google", "時系列予測", "ゼロショット", "機械学習", "建設DX", "EVM"]
+slug: "2026-04-14-google-timesfm-prediction-ai"
 ---
 
 Googleが時系列予測のための基盤モデル **TimesFM**（Time Series Foundation Model）をひっそりと公開していた。1000億以上の実データで学習済みで、自分のデータをファインチューニングすることなく（ゼロショットで）すぐに使える点が特徴だ。

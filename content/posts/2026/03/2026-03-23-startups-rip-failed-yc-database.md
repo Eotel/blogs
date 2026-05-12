@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4107525358"
 categories: ["ビジネス/キャリア"]
 tags: ["スタートアップ", "Y Combinator", "失敗分析", "AI", "起業"]
+slug: "2026-03-23-startups-rip-failed-yc-database"
 ---
 
 「資金調達の翌日にCTOが辞めて、コードが書けないCEOだけ残った」——こんな生々しい失敗談が5,700社以上も集められたデータベース [Startups.RIP](https://startups.rip/) が話題になっている。

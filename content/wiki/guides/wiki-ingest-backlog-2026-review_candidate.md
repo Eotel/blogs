@@ -79,6 +79,7 @@ related_posts:
   - "/posts/2026/04/2026-04-14-2026-ai-engineer-roadmap/"
   - "/posts/2026/04/2026-04-15-inbound-marketing-guide/"
   - "/posts/2026/05/2026-05-11-transaction-strategies-saga-outbox-catalog/"
+  - "/posts/2026/05/2026-05-12-private-methods-testability-coding-agents/"
 tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 ---
 
@@ -162,3 +163,4 @@ tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 - [2026年に求められるAIエンジニアのロードマップ — 350万インプレッション超の話題スレッドを解説](/blogs/posts/2026/04/2026-04-14-2026-ai-engineer-roadmap/) — 2026-04-14 / review_candidate
 - [エンジニアのためのインバウンドマーケティング入門：Attract/Engage/Delight と MA の基本](/blogs/posts/2026/04/2026-04-15-inbound-marketing-guide/) — 2026-04-15 / review_candidate
 - [ACID から Saga まで — トランザクション戦略 10 種の地図と判断軸](/blogs/posts/2026/05/2026-05-11-transaction-strategies-saga-outbox-catalog/) — 2026-05-11 / review_candidate
+- [private メソッドにビジネスロジックを隠すな — TDD・カプセル化・coding agent 時代の設計判断](/blogs/posts/2026/05/2026-05-12-private-methods-testability-coding-agents/) — 2026-05-12 / review_candidate

@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4088498941"
 categories: ["セキュリティ"]
 tags: ["security", "github", "python", "supply-chain", "vscode"]
+slug: "2026-03-19-forcememo-github-attack"
 ---
 
 2026年3月上旬から、GitHub アカウントを侵害して Python リポジトリに悪意あるコードを注入する「ForceMemo」と呼ばれる大規模攻撃キャンペーンが確認されています。force-push によるコミット履歴の書き換えと、Solana ブロックチェーンを利用した C2（Command and Control: 攻撃者がマルウェアに指令を送る仕組み）通信という巧妙な手法が特徴です。

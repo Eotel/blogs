@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4026530149"
 categories: ["AI/LLM"]
 tags: ["claude-code", "claude", "llm", "agent"]
+slug: "2026-03-09-claude-code-daily-business"
 ---
 
 Claude Code はコーディング専用ツールと思われがちだが、実はコーディング以外の日常業務を半自動化する強力なツールとしても活用できる。みのるん氏（[@minorun365](https://x.com/minorun365)）の [Qiita 記事](https://qiita.com/minorun365/items/114f53def8cb0db60f47) から、その実践例を紹介する。

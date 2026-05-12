@@ -6,6 +6,7 @@ draft: false
 author: "hdknr"
 categories: ["AI/LLM"]
 tags: ["claude-code", "openclaw", "agent", "mcp"]
+slug: "2026-03-10-openclaw-claude-code-setup"
 ---
 
 OpenClaw と Claude Code を組み合わせることで、AI エージェントチームの構築・管理を効率化できます。本記事では、2つの主要な連携アプローチとそのセットアップ方法を解説します。

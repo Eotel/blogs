@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4061228769"
 categories: ["AI/LLM"]
 tags: ["agent", "mcp", "anthropic"]
+slug: "2026-03-14-saas-is-dead-perspective"
 ---
 
 Anthropic CEOが「ClaudeはSaaSの専門領域を代替できる」と発言したことを引き金に、SaaS株の暴落も重なって「SaaS is Dead」論が再燃している。マネーフォワードの武田氏がこの話題について見解を述べており、総じて同意できる内容だった。結論としては「全部が死ぬわけではなく、AIに代替される層と、人間や専門家でなければ担えない層に分かれる」というものだ。

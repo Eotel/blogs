@@ -8,6 +8,7 @@ source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4182690090"
 categories: ["AI/LLM"]
 tags: ["anthropic", "claude", "agent", "claude-code", "llm"]
 description: "Anthropic が開発中の常駐型AIエージェント Conway のリーク情報を解説。Always-On 常時稼働、Webhook 連携、ブラウザ操作、.cnw 拡張規格など次世代エージェントの全機能をまとめます。"
+slug: "2026-04-03-anthropic-conway-agent"
 ---
 
 Anthropic が開発中の常駐型AIエージェント「Conway」のリーク情報が話題になっています。従来のチャットベースのやり取りとは異なり、24時間バックグラウンドで稼働し続けます。いわば「AI従業員」として機能する次世代エージェント環境です。

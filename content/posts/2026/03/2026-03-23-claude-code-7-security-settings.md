@@ -8,6 +8,7 @@ source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4109770395"
 categories: ["AI/LLM"]
 description: "Claude Code のセキュリティ設定を7つ解説。サンドボックス、deny ルール、機密ファイル保護、ネットワーク制限、hooks、権限棚卸し、Managed Settings の設定方法を実践的にまとめます。"
 tags: ["claude-code", "security", "claude", "sandbox", "anthropic"]
+slug: "2026-03-23-claude-code-7-security-settings"
 ---
 
 Claude Code が勝手に `git push --force` しかけた——そんな冷や汗体験から真剣にセキュリティ設定を見直したという実践的なまとめです。Anthropic の公式ドキュメントにも「セキュリティは自分で設定しろ」と明記されており、AIエージェントに人間と同じ権限を与えるリスクを理解した上で対策を講じる必要があります。

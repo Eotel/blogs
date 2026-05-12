@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4246800127"
 categories: ["AI/LLM"]
 tags: ["AIエンジニア", "ロードマップ", "キャリア", "Claude Code", "エージェントAI"]
+slug: "2026-04-14-2026-ai-engineer-roadmap"
 ---
 
 Claude Code などで AI 開発が急速に進化する中、「2026年に求められるエンジニア」をまとめたロードマップが 350万インプレッション超で話題になっています。

@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4022919307"
 categories: ["AI/LLM"]
 tags: ["agent", "openclaw", "telegram", "productivity"]
+slug: "2026-03-08-openclaw-telegram-forum-topics"
 ---
 
 OpenClaw を Telegram で使っている人に向けて、**Forum Topics** を活用した構造化テクニックが海外で話題になっています。ブックマーク 2,000 件を突破したこの手法を紹介します。

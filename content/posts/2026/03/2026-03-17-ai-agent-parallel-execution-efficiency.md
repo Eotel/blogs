@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4078690143"
 categories: ["AI/LLM"]
 tags: ["AIエージェント", "生産性", "並列処理", "タスク管理", "働き方"]
+slug: "2026-03-17-ai-agent-parallel-execution-efficiency"
 ---
 
 AIエージェントを複数並列で動かせば効率が上がる——そう思っていないだろうか。実は、「ダラダラと1つのエージェントと長時間向き合う」方が、最終的に良い成果を出せるかもしれない。K.Ishi氏（[@K_Ishi_AI](https://x.com/K_Ishi_AI)）がX（旧Twitter）で提唱した、AI時代の新しい働き方の視点を紹介する。

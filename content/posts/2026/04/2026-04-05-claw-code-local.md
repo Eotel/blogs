@@ -8,6 +8,7 @@ source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4188029033"
 categories: ["AI/LLM"]
 description: "Claude Code風のAIコーディングエージェント claw-code-local の紹介。Ollama や LM Studio でローカルLLMを使い、API費用ゼロ・プライバシー保護でコード生成を実現する方法を解説。"
 tags: ["claude-code", "ローカルLLM", "Ollama", "Rust", "agent"]
+slug: "2026-04-05-claw-code-local"
 ---
 
 Claude Code ライクなターミナル AI コーディングエージェントを、Anthropic API なしでローカル LLM で動かせる「claw-code-local」が登場しました。Rust で実装された軽量・高速なツールで、Ollama や LM Studio など好みの LLM バックエンドを自由に選べます。

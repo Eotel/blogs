@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4050693809"
 categories: ["ツール/開発環境"]
 tags: ["claude-code", "claude", "prompt"]
+slug: "2026-03-12-claude-md-improver"
 ---
 
 Claude Code を使っていると、プロジェクトのコンテキストを伝える `CLAUDE.md` の質が作業効率に直結することに気づきます。Anthropic 公式プラグイン **claude-md-management** に含まれる `claude-md-improver` スキルは、CLAUDE.md を自動で採点し、改善点を提案してくれる便利なツールです。

@@ -8,6 +8,7 @@ source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4165294463"
 categories: ["AI/LLM"]
 tags: ["AI", "メンタルヘルス", "生産性", "BCG", "認知疲労"]
 description: "BCGの1,488名調査で判明したAIツールの過度な使用による認知疲労「AI Brain Fry」。症状、業務への影響、個人・組織レベルの対策を解説。"
+slug: "2026-03-31-ai-brain-fry"
 ---
 
 BCG（ボストン・コンサルティング・グループ）が2026年3月に発表した研究で、AIツールの過度な使用による認知疲労「AI Brain Fry（AIによる脳の焼き付き）」が注目を集めている。

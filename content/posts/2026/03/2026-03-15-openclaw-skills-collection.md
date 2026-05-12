@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4062012721"
 categories: ["AI/LLM"]
 tags: ["openclaw", "claude-code", "agent", "github"]
+slug: "2026-03-15-openclaw-skills-collection"
 ---
 
 OpenClawのスキルエコシステムが急速に拡大しています。公式レジストリ「ClawHub」には13,000以上のコミュニティ製スキルが登録されていますが、その中から厳選・カテゴリ整理されたコレクションが公開され、注目を集めています。

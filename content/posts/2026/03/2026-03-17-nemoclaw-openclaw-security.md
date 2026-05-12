@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4078659280"
 categories: ["AI/LLM"]
 tags: ["NemoClaw", "OpenClaw", "NVIDIA", "セキュリティ", "AIエージェント"]
+slug: "2026-03-17-nemoclaw-openclaw-security"
 ---
 
 NVIDIAがGTC 2026（2026年3月16日）で発表した「NemoClaw」は、OpenClawのセキュリティ・プライバシー層を強化するオープンソーススタックです。OpenClawの競合ではなく、OpenClawを包み込む構造になっており、企業や業務利用での安全なAIエージェント運用を実現することを目指しています。
