@@ -1,0 +1,78 @@
+{{- /* <head> content for every page. Bundles main.css, loads
+       Newsreader (Latin subset) via Google Fonts, sets metadata,
+       and wires Pagefind component UI assets. */ -}}
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{{- if hugo.IsProduction | or (eq site.Params.env "production") | and (ne .Params.robotsNoIndex true) }}
+<meta name="robots" content="index, follow">
+{{- else }}
+<meta name="robots" content="noindex, nofollow">
+{{- end }}
+
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ with .Title }}{{ . }} | {{ end }}{{ site.Title }}{{ end }}</title>
+
+<meta name="description" content="{{- with .Description }}{{ . }}{{- else }}{{- if or .IsPage .IsSection }}{{ .Summary | default (printf "%s - %s" .Title site.Title) }}{{- else }}{{- with site.Params.homeInfoParams.Content }}{{ . }}{{- end }}{{- end }}{{- end -}}">
+{{- with .Params.keywords }}
+<meta name="keywords" content="{{ delimit . ", " }}">
+{{- else }}
+  {{- with .Params.tags }}
+<meta name="keywords" content="{{ delimit . ", " }}">
+  {{- end }}
+{{- end }}
+<meta name="author" content="{{ site.Params.author | default "Eotel" }}">
+<link rel="canonical" href="{{ with .Params.canonicalURL }}{{ . }}{{ else }}{{ .Permalink }}{{ end }}">
+
+{{- /* Light/dark inline boot script — FOUC prevention. */}}
+<script>
+  (function () {
+    var t = localStorage.getItem("pref-theme");
+    if (t === "dark" || t === "light") {
+      document.documentElement.dataset.theme = t;
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.dataset.theme = 'dark';
+    } else {
+      document.documentElement.dataset.theme = 'light';
+    }
+  })();
+</script>
+
+{{- /* Newsreader Latin subset */}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&display=swap">
+
+{{- /* Main stylesheet — built from assets/css/main.css */}}
+{{- $main := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $main.RelPermalink }}" integrity="{{ $main.Data.Integrity }}">
+
+{{- /* Functional CSS (keyword link injection, AI model chip, Pagefind shortcut). */}}
+<link rel="stylesheet" href="{{ "css/keyword-links.css" | relURL }}">
+<link rel="stylesheet" href="{{ "css/post-meta-ai.css" | relURL }}">
+<link rel="stylesheet" href="{{ "css/pagefind-shortcut.css" | relURL }}">
+
+{{- /* Pagefind UI (search modal). */}}
+<link rel="stylesheet" href="{{ "pagefind/pagefind-component-ui.css" | relURL }}">
+<script src="{{ "pagefind/pagefind-component-ui.js" | relURL }}" type="module"></script>
+
+{{- /* Favicons */}}
+<link rel="icon" href="{{ "favicon.ico" | absURL }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | absURL }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | absURL }}">
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | absURL }}">
+
+{{- /* RSS / alternate */}}
+{{- range .AlternativeOutputFormats -}}
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type | html }}" href="{{ .Permalink | safeURL }}" title="{{ .Name }}">
+{{- end -}}
+
+{{- /* OpenGraph & Twitter cards */}}
+<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:locale" content="{{ site.Language }}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">

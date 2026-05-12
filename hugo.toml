@@ -2,7 +2,6 @@ baseURL = 'https://eotel.github.io/blogs/'
 languageCode = 'ja'
 defaultContentLanguage = 'ja'
 title = "Eotel's Notebook"
-theme = 'PaperMod'
 paginate = 10
 
 [params]

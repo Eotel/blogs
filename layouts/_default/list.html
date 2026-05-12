@@ -1,0 +1,38 @@
+{{- define "main" -}}
+<div class="list-page">
+  {{- partial "breadcrumbs.html" . }}
+  <header class="list-page__header">
+    <h1 class="list-page__title">{{ .Title }}</h1>
+    {{- with .Description }}<p class="list-page__description">{{ . | markdownify }}</p>{{ end }}
+  </header>
+
+  {{- with .Content }}
+  <div class="post-content prose">{{ . }}</div>
+  {{- end }}
+
+  {{- $paginator := .Paginate .RegularPages }}
+  {{- range $paginator.Pages }}
+  <article class="post-row">
+    <h2 class="post-row__title">
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      {{- if eq .Params.author "hdknr" }}<span class="hdknr-chip">via hdknr</span>{{ end }}
+    </h2>
+    {{- with .Description }}
+    <p class="post-row__excerpt">{{ . }}</p>
+    {{- end }}
+    <div class="post-row__meta">{{- partial "post-meta.html" . -}}</div>
+  </article>
+  {{- end }}
+
+  {{- if gt $paginator.TotalPages 1 }}
+  <nav class="pagination" aria-label="Pagination">
+    {{- if $paginator.HasPrev }}
+    <a class="pagination__prev" href="{{ $paginator.Prev.URL | absURL }}">« 前へ</a>
+    {{- end }}
+    {{- if $paginator.HasNext }}
+    <a class="pagination__next" href="{{ $paginator.Next.URL | absURL }}">次へ »</a>
+    {{- end }}
+  </nav>
+  {{- end }}
+</div>
+{{- end -}}

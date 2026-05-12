@@ -1,7 +1,4 @@
-{{- /* Linked from — reverse lookup of `related_posts` frontmatter.
-       Any post (or wiki page) whose `related_posts` contains the
-       current page's RelPermalink is shown as an incoming link.
-       Backlinks via [[wiki-term]] are a Phase 3 concern. */ -}}
+{{- /* Linked from — reverse lookup of frontmatter `related_posts`. */ -}}
 {{- $self := .RelPermalink }}
 {{- $back := slice }}
 {{- range site.RegularPages }}
@@ -14,8 +11,6 @@
     {{- end }}
   {{- end }}
 {{- end }}
-{{- /* Re-collect Page objects from the matched RelPermalinks so we
-       can render titles and section labels. */ -}}
 {{- $matched := slice }}
 {{- range $back }}
   {{- with site.GetPage . }}
@@ -23,13 +18,13 @@
   {{- end }}
 {{- end }}
 {{- if $matched }}
-<section class="ds-linked-from" aria-label="Linked from">
-  <h2 class="ds-linked-from__label">Linked from</h2>
-  <ul class="ds-linked-from__list">
+<section class="hyper-block" aria-label="Linked from">
+  <h2 class="hyper-block__label">Linked from</h2>
+  <ul class="hyper-block__list">
     {{- range $matched }}
     <li>
       <a href="{{ .Permalink }}">{{ .Title }}</a>
-      <span class="ds-linked-from__meta">{{ .Section }}</span>
+      <span class="hyper-block__meta">{{ .Section }}</span>
     </li>
     {{- end }}
   </ul>
