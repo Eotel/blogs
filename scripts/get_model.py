@@ -138,7 +138,60 @@ def _claude_config_paths() -> list[Path]:
     return unique
 
 
+def _claude_transcript_paths() -> list[Path]:
+    """Locate the JSONL transcript for the current Claude Code session.
+
+    Claude Code stores per-session transcripts under
+    ``~/.claude/projects/<encoded-cwd>/<session-id>.jsonl``. The encoded cwd is
+    the absolute project path with ``/`` and ``.`` replaced by ``-``. Since the
+    session id is unique, glob across all project dirs as a fallback for when
+    the cwd encoding differs (e.g. running inside a worktree).
+    """
+    session_id = os.environ.get("CLAUDE_CODE_SESSION_ID")
+    if not session_id:
+        return []
+    projects_root = Path.home() / ".claude" / "projects"
+    if not projects_root.is_dir():
+        return []
+    candidates: list[Path] = []
+    project_dir = os.environ.get("CLAUDE_PROJECT_DIR") or os.getcwd()
+    encoded = project_dir.replace("/", "-").replace(".", "-")
+    primary = projects_root / encoded / f"{session_id}.jsonl"
+    if primary.exists():
+        candidates.append(primary)
+    for path in projects_root.glob(f"*/{session_id}.jsonl"):
+        if path not in candidates:
+            candidates.append(path)
+    return candidates
+
+
+def from_claude_transcript() -> str | None:
+    """Read the latest ``message.model`` value from the session transcript."""
+    for path in _claude_transcript_paths():
+        latest: str | None = None
+        try:
+            with path.open("r", encoding="utf-8") as f:
+                for line in f:
+                    try:
+                        entry = json.loads(line)
+                    except json.JSONDecodeError:
+                        continue
+                    message = entry.get("message")
+                    if isinstance(message, dict):
+                        model = message.get("model")
+                        if isinstance(model, str) and model:
+                            latest = model
+        except OSError:
+            continue
+        if latest:
+            return latest
+    return None
+
+
 def from_claude_config() -> str | None:
+    transcript_model = from_claude_transcript()
+    if transcript_model:
+        return transcript_model
     for config_path in _claude_config_paths():
         if not config_path.exists():
             continue
