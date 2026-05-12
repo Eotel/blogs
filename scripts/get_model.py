@@ -17,9 +17,13 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import subprocess
 from pathlib import Path
-from typing import Any, Callable
+from typing import Any, Callable, Iterator
+
+
+_SESSION_ID_RE = re.compile(r"^[A-Za-z0-9_-]+$")
 
 
 def _import_tomllib() -> Any:
@@ -115,6 +119,19 @@ def from_kimi_config() -> str | None:
     return data.get("default_model") or None
 
 
+def _claude_root() -> Path:
+    """Claude Code's data root, honouring ``CLAUDE_CONFIG_DIR`` if set.
+
+    Documented at https://docs.claude.com/en/docs/claude-code/settings — every
+    file under ``~/.claude`` (settings, projects, transcripts) relocates when
+    this variable is set, e.g. in CI or multi-profile setups.
+    """
+    override = os.environ.get("CLAUDE_CONFIG_DIR")
+    if override:
+        return Path(override)
+    return Path.home() / ".claude"
+
+
 def _claude_config_paths() -> list[Path]:
     """Project-local .claude/settings.json takes precedence over user-level."""
     candidates: list[Path] = []
@@ -122,7 +139,7 @@ def _claude_config_paths() -> list[Path]:
     if project_dir:
         candidates.append(Path(project_dir) / ".claude" / "settings.json")
     candidates.append(Path.cwd() / ".claude" / "settings.json")
-    candidates.append(Path.home() / ".claude" / "settings.json")
+    candidates.append(_claude_root() / "settings.json")
     candidates.append(Path.home() / ".config" / "claude" / "settings.json")
 
     seen: set[Path] = set()
@@ -138,7 +155,98 @@ def _claude_config_paths() -> list[Path]:
     return unique
 
 
+def _encode_project_dir(project_dir: str) -> str:
+    """Replicate Claude Code's transcript dir encoding for a project path.
+
+    Claude Code encodes the absolute project path by swapping path separators
+    and ``.`` characters with ``-``. Normalize to an absolute, resolved path
+    first so relative env vars, symlinks, and trailing slashes produce the
+    same encoding as the live Claude Code process.
+    """
+    absolute = os.path.abspath(project_dir)
+    try:
+        absolute = os.path.realpath(absolute)
+    except OSError:
+        pass
+    # Normalize both POSIX and Windows separators before the encoding step.
+    return absolute.replace("\\", "/").replace("/", "-").replace(".", "-")
+
+
+def _claude_transcript_paths() -> list[Path]:
+    """Locate the JSONL transcript for the current Claude Code session.
+
+    Claude Code stores per-session transcripts under
+    ``<claude-root>/projects/<encoded-cwd>/<session-id>.jsonl``. Since session
+    ids are unique, glob across all project dirs as a fallback for when the
+    encoded cwd differs (e.g. running inside a worktree).
+    """
+    session_id = os.environ.get("CLAUDE_CODE_SESSION_ID")
+    if not session_id or not _SESSION_ID_RE.match(session_id):
+        # Reject session ids that could escape the projects dir or
+        # introduce glob wildcards; downstream uses string interpolation.
+        return []
+    projects_root = _claude_root() / "projects"
+    if not projects_root.is_dir():
+        return []
+    candidates: list[Path] = []
+    encoded = _encode_project_dir(os.environ.get("CLAUDE_PROJECT_DIR") or os.getcwd())
+    primary = projects_root / encoded / f"{session_id}.jsonl"
+    if primary.exists():
+        candidates.append(primary)
+    for path in projects_root.glob(f"*/{session_id}.jsonl"):
+        if path not in candidates:
+            candidates.append(path)
+    return candidates
+
+
+def _iter_lines_reverse(path: Path, block_size: int = 8192) -> Iterator[str]:
+    """Yield non-empty lines from ``path`` in reverse order.
+
+    Reads the file in fixed-size blocks from the end so we can stop the moment
+    the caller finds what it needs, instead of scanning the full transcript on
+    every invocation.
+    """
+    with path.open("rb") as f:
+        f.seek(0, os.SEEK_END)
+        offset = f.tell()
+        leftover = b""
+        while offset > 0:
+            read = min(block_size, offset)
+            offset -= read
+            f.seek(offset)
+            chunk = f.read(read) + leftover
+            lines = chunk.split(b"\n")
+            leftover = lines[0]
+            for line in reversed(lines[1:]):
+                if line:
+                    yield line.decode("utf-8", errors="replace")
+        if leftover:
+            yield leftover.decode("utf-8", errors="replace")
+
+
+def from_claude_transcript() -> str | None:
+    """Read the latest ``message.model`` value from the session transcript."""
+    for path in _claude_transcript_paths():
+        try:
+            for line in _iter_lines_reverse(path):
+                try:
+                    entry = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                message = entry.get("message")
+                if isinstance(message, dict):
+                    model = message.get("model")
+                    if isinstance(model, str) and model:
+                        return model
+        except OSError:
+            continue
+    return None
+
+
 def from_claude_config() -> str | None:
+    transcript_model = from_claude_transcript()
+    if transcript_model:
+        return transcript_model
     for config_path in _claude_config_paths():
         if not config_path.exists():
             continue
