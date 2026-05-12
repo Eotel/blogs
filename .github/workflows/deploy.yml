@@ -50,8 +50,10 @@ jobs:
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Set up uv (for keyword link injection)
-        # TODO: pin to a verified commit SHA once the maintainers cut a stable release here.
-        uses: astral-sh/setup-uv@v8
+        # v8 から major-version tag 提供が止まり immutable release のみ
+        # (https://github.com/astral-sh/setup-uv/releases/tag/v8.0.0
+        #  "Immutable releases and secure tags")。v8.1.0 = 最新 (2026-04-16)
+        uses: astral-sh/setup-uv@v8.1.0
         with:
           enable-cache: true
       - name: Install Python dependencies
