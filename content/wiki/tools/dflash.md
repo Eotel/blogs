@@ -2,10 +2,11 @@
 title: "DFlash"
 description: "Apple Silicon 向け MLX フレームワークで動作するブロック拡散型投機的デコード実装。ローカル LLM を最大 4.1 倍高速化"
 date: 2026-04-23
-lastmod: 2026-04-23
+lastmod: 2026-05-12
 aliases: ["dflash-mlx", "Block Diffusion Flash Speculative Decoding"]
 related_posts:
   - "/posts/2026/04/2026-04-15-dflash-mlx-apple-silicon-llm/"
+  - "/posts/2026/05/2026-05-12-speculative-tts-acceleration-2026/"
 tags: ["Apple Silicon", "MLX", "ローカルLLM", "推論高速化", "推測デコード"]
 ---
 
@@ -29,7 +30,9 @@ uv run dflash-mlx --max-new-tokens 128
 ## 関連ページ
 
 - [ローカル LLM 比較](/blogs/wiki/concepts/local-llm-comparison/)
+- [投機的 TTS（Speculative TTS）](/blogs/wiki/concepts/speculative-tts/) — 同じ Speculative Decoding を音声合成（AR codec LM）に応用した系統
 
 ## ソース記事
 
 - [MacのローカルLLMが4.1倍速に！Apple Silicon向け新技術「DFlash」](/blogs/posts/2026/04/2026-04-15-dflash-mlx-apple-silicon-llm/) — 2026-04-15
+- [投機的 TTS は本当に効くのか — VADUSA / Llasa+ / SSD で読む 2026 年 TTS 高速化マップ](/blogs/posts/2026/05/2026-05-12-speculative-tts-acceleration-2026/) — 2026-05-12
