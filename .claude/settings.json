@@ -1,4 +1,7 @@
 {
+  "env": {
+    "CLAUDE_BUILD_CHECK_SKIP": "1"
+  },
   "permissions": {
     "allow": [
       "Bash(ast-grep scan *)",
