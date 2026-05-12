@@ -77,6 +77,7 @@ tags: ["TTS", "STT", "音声AI", "Realtime API", "voice-agent"]
 - [OpenAI Realtime API](/blogs/wiki/tools/openai-realtime-api/) — gpt-realtime-2 / Translate / Whisper を含む統合 API
 - [Cartesia](/blogs/wiki/tools/cartesia/) — 低レイテンシ TTS の本命
 - [ElevenLabs](/blogs/wiki/tools/elevenlabs/) — Flash / Eleven v3 / Scribe / Conversational AI
+- [投機的 TTS（Speculative TTS）](/blogs/wiki/concepts/speculative-tts/) — AR codec LM の推論を 1.4〜5× 速くする手法群
 - [AI エージェント](/blogs/wiki/concepts/ai-agent/) — voice agent はその音声 I/O 版
 - [Video Use](/blogs/wiki/tools/video-use/) — ElevenLabs Scribe を使った動画編集ワークフロー
 
