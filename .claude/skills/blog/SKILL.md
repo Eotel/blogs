@@ -217,6 +217,11 @@ tags: ["tag1", "tag2"]
 - 冒頭に概要・導入を書く
 - 実用的な情報を含める（コマンド例、設定例、コードサンプルなど）
 - GitHub Issue からの内容はそのまま活かしつつ、ブログ記事として読みやすく整形する
+- **言説 claim には原文逐語を blockquote で埋め込む** (重要): 「X は Y と言っている」「書籍 *Z* でこう書かれている」と書くときは、要約だけで済ませず、原文の英語または日本語の逐語を blockquote (`>`) で本文に並置する。
+  - 鉤括弧「...」付きスローガンは特に **逐語の存在確認が必須**。逐語が見つからない場合は鉤括弧を外して paraphrase 形式にする
+  - 引用元の **著者 byline** を確認する（martinfowler.com のゲスト記事のように、サイトオーナー≠著者のパターンに注意）
+  - 章節への参照（「Clean Code 第 3 章」など）は **章番号と章タイトル両方** を明示する。複数概念の合成を防ぐ
+  - 詳細は `.claude/agents/claim-source-verifier.md` の「5 failure pattern」を参照
 - **記事末尾に「関連 Wiki」セクションを設ける**（手順 5.5 で見つかった既存 Wiki ページを集約。空なら無くて良い）
 
   ```markdown
@@ -281,7 +286,7 @@ Agent(subagent_type="seo-advisor",             prompt="記事絶対パス: $ARTI
 - 各 agent は記事を Read してレビューするだけで、ファイル編集はしない
 - レビュー対象は `$WORKTREE_DIR` 内のファイル
 
-### JSON verdict スキーマ（fact-check 系 4 agent 共通）
+### JSON verdict スキーマ（fact-check 系 4 agent 共通、claim-source-verifier は拡張あり）
 
 ```json
 {
@@ -291,29 +296,48 @@ Agent(subagent_type="seo-advisor",             prompt="記事絶対パス: $ARTI
   "claims": [
     {
       "line": 42,
+      "claim_type": "factual | discourse | verbatim-quote",
       "claim": "...",
       "verdict": "verified | needs_fix | incorrect | uncertain",
-      "evidence": "URL + 引用",
+      "failure_pattern": "misattribution-author-confusion | citation-mismatch-empty-footnote | scare-quote-without-verbatim | conceptual-conflation | paraphrase-over-extension | null",
+      "evidence": "URL + 逐語引用 + byline 確認結果",
       "suggestion": "needs_fix / incorrect のとき必須"
     }
   ],
-  "summary": {"verified": 0, "needs_fix": 0, "incorrect": 0, "uncertain": 0}
+  "summary": {
+    "verified": 0, "needs_fix": 0, "incorrect": 0, "uncertain": 0,
+    "by_pattern": {
+      "misattribution-author-confusion": 0,
+      "citation-mismatch-empty-footnote": 0,
+      "scare-quote-without-verbatim": 0,
+      "conceptual-conflation": 0,
+      "paraphrase-over-extension": 0
+    }
+  }
 }
 ```
+
+`claim_type` の意味:
+- `factual` — ツール存在・機能仕様・組織所属など客観的事実
+- `discourse` — 「誰が何を言ったか / どこに書いたか」の言説主張
+- `verbatim-quote` — 鉤括弧で囲まれた逐語引用主張
+
+言説主張 (`discourse` / `verbatim-quote`) は事実主張より厳しく判定される。詳細は `.claude/agents/claim-source-verifier.md` の「5 failure pattern」を参照。
 
 ### verdict の集計と反映（skill 本体側で実施）
 
 1. fact-check 系 4 agent の JSON verdict をマージし、`verdict` ごとに件数をユーザーへ簡潔に報告する
-2. verdict ごとの処理方針:
+2. **claim-source-verifier の `by_pattern` 集計も別途報告する**。`misattribution-author-confusion` や `citation-mismatch-empty-footnote` が 1 件でもあれば、それは構造的に最重要なので冒頭で警告する
+3. verdict ごとの処理方針:
    - **verified**: ノーアクション
-   - **needs_fix**: `Edit` で記事を即座に修正（`suggestion` を反映）
+   - **needs_fix**: `Edit` で記事を即座に修正（`suggestion` を反映）。言説 claim の場合は **原文逐語を blockquote で本文に追加する** ことを優先
    - **incorrect**: 即座に削除 or `Edit` で修正。ソース無しの独自主張は削除を優先
    - **uncertain**: 件数のみユーザーに報告し、判断を仰ぐ
-3. `tech-writer` / `seo-advisor` のレビュー結果は以下の基準でフィルタリング:
+4. `tech-writer` / `seo-advisor` のレビュー結果は以下の基準でフィルタリング:
    - **即座に反映**: 誤字脱字、表記揺れ、明らかな構成の問題、タグの過不足
    - **ユーザーに確認**: タイトル変更、カテゴリ変更、大幅な構成変更
    - **スキップ**: 好みの問題（文体の微調整など）、既存記事への内部リンク追加（別 PR で対応）
-4. 修正後、`git diff` で変更を確認してからコミットへ進む
+5. 修正後、`git diff` で変更を確認してからコミットへ進む
 
 ### 補足
 
