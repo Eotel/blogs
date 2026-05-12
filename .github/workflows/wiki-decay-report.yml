@@ -1,0 +1,69 @@
+name: wiki-decay-report
+
+on:
+  schedule:
+    # 毎週火曜 05:00 JST = 月曜 20:00 UTC
+    # (auto-wiki-ingest.yml の土曜実行とずらしてある)
+    - cron: '0 20 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5  # v4
+
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065  # v5
+        with:
+          python-version: '3.x'
+
+      - name: Generate decay report
+        id: report
+        run: |
+          mkdir -p .claude/temp
+          python3 .claude/skills/wiki-decay/scripts/wiki_decay.py --top 10 > .claude/temp/decay-report.md
+          python3 .claude/skills/wiki-decay/scripts/wiki_decay.py --json > .claude/temp/decay-report.json
+          STALE=$(python3 -c 'import json; data=json.load(open(".claude/temp/decay-report.json")); print(sum(1 for e in data["entries"] if e["status"]=="stale"))')
+          WARMING=$(python3 -c 'import json; data=json.load(open(".claude/temp/decay-report.json")); print(sum(1 for e in data["entries"] if e["status"]=="warming"))')
+          {
+            echo "stale=${STALE}"
+            echo "warming=${WARMING}"
+          } >> "$GITHUB_OUTPUT"
+          echo "stale=${STALE} warming=${WARMING}"
+
+      - name: Skip if nothing decayed
+        if: steps.report.outputs.stale == '0' && steps.report.outputs.warming == '0'
+        run: |
+          echo "Wiki is fresh — stale 0 / warming 0. Skipping Issue creation."
+
+      - name: Close stale prior wiki-decay Issues
+        if: steps.report.outputs.stale != '0' || steps.report.outputs.warming != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Auto-close older open wiki-decay Issues so the weekly list stays
+          # to one open Issue per cadence. Operators commenting on a prior
+          # Issue can re-open it manually if context is still relevant.
+          gh issue list --label wiki-decay --state open --json number --jq '.[].number' | while read -r n; do
+            gh issue close "$n" --comment "superseded by next weekly wiki-decay report"
+          done
+
+      - name: Open Issue
+        if: steps.report.outputs.stale != '0' || steps.report.outputs.warming != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          STALE: ${{ steps.report.outputs.stale }}
+          WARMING: ${{ steps.report.outputs.warming }}
+        run: |
+          WEEK=$(date -u +%G-W%V)
+          TITLE="Wiki decay report (${WEEK}) — stale ${STALE} / warming ${WARMING}"
+          gh issue create \
+            --label wiki-decay \
+            --title "${TITLE}" \
+            --body-file .claude/temp/decay-report.md

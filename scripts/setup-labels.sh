@@ -18,4 +18,10 @@ gh label create wip \
   --color "fbca04" \
   --force
 
+gh label create wiki-decay \
+  --repo "$REPO" \
+  --description "週次 cron が起票する Wiki 老朽化レポート (wiki-decay-report.yml)" \
+  --color "c5def5" \
+  --force
+
 echo "✅ done"
