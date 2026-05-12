@@ -1,4 +1,8 @@
 {{- /* Extra <head> content injected by the project (PaperMod hook).
-       Loads CSS for auto-injected keyword links and the AI model meta chip. */ -}}
+       Loads CSS for auto-injected keyword links, the AI model meta chip,
+       and the Pagefind Component UI used for site-wide full-text search. */ -}}
 <link rel="stylesheet" href="{{ "css/keyword-links.css" | relURL }}">
 <link rel="stylesheet" href="{{ "css/post-meta-ai.css" | relURL }}">
+<link rel="stylesheet" href="{{ "css/pagefind-shortcut.css" | relURL }}">
+<link rel="stylesheet" href="{{ "pagefind/pagefind-component-ui.css" | relURL }}">
+<script src="{{ "pagefind/pagefind-component-ui.js" | relURL }}" type="module"></script>

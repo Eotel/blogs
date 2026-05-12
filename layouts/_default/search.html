@@ -1,0 +1,31 @@
+{{- define "main" }}
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">{{ .Title }}</h1>
+    {{- if .Description }}
+    <div class="post-description">{{ .Description }}</div>
+    {{- end }}
+  </header>
+
+  {{- /* Pagefind assets and <pagefind-config> are loaded once in
+         layouts/partials/extend_head.html and extend_footer.html. */ -}}
+
+  <pagefind-input placeholder="記事を検索…" autofocus></pagefind-input>
+  <pagefind-summary></pagefind-summary>
+  <pagefind-results show-sub-results>
+    {{- /* The Pagefind result template uses Mustache-like {{ ... }} syntax.
+           Emit it via a raw Hugo string so Hugo does not parse the braces. */ -}}
+    {{ `<script type="text/pagefind-template">
+      <li class="search-result">
+        <a class="search-result__link" href="{{ url | safeUrl }}">
+          <h3 class="search-result__title">{{ meta.title }}</h3>
+          {{# meta.date }}<time class="search-result__date">{{ meta.date }}</time>{{/ meta.date }}
+          <p class="search-result__excerpt">{{+ excerpt +}}</p>
+        </a>
+      </li>
+    </script>` | safeHTML }}
+  </pagefind-results>
+</article>
+
+{{- end }}
