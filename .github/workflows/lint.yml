@@ -28,7 +28,9 @@ jobs:
           sudo dpkg -i "${{ runner.temp }}/${DEB}"
 
       - name: Set up uv (matches devenv / deploy.yml)
-        uses: astral-sh/setup-uv@v8
+        # v8 から major-version tag 提供が止まり immutable release のみ。
+        # v8.1.0 = 最新 (2026-04-16)
+        uses: astral-sh/setup-uv@v8.1.0
         with:
           enable-cache: true
 
