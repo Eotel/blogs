@@ -232,12 +232,14 @@ tags: ["tag1", "tag2"]
 
 1. drawio ファイルを作成する: `assets/images/<slug>-<diagram-name>.drawio`
    - mxgraph XML を直接 Write ツールで書ける。既存ファイル（例: `assets/images/harness-eval-cycle.drawio`、`assets/images/design-md-three-layers.drawio`）を雛形にすると効率が良い
-2. PNG にエクスポートする（**Docker 経由を推奨**、`--scale 2` で高解像度）:
-   ```bash
-   ./scripts/drawio-export.sh assets/images/<name>.drawio -f png --scale 2 -o assets/images/
-   ```
-   - 内部で `rlespinasse/drawio-desktop-headless` を起動する。Docker Desktop / orbstack / colima のいずれかが稼働していれば良く、GUI 版 draw.io のローカルインストールは不要
-   - GUI 版 draw.io がローカルにある場合のみ、`/Applications/draw.io.app/Contents/MacOS/draw.io --export --format png --scale 2 --output assets/images/<name>.png assets/images/<name>.drawio` でも可
+2. PNG にエクスポートする（環境ごとに使い分け、`--scale 2` で高解像度）:
+   - **GUI 版 draw.io がローカルにある macOS 開発機**: `.claude/skills/drawio/` の skill が `/Applications/draw.io.app/...` を自動検出してエクスポートする
+   - **CI / Codex cloud / headless サンドボックス / GUI 未インストール**: **`./scripts/drawio-export.sh` (Docker) を使う**
+     ```bash
+     ./scripts/drawio-export.sh assets/images/<name>.drawio -f png --scale 2 -o assets/images/
+     ```
+   - skill が「CLI not found」を返した場合は **諦めず Docker スクリプトに自動フォールバック** する（GUI 未インストール環境のシグナルなので）
+   - 内部で `rlespinasse/drawio-desktop-headless` を起動する。Docker Desktop / orbstack / colima のいずれかが稼働していれば良い
 3. 記事内で絶対パスで参照する:
    ```markdown
    ![図の内容を自然文で記述した alt テキスト](/blogs/images/<name>.png)
