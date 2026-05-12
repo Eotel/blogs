@@ -1,0 +1,329 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-12T00:00:00Z",
+  "title": "Design System: Eotel's Notebook",
+  "extensions": {
+    "colorMeta": {
+      "iron-sienna": {
+        "role": "primary",
+        "displayName": "Iron Sienna",
+        "canonical": "oklch(48% 0.13 35)",
+        "tonalRamp": ["#3d1a0e", "#5a2814", "#7a3520", "#a64a2c", "#c46a4a", "#d99776", "#e8bca6", "#f3ddcf"]
+      },
+      "iron-sienna-soft": {
+        "role": "primary",
+        "displayName": "Iron Sienna Soft",
+        "canonical": "oklch(58% 0.11 35)",
+        "tonalRamp": ["#4a2110", "#6a3018", "#8a3f22", "#a85332", "#c46a4a", "#d99474", "#e7baa3", "#f2dccf"]
+      },
+      "iron-sienna-deep": {
+        "role": "primary",
+        "displayName": "Iron Sienna Deep",
+        "canonical": "oklch(38% 0.13 35)",
+        "tonalRamp": ["#2b1208", "#451a0e", "#5d2414", "#7a3520", "#9c4a30", "#bd6c4d", "#d49a7d", "#ecc8b5"]
+      },
+      "iron-sienna-dark": {
+        "role": "primary",
+        "displayName": "Iron Sienna (Dark Mode)",
+        "canonical": "oklch(65% 0.13 35)",
+        "tonalRamp": ["#3d1a0e", "#5a2814", "#7a3520", "#a04830", "#c46a4a", "#d77a55", "#e6a484", "#f0c7af"]
+      },
+      "parchment": {
+        "role": "neutral",
+        "displayName": "Parchment",
+        "canonical": "oklch(96% 0.008 80)",
+        "tonalRamp": ["#2e2a23", "#4e4940", "#6f695e", "#928c80", "#b8b2a4", "#dad3c4", "#efeae1", "#f6f3ee"]
+      },
+      "parchment-warm": {
+        "role": "neutral",
+        "displayName": "Parchment Warm",
+        "canonical": "oklch(94% 0.012 80)",
+        "tonalRamp": ["#2b271f", "#48433a", "#695f53", "#8c8275", "#b3a999", "#d2c8b6", "#efeae1", "#f4efe6"]
+      },
+      "parchment-edge": {
+        "role": "neutral",
+        "displayName": "Parchment Edge",
+        "canonical": "oklch(89% 0.016 80)",
+        "tonalRamp": ["#27231b", "#403a30", "#5d5648", "#7e7666", "#a39a87", "#c2b8a3", "#dbd2c1", "#e2dccf"]
+      },
+      "ink-graphite": {
+        "role": "neutral",
+        "displayName": "Ink Graphite",
+        "canonical": "oklch(22% 0.01 60)",
+        "tonalRamp": ["#0e0d0c", "#171513", "#221f1c", "#34302c", "#4d4842", "#736d65", "#a8a299", "#d4cdc1"]
+      },
+      "ink-graphite-soft": {
+        "role": "neutral",
+        "displayName": "Ink Graphite Soft",
+        "canonical": "oklch(30% 0.01 60)",
+        "tonalRamp": ["#181614", "#26221f", "#322d29", "#3d3934", "#544f48", "#7a7368", "#a9a299", "#d3cbbf"]
+      },
+      "ink-secondary": {
+        "role": "neutral",
+        "displayName": "Ink Secondary",
+        "canonical": "oklch(48% 0.008 60)",
+        "tonalRamp": ["#1f1d1a", "#2e2b27", "#3f3b36", "#564f48", "#6b6660", "#888278", "#a8a299", "#c5beb1"]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Ink Muted",
+        "canonical": "oklch(68% 0.008 60)",
+        "tonalRamp": ["#262420", "#3a3733", "#544f48", "#6e685f", "#8a847a", "#a8a29a", "#c2bcb1", "#dbd5c8"]
+      },
+      "ink-divider": {
+        "role": "neutral",
+        "displayName": "Ink Divider",
+        "canonical": "oklch(85% 0.012 80)",
+        "tonalRamp": ["#262420", "#3d3a34", "#5a5549", "#7c7565", "#a09682", "#bdb29c", "#d0c5b1", "#d8d2c6"]
+      },
+      "code-slab-dark": {
+        "role": "neutral",
+        "displayName": "Code Slab Dark",
+        "canonical": "oklch(18% 0.01 60)",
+        "tonalRamp": ["#0c0b0a", "#161413", "#1c1a18", "#2a2724", "#403c37", "#665f55", "#9a9285", "#ccc4b6"]
+      },
+      "code-inline-bg": {
+        "role": "neutral",
+        "displayName": "Code Inline Bg",
+        "canonical": "oklch(91% 0.014 80)",
+        "tonalRamp": ["#2a2620", "#423d34", "#5f594c", "#827a68", "#a89e87", "#c5b89e", "#dccfb0", "#ece6d8"]
+      },
+      "parchment-dark": {
+        "role": "neutral",
+        "displayName": "Parchment Dark",
+        "canonical": "oklch(20% 0.01 60)",
+        "tonalRamp": ["#0c0b0a", "#16140f", "#1c1a16", "#211f1c", "#2c2925", "#403c37", "#665f55", "#a8a094"]
+      },
+      "parchment-dark-card": {
+        "role": "neutral",
+        "displayName": "Parchment Dark Card",
+        "canonical": "oklch(24% 0.01 60)",
+        "tonalRamp": ["#0e0d0c", "#181614", "#221f1c", "#2c2925", "#383530", "#4f4a43", "#766f65", "#aba294"]
+      },
+      "parchment-dark-edge": {
+        "role": "neutral",
+        "displayName": "Parchment Dark Edge",
+        "canonical": "oklch(28% 0.014 60)",
+        "tonalRamp": ["#171513", "#23211c", "#312e29", "#3a352f", "#4a443c", "#615a4f", "#867d6f", "#b5ac9d"]
+      },
+      "ink-graphite-dark": {
+        "role": "neutral",
+        "displayName": "Ink Graphite (Dark)",
+        "canonical": "oklch(91% 0.014 80)",
+        "tonalRamp": ["#2a2620", "#423d34", "#5f594c", "#827a68", "#a89e87", "#c5b89e", "#dccfb0", "#ece6d8"]
+      },
+      "ink-secondary-dark": {
+        "role": "neutral",
+        "displayName": "Ink Secondary (Dark)",
+        "canonical": "oklch(68% 0.008 60)",
+        "tonalRamp": ["#262420", "#3a3733", "#544f48", "#6e685f", "#8a847a", "#a8a29a", "#c2bcb1", "#dbd5c8"]
+      },
+      "ink-muted-dark": {
+        "role": "neutral",
+        "displayName": "Ink Muted (Dark)",
+        "canonical": "oklch(48% 0.008 60)",
+        "tonalRamp": ["#1f1d1a", "#2e2b27", "#3f3b36", "#564f48", "#6b6660", "#888278", "#a8a299", "#c5beb1"]
+      },
+      "ink-divider-dark": {
+        "role": "neutral",
+        "displayName": "Ink Divider (Dark)",
+        "canonical": "oklch(28% 0.014 60)",
+        "tonalRamp": ["#171513", "#23211c", "#312e29", "#3a352f", "#4a443c", "#615a4f", "#867d6f", "#b5ac9d"]
+      },
+      "code-slab-dark-mode": {
+        "role": "neutral",
+        "displayName": "Code Slab (Dark Mode)",
+        "canonical": "oklch(24% 0.01 60)",
+        "tonalRamp": ["#0e0d0c", "#181614", "#221f1c", "#2c2925", "#383530", "#4f4a43", "#766f65", "#aba294"]
+      },
+      "code-inline-bg-dark": {
+        "role": "neutral",
+        "displayName": "Code Inline Bg (Dark)",
+        "canonical": "oklch(28% 0.014 60)",
+        "tonalRamp": ["#171513", "#23211c", "#312e29", "#3a352f", "#4a443c", "#615a4f", "#867d6f", "#b5ac9d"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Masthead site title. Newsreader italic 400. One per page." },
+      "headline": { "displayName": "Headline (h2)", "purpose": "Chapter break inside long posts; list page h1 (category name / 'Recent Notes')." },
+      "title": { "displayName": "Title (h3)", "purpose": "Subsection inside posts; hero post title on home; non-hero post row title." },
+      "body": { "displayName": "Body", "purpose": "Default reading copy. Constrained to 680px (~38-42 Japanese chars per line)." },
+      "ui": { "displayName": "UI", "purpose": "Nav, header links, aside, index strip entries. System sans." },
+      "label": { "displayName": "Label", "purpose": "Post meta, tag chips, figcaption, hdknr chip. System sans 0.8125rem." },
+      "code": { "displayName": "Code", "purpose": "Inline <code> and code blocks. ui-monospace stack." }
+    },
+    "shadows": [
+      { "name": "focus-ring", "value": "0 0 0 2px var(--iron-sienna)", "purpose": "Focus state for keyboard navigation, buttons, and form fields. Replaces drop shadows entirely." }
+    ],
+    "motion": [
+      { "name": "ink-fade", "value": "color 150ms cubic-bezier(0.22, 1, 0.36, 1), text-decoration-color 150ms cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Link / keyword underline color transition. ease-out-quart curve. Only motion in the system besides pagination focus." }
+    ],
+    "breakpoints": [
+      { "name": "narrow-mobile", "value": "340px" },
+      { "name": "mobile-tablet", "value": "768px" },
+      { "name": "small-desktop", "value": "900px" },
+      { "name": "wide", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Masthead",
+      "kind": "custom",
+      "refersTo": "masthead-title",
+      "description": "Site title (Newsreader italic) + 1-2 line subtitle (sans) + Iron Sienna rule 2px x 48px. The signature opening of every page.",
+      "html": "<header class=\"ds-masthead\"><h1 class=\"ds-masthead-title\">Eotel's Notebook</h1><p class=\"ds-masthead-subtitle\">Posts, notes, and wiki. A working notebook by Eotel.</p><div class=\"ds-masthead-rule\" role=\"presentation\"></div></header>",
+      "css": ".ds-masthead { padding: 48px 0 36px; font-family: 'Newsreader', ui-serif, 'Iowan Old Style', Georgia, 'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif CJK JP', serif; } .ds-masthead-title { margin: 0; font-style: italic; font-weight: 400; font-size: clamp(2rem, 4.5vw, 3rem); line-height: 1.15; letter-spacing: -0.01em; color: #221f1c; } .ds-masthead-subtitle { margin: 16px 0 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Yu Gothic UI', Roboto, sans-serif; font-size: 0.9375rem; line-height: 1.5; color: #6b6660; max-width: 36rem; } .ds-masthead-rule { margin-top: 20px; height: 2px; width: 48px; background: #a64a2c; }"
+    },
+    {
+      "name": "Post Row (Hero)",
+      "kind": "custom",
+      "refersTo": "post-row-hero",
+      "description": "Home page first entry. Larger title (Headline), 2-line description, meta line.",
+      "html": "<article class=\"ds-post-row ds-post-row-hero\"><h2 class=\"ds-post-row-title-hero\"><a href=\"#\">RAG 推奨アーキテクチャの整理</a></h2><p class=\"ds-post-row-description\">大規模言語モデルに事実情報を持たせる方法として一般化した RAG の、2026 年時点での実用上の選択肢を整理する。</p><div class=\"ds-post-row-meta\"><span>2026-05-09</span><span aria-hidden=\"true\">·</span><a href=\"#\">AI/LLM</a><span aria-hidden=\"true\">·</span><a href=\"#\">rag</a><a href=\"#\">embedding</a></div></article>",
+      "css": ".ds-post-row-hero { padding: 0 0 36px 0; border-bottom: 1px solid #d8d2c6; font-family: 'Newsreader', ui-serif, 'Iowan Old Style', Georgia, 'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif CJK JP', serif; } .ds-post-row-title-hero { margin: 0; font-weight: 500; font-size: clamp(1.5rem, 2.5vw, 2rem); line-height: 1.25; letter-spacing: -0.005em; } .ds-post-row-title-hero a { color: #221f1c; text-decoration: none; transition: color 150ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-post-row-title-hero a:hover, .ds-post-row-title-hero a:focus-visible { color: #7a3520; } .ds-post-row-description { margin: 12px 0 0; font-size: 1.0625rem; line-height: 1.7; color: #3d3934; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; } .ds-post-row-meta { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Yu Gothic UI', Roboto, sans-serif; font-size: 0.8125rem; line-height: 1.5; letter-spacing: 0.01em; color: #6b6660; } .ds-post-row-meta a { color: inherit; text-decoration: none; } .ds-post-row-meta a:hover, .ds-post-row-meta a:focus-visible { color: #a64a2c; text-decoration: underline; }"
+    },
+    {
+      "name": "Post Row (Default)",
+      "kind": "custom",
+      "refersTo": "post-row",
+      "description": "Dense row replacement for the legacy card. Title + meta only. Replaces the entire card grid pattern.",
+      "html": "<article class=\"ds-post-row\"><h3 class=\"ds-post-row-title\"><a href=\"#\">Saga パターンと分散トランザクションの代替設計</a></h3><div class=\"ds-post-row-meta\"><span>2026-04-22</span><span aria-hidden=\"true\">·</span><a href=\"#\">クラウド/インフラ</a><span aria-hidden=\"true\">·</span><a href=\"#\">saga</a><a href=\"#\" class=\"ds-source-mark\" aria-label=\"外部リンク\">↗</a></div></article>",
+      "css": ".ds-post-row { padding: 0 0 28px 0; border-bottom: 1px solid #d8d2c6; font-family: 'Newsreader', ui-serif, 'Iowan Old Style', Georgia, 'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif CJK JP', serif; } .ds-post-row + .ds-post-row { padding-top: 28px; } .ds-post-row-title { margin: 0; font-weight: 500; font-size: 1.375rem; line-height: 1.3; } .ds-post-row-title a { color: #221f1c; text-decoration: none; transition: color 150ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-post-row-title a:hover, .ds-post-row-title a:focus-visible { color: #7a3520; } .ds-post-row-meta { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Yu Gothic UI', Roboto, sans-serif; font-size: 0.8125rem; line-height: 1.5; letter-spacing: 0.01em; color: #6b6660; } .ds-post-row-meta a { color: inherit; text-decoration: none; } .ds-post-row-meta a:hover, .ds-post-row-meta a:focus-visible { color: #a64a2c; text-decoration: underline; } .ds-source-mark { color: #a64a2c !important; }"
+    },
+    {
+      "name": "Index Strip",
+      "kind": "custom",
+      "refersTo": "index-strip",
+      "description": "Wiki index shown on homepage right rail (>=768px) or below post list (<768px). Three sections: Concepts, Tools, Guides. Each entry is a dotted-underlined Iron Sienna link.",
+      "html": "<aside class=\"ds-index-strip\"><section><h4 class=\"ds-index-strip-section\">Concepts</h4><ul><li><a href=\"#\">RAG</a></li><li><a href=\"#\">Saga</a></li><li><a href=\"#\">DESIGN.md</a></li><li><a href=\"#\">Hypertext</a></li></ul></section><section><h4 class=\"ds-index-strip-section\">Tools</h4><ul><li><a href=\"#\">Claude Code</a></li><li><a href=\"#\">Codex CLI</a></li><li><a href=\"#\">Hugo</a></li></ul></section><section><h4 class=\"ds-index-strip-section\">Guides</h4><ul><li><a href=\"#\">Wiki ingest 運用</a></li><li><a href=\"#\">Gist 取り込み</a></li></ul></section><p class=\"ds-index-strip-all\"><a href=\"#\">→ /wiki/ で全件</a></p></aside>",
+      "css": ".ds-index-strip { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Yu Gothic UI', Roboto, sans-serif; color: #221f1c; } .ds-index-strip section + section { margin-top: 24px; } .ds-index-strip-section { margin: 0 0 10px; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6660; } .ds-index-strip ul { list-style: none; margin: 0; padding: 0; } .ds-index-strip li { margin: 6px 0; font-size: 0.9375rem; line-height: 1.5; } .ds-index-strip a { color: #221f1c; text-decoration: underline dotted; text-decoration-color: #c46a4a; text-underline-offset: 3px; transition: color 150ms cubic-bezier(0.22, 1, 0.36, 1), text-decoration-color 150ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-index-strip a:hover, .ds-index-strip a:focus-visible { color: #7a3520; text-decoration-style: solid; text-decoration-color: #7a3520; } .ds-index-strip-all { margin: 20px 0 0; font-size: 0.8125rem; } .ds-index-strip-all a { color: #a64a2c; text-decoration: none; } .ds-index-strip-all a:hover, .ds-index-strip-all a:focus-visible { color: #7a3520; text-decoration: underline; }"
+    },
+    {
+      "name": "Reading by Topic",
+      "kind": "custom",
+      "refersTo": "tag-flow-entry",
+      "description": "Typographic cloud of categories and popular tags. Font-size scales with entry weight. No pills, no borders.",
+      "html": "<section class=\"ds-reading-by-topic\"><h3 class=\"ds-reading-by-topic-header\">Reading by topic</h3><div class=\"ds-tag-flow\"><a href=\"#\" class=\"ds-tag-flow-entry ds-tag-flow-entry-lg\">AI/LLM</a><a href=\"#\" class=\"ds-tag-flow-entry ds-tag-flow-entry-md\">セキュリティ</a><a href=\"#\" class=\"ds-tag-flow-entry ds-tag-flow-entry-lg\">クラウド/インフラ</a><a href=\"#\" class=\"ds-tag-flow-entry ds-tag-flow-entry-sm\">モバイル</a><a href=\"#\" class=\"ds-tag-flow-entry ds-tag-flow-entry-md\">rag</a><a href=\"#\" class=\"ds-tag-flow-entry ds-tag-flow-entry-sm\">embedding</a><a href=\"#\" class=\"ds-tag-flow-entry ds-tag-flow-entry-md\">hugo</a><a href=\"#\" class=\"ds-tag-flow-entry ds-tag-flow-entry-sm\">design-md</a></div></section>",
+      "css": ".ds-reading-by-topic { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Yu Gothic UI', Roboto, sans-serif; padding: 32px 0; } .ds-reading-by-topic-header { margin: 0 0 16px; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6660; } .ds-tag-flow { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: baseline; line-height: 1.6; } .ds-tag-flow-entry { color: #6b6660; text-decoration: none; transition: color 150ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-tag-flow-entry:hover, .ds-tag-flow-entry:focus-visible { color: #a64a2c; } .ds-tag-flow-entry-lg { font-size: 1.25rem; } .ds-tag-flow-entry-md { font-size: 1rem; } .ds-tag-flow-entry-sm { font-size: 0.875rem; }"
+    },
+    {
+      "name": "Pagination Button (Outline)",
+      "kind": "button",
+      "refersTo": "pagination-button",
+      "description": "Ink outline pill replacing the legacy black solid-fill pill. Iron Sienna text + transparent background.",
+      "html": "<a class=\"ds-pagination-btn\" href=\"#\">Older →</a>",
+      "css": ".ds-pagination-btn { display: inline-block; color: #a64a2c; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Yu Gothic UI', Roboto, sans-serif; font-size: 0.9375rem; padding: 10px 20px; background: transparent; border-radius: 999px; text-decoration: none; transition: color 150ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-pagination-btn:hover, .ds-pagination-btn:focus-visible { color: #7a3520; text-decoration: underline; } .ds-pagination-btn:focus-visible { outline: 2px solid #a64a2c; outline-offset: 2px; }"
+    },
+    {
+      "name": "Code Block",
+      "kind": "custom",
+      "refersTo": "code-block",
+      "description": "Always-dark slab on warm parchment. The single heavy face in the entire system.",
+      "html": "<div class=\"ds-highlight\"><pre class=\"ds-pre\"><code>def call_llm(prompt: str) -&gt; str:\n    return client.complete(prompt)</code></pre><button class=\"ds-copy\" type=\"button\">copy</button></div>",
+      "css": ".ds-highlight { position: relative; margin: 20px 0; background: #1c1a18; border-radius: 4px; direction: ltr; } .ds-pre { margin: 0; padding: 14px 16px; color: #e5dfd0; font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', monospace; font-size: 0.875rem; line-height: 1.55; overflow-x: auto; } .ds-pre code { display: block; } .ds-copy { display: none; position: absolute; top: 6px; right: 6px; color: rgba(236, 230, 216, 0.8); background: rgba(58, 53, 47, 0.85); border: 0; border-radius: 3px; padding: 2px 7px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 0.75rem; cursor: pointer; } .ds-highlight:hover .ds-copy, .ds-highlight:focus-within .ds-copy { display: block; }"
+    },
+    {
+      "name": "Inline Code",
+      "kind": "custom",
+      "refersTo": "code-inline",
+      "description": "Sharp-cornered (2px) warm-tinted inline code marker. Contrasts with the 4px block radius.",
+      "html": "<p class=\"ds-prose-line\">関数 <code class=\"ds-code\">call_llm()</code> は同期呼び出しを行う。</p>",
+      "css": ".ds-prose-line { font-family: 'Newsreader', ui-serif, 'Iowan Old Style', Georgia, 'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif CJK JP', serif; font-size: 1.0625rem; line-height: 1.7; color: #221f1c; } .ds-code { padding: 2px 6px; font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', monospace; font-size: 0.86em; line-height: 1.55; background: #ece6d8; border-radius: 2px; color: #221f1c; }"
+    },
+    {
+      "name": "Blockquote",
+      "kind": "custom",
+      "refersTo": "blockquote",
+      "description": "Printed-page quotation with 2px Iron Sienna Soft inline-start mark. Italic body. Reserved for semantic quotation only.",
+      "html": "<blockquote class=\"ds-quote\">本文ファースト、シェルは控えめ。リンクが背骨。</blockquote>",
+      "css": ".ds-quote { margin: 24px 0; padding: 0 18px; border-inline-start: 2px solid #c46a4a; font-family: 'Newsreader', ui-serif, 'Iowan Old Style', Georgia, 'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif CJK JP', serif; font-style: italic; font-size: 1.0625rem; line-height: 1.7; color: #3d3934; }"
+    },
+    {
+      "name": "Keyword Link (Hatena Style)",
+      "kind": "custom",
+      "refersTo": "keyword-link",
+      "description": "Auto-injected wiki keyword link. Iron Sienna Soft dotted underline at rest, solid Iron Sienna Deep on hover. Signature surface treatment that makes wiki visible without UI noise.",
+      "html": "<p class=\"ds-prose-line\">本記事では <a class=\"ds-kw-link\" href=\"#\">RAG</a> と <a class=\"ds-kw-link ds-kw-link--tag\" href=\"#\">埋め込み検索</a> の関係を整理する。</p>",
+      "css": ".ds-prose-line { font-family: 'Newsreader', ui-serif, 'Iowan Old Style', Georgia, 'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif CJK JP', serif; font-size: 1.0625rem; line-height: 1.7; color: #221f1c; } .ds-kw-link { text-decoration: underline dotted; text-decoration-color: #c46a4a; text-underline-offset: 3px; color: #221f1c; background: none; transition: color 150ms cubic-bezier(0.22, 1, 0.36, 1), text-decoration-color 150ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-kw-link:hover, .ds-kw-link:focus-visible { text-decoration-style: solid; text-decoration-color: #7a3520; color: #7a3520; } .ds-kw-link--tag { text-decoration-color: #a8a29a; } .ds-kw-link--tag:hover, .ds-kw-link--tag:focus-visible { text-decoration-color: #7a3520; }"
+    },
+    {
+      "name": "Linked from (Backlinks)",
+      "kind": "custom",
+      "refersTo": "linked-from",
+      "description": "Backlinks panel shown at the bottom of every post single page. The Scrapbox-density signature of the system.",
+      "html": "<section class=\"ds-linked-from\"><h2 class=\"ds-linked-from-header\">Linked from</h2><ul><li><a href=\"#\">Saga と分散トランザクションの代替設計</a><span class=\"ds-linked-from-date\">2026-04-22</span></li><li><a href=\"#\">DESIGN.md を書くということ</a><span class=\"ds-linked-from-date\">2026-03-08</span></li></ul></section>",
+      "css": ".ds-linked-from { margin-top: 64px; padding-top: 24px; border-top: 1px solid #d8d2c6; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Yu Gothic UI', Roboto, sans-serif; } .ds-linked-from-header { margin: 0 0 16px; padding-bottom: 8px; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: #221f1c; position: relative; } .ds-linked-from-header::after { content: ''; display: block; width: 24px; height: 1px; background: #a64a2c; position: absolute; bottom: 0; left: 0; } .ds-linked-from ul { list-style: none; margin: 0; padding: 0; } .ds-linked-from li { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; gap: 16px; border-bottom: 1px solid #e2dccf; } .ds-linked-from li:last-child { border-bottom: none; } .ds-linked-from a { color: #a64a2c; text-decoration: underline; text-decoration-color: rgba(166, 74, 44, 0.4); text-underline-offset: 2px; transition: color 150ms cubic-bezier(0.22, 1, 0.36, 1), text-decoration-color 150ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-linked-from a:hover, .ds-linked-from a:focus-visible { color: #7a3520; text-decoration-color: #7a3520; } .ds-linked-from-date { font-size: 0.8125rem; color: #6b6660; flex-shrink: 0; }"
+    },
+    {
+      "name": "Navigation / Header",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Sites-wide top nav. Newsreader italic logo on the left, system sans menu on the right. Iron Sienna 2px underline marks active item.",
+      "html": "<header class=\"ds-nav\"><div class=\"ds-logo\"><a href=\"#\">Eotel's Notebook</a></div><ul class=\"ds-menu\"><li><a href=\"#\">Posts</a></li><li><a href=\"#\">Wiki</a></li><li><a href=\"#\">Categories</a></li><li><a class=\"ds-active\" href=\"#\">Archives</a></li></ul></header>",
+      "css": ".ds-nav { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; max-width: 1024px; margin: 0 auto; padding: 18px 24px; gap: 16px; } .ds-logo a { font-family: 'Newsreader', ui-serif, 'Iowan Old Style', Georgia, 'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif CJK JP', serif; font-style: italic; font-weight: 400; font-size: 1.25rem; color: #221f1c; text-decoration: none; } .ds-menu { display: flex; list-style: none; margin: 0; padding: 0; gap: 24px; word-break: keep-all; white-space: nowrap; overflow-x: auto; } .ds-menu a { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Yu Gothic UI', Roboto, sans-serif; font-size: 0.9375rem; color: #221f1c; text-decoration: none; padding-bottom: 4px; transition: color 150ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-menu a:hover, .ds-menu a:focus-visible { color: #a64a2c; } .ds-menu .ds-active { font-weight: 500; border-bottom: 2px solid #a64a2c; }"
+    },
+    {
+      "name": "hdknr Chip",
+      "kind": "chip",
+      "refersTo": "hdknr-chip",
+      "description": "Subtle marker shown in post meta for legacy posts inherited from hdknr (author: hdknr). Visually muted to sit under Eotel posts.",
+      "html": "<div class=\"ds-post-row-meta\"><span>2018-03-12</span><span aria-hidden=\"true\">·</span><a href=\"#\">ツール/開発環境</a><span aria-hidden=\"true\">·</span><span class=\"ds-hdknr-chip\">via hdknr</span></div>",
+      "css": ".ds-post-row-meta { display: flex; flex-wrap: wrap; gap: 8px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Yu Gothic UI', Roboto, sans-serif; font-size: 0.8125rem; color: #6b6660; } .ds-post-row-meta a { color: inherit; text-decoration: none; } .ds-hdknr-chip { color: #a8a29a; opacity: 0.85; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Hypertext Garden",
+    "overview": "Eotel's Notebook は「丁寧に組まれた、すべてが互いにリンクし合う、作業中のノートブック」として現れる。Medium 級の serif typography、フィルムで撮ったような grain を持つ warm parchment の地、たった 1 色の朱いインク (Iron Sienna)、そして Scrapbox 並みのリンク密度 — この 4 つだけでサイト全体のシグネチャを構成する。\n\nこのシステムは digital garden、TIL、learn-in-public の系譜に属する。Maggie Appleton の sienna ink、Andy Matuschak の working notes の側脈構造、Stripe Press の grain がかった本文、Robin Sloan の内輪の声、Are.na の block モデル、Scrapbox の bracket-link 密度 — これらの DNA を取り込んだ上で、日本語の Mincho 系フォールバックと、Hugo + 静的サイトの素朴さで束ねる。",
+    "keyCharacteristics": [
+      "たった 1 色 (Iron Sienna) を全リンク・キーワード・見出し下線に通す One-Ink design。",
+      "地は warm parchment (#f6f3ee / dark: #211f1c)、その上に薄い SVG grain が overlay する。Pure white / pure black は使わない。",
+      "Display + Body 共に Newsreader serif variable font。日本語は Mincho stack にフォールバック。",
+      "一覧は card を捨て、横罫線 1px + 縦余白 28px のデンスな post-row で組む。",
+      "全 post / Wiki page が双方向リンクされた網の中の 1 ノード。Linked from / Related in Wiki / More in <category> を末尾に常設。",
+      "UI chrome は system sans を残し、本文 serif との 2 系統で組む。"
+    ],
+    "rules": [
+      { "name": "The One-Ink Rule", "body": "サイト全体で使う色は Iron Sienna のたった 1 色だけ。それ以外はすべて parchment と ink graphite のニュートラル階調。リンク・キーワード・active nav・見出し下線・blockquote 縦線 — どこに使っても同じインク。category ごとに色を変えるな、tag ごとに色を変えるな、AI 記事だけ紫にするな。", "section": "colors" },
+      { "name": "The Warm-Parchment Default", "body": "新規 CSS で背景に #ffffff を書かない。#000000 も書かない。light は #f6f3ee (Parchment)、dark は #211f1c (Parchment Dark)。pure white は old PaperMod 由来の互換のためにだけ残し、新規面では使わない。", "section": "colors" },
+      { "name": "The Code Slab Stays Dark Rule", "body": "コードブロックは light/dark どちらでも暗いまま。light モードでは warm parchment の上に #1c1a18 の重いスラブが浮く。これがページの中で唯一の黒に近い面。", "section": "colors" },
+      { "name": "The One-Serif Rule", "body": "Display と Body は同一 family (Newsreader)。italic axis、weight axis で表情を作るが、family を増やさない。Stripe Press / Robin Sloan / Maggie Appleton と同じく 1 つの serif が全部を担う思想。", "section": "typography" },
+      { "name": "The Bilingual-Mincho Rule", "body": "日本語は OS の Mincho stack に渡す。Hiragino Mincho ProN (macOS / iOS) → Yu Mincho (Windows) → Noto Serif CJK JP (Linux / Android) の順。Newsreader と Mincho の組み合わせで日本語混植時の高さ差が出るので line-height を 1.7 と広めに取って吸収する。", "section": "typography" },
+      { "name": "The Japanese-Line-Length Rule", "body": "本文の行長は max-width: 680px で固定。Newsreader 1.0625rem で日本語約 38-42 字／行。新しい本文型レイアウトでもこの値を超えない。", "section": "typography" },
+      { "name": "The Webfont-Subset Rule", "body": "Newsreader は Latin subset のみ。日本語フォントを web font としてロードしない (CJK は重すぎる)。Subset 後の Newsreader は 30-50KB を目標。<link rel=preload> と font-display: swap で読み込み。", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "カード・パネル・モーダルに drop shadow を載せない。明るさ差と 1px 罫線、grain texture で段差を表す。ホバー時に shadow を追加するアニメーションも禁じる。", "section": "elevation" },
+      { "name": "The Inverted-Layer Rule (Dark)", "body": "ダークモードでは沈み面を紙地より明るくする。光源を上ではなく下から見ているメンタルモデル。", "section": "elevation" },
+      { "name": "The Grain-As-Atmosphere Rule", "body": "grain は装飾ではなく atmosphere。strength は固定 (light 4% / dark 5%)、scroll で動かさない、page transition で再生成しない、prefers-reduced-motion でも静止しているので影響しない。grain を消すと画面に貼った紙感が消える。", "section": "elevation" }
+    ],
+    "dos": [
+      "Do Iron Sienna を全てのリンク・キーワード dotted・active nav 下線・見出しキッカーに使う。それ以外の色を加えない。",
+      "Do 背景に warm parchment (#f6f3ee / #211f1c) を使い、SVG grain overlay を 4-5% で常に乗せる。",
+      "Do Display + Body を Newsreader 1 family で組む。日本語は OS の Mincho stack にフォールバックさせる。",
+      "Do 一覧は post-row のデンス行リストで組む。card grid を新設しない。",
+      "Do post single の末尾に Linked from / Related in Wiki / More in <category> を常設する。空のときは 1 行のメッセージで埋める。",
+      "Do 出典・author・日付・source_url を post meta に常時表示する。hdknr 由来は小さな via hdknr chip で示す。",
+      "Do flat デザインを守る。深度は明度差と 1px 罫線、grain texture だけで表す。",
+      "Do コードブロックは light/dark どちらでも暗色スラブにする。",
+      "Do Wiki 用語の .kw-link 自動挿入を維持する。本文から Wiki への導線はこの dotted underline が担う。",
+      "Do 自動テーマ切替 (defaultTheme = auto) を尊重する。",
+      "Do prefers-reduced-motion を尊重する。grain は静止しているので問題なし。"
+    ],
+    "donts": [
+      "Don't Iron Sienna 以外のアクセント色を新規に追加しない。category ごとに紫 / 緑 / 青を割り当てない。",
+      "Don't pure #ffffff / #000000 を新規 CSS で背景・文字に書かない。",
+      "Don't card grid を組まない。等寸カード 3 列で記事を並べない。",
+      "Don't SaaS ランディング風の巨大ヒーロー、グラデーション CTA、追従ソーシャル共有ボタンを追加しない。",
+      "Don't ハッカー感のネオン緑ターミナル風配色を新規記事カテゴリ用に作らない。",
+      "Don't 紫グラデと光彩エフェクトで AI 関連記事を装飾しない。",
+      "Don't 装飾としての border-left / border-right を 2px より太く使わない。blockquote の 2px は例外、それ以外で流用しない。",
+      "Don't background-clip: text + gradient によるグラデーションテキストを使わない。",
+      "Don't 装飾的 backdrop-filter: blur を使わない。",
+      "Don't ヒーローに大きな数字 + ラベル + 補助 stats + グラデアクセントのメトリックテンプレを置かない。",
+      "Don't モーダル / ダイアログを新規追加しない。情報は inline / 別ページに置く。",
+      "Don't Newsreader 以外の web font を追加しない。日本語フォントを web font としてロードしない。",
+      "Don't hdknr 由来の 783 記事のレイアウトを壊す変更をしない。意図的に沈ませるのは hdknr chip の opacity: 0.85 だけ。",
+      "Don't em dash (—) を本文・UI コピーに使わない。日本語の三点リーダー (…)、読点 (、)、コロン (：)、または括弧で置き換える。",
+      "Don't 絵文字装飾、感嘆符の連打、煽り表現を見出しに入れない。",
+      "Don't post-entry のクリッカブル overlay (.entry-link 全面オーバーレイ) を新規追加しない。title リンクで十分。"
+    ]
+  }
+}
