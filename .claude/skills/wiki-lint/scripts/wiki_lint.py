@@ -144,12 +144,21 @@ def build_post_slug_index(posts_dir: Path) -> dict[tuple[str, str, str], Path]:
         slug = fm.get("slug")
         stem = f.stem
         if isinstance(slug, str) and slug:
-            idx[(year, month, slug.strip())] = f
+            slug_clean = slug.strip()
+            idx[(year, month, slug_clean)] = f
+            # Also index the date-stripped short form so wiki related_posts
+            # written before slug backfill (e.g. /posts/2026/04/foo/ for
+            # 2026-04-06-foo.md) keep resolving.
+            m = re.match(r"^\d{4}-\d{2}-\d{2}-(.+)$", slug_clean)
+            if m:
+                idx.setdefault((year, month, m.group(1)), f)
         else:
             idx[(year, month, stem)] = f
             m = re.match(r"^\d{4}-\d{2}-\d{2}-(.+)$", stem)
             if m:
                 idx.setdefault((year, month, m.group(1)), f)
+        # The filename stem itself is always a valid alternate key.
+        idx.setdefault((year, month, stem), f)
     return idx
 
 
