@@ -6,7 +6,7 @@ lastmod: 2026-05-11
 draft: false
 author: "eotel"
 model: "claude-opus-4-7"
-description: "分散トランザクションの 10 戦略（ACID・2PC・Saga・Outbox・Inbox・TCC・Event Sourcing・CQRS・補償・Idempotency Key）を一覧比較。判断フローと PostgreSQL + Python による Outbox 実装例つき。"
+description: "分散トランザクションの 10 戦略（ACID・2PC・Saga 2方式・補償・Outbox・Inbox・TCC・Event Sourcing・CQRS）を一覧比較。判断フローと PostgreSQL + Python による Outbox 実装例つき。"
 categories: ["クラウド/インフラ"]
 tags: ["分散トランザクション", "saga", "outbox", "tcc", "event-sourcing", "postgresql"]
 ---
@@ -26,7 +26,7 @@ tags: ["分散トランザクション", "saga", "outbox", "tcc", "event-sourcin
 
 分散環境ではこれが崩れる。複数の DB やサービスに書き込みを跨がせると、まず A が脆くなる（片方は書き込み済、片方は失敗）。次に I も脆くなる（中間状態が他から観測される）。CAP 定理が言うのは「ネットワーク分断時に C か A のどちらかを諦める」だが、実務的には PACELC が示すように、分断していない平時でもレイテンシ（L）と一貫性（C）のトレードオフが残る。
 
-つまり分散システムにおける「トランザクション戦略」とは、**どの整合性をどれだけ犠牲にして、どの不変条件を守るか**の設計選択でしかない。整合性には強整合性（書いた瞬間に全ての読み手が同じ値を見る）から結果整合性（しばらく経てば同じ値に収束する）までのスペクトラムがあり、これから紹介する 10 のパターンはその上の異なる地点を占めている。
+つまり分散システムにおける「トランザクション戦略」とは、**どの整合性をどれだけ犠牲にして、どの不変条件を守るか**の設計選択でしかない。整合性には強整合性（書いた瞬間に全ての読み手が同じ値を見る）から結果整合性（しばらく経てば同じ値に収束する）までのスペクトラムがあり、これから紹介する 10 の戦略はその上の異なる地点を占めている。Idempotency Key はこの 10 種に含めず、どの戦略にも重ねる横串の前提として扱う。
 
 ## 戦略カタログ
 
@@ -64,7 +64,7 @@ tags: ["分散トランザクション", "saga", "outbox", "tcc", "event-sourcin
 
 **落とし穴**: オーケストレータに業務ロジックが集中して肥大化しがち。AWS Step Functions のように状態遷移ごとに課金されるエンジンを使う場合、**細かすぎる粒度で組むと課金が支配的になる**（[Prime Video の事例](/blogs/posts/2026/05/2026-05-11-modular-monolith-large-services/)が典型）。
 
-![Saga パターンの Choreography と Orchestration を比較した構成図。前者はイベント連鎖、後者は中央オーケストレータが各サービスを統制する](/blogs/images/saga-choreography-vs-orchestration.svg)
+![Saga パターンの Choreography と Orchestration を比較した構成図。前者はイベント連鎖、後者は中央オーケストレータが各サービスを統制する](/blogs/images/saga-choreography-vs-orchestration.png)
 
 ### 補償トランザクション（Compensating Transaction）
 
@@ -138,13 +138,13 @@ tags: ["分散トランザクション", "saga", "outbox", "tcc", "event-sourcin
 | CQRS | 結果整合性 | 中 | 低（読み取り側） | 中 | 読み書きの負荷特性が大きく異なるドメイン |
 | Idempotency Key | — | 低 | 低 | 低 | 全戦略の前提となる横串 |
 
-タイトルで「10 種」と書いたのは上記のうち冪等性キー以外の 10 戦略のことで、Idempotency Key は独立した戦略というより全戦略の前提として下に敷く横串パターンとしてカウント外にしている。CQRS も厳密にはトランザクション戦略というより読み書き分離の補助パターンだが、Event Sourcing と組で語られることが多いので一覧には含めた。「強寄り」と書いた TCC は、Try で資源を確保した時点で他の同時更新を排除できるため、純粋な Saga より整合性が強い。Outbox / Inbox / Idempotency Key の 3 つは独立した戦略というより、横串インフラとして全戦略の下に敷くもの（詳細は次節の判断フロー）。
+タイトルで「10 種」と書いたのは上記のうち冪等性キー以外の 10 戦略のことで、Idempotency Key は独立した戦略というより全戦略の前提として下に敷く横串パターンとしてカウント外にしている。ここで Saga は Choreography と Orchestration を別方式として数える。CQRS も厳密にはトランザクション戦略というより読み書き分離の補助パターンだが、Event Sourcing と組で語られることが多いので一覧には含めた。「強寄り」と書いた TCC は、Try で資源を確保した時点で他の同時更新を排除できるため、純粋な Saga より整合性が強い。Outbox / Inbox / Idempotency Key の 3 つは独立した戦略というより、横串インフラとして全戦略の下に敷くもの（詳細は次節の判断フロー）。
 
 ## いつ何を選ぶか — 判断フロー
 
 迷ったらこの順で考える。
 
-![トランザクション戦略の選択フローを示した決定木の図。出発点は「トランザクションが必要」で、単一 DB で完結するならローカル ACID、跨ぐ場合は強整合性必須なら 2PC、そうでなければ補償可能性で Saga か TCC を選ぶ。下部に Outbox・Inbox・Idempotency Key が「どの戦略でも必要な横串パターン」として配置されている](/blogs/images/transaction-strategy-flow.svg)
+![トランザクション戦略の選択フローを示した決定木の図。出発点は「トランザクションが必要」で、単一 DB で完結するならローカル ACID、跨ぐ場合は強整合性必須なら 2PC、そうでなければ補償可能性で Saga か TCC を選ぶ。下部に Outbox・Inbox・Idempotency Key が「どの戦略でも必要な横串パターン」として配置されている](/blogs/images/transaction-strategy-flow.png)
 
 1. **単一 DB で完結するか？** Yes ならローカル ACID で終わり。マイクロサービスありきで考えない。
 2. **強整合性が業務要件か？** 銀行残高の同期、在庫の超過引き当て禁止など、「結果整合性では事故になる」要件があるかを正直に問う。多くは結果整合性で十分。
@@ -163,7 +163,7 @@ tags: ["分散トランザクション", "saga", "outbox", "tcc", "event-sourcin
 
 横串の中でいちばん効くのが Transactional Outbox なので、最小実装を載せる。
 
-![Outbox パターンのデータフローを示した図。アプリは orders テーブルへの業務更新と outbox テーブルへの INSERT を同一トランザクション内で行い、COMMIT 後にリレーワーカが SELECT FOR UPDATE SKIP LOCKED で未送信行を取得して Message Broker に publish する。コンシューマ側は inbox テーブルの event_id UNIQUE 制約で重複を排除する](/blogs/images/outbox-dataflow.svg)
+![Outbox パターンのデータフローを示した図。アプリは orders テーブルへの業務更新と outbox テーブルへの INSERT を同一トランザクション内で行い、COMMIT 後にリレーワーカが SELECT FOR UPDATE SKIP LOCKED で未送信行を取得して Message Broker に publish する。コンシューマ側は inbox テーブルの event_id UNIQUE 制約で重複を排除する](/blogs/images/outbox-dataflow.png)
 
 ### スキーマ
 
@@ -293,7 +293,7 @@ consumer は受信メッセージのヘッダから `event_id`（リレーが ou
 
 - 分散トランザクションに銀の弾丸はなく、選び方は **業務要件（強整合性 / 補償可能性 / 予約セマンティクス）** で決まる
 - 戦略は積層する。典型スタックは「Saga（Orchestration）+ Outbox + Inbox + Idempotency Key」
-- 単一 DB で済むなら迷わずローカル ACID。分けたあとで初めて、上の 9 種類が候補に入る
+- 単一 DB で済むなら迷わずローカル ACID。分けたあとで初めて、上の分散向け戦略が候補に入る
 - Event Sourcing と TCC は強力だが導入コストが高い。「流行っているから」「かっこいいから」では選ばない
 - 2PC / XA は今でも RDB と XA リソースの間では有効だが、マイクロサービス間で使うのはほぼ常に間違い
 
