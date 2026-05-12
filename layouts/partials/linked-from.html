@@ -1,0 +1,37 @@
+{{- /* Linked from — reverse lookup of frontmatter `related_posts`.
+       For each other page that lists THIS page's RelPermalink in
+       its `related_posts`, surface it as an inbound link. */ -}}
+{{- $self := .RelPermalink }}
+{{- $selfTrim := trim $self "/" }}
+{{- $seen := dict }}
+{{- $matched := slice }}
+{{- range site.RegularPages }}
+  {{- $candidate := . }}
+  {{- if ne $candidate.RelPermalink $self }}
+    {{- with $candidate.Params.related_posts }}
+      {{- range . }}
+        {{- $needle := . }}
+        {{- $needleTrim := trim $needle "/" }}
+        {{- if or (eq $needle $self) (eq $needleTrim $selfTrim) }}
+          {{- if not (index $seen $candidate.RelPermalink) }}
+            {{- $matched = $matched | append $candidate }}
+            {{- $seen = merge $seen (dict $candidate.RelPermalink true) }}
+          {{- end }}
+        {{- end }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{- if $matched }}
+<section class="hyper-block" aria-label="Linked from">
+  <h2 class="hyper-block__label">Linked from</h2>
+  <ul class="hyper-block__list">
+    {{- range $matched }}
+    <li>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <span class="hyper-block__meta">{{ .Section }}</span>
+    </li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}

@@ -1,0 +1,3 @@
+{{- /* Append an anchor link to every h2–h6 that has an id.
+       Receives .Content as the dot. */ -}}
+{{ . | replaceRE "(<h[2-6] id=\"([^\"]+)\".+)(</h[2-6]+>)" "${1}<a class=\"anchor\" aria-hidden=\"true\" href=\"#${2}\">#</a>${3}" | safeHTML }}

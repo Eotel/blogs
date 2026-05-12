@@ -1,0 +1,13 @@
+{{- /* Pagefind Component UI: <pagefind-config> + <pagefind-modal>
+       outlet for the site-wide search modal. Bundle assets are loaded
+       in head.html; the trigger lives in site-header.html. */ -}}
+{{- $baseURLPath := (urls.Parse site.BaseURL).Path }}
+{{- if not (hasSuffix $baseURLPath "/") }}{{ $baseURLPath = printf "%s/" $baseURLPath }}{{ end }}
+
+<pagefind-config
+  base-url="{{ $baseURLPath }}"
+  bundle-path="{{ "pagefind/" | relURL }}"
+  excerpt-length="30">
+</pagefind-config>
+
+<pagefind-modal reset-on-close></pagefind-modal>

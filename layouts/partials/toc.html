@@ -1,0 +1,10 @@
+{{- /* Table of Contents — wraps Hugo's .TableOfContents in a
+       collapsible <details>. Only renders when the page has at
+       least one heading. */ -}}
+{{- $toc := .TableOfContents }}
+{{- if and $toc (gt (len $toc) 32) }}
+<details class="toc" {{ if (.Param "TocOpen") }}open{{ end }}>
+  <summary>目次</summary>
+  <div class="toc__inner">{{ $toc | safeHTML }}</div>
+</details>
+{{- end }}

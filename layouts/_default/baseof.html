@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language }}" dir="auto" data-theme="light">
+<head>
+  {{- partial "head.html" . }}
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">本文へスキップ</a>
+  {{- partial "site-header.html" . }}
+  <main id="main" class="main">
+    {{- block "main" . }}{{ end }}
+  </main>
+  {{- partial "site-footer.html" . }}
+  {{- partial "pagefind-modal.html" . }}
+</body>
+</html>

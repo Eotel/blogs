@@ -1,0 +1,22 @@
+{{- /* More in <Category> — latest 5 sibling posts in the current page's primary category. */ -}}
+{{- $cats := .Params.categories }}
+{{- if $cats }}
+  {{- $primary := index $cats 0 }}
+  {{- $candidates := where site.RegularPages "Section" "posts" }}
+  {{- $candidates = where $candidates "Params.categories" "intersect" (slice $primary) }}
+  {{- $candidates = where $candidates "Permalink" "ne" .Permalink }}
+  {{- $candidates = first 5 $candidates.ByDate.Reverse }}
+  {{- if $candidates }}
+<section class="hyper-block" aria-label="More in {{ $primary }}">
+  <h2 class="hyper-block__label">More in {{ $primary }}</h2>
+  <ul class="hyper-block__list">
+    {{- range $candidates }}
+    <li>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <span class="hyper-block__meta">{{ .Date.Format "2006-01-02" }}</span>
+    </li>
+    {{- end }}
+  </ul>
+</section>
+  {{- end }}
+{{- end }}
