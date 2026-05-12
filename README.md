@@ -59,6 +59,13 @@ brew install lefthook shellcheck markdownlint-cli2
 lefthook install
 ```
 
+global の `core.hooksPath` が Nix store など読み取り専用ディレクトリを指している環境では、commit/push 時に `Skipping hook sync: ... permission denied` が出ることがある。その場合は、この repo だけ `.git/hooks` を使うようにして hooks を入れ直す。
+
+```bash
+git config --local core.hooksPath .git/hooks
+lefthook install --force
+```
+
 #### 何が走るか
 
 - **pre-commit** (staged ファイルのみ・直列パイプ): `ruff --fix` → `black --quiet` → `markdownlint-cli2 --fix` (ここまで auto-fix + 再 stage) → `git secrets` → `shellcheck` → `scripts/check_frontmatter.py` → `ast-grep scan`
