@@ -5,6 +5,7 @@ resources/_gen/
 .secrets
 .claude/worktrees/
 .claude/temp/
+**/.claude/settings.local.json
 .worktrees/
 .mcp.json
 __pycache__/
