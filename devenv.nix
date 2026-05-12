@@ -21,15 +21,14 @@
     git
   ];
 
-  # Python は uv 管理。requirements.txt を venv に流し込むのは devenv 側に任せる。
-  # pyproject.toml に移行したら languages.python.uv.sync.enable に切り替える。
+  # Python は uv 管理。pyproject.toml + uv.lock に移行済みなので uv.sync を使う。
+  # (旧 requirements.txt 経路は廃止)
   languages.python = {
     enable = true;
     package = pkgs.python312;
-    uv.enable = true;
-    venv = {
+    uv = {
       enable = true;
-      requirements = ./requirements.txt;
+      sync.enable = true;
     };
   };
 

@@ -27,13 +27,15 @@ jobs:
           (cd "${{ runner.temp }}" && grep " ${DEB}\$" checksums.txt | sha256sum -c -)
           sudo dpkg -i "${{ runner.temp }}/${DEB}"
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - name: Set up uv (matches devenv / deploy.yml)
+        uses: astral-sh/setup-uv@v8
         with:
-          python-version: "3.12"
+          enable-cache: true
 
       - name: Install Python deps
-        run: pip install -r requirements.txt
+        run: |
+          uv sync
+          echo "$(pwd)/.venv/bin" >> "$GITHUB_PATH"
 
       - name: Install ast-grep
         run: |

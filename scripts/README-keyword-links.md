@@ -15,8 +15,10 @@ Hugo ビルド後の HTML に注入するポストプロセス。
 
 ## 依存
 
+`pyproject.toml` で管理。devenv shell に入っていれば `uv sync` が自動実行されている。手動で入れる場合:
+
 ```
-pip install -r requirements.txt
+uv sync
 ```
 
 `tomllib` は Python 3.11+ 標準。
