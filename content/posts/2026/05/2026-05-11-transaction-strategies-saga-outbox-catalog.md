@@ -135,9 +135,10 @@ tags: ["分散トランザクション", "saga", "outbox", "tcc", "event-sourcin
 | Inbox（冪等受信） | 結果整合性 | 低 | 低 | 低 | at-least-once 配送の受信側 |
 | TCC | 強寄り | 高 | 中 | 高 | 残高ホールド、仮押さえ系 |
 | Event Sourcing | 結果整合性 | 高 | 中 | 高 | 監査・時系列重視ドメイン |
+| CQRS | 結果整合性 | 中 | 低（読み取り側） | 中 | 読み書きの負荷特性が大きく異なるドメイン |
 | Idempotency Key | — | 低 | 低 | 低 | 全戦略の前提となる横串 |
 
-「強寄り」と書いた TCC は、Try で資源を確保した時点で他の同時更新を排除できるため、純粋な Saga より整合性が強い。Outbox / Inbox / Idempotency Key の 3 つは独立した戦略というより、横串インフラとして全戦略の下に敷くもの（詳細は次節の判断フロー）。
+タイトルで「10 種」と書いたのは上記のうち冪等性キー以外の 10 戦略のことで、Idempotency Key は独立した戦略というより全戦略の前提として下に敷く横串パターンとしてカウント外にしている。CQRS も厳密にはトランザクション戦略というより読み書き分離の補助パターンだが、Event Sourcing と組で語られることが多いので一覧には含めた。「強寄り」と書いた TCC は、Try で資源を確保した時点で他の同時更新を排除できるため、純粋な Saga より整合性が強い。Outbox / Inbox / Idempotency Key の 3 つは独立した戦略というより、横串インフラとして全戦略の下に敷くもの（詳細は次節の判断フロー）。
 
 ## いつ何を選ぶか — 判断フロー
 
@@ -177,6 +178,7 @@ CREATE TABLE orders (
 
 CREATE TABLE outbox (
     id            BIGSERIAL PRIMARY KEY,
+    event_id      UUID NOT NULL DEFAULT gen_random_uuid() UNIQUE,
     aggregate_id  BIGINT NOT NULL,
     event_type    TEXT NOT NULL,
     payload       JSONB NOT NULL,
@@ -189,7 +191,7 @@ CREATE INDEX outbox_unpublished
     WHERE published_at IS NULL;
 ```
 
-`outbox_unpublished` は部分インデックスで、未送信行だけを対象にする。送信済みの行を含まないので、relay の SELECT は未送信の規模に対してのみスキャンすればよくなる。
+`outbox_unpublished` は部分インデックスで、未送信行だけを対象にする。送信済みの行を含まないので、relay の SELECT は未送信の規模に対してのみスキャンすればよくなる。`event_id` は consumer 側の inbox で重複排除に使う安定した識別子で、リトライで同じ outbox 行が再 publish されても値が変わらないように DB で割り当てる（broker の自動採番に頼らない）。
 
 ### アプリ側: 同一トランザクションで書く
 
@@ -229,21 +231,21 @@ def create_order(conn: Connection, user_id: int, total_cents: int) -> int:
 
 ### リレーワーカ: SKIP LOCKED で並列に publish
 
-`publish` は「`publish(event_type: str, payload: dict, key: str)` を呼ぶと broker に送ってくれる」コールバックを想定する。Kafka なら `confluent-kafka` の `Producer.produce`、SQS なら `boto3.client('sqs').send_message` を薄くラップしたものになる。
+`publish` は「`publish(event_id: str, event_type: str, payload: dict, key: str)` を呼ぶと broker に送ってくれる」コールバックを想定する。`event_id` は consumer が重複排除に使う一意 ID で、broker のヘッダ（Kafka なら `headers`、SQS なら `MessageAttributes`）に乗せて配送する。Kafka なら `confluent-kafka` の `Producer.produce`、SQS なら `boto3.client('sqs').send_message` を薄くラップしたものになる。
 
 ```python
 import time
 from typing import Callable
 from psycopg import Connection
 
-PublishFn = Callable[[str, dict, str], None]
+PublishFn = Callable[[str, str, dict, str], None]
 
 def relay_worker(conn: Connection, publish: PublishFn, batch: int = 100):
     while True:
         with conn.transaction():
             with conn.cursor() as cur:
                 cur.execute(
-                    "SELECT id, aggregate_id, event_type, payload "
+                    "SELECT id, event_id, aggregate_id, event_type, payload "
                     "FROM outbox "
                     "WHERE published_at IS NULL "
                     "ORDER BY created_at "
@@ -253,8 +255,8 @@ def relay_worker(conn: Connection, publish: PublishFn, batch: int = 100):
                 )
                 rows = cur.fetchall()
 
-                for row_id, agg_id, event_type, payload in rows:
-                    publish(event_type, payload, key=str(agg_id))
+                for row_id, event_id, agg_id, event_type, payload in rows:
+                    publish(str(event_id), event_type, payload, key=str(agg_id))
                     cur.execute(
                         "UPDATE outbox SET published_at = now() WHERE id = %s",
                         (row_id,),
@@ -264,7 +266,7 @@ def relay_worker(conn: Connection, publish: PublishFn, batch: int = 100):
             time.sleep(0.5)
 ```
 
-`FOR UPDATE SKIP LOCKED` は PostgreSQL 9.5 以降で使える。同時に複数のリレーワーカが動いても、お互いがロックしている行を**待たずにスキップ**するので、ワーカ台数で水平スケールできる。
+`FOR UPDATE SKIP LOCKED` は PostgreSQL 9.5 以降で使える。同時に複数のリレーワーカが動いても、お互いがロックしている行を**待たずにスキップ**するので、ワーカ台数で水平スケールできる。`event_id` を必ず broker に乗せて配送するのが肝で、これにより consumer 側で同じイベントが何度届いても同一の値で重複排除できる。
 
 ### at-least-once と inbox
 
@@ -279,7 +281,7 @@ CREATE TABLE inbox (
 );
 ```
 
-consumer は `INSERT INTO inbox (event_id) VALUES (%s) ON CONFLICT DO NOTHING RETURNING event_id` を試み、行が返らなければ「処理済み」として無視する。これと業務更新を同一トランザクションに閉じればよい。
+consumer は受信メッセージのヘッダから `event_id`（リレーが outbox の同名カラムから乗せた値）を取り出し、`INSERT INTO inbox (event_id) VALUES (%s) ON CONFLICT DO NOTHING RETURNING event_id` を試み、行が返らなければ「処理済み」として無視する。これと業務更新を同一トランザクションに閉じればよい。outbox / inbox の両方が同じ `event_id` を持つことで、リレーの再 publish と broker の重複配送のどちらも同一の値で検出できる。
 
 ## 関連するトピックへの分岐
 
