@@ -1,0 +1,8 @@
+{{- /* Hypertext Garden masthead — site title + subtitle.
+       Rendered on the home page above Recent Notes. */ -}}
+<header class="ds-masthead">
+  <h1 class="ds-masthead__title">{{ site.Params.homeInfoParams.Title | default site.Title }}</h1>
+  {{- with site.Params.homeInfoParams.Content }}
+  <p class="ds-masthead__subtitle">{{ . | markdownify }}</p>
+  {{- end }}
+</header>

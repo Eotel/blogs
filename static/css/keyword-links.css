@@ -1,20 +1,31 @@
-/* Hatena-style auto keyword links injected by scripts/inject_keyword_links.py */
+/* Hatena-style auto keyword links injected by
+   scripts/inject_keyword_links.py.
+   Hypertext Garden palette: dotted Iron Sienna underline,
+   solid + deeper ink on hover. The link text itself stays in
+   --primary so paragraphs read as continuous body text. */
 .post-content a.kw-link {
   text-decoration: underline dotted;
-  text-decoration-color: var(--secondary, #999);
-  text-underline-offset: 2px;
+  text-decoration-color: var(--ink-soft, #c46a4a);
+  text-underline-offset: 3px;
   color: inherit;
   background: none;
   box-shadow: none;
+  transition: color 150ms cubic-bezier(0.22, 1, 0.36, 1),
+              text-decoration-color 150ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .post-content a.kw-link:hover,
 .post-content a.kw-link:focus {
   text-decoration-style: solid;
-  text-decoration-color: var(--primary, currentColor);
-  color: var(--primary, inherit);
+  text-decoration-color: var(--ink-deep, #7a3520);
+  color: var(--ink-deep, #7a3520);
 }
 
 .post-content a.kw-link--tag {
-  text-decoration-color: var(--tertiary, #bbb);
+  text-decoration-color: var(--tertiary, #a8a29a);
+}
+
+.post-content a.kw-link--tag:hover,
+.post-content a.kw-link--tag:focus {
+  text-decoration-color: var(--ink-deep, #7a3520);
 }

@@ -1,0 +1,18 @@
+{{- /* Related in Wiki — surface wiki pages whose `tags` overlap
+       with the current post's. Uses Hugo's `Related` content
+       lookup (configured via [related] in hugo.toml). */ -}}
+{{- $wiki := where site.RegularPages "Section" "wiki" }}
+{{- $related := $wiki.Related . | first 5 }}
+{{- if $related }}
+<section class="ds-related-in-wiki" aria-label="Related in Wiki">
+  <h2 class="ds-related-in-wiki__label">Related in Wiki</h2>
+  <ul class="ds-related-in-wiki__list">
+    {{- range $related }}
+    <li>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      {{- with .Description }}<span class="ds-linked-from__meta">{{ . }}</span>{{- end }}
+    </li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}

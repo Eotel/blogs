@@ -1,0 +1,22 @@
+{{- /* Index Strip — sticky right rail.
+       Recent wiki pages (6) sorted by lastmod desc, plus a small
+       link to the full wiki index. */ -}}
+{{- $wiki := where site.RegularPages "Section" "wiki" }}
+{{- $wiki = $wiki.ByLastmod.Reverse }}
+{{- $wiki = first 6 $wiki }}
+{{- if $wiki }}
+<nav class="ds-index-strip" aria-label="Wiki index">
+  <h2 class="ds-index-strip__label">Index</h2>
+  <ul class="ds-index-strip__list">
+    {{- range $wiki }}
+    <li>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <span class="ds-index-strip__meta">{{ .Lastmod.Format "2006-01-02" }}</span>
+    </li>
+    {{- end }}
+  </ul>
+  <p style="font-size:0.8125rem;margin:0;">
+    <a href="{{ "/wiki/" | relURL }}" style="color: var(--ink); text-decoration: none; box-shadow: 0 1px 0 var(--ink-soft);">All wiki →</a>
+  </p>
+</nav>
+{{- end }}

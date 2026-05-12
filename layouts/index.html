@@ -1,0 +1,12 @@
+{{- define "main" -}}
+{{- partial "masthead.html" . -}}
+<div class="ds-home-layout">
+  <main class="ds-home-layout__main">
+    {{- partial "recent-notes.html" . -}}
+    {{- partial "reading-by-topic.html" . -}}
+  </main>
+  <aside class="ds-home-layout__aside">
+    {{- partial "index-strip.html" . -}}
+  </aside>
+</div>
+{{- end -}}

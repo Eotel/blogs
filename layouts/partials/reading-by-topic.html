@@ -1,0 +1,30 @@
+{{- /* Reading by Topic — category cloud weighted by post count.
+       Hidden when no taxonomy data exists. Three weight buckets:
+         data-weight="3"  top quartile (>= 75th percentile)
+         data-weight="2"  next quartile
+         data-weight="1"  remainder
+       Categories with zero non-hdknr posts are skipped. */ -}}
+{{- $terms := site.Taxonomies.categories }}
+{{- if $terms }}
+  {{- $counted := slice }}
+  {{- range $name, $taxonomy := $terms }}
+    {{- $count := len $taxonomy.Pages }}
+    {{- if gt $count 0 }}
+      {{- $counted = $counted | append (dict "name" $name "count" $count "permalink" (printf "/categories/%s/" (urlize $name))) }}
+    {{- end }}
+  {{- end }}
+  {{- if $counted }}
+    {{- $sorted := sort $counted "count" "desc" }}
+    {{- $max := (index $sorted 0).count }}
+<section class="ds-reading-by-topic">
+  <h2 class="ds-reading-by-topic__label">Reading by Topic</h2>
+  <div class="ds-reading-by-topic__cloud">
+    {{- range $sorted }}
+    {{- $ratio := div (mul (float .count) 1.0) (float $max) }}
+    {{- $w := cond (ge $ratio 0.66) 3 (cond (ge $ratio 0.33) 2 1) }}
+    <a href="{{ .permalink | relURL }}" data-weight="{{ $w }}">{{ .name }}<span style="color: var(--secondary); font-size: 0.875em; margin-left: 4px;">{{ .count }}</span></a>
+    {{- end }}
+  </div>
+</section>
+  {{- end }}
+{{- end }}

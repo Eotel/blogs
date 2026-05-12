@@ -59,6 +59,14 @@
     {{- end }}
   </footer>
 
+  {{- /* Hypertext Garden hypertext blocks — only on actual posts, not
+         wiki pages (those have their own single template). */ -}}
+  {{- if eq .Section "posts" }}
+    {{- partial "linked-from.html" . }}
+    {{- partial "related-in-wiki.html" . }}
+    {{- partial "more-in-category.html" . }}
+  {{- end }}
+
   {{- if (.Param "comments") }}
   {{- partial "comments.html" . }}
   {{- end }}

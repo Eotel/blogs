@@ -1,7 +1,7 @@
 baseURL = 'https://eotel.github.io/blogs/'
 languageCode = 'ja'
 defaultContentLanguage = 'ja'
-title = 'Eotel blog'
+title = "Eotel's Notebook"
 theme = 'PaperMod'
 paginate = 10
 
@@ -15,9 +15,11 @@ paginate = 10
   ShowCodeCopyButtons = true
   ShowToc = true
   author = 'Eotel'
+  mainSections = ['posts']
 
   [params.homeInfoParams]
-    Content = 'Gist と Issue から自動生成する個人ブログ。historical post は hdknr 由来。'
+    Title = "Eotel's Notebook"
+    Content = 'Posts, notes, and wiki. A working notebook by Eotel.'
 
 [permalinks]
   [permalinks.page]
@@ -66,3 +68,13 @@ paginate = 10
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = false
+
+[related]
+  threshold = 80
+  toLower = false
+  [[related.indices]]
+    name = 'tags'
+    weight = 100
+  [[related.indices]]
+    name = 'categories'
+    weight = 80
