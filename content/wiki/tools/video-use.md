@@ -2,7 +2,7 @@
 title: "Video Use"
 description: "Claude Code のスキルとして動作する動画編集自動化ツール。音声トランスクリプトを主インターフェースとして LLM で動画編集を行う"
 date: 2026-04-23
-lastmod: 2026-04-23
+lastmod: 2026-05-12
 aliases: ["video-use", "ビデオユース"]
 related_posts:
   - "/posts/2026/04/2026-04-17-video-use-claude-code-video-editing/"
@@ -51,6 +51,8 @@ brew install ffmpeg
 ## 関連ページ
 
 - [Claude Code](/blogs/wiki/tools/claude-code/) — スキルとして統合されている実行環境
+- [ElevenLabs](/blogs/wiki/tools/elevenlabs/) — Scribe (STT) を Layer 1 のトランスクリプト生成に使用
+- [リアルタイム音声モデル（TTS / STT / S2S）](/blogs/wiki/concepts/realtime-voice-model/) — Scribe を含む STT モデルの位置づけ
 
 ## ソース記事
 
