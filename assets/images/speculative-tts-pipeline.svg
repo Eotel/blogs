@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Hiragino Sans', sans-serif" font-size="14">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2c3e50"/>
+    </marker>
+    <marker id="arrow-accept" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#27ae60"/>
+    </marker>
+    <marker id="arrow-reject" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="960" height="540" fill="#fafbfc"/>
+
+  <text x="480" y="32" text-anchor="middle" font-size="20" font-weight="600" fill="#1a1a1a">投機的 TTS のパイプライン（Draft → Verify → Accept）</text>
+
+  <!-- Input -->
+  <rect x="30" y="220" width="120" height="80" rx="8" fill="#ecf0f1" stroke="#34495e" stroke-width="2"/>
+  <text x="90" y="252" text-anchor="middle" font-weight="600" fill="#1a1a1a">入力テキスト</text>
+  <text x="90" y="272" text-anchor="middle" font-size="12" fill="#5c6c7c">"こんにちは、..."</text>
+
+  <!-- Codec LM backbone -->
+  <rect x="200" y="160" width="200" height="200" rx="10" fill="#dfe9f3" stroke="#34495e" stroke-width="2"/>
+  <text x="300" y="190" text-anchor="middle" font-weight="600" fill="#1a1a1a">Codec LM backbone</text>
+  <text x="300" y="210" text-anchor="middle" font-size="12" fill="#5c6c7c">(frozen, e.g. Llasa / VALL-E)</text>
+  <line x1="220" y1="225" x2="380" y2="225" stroke="#7f8c8d" stroke-dasharray="3,3"/>
+  <text x="300" y="248" text-anchor="middle" font-size="12" fill="#34495e">Transformer blocks</text>
+  <text x="300" y="266" text-anchor="middle" font-size="12" fill="#34495e">hidden state h_t</text>
+  <line x1="220" y1="285" x2="380" y2="285" stroke="#7f8c8d" stroke-dasharray="3,3"/>
+  <text x="300" y="306" text-anchor="middle" font-size="12" fill="#34495e">Last hidden h_t を</text>
+  <text x="300" y="324" text-anchor="middle" font-size="12" fill="#34495e">複数 head で共有</text>
+
+  <line x1="150" y1="260" x2="195" y2="260" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Target head (top branch) -->
+  <rect x="450" y="100" width="180" height="80" rx="8" fill="#fff4e0" stroke="#d68910" stroke-width="2"/>
+  <text x="540" y="128" text-anchor="middle" font-weight="600" fill="#1a1a1a">Target head</text>
+  <text x="540" y="148" text-anchor="middle" font-size="12" fill="#5c6c7c">次の 1 トークン y_t を予測</text>
+  <text x="540" y="166" text-anchor="middle" font-size="12" fill="#5c6c7c">p_target(·|h_t)</text>
+
+  <!-- Draft heads (bottom branch) -->
+  <rect x="450" y="340" width="180" height="100" rx="8" fill="#e8f6f3" stroke="#138d75" stroke-width="2"/>
+  <text x="540" y="368" text-anchor="middle" font-weight="600" fill="#1a1a1a">Draft heads × K</text>
+  <text x="540" y="388" text-anchor="middle" font-size="12" fill="#5c6c7c">Medusa-style multi-token</text>
+  <text x="540" y="406" text-anchor="middle" font-size="12" fill="#5c6c7c">y_{t+1}, …, y_{t+K} を並列予測</text>
+  <text x="540" y="424" text-anchor="middle" font-size="12" fill="#5c6c7c">＋ tree attention</text>
+
+  <line x1="400" y1="220" x2="445" y2="140" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="400" y1="300" x2="445" y2="380" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Verifier -->
+  <rect x="680" y="220" width="200" height="100" rx="8" fill="#fdebd0" stroke="#b9770e" stroke-width="2"/>
+  <text x="780" y="248" text-anchor="middle" font-weight="600" fill="#1a1a1a">Verifier (1 forward)</text>
+  <text x="780" y="268" text-anchor="middle" font-size="12" fill="#5c6c7c">Target が候補ツリーを並列検証</text>
+  <text x="780" y="286" text-anchor="middle" font-size="12" fill="#5c6c7c">tolerance sampling で</text>
+  <text x="780" y="304" text-anchor="middle" font-size="12" fill="#5c6c7c">音響的に近ければ accept</text>
+
+  <line x1="630" y1="140" x2="685" y2="240" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="630" y1="380" x2="685" y2="300" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Accept path -->
+  <rect x="680" y="370" width="200" height="60" rx="8" fill="#d5f5e3" stroke="#27ae60" stroke-width="2"/>
+  <text x="780" y="396" text-anchor="middle" font-weight="600" fill="#196f3d">Accept: トークン列</text>
+  <text x="780" y="416" text-anchor="middle" font-size="12" fill="#196f3d">y_t, y_{t+1}, …, y_{t+k} を採用</text>
+
+  <line x1="780" y1="320" x2="780" y2="365" stroke="#27ae60" stroke-width="2" marker-end="url(#arrow-accept)"/>
+
+  <!-- Reject (rollback) -->
+  <rect x="450" y="220" width="180" height="60" rx="8" fill="#fadbd8" stroke="#c0392b" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="540" y="248" text-anchor="middle" font-weight="600" fill="#922b21">Reject (rollback)</text>
+  <text x="540" y="266" text-anchor="middle" font-size="12" fill="#922b21">不一致箇所まで戻す</text>
+
+  <line x1="680" y1="270" x2="635" y2="250" stroke="#c0392b" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow-reject)"/>
+
+  <!-- Loop back -->
+  <path d="M 540 280 L 540 470 L 90 470 L 90 305" stroke="#c0392b" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#arrow-reject)"/>
+  <text x="320" y="490" text-anchor="middle" font-size="11" fill="#922b21">reject 時は backbone に再入力して再試行</text>
+
+  <!-- Output (codec decoder) -->
+  <rect x="780" y="460" width="160" height="60" rx="8" fill="#fef9e7" stroke="#7d6608" stroke-width="2"/>
+  <text x="860" y="486" text-anchor="middle" font-weight="600">Codec decoder</text>
+  <text x="860" y="506" text-anchor="middle" font-size="12" fill="#5c6c7c">→ 24/48 kHz waveform</text>
+
+  <line x1="780" y1="430" x2="800" y2="455" stroke="#27ae60" stroke-width="2" marker-end="url(#arrow-accept)"/>
+
+  <!-- Caption -->
+  <text x="480" y="525" text-anchor="middle" font-size="12" fill="#5c6c7c">Draft heads が K 個を並列に提案し、Target が 1 forward で検証する。tolerance sampling により音響的等価トークンも accept する点が LLM 用 speculative decoding との違い。</text>
+</svg>

@@ -26,6 +26,10 @@ CATEGORY_RULES: list[tuple[str, list[str]]] = [
         "mcp", "agentic", "openhands", "openclaw", "openfang",
         "vibe coding", "cursor", "ハルシネーション", "sycophancy",
         "シコファンシー", "fingpt", "animaworks", "goose",
+        "tts", "音声合成", "voice cloning", "text-to-speech",
+        "f5-tts", "cosyvoice", "vall-e", "llasa", "vadusa",
+        "投機的デコード", "投機的tts", "speculative decoding",
+        "speculative tts", "flow matching", "推測デコード",
     ]),
     # セキュリティ
     ("セキュリティ", [
@@ -134,6 +138,11 @@ TAG_RULES: list[tuple[str, list[str]]] = [
     ("wordpress", ["wordpress"]),
     ("laravel", ["laravel"]),
     ("homebrew", ["homebrew"]),
+    ("tts", ["tts", "text-to-speech"]),
+    ("音声合成", ["音声合成", "voice synthesis"]),
+    ("投機的デコード", ["投機的デコード", "speculative decoding", "投機的tts", "speculative tts", "推測デコード"]),
+    ("推論高速化", ["推論高速化", "inference acceleration", "rtf", "real-time factor"]),
+    ("flow-matching", ["flow matching", "rectified flow", "matcha-tts", "f5-tts"]),
 ]
 
 
