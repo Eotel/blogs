@@ -2,10 +2,12 @@
 title: "Qwen（クウェン）"
 description: "Alibaba の Qwen チームが開発するオープンソース LLM シリーズ。コーディング性能・長コンテキスト・メモリ効率に優れ、Apache 2.0 ライセンスで商用利用可能"
 date: 2026-04-15
-lastmod: 2026-04-15
+lastmod: 2026-05-12
 aliases: ["Qwen3.5", "通義千問"]
 related_posts:
   - "/posts/2026/04/gemma4-vs-qwen35-local-llm/"
+  - "/posts/2026/03/2026-03-05-c15ed5806e48bd6c5ec74e5cf494cfd2/"
+  - "/posts/2026/03/2026-03-09-qwen35-27b/"
 tags: ["Qwen", "オープンソースLLM", "Alibaba", "ローカルLLM", "コーディング"]
 ---
 
@@ -75,3 +77,5 @@ MLX（Apple Silicon）エコシステムのサポートが成熟しており、`
 ## ソース記事
 
 - [Gemma 4 31B vs Qwen3.5-27B — ローカルLLM最強はどちらか](/blogs/posts/2026/04/gemma4-vs-qwen35-local-llm/) — 2026-04-07
+- [Qwen3.5-0.8B を日本語SFTしたモデル公開 — スマホで動く0.8Bパラメータの実力と小規模LLMの現在地](/blogs/posts/2026/03/2026-03-05-c15ed5806e48bd6c5ec74e5cf494cfd2/) — 2026-03-05
+- [Qwen3.5-27B：個人PCで動く高性能LLMの実力と使い方](/blogs/posts/2026/03/2026-03-09-qwen35-27b/) — 2026-03-09

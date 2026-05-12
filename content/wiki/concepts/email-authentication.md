@@ -2,9 +2,10 @@
 title: "メール認証（SPF/DKIM/DMARC）"
 description: "なりすまし防止のためのメール認証技術3層：送信元IP検証・電子署名・ポリシー決定"
 date: 2026-04-06
-lastmod: 2026-04-06
+lastmod: 2026-05-12
 aliases: ["SPF", "DKIM", "DMARC", "メール認証"]
-related_posts: []
+related_posts:
+  - "/posts/2026/03/2026-03-03-cbe1f317a7559e8cdfed70450e123798/"
 tags: ["メール認証", "SPF", "DKIM", "DMARC", "セキュリティ"]
 ---
 
@@ -22,3 +23,6 @@ tags: ["メール認証", "SPF", "DKIM", "DMARC", "セキュリティ"]
 
 - [FIDO2/パスキー認証](/blogs/wiki/concepts/fido2-passkey/) — フィッシング耐性を持つ次世代認証
 
+## ソース記事
+
+- [上場企業3,700社のSPF/DMARC設定を全調査 — 「p=none」が半数、日本のメール認証の現在地](/blogs/posts/2026/03/2026-03-03-cbe1f317a7559e8cdfed70450e123798/) — 2026-03-03

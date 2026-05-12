@@ -2,9 +2,10 @@
 title: "FastAPI"
 description: "高速でモダンな Python Web フレームワーク。自動 API ドキュメント生成対応"
 date: 2026-04-06
-lastmod: 2026-04-06
+lastmod: 2026-05-12
 aliases: ["fastapi"]
-related_posts: []
+related_posts:
+  - "/posts/2024/06/2024-06-24-399b69f65db859d43cac092e76c96ee7/"
 tags: ["Python", "API", "Web フレームワーク", "ASGI"]
 ---
 
@@ -16,3 +17,6 @@ Asyncio ネイティブで、型ヒント活用による自動バリデーショ
 
 - [DRF](/blogs/wiki/tools/drf/) — Django 側の REST API フレームワーク
 
+## ソース記事
+
+- [FastAPI](/blogs/posts/2024/06/2024-06-24-399b69f65db859d43cac092e76c96ee7/) — 2024-06-24

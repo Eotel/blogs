@@ -2,10 +2,11 @@
 title: "DuckDB"
 description: "インプロセス OLAP データベース。列指向アーキテクチャで分析クエリを高速実行"
 date: 2026-04-06
-lastmod: 2026-04-06
+lastmod: 2026-05-12
 aliases: ["duckdb"]
 related_posts:
   - "/posts/2026/03/duckdb-columnar-arrow/"
+  - "/posts/2026/03/2026-03-12-claude-code-sqlite-duckdb/"
 tags: ["データベース", "OLAP", "SQL", "Python"]
 ---
 
@@ -20,3 +21,4 @@ tags: ["データベース", "OLAP", "SQL", "Python"]
 ## ソース記事
 
 - [DuckDB と列指向ストレージ](/blogs/posts/2026/03/duckdb-columnar-arrow/) — 2026-03
+- [Claude Codeで大量データを扱うならSQLite/DuckDBを使おう](/blogs/posts/2026/03/2026-03-12-claude-code-sqlite-duckdb/) — 2026-03-12

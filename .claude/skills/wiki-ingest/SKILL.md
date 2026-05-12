@@ -52,6 +52,52 @@ tags: ["tag1", "tag2"]   # 関連タグ
 - **カテゴリ指定**: `content/posts/` から該当カテゴリの記事を検索
 - **`all`**: `content/posts/` の全記事を対象にする（バッチ処理）
 
+### 1.5. 既存 Wiki との重複・統合先を確認する
+
+Wiki ページを作成・更新する前に、必ず専用スクリプトで ingest 計画を出す。これは Karpathy の LLM Wiki パターンに沿って、記事を 1:1 で Wiki 化せず、既存の概念・ツール・ガイドページへ知識を統合するための前段チェック。
+
+```bash
+python3 .claude/skills/wiki-ingest/scripts/wiki_ingest_plan.py <target>
+```
+
+代表例:
+
+```bash
+# 全記事。ただし前回 ingest 日以降だけを対象にする
+python3 .claude/skills/wiki-ingest/scripts/wiki_ingest_plan.py all --since-file .claude/wiki-last-ingest.txt
+
+# 単一記事
+python3 .claude/skills/wiki-ingest/scripts/wiki_ingest_plan.py content/posts/2026/05/example.md
+
+# カテゴリ
+python3 .claude/skills/wiki-ingest/scripts/wiki_ingest_plan.py "AI/LLM"
+
+# 機械処理用
+python3 .claude/skills/wiki-ingest/scripts/wiki_ingest_plan.py all --format json
+```
+
+スクリプトは `.claude/temp/wiki_ingest_index.sqlite` に SQLite FTS5 trigram のローカル全文検索 index を作り、各記事を次の状態に分類する。
+
+- **covered**: 既存 Wiki の `related_posts` に既に含まれる。原則スキップ。
+- **stale_candidate**: `related_posts` には含まれるが、記事の `lastmod` が Wiki より新しい。既存ページを更新候補にする。
+- **update_candidate**: 既存 Wiki への統合候補が強い。新規ページを作らず、候補ページを更新する。
+- **review_candidate**: 既存 Wiki への統合候補があるが弱い。候補ページを読んで統合か新規か判断する。
+- **new_candidate**: 強い候補なし。`concepts/`、`tools/`、`guides/` のいずれかに新規ページを作る。
+
+`new_candidate` であっても、記事の丸コピーや「1 blog = 1 wiki」にはしない。記事から概念・ツール・手順として再利用できる知識だけを抽出し、既存ページと接続する。
+
+計画を機械的に適用する場合は `wiki_ingest_apply.py` を使う。
+
+```bash
+# 通常運用: 高信頼の update_candidate だけ既存 Wiki に related_posts / ソース記事を追記
+python3 .claude/skills/wiki-ingest/scripts/wiki_ingest_apply.py all --since-file .claude/wiki-last-ingest.txt --policy safe
+
+# 全記事対応: 高信頼候補は既存 Wiki に統合し、低信頼・新規候補は backlog Wiki に集約
+python3 .claude/skills/wiki-ingest/scripts/wiki_ingest_apply.py all --policy all
+```
+
+`--policy all` は全記事を対象にできるが、低信頼候補を無理に既存ページへ混ぜない。`review_candidate` / `new_candidate` のうち高信頼統合できなかったものは `content/wiki/guides/wiki-ingest-backlog.md` に集約し、後で人間またはエージェントが個別ページへ蒸留する。
+
 ### 2. 記事を分析する
 
 各記事について以下を抽出する:
@@ -64,7 +110,7 @@ tags: ["tag1", "tag2"]   # 関連タグ
 
 抽出したエンティティごとに:
 
-1. **既存ページの確認**: `content/wiki/` 内に該当ページが既にあるか検索
+1. **既存ページの確認**: `wiki_ingest_plan.py` の候補を起点に、`content/wiki/` 内に該当ページが既にあるか確認
 2. **新規作成**: なければ適切なサブディレクトリにページを作成
 3. **更新**: あれば `related_posts` に記事を追加し、内容を補完・更新
 4. **相互参照**: 関連する Wiki ページ同士をリンクで繋ぐ

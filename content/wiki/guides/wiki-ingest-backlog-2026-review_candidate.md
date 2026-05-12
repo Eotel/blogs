@@ -1,0 +1,164 @@
+---
+title: "Wiki ingest backlog (2026 / review_candidate)"
+description: "全記事 wiki-ingest で、既存 Wiki への高信頼統合には至らなかった記事のレビュー用バックログ"
+date: 2026-05-12
+lastmod: 2026-05-12
+aliases: ["wiki ingest backlog", "未蒸留記事"]
+related_posts:
+  - "/posts/2026/02/2026-02-11-e0f9f032b571cf6a8d2875aed3522b64/"
+  - "/posts/2026/02/2026-02-13-56ceeff018ed4d9555699174150f499a/"
+  - "/posts/2026/02/2026-02-24-f23b07d0468282857b1f334d3b8b6759/"
+  - "/posts/2026/02/2026-02-27-61e0abd5ba76e70dabc257c5f0e6560b/"
+  - "/posts/2026/02/2026-02-28-0b416f32e26e097cfe686e6cf4f56874/"
+  - "/posts/2026/03/2026-03-01-7974809c97ee2b8e77047a7497ef9473/"
+  - "/posts/2026/03/2026-03-01-fc22f8ca4231945a9fc949cc36a3324a/"
+  - "/posts/2026/03/2026-03-02-1c086b903d60fa0090924064b09f40cc/"
+  - "/posts/2026/03/2026-03-02-2fc3ee764133e8302afdd04eb5c64447/"
+  - "/posts/2026/03/2026-03-02-a97f70a5d7c969d9084cdfbf35178583/"
+  - "/posts/2026/03/2026-03-03-1da4afacf13d73e8fa4754e9faef6569/"
+  - "/posts/2026/03/2026-03-03-3a077eceff8222a61428311635b6cbe9/"
+  - "/posts/2026/03/2026-03-03-3d37ea6b1e2d65ea1b5e1cd908224b70/"
+  - "/posts/2026/03/2026-03-03-5c67205cc36835eeb883c355278466b4/"
+  - "/posts/2026/03/2026-03-03-7531bfaf8041fb404827e0361645b3f7/"
+  - "/posts/2026/03/2026-03-03-a5bc48ae4fb9985f19eac99ac6b35d11/"
+  - "/posts/2026/03/2026-03-04-1a39b3cc62c29543a5e6de566017beeb/"
+  - "/posts/2026/03/2026-03-04-40d876bc001b09ef7af4a6fe9c415357/"
+  - "/posts/2026/03/2026-03-04-678e83c45a76aa359ade74c5db0a3eb3/"
+  - "/posts/2026/03/2026-03-04-9c4d7fade500b4c0399fc689053e6819/"
+  - "/posts/2026/03/2026-03-04-bf72fb2762062814f5feecceee6735a3/"
+  - "/posts/2026/03/2026-03-05-3f6bb8e2cc5a48f3ac038d2865946187/"
+  - "/posts/2026/03/2026-03-05-409a67e9ec9608be7b4149ab99491116/"
+  - "/posts/2026/03/2026-03-05-5bbdc7bd98ff0dbdfde257d909d48d8c/"
+  - "/posts/2026/03/2026-03-05-75d885dac4bc6727daa08e68d0771e91/"
+  - "/posts/2026/03/2026-03-05-9a79f28c1f2c7ee097e43cfad587b6a3/"
+  - "/posts/2026/03/2026-03-06-1e29bea3f9f5cdf4a2b11eec4a2ab536/"
+  - "/posts/2026/03/2026-03-06-b32313de621a699d6b0e80a47d982cbf/"
+  - "/posts/2026/03/2026-03-06-f1c70eb4f0ec2a6201d2fb770c6ea9de/"
+  - "/posts/2026/03/2026-03-08-openrouter-ai-model-management/"
+  - "/posts/2026/03/2026-03-09-agents-md-less-is-more/"
+  - "/posts/2026/03/2026-03-09-karpathy-autoresearch/"
+  - "/posts/2026/03/2026-03-10-karpathy-autoresearch/"
+  - "/posts/2026/03/2026-03-11-ai-moat-sor-soa/"
+  - "/posts/2026/03/2026-03-11-codex-subagent-swarm/"
+  - "/posts/2026/03/2026-03-11-mckinsey-lilli-sql-injection/"
+  - "/posts/2026/03/2026-03-12-ai-vending-bench-cartel/"
+  - "/posts/2026/03/2026-03-13-agentic-coding-docs-colocation/"
+  - "/posts/2026/03/2026-03-13-autoresearch/"
+  - "/posts/2026/03/2026-03-14-saas-is-dead-perspective/"
+  - "/posts/2026/03/2026-03-15-ai-qa-paradigm-shift/"
+  - "/posts/2026/03/2026-03-16-claude-cowork-starter-pack/"
+  - "/posts/2026/03/2026-03-17-claude-certified-architect-exam-guide/"
+  - "/posts/2026/03/2026-03-17-cloudflare-agents-ai-email-client/"
+  - "/posts/2026/03/2026-03-17-cognee-skills-ai-skill-improvement/"
+  - "/posts/2026/03/2026-03-17-sap-erp-action-layer-ai/"
+  - "/posts/2026/03/2026-03-18-ai-engineer-6-months-roadmap/"
+  - "/posts/2026/03/2026-03-18-anthropic-dispatch-claude-cowork/"
+  - "/posts/2026/03/2026-03-18-cortex-xdr-bioc-bypass/"
+  - "/posts/2026/03/2026-03-18-cve-2026-32746-telnetd/"
+  - "/posts/2026/03/2026-03-18-moomoo-openapi/"
+  - "/posts/2026/03/2026-03-18-sequoia-services-new-software/"
+  - "/posts/2026/03/2026-03-19-forcememo-github-attack/"
+  - "/posts/2026/03/2026-03-21-browser-use-cli-2/"
+  - "/posts/2026/03/2026-03-22-blitz-ios-ai-agent/"
+  - "/posts/2026/03/2026-03-23-autoresearch/"
+  - "/posts/2026/03/2026-03-23-claude-cowork-guide/"
+  - "/posts/2026/03/2026-03-25-huggingface-hf-mount/"
+  - "/posts/2026/03/2026-03-25-insanely-fast-whisper/"
+  - "/posts/2026/03/2026-03-26-dms-oom-recovery/"
+  - "/posts/2026/03/2026-03-26-mysqldump-definer-error-1449/"
+  - "/posts/2026/03/2026-03-27-opencli-rs/"
+  - "/posts/2026/03/2026-03-27-telnyx-pypi-supply-chain-attack/"
+  - "/posts/2026/03/2026-03-30-claude-financial-modeling/"
+  - "/posts/2026/03/2026-03-30-pay2key-linux-ransomware/"
+  - "/posts/2026/03/2026-03-30-profit-taking-by-design/"
+  - "/posts/2026/03/2026-03-31-mirofish-ai-prediction-engine/"
+  - "/posts/2026/04/2026-04-03-llm-investment-strategy-feedback/"
+  - "/posts/2026/04/2026-04-09-s3-files-ga-architecture/"
+  - "/posts/2026/04/2026-04-11-ai-model-performance-degradation/"
+  - "/posts/2026/04/2026-04-12-rowboat-local-ai-coworker/"
+  - "/posts/2026/04/2026-04-14-2026-ai-engineer-roadmap/"
+  - "/posts/2026/04/2026-04-15-inbound-marketing-guide/"
+  - "/posts/2026/05/2026-05-11-transaction-strategies-saga-outbox-catalog/"
+tags: ["wiki-ingest", "LLM Wiki", "backlog"]
+---
+
+## 概要
+
+このページは `/wiki-ingest all` の全記事処理で、既存の概念・ツール・ガイドページへ高信頼で統合できなかった記事を集約するレビュー用バックログ。Karpathy の LLM Wiki パターンにおける Raw Sources と Wiki の間に置く未蒸留層であり、ここから個別の概念ページへ再分類していく。
+
+## レビュー対象
+
+- [ローカルの開発モックを ngrok で公開し、Backlog Wiki を自動更新するシェルスクリプト](/blogs/posts/2026/02/2026-02-11-e0f9f032b571cf6a8d2875aed3522b64/) — 2026-02-11 / review_candidate
+- [django-oauth-toolkit 2.0 の client_secret ハッシュ化で外部連携が壊れた話](/blogs/posts/2026/02/2026-02-13-56ceeff018ed4d9555699174150f499a/) — 2026-02-13 / review_candidate
+- [CloudWatch Logs のエラーを自動で GitHub Issues に課題化する](/blogs/posts/2026/02/2026-02-24-f23b07d0468282857b1f334d3b8b6759/) — 2026-02-24 / review_candidate
+- [AI は会話が長くなるほど「迷子」になる — Microsoft × Salesforce の研究解説](/blogs/posts/2026/02/2026-02-27-61e0abd5ba76e70dabc257c5f0e6560b/) — 2026-02-27 / review_candidate
+- [なぜ AI は同じ紫グラデーションのサイトを作るのか — 分布的収束と Skills による脱却](/blogs/posts/2026/02/2026-02-28-0b416f32e26e097cfe686e6cf4f56874/) — 2026-02-28 / review_candidate
+- [AIチャットボットのプライバシー問題 — スタンフォード大学の研究が暴いた6社の構造的欠陥](/blogs/posts/2026/03/2026-03-01-7974809c97ee2b8e77047a7497ef9473/) — 2026-03-01 / review_candidate
+- [Anthropic Wealth Management AI ツール（Claude CoWork）記事要約・考察](/blogs/posts/2026/03/2026-03-01-fc22f8ca4231945a9fc949cc36a3324a/) — 2026-03-01 / review_candidate
+- [リクルート新卒研修の React 資料が「無料で最高の教材」と言われる理由](/blogs/posts/2026/03/2026-03-02-1c086b903d60fa0090924064b09f40cc/) — 2026-03-02 / review_candidate
+- [Prompt Request — Pull Requestの次の形：コードを書く時代から「意図を書く時代」へ](/blogs/posts/2026/03/2026-03-02-2fc3ee764133e8302afdd04eb5c64447/) — 2026-03-02 / review_candidate
+- [Backlog 問い合わせ課題を Claude で自動分析してコメント投稿する構成（Webhook + Lambda + Bedrock）](/blogs/posts/2026/03/2026-03-02-a97f70a5d7c969d9084cdfbf35178583/) — 2026-03-02 / review_candidate
+- [AI の名前に刻まれた「情報理論の父」--- Claude Shannon が LLM の数学的基盤を作った](/blogs/posts/2026/03/2026-03-03-1da4afacf13d73e8fa4754e9faef6569/) — 2026-03-03 / review_candidate
+- [個人のファインチューニング済みモデルを P2P で相互利用する --- 分散 MoE で「みんなの AI」は成立するか](/blogs/posts/2026/03/2026-03-03-3a077eceff8222a61428311635b6cbe9/) — 2026-03-03 / review_candidate
+- [2 人で 100 人に勝つ --- AI を「自分の分身」に変える実務活用の 6 つの原則](/blogs/posts/2026/03/2026-03-03-3d37ea6b1e2d65ea1b5e1cd908224b70/) — 2026-03-03 / review_candidate
+- [AnimaWorks — 「AIだけの会社組織」を作る日本発フレームワークの設計思想](/blogs/posts/2026/03/2026-03-03-5c67205cc36835eeb883c355278466b4/) — 2026-03-03 / review_candidate
+- [「AIが覚醒する魔法の言葉」は本当に効くのか — プロンプトエンジニアリングの実態と公式ガイドの教え](/blogs/posts/2026/03/2026-03-03-7531bfaf8041fb404827e0361645b3f7/) — 2026-03-03 / review_candidate
+- [Amazon Bedrock が OpenAI API 互換を提供開始 --- Mantle 推論エンジンが「モデルの交換可能性」を実現する](/blogs/posts/2026/03/2026-03-03-a5bc48ae4fb9985f19eac99ac6b35d11/) — 2026-03-03 / review_candidate
+- [QwenVoice --- Mac でボイスクローニング・感情表現・音声デザインを完全オフラインで実現する Qwen3-TTS アプリ](/blogs/posts/2026/03/2026-03-04-1a39b3cc62c29543a5e6de566017beeb/) — 2026-03-04 / review_candidate
+- [Theatre.js — GUI でWebアニメーションを直感的に作れるモーションデザインエディタ](/blogs/posts/2026/03/2026-03-04-40d876bc001b09ef7af4a6fe9c415357/) — 2026-03-04 / review_candidate
+- [236件のAI案件データが明かす「発注企業とベンダーの2.5年のズレ」--- AI受託開発市場の構造的ギャップと勝ち筋](/blogs/posts/2026/03/2026-03-04-678e83c45a76aa359ade74c5db0a3eb3/) — 2026-03-04 / review_candidate
+- [Rust の仕事が増えていく理由 — インフラコスト削減の圧力と LLM が学習コストを消し去る構造変化](/blogs/posts/2026/03/2026-03-04-9c4d7fade500b4c0399fc689053e6819/) — 2026-03-04 / review_candidate
+- [Claude で YouTube チャンネルを 90 日で収益化する 7 つのプロンプト戦略 --- ニッチ分析からコミュニティ構築まで](/blogs/posts/2026/03/2026-03-04-bf72fb2762062814f5feecceee6735a3/) — 2026-03-04 / review_candidate
+- [SBI北尾「新卒採用を大幅に減らすのは絶対命令」— AI による採用構造変化は景気回復しても戻らない](/blogs/posts/2026/03/2026-03-05-3f6bb8e2cc5a48f3ac038d2865946187/) — 2026-03-05 / review_candidate
+- [Swift for Android vs Kotlin Multiplatform — マルチプラットフォーム時代の「Xbox vs PlayStation」](/blogs/posts/2026/03/2026-03-05-409a67e9ec9608be7b4149ab99491116/) — 2026-03-05 / review_candidate
+- [GitHub Actionsスクリプトインジェクション完全解説 — ${{ }}をrunに書いた瞬間、攻撃が始まる](/blogs/posts/2026/03/2026-03-05-5bbdc7bd98ff0dbdfde257d909d48d8c/) — 2026-03-05 / review_candidate
+- [「決定性のないソフトウェア」の設計と評価 × t_wada氏の視点とskill-creatorが実装したTDD→EDD移行パターン](/blogs/posts/2026/03/2026-03-05-75d885dac4bc6727daa08e68d0771e91/) — 2026-03-05 / review_candidate
+- [NotebookLM 2026年完全ガイド — 9つのStudio機能とハルシネーションを構造的に防ぐ設計](/blogs/posts/2026/03/2026-03-05-9a79f28c1f2c7ee097e43cfad587b6a3/) — 2026-03-05 / review_candidate
+- [GitHub Actions スクリプトインジェクション完全解説 — ${{ }} を run に書いた瞬間、攻撃者にシェルを渡している](/blogs/posts/2026/03/2026-03-06-1e29bea3f9f5cdf4a2b11eec4a2ab536/) — 2026-03-06 / review_candidate
+- [BigQuery ARRAY/STRUCT で速度3倍・コスト25%削減 --- JOINを消す「データの持ち方」最適化](/blogs/posts/2026/03/2026-03-06-b32313de621a699d6b0e80a47d982cbf/) — 2026-03-06 / review_candidate
+- [RuView × Wi-Fi電波で壁越し人体検知 — $48で心拍・姿勢を丸裸にする技術の実態](/blogs/posts/2026/03/2026-03-06-f1c70eb4f0ec2a6201d2fb770c6ea9de/) — 2026-03-06 / review_candidate
+- [OpenRouter で AI モデルを一元管理する — コスト削減と効率化の実践](/blogs/posts/2026/03/2026-03-08-openrouter-ai-model-management/) — 2026-03-08 / review_candidate
+- [AGENTS.md は詳しすぎると逆効果 — ETH Zurich の138リポジトリ研究が示す「書かない」原則](/blogs/posts/2026/03/2026-03-09-agents-md-less-is-more/) — 2026-03-09 / review_candidate
+- [Karpathy の autoresearch — AIが寝ている間に100回実験を回す仕組み](/blogs/posts/2026/03/2026-03-09-karpathy-autoresearch/) — 2026-03-09 / review_candidate
+- [Karpathy の autoresearch — 寝ている間にAIが100回実験して朝にはモデルが賢くなっている世界](/blogs/posts/2026/03/2026-03-10-karpathy-autoresearch/) — 2026-03-10 / review_candidate
+- [AI が生み出す新たな Moat：SoR から SoA への構造転換](/blogs/posts/2026/03/2026-03-11-ai-moat-sor-soa/) — 2026-03-11 / review_candidate
+- [OpenAI Codex の SubAgent（Swarm）が変える AI コーディングの未来](/blogs/posts/2026/03/2026-03-11-codex-subagent-swarm/) — 2026-03-11 / review_candidate
+- [マッキンゼーの社内AI「Lilli」がSQLインジェクションで完全突破された件](/blogs/posts/2026/03/2026-03-11-mckinsey-lilli-sql-injection/) — 2026-03-11 / review_candidate
+- [続・AIが自動で稼ぐ世界 — Vending-Bench Arenaで発生したAI価格カルテルの衝撃](/blogs/posts/2026/03/2026-03-12-ai-vending-bench-cartel/) — 2026-03-12 / review_candidate
+- [Agentic Coding時代のドキュメント配置: /docs ディレクトリはもう限界？](/blogs/posts/2026/03/2026-03-13-agentic-coding-docs-colocation/) — 2026-03-13 / review_candidate
+- [Karpathy の autoresearch — LLMに「このLLMを訓練して」と丸投げしたら一晩で公式チームを超えた話](/blogs/posts/2026/03/2026-03-13-autoresearch/) — 2026-03-13 / review_candidate
+- [SaaS is Dead? AIに代替される層と残り続ける層](/blogs/posts/2026/03/2026-03-14-saas-is-dead-perspective/) — 2026-03-14 / review_candidate
+- [AI時代のQA：「決定論から確率論へ」のパラダイムシフト](/blogs/posts/2026/03/2026-03-15-ai-qa-paradigm-shift/) — 2026-03-15 / review_candidate
+- [Claude Cowork スターターパック：プラグイン・スキル・ワークフロー完全ガイド](/blogs/posts/2026/03/2026-03-16-claude-cowork-starter-pack/) — 2026-03-16 / review_candidate
+- [Claude Certified Architect試験 完全ガイド](/blogs/posts/2026/03/2026-03-17-claude-certified-architect-exam-guide/) — 2026-03-17 / review_candidate
+- [Cloudflare Agents × AI が実現する次世代メールクライアント](/blogs/posts/2026/03/2026-03-17-cloudflare-agents-ai-email-client/) — 2026-03-17 / review_candidate
+- [cognee-skills：AIスキルを自動改善する5ステップの考え方](/blogs/posts/2026/03/2026-03-17-cognee-skills-ai-skill-improvement/) — 2026-03-17 / review_candidate
+- [a16z「なぜ世界はいまだにSAPで動いているのか」の考察：ERPとアクションレイヤーの時代](/blogs/posts/2026/03/2026-03-17-sap-erp-action-layer-ai/) — 2026-03-17 / review_candidate
+- [6ヶ月でAIエンジニアになるロードマップ — 無料リソースだけで学ぶ完全ガイド](/blogs/posts/2026/03/2026-03-18-ai-engineer-6-months-roadmap/) — 2026-03-18 / review_candidate
+- [Anthropic Dispatch：スマホからPCのClaudeに仕事を投げる新機能](/blogs/posts/2026/03/2026-03-18-anthropic-dispatch-claude-cowork/) — 2026-03-18 / review_candidate
+- [Palo Alto Cortex XDR の振る舞い検知ルールが解読・バイパスされた脆弱性の全容](/blogs/posts/2026/03/2026-03-18-cortex-xdr-bioc-bypass/) — 2026-03-18 / review_candidate
+- [CVE-2026-32746: GNU Inetutils telnetd に32年間潜んでいた認証前リモートコード実行の脆弱性](/blogs/posts/2026/03/2026-03-18-cve-2026-32746-telnetd/) — 2026-03-18 / review_candidate
+- [moomoo証券が米国株API取引に対応 — moomoo OpenAPIで個人投資家も自動売買が可能に](/blogs/posts/2026/03/2026-03-18-moomoo-openapi/) — 2026-03-18 / review_candidate
+- [AIツールを作っている人たちが怖がっていること — 米Sequoia「Services: The New Software」の要点](/blogs/posts/2026/03/2026-03-18-sequoia-services-new-software/) — 2026-03-18 / review_candidate
+- [ForceMemo: GitHub アカウントを乗っ取り Python リポジトリにバックドアを仕込む新型攻撃](/blogs/posts/2026/03/2026-03-19-forcememo-github-attack/) — 2026-03-19 / review_candidate
+- [Browser Use CLI 2.0 — Playwrightを超える次世代ブラウザ自動化ツール](/blogs/posts/2026/03/2026-03-21-browser-use-cli-2/) — 2026-03-21 / review_candidate
+- [iOS開発が完全自動化される時代が来た：オープンソースmacOSアプリ「Blitz」とは](/blogs/posts/2026/03/2026-03-22-blitz-ios-ai-agent/) — 2026-03-22 / review_candidate
+- [autoresearch：Karpathyが公開した「寝ている間にAIが100実験を自律実行する」630行のスクリプト](/blogs/posts/2026/03/2026-03-23-autoresearch/) — 2026-03-23 / review_candidate
+- [Claude Cowork 完全ガイド — 機能解説・料金・活用事例20選まとめ](/blogs/posts/2026/03/2026-03-23-claude-cowork-guide/) — 2026-03-23 / review_candidate
+- [HuggingFace hf-mount: AIモデルをダウンロードせずに仮想ファイルシステムとしてマウント](/blogs/posts/2026/03/2026-03-25-huggingface-hf-mount/) — 2026-03-25 / review_candidate
+- [insanely-fast-whisper: 150分の音声を98秒で文字起こしする CLI ツール](/blogs/posts/2026/03/2026-03-25-insanely-fast-whisper/) — 2026-03-25 / review_candidate
+- [AWS DMS Serverless の OOM 障害と監視の盲点 — 検知漏れの根本原因と対策](/blogs/posts/2026/03/2026-03-26-dms-oom-recovery/) — 2026-03-26 / review_candidate
+- [mysqldump エラー 1449: DEFINER が存在しないユーザーを参照している場合の対処法](/blogs/posts/2026/03/2026-03-26-mysqldump-definer-error-1449/) — 2026-03-26 / review_candidate
+- [opencli-rs: Rust製の爆速Webスクレイピングツールで55以上のサイトをCLI化する](/blogs/posts/2026/03/2026-03-27-opencli-rs/) — 2026-03-27 / review_candidate
+- [PyPI公式パッケージ telnyx がサプライチェーン攻撃で汚染 — TeamPCPによるWAVステガノグラフィ攻撃の全容](/blogs/posts/2026/03/2026-03-27-telnyx-pypi-supply-chain-attack/) — 2026-03-27 / review_candidate
+- [Claude AI で投資銀行レベルの財務モデルを作成する 12 のプロンプト](/blogs/posts/2026/03/2026-03-30-claude-financial-modeling/) — 2026-03-30 / review_candidate
+- [Pay2Key の Linux ランサムウェアが x64/ARM64 サーバーを標的に — 防御機構を無効化する高度な手口](/blogs/posts/2026/03/2026-03-30-pay2key-linux-ransomware/) — 2026-03-30 / review_candidate
+- [利確はセンスではなく、設計で上手くなる](/blogs/posts/2026/03/2026-03-30-profit-taking-by-design/) — 2026-03-30 / review_candidate
+- [MiroFish その後: 3週間で GitHub Star 4.7万超へ — コミュニティの広がりと今後の展望](/blogs/posts/2026/03/2026-03-31-mirofish-ai-prediction-engine/) — 2026-03-31 / review_candidate
+- [LLMで株式投資戦略を自動生成 — 松尾研のフィードバック設計実験が示す「モデル選択」の重要性](/blogs/posts/2026/04/2026-04-03-llm-investment-strategy-feedback/) — 2026-04-03 / review_candidate
+- [Amazon S3 Files GA：消えるアーキテクチャ層と生まれるアーキテクチャ](/blogs/posts/2026/04/2026-04-09-s3-files-ga-architecture/) — 2026-04-09 / review_candidate
+- [AIモデルは意図的に性能を低下させている？ OpenAI・Google・Anthropicに共通するパターン](/blogs/posts/2026/04/2026-04-11-ai-model-performance-degradation/) — 2026-04-11 / review_candidate
+- [Rowboat：100%ローカルで動くオープンソースAI同僚ツール](/blogs/posts/2026/04/2026-04-12-rowboat-local-ai-coworker/) — 2026-04-12 / review_candidate
+- [2026年に求められるAIエンジニアのロードマップ — 350万インプレッション超の話題スレッドを解説](/blogs/posts/2026/04/2026-04-14-2026-ai-engineer-roadmap/) — 2026-04-14 / review_candidate
+- [エンジニアのためのインバウンドマーケティング入門：Attract/Engage/Delight と MA の基本](/blogs/posts/2026/04/2026-04-15-inbound-marketing-guide/) — 2026-04-15 / review_candidate
+- [ACID から Saga まで — トランザクション戦略 10 種の地図と判断軸](/blogs/posts/2026/05/2026-05-11-transaction-strategies-saga-outbox-catalog/) — 2026-05-11 / review_candidate

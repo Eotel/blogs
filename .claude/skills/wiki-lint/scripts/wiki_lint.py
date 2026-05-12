@@ -126,6 +126,15 @@ def build_post_slug_index(posts_dir: Path) -> dict[tuple[str, str, str], Path]:
             continue
         parts = f.relative_to(posts_dir).parts
         if len(parts) < 3:
+            try:
+                fm = parse_frontmatter(f.read_text(encoding="utf-8"))
+            except Exception:
+                fm = {}
+            stem = f.stem
+            idx[("", "", stem)] = f
+            slug = fm.get("slug")
+            if isinstance(slug, str) and slug:
+                idx[("", "", slug.strip())] = f
             continue
         year, month = parts[0], parts[1]
         try:
@@ -151,6 +160,8 @@ def post_link_to_path(
     if not m:
         return None
     parts = m.group(1).rstrip("/").split("/")
+    if len(parts) == 1 and parts[0]:
+        return slug_index.get(("", "", parts[0]))
     if len(parts) < 3:
         return None
     return slug_index.get((parts[0], parts[1], parts[2]))
@@ -359,7 +370,10 @@ def main() -> int:
     #     output is temporarily orphan by design until cross-links are added
     #   - fm pages missing only RECOMMENDED keys (e.g. `aliases`)
     fatal_issues = (
-        len(broken_links) + len(related_post_issues) + fm_required_count + len(post_wiki_broken)
+        len(broken_links)
+        + len(related_post_issues)
+        + fm_required_count
+        + len(post_wiki_broken)
     )
     fm_recommended_only = len(fm_issues) - fm_required_count
     advisory_issues = len(orphans) + len(stale_pages) + fm_recommended_only

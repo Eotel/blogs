@@ -55,8 +55,12 @@
 
   enterShell = ''
     # 1. lefthook を冪等に install
+    # ユーザー global の core.hooksPath が Nix store を指す環境では lefthook の
+    # sync が読み取り専用ディレクトリを更新しようとするため、この repo は
+    # 書き込み可能な .git/hooks を local 設定で使う。
+    git config --local core.hooksPath .git/hooks
     if [ ! -f .git/hooks/pre-commit ] || ! grep -q lefthook .git/hooks/pre-commit 2>/dev/null; then
-      lefthook install >/dev/null && echo "✓ lefthook hooks installed"
+      lefthook install --force >/dev/null && echo "✓ lefthook hooks installed"
     fi
 
     # 2. Docker (drawio-export 用) はオプション扱い

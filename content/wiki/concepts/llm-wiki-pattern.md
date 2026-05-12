@@ -2,12 +2,13 @@
 title: "LLM Wiki パターン"
 description: "AI エージェントに個人ナレッジベースを継続的に構築・保守させるパターン"
 date: 2026-04-05
-lastmod: 2026-05-09
+lastmod: 2026-05-12
 aliases: ["LLM Wiki", "Karpathy Wiki"]
 related_posts:
   - "/posts/2026/04/karpathy-llm-wiki/"
   - "/posts/2026/04/2026-04-22-obsidian-claude-code-personal-os/"
   - "/posts/2026/04/2026-04-23-claude-code-obsidian-second-brain/"
+  - "/posts/2026/04/2026-04-09-exbrain-claude-code-obsidian-ai-brain/"
 tags: ["LLM", "ナレッジマネジメント", "AIエージェント", "RAG", "Obsidian"]
 ---
 
@@ -41,6 +42,7 @@ Karpathy の概念を実践する具体的な環境として、Obsidian と Clau
 - **Claude Code** — Obsidian の vault をそのまま読み込み、Wiki ページの生成・更新・相互参照を行う
 
 Greg Isenberg が提案する 10 ステップのセットアップ:
+
 1. Obsidian で vault を作る
 2. Claude Code にプロジェクトルールを書く（CLAUDE.md）
 3. `wiki-ingest` スキルで記事から Wiki を自動生成
@@ -52,6 +54,7 @@ Greg Isenberg が提案する 10 ステップのセットアップ:
 ## `.raw/` パターン（Karpathy 実装）
 
 Karpathy のオリジナル実装では:
+
 - `.raw/` フォルダに元記事・論文・メモを投入
 - Claude Code が `.raw/` を読んで `wiki/` を生成・更新
 - 人間は `wiki/` だけを読む
@@ -68,3 +71,4 @@ Karpathy のオリジナル実装では:
 - [Karpathy の LLM Wiki — AIエージェントが育てる個人ナレッジベースという新パターン](/blogs/posts/2026/04/karpathy-llm-wiki/) — 2026-04-05
 - [Claude Code × Obsidian で「第二の脳」を構築する — Greg Isenberg の 10 ステップ](/blogs/posts/2026/04/2026-04-22-obsidian-claude-code-personal-os/) — 2026-04-22
 - [LLM Wiki パターンを Obsidian と Claude Code で実装する](/blogs/posts/2026/04/2026-04-23-claude-code-obsidian-second-brain/) — 2026-04-23
+- [Exbrain — Claude Code × Obsidian で「外付けAI脳」を構築する](/blogs/posts/2026/04/2026-04-09-exbrain-claude-code-obsidian-ai-brain/) — 2026-04-09

@@ -2,10 +2,11 @@
 title: "AutoAgent"
 description: "AI エージェントのハーネスを AI 自身が自律的に改善する Python 製 OSS ライブラリ"
 date: 2026-04-06
-lastmod: 2026-04-06
+lastmod: 2026-05-12
 aliases: ["autoagent"]
 related_posts:
   - "/posts/2026/04/autoagent-self-improving-agents/"
+  - "/posts/2026/03/2026-03-05-bdc5082e2f5f8160644bd0ba01f52c76/"
 tags: ["agent", "python", "github", "自動最適化"]
 ---
 
@@ -45,3 +46,4 @@ tasks/            -- 評価タスク（Harbor フォーマット）
 ## ソース記事
 
 - [AutoAgent — AIがAIを育てる自己改善エージェントOSSライブラリ](/blogs/posts/2026/04/autoagent-self-improving-agents/) — 2026-04-05
+- [OpenFang × Rust製シングルバイナリ「エージェントOS」のHandsアーキテクチャと自律型AI設計](/blogs/posts/2026/03/2026-03-05-bdc5082e2f5f8160644bd0ba01f52c76/) — 2026-03-05
