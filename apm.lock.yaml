@@ -1,0 +1,13 @@
+lockfile_version: '1'
+generated_at: '2026-05-12T07:08:10.383010+00:00'
+apm_version: 0.13.0
+dependencies:
+- repo_url: jgraph/drawio-mcp
+  host: github.com
+  resolved_commit: acf0adeff1a661bbae24ecad5ff03f1b3be24c3c
+  virtual_path: skill-cli/drawio
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .claude/skills/drawio
+  content_hash: sha256:c0cafc1ad6a5b474d2e5c7d92c07f69298a79eb4f9ae4bd31fde0bfe039aa3c5
