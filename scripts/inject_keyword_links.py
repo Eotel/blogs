@@ -35,8 +35,20 @@ KEYWORDS_PATH = ROOT / ".claude" / "temp" / "keywords.json"
 STOPLIST_PATH = ROOT / ".claude" / "keyword-stoplist.txt"
 
 EXCLUDED_ANCESTORS = {
-    "a", "code", "pre", "script", "style", "nav", "aside", "figcaption",
-    "h1", "h2", "h3", "h4", "h5", "h6",
+    "a",
+    "code",
+    "pre",
+    "script",
+    "style",
+    "nav",
+    "aside",
+    "figcaption",
+    "h1",
+    "h2",
+    "h3",
+    "h4",
+    "h5",
+    "h6",
 }
 EXCLUDED_CLASSES = {"toc", "highlight", "post-meta", "breadcrumbs", "post-tags"}
 
@@ -56,6 +68,8 @@ def load_stoplist() -> set[str]:
 
 
 def load_keywords() -> list[dict]:
+    if not KEYWORDS_PATH.exists():
+        return []
     data = json.loads(KEYWORDS_PATH.read_text(encoding="utf-8"))
     stop = load_stoplist()
     return [e for e in data if e["keyword"].casefold() not in stop]
@@ -163,7 +177,7 @@ def inject(html_text: str, pattern, by_cf, self_url: str, self_target: str | Non
                     continue
                 if after and is_word_char(after):
                     continue
-            fragments.append(text[last:m.start()])
+            fragments.append(text[last : m.start()])
             a = soup.new_tag("a", href=entry["url"])
             a["class"] = ["kw-link", f"kw-link--{entry['type']}"]
             desc = entry.get("description") or ""
@@ -190,19 +204,30 @@ def inject(html_text: str, pattern, by_cf, self_url: str, self_target: str | Non
 
 
 def iter_target_files(public_root: Path):
-    for sub in ("posts", "wiki"):
-        d = public_root / sub
-        if not d.is_dir():
-            continue
-        for p in d.rglob("index.html"):
+    posts_dir = public_root / "posts"
+    if posts_dir.is_dir():
+        for p in posts_dir.rglob("index.html"):
+            yield p
+
+    wiki_dir = public_root / "wiki"
+    if not wiki_dir.is_dir():
+        return
+    for p in wiki_dir.rglob("index.html"):
+        rel = p.relative_to(public_root)
+        # Only wiki single pages have public/wiki/<section>/<slug>/index.html.
+        if len(rel.parts) == 4:
             yield p
 
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("public", help="path to Hugo public/ directory")
-    ap.add_argument("--prefix", default=None, help="site path prefix (auto-detected from hugo.toml)")
-    ap.add_argument("--dry-run", action="store_true", help="don't write files; just report")
+    ap.add_argument(
+        "--prefix", default=None, help="site path prefix (auto-detected from hugo.toml)"
+    )
+    ap.add_argument(
+        "--dry-run", action="store_true", help="don't write files; just report"
+    )
     ap.add_argument("--limit", type=int, default=0, help="process only N files (debug)")
     args = ap.parse_args()
 

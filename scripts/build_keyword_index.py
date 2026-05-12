@@ -27,7 +27,7 @@ HUGO_TOML = ROOT / "hugo.toml"
 OUT_PATH = ROOT / ".claude" / "temp" / "keywords.json"
 
 FRONTMATTER_RE = re.compile(r"^---\n(.*?)\n---\n(.*)\Z", re.DOTALL)
-TAG_TITLE_RE = re.compile(r'<h1[^>]*>(.*?)</h1>', re.DOTALL)
+TAG_TITLE_RE = re.compile(r"<h1[^>]*>(.*?)</h1>", re.DOTALL)
 HTML_TAG_RE = re.compile(r"<[^>]+>")
 ASCII_ONLY_RE = re.compile(r"^[\x00-\x7f]+$")
 
@@ -48,10 +48,15 @@ def parse_frontmatter(path: Path) -> dict:
     text = path.read_text(encoding="utf-8")
     m = FRONTMATTER_RE.match(text)
     if not m:
+        print(f"warn: missing frontmatter: {path.relative_to(ROOT)}", file=sys.stderr)
         return {}
     try:
         return yaml.safe_load(m.group(1)) or {}
-    except yaml.YAMLError:
+    except yaml.YAMLError as exc:
+        print(
+            f"warn: invalid frontmatter: {path.relative_to(ROOT)}: {exc}",
+            file=sys.stderr,
+        )
         return {}
 
 
@@ -96,13 +101,17 @@ def collect_wiki(prefix: str) -> list[dict]:
         for kw in keywords:
             if not keyword_passes(kw):
                 continue
-            entries.append({
-                "keyword": kw,
-                "url": url,
-                "type": "wiki",
-                "description": description,
-                "target_id": target_id,
-            })
+            entries.append(
+                {
+                    "keyword": kw,
+                    "url": url,
+                    "type": "wiki",
+                    "source": "title" if kw == title else "alias",
+                    "section": section,
+                    "description": description,
+                    "target_id": target_id,
+                }
+            )
     return entries
 
 
@@ -127,27 +136,56 @@ def collect_tags(prefix: str) -> list[dict]:
         if not keyword_passes(display):
             continue
         url = f"{prefix}tags/{tag_dir.name}/"
-        entries.append({
-            "keyword": display,
-            "url": url,
-            "type": "tag",
-            "description": f"タグ: {display}",
-            "target_id": f"tag:{tag_dir.name}",
-        })
+        entries.append(
+            {
+                "keyword": display,
+                "url": url,
+                "type": "tag",
+                "source": "title",
+                "description": f"タグ: {display}",
+                "target_id": f"tag:{tag_dir.name}",
+            }
+        )
     return entries
 
 
 def deduplicate(entries: list[dict]) -> list[dict]:
-    """When the same surface keyword maps to multiple targets, keep wiki over tag."""
-    order = {"wiki": 0, "tag": 1}
+    """When the same surface keyword maps to multiple targets, pick deterministically."""
+    type_order = {"wiki": 0, "tag": 1}
+    source_order = {"title": 0, "alias": 1}
+    section_order = {"concepts": 0, "tools": 1, "guides": 2, "qa": 3}
+
+    def rank(e: dict) -> tuple:
+        return (
+            type_order.get(e.get("type"), 99),
+            source_order.get(e.get("source"), 99),
+            section_order.get(e.get("section"), 99),
+            e.get("target_id", ""),
+        )
+
     by_cf: dict[str, dict] = {}
     for e in entries:
         cf = e["keyword"].casefold()
         if not cf:
             continue
         existing = by_cf.get(cf)
-        if existing is None or order[e["type"]] < order[existing["type"]]:
+        if existing is None:
             by_cf[cf] = e
+        elif e.get("target_id") == existing.get("target_id"):
+            continue
+        elif rank(e) < rank(existing):
+            print(
+                "warn: keyword collision: "
+                f"{e['keyword']!r} kept {e['target_id']} over {existing['target_id']}",
+                file=sys.stderr,
+            )
+            by_cf[cf] = e
+        else:
+            print(
+                "warn: keyword collision: "
+                f"{e['keyword']!r} kept {existing['target_id']} over {e['target_id']}",
+                file=sys.stderr,
+            )
     return sorted(by_cf.values(), key=lambda x: (-len(x["keyword"]), x["keyword"]))
 
 
@@ -163,7 +201,9 @@ def main() -> None:
     )
     n_wiki = sum(1 for e in merged if e["type"] == "wiki")
     n_tag = sum(1 for e in merged if e["type"] == "tag")
-    print(f"wrote {len(merged)} entries → {OUT_PATH.relative_to(ROOT)}", file=sys.stderr)
+    print(
+        f"wrote {len(merged)} entries → {OUT_PATH.relative_to(ROOT)}", file=sys.stderr
+    )
     print(f"  wiki: {n_wiki}  tag: {n_tag}  prefix: {prefix}", file=sys.stderr)
 
 

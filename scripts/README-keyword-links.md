@@ -16,7 +16,7 @@ Hugo ビルド後の HTML に注入するポストプロセス。
 ## 依存
 
 ```
-pip install pyyaml beautifulsoup4
+pip install -r requirements.txt
 ```
 
 `tomllib` は Python 3.11+ 標準。
@@ -32,11 +32,14 @@ python3 -m http.server -d public 8080
 ```
 
 `--dry-run` を渡すと書き込みせずに件数だけ報告する。
+`hugo.toml` の `baseURL` に合わせて既定では `/blogs/` から始まる URL を注入するため、
+`python3 -m http.server -d public 8080` で直に確認する場合は
+`python3 scripts/inject_keyword_links.py public/ --prefix /` を使う。
 
 ## ポリシー
 
 - **辞書ソース**: Wiki ページ（title + aliases）と Hugo 生成のタグページ
-- **優先度**: Wiki > Tag、同 type 内は最長一致
+- **優先度**: Wiki > Tag、同 type 内は title > alias、section 優先度、target_id の順で決定
 - **リンク化**: ページごとに target ID 単位で初出 1 回のみ
 - **除外要素**: `<a>`, `<code>`, `<pre>`, `<h1>-<h6>`, `<script>`, `<style>`, `<nav>`, `<aside>`, `<figcaption>`, `.toc`, `.highlight`, `.post-meta`, `.breadcrumbs`, `.post-tags`, `#TableOfContents`
 - **境界**: ASCII のみのキーワードは前後が英数字でないことを要求。日本語混じりは部分一致

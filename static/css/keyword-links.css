@@ -18,8 +18,3 @@
 .post-content a.kw-link--tag {
   text-decoration-color: var(--tertiary, #bbb);
 }
-
-.post-content a.kw-link[title]::after {
-  /* hint that this is an auto-linked keyword (screen reader only) */
-  content: "";
-}
