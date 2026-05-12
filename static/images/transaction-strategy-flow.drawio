@@ -1,0 +1,82 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="transaction-strategy-flow" name="Transaction strategy flow">
+    <mxGraphModel dx="1422" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="960" pageHeight="720" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="トランザクション戦略の選択フロー" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="20" width="420" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="start" value="トランザクションが必要" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2c3e50;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="400" y="65" width="160" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="single-db" value="単一 DB で完結？&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;（同一プロセス可？）&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff8e1;strokeColor=#f57c00;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="350" y="135" width="260" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="acid" value="&lt;b&gt;ローカル ACID&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;BEGIN / COMMIT で完結&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="80" y="165" width="200" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="strong" value="強整合性が必須？&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;（待たせて良い？）&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff8e1;strokeColor=#f57c00;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="610" y="135" width="240" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="xa" value="&lt;b&gt;2PC / XA&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;SPOF・ブロッキング&lt;br&gt;採用は最小限&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#c2185b;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="815" y="160" width="130" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="compensate" value="補償アクションを&lt;br&gt;用意できる？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff8e1;strokeColor=#f57c00;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="350" y="300" width="260" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="saga" value="&lt;b&gt;Saga パターン&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;Choreography / Orchestration&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="80" y="325" width="200" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="reserve" value="予約状態を持てる？&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;（残高ホールド系）&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff8e1;strokeColor=#f57c00;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="590" y="300" width="260" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tcc" value="&lt;b&gt;TCC&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;Try - Confirm - Cancel&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="820" y="430" width="130" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="boundary" value="&lt;b&gt;境界を見直す&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;サービス分割を再考&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#c2185b;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="560" y="430" width="160" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="cross" value="&lt;b&gt;どの戦略でも必要な横串パターン&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#2e7d32;dashed=1;fontSize=15;verticalAlign=top;spacingTop=18;" vertex="1" parent="1">
+          <mxGeometry x="80" y="545" width="800" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="outbox" value="&lt;b&gt;Outbox&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;DB と broker の&lt;br&gt;二重書き込み回避&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="130" y="595" width="140" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="inbox" value="&lt;b&gt;Inbox&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;重複配送を受信側で&lt;br&gt;冪等に吸収&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="410" y="595" width="140" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="idem" value="&lt;b&gt;Idempotency Key&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;クライアント由来の重複&lt;br&gt;再送に対する保険&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="690" y="595" width="160" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="start" target="single-db" style="endArrow=classic;html=1;rounded=0;strokeColor=#555555;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="single-db" target="acid" value="Yes" style="endArrow=classic;html=1;rounded=0;strokeColor=#555555;fontColor=#2e7d32;fontStyle=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="single-db" target="strong" value="No" style="endArrow=classic;html=1;rounded=0;strokeColor=#555555;fontColor=#c62828;fontStyle=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="strong" target="xa" value="Yes" style="endArrow=classic;html=1;rounded=0;strokeColor=#555555;fontColor=#2e7d32;fontStyle=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="strong" target="compensate" value="No" style="endArrow=classic;html=1;rounded=0;strokeColor=#555555;fontColor=#c62828;fontStyle=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="compensate" target="saga" value="Yes" style="endArrow=classic;html=1;rounded=0;strokeColor=#555555;fontColor=#2e7d32;fontStyle=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="compensate" target="reserve" value="No" style="endArrow=classic;html=1;rounded=0;strokeColor=#555555;fontColor=#c62828;fontStyle=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="reserve" target="tcc" value="Yes" style="endArrow=classic;html=1;rounded=0;strokeColor=#555555;fontColor=#2e7d32;fontStyle=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="reserve" target="boundary" value="No" style="endArrow=classic;html=1;rounded=0;strokeColor=#555555;fontColor=#c62828;fontStyle=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
