@@ -40,7 +40,7 @@ devenv shell 内で使える便利スクリプト:
 | `drawio-export <file.drawio>` | `static/images/*.drawio` を PNG/SVG に変換 (Docker 必須) |
 | `wiki-lint` | `wiki_lint.py` のラッパー |
 
-`drawio-export` は [`rlespinasse/drawio-export`](https://github.com/rlespinasse/drawio-export) Docker イメージを使うので、別途 Docker Desktop か colima を入れておく。
+`drawio-export` は [`rlespinasse/drawio-desktop-headless`](https://github.com/rlespinasse/docker-drawio-desktop-headless) Docker イメージを使うので、別途 Docker Desktop か colima を入れておく。
 画像の絶対 pin が必要なら `inputs.nixpkgs` を `devenv.yaml` で固定する。
 
 ### Lefthook (pre-commit / pre-push フック)
