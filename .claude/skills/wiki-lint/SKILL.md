@@ -6,13 +6,29 @@ arguments: []
 
 Wiki ナレッジベースの健全性をチェックし、問題を報告・修正します。
 
-## 実行方法
+## 実行方法（推奨: wiki-linter subagent に委託）
 
-このスキルは `scripts/wiki_lint.py` に実装が同梱されている。チェックを走らせる際はまずこのスクリプトを実行する:
+このスキルは **`wiki-linter` subagent（Haiku 固定）** に lint 実行を委託する設計。重い LLM 判断は不要で、スクリプト実行 + 結果整形が主な仕事なのでコスト最適化のため subagent 化されている。
+
+```
+Agent(subagent_type="wiki-linter", prompt="Wiki の lint を実行してレポートしてください")
+```
+
+subagent は内部で `python3 .claude/skills/wiki-lint/scripts/wiki_lint.py` を実行し、結果を **JSON verdict** (`exit_code`, `fatal`, `findings`, `stats`, `raw_report`) として返す。
+
+skill 本体（親セッション）は subagent の verdict を受け取った後:
+
+1. `fatal: true` なら修正フローへ進む（後述「修正の提案」セクション）
+2. `findings` の各カテゴリをユーザーに簡潔に提示する
+3. ユーザーが修正に同意した場合のみ、親セッション側で `Edit` を適用する
+
+### 直接スクリプトを叩く場合（subagent を介さない）
+
+CI や lefthook、または subagent コストすら避けたい場合は素のスクリプト実行で十分:
 
 ```bash
 python3 .claude/skills/wiki-lint/scripts/wiki_lint.py
-# または、Codex などの AGENTS.md 系ランタイムから:
+# Codex などの AGENTS.md 系ランタイムから:
 python3 .agents/skills/wiki-lint/scripts/wiki_lint.py
 ```
 

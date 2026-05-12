@@ -7,6 +7,11 @@ arguments:
     required: true
 ---
 
+> **推奨モデル: Sonnet 4.6**
+> このスキルは記事の要約・統合・分類が主な仕事で、Opus の深い推論は不要。
+> 実行前に `/model sonnet` で切り替えるとコスト効率が良い（Opus と比較して大幅に安価、品質は同等）。
+> 一括処理 (`all`) の場合は特に効きが大きい。
+
 指定されたブログ記事を読み込み、Wiki ページ（コンセプト・ツール・ガイド）を自動生成・更新します。
 
 ## Wiki ページの分類基準
@@ -147,6 +152,64 @@ python3 .claude/skills/wiki-ingest/scripts/wiki_ingest_apply.py all --policy all
 2. 1カテゴリ処理するごとに進捗を報告する
 3. 重複するエンティティは統合する
 4. 処理完了後に全体の統計を報告する（作成ページ数、更新ページ数）
+
+## Backlog 再評価モード（`backlog-rescan` target）
+
+`/wiki-ingest backlog-rescan` で起動すると、`content/wiki/guides/wiki-ingest-backlog-*.md` に積まれている滞留記事を再走査し、現在の Wiki に対して **score>=70 で update_candidate に昇格できる候補だけ** を抽出する。
+
+backlog 入り当時は既存 Wiki が薄くて統合先が見つからなかった記事も、その後 Wiki が育っていれば再走査でマッチする可能性があるため、定期的な棚卸しに使う。
+
+### 実行フロー
+
+1. **Haiku 駆動の再走査** — `backlog-rescanner` subagent を起動する:
+   ```
+   Agent(subagent_type="backlog-rescanner", prompt="閾値 70、全 backlog 対象")
+   ```
+   - 引数で年・ステータス絞り込み（例: 「2014 年だけ」「new_candidate だけ」）も可
+   - 内部で `wiki_backlog_rescan.py --min-score 70 --format json` を実行
+   - スコア計算は `wiki_ingest_plan.plan_post()` を再利用しているので、通常の ingest と同一基準
+
+2. **候補リストをユーザーに提示** — agent から JSON verdict (`candidates[]`) を受け取り、表形式で要約する:
+
+   | post | promoted_to | score | best_target | reasons |
+   |---|---|---|---|---|
+   | `content/posts/.../foo.md` | update_candidate | 78 | `tools/celery.md` | title match; tag overlap |
+
+3. **承認** — ユーザーに個別 or 一括で確認を取る:
+   - `integrate`: 既存 Wiki に統合
+   - `create_new`: best_target はあるが薄いので Sonnet が新規ページ作成判断
+   - `defer`: 今回は見送り
+
+4. **Sonnet 親セッションが Edit/Write を担当** — `backlog-rescanner` は読み取り専用。実反映は親が行う:
+   - 既存 Wiki ページに `Edit` で `related_posts` 追記 + 該当節を加筆
+   - 統合先が薄ければ `Write` で新規 Wiki ページ作成
+   - 相互リンク（`/blogs/wiki/.../`）を追加
+
+5. **ビルド検証** — 完了後 `hugo --gc` でビルド成功を確認
+
+6. **backlog からの自動消滅** — 次回 CI で `wiki_ingest_apply.py --policy all` が走ると、Wiki に統合された記事は再生成時点で backlog から除外される（手動削除不要）
+
+### スクリプト直叩き（agent を介さない場合）
+
+ドライランや CI 利用のため、スクリプト単体でも実行可能:
+
+```bash
+# 全件、score>=70
+python3 .claude/skills/wiki-ingest/scripts/wiki_backlog_rescan.py --min-score 70
+
+# 2014 年の new_candidate だけ
+python3 .claude/skills/wiki-ingest/scripts/wiki_backlog_rescan.py \
+  --year 2014 --status new_candidate
+
+# JSON 出力、上位 30 件キャップ
+python3 .claude/skills/wiki-ingest/scripts/wiki_backlog_rescan.py \
+  --min-score 70 --cap 30 --format json
+```
+
+### 想定運用
+
+- 新規 Wiki ページが増えた直後（例: トレンド系のツール記事を ingest した後）に手動で `/wiki-ingest backlog-rescan` を走らせ、過去記事を吸い上げる
+- 月次 / 四半期で定常的に棚卸し（cron 化は要検討）
 
 ## 注意事項
 

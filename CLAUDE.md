@@ -21,17 +21,42 @@ Hugo + PaperMod で構築された技術ブログ。GitHub Pages でホスティ
 - `hugo.toml` — Hugo 設定ファイル
 - `.claude/skills/blog/` — `/blog` スキル定義
 - `.claude/agents/` — カスタム専門エージェント
+- `.codex/agents/` — `.claude/agents/` への symlink（Codex CLI から同じ agent 定義を参照するための共有口）
 - `.claude/temp/` — 一時ファイル置き場（.gitignore 済み、`/tmp` の代わりに使用）
 - `.worktrees/` — git worktree 置き場（.gitignore 済み、`.claude/` 外なので sensitive file 扱いされない）
 
 ## カスタムエージェント
 
-以下の専門エージェントが `.claude/agents/` に定義されている:
+以下の専門エージェントが `.claude/agents/` に定義されている（`.codex/agents/` からも同じものを参照可能）:
 
-- **fact-checker** — 記事のファクトチェック（ツール名・コマンド・URL・バージョンの検証）
+### `/blog` のメインフロー（6 並列で起動）
+
+ファクトチェック系（JSON verdict を返す）:
+
+- **claim-source-verifier** — 事実主張（ツール存在・機能仕様・「公式」帰属）を一次情報で裏付け検証
+- **url-liveness-checker** — 記事内 URL の HTTP ステータス確認（404 / dead link 検出）
+- **command-syntax-verifier** — CLI コマンド・API 呼び出しの構文・フラグを公式仕様と照合
+- **version-date-checker** — バージョン番号・リリース日・互換性記述の検証
+
+品質レビュー系（自然文レビュー）:
+
 - **seo-advisor** — SEO 最適化（タイトル改善、タグ提案、内部リンク提案）
 - **tech-writer** — 記事品質レビュー（構成、読みやすさ、日本語品質）
+
+### 用途別
+
+- **fact-checker** — 単発の総合ファクトチェック（観点を分けない一括走査）。`/blog` のメインフローでは使わない
 - **trend-researcher** — 技術トレンド調査と記事ネタ提案
+- **wiki-linter** — Wiki 健全性チェック (`/wiki-lint` から委託、`model: haiku` 固定でコスト最適化)
+- **backlog-rescanner** — Wiki ingest backlog の滞留記事を再走査して update_candidate 昇格候補を抽出 (`/wiki-ingest backlog-rescan` から委託、`model: haiku` 固定)
+
+## モデル選択の方針
+
+- `/blog` — Sonnet 4.6 推奨（ファクトチェックは subagent に隔離されているのでメインは執筆に専念）
+- `/wiki-ingest` / `/wiki-query` — Sonnet 4.6 推奨（要約・読解中心、Opus は過剰）
+- `/wiki-ingest backlog-rescan` — Sonnet 4.6 推奨（探索は `backlog-rescanner` agent が Haiku 4.5 で走り、Sonnet 親は統合判断と Edit/Write のみ担当）
+- `/wiki-lint` — 親セッションのモデルは何でもよい（`wiki-linter` subagent が Haiku 4.5 で走る）
+- 切り替え: `/model sonnet` または `/model haiku` をスキル実行前に
 
 ## 記事作成
 
