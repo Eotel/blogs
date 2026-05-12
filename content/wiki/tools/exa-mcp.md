@@ -2,10 +2,11 @@
 title: "Exa MCP"
 description: "ニューラル検索エンジン Exa の MCP サーバー。Claude に高精度な Web 検索能力を追加する"
 date: 2026-05-09
-lastmod: 2026-05-09
+lastmod: 2026-05-12
 aliases: ["Exa", "exa-mcp", "Exa neural search"]
 related_posts:
   - "/posts/2026/04/2026-04-25-exa-for-claude-mcp-plugin/"
+  - "/posts/2026/03/2026-03-05-b4b02c682a675d88c7200e82dba16420/"
 tags: ["MCP", "Claude Code", "検索", "AIエージェント", "Web検索"]
 ---
 
@@ -56,3 +57,4 @@ API キーは [exa.ai](https://exa.ai) で取得。無料枠あり。
 ## ソース記事
 
 - [Exa for Claude — ニューラル検索を MCP で Claude に追加する](/blogs/posts/2026/04/2026-04-25-exa-for-claude-mcp-plugin/) — 2026-04-25
+- [Google Workspace CLI（gws）— Drive・Gmail・Calendarを1コマンドで操作するAIエージェント対応ツール](/blogs/posts/2026/03/2026-03-05-b4b02c682a675d88c7200e82dba16420/) — 2026-03-05

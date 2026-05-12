@@ -2,9 +2,10 @@
 title: "FIDO2/パスキー認証"
 description: "秘密を送信しない公開鍵ベースの認証で、フィッシング耐性を構造的に実現する次世代認証"
 date: 2026-04-06
-lastmod: 2026-04-06
+lastmod: 2026-05-12
 aliases: ["FIDO2", "パスキー", "Passkey", "WebAuthn"]
-related_posts: []
+related_posts:
+  - "/posts/2026/03/2026-03-02-c18862bd01d56d81c66ae0bf0fe9263b/"
 tags: ["認証", "FIDO2", "パスキー", "セキュリティ"]
 ---
 
@@ -26,3 +27,6 @@ Google 8億+アカウント、Amazon 1.75億人が利用。日本証券業協会
 
 - [メール認証（SPF/DKIM/DMARC）](/blogs/wiki/concepts/email-authentication/) — 別のなりすまし防止技術
 
+## ソース記事
+
+- [FIDO2 認証（パスキー）の仕組み — パスワードを「構造的に不要にする」技術](/blogs/posts/2026/03/2026-03-02-c18862bd01d56d81c66ae0bf0fe9263b/) — 2026-03-02

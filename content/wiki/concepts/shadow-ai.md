@@ -2,11 +2,12 @@
 title: "シャドーAI"
 description: "IT 部門の承認を経ずに従業員が業務で使用する未承認の AI ツール・サービス"
 date: 2026-04-23
-lastmod: 2026-04-23
+lastmod: 2026-05-12
 aliases: ["Shadow AI", "シャドーIT AI版"]
 related_posts:
   - "/posts/2026/04/2026-04-15-shadow-ai-risks/"
   - "/posts/2026/04/2026-04-15-vibe-coding-security-risk/"
+  - "/posts/2026/03/2026-03-02-67f7657965c1f660dfbad9b0e88d0414/"
 tags: ["セキュリティ", "データガバナンス", "企業リスク", "AI"]
 ---
 
@@ -43,3 +44,4 @@ tags: ["セキュリティ", "データガバナンス", "企業リスク", "AI"
 
 - [シャドーAIがもたらす見えないリスク](/blogs/posts/2026/04/2026-04-15-shadow-ai-risks/) — 2026-04-15
 - [バイブコーディングの怖い話](/blogs/posts/2026/04/2026-04-15-vibe-coding-security-risk/) — 2026-04-15
+- [AIコーディングツール導入でMCC乗っ取り被害 — Antigravity・Claude Codeの脆弱性とシャドーAI対策](/blogs/posts/2026/03/2026-03-02-67f7657965c1f660dfbad9b0e88d0414/) — 2026-03-02

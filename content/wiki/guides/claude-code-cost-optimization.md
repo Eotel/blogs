@@ -2,12 +2,13 @@
 title: "Claude Code コスト最適化ガイド"
 description: "Plan Mode・原始人プロンプト・vLLM によるローカル LLM 切り替えで Claude Code のトークン消費・API コストを削減する手順"
 date: 2026-05-09
-lastmod: 2026-05-09
+lastmod: 2026-05-12
 aliases: ["Claude Code コスト削減", "トークン削減"]
 related_posts:
   - "/posts/2026/04/2026-04-23-claude-code-plan-mode-cost-reduction/"
   - "/posts/2026/04/2026-04-17-claude-caveman-token-reduction/"
   - "/posts/2026/04/2026-04-23-claude-code-local-llm-vllm/"
+  - "/posts/2026/04/2026-04-07-rtk-rust-token-killer-claude-code/"
 tags: ["Claude Code", "コスト削減", "Plan Mode", "vLLM", "トークン最適化"]
 ---
 
@@ -93,3 +94,4 @@ Skills の動作安定化にも効果がある。
 - [Plan Mode でトークン 64%・コスト 69% 削減](/blogs/posts/2026/04/2026-04-23-claude-code-plan-mode-cost-reduction/) — 2026-04-23
 - [Claude を「原始人」口調にするとトークンが 80% 減る話](/blogs/posts/2026/04/2026-04-17-claude-caveman-token-reduction/) — 2026-04-17
 - [Claude Code をローカル LLM（vLLM）で動かして API コストをゼロにする](/blogs/posts/2026/04/2026-04-23-claude-code-local-llm-vllm/) — 2026-04-23
+- [RTK（Rust Token Killer）でClaude Codeのトークン使用量を60〜90%削減する](/blogs/posts/2026/04/2026-04-07-rtk-rust-token-killer-claude-code/) — 2026-04-07

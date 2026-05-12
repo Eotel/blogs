@@ -2,11 +2,13 @@
 title: "プロンプトインジェクション"
 description: "ユーザー入力にシステムプロンプトを改ざんするコードを混在させる攻撃手法"
 date: 2026-04-06
-lastmod: 2026-04-06
+lastmod: 2026-05-12
 aliases: ["Prompt Injection"]
 related_posts:
   - "/posts/2026/03/vibe-hacking/"
   - "/posts/2026/03/claude-code-security-theater/"
+  - "/posts/2026/03/2026-03-02-67f7657965c1f660dfbad9b0e88d0414/"
+  - "/posts/2026/03/2026-03-31-chatgpt-dns-tunneling-data-leak/"
 tags: ["セキュリティ", "LLM", "脆弱性", "攻撃"]
 ---
 
@@ -30,3 +32,5 @@ tags: ["セキュリティ", "LLM", "脆弱性", "攻撃"]
 
 - [Vibe Hacking](/blogs/posts/2026/03/vibe-hacking/) — 2026-03
 - [Claude Code セキュリティシアター](/blogs/posts/2026/03/claude-code-security-theater/) — 2026-03
+- [AIコーディングツール導入でMCC乗っ取り被害 — Antigravity・Claude Codeの脆弱性とシャドーAI対策](/blogs/posts/2026/03/2026-03-02-67f7657965c1f660dfbad9b0e88d0414/) — 2026-03-02
+- [ChatGPTのコード実行環境にDNSトンネリングによるデータ漏洩の脆弱性が発覚](/blogs/posts/2026/03/2026-03-31-chatgpt-dns-tunneling-data-leak/) — 2026-03-31
