@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4116535372"
 categories: ["AI/LLM"]
 tags: ["agent", "AI", "トレーディング", "アービトラージ", "自動化"]
+slug: "2026-03-24-ai-trading-bot-timezone-arbitrage"
 ---
 
 「寝てる間に稼ぐ」――AI トレーディングボットが24時間タイムゾーン裁定を監視し、海外で確定した市場を見つけて $43,800 を稼いだという投稿が話題になっています。本記事では、タイムゾーン裁定取引（Timezone Arbitrage）の仕組み、AI ボットの役割、そして見落とされがちなリスクについて解説します。

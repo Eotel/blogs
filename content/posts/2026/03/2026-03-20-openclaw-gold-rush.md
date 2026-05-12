@@ -8,6 +8,7 @@ source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4095189072"
 categories: ["AI/LLM"]
 tags: ["openclaw", "agent", "security"]
 description: "中国でOpenClawが爆発的に普及し、AIエージェントの設定代行ビジネスが急成長。北京のエンジニアが7,000件の注文を処理して100人企業に成長した事例など、AI時代のゴールドラッシュの実態を解説。"
+slug: "2026-03-20-openclaw-gold-rush"
 ---
 
 中国で自律型AIエージェント「OpenClaw」が爆発的に普及し、社会現象になっている。注目すべきは、このテクノロジーの普及に伴って「AIの初期設定代行」という泥臭いビジネスが急成長していることだ。ゴールドラッシュで一番儲かるのは金を掘る人ではなく「ツルハシを売る人」という古典的な法則が、2026年のAI時代にも再現されている。

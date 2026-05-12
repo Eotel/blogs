@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/71#issuecomment-4079587710"
 categories: ["ビジネス/キャリア"]
 tags: ["マーケティング", "位置情報", "広告", "HubSpot", "FreakOut"]
+slug: "2026-03-18-geo-marketing"
 ---
 
 ジオマーケティング（Geo-marketing）は、スマートフォンの GPS やWi-Fi、ビーコンなどから取得した位置情報を活用して、特定エリアのユーザーに最適な広告や情報を配信するマーケティング手法です。ここでは、ジオマーケティングの基本と、FreakOut 社が提供する位置情報マーケティングプラットフォーム「ASE」を紹介します。

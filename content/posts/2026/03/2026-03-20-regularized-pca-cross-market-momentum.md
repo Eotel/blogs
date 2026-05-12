@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4095060591"
 categories: ["AI/LLM"]
 tags: ["PCA", "機械学習", "株式投資", "クオンツ", "統計"]
+slug: "2026-03-20-regularized-pca-cross-market-momentum"
 ---
 
 米国市場の業種別リターンから翌日の日本市場を予測する — そんな論文の解説が X で話題になっていました。ポイントは「正則化 PCA（主成分分析）」によるノイズ除去です。本記事ではこの手法の仕組みと、なぜ通常の PCA より優れた結果を出せるのかを整理します。

@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4022922774"
 categories: ["AI/LLM"]
 tags: ["claude-code", "agent", "typescript", "python", "github"]
+slug: "2026-03-09-harness-engineering"
 ---
 
 Claude Code や Codex といった AI コーディングエージェントを現場に投入する開発者が増えるなか、「ハーネスエンジニアリング」という新しい実践領域が注目を集めている。逆瀬川氏（[@gyakuse](https://x.com/gyakuse)）が公開した[まとめ記事](https://nyosegawa.github.io/posts/harness-engineering-best-practices-2026/)から、要点を紹介する。

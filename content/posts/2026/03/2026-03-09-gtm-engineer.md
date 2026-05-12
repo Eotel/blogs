@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4020352621"
 categories: ["ビジネス/キャリア"]
 tags: ["agent", "llm", "キャリア"]
+slug: "2026-03-09-gtm-engineer"
 ---
 
 AI スタートアップが必死に探している人材がいる。営業でもマーケでもエンジニアでもない、しかしその全部を1人でやる「GTMエンジニア」だ。Y Combinator 出身の創業者たちがこぞって求めるこの職種は、AI 時代のキャリアの新しい形を示している。

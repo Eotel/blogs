@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4085418385"
 categories: ["AI/LLM"]
 tags: ["OpenClaw", "バイブマーケティング", "AI広告", "agent", "claude"]
+slug: "2026-03-18-openclaw-vibe-marketer"
 ---
 
 個人開発者の Ernest Lopez 氏が、OpenClaw を活用して広告制作を自動化し、年間30万ドル規模のアプリ収益を伸ばしている事例が話題になっている。AIエージェント「Eddie」を中心としたワークフローは、競合リサーチから広告制作、パフォーマンス改善まで一気通貫で回す仕組みだ。

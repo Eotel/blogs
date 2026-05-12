@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4031788980"
 categories: ["AI/LLM"]
 tags: ["claude-code", "claude", "agent", "llm"]
+slug: "2026-03-10-claude-code-spec-driven-dev"
 ---
 
 ゼロトピック（Zero Topic）の [#337「Claude Code時代の仕様書の役割」](https://open.spotify.com/episode/0YJIiXlVuv1ZMQgpooylXs) が話題になっている。10X の矢本氏が、生成 AI が開発プロセスに与える影響と、仕様書の役割がどう変わるかを整理した回だ。

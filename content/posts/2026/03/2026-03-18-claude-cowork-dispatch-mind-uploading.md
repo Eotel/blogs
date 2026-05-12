@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4085495219"
 categories: ["AI/LLM"]
 tags: ["claude", "agent", "openclaw"]
+slug: "2026-03-18-claude-cowork-dispatch-mind-uploading"
 ---
 
 紺野大地氏（@_daichikonno）が、Claude Cowork Dispatch に OpenClaw で育てた AI エージェント人格を移植する試みについて投稿し、「これは Mind Uploading そのものだ」と述べたことが話題になっています。AI エージェントのプラットフォーム間移植が、意識のアップロードという哲学的テーマとどう繋がるのかを考察します。

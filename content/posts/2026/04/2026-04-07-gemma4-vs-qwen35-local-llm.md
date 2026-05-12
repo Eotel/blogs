@@ -7,6 +7,7 @@ author: "hdknr"
 description: "Google Gemma 4 31BとAlibaba Qwen3.5-27Bをローカル実行の観点で徹底比較。ベンチマーク、メモリ要件、マルチモーダル、日本語対応、推論速度を検証する。"
 categories: ["AI/LLM"]
 tags: ["Gemma", "qwen", "llm", "Apple Silicon", "ollama"]
+slug: "2026-04-07-gemma4-vs-qwen35-local-llm"
 ---
 
 2026年春、ローカルで動かせる高性能 LLM の選択肢が充実してきた。中でも注目なのが **Google の Gemma 4 31B**（2026年4月リリース、Apache 2.0）と **Alibaba の Qwen3.5-27B**（2026年2月リリース）だ。どちらも密（dense）モデルで、Apple Silicon Mac や RTX 4090 クラスの GPU で実用的に動作する。

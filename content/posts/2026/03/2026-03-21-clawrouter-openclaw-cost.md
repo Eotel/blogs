@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4102696274"
 categories: ["AI/LLM"]
 tags: ["llm", "agent", "openclaw", "openai"]
+slug: "2026-03-21-clawrouter-openclaw-cost"
 ---
 
 OpenClaw を使っていて API コストが気になっていませんか？ **ClawRouter** は、リクエストごとに最安のモデルを自動選択してくれるオープンソースの LLM ルーターです。最大約92%のコスト削減が期待でき、しかも完全無料で利用できます。

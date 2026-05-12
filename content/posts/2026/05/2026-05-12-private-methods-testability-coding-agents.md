@@ -8,6 +8,7 @@ model: "claude-opus-4-7"
 description: "Uncle Bob・Fowler・Feathers・t_wada が言ってきた『private を test するな』を 2026 年の AI coding agent 時代に読み直す。カプセル化と testability の対立を、class の境界の設計判断として捉え直すための長文論考。"
 categories: ["AI/LLM"]
 tags: ["TDD", "private-method", "テスタビリティ", "Clean-Architecture", "AI-coding-agent"]
+slug: "2026-05-12-private-methods-testability-coding-agents"
 ---
 
 ## 序: ボブおじの通った道を辿るとき

@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4027391441"
 categories: ["AI/LLM"]
 tags: ["openai", "agent", "llm", "claude-code"]
+slug: "2026-03-09-openai-symphony"
 ---
 
 OpenAI が **Symphony** というオープンソースの自動化基盤をリリースしました。Issue トラッカーから課題を読み取り、課題ごとに隔離ワークスペースを作成し、AI エージェントに実装を走らせるオーケストレーションフレームワークです。

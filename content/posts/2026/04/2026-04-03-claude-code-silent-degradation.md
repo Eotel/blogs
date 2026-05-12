@@ -8,6 +8,7 @@ source_url: "https://gist.github.com/hdknr/b3fbb36d80ee881172cff7395f482290"
 categories: ["AI/LLM"]
 tags: ["Claude Code", "テスト", "デグレード", "リファクタリング", "AI開発"]
 description: "Claude Code でリファクタリングすると既存機能の出力品質が静かに劣化する問題の事例と、出力仕様テストによる防止策を解説。"
+slug: "2026-04-03-claude-code-silent-degradation"
 ---
 
 Claude Code でリファクタリングや新機能追加を行うと、**既存機能の出力品質が意図せず劣化する**ことがある。機能は正しく動いておりテストも通るが、ユーザーが期待する情報が出力から消えている。この記事では、実際に遭遇した「静かなデグレード」の事例と、出力仕様テストによる対策を紹介する。

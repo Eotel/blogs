@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4077632474"
 categories: ["AI/LLM"]
 tags: ["バイブコーディング", "プロンプトエンジニアリング", "CHI2026", "生成AI", "論文"]
+slug: "2026-03-17-vibe-coding-cs-writing-skills"
 ---
 
 「AIに言葉で指示するだけ」のバイブコーディング（vibe coding）において、どんな人が高い成果を出せるのか——CHI2026 に採択された論文の知見が注目を集めています。

@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4102565274"
 categories: ["AI/LLM"]
 tags: ["claude-code", "claude", "agent", "OpenClaw", "MCP"]
+slug: "2026-03-21-claude-code-channels"
 ---
 
 2026 年 3 月 20 日、Anthropic が Claude Code の新機能「Channels」をリサーチプレビューとしてリリースしました。Telegram や Discord から Claude Code セッションにメッセージを送り、PC 上で開発タスクを実行させることができる機能です。この記事では Claude Code Channels の概要と、OpenClaw と組み合わせた AI 開発ワークフローの可能性について紹介します。

@@ -8,6 +8,7 @@ source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4165302030"
 categories: ["セキュリティ"]
 tags: ["Claude Code", "npm", "ソースマップ", "Anthropic", "情報漏洩"]
 description: "Anthropic の Claude Code npm パッケージにソースマップファイルが混入し、約51万行の TypeScript ソースコードが全公開。原因の設定ミスと、npm パッケージ公開時のソースマップ対策を解説。"
+slug: "2026-03-31-claude-code-source-map-leak"
 ---
 
 2026年3月31日、Anthropic の Claude Code でソースコード漏洩インシデントが発生しました。npm レジストリに含まれたソースマップファイル（`.map`）を通じて、ソースコード全体が公開された形です。

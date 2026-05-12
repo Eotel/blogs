@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4042856024"
 categories: ["AI/LLM"]
 tags: ["claude-code", "openai", "llm", "agent"]
+slug: "2026-03-11-claude-code-vs-codex"
 ---
 
 AI コーディングエージェントの二大巨頭、Anthropic の Claude Code と OpenAI の Codex。どちらを使うべきか迷っている開発者は多いでしょう。Hesam 氏（@Hesamation）が数ヶ月間の実用比較を経て「Claude Code に戻った」という記事が話題になっています。本記事では、両ツールのベンチマーク・アーキテクチャ・実用上の使い分けを整理します。

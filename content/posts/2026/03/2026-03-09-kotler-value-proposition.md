@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4020985083"
 categories: ["ビジネス/キャリア"]
 tags: ["マーケティング"]
+slug: "2026-03-09-kotler-value-proposition"
 ---
 
 コトラーが提唱するように、現代のマーケティングにおいて「価値の提案（バリュー・プロポジション）」は核心だ。しかし、情報が氾濫する現代では、顧客は **「時間を消費すること」に対して非常に慎重** になっている。

@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4042874314"
 categories: ["AI/LLM"]
 tags: ["agent", "openclaw"]
+slug: "2026-03-11-openclaw-x-knowledge-management"
 ---
 
 OpenClaw を使った X（旧 Twitter）運用で、1週間で79万インプレッション・フォロワー1,000人以上増加という成果報告が話題になっています。この記事では、その成果の背景にある「ナレッジ管理」と「投稿生成プロセス」の重要性について解説します。

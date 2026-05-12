@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4152193070"
 categories: ["AI/LLM"]
 tags: ["AIエージェント", "toA", "agent", "スタートアップ", "市場分析"]
+slug: "2026-03-30-toa-services-for-ai-agents"
 ---
 
 「toC」でも「toB」でもない。AIエージェントそのものがお客さんになる——「toA」という新しい市場が急速に立ち上がっています。paji氏（[@paji_a](https://x.com/paji_a)）がリサーチした200超のサービスから見えてきた、この新市場の構造を紹介します。

@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4041979554"
 categories: ["AI/LLM"]
 tags: ["openai", "agent", "llm", "codex"]
+slug: "2026-03-11-codex-subagent-swarm"
 ---
 
 OpenAI Codex に搭載された SubAgent（サブエージェント）機能が話題になっています。複数の AI エージェントを並列で動かし、複雑なコーディングタスクを群（Swarm）として処理できるこの機能について、技術的な詳細をまとめます。

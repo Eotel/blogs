@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4050713900"
 categories: ["その他"]
 tags: ["地政学", "アメリカ", "イスラエル", "福音派", "中東"]
+slug: "2026-03-12-us-israel-evangelical"
 ---
 
 アメリカとイスラエルは「普通の同盟国」ではない。日米同盟やNATOのように論理で説明できる同盟とは、まったく性質が異なる。その背景にある「見えない構造」を読み解く。

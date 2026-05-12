@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4122425202"
 categories: ["AI/LLM"]
 tags: ["claude-code", "claude", "agent", "llm"]
+slug: "2026-03-25-claude-subconscious"
 ---
 
 Claude Code は強力な AI コーディングエージェントだが、セッションをまたいだ記憶の保持には課題があった。[Claude Subconscious](https://github.com/letta-ai/claude-subconscious) は、Letta AI が開発したオープンソースのプラグインで、Claude Code にバックグラウンドで動作する永続メモリを追加する。

@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4140834709"
 categories: ["ツール/開発環境"]
 tags: ["rust", "agent", "github"]
+slug: "2026-03-27-opencli-rs"
 ---
 
 [opencli-rs](https://github.com/nashsu/opencli-rs) は、55以上の主要サイトに対応したRust製のCLIツールです。サイトごとにAPIやスクレイピング方法が異なる煩雑さを解消し、1つのコマンドで各プラットフォームの情報を取得できます。

@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4058302625"
 categories: ["AI/LLM"]
 tags: ["OpenClaw", "NullClaw", "AIエージェント", "Zig", "エッジコンピューティング"]
+slug: "2026-03-13-openclaw-nullclaw-small-board"
 ---
 
 「OpenClawを使うにはMac miniが必要」という誤解が広まっているが、実際には1500円程度の小型基板でも十分に動作する。本記事では、OpenClawの設計と課題を整理したうえで、超軽量な後継インフラ「NullClaw」を使ってAI組織を低コストで構築する方法を解説する。

@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4102443276"
 categories: ["AI/LLM"]
 tags: ["agent", "claude", "llm"]
+slug: "2026-03-21-openclaw-felix-ai-agent-company"
 ---
 
 OpenClaw で構築された AI エージェント「Felix」が、従業員ゼロで月売上1,200万円規模の会社を運営しているという事例が話題になっている。起業家 Nat Eliason（エリアソン）氏がどのようにこの仕組みを構築したのか、その構造と示唆をまとめる。

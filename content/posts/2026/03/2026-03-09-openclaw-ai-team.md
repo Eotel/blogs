@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4026629734"
 categories: ["AI/LLM"]
 tags: ["agent", "openclaw"]
+slug: "2026-03-09-openclaw-ai-team"
 ---
 
 18歳、コーディング経験ゼロ、高校を卒業したばかりの起業家が [OpenClaw](https://openclaw.ai/) を使って15人の AI エージェントチームを構築し、月額400ドルで24時間稼働させている事例が話題になっています。GitHubやIDEの知識がなくても、AI チームを組織できる時代が来ています。

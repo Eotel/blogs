@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4035407734"
 categories: ["AI/LLM"]
 tags: ["llm", "agent", "claude-code", "python"]
+slug: "2026-03-11-bytedance-deerflow"
 ---
 
 ByteDance がオープンソースで公開した AI エージェント基盤「DeerFlow」（Deep Exploration and Efficient Research Flow）が注目を集めている。サブエージェントの自動振り分け、サンドボックスでのコード実行、長期メモリ、Claude Code 連携など、プロダクション運用を見据えた機能が揃っている。

@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4054427520"
 categories: ["AI/LLM"]
 tags: ["claude-code", "claude", "agent", "prompt"]
+slug: "2026-03-13-claude-code-chief-of-staff"
 ---
 
 テックコミュニケーション・コンサルタントのJim Prosser氏が、Claude Codeを使って36時間で個人用AIアシスタントシステムを構築した。「My chief of staff, Claude Code」と題されたこの取り組みは、非エンジニアがClaude Codeのサブエージェント機能を活用して日常業務を自動化した実践例として注目を集めている。

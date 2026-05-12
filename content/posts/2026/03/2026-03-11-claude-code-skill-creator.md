@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4042055345"
 categories: ["AI/LLM"]
 tags: ["claude-code", "claude", "agent", "prompt"]
+slug: "2026-03-11-claude-code-skill-creator"
 ---
 
 Anthropic が公開した「The Complete Guide to Building Skills for Claude」という 33 ページの PDF ガイドが話題になっています。このガイドをそのまま Claude Code のメモリに読み込ませてスキル構築に活用しようとする人もいますが、実は公式の **skill-creator プラグイン**を使う方がはるかに効率的です。

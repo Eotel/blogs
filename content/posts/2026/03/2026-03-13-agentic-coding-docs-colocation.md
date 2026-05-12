@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4058450348"
 categories: ["AI/LLM"]
 tags: ["agent", "claude-code", "llm"]
+slug: "2026-03-13-agentic-coding-docs-colocation"
 ---
 
 Agentic Coding（AIエージェントによるコーディング）が普及する中、AIに渡すドキュメントをどこに配置すべきかという問題が注目されています。[古川陽介氏（@yosuke_furukawa）のポスト](https://x.com/yosuke_furukawa/status/2032377413800472967)で紹介されていた記事「[Your Docs Directory Is Doomed](https://yagmin.com/blog/your-docs-directory-is-doomed/)」（Yagmin）の内容をもとに、この問題を考えます。

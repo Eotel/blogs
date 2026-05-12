@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4113577162"
 categories: ["AI/LLM"]
 tags: ["claude-code", "react", "figma"]
+slug: "2026-03-23-claude-code-design-tool-steve-schoger"
 ---
 
 Tailwind CSSチームのデザイナー Steve Schoger が、「Claude Codeをメインのデザインツールにした」という1時間の解説動画を公開した。Figmaを使わず、Claude Codeだけで金融アプリのランディングページをゼロから構築する過程を全公開している。

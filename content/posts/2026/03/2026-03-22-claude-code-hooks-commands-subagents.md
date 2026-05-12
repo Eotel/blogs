@@ -8,6 +8,7 @@ source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4107205979"
 description: "Claude Code のフック（Hooks）、カスタムスラッシュコマンド、サブエージェントの3機能を解説。settings.json の設定例やコマンド定義の実例付きで、導入後の次のステップが分かる。"
 categories: ["AI/LLM"]
 tags: ["claude-code", "claude", "hooks", "カスタムコマンド", "サブエージェント"]
+slug: "2026-03-22-claude-code-hooks-commands-subagents"
 ---
 
 Claude Code をインストールして「で、次どうすれば…？」となっていないだろうか。導入は単なる入口に過ぎない。**フック**、**カスタムコマンド**、**サブエージェント**の3つを使いこなすことで、Claude Code は「1人のAIアシスタント」から「自分専用の開発チーム」へと変わる。

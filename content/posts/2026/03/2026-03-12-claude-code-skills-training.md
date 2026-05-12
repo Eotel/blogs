@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4050698184"
 categories: ["AI/LLM"]
 tags: ["claude-code", "claude", "prompt", "agent"]
+slug: "2026-03-12-claude-code-skills-training"
 ---
 
 Claude Code の Skills 機能を使って、過去のプロンプト入力履歴をスキャンし、利用者が「何を分かっていて、何を分かっていないか」を可視化する仕組みが紹介されていました。プロンプトを通じた新人教育の可能性を探ります。

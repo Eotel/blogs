@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4113573965"
 categories: ["AI/LLM"]
 tags: ["経済", "資産運用", "デフレ", "通貨制度", "不動産"]
+slug: "2026-03-23-ai-deflation-asset-defense-illusion"
 ---
 
 不動産コンサルタントの長嶋修氏がX上で公開した長文コラム「資産防衛という幻想」が話題になっている。AIによる生産性革命がもたらす構造的デフレ、通貨制度の崩壊リスク、そして「資産防衛」という概念そのものへの疑問を投げかける内容だ。

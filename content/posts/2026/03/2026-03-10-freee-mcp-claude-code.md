@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4030378160"
 categories: ["AI/LLM"]
 tags: ["claude-code", "mcp", "agent"]
+slug: "2026-03-10-freee-mcp-claude-code"
 ---
 
 minicoohei 氏（[@minicoohei](https://x.com/minicoohei)）が、freee の公式 MCP サーバーと Claude Code を組み合わせて**確定申告の仕訳1,428件をわずか20分で完了**させた事例を[公開した](https://x.com/minicoohei/status/2031269678040162679)。手作業なら4〜5時間かかる Amex のクレジットカード明細の仕訳登録を、AI が自動化した。

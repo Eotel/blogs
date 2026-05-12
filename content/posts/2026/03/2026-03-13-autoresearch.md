@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4058506995"
 categories: ["AI/LLM"]
 tags: ["llm", "agent", "python"]
+slug: "2026-03-13-autoresearch"
 ---
 
 Andrej Karpathy が2026年3月に公開した [autoresearch](https://github.com/karpathy/autoresearch) は、AIエージェントにLLMのトレーニングを丸投げするツールだ。GPU1台・一晩放置するだけで、エージェントが自律的にコード修正→実験→評価を繰り返し、人間の研究者なしで性能を改善していく。

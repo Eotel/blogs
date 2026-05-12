@@ -8,6 +8,7 @@ source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4110437991"
 categories: ["AI/LLM"]
 tags: ["Claude", "AI活用", "DIY", "専門知識", "スマートホーム"]
 description: "Claude を使って業者見積もり150万円の床下除湿システムを37万円で自力設計した事例。AI が専門知識のペイウォールを壊し、HVAC・建設・農業などの領域で何が変わるかを考察。"
+slug: "2026-03-23-ai-expert-knowledge-paywall"
 ---
 
 「AI でアプリが作れるようになった」という話題が注目されがちだが、本当に面白い変化は画面の外で起きている。起業家の Bill D'Alessandro 氏が Claude を使って床下の除湿システムを自力設計し、業者見積もり $10,000（約150万円）を $2,500（約37万円）で実現した。

@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4113387733"
 categories: ["AI/LLM"]
 tags: ["notebooklm", "prompt", "agent"]
+slug: "2026-03-23-notebooklm-20-experts"
 ---
 
 NotebookLM の「専門特化型ノート」を使って、テーマごとにノートブックを分けることで「20人の専門家チーム」を構築する方法を紹介します。元ネタは [えーたん/AI×時短で仕事効率化(@ai_jitan)](https://x.com/ai_jitan) さんの投稿です。

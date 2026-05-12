@@ -8,6 +8,7 @@ description: "Claude CodeのSkill・Agent・MCP・Memoryは不要でCLIで十分
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4137811256"
 categories: ["AI/LLM"]
 tags: ["claude-code", "llm", "agent", "mcp"]
+slug: "2026-03-26-ai-fatigue-claude-code-simplicity"
 ---
 
 「AI疲れ」という言葉が広がる中、Claude Code のハーネス機能（Skill, Agent, MCP, Memory）は不要であり、シンプルな CLI で十分だという主張が話題になっている。この議論の論点を整理し、実際の開発現場での実用性を考察する。

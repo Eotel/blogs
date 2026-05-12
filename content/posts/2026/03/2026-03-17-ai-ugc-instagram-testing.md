@@ -8,6 +8,7 @@ description: "Creatify・HeyGenなどのAIツールでUGC動画を量産し、In
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4078754469"
 categories: ["AI/LLM"]
 tags: ["AI広告", "UGC", "Instagram", "動画生成", "A/Bテスト"]
+slug: "2026-03-17-ai-ugc-instagram-testing"
 ---
 
 AI ツールを活用し、UGC（User Generated Content）スタイルの広告クリエイティブを量産する手法が注目されている。Instagram 上で A/B テストを回し、データドリブンで勝ちパターンを見つけて売上につなげるワークフローだ。従来は実際のクリエイターに依頼していた UGC 動画を、AI アバターと音声合成で低コスト・大量に生成できるようになった。

@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4078716085"
 categories: ["AI/LLM"]
 tags: ["Manus", "AIエージェント", "自動化", "Wide Research", "AI活用"]
+slug: "2026-03-17-manus-ai-agent-29-features"
 ---
 
 ChatGPTに指示を出して、結果を確認して、また指示を出して——このループに疲れていないだろうか。「こっちが細かく指示しなくても、AIが全部やってくれたらいいのに」という願いは、すでに実現している。その名前が **Manus（マナス）** だ。

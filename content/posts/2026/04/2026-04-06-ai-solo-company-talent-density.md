@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4194412788"
 categories: ["ビジネス/キャリア"]
 tags: ["AI", "スタートアップ", "才能密度", "一人会社", "生産性"]
+slug: "2026-04-06-ai-solo-company-talent-density"
 ---
 
 2026年、「1人で100億稼ぐ企業」が大量発生するという予測が現実味を帯びてきた。すでに海外では1人で30億円規模の売上を達成した事例も登場している。AI が業務を圧縮し続ける今、「大人数＝強い会社」という常識が根本から覆されつつある。

@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4043632679"
 categories: ["AI/LLM"]
 tags: ["claude-code", "SEO", "GEO", "llm", "agent"]
+slug: "2026-03-12-geo-seo-claude"
 ---
 
 ChatGPTやClaude、Perplexityなどの AI 検索エンジンに自社サイトを見つけてもらうための最適化ツール「[geo-seo-claude](https://github.com/zubair-trabzada/geo-seo-claude)」がオープンソースで公開されている。従来の SEO に加えて、AI が引用・参照しやすいコンテンツ構造を自動分析・提案してくれる Claude Code 用スキルだ。

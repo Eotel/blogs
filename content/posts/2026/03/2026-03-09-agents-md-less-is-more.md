@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4020353773"
 categories: ["AI/LLM"]
 tags: ["agent", "claude-code"]
+slug: "2026-03-09-agents-md-less-is-more"
 ---
 
 AI コーディングエージェントの設定ファイル（AGENTS.md、CLAUDE.md など）は「詳しく書くほど良い」と思われがちだ。しかし ETH Zurich の研究チームが138リポジトリ・5,694プルリクエストを対象に行った調査で、**詳細すぎるコンテキストファイルはむしろ性能を下げる**ことが実証された。

@@ -361,10 +361,37 @@ def main() -> int:
             print(f"- `posts/{rel}` → `{link}` — リンク先 Wiki ページが存在しない")
     else:
         print("- なし")
+    print()
+
+    # Posts must define `slug:` explicitly. Hugo's `:slug` permalink token
+    # falls back to the title (slugified) when `slug:` is absent, which makes
+    # URLs unstable and breaks filename-pattern related_posts links.
+    posts_missing_slug: list[Path] = []
+    for post_file in posts_dir.rglob("*.md"):
+        if post_file.name == "_index.md":
+            continue
+        try:
+            fm = parse_frontmatter(post_file.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        slug = fm.get("slug")
+        if not (isinstance(slug, str) and slug.strip()):
+            posts_missing_slug.append(post_file)
+
+    print(f"### 記事の slug 欠落 ({len(posts_missing_slug)}件)")
+    if posts_missing_slug:
+        for f in posts_missing_slug:
+            rel = f.relative_to(posts_dir)
+            print(
+                f"- `posts/{rel}` — `slug:` 未定義 (Hugo は title 由来 slug にフォールバックし URL が不安定になる)"
+            )
+    else:
+        print("- なし")
 
     # Fatal: structural / referential issues that should block pre-push and CI.
     #   - broken_links / related_post_issues / post_wiki_broken: dead references
     #   - fm_required_count: pages missing at least one REQUIRED frontmatter key
+    #   - posts_missing_slug: posts without `slug:` (URLs become title-derived)
     # Advisory (non-blocking):
     #   - orphans / stale pages: surfaced by /wiki-lint review, but /wiki-ingest
     #     output is temporarily orphan by design until cross-links are added
@@ -374,6 +401,7 @@ def main() -> int:
         + len(related_post_issues)
         + fm_required_count
         + len(post_wiki_broken)
+        + len(posts_missing_slug)
     )
     fm_recommended_only = len(fm_issues) - fm_required_count
     advisory_issues = len(orphans) + len(stale_pages) + fm_recommended_only

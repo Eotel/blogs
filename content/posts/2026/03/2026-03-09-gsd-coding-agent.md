@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4020357429"
 categories: ["AI/LLM"]
 tags: ["agent", "llm", "claude-code"]
+slug: "2026-03-09-gsd-coding-agent"
 ---
 
 AI コーディングエージェントで「ランディングページを作って」くらいなら動く。しかし、複数ファイル・複数サブシステムが絡む本格的なプロジェクトになると、エージェントはコヒーレンスを失い、前に作ったものを忘れ、壊れたコードを量産し始める。GSD はこの問題を構造的に解決するシステムだ。

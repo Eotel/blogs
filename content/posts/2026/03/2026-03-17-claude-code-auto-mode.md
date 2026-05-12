@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4078718977"
 categories: ["AI/LLM"]
 tags: ["Claude Code", "Auto Mode", "許可管理", "開発ツール", "CLI"]
+slug: "2026-03-17-claude-code-auto-mode"
 ---
 
 これまでClaude Codeを使っていて「許可ボタン押すのめんどくさすぎ問題」にイラッとしてた人、朗報です。Claude Codeに新機能「Auto Mode」が追加されました。

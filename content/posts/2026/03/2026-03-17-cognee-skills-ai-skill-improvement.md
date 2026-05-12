@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4077629102"
 categories: ["AI/LLM"]
 tags: ["Claude Code", "cognee-skills", "スキル管理", "AI自動化", "プロンプトエンジニアリング"]
+slug: "2026-03-17-cognee-skills-ai-skill-improvement"
 ---
 
 Claude Code でスキルを作って業務を自動化していると、ある日気づく。「AIはスキルの存在を『知っている』が、ちゃんと『使っている』わけではない」。そこに救いの手として登場するのが **cognee-skills** という考え方だ。

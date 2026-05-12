@@ -8,6 +8,7 @@ model: "claude-opus-4-7"
 description: "投機的デコード（Speculative Decoding）を音声合成に応用した VADUSA / Llasa+ / SSD を中心に、Flow Matching 蒸留（F5-TTS, DMOSpeech 2）・TensorRT-LLM・ストリーミング設計まで、2026 年の TTS 推論高速化を 1 本に整理する。"
 categories: ["AI/LLM"]
 tags: ["TTS", "音声合成", "投機的デコード", "推論高速化", "flow-matching", "VADUSA", "Llasa", "F5-TTS"]
+slug: "2026-05-12-speculative-tts-acceleration-2026"
 ---
 
 LLM 高速化の主役だった **投機的デコード（Speculative Decoding）** が、ここ 1 年で音声合成（TTS）側にも降りてきた。VADUSA、Llasa+、SSD と立て続けに「**投機的 TTS（Speculative TTS）**」を名乗る論文が並び、AR codec language model の生成を 1.4〜5 倍速くしている。

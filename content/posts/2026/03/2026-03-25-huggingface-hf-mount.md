@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4129195588"
 categories: ["AI/LLM"]
 tags: ["llm", "huggingface", "fuse", "kubernetes", "agent"]
+slug: "2026-03-25-huggingface-hf-mount"
 ---
 
 2026年3月、HuggingFace が新ツール **hf-mount** を[発表](https://x.com/ClementDelangue/status/2036452081750409383)しました。HuggingFace Hub にホスティングされている巨大な AI モデルやデータセットを、ダウンロードせずに仮想ファイルシステムとして直接マウントできるツールです。

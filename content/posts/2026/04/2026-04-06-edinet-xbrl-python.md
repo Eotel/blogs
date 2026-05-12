@@ -8,6 +8,7 @@ source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4195639252"
 categories: ["プログラミング言語"]
 description: "EDINETのXBRLファイルをPythonで解析する方法を解説。edinet-xbrlライブラリのインストールからXBRLパース、EDINET APIでの書類取得まで、サンプルコード付きで紹介"
 tags: ["Python", "XBRL", "EDINET", "金融データ", "有価証券報告書"]
+slug: "2026-04-06-edinet-xbrl-python"
 ---
 
 EDINETで公開されている有価証券報告書のXBRLファイルを、Pythonで効率的にパース・活用する方法を紹介する。[edinet-xbrl](https://github.com/BuffettCode/edinet_xbrl) ライブラリを使えば、複雑なXBRL仕様を意識せずにデータを抽出できる。

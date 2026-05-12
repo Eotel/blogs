@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4126127772"
 categories: ["クラウド/インフラ"]
 tags: ["aws", "claude-code", "agent", "mcp"]
+slug: "2026-03-25-aws-agent-plugins-claude-code"
 ---
 
 AWS が「**Agent Plugins for AWS**」を公開しました。AI コーディングエージェント（Claude Code や Cursor など）に、AWS のアーキテクチャ設計からデプロイ実行までの能力を組み込むオープンソースのプラグインライブラリです。

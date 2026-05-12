@@ -8,6 +8,7 @@ description: "Browser Use CLI 2.0 は Playwright より2倍速く、コスト半
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4102360362"
 categories: ["ツール/開発環境"]
 tags: ["browser-use", "ブラウザ自動化", "CDP", "AI", "playwright", "python"]
+slug: "2026-03-21-browser-use-cli-2"
 ---
 
 Browser Use CLI 2.0 がリリースされた。Playwright より速く、コストも半分。起動中の Chrome にそのまま接続できるこのツールは、AI エージェント時代のブラウザ自動化の本命になりそうだ。

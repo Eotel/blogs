@@ -8,6 +8,7 @@ source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4079188712"
 categories: ["AI/LLM"]
 description: "Sequoia Capital「Services: The New Software」を日本語で解説。AIビジネスは「ツール販売」から「業務代行」へ転換する。保険、会計、医療事務など日本で有望な9つの市場を分析。"
 tags: ["AI", "スタートアップ", "ビジネスモデル", "Sequoia Capital", "業務代行"]
+slug: "2026-03-18-sequoia-services-new-software"
 ---
 
 Sequoia Capital パートナーの Julien Bek が 2026年3月に発表した「[Services: The New Software](https://sequoiacap.com/article/services-the-new-software/)」は、AI ビジネスの方向性について本質的な問いを投げかけている。尾原和啓氏がこの論考を日本語で再構成しており、その内容をベースに要点を整理する。

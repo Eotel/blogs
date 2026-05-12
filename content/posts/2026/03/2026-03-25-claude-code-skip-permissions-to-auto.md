@@ -8,6 +8,7 @@ description: "Claude Code の dangerously-skip-permissions は権限チェック
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4129378712"
 categories: ["AI/LLM"]
 tags: ["claude-code", "claude", "anthropic", "agent", "security"]
+slug: "2026-03-25-claude-code-skip-permissions-to-auto"
 ---
 
 Claude Code で長時間タスクを実行する際、許可プロンプトを回避するために `--dangerously-skip-permissions` を使っていた開発者は少なくないだろう。しかし、auto mode の登場により、安全性を保ちながら同様の利便性を得られるようになった。この記事では、両者の違いと auto mode への移行方法を解説する。

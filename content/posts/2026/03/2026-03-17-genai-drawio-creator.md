@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4078673005"
 categories: ["AI/LLM"]
 tags: ["draw.io", "Amazon Bedrock", "Claude", "図解生成", "arXiv"]
+slug: "2026-03-17-genai-drawio-creator"
 ---
 
 AWS Japan AI チームが「draw.io の図解自動生成」フレームワークを arXiv 論文にまとめた。論文名は **GenAI-DrawIO-Creator**（arXiv 2601.05162、2026年1月）。実装は GitHub で公開され、GitHub Trending の2位まで到達した。

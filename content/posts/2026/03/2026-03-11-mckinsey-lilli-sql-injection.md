@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4037463475"
 categories: ["セキュリティ"]
 tags: ["security", "agent", "llm"]
+slug: "2026-03-11-mckinsey-lilli-sql-injection"
 ---
 
 セキュリティスタートアップ CodeWall の AI エージェントが、マッキンゼーの社内 AI プラットフォーム「Lilli」をわずか2時間で完全突破した。4,650万件のチャット履歴からシステムプロンプトまで、認証なしで読み書き可能だったという。攻撃手法は SQL インジェクション——教科書の1章目に載る古典的な脆弱性だ。

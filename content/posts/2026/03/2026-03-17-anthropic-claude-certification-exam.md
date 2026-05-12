@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4077560663"
 categories: ["AI/LLM"]
 tags: ["Anthropic", "Claude", "認定資格", "AIアーキテクト", "Anthropic Academy"]
+slug: "2026-03-17-anthropic-claude-certification-exam"
 ---
 
 Anthropic が **Claude 専用の認定資格試験**を公開した。AWS の SAA（Solutions Architect Associate）や GCP の Professional Cloud Architect に相当する位置づけで、「AI アーキテクト」としてのスキルを公式に証明できる資格だ。

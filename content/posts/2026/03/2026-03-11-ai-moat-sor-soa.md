@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4041956516"
 categories: ["AI/LLM"]
 tags: ["agent", "llm"]
+slug: "2026-03-11-ai-moat-sor-soa"
 ---
 
 AI エージェントの台頭により、エンタープライズソフトウェアの競争構造が大きく変わりつつある。従来の **SoR（System of Record）** から **SoA（System of Action）** への転換が進むなかで、何が新たな Moat になるのかを整理する。

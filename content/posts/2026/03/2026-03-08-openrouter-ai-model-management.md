@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4018915580"
 categories: ["AI/LLM"]
 tags: ["llm", "agent"]
+slug: "2026-03-08-openrouter-ai-model-management"
 ---
 
 AI モデルの利用が増えるにつれ、複数のプロバイダの API キーを管理する煩雑さやコストの把握が難しくなっていく。OpenRouter を使えば、1つの API キーで複数の AI モデルにアクセスでき、コスト管理も一元化できる。

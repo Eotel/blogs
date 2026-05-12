@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4026451095"
 categories: ["AI/LLM"]
 tags: ["claude", "claude-code", "prompt"]
+slug: "2026-03-09-claude-frontend-design-skill"
 ---
 
 Claude Code で生成される UI デザインの品質が急に向上したと話題になっています。その理由は「画像学習」の強化ではなく、**「一般的（on distribution）」なデザインから意図的に離れるプロンプト設計**にありました。

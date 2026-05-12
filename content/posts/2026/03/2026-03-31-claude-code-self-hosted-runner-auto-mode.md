@@ -7,6 +7,7 @@ author: "hdknr"
 categories: ["AI/LLM"]
 tags: ["claude-code", "github-actions"]
 source_url: "https://gist.github.com/hdknr/aa914d314b67a0ef8c1c4eabd1edb654"
+slug: "2026-03-31-claude-code-self-hosted-runner-auto-mode"
 ---
 
 ## 症状

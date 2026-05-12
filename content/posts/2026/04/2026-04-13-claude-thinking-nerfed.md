@@ -8,6 +8,7 @@ source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4239449664"
 categories: ["AI/LLM"]
 tags: ["claude", "anthropic", "claude-code", "llm"]
 description: "AMD AI ディレクターが7,000セッション分析で発見した Claude Code の思考深度67%低下問題。Anthropic が認めたアダプティブ・シンキングとエフォートレベル変更の詳細、/effort max による対策を解説。"
+slug: "2026-04-13-claude-thinking-nerfed"
 ---
 
 Anthropic の AI コーディングツール「Claude Code」の思考能力が密かに大幅削減されたのではないか——2026年4月、AMD の AI ディレクターによるセッションログの詳細分析が SNS 上で大きな議論を巻き起こしました。本記事では、何が起きたのか、Anthropic はどう説明しているのか、そしてユーザーが取れる対策を整理します。

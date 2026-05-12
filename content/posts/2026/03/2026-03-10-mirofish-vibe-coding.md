@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4030252864"
 categories: ["AI/LLM"]
 tags: ["agent", "github", "claude-code", "llm"]
+slug: "2026-03-10-mirofish-vibe-coding"
 ---
 
 20歳の中国の大学4年生・郭航江（Guo Hangjiang）氏が、わずか10日間の Vibe Coding で開発した OSS「MiroFish」が GitHub Trending で3日連続1位を獲得し、Star 数は約 11,000 を超えて急増中です。さらに、盛大グループ創業者の陳天橋氏がデモを見て24時間以内に3,000万元（約6.9億円）の即決投資を行ったと報じられています。

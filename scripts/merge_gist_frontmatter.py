@@ -6,8 +6,10 @@ Reads the raw gist file contents from stdin and prints the final Hugo post
 
 Merge rules
 -----------
-- ``date``, ``lastmod``, ``author``, ``gist_id``, ``gist_url``, ``gist_file``
-  come from CLI flags (auto-generated, system of record).
+- ``date``, ``lastmod``, ``author``, ``gist_id``, ``gist_url``, ``gist_file``,
+  ``slug`` come from CLI flags (auto-generated, system of record).
+  ``slug`` is required so Hugo's ``:slug`` permalink token does not fall back
+  to a title-derived URL.
 - All other keys come from the gist's inline frontmatter when present.
 - ``title`` precedence: gist frontmatter > gist description > first H1 > basename.
 - ``draft`` defaults to ``false`` if the gist did not set it.
@@ -27,7 +29,15 @@ import yaml
 FRONTMATTER_RE = re.compile(r"\A---\n(.*?)\n---\n?(.*)\Z", re.DOTALL)
 HEADING_RE = re.compile(r"^#+\s*(.+?)\s*$", re.MULTILINE)
 
-SYSTEM_FIELDS = ("date", "lastmod", "author", "gist_id", "gist_url", "gist_file")
+SYSTEM_FIELDS = (
+    "date",
+    "lastmod",
+    "author",
+    "gist_id",
+    "gist_url",
+    "gist_file",
+    "slug",
+)
 
 
 def split_frontmatter(content: str) -> tuple[dict[str, Any], str]:
@@ -92,11 +102,21 @@ def build_merged(
 def order_keys(merged: dict[str, Any]) -> dict[str, Any]:
     """Stable, human-friendly ordering for the rendered frontmatter."""
     preferred = [
-        "title", "date", "lastmod", "draft", "author",
+        "title",
+        "date",
+        "lastmod",
+        "draft",
+        "author",
         "model",
-        "gist_id", "gist_url", "gist_file",
-        "description", "aliases", "source_url",
-        "categories", "tags",
+        "slug",
+        "gist_id",
+        "gist_url",
+        "gist_file",
+        "description",
+        "aliases",
+        "source_url",
+        "categories",
+        "tags",
     ]
     ordered: dict[str, Any] = {}
     for key in preferred:
@@ -129,6 +149,11 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--lastmod", required=True)
     parser.add_argument("--description", default="")
     parser.add_argument("--basename", default="")
+    parser.add_argument(
+        "--slug",
+        required=True,
+        help="Hugo permalink slug (typically '<YYYY-MM-DD>-<gist_id>[-<basename>]')",
+    )
     return parser.parse_args(argv)
 
 

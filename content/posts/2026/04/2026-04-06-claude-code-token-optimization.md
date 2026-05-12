@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4194459252"
 categories: ["AI/LLM"]
 tags: ["Claude", "Claude Code", "トークン最適化", "プロンプトキャッシュ", "コスト削減"]
+slug: "2026-04-06-claude-code-token-optimization"
 ---
 
 Claude Code を使っていて「なんかコストかかるな…」と思ったことはないでしょうか。以前、デフォルト設定のまま使い続けると推定 2 億 6,400 万トークンもの無駄が発生するという事例が話題になりました。

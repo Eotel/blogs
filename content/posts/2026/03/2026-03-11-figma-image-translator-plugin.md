@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4041960375"
 categories: ["ツール/開発環境"]
 tags: ["figma"]
+slug: "2026-03-11-figma-image-translator-plugin"
 ---
 
 海外サービスの UI を調査するとき、スクリーンショット内のテキストを手作業で翻訳するのは地味に手間がかかる。TSUMIKI INC. の鈴木慎吾氏（[@shingo2000](https://x.com/shingo2000)）が公開した Figma プラグイン **Image Translator** は、この作業を自動化してくれる。

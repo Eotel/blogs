@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4106914372"
 categories: ["AI/LLM"]
 tags: ["agent", "mcp", "claude-code", "swift"]
+slug: "2026-03-22-blitz-ios-ai-agent"
 ---
 
 AI エージェントが iOS アプリ開発を丸ごと自動化するオープンソースツール「Blitz」が公開された。ビルドからテスト、App Store 提出まで、これまで手作業だった工程を AI に任せられる時代が到来しつつある。

@@ -8,6 +8,7 @@ source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4079195726"
 categories: ["AI/LLM"]
 tags: ["キャリア", "機械学習", "Python", "LLM", "ディープラーニング"]
 description: "Python基礎から機械学習、ディープラーニング、LLM/RAG開発、MLOpsまで。6ヶ月でAIエンジニアになるための学習ロードマップを、MIT・Stanford・Harvardの無料コースで構成。"
+slug: "2026-03-18-ai-engineer-6-months-roadmap"
 ---
 
 この記事では、Python基礎からLLM/RAG開発、MLOpsまでを6ヶ月で学ぶロードマップを、すべて無料のリソースで紹介する。各月のゴールと具体的な教材リスト付き。

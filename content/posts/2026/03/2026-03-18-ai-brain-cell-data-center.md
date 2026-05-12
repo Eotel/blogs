@@ -8,6 +8,7 @@ source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4079198048"
 categories: ["AI/LLM"]
 tags: ["ai", "biocomputing", "data-center", "energy"]
 description: "Cortical Labs が脳細胞を使った生体データセンターを建設予定。消費電力は電卓以下で、AI のエネルギー問題に挑む生体コンピューティングの最前線を解説。"
+slug: "2026-03-18-ai-brain-cell-data-center"
 ---
 
 オーストラリアのスタートアップ Cortical Labs が、人間の脳細胞（ニューロン）をシリコンチップ上に培養し、それを演算装置として利用する「生体データセンター」の構想を発表しました。1 台あたりの消費電力は電卓以下とされ、従来の GPU ベースの AI インフラとはまったく異なるアプローチで、エネルギー問題への解決策として注目されています。

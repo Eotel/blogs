@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4061220341"
 categories: ["セキュリティ"]
 tags: ["agent", "security", "llm", "github"]
+slug: "2026-03-14-agent-governance-toolkit"
 ---
 
 Microsoft がオープンソースで公開した [Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) は、自律型 AI エージェントに欠けていたセキュリティレイヤーを提供するツールキットだ。ポリシー強制、ゼロトラスト ID、実行サンドボックス、信頼性エンジニアリングの4つの柱で、OWASP Agentic Top 10 の全10項目のリスクをカバーする。

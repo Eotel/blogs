@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4049725427"
 categories: ["AI/LLM"]
 tags: ["claude-code", "sqlite", "duckdb"]
+slug: "2026-03-12-claude-code-sqlite-duckdb"
 ---
 
 Claude Code で Markdown や JSON ファイルを直接編集してデータ管理を行うのは、少量のデータなら問題ありません。しかし、レコード数が100件を超えるような規模になると、スキーマ違反や細かいスクリプト制御の問題、パフォーマンスの低下が発生しやすくなります。こうした場面では、SQLite や DuckDB を活用するのが効果的です。

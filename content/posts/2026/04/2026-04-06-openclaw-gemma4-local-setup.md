@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4194457096"
 categories: ["AI/LLM"]
 tags: ["OpenClaw", "Ollama", "Gemma4", "ローカルLLM", "AIエージェント"]
+slug: "2026-04-06-openclaw-gemma4-local-setup"
 ---
 
 API課金なしで、ローカル環境にAIエージェントを無制限で運用できるセットアップ方法を紹介します。OpenClaw（エージェントインターフェース）+ Ollama（ローカルモデルサーバー）+ Gemma4（推論エンジン）の組み合わせにより、Telegram・Discord・LINEなどの既存チャンネルともシームレスに連携できます。

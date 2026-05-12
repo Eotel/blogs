@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4050723505"
 categories: ["AI/LLM"]
 tags: ["claude-code", "claude", "anthropic", "agent"]
+slug: "2026-03-12-claude-code-auto-mode"
 ---
 
 Anthropic が Claude Code にリサーチプレビューとして「Auto Mode」を導入しました。`claude --permission-mode auto` で起動すると、ツール使用の許可判断を Claude 自身が行い、開発者の手動承認なしで長時間の連続作業が可能になります。

@@ -6,6 +6,7 @@ draft: false
 author: "hdknr"
 categories: ["データベース"]
 tags: ["mysql", "mysqldump", "definer", "view", "トラブルシューティング"]
+slug: "2026-03-26-mysqldump-definer-error-1449"
 ---
 
 `mysqldump` でデータベースをダンプしようとしたら、こんなエラーが出て止まった経験はないでしょうか。

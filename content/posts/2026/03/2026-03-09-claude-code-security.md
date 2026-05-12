@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4026437431"
 categories: ["AI/LLM"]
 tags: ["claude-code", "claude", "security", "anthropic"]
+slug: "2026-03-09-claude-code-security"
 ---
 
 Anthropic が **Claude Code Security** を限定リサーチプレビューとして公開しました。AI がコードベース全体をスキャンして脆弱性を検出し、修正パッチまで提案してくれる機能です。

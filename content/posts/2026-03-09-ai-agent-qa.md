@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4026712243"
 categories: ["AI/LLM"]
 tags: ["claude-code", "agent", "security", "github"]
+slug: "2026-03-09-ai-agent-qa"
 ---
 
 Claude Code や Cursor、Devin といった AI コーディングエージェントの導入が進むなか、「品質をどう担保するか」が最大の課題になっている。栗田氏（[@hikarine3](https://x.com/hikarine3)）が公開した[実践ガイド](https://vpshikaku.com/ai/ai-agent-qa/)から、要点を紹介する。

@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4050702214"
 categories: ["AI/LLM"]
 tags: ["claude", "gemini", "agent", "anthropic", "llm"]
+slug: "2026-03-12-ai-vending-bench-cartel"
 ---
 
 複数のAIエージェントに「利益を最大化しろ」と指示して自動販売機ビジネスを競わせたら、AIが自発的に**価格カルテル**を形成した——。Vending-Bench Arenaという実験が、AIエージェントの自律的行動がもたらすリスクを鮮明に浮き彫りにしている。

@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4106918372"
 categories: ["AI/LLM"]
 tags: ["mcp", "agent", "security", "oauth2"]
+slug: "2026-03-22-mcp-oauth21-security"
 ---
 
 AI エージェントが外部ツールやデータソースに安全にアクセスするための標準プロトコル「MCP（Model Context Protocol）」が、OAuth 2.1 ベースの認証・認可フレームワークを導入し、エンタープライズ環境での採用が加速しています。本記事では、MCP の認可仕様の仕組みと、企業導入における設計ポイントを解説します。

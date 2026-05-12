@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4030998838"
 categories: ["AI/LLM"]
 tags: ["llm", "agent", "python", "claude-code"]
+slug: "2026-03-10-karpathy-autoresearch"
 ---
 
 Andrej Karpathy が公開した [autoresearch](https://github.com/karpathy/autoresearch) は、AI エージェントが自律的に ML 実験を繰り返すツールだ。寝ている間に AI が 100 回実験し、朝起きたらモデルが賢くなっている——そんな研究スタイルを 630 行の Python コードで実現する。

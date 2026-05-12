@@ -8,6 +8,7 @@ source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4079207344"
 categories: ["Web開発"]
 description: "moomoo証券が提供する米国株API取引サービス「moomoo OpenAPI」を解説。Python SDKでの自動売買、リアルタイムデータ取得、バックテスト機能、国内他社APIとの比較まで網羅。"
 tags: ["python", "moomoo", "自動売買", "米国株", "フィンテック"]
+slug: "2026-03-18-moomoo-openapi"
 ---
 
 moomoo証券（ムームー証券）が2026年3月13日、国内主要ネット証券としては業界最速級となる米国株APIトレードサービス「moomoo OpenAPI」の提供を開始した。個人投資家が自作プログラムで米国株のリアルタイムデータ取得から自動売買までを実行できるようになる。

@@ -8,6 +8,7 @@ source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4085477100"
 categories: ["AI/LLM"]
 tags: ["claude", "anthropic", "agent", "cowork", "computer-use"]
 description: "Anthropic が Claude Cowork の新機能 Dispatch を発表。スマホから PC 上の Claude にタスクを遠隔指示できる。料金プラン・成功率・OpenClaw との比較を解説。"
+slug: "2026-03-18-anthropic-dispatch-claude-cowork"
 ---
 
 Anthropic が 2026年3月17日、Claude Cowork の新機能「Dispatch」のリサーチプレビューを開始した。スマホから指示を出すだけで、PC 上の Claude がタスクを自律的に実行してくれるという機能だ。

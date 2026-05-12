@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4050710903"
 categories: ["ビジネス/キャリア"]
 tags: ["売上", "フリーランス", "ビジネスモデル", "起業", "収益化"]
+slug: "2026-03-12-monthly-revenue-two-patterns"
 ---
 
 株式会社SWIFT代表の井口亮平氏（[@Ryohei_Iguchi](https://x.com/Ryohei_Iguchi)）がX（旧Twitter）で公開した記事が、月商100〜300万円を目指すフリーランスや小規模事業者にとって示唆に富む内容だったので紹介する。

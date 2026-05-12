@@ -8,6 +8,7 @@ source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4201926023"
 categories: ["AI/LLM"]
 description: "Google Gemma 4はただのオープンモデルではない。26B MoEで推論時3.8Bアクティブ、E2Bモデルはスマホでオフライン動作、Apache 2.0ライセンス。API従量課金に依存するSaaSビジネスモデルへの影響を考察する。"
 tags: ["Gemma", "オープンソースLLM", "API経済", "エッジAI", "MoE"]
+slug: "2026-04-07-gemma4-api-economy-disruption"
 ---
 
 Gemma 4 が「すごいオープンソースモデル」として話題になっている。しかし、本当に注目すべきポイントはモデル性能だけではない。**GoogleがAPI経済の構造そのものに挑戦している**という点だ。

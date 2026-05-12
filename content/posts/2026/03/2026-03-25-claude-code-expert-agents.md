@@ -6,6 +6,7 @@ draft: false
 author: "hdknr"
 categories: ["AI/LLM"]
 tags: ["claude-code", "claude", "anthropic", "agent", "mcp"]
+slug: "2026-03-25-claude-code-expert-agents"
 ---
 
 [前回の記事](/posts/2026-03-23-notebooklm-20-experts/)では、NotebookLM を使って「20人の専門家チーム」を構築する方法を紹介しました。この記事では、同じ考え方を Claude Code や Cowork で実現する方法を解説します。

@@ -146,6 +146,7 @@ while IFS= read -r AUTHOR_ID; do
             LASTMOD=$(echo "$UPDATED" | cut -c1-10)
             GIST_URL_VAL="https://gist.github.com/${OWNER_LOGIN}/${GIST_ID}"
 
+            POST_SLUG=$(basename "$POST_FILE" .md)
             printf '%s' "$CONTENT" | python3 "$BLOG_DIR/scripts/merge_gist_frontmatter.py" \
                 --gist-id "$GIST_ID" \
                 --gist-url "$GIST_URL_VAL" \
@@ -155,6 +156,7 @@ while IFS= read -r AUTHOR_ID; do
                 --lastmod "$LASTMOD" \
                 --description "$DESCRIPTION" \
                 --basename "$BASE_NAME" \
+                --slug "$POST_SLUG" \
                 > "$POST_FILE"
 
             IMPORTED=$((IMPORTED + 1))

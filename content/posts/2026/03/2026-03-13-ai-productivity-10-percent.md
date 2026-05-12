@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4058456608"
 categories: ["AI/LLM"]
 tags: ["llm", "ai-productivity", "developer-experience", "engineering-management"]
+slug: "2026-03-13-ai-productivity-10-percent"
 ---
 
 DX 社の Deputy CTO である Justin Reock 氏が、400社のデータを分析した結果を公開しました。AI コーディングツールの導入による開発者の生産性向上は、ベンダーが謳う「2〜3倍」や「10倍」ではなく、**約10%** にとどまるという内容です。

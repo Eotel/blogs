@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4064203312"
 categories: ["AI/LLM"]
 tags: ["ai", "claude"]
+slug: "2026-03-15-ai-driven-dev-domain-knowledge"
 ---
 
 Claude Code を活用して税理士がスタッフ 0 人で顧問先 60 社を運営している事例が話題になっている。この事例が示すのは、AI 駆動開発による IT 企業のコスト構造の崩壊と、「技術力」から「ドメイン知識」への価値シフトだ。

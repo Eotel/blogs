@@ -7,6 +7,7 @@ author: "hdknr"
 source_url: "https://github.com/hdknr/blogs/issues/1#issuecomment-4030479459"
 categories: ["AI/LLM"]
 tags: ["agent", "openclaw", "llm"]
+slug: "2026-03-10-openclaw-tiktok-marketing"
 ---
 
 OpenClaw をショート動画マーケティングの自動化マシンとして活用する事例が注目を集めています。AI エージェントが TikTok コンテンツの生成・投稿・分析・最適化をループで回し、数十万ビューとアプリダウンロードを達成するという仕組みです。
