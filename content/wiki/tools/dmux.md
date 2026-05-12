@@ -2,7 +2,7 @@
 title: "dmux"
 description: "AI エージェント（Claude Code / Codex 等）の並列実行を安全に管理するツール。git worktree + branch の自動隔離でファイル競合を防ぐ"
 date: 2026-04-15
-lastmod: 2026-04-15
+lastmod: 2026-05-12
 aliases: ["dmux", "AI エージェント並列実行"]
 related_posts:
   - "/posts/2026/04/2026-04-15-dmux-parallel-ai-agents/"
@@ -28,7 +28,7 @@ dmux はこれらの問題を git worktree の仕組みで自動解決する。
 |------|------|
 | 自動隔離 | エージェントごとに git worktree + ブランチを自動作成 |
 | 衝突の自動解決 | マージ競合を AI が自動解決 |
-| エージェント切り替え | Claude Code、Codex、Opus、Composer 等を簡単に切り替え |
+| エージェント切り替え | Claude Code、Codex、OpenCode、Cline、Gemini、Qwen、Amp、pi、Cursor、Copilot、Crush 等 CLI を簡単に切り替え |
 | A/B テスト | 複数エージェントの出力を並べて比較検証 |
 
 ## git worktree による隔離の仕組み

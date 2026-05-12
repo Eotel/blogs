@@ -2,7 +2,7 @@
 title: "APM（Agent Package Manager）"
 description: "AI エージェントの設定（スキル・プロンプト・MCP サーバーなど）を apm.yml で宣言的に管理・共有する Microsoft 製 OSS ツール"
 date: 2026-04-23
-lastmod: 2026-04-23
+lastmod: 2026-05-12
 aliases: ["Agent Package Manager", "エージェントパッケージマネージャー"]
 related_posts:
   - "/posts/2026/04/2026-04-17-apm-agent-package-manager/"
@@ -17,7 +17,7 @@ APM（Agent Package Manager）は Microsoft がオープンソースで開発し
 
 ## 対応エージェント
 
-GitHub Copilot、Claude Code、Cursor、OpenCode、Codex CLI
+GitHub Copilot、Claude Code、Cursor、OpenCode、Codex、Gemini、Windsurf
 
 ## 解決する問題
 

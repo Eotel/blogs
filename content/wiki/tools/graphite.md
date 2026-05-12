@@ -2,7 +2,7 @@
 title: "Graphite"
 description: "スタックドPR・マージキュー・AI コードレビューで AI ファースト開発を加速する GitHub PR ワークフロー拡張プラットフォーム"
 date: 2026-04-23
-lastmod: 2026-04-23
+lastmod: 2026-05-12
 aliases: ["グラファイト", "スタックドPR", "Graphite Agent"]
 related_posts:
   - "/posts/2026/04/2026-04-19-graphite-stacked-prs-merge-queue/"
@@ -11,7 +11,7 @@ tags: ["開発ツール", "GitHub", "CI/CD", "AI コードレビュー", "ハー
 
 ## 概要
 
-Graphite は GitHub 上の PR ワークフローを拡張する開発者プラットフォーム。2025年3月に Anthropic から $52M の Series B を調達。元 Airbnb・Meta エンジニア出身チームが、Meta 内部ツール（Phabricator/Sapling）のスタック開発体験を GitHub に持ち込んだ。AI が大量に PR を量産する「AI ファースト開発」環境での詰まりを解消する。
+Graphite は GitHub 上の PR ワークフローを拡張する開発者プラットフォーム。2025年3月に Accel 主導の $52M Series B を調達（Anthropic は Menlo Ventures の Anthology Fund 経由で参加）。元 Airbnb・Meta エンジニア出身チームが、Meta 内部ツール（Phabricator/Sapling）のスタック開発体験を GitHub に持ち込んだ。AI が大量に PR を量産する「AI ファースト開発」環境での詰まりを解消する。
 
 ## 3本柱
 

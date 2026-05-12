@@ -1,8 +1,8 @@
 ---
 title: "ANOLISA"
-description: "Alibaba が公開した AI Agent 向け Linux OS（Agentic OS）。Copilot Shell / Agent Sec Core / AgentSight / OS Skills の 4 コンポーネント構成"
+description: "Alibaba が公開した AI Agent 向け Linux OS（Agentic OS）。Copilot Shell / Agent Sec Core / AgentSight / Token-less / OS Skills の 5 コンポーネント構成"
 date: 2026-04-23
-lastmod: 2026-04-23
+lastmod: 2026-05-12
 aliases: ["anolisa", "Agentic OS", "Alibaba Anolisa"]
 related_posts:
   - "/posts/2026/04/2026-04-21-alibaba-anolisa-agentic-os/"
@@ -17,13 +17,14 @@ Alibaba が 2026 年 3 月に公開した Agentic OS プロジェクト。正式
 - ホームページ: [agentic-os.sh](https://agentic-os.sh)
 - 主言語: TypeScript（Copilot Shell）/ Rust（AgentSight）/ C（eBPF プローブ）
 
-## 4 コンポーネント
+## 5 コンポーネント
 
 | Component | 役割 |
 |-----------|------|
 | **Copilot Shell（cosh）** | Qwen Code ベースの AI ターミナル UI。Multi-Provider・PTY・Skill/Hooks System 対応 |
 | **Agent Sec Core** | OS 層セキュリティカーネル。最小権限・明示的認可・ゼロトラスト・多層防御・Security Over Execution の 5 原則 |
 | **AgentSight** | eBPF ベースのゼロ侵襲 Agent オブザーバビリティ。LLM API コール・トークン消費・SSL/TLS トラフィックをカーネル側から観測 |
+| **Token-less** | LLM トークン最適化ツールキット。スキーマ・レスポンス圧縮とコマンド書き換えでトークン消費を削減 |
 | **OS Skills** | 運用スキルの標準ライブラリ。RPM で `/usr/share/anolisa/skills/` に展開 |
 
 ## Agent Sec Core のセキュリティモデル

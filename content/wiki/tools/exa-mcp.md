@@ -29,7 +29,7 @@ Exa は AI エージェント向けに設計されたニューラル検索エン
   "mcpServers": {
     "exa": {
       "command": "npx",
-      "args": ["@exa-ai/mcp-server"],
+      "args": ["-y", "exa-mcp-server"],
       "env": {
         "EXA_API_KEY": "your-api-key"
       }
@@ -44,9 +44,11 @@ API キーは [exa.ai](https://exa.ai) で取得。無料枠あり。
 
 | ツール | 機能 |
 |--------|------|
-| `exa_search` | キーワード・セマンティック検索 |
-| `exa_get_contents` | URL からページ全文取得 |
-| `exa_find_similar` | 類似 URL を検索 |
+| `web_search_exa` | キーワード・セマンティック検索 |
+| `web_fetch_exa` | URL からページ全文取得 |
+| `web_search_advanced_exa` | カテゴリ・期間などの絞り込み付き検索 |
+
+> ホスト版 (`https://mcp.exa.ai/mcp`) も利用可能。ローカル起動を避けたい場合はそちらを参照する。
 
 ## 関連ページ
 

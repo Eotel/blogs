@@ -2,7 +2,7 @@
 title: "sokol"
 description: "Andre Weissflog (floooh) が開発する C 言語のクロスプラットフォーム軽量ライブラリ群。グラフィックス（Metal / DirectX / Vulkan / WebGPU / OpenGL）・オーディオ・入力をヘッダオンリーで提供"
 date: 2026-05-11
-lastmod: 2026-05-11
+lastmod: 2026-05-12
 aliases: ["sokol", "sokol_gfx", "floooh/sokol"]
 related_posts:
   - "/posts/2026/05/2026-05-11-truss-c-openframeworks-alternative/"
@@ -11,13 +11,13 @@ tags: ["c", "creative-coding", "graphics", "webgpu", "metal", "vulkan", "directx
 
 ## 概要
 
-[sokol](https://github.com/floooh/sokol) は Andre Weissflog（floooh）が開発する、C 言語ヘッダオンリーのクロスプラットフォーム・ライブラリ群。プラットフォーム抽象を最小コストで提供することを目的としており、**1 つのコードベースから Metal / DirectX / Vulkan / WebGPU / OpenGL に直接コンパイルできる**点が特徴。MIT ライセンスのような寛容ライセンスで公開され、C99 互換、依存ゼロ。
+[sokol](https://github.com/floooh/sokol) は Andre Weissflog（floooh）が開発する、C 言語ヘッダオンリーのクロスプラットフォーム・ライブラリ群。プラットフォーム抽象を最小コストで提供することを目的としており、**1 つのコードベースから Metal / D3D11 / Vulkan / WebGPU / GLCORE / GLES3 に直接コンパイルできる**点が特徴。**zlib ライセンス**で公開され、C99 互換、依存ゼロ。
 
 ## モジュール構成
 
 | ヘッダ | 役割 |
 |--------|------|
-| `sokol_gfx.h` | グラフィックス（Metal / D3D11 / GL / WebGL2 / WebGPU 抽象） |
+| `sokol_gfx.h` | グラフィックス（Metal / D3D11 / Vulkan / GLCORE / GLES3 / WebGL2 / WebGPU 抽象） |
 | `sokol_app.h` | ウィンドウ・入力・イベントループ |
 | `sokol_audio.h` | 低レイテンシオーディオ出力 |
 | `sokol_time.h` | 高精度タイマー |

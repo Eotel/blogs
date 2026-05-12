@@ -2,7 +2,7 @@
 title: "Supabase"
 description: "PostgreSQL ベースの BaaS プラットフォーム。Firebase のオープンソース代替。Claude Code 向け agent-skills でベストプラクティスを自動適用可能"
 date: 2026-04-06
-lastmod: 2026-05-11
+lastmod: 2026-05-12
 aliases: ["supabase"]
 related_posts:
   - "/posts/2026/03/supabase-agent-skills/"
@@ -11,7 +11,7 @@ tags: ["BaaS", "PostgreSQL", "API", "RLS", "Claude Code"]
 
 ## 概要
 
-PostgreSQL を基盤とした BaaS。PostgREST でスキーマから自動 REST API 生成、PostGraphile で GraphQL 対応。AWS 上でのセルフホスト構成も Terraform で可能。Firebase ライクなコンセプトで PostgreSQL の柔軟性を備える。
+PostgreSQL を基盤とした BaaS。PostgREST でスキーマから自動 REST API 生成、独自 PostgreSQL 拡張の [pg_graphql](https://supabase.com/docs/guides/database/extensions/pg_graphql) で GraphQL 対応（PostGraphile ではない）。AWS 上でのセルフホスト構成も Terraform で可能。Firebase ライクなコンセプトで PostgreSQL の柔軟性を備える。
 
 ## Claude Code との連携：supabase/agent-skills
 

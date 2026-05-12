@@ -2,7 +2,7 @@
 title: "TrussC"
 description: "openFrameworks に着想を得た sokol ベースの C++20 クリエイティブコーディングフレームワーク。OpenGL 非依存・MCP サーバのコア組み込み・シーングラフ＝App・ホットリロード自動分割が特徴"
 date: 2026-05-11
-lastmod: 2026-05-11
+lastmod: 2026-05-12
 aliases: ["TrussC", "trussc", "tcx"]
 related_posts:
   - "/posts/2026/05/2026-05-11-truss-c-openframeworks-alternative/"
@@ -11,7 +11,7 @@ tags: ["truss-c", "creative-coding", "c++", "openframeworks", "sokol", "webgpu",
 
 ## 概要
 
-[TrussC](https://github.com/TrussC-org/TrussC) は openFrameworks（oF）に着想を得つつ、レンダリングを [sokol](/blogs/wiki/tools/sokol/) に寄せて作り直された C++20 クリエイティブコーディングフレームワーク。OpenGL に依存せず、macOS では Metal、Windows では DirectX、Linux では Vulkan、Web では WebGPU で動く。**MIT ライセンス、ヘッダオンリー中心、依存ライブラリすべて同梱**で、2025-12-14 に公開された。主開発者は tettou771（東京）。
+[TrussC](https://github.com/TrussC-org/TrussC) は openFrameworks（oF）に着想を得つつ、レンダリングを [sokol](/blogs/wiki/tools/sokol/) に寄せて作り直された C++20 クリエイティブコーディングフレームワーク。OpenGL に依存せず、macOS では Metal、Windows では DirectX、Linux では Vulkan、Web では WebGPU で動く。**MIT ライセンス、ヘッダオンリー中心、依存ライブラリすべて同梱**。最新版は v0.5.1（2026-05-06 リリース）。主開発者は tettou771（東京）。
 
 ## 表層の差分（oF 比）
 
@@ -81,7 +81,7 @@ CMake 側がソースを scan して `TC_HOT_RELOAD` を検出すると、Host (
 
 ## 同梱アドオン
 
-oF の `ofx*` と一対一対応の `tcx*` 命名規約。現状 12 個:
+oF の `ofx*` と一対一対応の `tcx*` 命名規約。現状 11 個（公式 ADDONS.md 基準）:
 
 `tcxBox2d` / `tcxCurl` / `tcxGltf` / `tcxHap` / `tcxImGui` / `tcxLua` / `tcxLut` / `tcxObj` / `tcxOsc` / `tcxQuadWarp` / `tcxTls` / `tcxWebSocket`
 

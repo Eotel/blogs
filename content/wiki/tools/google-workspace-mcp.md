@@ -2,7 +2,7 @@
 title: "Google Workspace MCP"
 description: "Google 公式の MCP サーバー。Gmail・カレンダー・ドライブ・スプレッドシートを Claude から直接操作できる"
 date: 2026-05-09
-lastmod: 2026-05-09
+lastmod: 2026-05-12
 aliases: ["Google MCP", "Workspace MCP"]
 related_posts:
   - "/posts/2026/04/2026-04-23-google-workspace-mcp-server/"
@@ -25,25 +25,19 @@ Google が公式に提供する MCP（Model Context Protocol）サーバー。Cl
 
 ## セットアップ
 
-```bash
-# uvx で直接起動（Python 不要）
-uvx @google/mcp-server-workspace
-```
+Google 公式版は **リモートマネージド MCP サーバー**（`*.googleapis.com` の OAuth エンドポイント）として提供される。ローカルで `uvx` や `npm` パッケージを起動する形ではない点に注意。
 
-Claude Code の設定に追加:
+### 公式リモートサーバー利用フロー
 
-```json
-{
-  "mcpServers": {
-    "google-workspace": {
-      "command": "uvx",
-      "args": ["@google/mcp-server-workspace"]
-    }
-  }
-}
-```
+1. Google Cloud Console で対象 API（Gmail / Calendar / Drive 等）を有効化
+2. OAuth クライアント認証情報を作成（Desktop or Web）
+3. Claude Code の `mcpServers` に該当の HTTPS エンドポイント（例: `gmailmcp.googleapis.com`）を OAuth 接続として登録
 
-OAuth 認証フローで Google アカウントに接続する。
+詳細は [Configure the Google Workspace MCP servers](https://developers.google.com/workspace/guides/configure-mcp-servers) を参照。
+
+### コミュニティ版（ローカル MCP）
+
+公式に加え、個人が `uvx`/`npx` 経由で動かすコミュニティ実装も複数あるが、認証スコープや更新頻度に差があるため自己責任で選定する。
 
 ## 活用例
 
