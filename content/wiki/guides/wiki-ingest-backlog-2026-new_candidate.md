@@ -48,7 +48,6 @@ related_posts:
   - "/posts/2026/03/2026-03-23-notebooklm-20-experts/"
   - "/posts/2026/03/2026-03-23-startups-rip-failed-yc-database/"
   - "/posts/2026/03/2026-03-24-ai-trading-bot-timezone-arbitrage/"
-  - "/posts/2026/03/2026-03-30-mistral-voxtral-tts/"
   - "/posts/2026/03/2026-03-31-ai-brain-fry/"
   - "/posts/2026/04/2026-04-06-ai-solo-company-talent-density/"
   - "/posts/2026/04/2026-04-06-fast-jwt-cve-2026-34950/"
@@ -104,7 +103,6 @@ tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 - [NotebookLMで「20人の専門家」を雇う方法：専門特化型ノートブックの作り方](/blogs/posts/2026/03/2026-03-23-notebooklm-20-experts/) — 2026-03-23 / new_candidate
 - [Startups.RIP：5,700社以上の失敗したYCスタートアップから学ぶデータベース](/blogs/posts/2026/03/2026-03-23-startups-rip-failed-yc-database/) — 2026-03-23 / new_candidate
 - [AI トレーディングボットとタイムゾーン裁定取引：24時間自律稼働で稼ぐ仕組みとリスク](/blogs/posts/2026/03/2026-03-24-ai-trading-bot-timezone-arbitrage/) — 2026-03-24 / new_candidate
-- [Mistral Voxtral TTS: ElevenLabs に匹敵するオープンウェイト音声AI](/blogs/posts/2026/03/2026-03-30-mistral-voxtral-tts/) — 2026-03-30 / new_candidate
 - [AI Brain Fry: AIの使いすぎで脳が焼ける現象とその対策](/blogs/posts/2026/03/2026-03-31-ai-brain-fry/) — 2026-03-31 / new_candidate
 - [AIが変える企業規模の常識——「才能密度」と少人数で100億を狙う時代](/blogs/posts/2026/04/2026-04-06-ai-solo-company-talent-density/) — 2026-04-06 / new_candidate
 - [fast-jwt の認証バイパス脆弱性 CVE-2026-34950 — 空白文字一つで JWT 認証が突破される](/blogs/posts/2026/04/2026-04-06-fast-jwt-cve-2026-34950/) — 2026-04-06 / new_candidate

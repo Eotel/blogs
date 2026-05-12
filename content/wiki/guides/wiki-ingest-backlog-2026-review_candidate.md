@@ -8,7 +8,6 @@ related_posts:
   - "/posts/2026/02/2026-02-11-e0f9f032b571cf6a8d2875aed3522b64/"
   - "/posts/2026/02/2026-02-13-56ceeff018ed4d9555699174150f499a/"
   - "/posts/2026/02/2026-02-24-f23b07d0468282857b1f334d3b8b6759/"
-  - "/posts/2026/02/2026-02-27-61e0abd5ba76e70dabc257c5f0e6560b/"
   - "/posts/2026/02/2026-02-28-0b416f32e26e097cfe686e6cf4f56874/"
   - "/posts/2026/03/2026-03-01-7974809c97ee2b8e77047a7497ef9473/"
   - "/posts/2026/03/2026-03-01-fc22f8ca4231945a9fc949cc36a3324a/"
@@ -21,7 +20,6 @@ related_posts:
   - "/posts/2026/03/2026-03-03-5c67205cc36835eeb883c355278466b4/"
   - "/posts/2026/03/2026-03-03-7531bfaf8041fb404827e0361645b3f7/"
   - "/posts/2026/03/2026-03-03-a5bc48ae4fb9985f19eac99ac6b35d11/"
-  - "/posts/2026/03/2026-03-04-1a39b3cc62c29543a5e6de566017beeb/"
   - "/posts/2026/03/2026-03-04-40d876bc001b09ef7af4a6fe9c415357/"
   - "/posts/2026/03/2026-03-04-678e83c45a76aa359ade74c5db0a3eb3/"
   - "/posts/2026/03/2026-03-04-9c4d7fade500b4c0399fc689053e6819/"
@@ -35,11 +33,6 @@ related_posts:
   - "/posts/2026/03/2026-03-06-b32313de621a699d6b0e80a47d982cbf/"
   - "/posts/2026/03/2026-03-06-f1c70eb4f0ec2a6201d2fb770c6ea9de/"
   - "/posts/2026/03/2026-03-08-openrouter-ai-model-management/"
-  - "/posts/2026/03/2026-03-09-agents-md-less-is-more/"
-  - "/posts/2026/03/2026-03-09-karpathy-autoresearch/"
-  - "/posts/2026/03/2026-03-10-karpathy-autoresearch/"
-  - "/posts/2026/03/2026-03-11-ai-moat-sor-soa/"
-  - "/posts/2026/03/2026-03-11-codex-subagent-swarm/"
   - "/posts/2026/03/2026-03-11-mckinsey-lilli-sql-injection/"
   - "/posts/2026/03/2026-03-12-ai-vending-bench-cartel/"
   - "/posts/2026/03/2026-03-13-agentic-coding-docs-colocation/"
@@ -63,7 +56,6 @@ related_posts:
   - "/posts/2026/03/2026-03-23-autoresearch/"
   - "/posts/2026/03/2026-03-23-claude-cowork-guide/"
   - "/posts/2026/03/2026-03-25-huggingface-hf-mount/"
-  - "/posts/2026/03/2026-03-25-insanely-fast-whisper/"
   - "/posts/2026/03/2026-03-26-dms-oom-recovery/"
   - "/posts/2026/03/2026-03-26-mysqldump-definer-error-1449/"
   - "/posts/2026/03/2026-03-27-opencli-rs/"
@@ -76,7 +68,6 @@ related_posts:
   - "/posts/2026/04/2026-04-09-s3-files-ga-architecture/"
   - "/posts/2026/04/2026-04-11-ai-model-performance-degradation/"
   - "/posts/2026/04/2026-04-12-rowboat-local-ai-coworker/"
-  - "/posts/2026/04/2026-04-14-2026-ai-engineer-roadmap/"
   - "/posts/2026/04/2026-04-15-inbound-marketing-guide/"
   - "/posts/2026/05/2026-05-11-transaction-strategies-saga-outbox-catalog/"
   - "/posts/2026/05/2026-05-12-private-methods-testability-coding-agents/"
@@ -92,7 +83,6 @@ tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 - [ローカルの開発モックを ngrok で公開し、Backlog Wiki を自動更新するシェルスクリプト](/blogs/posts/2026/02/2026-02-11-e0f9f032b571cf6a8d2875aed3522b64/) — 2026-02-11 / review_candidate
 - [django-oauth-toolkit 2.0 の client_secret ハッシュ化で外部連携が壊れた話](/blogs/posts/2026/02/2026-02-13-56ceeff018ed4d9555699174150f499a/) — 2026-02-13 / review_candidate
 - [CloudWatch Logs のエラーを自動で GitHub Issues に課題化する](/blogs/posts/2026/02/2026-02-24-f23b07d0468282857b1f334d3b8b6759/) — 2026-02-24 / review_candidate
-- [AI は会話が長くなるほど「迷子」になる — Microsoft × Salesforce の研究解説](/blogs/posts/2026/02/2026-02-27-61e0abd5ba76e70dabc257c5f0e6560b/) — 2026-02-27 / review_candidate
 - [なぜ AI は同じ紫グラデーションのサイトを作るのか — 分布的収束と Skills による脱却](/blogs/posts/2026/02/2026-02-28-0b416f32e26e097cfe686e6cf4f56874/) — 2026-02-28 / review_candidate
 - [AIチャットボットのプライバシー問題 — スタンフォード大学の研究が暴いた6社の構造的欠陥](/blogs/posts/2026/03/2026-03-01-7974809c97ee2b8e77047a7497ef9473/) — 2026-03-01 / review_candidate
 - [Anthropic Wealth Management AI ツール（Claude CoWork）記事要約・考察](/blogs/posts/2026/03/2026-03-01-fc22f8ca4231945a9fc949cc36a3324a/) — 2026-03-01 / review_candidate
@@ -105,7 +95,6 @@ tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 - [AnimaWorks — 「AIだけの会社組織」を作る日本発フレームワークの設計思想](/blogs/posts/2026/03/2026-03-03-5c67205cc36835eeb883c355278466b4/) — 2026-03-03 / review_candidate
 - [「AIが覚醒する魔法の言葉」は本当に効くのか — プロンプトエンジニアリングの実態と公式ガイドの教え](/blogs/posts/2026/03/2026-03-03-7531bfaf8041fb404827e0361645b3f7/) — 2026-03-03 / review_candidate
 - [Amazon Bedrock が OpenAI API 互換を提供開始 --- Mantle 推論エンジンが「モデルの交換可能性」を実現する](/blogs/posts/2026/03/2026-03-03-a5bc48ae4fb9985f19eac99ac6b35d11/) — 2026-03-03 / review_candidate
-- [QwenVoice --- Mac でボイスクローニング・感情表現・音声デザインを完全オフラインで実現する Qwen3-TTS アプリ](/blogs/posts/2026/03/2026-03-04-1a39b3cc62c29543a5e6de566017beeb/) — 2026-03-04 / review_candidate
 - [Theatre.js — GUI でWebアニメーションを直感的に作れるモーションデザインエディタ](/blogs/posts/2026/03/2026-03-04-40d876bc001b09ef7af4a6fe9c415357/) — 2026-03-04 / review_candidate
 - [236件のAI案件データが明かす「発注企業とベンダーの2.5年のズレ」--- AI受託開発市場の構造的ギャップと勝ち筋](/blogs/posts/2026/03/2026-03-04-678e83c45a76aa359ade74c5db0a3eb3/) — 2026-03-04 / review_candidate
 - [Rust の仕事が増えていく理由 — インフラコスト削減の圧力と LLM が学習コストを消し去る構造変化](/blogs/posts/2026/03/2026-03-04-9c4d7fade500b4c0399fc689053e6819/) — 2026-03-04 / review_candidate
@@ -119,11 +108,6 @@ tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 - [BigQuery ARRAY/STRUCT で速度3倍・コスト25%削減 --- JOINを消す「データの持ち方」最適化](/blogs/posts/2026/03/2026-03-06-b32313de621a699d6b0e80a47d982cbf/) — 2026-03-06 / review_candidate
 - [RuView × Wi-Fi電波で壁越し人体検知 — $48で心拍・姿勢を丸裸にする技術の実態](/blogs/posts/2026/03/2026-03-06-f1c70eb4f0ec2a6201d2fb770c6ea9de/) — 2026-03-06 / review_candidate
 - [OpenRouter で AI モデルを一元管理する — コスト削減と効率化の実践](/blogs/posts/2026/03/2026-03-08-openrouter-ai-model-management/) — 2026-03-08 / review_candidate
-- [AGENTS.md は詳しすぎると逆効果 — ETH Zurich の138リポジトリ研究が示す「書かない」原則](/blogs/posts/2026/03/2026-03-09-agents-md-less-is-more/) — 2026-03-09 / review_candidate
-- [Karpathy の autoresearch — AIが寝ている間に100回実験を回す仕組み](/blogs/posts/2026/03/2026-03-09-karpathy-autoresearch/) — 2026-03-09 / review_candidate
-- [Karpathy の autoresearch — 寝ている間にAIが100回実験して朝にはモデルが賢くなっている世界](/blogs/posts/2026/03/2026-03-10-karpathy-autoresearch/) — 2026-03-10 / review_candidate
-- [AI が生み出す新たな Moat：SoR から SoA への構造転換](/blogs/posts/2026/03/2026-03-11-ai-moat-sor-soa/) — 2026-03-11 / review_candidate
-- [OpenAI Codex の SubAgent（Swarm）が変える AI コーディングの未来](/blogs/posts/2026/03/2026-03-11-codex-subagent-swarm/) — 2026-03-11 / review_candidate
 - [マッキンゼーの社内AI「Lilli」がSQLインジェクションで完全突破された件](/blogs/posts/2026/03/2026-03-11-mckinsey-lilli-sql-injection/) — 2026-03-11 / review_candidate
 - [続・AIが自動で稼ぐ世界 — Vending-Bench Arenaで発生したAI価格カルテルの衝撃](/blogs/posts/2026/03/2026-03-12-ai-vending-bench-cartel/) — 2026-03-12 / review_candidate
 - [Agentic Coding時代のドキュメント配置: /docs ディレクトリはもう限界？](/blogs/posts/2026/03/2026-03-13-agentic-coding-docs-colocation/) — 2026-03-13 / review_candidate
@@ -147,7 +131,6 @@ tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 - [autoresearch：Karpathyが公開した「寝ている間にAIが100実験を自律実行する」630行のスクリプト](/blogs/posts/2026/03/2026-03-23-autoresearch/) — 2026-03-23 / review_candidate
 - [Claude Cowork 完全ガイド — 機能解説・料金・活用事例20選まとめ](/blogs/posts/2026/03/2026-03-23-claude-cowork-guide/) — 2026-03-23 / review_candidate
 - [HuggingFace hf-mount: AIモデルをダウンロードせずに仮想ファイルシステムとしてマウント](/blogs/posts/2026/03/2026-03-25-huggingface-hf-mount/) — 2026-03-25 / review_candidate
-- [insanely-fast-whisper: 150分の音声を98秒で文字起こしする CLI ツール](/blogs/posts/2026/03/2026-03-25-insanely-fast-whisper/) — 2026-03-25 / review_candidate
 - [AWS DMS Serverless の OOM 障害と監視の盲点 — 検知漏れの根本原因と対策](/blogs/posts/2026/03/2026-03-26-dms-oom-recovery/) — 2026-03-26 / review_candidate
 - [mysqldump エラー 1449: DEFINER が存在しないユーザーを参照している場合の対処法](/blogs/posts/2026/03/2026-03-26-mysqldump-definer-error-1449/) — 2026-03-26 / review_candidate
 - [opencli-rs: Rust製の爆速Webスクレイピングツールで55以上のサイトをCLI化する](/blogs/posts/2026/03/2026-03-27-opencli-rs/) — 2026-03-27 / review_candidate
@@ -160,7 +143,6 @@ tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 - [Amazon S3 Files GA：消えるアーキテクチャ層と生まれるアーキテクチャ](/blogs/posts/2026/04/2026-04-09-s3-files-ga-architecture/) — 2026-04-09 / review_candidate
 - [AIモデルは意図的に性能を低下させている？ OpenAI・Google・Anthropicに共通するパターン](/blogs/posts/2026/04/2026-04-11-ai-model-performance-degradation/) — 2026-04-11 / review_candidate
 - [Rowboat：100%ローカルで動くオープンソースAI同僚ツール](/blogs/posts/2026/04/2026-04-12-rowboat-local-ai-coworker/) — 2026-04-12 / review_candidate
-- [2026年に求められるAIエンジニアのロードマップ — 350万インプレッション超の話題スレッドを解説](/blogs/posts/2026/04/2026-04-14-2026-ai-engineer-roadmap/) — 2026-04-14 / review_candidate
 - [エンジニアのためのインバウンドマーケティング入門：Attract/Engage/Delight と MA の基本](/blogs/posts/2026/04/2026-04-15-inbound-marketing-guide/) — 2026-04-15 / review_candidate
 - [ACID から Saga まで — トランザクション戦略 10 種の地図と判断軸](/blogs/posts/2026/05/2026-05-11-transaction-strategies-saga-outbox-catalog/) — 2026-05-11 / review_candidate
 - [private メソッドにビジネスロジックを隠すな — TDD・カプセル化・coding agent 時代の設計判断](/blogs/posts/2026/05/2026-05-12-private-methods-testability-coding-agents/) — 2026-05-12 / review_candidate

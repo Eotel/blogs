@@ -24,7 +24,6 @@ related_posts:
   - "/posts/2024/03/2024-03-04-753720501aa829cc073d7ca922694d5a/"
   - "/posts/2024/03/2024-03-04-968330d868dc49da3124764cadba2888/"
   - "/posts/2024/03/2024-03-12-8e36bbbb0841e69c12f70b4096f4771e/"
-  - "/posts/2024/03/2024-03-14-05df197941702710ea55013287157a16/"
   - "/posts/2024/03/2024-03-15-390c364be30f3e4ad9b0d32b381d8651/"
   - "/posts/2024/03/2024-03-15-a79c6b608a8198e9c2a42f06ea7075e7/"
   - "/posts/2024/03/2024-03-15-f4bdec83e1779155e0b056c1070b0450/"
@@ -96,7 +95,6 @@ tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 - [Google: GMail](/blogs/posts/2024/03/2024-03-04-753720501aa829cc073d7ca922694d5a/) — 2024-03-04 / review_candidate
 - [AWS: Pinpoint](/blogs/posts/2024/03/2024-03-04-968330d868dc49da3124764cadba2888/) — 2024-03-04 / review_candidate
 - [PHP: LightSpeed](/blogs/posts/2024/03/2024-03-12-8e36bbbb0841e69c12f70b4096f4771e/) — 2024-03-12 / review_candidate
-- [AWS: Bedrock: KnowlegeBase](/blogs/posts/2024/03/2024-03-14-05df197941702710ea55013287157a16/) — 2024-03-14 / review_candidate
 - [StreamIt](/blogs/posts/2024/03/2024-03-15-390c364be30f3e4ad9b0d32b381d8651/) — 2024-03-15 / review_candidate
 - [LangChain](/blogs/posts/2024/03/2024-03-15-a79c6b608a8198e9c2a42f06ea7075e7/) — 2024-03-15 / review_candidate
 - [Faiss](/blogs/posts/2024/03/2024-03-15-f4bdec83e1779155e0b056c1070b0450/) — 2024-03-15 / review_candidate

@@ -181,7 +181,15 @@ def backlog_articles(
         if article["post_url"] in semantic_applied_posts:
             continue
         if article["status"] == "covered":
-            for candidate in article.get("candidates", []):
+            candidates = article.get("candidates", [])
+            covered_by_real_wiki = any(
+                not is_backlog_wiki(c["wiki"], backlog_rel)
+                and "related_posts already contains this post" in c.get("reasons", [])
+                for c in candidates
+            )
+            if covered_by_real_wiki:
+                continue
+            for candidate in candidates:
                 status = status_from_backlog_wiki(candidate["wiki"], backlog_rel)
                 if status:
                     item = dict(article)

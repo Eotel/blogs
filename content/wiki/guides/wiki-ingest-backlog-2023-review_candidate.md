@@ -12,7 +12,6 @@ related_posts:
   - "/posts/2023/03/2023-03-30-74a303477d8ad98d6b0ab216f61a83f8/"
   - "/posts/2023/04/2023-04-06-5fd1d629ab71c3e877aff7531e976e97/"
   - "/posts/2023/04/2023-04-06-913f7f509f8f548b7eeac491a578b48e/"
-  - "/posts/2023/04/2023-04-07-bfe76b81c50797270ccec6b441c406b4/"
   - "/posts/2023/04/2023-04-15-39ed7413bfc834267ec909b3b140de0b/"
   - "/posts/2023/04/2023-04-16-c91faf7d30fb8bc23115ec717af3b94c/"
   - "/posts/2023/04/2023-04-18-b3098af64855fdf9e4dfe567db8e6ca4/"
@@ -89,7 +88,6 @@ tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 - [Python: ThreadPoolExecutor: マルチスレッド](/blogs/posts/2023/03/2023-03-30-74a303477d8ad98d6b0ab216f61a83f8/) — 2023-03-30 / review_candidate
 - [MySQL: ERROR 3780 (HY000) at line 1406622:  Referencing column 'os_branch_id' and referenced column 'id' in foreign key constraint '***' are incompatible.](/blogs/posts/2023/04/2023-04-06-5fd1d629ab71c3e877aff7531e976e97/) — 2023-04-06 / review_candidate
 - [PYPI](/blogs/posts/2023/04/2023-04-06-913f7f509f8f548b7eeac491a578b48e/) — 2023-04-06 / review_candidate
-- [Python: ジョブキューイング](/blogs/posts/2023/04/2023-04-07-bfe76b81c50797270ccec6b441c406b4/) — 2023-04-07 / review_candidate
 - [AWS CodeWhisperer & IAM Identity Center](/blogs/posts/2023/04/2023-04-15-39ed7413bfc834267ec909b3b140de0b/) — 2023-04-15 / review_candidate
 - [Django: Admin: ManyToManyField Inline (raw_id_fields)](/blogs/posts/2023/04/2023-04-16-c91faf7d30fb8bc23115ec717af3b94c/) — 2023-04-16 / review_candidate
 - [半角カナ文字](/blogs/posts/2023/04/2023-04-18-b3098af64855fdf9e4dfe567db8e6ca4/) — 2023-04-18 / review_candidate
