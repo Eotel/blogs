@@ -1,6 +1,8 @@
 {{- define "main" }}
 
-<article class="post-single">
+<article class="post-single"
+         data-pagefind-body
+         data-pagefind-meta="date:{{ .Lastmod.Format "2006-01-02" }}">
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }}
     <h1 class="post-title entry-hint-parent">
