@@ -2,10 +2,11 @@
 title: "Packwerk"
 description: "Shopify が公開した Ruby/Rails 向けの modular monolith 境界強制ツール。constant 参照を静的解析して許可されていないモジュール間依存をビルド時に検出する"
 date: 2026-05-11
-lastmod: 2026-05-11
+lastmod: 2026-05-12
 aliases: ["packwerk", "Shopify Packwerk"]
 related_posts:
   - "/posts/2026/05/2026-05-11-modular-monolith-large-services/"
+  - "/posts/2026/05/2026-05-12-packwerk-equivalents-python-typescript-dotnet/"
 tags: ["ruby", "rails", "modular-monolith", "アーキテクチャ", "shopify", "静的解析"]
 ---
 
@@ -49,19 +50,26 @@ my_app/
 
 ## 類似アプローチ（他言語）
 
-| 言語/環境 | 同等のツール |
-|-----------|--------------|
-| Java | [ArchUnit](https://www.archunit.org/)、`module-info`（JPMS） |
-| Go | `internal/` パッケージ（言語仕様で強制） |
-| TypeScript | [eslint-plugin-boundaries](https://github.com/javierbrea/eslint-plugin-boundaries)、Nx の project boundaries |
-| .NET | NsDepCop、NetArchTest |
+| 言語/環境 | 同等のツール | 哲学 |
+|-----------|--------------|------|
+| Python | [Tach](/blogs/wiki/tools/tach/) / [Import Linter](/blogs/wiki/tools/import-linter/) | 宣言 + 静的解析 + CI |
+| TypeScript | [dependency-cruiser](/blogs/wiki/tools/dependency-cruiser/)（+ eslint-plugin-boundaries / TS Project References の三層） | 汎用 forbidden ルール |
+| .NET | [NsDepCop](/blogs/wiki/tools/nsdepcop/) / [ArchUnitNET](/blogs/wiki/tools/archunitnet/) | Roslyn analyzer / アーキテクチャテスト |
+| Java | [ArchUnit](https://www.archunit.org/) / `module-info`（JPMS） | テスト + 言語仕様 |
+| Go | `internal/` パッケージ | 言語仕様で強制 |
 
-いずれも **境界強制を CI に組み込む** という思想は同じ。
+いずれも **境界強制を CI に組み込む** という思想は同じ。詳細な比較は [他言語に Packwerk はあるか](/blogs/posts/2026/05/2026-05-12-packwerk-equivalents-python-typescript-dotnet/) を参照。
 
 ## 関連ページ
 
 - [Modular Monolith](/blogs/wiki/concepts/modular-monolith/) — Packwerk が支える上位アーキテクチャパターン
+- [Tach](/blogs/wiki/tools/tach/) — Python 側で Packwerk 思想を最も忠実に受け継ぐツール
+- [Import Linter](/blogs/wiki/tools/import-linter/) — Python の契約タイプ組み合わせ型ツール
+- [dependency-cruiser](/blogs/wiki/tools/dependency-cruiser/) — TypeScript 側の最近似ツール
+- [NsDepCop](/blogs/wiki/tools/nsdepcop/) — .NET の Roslyn analyzer による境界強制
+- [ArchUnitNET](/blogs/wiki/tools/archunitnet/) — .NET のアーキテクチャテストライブラリ
 
 ## ソース記事
 
 - [Modular Monolith に回帰する大手サービス — Shopify・Amazon Prime Video・Segment の事例](/blogs/posts/2026/05/2026-05-11-modular-monolith-large-services/) — 2026-05-11
+- [他言語に Packwerk はあるか — Python・TypeScript・.NET のモジュラーモノリス境界強制ツール 2026 年版](/blogs/posts/2026/05/2026-05-12-packwerk-equivalents-python-typescript-dotnet/) — 2026-05-12

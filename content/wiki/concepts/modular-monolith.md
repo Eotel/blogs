@@ -2,10 +2,11 @@
 title: "Modular Monolith（モジュラーモノリス）"
 description: "1 つのデプロイ単位を保ちつつ内部に明示的なモジュール境界を持つアーキテクチャ。Shopify、Amazon Prime Video、Segment などが採用・回帰した中間解"
 date: 2026-05-11
-lastmod: 2026-05-11
+lastmod: 2026-05-12
 aliases: ["modular monolith", "モジュラーモノリス", "modulith", "majestic monolith"]
 related_posts:
   - "/posts/2026/05/2026-05-11-modular-monolith-large-services/"
+  - "/posts/2026/05/2026-05-12-packwerk-equivalents-python-typescript-dotnet/"
 tags: ["アーキテクチャ", "modular-monolith", "microservices", "monolith"]
 ---
 
@@ -69,14 +70,18 @@ destination ごとに 100 以上のマイクロサービスを抱えた構成が
 1. **組織規模（Conway's Law）**: チームが 1〜2 つなら modular monolith でほぼ間違いない。10 を超えてから microservice を本気で検討する。
 2. **スケールの形**: 全体均一スケールか、特定機能だけ突出か。後者なら **その機能だけ切り出す** Citadel モデルが第一候補。
 3. **障害ドメイン要件**: 「決済が落ちても閲覧は続けたい」レベルの SLO 差があるか。なければ無理に分けない。
-4. **境界強制機構を CI に入れる**: Packwerk（Ruby）/ ArchUnit（Java）/ Go の internal package / Java の `module-info` など、**言語ネイティブの境界強制**を最初から組み込む。
+4. **境界強制機構を CI に入れる**: [Packwerk](/blogs/wiki/tools/packwerk/)（Ruby）/ [Tach](/blogs/wiki/tools/tach/) や [Import Linter](/blogs/wiki/tools/import-linter/)（Python）/ [dependency-cruiser](/blogs/wiki/tools/dependency-cruiser/)（TypeScript）/ [NsDepCop](/blogs/wiki/tools/nsdepcop/) や [ArchUnitNET](/blogs/wiki/tools/archunitnet/)（.NET）/ ArchUnit（Java）/ Go の internal package / Java の `module-info` など、**言語に合った境界強制**を最初から組み込む。
 5. **逆方向も許容する**: 切り出したサービスをモノリスに戻す勇気。Segment と Prime Video が示した「戻す」も等しく正しい判断。
 
 ## 関連ページ
 
 - [Packwerk](/blogs/wiki/tools/packwerk/) — Shopify が公開した Ruby/Rails 向け境界強制ツール
+- [Tach](/blogs/wiki/tools/tach/) / [Import Linter](/blogs/wiki/tools/import-linter/) — Python 側の Packwerk 相当
+- [dependency-cruiser](/blogs/wiki/tools/dependency-cruiser/) — TypeScript 側の Packwerk 相当
+- [NsDepCop](/blogs/wiki/tools/nsdepcop/) / [ArchUnitNET](/blogs/wiki/tools/archunitnet/) — .NET 側の Packwerk 相当
 - [ハーネスエンジニアリング](/blogs/wiki/concepts/harness-engineering/) — システム境界を強制する設計思想として通底する考え方
 
 ## ソース記事
 
 - [Modular Monolith に回帰する大手サービス — Shopify・Amazon Prime Video・Segment の事例](/blogs/posts/2026/05/2026-05-11-modular-monolith-large-services/) — 2026-05-11
+- [他言語に Packwerk はあるか — Python・TypeScript・.NET のモジュラーモノリス境界強制ツール 2026 年版](/blogs/posts/2026/05/2026-05-12-packwerk-equivalents-python-typescript-dotnet/) — 2026-05-12
