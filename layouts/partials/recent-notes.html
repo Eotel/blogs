@@ -12,7 +12,6 @@
   <article class="post-row{{ if eq $i 0 }} post-row--hero{{ end }}">
     <h3 class="post-row__title">
       <a href="{{ .Permalink }}">{{ .Title }}</a>
-      {{- if eq .Params.author "hdknr" }}<span class="hdknr-chip">via hdknr</span>{{ end }}
     </h3>
     {{- if eq $i 0 }}
       {{- $excerpt := "" }}

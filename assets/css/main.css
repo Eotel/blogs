@@ -219,6 +219,21 @@ small { font-size: 0.875rem; color: var(--secondary); }
 }
 .site-header__logo:hover { color: var(--ink-deep); }
 
+/* On the home page the masthead h1 carries the title.
+   Make the header chrome bleed into the masthead band: no border,
+   no background, menu floats top-right with subtle ink so the
+   masthead reads as the page's true header. */
+.site-header--home {
+    background: transparent;
+    border-bottom: 0;
+}
+.site-header--home .site-header__inner { justify-content: flex-end; }
+
+/* Pull the masthead up under the home header band so they feel
+   like one chrome, not two. */
+.main:has(.home-grid) { padding-top: 8px; }
+.home-masthead { margin-top: 0; }
+
 .site-nav {
     display: flex;
     align-items: center;
@@ -494,20 +509,6 @@ body::before {
 }
 .tag-list a::before { content: '#'; opacity: 0.55; margin-right: 1px; }
 .tag-list a:hover { color: var(--ink); text-decoration: underline; }
-
-/* hdknr chip */
-.hdknr-chip {
-    display: inline-block;
-    font-size: 0.7rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--secondary);
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    padding: 2px 8px;
-    margin-left: 8px;
-    vertical-align: middle;
-}
 
 /* Section labels */
 .section-label {

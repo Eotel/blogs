@@ -1,20 +1,25 @@
-{{- /* Linked from — reverse lookup of frontmatter `related_posts`. */ -}}
+{{- /* Linked from — reverse lookup of frontmatter `related_posts`.
+       For each other page that lists THIS page's RelPermalink in
+       its `related_posts`, surface it as an inbound link. */ -}}
 {{- $self := .RelPermalink }}
-{{- $back := slice }}
+{{- $selfTrim := trim $self "/" }}
+{{- $seen := dict }}
+{{- $matched := slice }}
 {{- range site.RegularPages }}
-  {{- with .Params.related_posts }}
-    {{- range . }}
-      {{- $needle := . }}
-      {{- if or (eq $needle $self) (eq $needle (trim $self "/")) }}
-        {{- $back = $back | append $.RelPermalink }}
+  {{- $candidate := . }}
+  {{- if ne $candidate.RelPermalink $self }}
+    {{- with $candidate.Params.related_posts }}
+      {{- range . }}
+        {{- $needle := . }}
+        {{- $needleTrim := trim $needle "/" }}
+        {{- if or (eq $needle $self) (eq $needleTrim $selfTrim) }}
+          {{- if not (index $seen $candidate.RelPermalink) }}
+            {{- $matched = $matched | append $candidate }}
+            {{- $seen = merge $seen (dict $candidate.RelPermalink true) }}
+          {{- end }}
+        {{- end }}
       {{- end }}
     {{- end }}
-  {{- end }}
-{{- end }}
-{{- $matched := slice }}
-{{- range $back }}
-  {{- with site.GetPage . }}
-    {{- $matched = $matched | append . }}
   {{- end }}
 {{- end }}
 {{- if $matched }}

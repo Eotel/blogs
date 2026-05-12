@@ -22,7 +22,6 @@
         <article class="archive__entry">
           <h4 class="archive__entry-title">
             <a href="{{ .Permalink }}">{{ .Title }}</a>
-            {{- if eq .Params.author "hdknr" }}<span class="hdknr-chip">via hdknr</span>{{ end }}
           </h4>
           <div class="archive__entry-meta">{{- partial "post-meta.html" . -}}</div>
         </article>

@@ -2,9 +2,11 @@
        and we want minimal chrome elsewhere). Logo doubles as the
        "back to home" affordance with the site name. Search trigger
        sits on the right next to the theme toggle. */ -}}
-<header class="site-header">
+<header class="site-header{{ if .IsHome }} site-header--home{{ end }}">
   <div class="site-header__inner">
+    {{- if not .IsHome }}
     <a class="site-header__logo" href="{{ "/" | relURL }}">{{ site.Title }}</a>
+    {{- end }}
     <nav class="site-nav" aria-label="Primary">
       <ul class="site-nav__list">
         {{- $current := . }}

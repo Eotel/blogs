@@ -4,10 +4,7 @@
          data-pagefind-meta="date:{{ .Date.Format "2006-01-02" }}">
   <header class="post-header">
     {{- partial "breadcrumbs.html" . }}
-    <h1 class="post-title">
-      {{- .Title }}
-      {{- if eq .Params.author "hdknr" }}<span class="hdknr-chip">via hdknr</span>{{ end }}
-    </h1>
+    <h1 class="post-title">{{ .Title }}</h1>
     {{- with .Description }}
     <p class="post-description">{{ . }}</p>
     {{- end }}
