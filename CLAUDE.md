@@ -46,10 +46,17 @@ Hugo + PaperMod で構築された技術ブログ。GitHub Pages でホスティ
 - カテゴリは `scripts/categorize.py` のルールに従う
 - ビルド確認: `hugo --gc`
 - **ダイアグラムは画像化する**: アスキーアート（```` ``` ```` 内のテキスト図）は使わず、drawio で作成して PNG で埋め込む
-  - drawio ファイル: `static/images/<name>.drawio`
-  - エクスポート: `/Applications/draw.io.app/Contents/MacOS/draw.io --export --format png --scale 2 --output <out>.png <in>.drawio`
-  - 記事内参照: `![alt テキスト](/blogs/images/<name>.png)`（絶対パス）
+  - drawio ファイル: `assets/images/<name>.drawio`
+  - エクスポート: `/Applications/draw.io.app/Contents/MacOS/draw.io --export --format png --scale 2 --output assets/images/<name>.png assets/images/<name>.drawio`
+  - 記事内参照: `![alt テキスト](/blogs/images/<name>.png)`（絶対パス。`layouts/_default/_markup/render-image.html` が assets を解決して responsive WebP + raster srcset に展開する）
   - alt テキストには図の内容を自然文で記述する（SEO・アクセシビリティ向上）
+
+## 画像最適化
+
+- 画像は `assets/images/` に配置する（`static/` ではない）。`static/` に置いた画像は Hugo image processing の対象外。
+- markdown の `![](...)` は `layouts/_default/_markup/render-image.html` フックで処理され、ローカル PNG/JPG は `<picture>` + WebP srcset（480w / 768w / 1024w / 1440w / 原寸）に自動展開される。
+- SVG・外部 URL（`http(s)://`）は素の `<img loading="lazy" decoding="async">` のままレンダーされる（SVG は Hugo の image processing 対象外）。
+- 参考: https://gohugo.io/content-management/image-processing/
 
 ## 外部 URL のフェッチ方針
 

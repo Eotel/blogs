@@ -1,0 +1,63 @@
+{{- /*
+  Markdown render hook for images.
+
+  - Local raster images (PNG/JPG) in assets/: emit <picture> with WebP srcset
+    + original-format srcset fallback. Adds width/height, loading=lazy,
+    decoding=async.
+  - Local SVG in assets/: emit plain <img> with lazy loading.
+  - External URLs (http/https): emit plain <img> with lazy loading.
+  - Missing local asset: emit plain <img> referencing the original Destination
+    so the build still succeeds (warning logged).
+
+  Markdown image paths are written as /blogs/images/<name>.<ext> (absolute,
+  matching baseURL). We strip the baseURL path prefix to look up the asset
+  under assets/<name>.<ext>.
+*/ -}}
+
+{{- $dest := .Destination -}}
+{{- $alt := .PlainText -}}
+{{- $title := .Title -}}
+{{- $isExternal := or (hasPrefix $dest "http://") (hasPrefix $dest "https://") (hasPrefix $dest "//") -}}
+
+{{- $resource := false -}}
+{{- if not $isExternal -}}
+  {{- $relPath := $dest -}}
+  {{- $basePath := (urls.Parse site.BaseURL).Path -}}
+  {{- if and $basePath (ne $basePath "/") (hasPrefix $relPath $basePath) -}}
+    {{- $relPath = strings.TrimPrefix $basePath $relPath -}}
+  {{- end -}}
+  {{- $relPath = strings.TrimPrefix "/" $relPath -}}
+  {{- with resources.Get $relPath -}}
+    {{- $resource = . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if $resource -}}
+  {{- $ext := strings.ToLower (path.Ext $resource.Name) -}}
+  {{- if eq $ext ".svg" -}}
+    <img src="{{ $resource.RelPermalink }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }} loading="lazy" decoding="async">
+  {{- else -}}
+    {{- $origW := $resource.Width -}}
+    {{- $origH := $resource.Height -}}
+    {{- $targetWidths := slice -}}
+    {{- range $w := slice 480 768 1024 1440 -}}
+      {{- if lt $w $origW -}}
+        {{- $targetWidths = $targetWidths | append $w -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $targetWidths = $targetWidths | append $origW -}}
+
+    {{- $webpParts := slice -}}
+    {{- $rasterParts := slice -}}
+    {{- range $w := $targetWidths -}}
+      {{- $resized := cond (eq $w $origW) $resource ($resource.Resize (printf "%dx" $w)) -}}
+      {{- $webp := $resized.Process "webp" -}}
+      {{- $webpParts = $webpParts | append (printf "%s %dw" $webp.RelPermalink $w) -}}
+      {{- $rasterParts = $rasterParts | append (printf "%s %dw" $resized.RelPermalink $w) -}}
+    {{- end -}}
+    {{- $sizes := "(max-width: 768px) 100vw, 720px" -}}
+<picture><source type="image/webp" srcset="{{ delimit $webpParts ", " }}" sizes="{{ $sizes }}"><img src="{{ $resource.RelPermalink }}" srcset="{{ delimit $rasterParts ", " }}" sizes="{{ $sizes }}" width="{{ $origW }}" height="{{ $origH }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }} loading="lazy" decoding="async"></picture>
+  {{- end -}}
+{{- else -}}
+  <img src="{{ $dest }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }} loading="lazy" decoding="async">
+{{- end -}}
