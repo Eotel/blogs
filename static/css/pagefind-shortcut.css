@@ -1,0 +1,34 @@
+/* (a) Menu-end Pagefind trigger: align with the other menu items.
+       The <li class="menu-search"> is stretched to the menu row height
+       (60px) by PaperMod's link-driven content height. The trigger
+       inside is only 36px and sat at the top of the li. Turn the li
+       into a flex container so we can vertically center the trigger. */
+#menu {
+    align-items: center;
+}
+
+#menu .menu-search {
+    display: flex;
+    align-items: center;
+    margin-left: 0.4em;
+}
+
+/* (b) Esc-scroll fix is currently DISABLED while we debug why the
+       trigger reports "not clickable". Re-enable once functional state
+       is restored. Pagefind toggles a `.open` class on the element
+       when it opens. */
+/*
+pagefind-modal:not(.open) {
+    display: none;
+}
+*/
+
+/* (c) PaperMod gives `.first-entry` min-height 320px (260px on small
+       screens) and vertically centers the content. We removed the
+       <h1>, so reclaim the space and pin description to the top. */
+.first-entry.home-info {
+    display: block;
+    min-height: auto;
+    justify-content: flex-start;
+    margin: var(--gap) 0 calc(var(--gap) * 2) 0;
+}

@@ -17,7 +17,6 @@ paginate = 10
   author = 'Eotel'
 
   [params.homeInfoParams]
-    Title = 'Eotel blog'
     Content = 'Gist と Issue から自動生成する個人ブログ。historical post は hdknr 由来。'
 
 [permalinks]
