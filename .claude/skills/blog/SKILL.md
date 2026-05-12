@@ -296,7 +296,7 @@ Agent(subagent_type="seo-advisor",             prompt="記事絶対パス: $ARTI
   "claims": [
     {
       "line": 42,
-      "claim_type": "factual | discourse | verbatim-quote",
+      "claim_type": "factual | attribution | citation | verbatim-quote | paraphrase",
       "claim": "...",
       "verdict": "verified | needs_fix | incorrect | uncertain",
       "failure_pattern": "misattribution-author-confusion | citation-mismatch-empty-footnote | scare-quote-without-verbatim | conceptual-conflation | paraphrase-over-extension | null",
@@ -317,12 +317,14 @@ Agent(subagent_type="seo-advisor",             prompt="記事絶対パス: $ARTI
 }
 ```
 
-`claim_type` の意味:
+`claim_type` の意味（1 つだけ選ぶ。複数該当時は優先順 verbatim-quote → citation → attribution → paraphrase → factual）:
 - `factual` — ツール存在・機能仕様・組織所属など客観的事実
-- `discourse` — 「誰が何を言ったか / どこに書いたか」の言説主張
-- `verbatim-quote` — 鉤括弧で囲まれた逐語引用主張
+- `attribution` — 「誰が言ったか/どこに書いたか」を主張 (鉤括弧逐語を含まない)
+- `citation` — 脚注 `[^foo]` や URL を本文主張の根拠としている参照
+- `verbatim-quote` — 鉤括弧「...」「"..."」または blockquote (`>`) 内の逐語引用
+- `paraphrase` — 間接話法による要約・言い換え
 
-言説主張 (`discourse` / `verbatim-quote`) は事実主張より厳しく判定される。詳細は `.claude/agents/claim-source-verifier.md` の「5 failure pattern」を参照。
+`factual` 以外 (= 言説主張) は事実主張より厳しく判定される。各 claim_type に対応する failure_pattern は `.claude/agents/claim-source-verifier.md` の「claim_type と failure_pattern の対応マトリクス」を参照。
 
 ### verdict の集計と反映（skill 本体側で実施）
 
