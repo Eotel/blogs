@@ -15,13 +15,13 @@ tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 ## バックログ
 
 - [root / new_candidate](/blogs/wiki/guides/wiki-ingest-backlog-root-new_candidate/) — 1件
-- [2026 / review_candidate](/blogs/wiki/guides/wiki-ingest-backlog-2026-review_candidate/) — 75件
-- [2026 / new_candidate](/blogs/wiki/guides/wiki-ingest-backlog-2026-new_candidate/) — 47件
+- [2026 / review_candidate](/blogs/wiki/guides/wiki-ingest-backlog-2026-review_candidate/) — 66件
+- [2026 / new_candidate](/blogs/wiki/guides/wiki-ingest-backlog-2026-new_candidate/) — 46件
 - [2025 / review_candidate](/blogs/wiki/guides/wiki-ingest-backlog-2025-review_candidate/) — 10件
 - [2025 / new_candidate](/blogs/wiki/guides/wiki-ingest-backlog-2025-new_candidate/) — 4件
-- [2024 / review_candidate](/blogs/wiki/guides/wiki-ingest-backlog-2024-review_candidate/) — 63件
+- [2024 / review_candidate](/blogs/wiki/guides/wiki-ingest-backlog-2024-review_candidate/) — 62件
 - [2024 / new_candidate](/blogs/wiki/guides/wiki-ingest-backlog-2024-new_candidate/) — 27件
-- [2023 / review_candidate](/blogs/wiki/guides/wiki-ingest-backlog-2023-review_candidate/) — 68件
+- [2023 / review_candidate](/blogs/wiki/guides/wiki-ingest-backlog-2023-review_candidate/) — 67件
 - [2023 / new_candidate](/blogs/wiki/guides/wiki-ingest-backlog-2023-new_candidate/) — 18件
 - [2021 / review_candidate](/blogs/wiki/guides/wiki-ingest-backlog-2021-review_candidate/) — 11件
 - [2021 / new_candidate](/blogs/wiki/guides/wiki-ingest-backlog-2021-new_candidate/) — 4件
