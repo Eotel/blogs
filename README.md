@@ -9,7 +9,7 @@ Hugo + PaperMod で構築された技術ブログ。GitHub Pages でホスティ
 ### devenv (推奨)
 
 [devenv](https://devenv.sh) (Nix ベース) で Hugo / Python / lint ツール / drawio export を 1 コマンドで揃えられる。
-`lefthook install`・`pip install -r requirements.txt` は `enterShell` で自動実行されるので、下記の brew 手順を踏まずに済む。
+`lefthook install`・`uv sync` (pyproject.toml の依存解決) は `enterShell` で自動実行されるので、下記の brew 手順を踏まずに済む。
 
 ```bash
 # devenv 本体 (未導入なら)
@@ -143,14 +143,14 @@ cat .claude/temp/blog-batch-report-*.md
 
 ### categorize.py — カテゴリ・タグ自動付与
 
-依存ライブラリ（PyYAML）を初回のみインストール:
+依存ライブラリは `pyproject.toml` で管理。devenv shell に入っていれば `uv sync` が自動実行されている。devenv を使わない場合は手動で:
 
 ```bash
-pip install -r requirements.txt
+uv sync
 ```
 
 実行:
 
 ```bash
-python scripts/categorize.py
+uv run python scripts/categorize.py
 ```
