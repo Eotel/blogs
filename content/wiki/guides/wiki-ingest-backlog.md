@@ -15,7 +15,7 @@ tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 ## バックログ
 
 - [root / new_candidate](/blogs/wiki/guides/wiki-ingest-backlog-root-new_candidate/) — 1件
-- [2026 / review_candidate](/blogs/wiki/guides/wiki-ingest-backlog-2026-review_candidate/) — 74件
+- [2026 / review_candidate](/blogs/wiki/guides/wiki-ingest-backlog-2026-review_candidate/) — 75件
 - [2026 / new_candidate](/blogs/wiki/guides/wiki-ingest-backlog-2026-new_candidate/) — 47件
 - [2025 / review_candidate](/blogs/wiki/guides/wiki-ingest-backlog-2025-review_candidate/) — 10件
 - [2025 / new_candidate](/blogs/wiki/guides/wiki-ingest-backlog-2025-new_candidate/) — 4件
