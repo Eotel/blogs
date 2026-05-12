@@ -243,78 +243,76 @@ tags: ["tag1", "tag2"]
 5. **相対パス（`../../images/`）は使わない**: Hugo のパーマリンク構造で 404 になるため、必ず `/blogs/images/` の絶対パスを使う
 6. 既存の drawio ファイル（`static/images/openclaw-gateway-architecture.drawio` 等）のスタイルを参考にする
 
-## ファクトチェック（情報検証）
+## ファクトチェック & エージェントレビュー（6 並列起動）
 
-記事をコミットする前に、以下の手順で記事内の事実関係を検証する。
-**このステップは省略してはならない。**
+記事ファイルを Write した直後、コミット前に **6 つの subagent を 1 つのメッセージで並列起動** する。
+**このステップは省略してはならない。** 並列化により context 消費を抑え、観点ごとの verdict が独立して検証可能になる。
 
-### 検証対象
+### 起動する subagent
 
-記事内の以下の項目をすべて抽出して検証する:
-
-1. **ツール・サービス・ライブラリの存在確認**
-   - 記事で言及しているツール、プラグイン、ライブラリ、サービスが実在するか
-   - GitHub リポジトリの URL が記載されている場合、`gh api` で存在を確認する:
-     ```bash
-     gh api /repos/{owner}/{repo} --jq '.full_name' 2>&1
-     ```
-   - 公式サイトの URL がある場合、「外部 URL のフェッチ方針」に従って取得・検証する
-
-2. **コマンド・APIの正確性**
-   - 記事に記載されているインストールコマンドや CLI コマンドが正しい構文か
-   - WebSearch で公式ドキュメントを検索し、コマンド構文を照合する
-
-3. **機能・仕様の正確性**
-   - 記事で説明している機能や仕様が実際に存在するか
-   - WebSearch で公式ドキュメントやリリースノートを確認する
-
-4. **バージョン・日付の正確性**
-   - 記載されているバージョン番号やリリース日が正しいか
-
-### 検証手順
-
-1. 記事から検証すべき事実（claims）をリストアップする
-2. 各事実について WebSearch または `gh api` で裏付けを取る
-3. 検証結果を以下の形式で整理する:
-   - ✅ **確認済み**: 裏付けが取れた事実
-   - ⚠️ **要修正**: 部分的に正しいが修正が必要な事実
-   - ❌ **誤り**: 裏付けが取れなかった事実（ハルシネーションの可能性）
-   - ℹ️ **未確認**: 検証できなかったが重大なリスクは低い事実
-4. ⚠️ または ❌ の項目がある場合は、記事を修正してから次のステップに進む
-5. 検証結果をユーザーに報告し、修正内容の確認を求める
-
-### 検証の重点ポイント
-
-- **GitHub リポジトリの存在**: 記事内の GitHub URL は必ず `gh api` で確認する
-- **コマンド構文**: インストールコマンドや設定コマンドは公式ドキュメントと照合する
-- **プラグイン・拡張機能**: 「公式」と謳っている場合、本当に公式かを確認する
-- **ソースがない独自の主張**: ソース元にない情報を記事作成時に追加した場合、特に慎重に検証する
-
-## エージェントレビュー（品質向上）
-
-ファクトチェック完了後、コミット前に以下の 2 つのカスタムエージェントを **並列実行** して記事の品質を高める。
-**このステップは省略してはならない。**
+| agent | 担当観点 | 出力 |
+|---|---|---|
+| `claim-source-verifier` | ツール存在・機能仕様・「公式」帰属など事実主張の裏付け | JSON verdict |
+| `url-liveness-checker` | 記事内 URL の HTTP ステータス / 404 検出 | JSON verdict |
+| `command-syntax-verifier` | CLI コマンド・API 呼び出しの構文・フラグ | JSON verdict |
+| `version-date-checker` | バージョン番号・リリース日・互換性記述 | JSON verdict |
+| `tech-writer` | 構成・読みやすさ・日本語品質 | 自然文レビュー |
+| `seo-advisor` | タイトル / カテゴリ / タグ / 内部リンク | 自然文レビュー |
 
 ### 実行方法
 
-Agent ツールで `tech-writer` と `seo-advisor` を同時に起動する:
+`$ARTICLE_PATH` を `$WORKTREE_DIR/content/posts/YYYY/MM/YYYY-MM-DD-<slug>.md` に置き換えて、以下を **必ず 1 つのメッセージで並列起動** する:
 
 ```
-Agent(subagent_type="tech-writer", prompt="以下の記事をレビューしてください: $WORKTREE_DIR/content/posts/YYYY/MM/YYYY-MM-DD-<slug>.md")
-Agent(subagent_type="seo-advisor", prompt="以下の記事を分析してください: $WORKTREE_DIR/content/posts/YYYY/MM/YYYY-MM-DD-<slug>.md")
+Agent(subagent_type="claim-source-verifier",   prompt="記事絶対パス: $ARTICLE_PATH")
+Agent(subagent_type="url-liveness-checker",    prompt="記事絶対パス: $ARTICLE_PATH")
+Agent(subagent_type="command-syntax-verifier", prompt="記事絶対パス: $ARTICLE_PATH")
+Agent(subagent_type="version-date-checker",    prompt="記事絶対パス: $ARTICLE_PATH")
+Agent(subagent_type="tech-writer",             prompt="記事絶対パス: $ARTICLE_PATH")
+Agent(subagent_type="seo-advisor",             prompt="記事絶対パス: $ARTICLE_PATH")
 ```
 
-- 2 つのエージェントは独立しているため、必ず **1 つのメッセージで並列起動** する
-- エージェントは記事を読み取ってレビュー結果を返すだけで、ファイルは編集しない
+- 各 agent は記事を Read してレビューするだけで、ファイル編集はしない
+- レビュー対象は `$WORKTREE_DIR` 内のファイル
 
-### レビュー結果の反映
+### JSON verdict スキーマ（fact-check 系 4 agent 共通）
 
-1. 両エージェントの結果を受け取る
-2. 改善提案を以下の基準でフィルタリングする:
+```json
+{
+  "agent": "claim-source-verifier",
+  "article": "content/posts/YYYY/MM/YYYY-MM-DD-slug.md",
+  "checked_at": "ISO8601 UTC",
+  "claims": [
+    {
+      "line": 42,
+      "claim": "...",
+      "verdict": "verified | needs_fix | incorrect | uncertain",
+      "evidence": "URL + 引用",
+      "suggestion": "needs_fix / incorrect のとき必須"
+    }
+  ],
+  "summary": {"verified": 0, "needs_fix": 0, "incorrect": 0, "uncertain": 0}
+}
+```
+
+### verdict の集計と反映（skill 本体側で実施）
+
+1. fact-check 系 4 agent の JSON verdict をマージし、`verdict` ごとに件数をユーザーへ簡潔に報告する
+2. verdict ごとの処理方針:
+   - **verified**: ノーアクション
+   - **needs_fix**: `Edit` で記事を即座に修正（`suggestion` を反映）
+   - **incorrect**: 即座に削除 or `Edit` で修正。ソース無しの独自主張は削除を優先
+   - **uncertain**: 件数のみユーザーに報告し、判断を仰ぐ
+3. `tech-writer` / `seo-advisor` のレビュー結果は以下の基準でフィルタリング:
    - **即座に反映**: 誤字脱字、表記揺れ、明らかな構成の問題、タグの過不足
-   - **ユーザーに確認**: タイトルの変更提案、カテゴリの変更提案、大幅な構成変更
+   - **ユーザーに確認**: タイトル変更、カテゴリ変更、大幅な構成変更
    - **スキップ**: 好みの問題（文体の微調整など）、既存記事への内部リンク追加（別 PR で対応）
-3. 反映した改善内容をユーザーに簡潔に報告する
+4. 修正後、`git diff` で変更を確認してからコミットへ進む
+
+### 補足
+
+- 単発の総合ファクトチェックを行いたい場合は `fact-checker` agent を直接呼べる（4 観点を 1 agent で走査する用途）
+- 各 fact-check agent の検証ルール詳細は `.claude/agents/<agent-name>.md` を参照
 
 ## コミット・ブランチ・PR 作成（worktree 方式）
 

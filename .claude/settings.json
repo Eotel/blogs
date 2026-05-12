@@ -3,8 +3,10 @@
     "allow": [
       "Bash(ast-grep scan *)",
       "Bash(curl -sI *)",
+      "Bash(curl -fsS -o /dev/null *)",
       "Bash(gh search *)",
-      "Bash(git ls-tree *)"
+      "Bash(git ls-tree *)",
+      "Bash(hugo --gc)"
     ]
   }
 }

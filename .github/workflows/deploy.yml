@@ -55,7 +55,10 @@ jobs:
         with:
           enable-cache: true
       - name: Install Python dependencies
-        run: uv pip install --system -r requirements.txt
+        run: |
+          uv venv .venv
+          uv pip install -r requirements.txt
+          echo "$(pwd)/.venv/bin" >> "$GITHUB_PATH"
       - name: Inject keyword auto-links
         run: |
           python3 scripts/build_keyword_index.py

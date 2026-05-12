@@ -10,6 +10,11 @@ arguments:
     required: false
 ---
 
+> **推奨モデル: Sonnet 4.6**
+> このスキルは grep + Read による検索と引用付き読解が主な仕事で、Opus の深い推論は過剰。
+> 実行前に `/model sonnet` で切り替えるとコスト効率が良い。
+> 横断的に多数の wiki/post をクロスリードする質問でも、Sonnet で品質は十分。
+
 `content/wiki/{concepts,tools,guides}` と `content/posts/` を knowledge base として、自然言語の質問に対して **引用付きで** 回答する skill。
 
 karpathy の LLM Wiki パターンの第 3 操作 (Query) に対応する。執筆前の調査と、過去メモの再活用を兼ねる。
