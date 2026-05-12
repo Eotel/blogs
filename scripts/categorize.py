@@ -141,7 +141,7 @@ TAG_RULES: list[tuple[str, list[str]]] = [
     ("tts", ["tts", "text-to-speech"]),
     ("音声合成", ["音声合成", "voice synthesis"]),
     ("投機的デコード", ["投機的デコード", "speculative decoding", "投機的tts", "speculative tts", "推測デコード"]),
-    ("推論高速化", ["推論高速化", "inference acceleration", "rtf", "real-time factor"]),
+    ("推論高速化", ["推論高速化", "inference acceleration", "real-time factor"]),
     ("flow-matching", ["flow matching", "rectified flow", "matcha-tts", "f5-tts"]),
 ]
 

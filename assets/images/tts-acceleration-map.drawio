@@ -1,0 +1,85 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="TTS Acceleration Map">
+    <mxGraphModel dx="1422" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="900" math="0" shadow="0" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="TTS 推論高速化の手法マップ (2024–2026)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="20" width="700" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="4 つの直交軸：モデル設計 (AR / NAR) × レイヤ (モデル / システム / ストリーミング)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontColor=#5c6c7c;" vertex="1" parent="1">
+          <mxGeometry x="200" y="56" width="700" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="axis-ar" value="AR codec LM 系統" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#34495e;" vertex="1" parent="1">
+          <mxGeometry x="120" y="92" width="380" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="axis-nar" value="NAR flow / diffusion 系統" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#34495e;" vertex="1" parent="1">
+          <mxGeometry x="600" y="92" width="380" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="q1-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#34495e;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="125" width="480" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="q1-title" value="① AR codec LM × 投機的 TTS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="138" width="440" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="q1-models" value="代表モデル&#10;VALL-E / Llasa / CosyVoice 2&#10;Spark-TTS / XTTS v2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#34495e;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="175" width="220" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="q1-approach" value="高速化アプローチ&#10;draft head × K → verify&#10;tolerance sampling" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fdebd0;strokeColor=#b9770e;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="320" y="175" width="200" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="q1-methods" value="主要手法:&#10;• VADUSA (arXiv 2410.21951) ／ 〜 5× 加速&#10;• Llasa+ (arXiv 2508.06262) ／ 1.48× (frozen)&#10;• SSD (arXiv 2505.15380) ／ 1.4×&#10;• PCG: 一般化 tolerance (arXiv 2511.13732)&#10;&#10;LLM 用 speculative decoding を TTS 特性で拡張" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="260" width="440" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="q2-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#138d75;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="560" y="125" width="480" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="q2-title" value="② NAR flow / diffusion × step 削減" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="138" width="440" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="q2-models" value="代表モデル&#10;F5-TTS / Matcha-TTS&#10;VoiceFlow / FlashSpeech" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#138d75;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="580" y="175" width="220" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="q2-approach" value="高速化アプローチ&#10;CFM / Rectified Flow&#10;Consistency / DMD 蒸留" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5f5e3;strokeColor=#27ae60;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="820" y="175" width="200" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="q2-methods" value="主要手法:&#10;• F5-TTS (arXiv 2410.06885) ／ NFE 16&#10;• Fast F5-TTS / EPSS (2505.19931) ／ NFE 7&#10;• CoMoSpeech / FlashSpeech ／ 1–2 step&#10;• DMOSpeech 2 (2410.11097) ／ 4 step&#10;&#10;サンプリング回数を直接減らす" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="580" y="260" width="440" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="q3-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fdebd0;strokeColor=#b9770e;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="460" width="480" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="q3-title" value="③ システム最適化（直交）" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="473" width="440" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="q3-engine" value="推論エンジン&#10;TensorRT-LLM + Triton&#10;vLLM / SGLang" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9770e;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="510" width="220" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="q3-kernel" value="量子化 / kernel&#10;FP8 KV cache, AWQ/INT8&#10;FlashAttention-3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff4e0;strokeColor=#d68910;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="320" y="510" width="200" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="q3-features" value="特徴:&#10;• モデル設計と独立に効くため掛け算で重ねられる&#10;• CosyVoice 2 + TensorRT-LLM で HF 比 〜 4×&#10;• FP8 KV cache で VRAM とメモリ帯域を半減&#10;• Edge では INT8 / AWQ が現実解&#10;&#10;どの系統のモデルとも組み合わせられる土台" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="595" width="440" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="q4-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fadbd8;strokeColor=#c0392b;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="560" y="460" width="480" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="q4-title" value="④ ストリーミング設計" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="473" width="440" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="q4-pattern" value="基本パターン&#10;chunk-wise + lookahead&#10;monotonic alignment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c0392b;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="580" y="510" width="220" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="q4-goal" value="最適化目標&#10;First-packet latency&#10;＝ &quot;話し始めるまで&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fcdada;strokeColor=#922b21;fontSize=12;fontStyle=1;fontColor=#922b21;align=center;" vertex="1" parent="1">
+          <mxGeometry x="820" y="510" width="200" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="q4-methods" value="主要手法:&#10;• CosyVoice 2 streaming ／ first-packet 〜 150 ms&#10;• VoXtream (arXiv 2509.15969) ／ 102 ms (GPU)&#10;• SpeakStream (arXiv 2505.19206)&#10;• Llasa+ も streaming 化を内包&#10;&#10;RTF が良くても &quot;話し始め&quot; が遅いと体感は悪い" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="580" y="595" width="440" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="footer" value="① + ② はモデル設計、③ ＋ ④ はシステム配置。実運用では 4 象限すべてを掛け合わせる。" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#5c6c7c;" vertex="1" parent="1">
+          <mxGeometry x="200" y="820" width="700" height="22" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -46,8 +46,11 @@ Hugo + PaperMod で構築された技術ブログ。GitHub Pages でホスティ
 - カテゴリは `scripts/categorize.py` のルールに従う
 - ビルド確認: `hugo --gc`
 - **ダイアグラムは画像化する**: アスキーアート（```` ``` ```` 内のテキスト図）は使わず、drawio で作成して PNG で埋め込む
-  - drawio ファイル: `assets/images/<name>.drawio`
-  - エクスポート: `/Applications/draw.io.app/Contents/MacOS/draw.io --export --format png --scale 2 --output assets/images/<name>.png assets/images/<name>.drawio`
+  - drawio ファイル: `assets/images/<name>.drawio`（mxgraph XML を直接書ける。既存ファイルを雛形にする）
+  - エクスポート（**Docker 経由を推奨**）: `./scripts/drawio-export.sh assets/images/<name>.drawio -f png --scale 2 -o assets/images/`
+    - 内部で `rlespinasse/drawio-desktop-headless` を起動する。Docker Desktop / orbstack / colima のいずれかが稼働していれば良い。GUI 版 draw.io をローカルにインストールする必要はない
+    - 環境変数 `DRAWIO_EXPORT_IMAGE` でイメージ差し替え、`DRAWIO_EXPORT_TIMEOUT` でタイムアウト変更が可能
+  - GUI 版 draw.io がローカルにある場合のみ、`/Applications/draw.io.app/Contents/MacOS/draw.io --export --format png --scale 2 --output assets/images/<name>.png assets/images/<name>.drawio` でも可
   - 記事内参照: `![alt テキスト](/blogs/images/<name>.png)`（絶対パス。`layouts/_default/_markup/render-image.html` が assets を解決して responsive WebP + raster srcset に展開する）
   - alt テキストには図の内容を自然文で記述する（SEO・アクセシビリティ向上）
 

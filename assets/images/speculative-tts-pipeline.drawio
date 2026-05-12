@@ -1,0 +1,72 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Speculative TTS Pipeline">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="700" math="0" shadow="0" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="投機的 TTS のパイプライン (Draft &#8594; Verify &#8594; Accept)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="20" width="780" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="input" value="入力テキスト&#10;&#10;&quot;こんにちは、…&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ecf0f1;strokeColor=#34495e;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="240" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="backbone" value="Codec LM backbone&#10;(frozen, e.g. Llasa / VALL-E)&#10;&#10;Transformer blocks&#10;&#8594; hidden state h_t を&#10;複数 head で共有" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="220" y="180" width="220" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="target-head" value="Target head&#10;&#10;次の 1 トークン y_t を予測&#10;p_target(·|h_t)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="490" y="100" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="draft-heads" value="Draft heads × K&#10;&#10;Medusa-style multi-token&#10;y_{t+1}, …, y_{t+K} を並列予測&#10;＋ tree attention" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="490" y="380" width="220" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="verifier" value="Verifier (1 forward)&#10;&#10;Target が候補ツリーを並列検証&#10;tolerance sampling で&#10;音響的に近ければ accept" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fdebd0;strokeColor=#b9770e;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="770" y="220" width="240" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="accept" value="Accept: トークン列を採用&#10;y_t, y_{t+1}, …, y_{t+k}" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#27ae60;fontSize=12;fontStyle=1;fontColor=#196f3d;align=center;" vertex="1" parent="1">
+          <mxGeometry x="770" y="380" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="reject" value="Reject (rollback)&#10;不一致箇所まで戻す" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fadbd8;strokeColor=#c0392b;dashed=1;fontSize=12;fontStyle=1;fontColor=#922b21;align=center;" vertex="1" parent="1">
+          <mxGeometry x="490" y="230" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="decoder" value="Codec decoder&#10;&#8594; 24/48 kHz waveform" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef9e7;strokeColor=#7d6608;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="820" y="490" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="e-input-backbone" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#34495e;" edge="1" parent="1" source="input" target="backbone">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-backbone-target" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.25;entryX=0;entryY=0.5;strokeColor=#34495e;" edge="1" parent="1" source="backbone" target="target-head">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-backbone-draft" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.75;entryX=0;entryY=0.5;strokeColor=#34495e;" edge="1" parent="1" source="backbone" target="draft-heads">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-target-verifier" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.25;strokeColor=#34495e;" edge="1" parent="1" source="target-head" target="verifier">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-draft-verifier" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.75;strokeColor=#34495e;" edge="1" parent="1" source="draft-heads" target="verifier">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-verifier-accept" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#27ae60;strokeWidth=2;" edge="1" parent="1" source="verifier" target="accept">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-verifier-reject" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;strokeColor=#c0392b;dashed=1;strokeWidth=1.5;" edge="1" parent="1" source="verifier" target="reject">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-reject-backbone" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0;exitY=0.5;entryX=0.5;entryY=1;strokeColor=#c0392b;dashed=1;strokeWidth=1.5;" edge="1" parent="1" source="reject" target="backbone">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="260" />
+              <mxPoint x="330" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-accept-decoder" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#27ae60;strokeWidth=2;" edge="1" parent="1" source="accept" target="decoder">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="caption" value="Draft heads が K 個を並列に提案し、Target が 1 forward で検証する。tolerance sampling により音響的等価トークンも accept する点が LLM 用 speculative decoding との違い。" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#5c6c7c;" vertex="1" parent="1">
+          <mxGeometry x="80" y="600" width="940" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

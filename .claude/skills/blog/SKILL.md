@@ -228,20 +228,24 @@ tags: ["tag1", "tag2"]
 
 ### ダイアグラム（図）の作成ルール
 
-アーキテクチャ図やフロー図が必要な場合、**アスキーアートは使わず drawio で画像化する**。
+アーキテクチャ図やフロー図が必要な場合、**アスキーアートは使わず drawio で画像化する**。SVG を手書きで作るのもアンチパターン — `.drawio` ソースが残らず後から編集できない。
 
-1. drawio ファイルを作成する: `static/images/<slug>-<diagram-name>.drawio`
-2. PNG にエクスポートする（`--scale 2` で高解像度）:
+1. drawio ファイルを作成する: `assets/images/<slug>-<diagram-name>.drawio`
+   - mxgraph XML を直接 Write ツールで書ける。既存ファイル（例: `assets/images/harness-eval-cycle.drawio`、`assets/images/design-md-three-layers.drawio`）を雛形にすると効率が良い
+2. PNG にエクスポートする（**Docker 経由を推奨**、`--scale 2` で高解像度）:
    ```bash
-   /Applications/draw.io.app/Contents/MacOS/draw.io --export --format png --scale 2 --output static/images/<name>.png static/images/<name>.drawio
+   ./scripts/drawio-export.sh assets/images/<name>.drawio -f png --scale 2 -o assets/images/
    ```
+   - 内部で `rlespinasse/drawio-desktop-headless` を起動する。Docker Desktop / orbstack / colima のいずれかが稼働していれば良く、GUI 版 draw.io のローカルインストールは不要
+   - GUI 版 draw.io がローカルにある場合のみ、`/Applications/draw.io.app/Contents/MacOS/draw.io --export --format png --scale 2 --output assets/images/<name>.png assets/images/<name>.drawio` でも可
 3. 記事内で絶対パスで参照する:
    ```markdown
    ![図の内容を自然文で記述した alt テキスト](/blogs/images/<name>.png)
    ```
 4. **alt テキスト**: 図の内容を自然文で記述する（SEO の画像検索露出 + アクセシビリティ向上）
 5. **相対パス（`../../images/`）は使わない**: Hugo のパーマリンク構造で 404 になるため、必ず `/blogs/images/` の絶対パスを使う
-6. 既存の drawio ファイル（`static/images/openclaw-gateway-architecture.drawio` 等）のスタイルを参考にする
+6. 既存の drawio ファイル（`assets/images/openclaw-gateway-architecture.drawio` 等）のスタイルを参考にする
+7. 配置先は `assets/images/` （`static/` ではない）。`static/` 配下は Hugo image processing の対象外で WebP srcset 展開が効かない
 
 ## ファクトチェック（情報検証）
 

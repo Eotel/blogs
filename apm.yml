@@ -1,0 +1,18 @@
+name: eotel-blogs
+version: 1.0.0
+description: Eotel/blogs — Hugo + PaperMod 個人ブログ。Claude Code 用の APM 依存を宣言する。
+author: Eotel
+
+# APM 0.12+ は targets の明示宣言を要求する。Claude Code に固定する。
+targets:
+  - claude
+
+dependencies:
+  apm:
+    # drawio diagram skill (jgraph 公式). `.drawio` ネイティブ生成 + PNG/SVG/PDF エクスポート。
+    # 配備先: .claude/skills/drawio/SKILL.md
+    - jgraph/drawio-mcp/skill-cli/drawio
+  mcp: []
+
+includes: auto
+scripts: {}
