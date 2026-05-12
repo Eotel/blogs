@@ -211,6 +211,14 @@ python3 .claude/skills/wiki-ingest/scripts/wiki_backlog_rescan.py \
 - 新規 Wiki ページが増えた直後（例: トレンド系のツール記事を ingest した後）に手動で `/wiki-ingest backlog-rescan` を走らせ、過去記事を吸い上げる
 - 月次 / 四半期で定常的に棚卸し（cron 化は要検討）
 
+## 関連スキル
+
+`/wiki-ingest` は **新しい post → Wiki への流入** を扱う。**既存 Wiki ページの老朽化** を扱うのは別レーンの `/wiki-decay`:
+
+- 週次 cron (`.github/workflows/wiki-decay-report.yml`) が section 別閾値で stale 候補を Issue 起票
+- `/wiki-decay refresh <section>/<slug>` で `wiki-fact-checker` agent を起動して claim 再検証
+- 詳細は `.claude/skills/wiki-decay/SKILL.md`
+
 ## 注意事項
 
 - Wiki ページは日本語で記述する

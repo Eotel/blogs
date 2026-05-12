@@ -45,9 +45,10 @@ Hugo + PaperMod で構築された技術ブログ。GitHub Pages でホスティ
 
 ### 用途別
 
-- **fact-checker** — 単発の総合ファクトチェック（観点を分けない一括走査）。`/blog` のメインフローでは使わない
+- **fact-checker** — 単発の総合ファクトチェック（観点を分けない一括走査）。`/blog` のメインフローでは使わない。**wiki ページのファクトチェックには `wiki-fact-checker` を使う**
 - **trend-researcher** — 技術トレンド調査と記事ネタ提案
 - **wiki-linter** — Wiki 健全性チェック (`/wiki-lint` から委託、`model: haiku` 固定でコスト最適化)
+- **wiki-fact-checker** — 既存 Wiki ページの claim を一次情報照合して JSON verdict を返す (`/wiki-decay refresh` から委託、`model: haiku` 固定)
 - **backlog-rescanner** — Wiki ingest backlog の滞留記事を再走査して update_candidate 昇格候補を抽出 (`/wiki-ingest backlog-rescan` から委託、`model: haiku` 固定)
 
 ## モデル選択の方針
@@ -105,15 +106,19 @@ Hugo + PaperMod で構築された技術ブログ。GitHub Pages でホスティ
 
 ## Wiki 管理（LLM Wiki パターン）
 
-- `/wiki-ingest <対象>` — 記事から Wiki ページを自動生成・更新（**出力**）
+- `/wiki-ingest <対象>` — 記事から Wiki ページを自動生成・更新（**新規流入**）
 - `/wiki-query "<質問>"` — Wiki と posts に質問を投げて引用付きで回答（**入力 / 検索**）
-- `/wiki-lint` — Wiki の健全性チェック（孤立ページ、欠落リンク、古い記述）
+- `/wiki-lint` — Wiki の健全性チェック（孤立ページ、欠落リンク、古い記述 / + decay advisory）
+- `/wiki-decay` — Wiki ページの `lastmod` を section 別閾値で評価し、古びた候補を浮かせる（**老朽化検出**）。週次 cron で Issue 起票も自動化 (`.github/workflows/wiki-decay-report.yml`)
+  - 閾値: tools/ 45/90d, guides/ 75/150d, concepts/ 150/300d (soft/hard)
+  - `/wiki-decay refresh <section>/<slug>` で `wiki-fact-checker` agent を起動し claim 再検証
 - Wiki 構造: `content/wiki/concepts/`（概念）、`content/wiki/tools/`（ツール）、`content/wiki/guides/`（手順）
   - **opt-in セクション**: `content/wiki/qa/` は `/wiki-query --save` 時だけ生成される（v1 ではデフォルト保存しない）
 - Wiki ページのフロントマター: title, description, date, lastmod, aliases, related_posts, tags
 - Wiki ページは記事の丸コピーではなく、要約・統合した知識として再構成する
+- **Wiki content は snapshot ではなく "現時点で通用する知識"**。事実は時間で腐るため、`/wiki-decay` の週次レポートで refresh 対象を triage する運用
 - Wiki セクション専用レイアウト: `layouts/wiki/`（single.html, list.html）
-- 詳細は `.claude/skills/wiki-ingest/SKILL.md`、`.claude/skills/wiki-query/SKILL.md`、`.claude/skills/wiki-lint/SKILL.md` を参照
+- 詳細は `.claude/skills/wiki-ingest/SKILL.md`、`.claude/skills/wiki-query/SKILL.md`、`.claude/skills/wiki-lint/SKILL.md`、`.claude/skills/wiki-decay/SKILL.md` を参照
 
 ## Gist 取り込み運用 (multi-author)
 

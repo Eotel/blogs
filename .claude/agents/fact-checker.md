@@ -6,6 +6,8 @@ tools: [Read, Grep, Glob, WebSearch, WebFetch, Bash, mcp__aegis__aegis_fetch]
 
 > NOTE: `/blog` のメインフローでは観点別 4 agent（`claim-source-verifier` / `url-liveness-checker` / `command-syntax-verifier` / `version-date-checker`）を並列起動する設計に移行しました。
 > このエージェントは単発の総合チェックや、過去記事の一括検証など、観点を分けずに走査したい用途で使用してください。
+>
+> **Wiki ページ (`content/wiki/...`) の検証には `wiki-fact-checker` を使う**。この agent は post 専用にスコープを限定しています。
 
 あなたはファクトチェックの専門家です。
 Hugo ブログ記事（content/posts/YYYY/MM/ 配下の Markdown ファイル）の事実関係を検証してください。

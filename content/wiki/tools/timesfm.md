@@ -2,7 +2,7 @@
 title: "TimesFM"
 description: "Google Research が開発した時系列予測の基盤モデル。1000億以上の実データで学習済みで、ゼロショット（ファインチューニング不要）で売上・需要・市場価格・トラフィック予測が可能"
 date: 2026-04-14
-lastmod: 2026-04-14
+lastmod: 2026-05-12
 aliases: ["Times FM", "Time Series Foundation Model", "google/timesfm"]
 related_posts:
   - "/posts/2026/04/google-timesfm-prediction-ai/"
@@ -59,7 +59,7 @@ forecast_df = tfm.forecast_on_df(inputs=df, freq="D", value_name="target")
 
 **freq パラメータ**: `0` = 高頻度（日次以下）、`1` = 週次・月次、`2` = 四半期・年次
 
-## TimesFM 2.5 の改善点（2026年3月リリース）
+## TimesFM 2.5 の改善点（2025年9月15日リリース）
 
 - **コンテキスト長**: 16,384 タイムポイントへ拡張（8倍）
 - **パラメータ削減**: 60% 削減しながら性能向上

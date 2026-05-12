@@ -2,7 +2,7 @@
 title: "Claude Harness"
 description: "Claude Code の拡張機構（hooks / permissions / skills / MCP）をワンパッケージで組み込んだ外装プラグイン。v4.0.0 \"Hokage\" で Go ネイティブ化・harness.toml 1 本管理を実現"
 date: 2026-04-27
-lastmod: 2026-04-27
+lastmod: 2026-05-12
 aliases: ["claude-code-harness", "Claude Code Harness"]
 related_posts:
   - "/posts/2026/04/2026-04-14-claude-harness-v4-hokage/"
@@ -15,7 +15,7 @@ Claude Code の拡張機構（hooks / permissions / plugin system / skills / MCP
 
 Claude Code には強力な拡張機構があるが、`plugin.json` / `hooks.json` / `settings.json` / `.mcp.json` / `.claude-plugin/hooks.json` の 5〜6 本の JSON を整合させながら自律運用のワークフローを組むのは現実的でない。Harness はこれを 1 パッケージで提供する。
 
-## v4.0.0 "Hokage" の主な変更点（2026-04-14）
+## v4.0.0 "Hokage" の主な変更点（2026-04-09 リリース、紹介記事 2026-04-14）
 
 | 改善点 | Before | After |
 |---|---|---|

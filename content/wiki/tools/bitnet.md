@@ -2,7 +2,7 @@
 title: "BitNet"
 description: "Microsoft Research が開発した 1-bit LLM 専用の推論フレームワーク。GPU 不要で CPU 上で大規模 LLM を実行できる"
 date: 2026-04-14
-lastmod: 2026-04-14
+lastmod: 2026-05-12
 aliases: ["bitnet.cpp", "BitNet b1.58"]
 related_posts:
   - "/posts/2026/04/microsoft-bitnet-open-source-1bit-llm/"
@@ -39,7 +39,7 @@ Hugging Face で公開されている初のオープンソースネイティブ 
 | メモリ | **0.4GB** | 約5GB（4bit量子化） | 約3GB（4bit量子化） |
 | CPU 推論 | ネイティブ対応 | llama.cpp 経由 | llama.cpp 経由 |
 | マルチモーダル | テキストのみ | 画像・音声対応 | 画像・音声・動画対応 |
-| MMLU | 約52% | 69.4%（Pro） | 79.1%（Pro） |
+| MMLU | 約53% | 69.4%（Pro） | 79.1%（Pro） |
 
 省メモリ・省電力が最優先の場合は BitNet、性能とのバランスを求めるなら Qwen3.5 が適している。
 

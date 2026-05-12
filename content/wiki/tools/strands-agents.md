@@ -2,7 +2,7 @@
 title: "Strands Agents"
 description: "AWS が 2025 年に OSS 公開したモデル駆動型の AI エージェント SDK。Python と TypeScript を提供し、Bedrock AgentCore 等への本番デプロイに対応する"
 date: 2026-05-11
-lastmod: 2026-05-11
+lastmod: 2026-05-12
 aliases: ["Strands Agents SDK", "strands-agents"]
 related_posts:
   - "/posts/2026/05/2026-05-11-aws-agent-toolkit-strands-skills/"
@@ -33,7 +33,7 @@ Strands SDK には [`strands.vended_plugins.skills.AgentSkills`](https://strands
 
 ## Strands Labs
 
-2026 年 3 月に AWS は **Strands Labs** を開設し、本体に取り込む前のフロンティアプロジェクトを公開している。初期リリースは「AI Functions」（自然言語仕様から実行時にコード生成）と「Strands Robots」（VLA モデルで LLM をハードウェアに接続）の 2 つ。
+2026 年 2 月 23 日に AWS は **Strands Labs** を開設し、本体に取り込む前のフロンティアプロジェクトを公開している。初期リリースは「AI Functions」（自然言語仕様から実行時にコード生成）、「Strands Robots」（VLA モデルで LLM をハードウェアに接続）、「Strands Robots Sim」（シミュレータ）の 3 つ。
 
 ## 関連ページ
 

@@ -396,6 +396,34 @@ def main() -> int:
             )
     else:
         print("- なし")
+    print()
+
+    # Decay (advisory): wiki pages whose `lastmod` is past the section
+    # threshold. Imported lazily so wiki_lint.py keeps working even if the
+    # wiki-decay skill is uninstalled.
+    decay_count = 0
+    try:
+        sys.path.insert(0, str(root / ".claude" / "skills" / "wiki-decay" / "scripts"))
+        from wiki_decay import score_pages as _score_pages  # type: ignore
+
+        decay_entries = _score_pages(root, as_of=date.today())
+        warming = [e for e in decay_entries if e.status == "warming"]
+        stale = [e for e in decay_entries if e.status == "stale"]
+        decay_count = len(warming) + len(stale)
+        print(f"### Decay (advisory) — stale {len(stale)} / warming {len(warming)}")
+        if decay_count == 0:
+            print("- なし (全 page 新鮮)")
+        else:
+            for e in (stale + warming)[:9]:  # top 3 per section worth of room
+                badge = "🔴 stale" if e.status == "stale" else "🟡 warming"
+                print(
+                    f"- {badge} `{e.path}` — age {e.age_days}d "
+                    f"(`{e.refresh_command}`)"
+                )
+            if decay_count > 9:
+                print(f"- … その他 {decay_count - 9} 件 (詳細は `/wiki-decay`)")
+    except Exception as exc:  # pragma: no cover - defensive against optional skill
+        print(f"### Decay (advisory) — skipped ({exc.__class__.__name__})")
 
     # Fatal: structural / referential issues that should block pre-push and CI.
     #   - broken_links / related_post_issues / post_wiki_broken: dead references
