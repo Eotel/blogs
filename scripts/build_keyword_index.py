@@ -190,7 +190,19 @@ def deduplicate(entries: list[dict]) -> list[dict]:
 
 
 def main() -> None:
-    prefix = site_path_prefix()
+    import argparse
+
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--prefix",
+        default=None,
+        help="site path prefix to bake into URLs (default: auto-detect from hugo.toml)",
+    )
+    args = parser.parse_args()
+
+    prefix = args.prefix or site_path_prefix()
+    if not prefix.endswith("/"):
+        prefix += "/"
     wiki = collect_wiki(prefix)
     tags = collect_tags(prefix)
     merged = deduplicate(wiki + tags)

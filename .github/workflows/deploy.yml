@@ -49,6 +49,17 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: Set up uv (for keyword link injection)
+        # TODO: pin to a verified commit SHA once the maintainers cut a stable release here.
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - name: Install Python dependencies
+        run: uv pip install --system -r requirements.txt
+      - name: Inject keyword auto-links
+        run: |
+          python3 scripts/build_keyword_index.py
+          python3 scripts/inject_keyword_links.py public/
       - name: Generate Pagefind search index
         run: npx -y pagefind@latest --site public
       - name: Upload artifact

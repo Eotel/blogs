@@ -1,4 +1,4 @@
-# Eotel blog
+# Eotel's Notebook
 
 https://eotel.github.io/blogs/
 

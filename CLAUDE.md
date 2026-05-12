@@ -1,4 +1,4 @@
-# Eotel blog
+# Eotel's Notebook
 
 Hugo + PaperMod で構築された技術ブログ。GitHub Pages でホスティング。
 （フォーク元の hdknr/blogs から派生。Eotel が運用する個人ブログ。historical post は hdknr 由来）

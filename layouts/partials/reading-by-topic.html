@@ -1,0 +1,26 @@
+{{- /* Reading by Topic — category cloud, weighted by post count.
+       Three weight buckets (top 33% / mid 33% / rest). */ -}}
+{{- $terms := site.Taxonomies.categories }}
+{{- if $terms }}
+  {{- $counted := slice }}
+  {{- range $name, $taxonomy := $terms }}
+    {{- $count := len $taxonomy.Pages }}
+    {{- if gt $count 0 }}
+      {{- $counted = $counted | append (dict "name" $name "count" $count "permalink" (printf "/categories/%s/" (urlize $name))) }}
+    {{- end }}
+  {{- end }}
+  {{- if $counted }}
+    {{- $sorted := sort $counted "count" "desc" }}
+    {{- $max := (index $sorted 0).count }}
+<section class="reading-by-topic">
+  <h2 class="section-label">Reading by Topic</h2>
+  <div class="reading-by-topic__cloud">
+    {{- range $sorted }}
+    {{- $ratio := div (mul (float .count) 1.0) (float $max) }}
+    {{- $w := cond (ge $ratio 0.66) 3 (cond (ge $ratio 0.33) 2 1) }}
+    <a href="{{ .permalink | relURL }}" data-weight="{{ $w }}">{{ .name }}<span class="reading-by-topic__count">{{ .count }}</span></a>
+    {{- end }}
+  </div>
+</section>
+  {{- end }}
+{{- end }}

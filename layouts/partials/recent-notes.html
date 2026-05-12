@@ -1,0 +1,25 @@
+{{- /* Recent Notes — hero (1) + dense rows (4).
+       hdknr-authored historical posts stay out of the home feed
+       but remain reachable at /posts/, /archives/, /author/hdknr/. */ -}}
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
+{{- $pages = where $pages "Params.author" "!=" "hdknr" }}
+{{- $recent := first 5 $pages }}
+{{- if $recent }}
+<section>
+  <h2 class="section-label">Recent Notes</h2>
+  {{- range $i, $p := $recent }}
+  <article class="post-row{{ if eq $i 0 }} post-row--hero{{ end }}">
+    <h3 class="post-row__title">
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </h3>
+    {{- if eq $i 0 }}
+      {{- $excerpt := "" }}
+      {{- with .Description }}{{ $excerpt = . }}{{ else }}{{ $excerpt = .Summary | plainify | htmlUnescape | truncate 140 "…" }}{{ end }}
+      {{- with $excerpt }}<p class="post-row__excerpt">{{ . }}</p>{{ end }}
+    {{- end }}
+    <div class="post-row__meta">{{- partial "post-meta.html" . -}}</div>
+  </article>
+  {{- end }}
+</section>
+{{- end }}

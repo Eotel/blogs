@@ -1,0 +1,45 @@
+{{- /* post-meta: date · reading time · author · AI model chip.
+       Joined with " · " separators. AI model chip is opt-in via
+       front matter .Params.model (string or [string]). */ -}}
+{{- $bits := slice }}
+
+{{- if not .Date.IsZero }}
+  {{- $bits = $bits | append (printf "<span title=\"%s\">%s</span>" (.Date) (.Date | time.Format ":date_long")) }}
+{{- end }}
+
+{{- if (.Param "showReadingTime") }}
+  {{- $bits = $bits | append (printf "<span>%d 分</span>" .ReadingTime) }}
+{{- end }}
+
+{{- with .Params.author }}
+  {{- $bits = $bits | append (printf "<span>%s</span>" .) }}
+{{- end }}
+
+{{- /* AI model — single string or list, formatted via model_label.html */ -}}
+{{- $models := slice }}
+{{- with .Params.model }}
+  {{- $t := printf "%T" . }}
+  {{- if or (eq $t "[]string") (eq $t "[]interface {}") }}
+    {{- $models = . }}
+  {{- else }}
+    {{- $s := trim (printf "%v" .) " " }}
+    {{- if ne $s "" }}{{- $models = slice $s }}{{- end }}
+  {{- end }}
+{{- end }}
+{{- if $models }}
+  {{- $labels := slice }}
+  {{- range $models }}
+    {{- $id := trim (string .) " " }}
+    {{- if ne $id "" }}
+      {{- $labels = $labels | append (partial "model_label.html" $id) }}
+    {{- end }}
+  {{- end }}
+  {{- if $labels }}
+    {{- $chip := printf "<span class=\"post-meta-ai\" title=\"この記事の主な執筆 AI モデル\">by %s</span>" (delimit $labels ", ") }}
+    {{- $bits = $bits | append $chip }}
+  {{- end }}
+{{- end }}
+
+{{- with $bits }}
+  {{- delimit . "&nbsp;·&nbsp;" | safeHTML -}}
+{{- end -}}

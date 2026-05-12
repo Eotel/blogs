@@ -1,0 +1,18 @@
+{{- /* Index Strip — recent wiki pages (6) by lastmod desc, + "All wiki →" link. */ -}}
+{{- $wiki := where site.RegularPages "Section" "wiki" }}
+{{- $wiki = $wiki.ByLastmod.Reverse }}
+{{- $wiki = first 6 $wiki }}
+{{- if $wiki }}
+<nav class="index-strip" aria-label="Wiki index">
+  <h2 class="index-strip__label">Index</h2>
+  <ul class="index-strip__list">
+    {{- range $wiki }}
+    <li>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <span class="index-strip__meta">{{ .Lastmod.Format "2006-01-02" }}</span>
+    </li>
+    {{- end }}
+  </ul>
+  <a class="index-strip__all" href="{{ "/wiki/" | relURL }}">All wiki →</a>
+</nav>
+{{- end }}

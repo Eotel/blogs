@@ -1,0 +1,16 @@
+{{- /* Related in Wiki — top 5 wiki pages by tag overlap (Hugo Related API). */ -}}
+{{- $wiki := where site.RegularPages "Section" "wiki" }}
+{{- $related := $wiki.Related . | first 5 }}
+{{- if $related }}
+<section class="hyper-block" aria-label="Related in Wiki">
+  <h2 class="hyper-block__label">Related in Wiki</h2>
+  <ul class="hyper-block__list">
+    {{- range $related }}
+    <li>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      {{- with .Description }}<span class="hyper-block__meta">{{ . }}</span>{{ end }}
+    </li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}

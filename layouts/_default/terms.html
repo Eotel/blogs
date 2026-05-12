@@ -1,0 +1,21 @@
+{{- define "main" -}}
+<section class="terms">
+  {{- partial "breadcrumbs.html" . }}
+  <header class="list-page__header">
+    <h1 class="list-page__title">{{ .Title }}</h1>
+    {{- with .Description }}<p class="list-page__description">{{ . | markdownify }}</p>{{ end }}
+  </header>
+
+  {{- $type := .Type }}
+  {{- $plural := .Data.Plural }}
+  {{- $terms := index site.Taxonomies $plural }}
+  <ul class="terms__list">
+    {{- range $terms.ByCount }}
+    <li class="terms__entry">
+      <a class="terms__name" href="{{ printf "/%s/%s/" $type (urlize .Name) | relURL }}">{{ .Name }}</a>
+      <span class="terms__count">{{ .Count }}</span>
+    </li>
+    {{- end }}
+  </ul>
+</section>
+{{- end -}}

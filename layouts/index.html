@@ -1,0 +1,22 @@
+{{- define "main" -}}
+<div class="home-grid">
+  <header class="home-grid__masthead home-masthead">
+    <h1 class="home-masthead__title">{{ site.Params.homeInfoParams.Title | default site.Title }}</h1>
+    {{- with site.Params.homeInfoParams.Content }}
+    <p class="home-masthead__subtitle">{{ . | markdownify }}</p>
+    {{- end }}
+  </header>
+
+  <section class="home-grid__main">
+    {{- partial "recent-notes.html" . }}
+  </section>
+
+  <aside class="home-grid__aside">
+    {{- partial "index-strip.html" . }}
+  </aside>
+
+  <section class="home-grid__topics">
+    {{- partial "reading-by-topic.html" . }}
+  </section>
+</div>
+{{- end -}}

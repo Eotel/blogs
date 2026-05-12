@@ -17,6 +17,7 @@ default:
 # Production build into ./public (matches CI baseURL behavior when run in CI)
 build:
     hugo --gc
+    just kwlinks {{prod_dir}}
 
 # Generate the Pagefind search index for ./public
 index:
@@ -26,12 +27,19 @@ index:
 build-dev:
     rm -rf {{dev_dir}}
     hugo --gc --baseURL "http://localhost:{{dev_port}}/" --destination {{dev_dir}}
+    just kwlinks {{dev_dir}} --prefix /
 
 # Generate the Pagefind index for the dev build directory
 index-dev:
     npx -y pagefind@latest --site {{dev_dir}}
 
-# Build + index + serve with hot reload
+# Inject Hatena-style keyword auto-links into built HTML
+# Pass the build dir, plus any flags (e.g. `--prefix /` for dev URLs)
+kwlinks dir *flags:
+    python3 scripts/build_keyword_index.py {{flags}}
+    python3 scripts/inject_keyword_links.py {{dir}} {{flags}}
+
+# Build + index + kwlinks + serve with hot reload
 dev: build-dev index-dev serve
 
 # Hot-reload dev server (port 18080, livereload, content/layout watch)
