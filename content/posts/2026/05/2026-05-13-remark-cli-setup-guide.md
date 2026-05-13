@@ -69,7 +69,7 @@ pnpm add -D remark-cli \
 }
 ```
 
-`package.json` 側の `scripts` は普段使う 3 つだけ用意しておく。
+`package.json` 側の `scripts` は普段使う 2 つだけ用意しておく。
 
 ```json
 {
