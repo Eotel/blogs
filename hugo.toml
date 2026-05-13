@@ -1,6 +1,7 @@
 baseURL = 'https://eotel.github.io/blogs/'
 languageCode = 'ja'
 defaultContentLanguage = 'ja'
+timeZone = 'Asia/Tokyo'
 title = "Eotel's Notebook"
 paginate = 10
 
