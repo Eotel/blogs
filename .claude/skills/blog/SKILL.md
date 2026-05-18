@@ -367,25 +367,30 @@ Agent(subagent_type="seo-advisor",             prompt="記事絶対パス: $ARTI
    ```
    出力から worktree の絶対パスを読み取り、以降はその絶対パスを `$WORKTREE_DIR` として使う。
    **相対パスから絶対パスを推測してはならない。** Write ツールは存在しないパスにもファイルを作成するため、パスを間違えてもエラーにならず手戻りが発生する。
-4. worktree 内で記事ファイルを作成する:
+4. **worktree で lefthook を install する**（pre-push hook を worktree から fire させるため）:
+   ```bash
+   ( cd "$WORKTREE_DIR" && lefthook install )
+   ```
+   `lefthook install` は cwd の `git rev-parse --git-path hooks` を解決して hook scripts を書き出すため、**必ず worktree 内で実行する必要がある**（main で install しただけでは worktree から fire しないケースがある — 特に `core.hooksPath` が相対パスで設定されている環境）。`/blog` が新規 worktree を生成する瞬間にはセッション開始フェーズを既に過ぎているため、SessionStart hook の install だけでは間に合わない。subshell でラップしているのは、`cd` がスキルの top-level cwd を汚さないようにするため。install に失敗しても致命ではないが、stderr を確認しておくこと。
+5. worktree 内で記事ファイルを作成する:
    - 記事の書き込み先: `$WORKTREE_DIR/content/posts/YYYY/MM/YYYY-MM-DD-<slug>.md`
-5. worktree 内で Hugo ビルド確認（`cd` を使わず `--source` で指定）:
+6. worktree 内で Hugo ビルド確認（`cd` を使わず `--source` で指定）:
    ```bash
    hugo --source "$WORKTREE_DIR" --gc 2>&1 | tail -5
    ```
-6. **worktree 内で wiki-lint を実行**（CI と同じ fatal チェックをローカルで先取り）:
+7. **worktree 内で wiki-lint を実行**（CI と同じ fatal チェックをローカルで先取り）:
    ```bash
    python3 "$WORKTREE_DIR/.claude/skills/wiki-lint/scripts/wiki_lint.py"
    ```
    `wiki_lint.py` はスクリプト自身の絶対パスからリポジトリルートを自動検出するため、worktree 内のスクリプトを直接呼べば worktree が root として評価される。exit code 0 を確認する。`slug:` 欠落や frontmatter 不備などはここで止める。
-   **なぜここで明示的に走らせるのか**: `lefthook.yml` の pre-push にも wiki-lint は登録されているが、`core.hooksPath = .git/hooks` が相対パスで設定されている環境では worktree から `git push` した際に hook が解決できず fire しないことがある（後述の SessionStart hook で `lefthook install` を自動実行することで防止しているが、skill 内で先に lint を呼ぶことで二重ガードになる）。
-7. worktree 内でコミット・プッシュ（`cd` を使わず `git -C` で指定）:
+   **なぜここで明示的に走らせるのか**: `lefthook.yml` の pre-push にも wiki-lint は登録されているが、`core.hooksPath = .git/hooks` が相対パスで設定されている環境では worktree から `git push` した際に hook が解決できず fire しないことがある（前述の手順 4 と SessionStart hook で `lefthook install` を試みているが、install 失敗時の保険として skill 内で先に lint を呼ぶことで二重ガードになる）。
+8. worktree 内でコミット・プッシュ（`cd` を使わず `git -C` で指定）:
    ```bash
    git -C "$WORKTREE_DIR" add content/posts/YYYY/MM/YYYY-MM-DD-<slug>.md
    git -C "$WORKTREE_DIR" commit -m "Add blog post: <記事タイトル>"
    git -C "$WORKTREE_DIR" push -u origin "$BRANCH_NAME"
    ```
-8. PR を作成する（`--head` でブランチを明示指定し、`cd` を使わない）:
+9. PR を作成する（`--head` でブランチを明示指定し、`cd` を使わない）:
    PR 本文は worktree 内に書き出し、`--body-file` で渡す。worktree は `.claude/` の外にあるため、Write ツールで直接書き込める。
 
    **PR 本文には必ず `Closes #<issue_number>` を含める**（Issue URL がソースの場合）。マージ時に GitHub が自動で Issue を close する。
@@ -409,8 +414,8 @@ Agent(subagent_type="seo-advisor",             prompt="記事絶対パス: $ARTI
    ```
    **注意: `cd "$WORKTREE_DIR" && gh pr create` は使わないこと。** `cd` で始まるコマンドは `Bash(gh:*)` の許可パターンにマッチせず、毎回確認が求められる。`--head` フラグでブランチを指定すれば worktree 内にいる必要はない。
    **注意: `--body "$(cat <<'EOF'...)"` 方式は使わないこと。** HEREDOC 内の `#` 付き行がセキュリティチェック（"quoted newline followed by #-prefixed line"）に引っかかり、毎回確認が求められる。
-9. PR の URL をユーザーに伝える
-10. **PR がマージされたら worktree を削除する。** ユーザーがマージを指示・確認した直後に `git worktree remove --force "$WORKTREE_DIR"` を実行する（`pr_body.md` 等の未追跡ファイルが残るため `--force` が必要）。
+10. PR の URL をユーザーに伝える
+11. **PR がマージされたら worktree を削除する。** ユーザーがマージを指示・確認した直後に `git worktree remove --force "$WORKTREE_DIR"` を実行する（`pr_body.md` 等の未追跡ファイルが残るため `--force` が必要）。
 
 ## ソース Issue の自動 close
 

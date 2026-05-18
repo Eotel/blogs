@@ -18,7 +18,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "command -v lefthook >/dev/null 2>&1 && lefthook install >/dev/null 2>&1 || true"
+            "command": "if command -v lefthook >/dev/null 2>&1; then lefthook install >&2 || echo '[SessionStart] lefthook install failed (continuing without hook bootstrap)' >&2; fi"
           }
         ]
       }
