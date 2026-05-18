@@ -59,17 +59,33 @@ prepare-commit-msg:
 # hugo がローカルにない環境ではスキップ（CI で必ず検証されるため安全）。
 # 注: `command -v hugo && hugo ... || echo ...` だと hugo build 失敗時に echo へ
 # フォールバックして exit 0 になってしまうため、if-else で明示的に分岐する。
+#
+# lefthook 2.x の pre-push は `run:` 内で `{files}`/`{push_files}` テンプレート
+# を参照しないと job を unconditional skip する仕様 (skip_empty / only:
+# 等のドキュメント化された opt-out はいずれも 2.1.5 で無効)。これらの job は
+# プロジェクト全体スキャンで push 対象ファイルとは無関係に常時走らせたい
+# ため、`files: "echo lefthook.yml"` でダミーの非空ファイルリストを与え、
+# `run:` の末尾に `true {files}` を no-op として置いて lefthook のフィルタ
+# 条件を満たしている。
 pre-push:
   parallel: false
-  commands:
-    hugo-build:
+  jobs:
+    - name: hugo-build
+      files: "echo lefthook.yml"
       run: |
         if command -v hugo >/dev/null 2>&1; then
           hugo --gc --quiet --destination .claude/temp/hugo-check
         else
           echo "hugo not installed locally — skipping (CI will verify)"
         fi
-    wiki-lint:
-      run: python3 .claude/skills/wiki-lint/scripts/wiki_lint.py
-    ast-grep-full:
-      run: ast-grep scan
+        true {files}
+    - name: wiki-lint
+      files: "echo lefthook.yml"
+      run: |
+        python3 .claude/skills/wiki-lint/scripts/wiki_lint.py
+        true {files}
+    - name: ast-grep-full
+      files: "echo lefthook.yml"
+      run: |
+        ast-grep scan
+        true {files}
