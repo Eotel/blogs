@@ -237,7 +237,34 @@ tags: ["tag1", "tag2"]
 
 ### ダイアグラム（図）の作成ルール
 
-アーキテクチャ図やフロー図が必要な場合、**アスキーアートは使わず drawio で画像化する**。SVG を手書きで作るのもアンチパターン — `.drawio` ソースが残らず後から編集できない。
+アーキテクチャ図やフロー図が必要な場合、**アスキーアートは使わない**。SVG を手書きで作るのもアンチパターン。経路は図の性質で選ぶ:
+
+| 図の性質 | 推奨経路 |
+|---|---|
+| コンセプト図・ヒーロー画像・イメージ図・単発の説明図（後から編集しない） | **Codex CLI に gpt-image で直接 PNG 生成** を最優先 |
+| アーキテクチャ図・フロー図・シーケンス図・ER 図など、ソースを残して後から編集したい構造図 | **drawio** で mxgraph XML を書き、PNG にエクスポート |
+
+#### 経路 A: Codex に gpt-image で直接生成（推奨デフォルト）
+
+Codex CLI が呼び出せる環境では、drawio XML を経由せず直接 PNG バイナリを得るのが最速。**`codex exec` を Bash で直接呼ぶこと** — `codex:rescue` skill / `codex-companion.mjs task` 経路は `OPENAI_API_KEY` を要求するため使わない（codex 本体は ChatGPT subscription auth で動く）。
+
+```bash
+codex exec -s workspace-write --skip-git-repo-check "次の図を image_generation ツールで生成して、絶対パス /path/to/assets/images/<slug>-<diagram>.png に PNG で保存してください。サイズは 1024x1024。
+
+図の内容: '<図の自然文記述>'
+
+完了したら、保存パスと ls -la でファイルサイズを 1 行で報告してください。"
+```
+
+- Codex は `~/.codex/generated_images/<session>/ig_*.png` に一旦保存してから指定パスへコピーする (内部で自動的にやる)
+- 1024x1024 等のサイズ指定は Codex 内蔵の `sips` 呼び出しでリサイズされる
+- **出力先は必ず `assets/images/`**（`static/` 配下は Hugo image processing の対象外で WebP srcset 展開が効かない）
+- Codex CLI が未インストール / 未ログインの環境では使えない → 経路 B (drawio) にフォールバック
+- 動作確認済み: 2026-05-13、`codex-cli 0.130.0`、ChatGPT auth、`image_generation` feature stable=true
+
+#### 経路 B: drawio で作成
+
+ソースを残して後から編集したい構造図向け。
 
 1. drawio ファイルを作成する: `assets/images/<slug>-<diagram-name>.drawio`
    - mxgraph XML を直接 Write ツールで書ける。既存ファイル（例: `assets/images/harness-eval-cycle.drawio`、`assets/images/design-md-three-layers.drawio`）を雛形にすると効率が良い
@@ -249,14 +276,17 @@ tags: ["tag1", "tag2"]
      ```
    - skill が「CLI not found」を返した場合は **諦めず Docker スクリプトに自動フォールバック** する（GUI 未インストール環境のシグナルなので）
    - 内部で `rlespinasse/drawio-desktop-headless` を起動する。Docker Desktop / orbstack / colima のいずれかが稼働していれば良い
-3. 記事内で絶対パスで参照する:
+3. 既存の drawio ファイル（`assets/images/openclaw-gateway-architecture.drawio` 等）のスタイルを参考にする
+
+#### 共通ルール（経路 A / B 共通）
+
+1. 記事内で絶対パスで参照する:
    ```markdown
    ![図の内容を自然文で記述した alt テキスト](/blogs/images/<name>.png)
    ```
-4. **alt テキスト**: 図の内容を自然文で記述する（SEO の画像検索露出 + アクセシビリティ向上）
-5. **相対パス（`../../images/`）は使わない**: Hugo のパーマリンク構造で 404 になるため、必ず `/blogs/images/` の絶対パスを使う
-6. 既存の drawio ファイル（`assets/images/openclaw-gateway-architecture.drawio` 等）のスタイルを参考にする
-7. 配置先は `assets/images/` （`static/` ではない）。`static/` 配下は Hugo image processing の対象外で WebP srcset 展開が効かない
+2. **alt テキスト**: 図の内容を自然文で記述する（SEO の画像検索露出 + アクセシビリティ向上）
+3. **相対パス（`../../images/`）は使わない**: Hugo のパーマリンク構造で 404 になるため、必ず `/blogs/images/` の絶対パスを使う
+4. 配置先は `assets/images/` （`static/` ではない）。`static/` 配下は Hugo image processing の対象外で WebP srcset 展開が効かない
 
 ## ファクトチェック & エージェントレビュー（6 並列起動）
 
