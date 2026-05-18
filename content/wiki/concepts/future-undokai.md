@@ -26,7 +26,7 @@ tags:
 ## 概要
 
 「未来の運動会」は、競技そのものを参加者が共同で発明する運動会フォーマット。
-一般社団法人運動会協会（UNDOKAI ASSOCIATION）が主体となり、2014 年から各地で開催されている。
+一般社団法人運動会協会（Undokai Association）が主体となり、2014 年から各地で開催されている。
 学校体育の延長ではなく、ハッカソンで種目を作って本番で走らせ、振り返って次の素材にする共創方法論として読むのが正確だ。
 
 ## 主体
@@ -63,14 +63,24 @@ tags:
 スポーツ庁の特集記事は、同じ整理を「『する』『みる』『ささえる』という従来の楽しみ方に『作る』を加えた 4 つの楽しみ方」として表現している。
 走る側にだけ正規ルートを置かない設計が制度的に裏付けられている。
 
-## 4 つの器
+## 国内の 4 つの器
 
-このフォーマットを支えている主体は性格が異なる 4 つの器に分かれる。
+このフォーマットを支えている国内主体は性格が異なる 4 つの器に分かれる。
 
 - **[YCAM InterLab](https://www.ycam.jp/aboutus/interlab/)** — 約 20 名の常駐スタッフ（キュレーター・エデュケーター・エンジニア・デザイナー）で構成された研究開発部門。連続開催の制度的基盤
 - **CCBT（[Civic Creative Base Tokyo](https://ccbt.rekibun.or.jp/players/inukai-hiroshi)）** — 都市の市民参加型クリエイティブ。犬飼博士に「CCBTアーティストフェロー／eスポーツプロデューサー、ゲーム監督、運楽家」「一般社団法人運動会協会理事」の肩書を与えている
 - **[SIAF（札幌国際芸術祭）](https://sites.google.com/view/future-undokai-sapporo)** — 芸術祭の正規プログラムとして未来の運動会を組み込んだ事例。SIAF2024（2024 年 2 月、モエレ沼公園）でプロジェクト初の屋外・雪上開催を実現
 - **[スポーツ庁](https://sports.go.jp/special/case/mirai-osaka-undokai.html)** — 「未来の大阪の運動会」（2018 年）を委託事業として実施。行政側からも新しいスポーツ振興のケースとして記録に残している
+
+## 海外協働
+
+2023 年以降、フォーマットが海外でも独立した主体に持ち運ばれ始めた。国内 4 つの器とは別の機構が並走している。
+
+- **Barbican Theatre Plymouth（イギリス・プリマス, 2023 年 11 月）** — Barbican Theatre Plymouth がプロデューサーとなり、Plymouth Life Centre とプリマス大学で "Plymouth Undokai" を開催。自身を **"UK and European premiere"** と紹介。CEO 兼アーティスティック・ディレクターの Laura Kriefman が企画責任者で、2016 年に YCAM で未来の運動会を体験したことが発端。Daiwa Foundation・Sasakawa Foundation・Arts Council England・Esmee Fairbairn Foundation が出資
+- **[国立アジア文化殿堂 ACC（韓国・光州, 2025 年 4 月 30 日〜6 月 1 日）](https://www.undokai.or.jp/post/2025acc)** — ACC 文化創造館コンプレックス展示 1 館で 1 ヶ月にわたる展示＋運動会を開催。主催は ACC 自体、協力に YCAM・光州広域市教育庁・スポーツタイムマシン。ハッカソン → 運動会本番のセットが期間中 4 回繰り返され、25 メートル規模のスポーツタイムマシンや YCAM 制作の巨大デジタル運動会システムが据えられた。運動会協会は「**イギリスに続く海外 2 箇所目**」と位置づけている
+
+海外開催では、現地の芸術機構や国立施設が **主催** に立ち、運動会協会・YCAM は **協力** に回るパターンが定着しつつある。
+1 日完結の祭典型から、**展示＋複数回循環の長期型**へとフォーマットが伸縮しているのも海外開催の特徴だ。
 
 ## 主な開催地
 
@@ -88,9 +98,11 @@ tags:
 - 宮崎県小林市（2019, 2020）
 - 荒川商業高校（東京、2020）
 - 笹塚小学校（東京、2021）
+- **プリマス（イギリス、2023、Barbican Theatre Plymouth 主導／海外 1 箇所目）**
 - モエレ沼公園（札幌、2024、SIAF2024）
+- **国立アジア文化殿堂 ACC（韓国・光州、2025、海外 2 箇所目）**
 
-大学、芸術センター、コミュニティ会館、小学校、公園、商業高校と会場の種類がばらけており、それぞれの場所のルールや制約に合わせて種目が作り直されることが前提になっている。
+大学、芸術センター、コミュニティ会館、小学校、公園、商業高校に加え、芸術祭・海外の国立施設へと会場の種類がばらけており、それぞれの場所のルールや制約に合わせて種目が作り直されることが前提になっている。
 
 ## 実装上の論点
 
@@ -120,3 +132,5 @@ CCBT が犬飼博士に与えている肩書「運楽家」は、運動会を楽
 - [犬飼博士（CCBT フェロー）](https://ccbt.rekibun.or.jp/players/inukai-hiroshi)
 - [スポーツ庁「未来の大阪の運動会」特集](https://sports.go.jp/special/case/mirai-osaka-undokai.html)
 - [SIAF2024 未来の札幌の運動会](https://sites.google.com/view/future-undokai-sapporo)
+- [【韓国・光州】未来の運動会 in ACC（運動会協会）](https://www.undokai.or.jp/post/2025acc)
+- [Barbican Theatre announce the UK and European premiere of the Future Undokai Games (Pressat)](https://pressat.co.uk/releases/barbican-theatre-announce-the-uk-and-european-premiere-of-the-future-undokai-games-coming-to-plymouth-in-november-2023-6f9efd6503b4ba8d703044d4237dfa4e/)
