@@ -150,7 +150,7 @@ python3 "$PROJECT_DIR/scripts/get_model.py" > "$PROJECT_DIR/.claude/temp/model_i
 
 ## フロントマターのテンプレート
 
-> **重要: `slug:` フィールドは必須**。`scripts/check_frontmatter.py` および `.claude/skills/wiki-lint/scripts/wiki_lint.py` で fatal チェックされており、未定義のままだと CI で lint が落ちる。Hugo は title 由来 slug にフォールバックし URL が不安定になるため、`slug:` をファイル名と一致させて明示する。
+> **重要: `slug:` フィールドは必須**。`.claude/skills/wiki-lint/scripts/wiki_lint.py` の `posts_missing_slug` チェックで fatal 扱いされており、未定義のままだと CI で lint が落ちる。Hugo は title 由来 slug にフォールバックし URL が不安定になるため、`slug:` をファイル名と一致させて明示する（`scripts/check_frontmatter.py` の `POST_REQUIRED` は `title` / `date` / `author` のみで slug は見ない）。
 
 GitHub URL ソースの場合:
 
