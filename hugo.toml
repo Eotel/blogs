@@ -16,6 +16,7 @@ paginate = 10
   ShowToc = true
   author = 'Eotel'
   mainSections = ['posts']
+  comments = true
 
   [params.homeInfoParams]
     Title = "Eotel's Notebook"
