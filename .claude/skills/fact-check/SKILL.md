@@ -14,6 +14,41 @@ arguments:
 
 > **アーキテクチャ要点**: Claude Code の仕様で **subagent は他の subagent を spawn できない**（[公式ドキュメント](https://code.claude.com/docs/en/sub-agents.md)）。そのため claim 単位の fan-out は **skill レベル（親セッション）で行う**。skill 自身が claim を抽出して `Task` で `claim-atom-verifier` を大量並列起動する。
 
+> **subagent context で起動された場合の fail-safe**: 本 skill が subagent context（`Task` の中）から呼ばれた場合、`claim-atom-verifier` 等への dispatch は不可能。その際は dispatch を試みず、以下の確定手順で完了する:
+>
+> 1. claim 抽出までは完了する
+> 2. 組み立てた dispatch_plan を **sidecar ファイル** `$REPO_ROOT/.claude/temp/fact-check-${SLUG}.dispatch.json` に下記スキーマで書き出す（**canonical な `fact-check-${SLUG}.json` は touch しない** — 既存 audit を破壊しないため）:
+>
+>    ```json
+>    {
+>      "status": "aborted",
+>      "abort_reason": "subagent-context-dispatch-forbidden",
+>      "article_path": "<ABS_PATH>",
+>      "slug": "<SLUG>",
+>      "checked_at": "<YYYYMMDDTHHMMSSZ>",
+>      "dispatch_plan": [
+>        {
+>          "subagent_type": "claim-atom-verifier",
+>          "message_index": 1,
+>          "payload": { /* §2 input-contract JSON object: article_path, line, claim_type, claim_text, context_excerpt, hints */ }
+>        },
+>        {
+>          "subagent_type": "url-liveness-checker",
+>          "message_index": 1,
+>          "payload": { "prompt": "記事絶対パス: <ABS_PATH>" }
+>        }
+>      ],
+>      "next_action": "parent session で /fact-check を再実行してください"
+>    }
+>    ```
+>
+>    `dispatch_plan` の各要素は **必ず `subagent_type` + `message_index` + `payload`** の 3 フィールドを持つ。`payload` の中身は `subagent_type` ごとに異なる（claim-atom-verifier は input-contract JSON、それ以外は `{prompt: "..."}`）。`message_index` は 1-based で、`--full` の 3 agent は `message_index: 1` 固定。
+>
+>    既存の `.dispatch.json` がある場合は **上書き OK**（canonical 同様、最新の実行が正）
+>
+> 3. stdout に「subagent context のため verdict 未取得。dispatch_plan を `.dispatch.json` に保存。parent から再実行してください」を表示
+> 4. **黙って simulate verdict を返してはならない**（実際の検証を行わないまま `verified` が記録されると audit 信頼性が崩れるため）。canonical な `fact-check-${SLUG}.json` への書き出しは fail-safe 時には絶対に行わない
+
 ## ワークフロー
 
 ### 1. 引数の解析
@@ -35,9 +70,20 @@ arguments:
 skill 自身が以下を実行する:
 
 1. `Read $ABS_PATH` で記事全文を読み込む
-2. 以下の 2 カテゴリの主張を行番号付きで列挙:
-   - **事実主張 (factual claim)**: ツール存在 / 公式帰属 / 機能仕様 / 開発元・組織の所属
-   - **言説主張 (discourse claim)**: 著者帰属 / 出典帰属 / 鉤括弧逐語引用 / 章節参照
+2. 以下の 3 カテゴリの主張を行番号付きで列挙（`claim_type` enum と一致）:
+
+   | claim_type | 定義 | 例 (in-scope) | 例 (out-of-scope) |
+   |---|---|---|---|
+   | `factual` | ツール / 製品 / 組織 / 人物の **存在・帰属・所属・機能仕様**。発話者帰属を伴わない事実 | 「Karpathy は OpenAI 初期メンバー」「Grafana は OSS」「CloudWatch を data source にできる」 | 「X はこう言った」型は → `discourse` |
+   | `discourse` | **発話者・出典への帰属を伴う主張**。著者 paraphrase / 章節参照 / 出典帰属 | 「Fowler はこう書いている」「Beck の TDD by Example p.42 によれば」「Duffield 記事で Beck の発言が紹介されている」 | 鉤括弧 + 識別可能な発話者 + 逐語 → `verbatim-quote` |
+   | `verbatim-quote` | **鉤括弧「」または `"..."` の逐語引用 + 識別可能な発話者 / 出典あり**。`discourse` の特殊形 | 「Karpathy「12 月からコードを 1 行も書いていない」」 | 強調用途のみの鉤括弧（発話者なし） → `factual` 扱い |
+
+   **factual vs discourse の precedence**:
+
+   - 「**A は B である / B 社の OSS / B プロトコルをサポート**」型 = `factual`（A の identity / affiliation / capability）
+   - 「**A はこう述べた / A の本によれば / A の paraphrase**」型 = `discourse`（発話帰属が claim の核）
+   - 両方を含む文は atomicity で split し、それぞれを type 付け（precedence を 1 claim 内で適用するのではなく、split で解消）
+   - 鉤括弧 + 識別可能な発話者の逐語があるなら `verbatim-quote` を最優先（precedence: `verbatim-quote` > `discourse` > `factual`）
 3. 各 claim ごとに以下の JSON 構造を組み立てる:
 
    ```json
@@ -49,17 +95,43 @@ skill 自身が以下を実行する:
      "context_excerpt": "<前後 3〜5 行の本文抜粋>",
      "hints": {
        "expected_source_url": "<該当行付近の URL or 脚注先 URL、無ければ null>",
-       "attributed_author": "<discourse の場合の帰属対象著者名、無ければ null>",
+       "attributed_author": "<帰属対象著者名、無ければ null>",
        "byline_check_required": true
      }
    }
    ```
 
-4. **claim 数の上限**: 30 件を超える場合は影響の大きい上位 30 件に絞る（言説主張 → 事実主張の順に優先）。絞り込み件数を最終サマリに記載
+   **`hints.attributed_author` の埋め方**:
+
+   - `discourse` / `verbatim-quote` で発話者 / 出典が特定できる場合は人名 / 書名 / 媒体名を入れる
+   - `factual` でも「Karpathy は OpenAI 初期メンバー」のように **人物の identity 主張** で人名が登場する場合は埋める（worker が byline で人名確認できる）
+   - 該当なしは `null`
+   - **複数候補がある場合（媒体 + 人名など）**: 検証コストが低い方 = 最終発話者の人名 を採用。媒体名は `expected_source_url` 側で表現する。例: 「Fortune 誌が Karpathy について報じた」→ `attributed_author: "Andrej Karpathy"`, `expected_source_url: "https://fortune.com/.../karpathy..."`
+   - **発話者が記事内で曖昧な場合**（"元ツイートの筆者" 等）: `attributed_author: "(unidentified — <記事内表記>)"` の形で記載し、`hints.verification_notes` に identity 解決の必要性を明記。さらに `claim_type` は `verbatim-quote` ではなく **`discourse` に下げる**（識別可能発話者の要件を満たさないため）
+
+   **`hints.byline_check_required` の埋め方（**rule**）**:
+
+   ```
+   byline_check_required = (claim_type ∈ {discourse, verbatim-quote})
+                          OR (claim_type == "factual" AND attributed_author != null)
+   ```
+
+   それ以外（attributed_author が null の factual 等）は `false`。worker は `true` のとき byline / 著者欄を必ず確認する。
+
+4. **claim 数の上限**: 30 件を超える場合は以下の手順で **上位 30 件を keep**（残りは drop、最終サマリに drop 件数を記載）:
+   1. 全 discourse / verbatim-quote claim を **先に keep**（誤帰属・脚注空洞は影響大のため）
+   2. discourse + verbatim-quote の合計が 30 件を超える場合、その中を以下の **severity sort key で並べてから先頭 30 件**:
+      - primary: `attributed_author != null` を先に（発話帰属が明確な方が検証価値が高い）
+      - secondary: `expected_source_url != null` を先に（hint があれば worker cost が下がる）
+      - tertiary: `line` 昇順（記事内の早い位置を先に）
+   3. discourse + verbatim-quote の合計が 30 件未満なら、残り枠を factual claim で line 番号昇順に埋める
+   4. drop された claim は JSON に以下を記録（audit trail）:
+      - `dropped_claims_count`: int（drop 件数）
+      - `dropped_claims_lines`: int[]（drop された claim の line 番号、昇順）
 
 ### 3. claim-atom-verifier を並列 fan-out（skill 親セッション）
 
-skill 自身が `Task` ツールで claim-atom-verifier を並列起動する:
+skill 自身が `Task` ツールで claim-atom-verifier を並列起動する（**注: Claude Code の dispatch ツールは `Task` のみ。`Agent` という別ツールは存在しない**）:
 
 ```
 Task(subagent_type="claim-atom-verifier", prompt="<上記 JSON>")
@@ -72,13 +144,18 @@ Task(subagent_type="claim-atom-verifier", prompt="<上記 JSON>")
 
 ### 4. `--full` 指定時の追加並列起動
 
-`--full` が指定された場合、Step 3 と同じメッセージ内で以下を追加並列起動:
+`--full` が指定された場合、以下を `Task` で追加並列起動（`Agent` というツールは存在しない、すべて `Task`）:
 
 ```
-Agent(subagent_type="url-liveness-checker",    prompt="記事絶対パス: $ABS_PATH")
-Agent(subagent_type="command-syntax-verifier", prompt="記事絶対パス: $ABS_PATH")
-Agent(subagent_type="version-date-checker",    prompt="記事絶対パス: $ABS_PATH")
+Task(subagent_type="url-liveness-checker",    prompt="記事絶対パス: $ABS_PATH")
+Task(subagent_type="command-syntax-verifier", prompt="記事絶対パス: $ABS_PATH")
+Task(subagent_type="version-date-checker",    prompt="記事絶対パス: $ABS_PATH")
 ```
+
+**dispatch ルール（claim 数が 20 件超で複数メッセージに分割される場合）**:
+
+- `--full` の 3 agent は **最初のメッセージにのみ 1 度だけ** 同梱する（per-article 検証なので 1 回起動すれば十分）
+- 最初のメッセージは `claim-atom-verifier × N` + `--full agent × 3` = N+3 並列。並列上限を超える場合は claim を後続メッセージに回し、3 agent は最初のメッセージ固定
 
 これで `/blog` の publish フローと同じ 4 観点が回る（脚注/引用/人名/所属 = claim swarm + URL + コマンド + バージョン）。
 
@@ -86,23 +163,91 @@ Agent(subagent_type="version-date-checker",    prompt="記事絶対パス: $ABS_
 
 集約の前に、worker verdict の整合チェックを行う:
 
-- **同一事実で verdict 割れ**: 逐語抜粋を持つ evidence を優先。「該当記述が見つからなかった」のみの `needs_fix` は採用しない
-- **`needs_fix` の根拠が fetch 失敗のみ**: `uncertain` に降格
-- **動画 / SNS / PDF 内テキスト** が一次情報のとき、worker が SPA で取得できなかったケースは `uncertain` 扱い
-- **ユーザー提供の追加 URL** は `hints.additional_sources` に詰めて再検証 Task を起動する
+#### (a) 同一事実の verdict が割れたら、より具体的な evidence を優先
 
-詳細は `.claude/skills/wiki-fact-audit/SKILL.md` の「3.5. verdict 衝突の解消」セクションを参照。`/fact-check` も同じルールに従う。
+| パターン | 採用方針 |
+|---|---|
+| 片方が公式 URL からの逐語抜粋を evidence に含む | 逐語側を採用 |
+| 片方が「該当 URL に記述が見つからなかった」のみで `needs_fix` を返した | **採用しない**。`uncertain` 相当に降格 |
+| 両方とも具体的 evidence を持つが結論が逆 | **再検証 worker を 1 件追加起動**して三者多数決 |
+
+#### (b) `needs_fix` の根拠が「fetch 失敗」のみなら降格
+
+以下のパターンに該当する `needs_fix` は **そのまま採用せず `uncertain` に降格**:
+
+- 「期待 URL を fetch できなかった / SPA / ログイン壁」
+- 「該当記述が見つからなかった」のみ（**反証となる別の一次情報を提示していない**）
+- 動画・SNS・PDF 内のテキストが根拠で、worker がテキスト本文を取得できなかった
+
+降格後、必要なら別の検索ヒント / 一次情報を hint に追加して再検証 Task を起動する。
+
+#### (c) ユーザー / hint 由来の補強情報を必ず反映
+
+orchestrator がユーザーから受け取った追加 URL や別 claim の verified evidence は、再検証時に `hints.additional_sources` / `hints.verification_notes` として渡す。worker は 1 件単位で文脈を持たないので、orchestrator 側で文脈を補う責務がある。
+
+> (本ルールは `/wiki-fact-audit` と共有。`/wiki-fact-audit` 側でルールが更新されたら本 skill 側も同期する。)
 
 ### 5. 集約と保存
 
-skill 親セッションで全 worker / agent の verdict を集約:
+skill 親セッションで全 worker / agent の verdict を以下の **fixed schema** で集約する:
 
-- `claim-atom-verifier` の単一 verdict object を `claims[]` 配列に格納
-- `summary.verified / needs_fix / incorrect / uncertain` を集計
-- `summary.by_pattern` で failure_pattern ごとの件数を集計
-- `--full` のときは url-liveness / command-syntax / version-date の verdict も別 key で含める
+```json
+{
+  "article_path": "<ABS_PATH>",
+  "slug": "<basename without .md>",
+  "checked_at": "20260518T123045Z",
+  "claims": [ /* claim-atom-verifier の単一 verdict object 配列 */ ],
+  "summary": {
+    "verified": 0,
+    "needs_fix": 0,
+    "incorrect": 0,
+    "uncertain": 0,
+    "by_pattern": {
+      "misattribution-author-confusion": 0,
+      "citation-mismatch-empty-footnote": 0,
+      "scare-quote-without-verbatim": 0,
+      "conceptual-conflation": 0,
+      "paraphrase-over-extension": 0
+    },
+    "claim_type_counts": {
+      "factual": 0,
+      "discourse": 0,
+      "verbatim-quote": 0
+    }
+  },
+  "dropped_claims_count": 0,
+  "dropped_claims_lines": [],
+  "full_extras": {
+    "url-liveness-checker":    { "verified": 0, "dead": 0, "verdicts": [] },
+    "command-syntax-verifier": { "verified": 0, "needs_fix": 0, "verdicts": [] },
+    "version-date-checker":    { "verified": 0, "needs_update": 0, "verdicts": [] }
+  }
+}
+```
 
-保存先: `$REPO_ROOT/.claude/temp/fact-check-<slug>.json`
+- `full_extras` は `--full` 指定時のみ含める（無指定なら key ごと省略 or `null`）
+- `checked_at` は `date -u +%Y%m%dT%H%M%SZ`（ISO 8601 basic UTC）
+- claim_type_counts は claim_type ごとの件数
+
+**SLUG の決定（必須順序）**:
+
+1. 記事 frontmatter に `slug:` フィールドがあれば、その値をそのまま使う（典型: `karpathy-llm-wiki`）
+2. 無ければ、ファイル名 basename から `.md` を取り除き、**かつ先頭の `YYYY-MM-DD-` 日付プレフィックスも取り除く**（例: `2026-04-05-karpathy-llm-wiki.md` → `karpathy-llm-wiki`）
+3. 日付プレフィックスが取り除けない（typo / 古い形式）場合は `.md` だけを取り除いた値を使う
+
+```bash
+SLUG="$(slug_from_frontmatter "$ABS_PATH" || basename_without_date "$ABS_PATH")"
+TIMESTAMP="$(date -u +%Y%m%dT%H%M%SZ)"
+OUT="$REPO_ROOT/.claude/temp/fact-check-${SLUG}.json"
+```
+
+(疑似コード。実装は orchestrator が frontmatter parser を持っていれば slug を、無ければ basename を使う)
+
+**既存ファイルの取り扱い**:
+
+- デフォルトは **上書き**（idempotent。同じ slug は同じパスに常に最新版が乗る）
+- audit trail が必要な場合のみ、上書き前に既存ファイルを `fact-check-${SLUG}.prev-${TIMESTAMP}.json` にリネーム退避
+- 退避時は JSON 内に `prior_run_archived_to: "<filename>"` を追加
 
 ### 6. サマリ出力
 
