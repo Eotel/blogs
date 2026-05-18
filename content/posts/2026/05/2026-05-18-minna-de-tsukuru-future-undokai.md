@@ -1,6 +1,7 @@
 ---
 title: "みんなで作るという文化 — 未来の運動会プロジェクト群が示す共創方法論"
 description: "「未来の運動会」は競技そのものを参加者が共同で発明するプロジェクト群。YCAM・CCBT・SIAF・スポーツ庁という 4 つの器に支えられ、ハッカソン → 本番 → 振り返りの循環で各地に広がる共創フォーマットを、Sports Time Machine の源流から札幌での雪上開催まで辿って整理する。"
+slug: "minna-de-tsukuru-future-undokai"
 date: 2026-05-18
 lastmod: 2026-05-18
 draft: false
