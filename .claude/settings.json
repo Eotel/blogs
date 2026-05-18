@@ -11,5 +11,17 @@
       "Bash(git ls-tree *)",
       "Bash(hugo --gc)"
     ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if command -v lefthook >/dev/null 2>&1; then lefthook install >&2 || echo '[SessionStart] lefthook install failed (continuing without hook bootstrap)' >&2; fi"
+          }
+        ]
+      }
+    ]
   }
 }
