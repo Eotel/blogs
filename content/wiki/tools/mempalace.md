@@ -2,7 +2,7 @@
 title: "MemPalace"
 description: "LLM に永続的なクロスセッションメモリを提供するオープンソース AI メモリシステム。SQLite + ChromaDB でローカル動作し、MCP 経由で主要 AI ツールと統合可能"
 date: 2026-04-14
-lastmod: 2026-04-14
+lastmod: 2026-05-18
 aliases: []
 related_posts:
   - "/posts/2026/04/mempalace-ai-memory/"
@@ -11,7 +11,7 @@ tags: ["MemPalace", "LLMメモリ", "ChromaDB", "MCP", "オープンソース"]
 
 ## 概要
 
-2026年4月に GitHub で急速に注目を集めた AI メモリシステム。LongMemEval ベンチマークで 96.6% を公表し、1週間で 45,000 スター以上を獲得した。古代の記憶術「記憶の宮殿（Method of Loci）」にインスパイアされた階層構造で会話データを管理する。MIT ライセンスのオープンソース（Python）。
+2026年4月に GitHub で急速に注目を集めた AI メモリシステム。LongMemEval で Recall@5 96.6% を公表し（ただし後述のとおりこの数値は ChromaDB のデフォルト埋め込み all-MiniLM-L6-v2 による測定で、MemPalace 独自の AAAK 圧縮を有効化すると 84.2% に低下する）、1週間で 45,000 スター以上を獲得した。古代の記憶術「記憶の宮殿（Method of Loci）」にインスパイアされた階層構造で会話データを管理する。MIT ライセンスのオープンソース（Python）。
 
 ## アーキテクチャ：宮殿の構造
 
