@@ -2,7 +2,7 @@
 title: "Claude Managed Agents"
 description: "Anthropic が提供する本番運用可能なマネージド AI エージェント基盤。Brain / Session / Hands の3層分離アーキテクチャで構成される"
 date: 2026-04-14
-lastmod: 2026-04-14
+lastmod: 2026-05-18
 aliases: ["CMA", "Managed Agents"]
 related_posts:
   - "/posts/2026/04/claude-managed-agents/"
@@ -65,7 +65,7 @@ GET  /v1/sessions/{id}/stream  # SSE でレスポンス受信
 
 ## ベンダーロックインの課題
 
-LangChain 創設者 Harrison Chase が指摘する通り、Claude Managed Agents ではメモリ（長期セッション状態）が Anthropic のクラウドに保存され、外部から直接アクセスできない。これはハーネスとメモリのロックイン問題の一例とされる。開発者は移植性を意識した設計が求められる。
+LangChain 共同創設者・CEO の Harrison Chase はブログ「Your Harness, Your Memory」で、Claude Managed Agents が「literally everything behind an API, locked into their platform」となる設計、すなわち harness とメモリが Anthropic プラットフォームに統合される構造をベンダーロックインとして批判している。開発者は harness とメモリの分離・移植性を意識した設計が求められる。
 
 ## 関連ページ
 

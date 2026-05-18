@@ -2,7 +2,7 @@
 title: "Anthropic Conway"
 description: "Anthropic が内部開発中の常駐型（Always-On）AI エージェント環境。外部イベントやスケジュールに基づき自律的に稼働し、ブラウザ操作・Webhook 連携・.cnw 拡張を備える"
 date: 2026-04-03
-lastmod: 2026-04-03
+lastmod: 2026-05-18
 aliases: ["Conway", "claude-conway"]
 related_posts:
   - "/posts/2026/04/anthropic-conway-agent/"
@@ -30,7 +30,7 @@ Anthropic が内部テスト中の常駐型 AI エージェント環境（コー
 |------|----------|----------|
 | Claude Desktop | ユーザープロンプト | 対話型チャット |
 | Claude Code | ユーザー指示 | CLI コーディング支援 |
-| Cowork | 非同期タスク | クラウド上の自律タスク |
+| Cowork | 非同期タスク（Dispatch） | 常駐型デスクトップエージェント（推論は Anthropic クラウド、データはローカル） |
 | **Conway** | 外部イベント / スケジュール | 常駐型自律エージェント |
 
 ## 想定ユースケース
