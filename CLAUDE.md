@@ -71,21 +71,35 @@ Hugo + PaperMod で構築された技術ブログ。GitHub Pages でホスティ
   - `import-gists.sh` 経由の記事は authors.json で解決された author id がセットされる
 - カテゴリは `scripts/categorize.py` のルールに従う
 - ビルド確認: `hugo --gc`
-- **ダイアグラムは画像化する**: アスキーアート（```` ``` ```` 内のテキスト図）は使わず、drawio で作成して PNG で埋め込む
-  - drawio ファイル: `assets/images/<name>.drawio`（mxgraph XML を直接書ける。既存ファイルを雛形にする）
-  - **環境別の使い分け**（重要）:
-    | 環境 | 採用経路 |
-    |---|---|
-    | ローカル開発 (GUI 版 draw.io インストール済み) | `.claude/skills/drawio/` の skill（APM 管理）が macOS app を自動検出して使う |
-    | **CI / Codex cloud / headless サンドボックス / GUI 未インストール** | **`./scripts/drawio-export.sh` (Docker 経由) を必ず使う** |
-  - **`/Applications/draw.io.app/Contents/MacOS/draw.io` が見つからない場合は迷わず Docker スクリプトにフォールバックする** — skill の出力が「CLI not found」になっても諦めず、`./scripts/drawio-export.sh` で再試行すること
-  - Docker 経路の使い方:
+- **ダイアグラムは画像化する**: アスキーアート（```` ``` ```` 内のテキスト図）は使わず、PNG で埋め込む。生成経路は図の性質で選ぶ:
+
+  | 図の性質 | 推奨経路 |
+  |---|---|
+  | コンセプト図・ヒーロー画像・イメージ図・単発の説明図（後から編集しない） | **Codex CLI に gpt-image で直接 PNG 生成** を最優先 |
+  | アーキテクチャ図・フロー図・シーケンス図・ER 図など、ソースを残して後から編集したい構造図 | **drawio** で mxgraph XML を書き、PNG にエクスポート |
+
+  - **Codex 経路** (推奨デフォルト): `codex exec` を Bash で直接呼び出して `image_generation` ツール (gpt-image) に PNG を作らせる。ChatGPT subscription auth (`codex login`) で動作する (`codex:rescue` skill 経由 / `codex-companion.mjs task` 経路は `OPENAI_API_KEY` を要求するので使わない)。drawio XML を経由しないので速い:
     ```bash
-    ./scripts/drawio-export.sh assets/images/<name>.drawio -f png --scale 2 -o assets/images/
+    codex exec -s workspace-write --skip-git-repo-check "次の図を image_generation ツールで生成して assets/images/<slug>-<diagram>.png に PNG 保存してください。サイズ 1024x1024。図の内容: <自然文記述>"
     ```
-    - 内部で `rlespinasse/drawio-desktop-headless` を起動する。Docker Desktop / orbstack / colima のいずれかが稼働していれば良い
-    - 環境変数 `DRAWIO_EXPORT_IMAGE` でイメージ差し替え、`DRAWIO_EXPORT_TIMEOUT` でタイムアウト変更が可能
-  - GUI 版 draw.io がローカルにある場合の直接呼び出し例: `/Applications/draw.io.app/Contents/MacOS/draw.io --export --format png --scale 2 --output assets/images/<name>.png assets/images/<name>.drawio`
+    - Codex は `~/.codex/generated_images/<session>/` に一旦保存し、指定パスへ自動コピーする
+    - サイズ調整が必要なら `sips -z <h> <w> <path>` を codex 自身に依頼すれば良い
+    - Codex CLI が呼び出せない / 未ログインの環境では使えない → drawio へフォールバック
+  - **drawio 経路**:
+    - drawio ファイル: `assets/images/<name>.drawio`（mxgraph XML を直接書ける。既存ファイルを雛形にする）
+    - 環境別の export 手段:
+      | 環境 | export 手段 |
+      |---|---|
+      | ローカル開発 (GUI 版 draw.io インストール済み) | `.claude/skills/drawio/` の skill（APM 管理）が macOS app を自動検出 |
+      | **CI / Codex cloud / headless サンドボックス / GUI 未インストール** | **`./scripts/drawio-export.sh` (Docker 経由)** |
+    - **`/Applications/draw.io.app/Contents/MacOS/draw.io` が見つからない場合は迷わず Docker スクリプトにフォールバックする** — skill の出力が「CLI not found」になっても諦めず、`./scripts/drawio-export.sh` で再試行すること
+    - Docker 経路の使い方:
+      ```bash
+      ./scripts/drawio-export.sh assets/images/<name>.drawio -f png --scale 2 -o assets/images/
+      ```
+      - 内部で `rlespinasse/drawio-desktop-headless` を起動する。Docker Desktop / orbstack / colima のいずれかが稼働していれば良い
+      - 環境変数 `DRAWIO_EXPORT_IMAGE` でイメージ差し替え、`DRAWIO_EXPORT_TIMEOUT` でタイムアウト変更が可能
+    - GUI 版 draw.io がローカルにある場合の直接呼び出し例: `/Applications/draw.io.app/Contents/MacOS/draw.io --export --format png --scale 2 --output assets/images/<name>.png assets/images/<name>.drawio`
   - 記事内参照: `![alt テキスト](/blogs/images/<name>.png)`（絶対パス。`layouts/_default/_markup/render-image.html` が assets を解決して responsive WebP + raster srcset に展開する）
   - alt テキストには図の内容を自然文で記述する（SEO・アクセシビリティ向上）
 
