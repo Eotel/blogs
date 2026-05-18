@@ -81,6 +81,36 @@ esac
 6. **claim 数の上限**: 1 ページあたり 20 件を超える場合は影響の大きい上位 20 件に絞る
 7. **page 並列度**: 同一メッセージ内では同一ページの claim を優先（複数ページの claim を 1 メッセージに混ぜない方が aggregation しやすい）
 
+### 3.5. verdict 衝突の解消（merge / 再検証）
+
+worker からの verdict が揃ったら、**page_action を判定する前に** 以下の整合チェックを行う:
+
+#### (a) 同一事実の verdict が割れたら、より具体的な evidence を優先
+
+同じ事実を扱う複数 claim で verdict が割れる場合:
+
+| パターン | 採用方針 |
+|---|---|
+| 片方が公式 URL からの逐語抜粋を evidence に含む | 逐語側を採用 |
+| 片方が「該当 URL に記述が見つからなかった」のみで `needs_fix` を返した | **採用しない**。`uncertain` 相当に降格 |
+| 両方とも具体的 evidence を持つが結論が逆 | **再検証 worker を 1 件追加起動** して三者多数決 |
+
+例（今回の future-undokai 監査の実例）: claim 17 が ACC 協力体制を「スポーツタイムマシン未確認」で `needs_fix`、claim 18 が同じ公式 URL を読んで「明示記載あり」で `verified`。後者の evidence が逐語を含むので **claim 17 の verdict を撤回し `verified` に統合** する。
+
+#### (b) `needs_fix` の根拠が「fetch 失敗」のみなら降格
+
+worker の evidence を読み、以下のパターンに該当する `needs_fix` は **そのまま採用せず `uncertain` に降格** する:
+
+- 「期待 URL を fetch できなかった / SPA / ログイン壁」
+- 「該当記述が見つからなかった」のみ（**反証となる別の一次情報を提示していない**）
+- 動画・SNS・PDF 内のテキストが根拠で、worker がテキスト本文を取得できなかった
+
+降格後、必要なら **別の検索ヒント / 一次情報** を hint に追加して再検証 Task を起動する。
+
+#### (c) ユーザー / hint 由来の補強情報を必ず反映
+
+orchestrator がユーザーから受け取った追加 URL や、別 claim の verified evidence は、再検証時に必ず `hints.additional_sources` / `hints.verification_notes` として渡す。worker は 1 件単位で文脈を持たないので、orchestrator 側で文脈を補う責務がある。
+
 ### 4. ページごとの page_action 判定
 
 skill 親セッションが各ページの worker verdict を集約し、wiki 向けの page_action を決定:

@@ -82,6 +82,17 @@ Agent(subagent_type="version-date-checker",    prompt="記事絶対パス: $ABS_
 
 これで `/blog` の publish フローと同じ 4 観点が回る（脚注/引用/人名/所属 = claim swarm + URL + コマンド + バージョン）。
 
+### 4.5. verdict 衝突の解消（merge / 再検証）
+
+集約の前に、worker verdict の整合チェックを行う:
+
+- **同一事実で verdict 割れ**: 逐語抜粋を持つ evidence を優先。「該当記述が見つからなかった」のみの `needs_fix` は採用しない
+- **`needs_fix` の根拠が fetch 失敗のみ**: `uncertain` に降格
+- **動画 / SNS / PDF 内テキスト** が一次情報のとき、worker が SPA で取得できなかったケースは `uncertain` 扱い
+- **ユーザー提供の追加 URL** は `hints.additional_sources` に詰めて再検証 Task を起動する
+
+詳細は `.claude/skills/wiki-fact-audit/SKILL.md` の「3.5. verdict 衝突の解消」セクションを参照。`/fact-check` も同じルールに従う。
+
 ### 5. 集約と保存
 
 skill 親セッションで全 worker / agent の verdict を集約:
