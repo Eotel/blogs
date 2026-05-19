@@ -29,7 +29,7 @@ tags: ["マルチテナント", "SaaS", "アーキテクチャ", "AWS", "Postgre
 ## 設計判断の主軸
 
 - **分離度はティアと契約から逆算する** ── 一律で選ばず、テナント segment ごとに business reason を明文化する
-- **共有を選んでも分離義務は減らない** ── pool 化はコストを下げる仕組みであり、コンプライアンス義務を免れる仕組みではない（AWS SaaS Tenant Isolation Strategies が明示）
+- **共有を選んでも分離義務は減らない** ── pool 化はコストを下げる仕組みだが、AWS SaaS Tenant Isolation Strategies は「out-of-the-box な解決策が無いことを、分離要件 (isolation requirements) を緩める理由として用いてはならない」と述べており、分離はリソース構成（pool / silo）に依存しない設計責任として位置づけられる
 - **identity を先に tenant-aware にする** ── データパス改修より前に JWT に tenant claim を埋め、tenant catalog を 1 つに集約する
 - **観測性・コスト・DR は tenancy モデルに従属する** ── stamp-id / shard-id / tenant-id の構造的タグ付けで、運用と請求を一貫させる
 - **expand-contract と feature flag を標準にする** ── テナント単位の段階適用が、shared でも dedicated でも安全な唯一の道
@@ -40,7 +40,7 @@ tags: ["マルチテナント", "SaaS", "アーキテクチャ", "AWS", "Postgre
 
 ## PostgreSQL での実装
 
-shared schema では `tenant_id` を **主アクセス経路**（複合主キーの先頭）に置き、PostgreSQL Row Security Policies で偶発漏洩を機械的に防ぐのが定石。`current_setting('app.tenant_id')` のような custom GUC とポリシーを組み合わせることで、アプリ層のクエリミスを RLS が下層で受け止める二段ガードになる。Supabase はこの構造を BaaS のデフォルトとして採用しており、参照実装として有用（[Supabase](/blogs/wiki/tools/supabase/) を参照）。
+shared schema では `tenant_id` を **主アクセス経路**（複合主キーの先頭）に置き、PostgreSQL Row Security Policies で偶発漏洩を機械的に防ぐのが定石。`current_setting('app.tenant_id')` のような custom GUC とポリシーを組み合わせることで、アプリ層のクエリミスを RLS が下層で受け止める二段ガードになる。Supabase は exposed schema 上のテーブルで RLS を必須としており、shared schema + tenant_id + RLS をマルチテナント分離の推奨実装パターンとしてサポートしている（[Supabase](/blogs/wiki/tools/supabase/) を参照）。
 
 ## バックアップ・DR の制約
 
