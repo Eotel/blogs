@@ -52,7 +52,7 @@ tags:
 | 1907 | ベルクソン『創造的進化』(*L'Évolution créatrice*) — 三者の哲学的背景 |
 | 1922 ごろ | テイヤール、エッセイ "Hominization" で noosphere の早期使用が記録される |
 | 1927 | ル・ロワ、コレージュ・ド・フランス講義で noosphere を公的導入 |
-| 1928 | ル・ロワ『Les origines humaines et l'évolution de l'intelligence』第 3 章「La noosphère et l'hominisation」 |
+| 1928 | ル・ロワ『Les origines humaines et l'évolution de l'intelligence』に「La noosphère et l'hominisation」を収録 |
 | 1945 | ヴェルナツキー "The Biosphere and the Noosphere"（*American Scientist* vol. 33, no. 1, pp. 1-12）で英語圏に提示 |
 | 1955 | 『Le Phénomène humain』(*The Phenomenon of Man*) 没後刊行 |
 | 1962 | 聖省（現・教理省）が monitum を発出 — テイヤール著作の曖昧さと重大な誤りに警告 |
