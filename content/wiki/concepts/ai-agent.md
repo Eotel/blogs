@@ -2,9 +2,10 @@
 title: "AI エージェント"
 description: "自律的にタスク実行できる AI システム。複数ステップの処理を自己制御で進める"
 date: 2026-04-06
-lastmod: 2026-05-12
+lastmod: 2026-05-19
 aliases: ["AI Agent", "エージェント", "autonomous agent"]
 related_posts:
+  - "/posts/2026/05/maeda-taro-parasite-human/"
   - "/posts/2026/03/ai-agent-qa/"
   - "/posts/2026/03/claude-code-agent-teams/"
   - "/posts/2026/04/autoagent-self-improving-agents/"
@@ -134,6 +135,7 @@ LangChain 創設者 Harrison Chase が指摘する重要な概念。エージェ
 
 ## 関連ページ
 
+- [パラサイトヒューマン](/blogs/wiki/concepts/parasite-human/) — 前田太郎が 2000 年代から展開する身体寄生型 AI エージェントの前史
 - [Claude Code](/blogs/wiki/tools/claude-code/) — 代表的な AI コーディングエージェント
 - [Claude Managed Agents](/blogs/wiki/tools/claude-managed-agents/) — Anthropic のマネージドエージェント基盤
 - [Gemini Agent](/blogs/wiki/tools/gemini-agent/) — Google Workspace 連携エージェント
@@ -149,6 +151,7 @@ LangChain 創設者 Harrison Chase が指摘する重要な概念。エージェ
 
 ## ソース記事
 
+- [前田太郎のパラサイトヒューマン ── 寄生する計算機から現代 AI エージェントへ](/blogs/posts/2026/05/maeda-taro-parasite-human/) — 2026-05-19
 - [AI エージェント QA 手法](/blogs/posts/2026/03/ai-agent-qa/) — 2026-03
 - [Claude Code Agent Teams](/blogs/posts/2026/03/claude-code-agent-teams/) — 2026-03
 - [AutoAgent](/blogs/posts/2026/04/autoagent-self-improving-agents/) — 2026-04
