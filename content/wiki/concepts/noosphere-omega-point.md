@@ -13,6 +13,7 @@ aliases:
   - "complexity-consciousness"
 related_posts:
   - "/posts/2026/05/teilhard-noosphere-omega-singularity/"
+  - "/posts/2026/05/technium-critique-and-transcendence/"
 tags:
   - "テイヤール・ド・シャルダン"
   - "ヌースフィア"
@@ -76,6 +77,7 @@ tags:
 ## 隣接概念との対比
 
 - **[雑種文化論（加藤周一）](/blogs/wiki/concepts/kato-shuichi-hybridity/)**: 外来概念の受容・変形・再編という構造的視角。noosphere／オメガ点の日本語圏受容史も、外来思想（ベルクソン的進化哲学＋カトリック神学＋ロシア地球化学）の再編という意味で雑種的な系譜を持つ。
+- **[テクニウム（ケヴィン・ケリー）](/blogs/wiki/concepts/technium/)**: 「複雑性上昇」系譜を世俗化・シリコンバレー化した同系の概念。Kelly は noosphere のように人間理性を中心に置かず、技術的複合体それ自体を進化主体のように扱う。神学と人格化の主題が抜けたぶん責任主体が見えにくく、技術決定論への滑りを批判される。
 - **[AI エージェント](/blogs/wiki/concepts/ai-agent/)**: noosphere の「地球規模の知の集積」という比喩は、現代の分散エージェント網／LLM ネットワークに頻繁に転用される。ただし反省的意識ではなく予測・最適化・生成が中心である点で、テイヤール本来の概念から距離がある。
 - **[LLM Wiki パターン](/blogs/wiki/concepts/llm-wiki-pattern/)**: 個別の知を集約・統合してネットワーク化する Karpathy 型の運用は、規模こそ違うが「個人の知が地球規模の知の層に編み込まれる」という noosphere 的構図と隣接する。
 - **Gaia 仮説（Lovelock, 1972）**: 地球を自己調整系として捉える別系譜。noosphere と並置されやすいが、Gaia は思考圏ではなく恒常性のモデル。
@@ -90,9 +92,11 @@ tags:
 ## 関連 Wiki
 
 - [雑種文化論（加藤周一）](/blogs/wiki/concepts/kato-shuichi-hybridity/) — 外来概念の受容と再編という方法論的隣接
+- [テクニウム（ケヴィン・ケリー）](/blogs/wiki/concepts/technium/) — 「複雑性上昇」系譜の世俗化版。noosphere の神学・人格化抜きでシリコンバレー化した姉妹概念
 - [AI エージェント](/blogs/wiki/concepts/ai-agent/) — global brain／分散エージェント網との比喩的接続
 - [LLM Wiki パターン](/blogs/wiki/concepts/llm-wiki-pattern/) — 個別知の集約・統合という構図
 
 ## ソース記事
 
 - [ヌースフィアとオメガ点は AI シンギュラリティ論の前史か：テイヤール・ド・シャルダン再読](/blogs/posts/2026/05/teilhard-noosphere-omega-singularity/) — 2026-05-19
+- [テクニウム概念への批判と超克 ── ケヴィン・ケリーから「操舵可能な技術生態系」へ](/blogs/posts/2026/05/technium-critique-and-transcendence/) — 2026-05-19（noosphere 系譜の Kelly 的再配置を批判的に扱う）
