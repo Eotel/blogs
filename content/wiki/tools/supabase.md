@@ -2,11 +2,12 @@
 title: "Supabase"
 description: "PostgreSQL ベースの BaaS プラットフォーム。Firebase のオープンソース代替。Claude Code 向け agent-skills でベストプラクティスを自動適用可能"
 date: 2026-04-06
-lastmod: 2026-05-12
+lastmod: 2026-05-19
 aliases: ["supabase"]
 related_posts:
   - "/posts/2026/03/supabase-agent-skills/"
-tags: ["BaaS", "PostgreSQL", "API", "RLS", "Claude Code"]
+  - "/posts/2026/05/2026-05-19-multi-tenant-saas-architecture-guide/"
+tags: ["BaaS", "PostgreSQL", "API", "RLS", "Claude Code", "マルチテナント"]
 ---
 
 ## 概要
@@ -52,11 +53,17 @@ create policy "..." on public.records
 
 agent-skills をインストールすると、Claude がこの最適な形式で自動的にコードを生成する。
 
+## マルチテナント SaaS との関係
+
+Supabase の RLS は **マルチテナント SaaS の shared-schema 分離パターンを BaaS としてデフォルト提供**している例として参照される。`auth.uid()` ベースのポリシーは「ユーザー単位」の分離だが、`tenant_id` を主キーに加え `current_setting('app.tenant_id')` 形式のポリシーへ書き換えると、AWS pool / Spanner row パターンと等価な構造になる。詳細は [マルチテナント SaaS](/blogs/wiki/concepts/multi-tenant-saas/) を参照。
+
 ## 関連ページ
 
+- [マルチテナント SaaS](/blogs/wiki/concepts/multi-tenant-saas/) — pool / row 分離パターンの BaaS 実装例として Supabase が参照される
 - [RAG](/blogs/wiki/concepts/rag/) — Supabase Vectors を使ったベクトル検索
 - [MCP](/blogs/wiki/concepts/mcp/) — Supabase MCP Server 経由の AI 連携
 
 ## ソース記事
 
 - [Supabase × Claude Code: agent-skills でパフォーマンスと RLS の正確性を高める](/blogs/posts/2026/03/supabase-agent-skills/) — 2026-03-30
+- [マルチテナント SaaS アーキテクチャ設計ガイド ── silo / bridge / pool から hybrid 運用まで](/blogs/posts/2026/05/2026-05-19-multi-tenant-saas-architecture-guide/) — 2026-05-19
