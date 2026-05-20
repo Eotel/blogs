@@ -49,11 +49,11 @@ VDP は「報奨は出ないが安全な報告経路は約束する」もので�
 | Meta Bug Bounty | — | — | — | **$2.3M+ / 10,000 報告 / 600 valid** | — |
 | Apple Security Bounty | — | 累計 $20M 近く | — | — | **累計 $35M+ / 800+ 研究者** |
 
-Meta が「10,000 報告に対して valid 約 600 件 (有効率 6%)」を公開している例外的なケースで、**重複・無効・範囲外を含む負荷の大きさ**を直接読み取れる。
+Meta は 2024 年に「nearly 10,000 bug reports / nearly 600 valid reports」と総数と有効数を併記して公開している例外的なケースで（valid 比率は wiki 側の概算で約 6%）、**重複・無効・範囲外を含む負荷の大きさ**を直接読み取れる。
 
 ## AI 時代の構造変化
 
-- **発見の母数は増えるが、検証のボトルネックが顕在化**: Intigriti は 2026 年に「top-of-funnel が広がり、duplication surface area が爆発し、ボトルネックが validation・prioritization・trust に移る」と公式見解で述べている。
+- **発見の母数は増えるが、検証のボトルネックが顕在化**: Intigriti は 2026 年のブログで、引用した Chris Holt の言葉として「the top-of-funnel widens faster than most programs can absorb, and the duplication surface area explodes」と紹介し、続けて編集側の論として「the bottleneck shifts to validation, prioritization, and trust」と公式に述べている。
 - **未検証 AI 報告は不適格化**: Apple は guidelines で「AI without proper validation」の理論問題を不適格とし、繰り返せば 180 日 processing pause、複数回なら永久排除もありうると明記。
 - **AI 固有スコープの拡大**: HackerOne 2025 で **AI report +210%、prompt injection +540%、自律エージェントによる valid report 560+**。Google は dedicated AI VRP、Meta は LLM の model inversion / extraction を正式スコープに含めた。
 - **再価格付け**: Chrome VRP では 2022 → 2024 で reports 数は 470 → 337 と減ったが、参考平均報奨は約 $8.5k → $10.1k に上昇。低難度の量産から高難度の少数精鋭にシフトしている。
