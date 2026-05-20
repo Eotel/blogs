@@ -1,23 +1,29 @@
 ---
 title: "テクニウム (technium)"
-description: "ケヴィン・ケリーが提示した、技術・制度・文化・ソフトウェア・法・知的生産物を含む地球規模の自己強化的な技術総体。生命進化の延長として技術圏を捉える概念枠で、ヒューリスティックとしては有効だが、政治経済的選択環境の理論化が薄いため批判の対象でもある。"
+description: "ケヴィン・ケリーが提示した、技術・制度・文化・ソフトウェア・法・知的生産物を含む地球規模の自己強化的な技術総体。生命進化の延長として技術圏を捉える概念枠で、ヒューリスティックとしては有効だが、政治経済的選択環境の理論化が薄いため批判の対象でもある。AI 時代には「操舵可能な技術生態系 (STE)」として再定義される動きがある。"
 date: 2026-05-19
-lastmod: 2026-05-19
+lastmod: 2026-05-20
 aliases:
   - "Technium"
   - "Kevin Kelly technium"
   - "ケヴィン・ケリー テクニウム"
   - "技術圏"
   - "操舵可能な技術生態系"
+  - "Steerable Technological Ecosystem"
+  - "STE"
   - "steerable technical ecology"
 related_posts:
   - "/posts/2026/05/technium-critique-and-transcendence/"
+  - "/posts/2026/05/steerable-tech-ecology-design/"
 tags:
   - "技術哲学"
   - "ケヴィン・ケリー"
   - "テクニウム"
   - "技術決定論"
   - "カリフォルニアン・イデオロギー"
+  - "AIガバナンス"
+  - "修理する権利"
+  - "cosmotechnics"
 ---
 
 ## 概要
@@ -69,21 +75,46 @@ Shoshana Zuboff『The Age of Surveillance Capitalism』(2019) は、監視資本
 
 しかし、その「自律性」は目的関数・評価器・ツール接続・標準プロトコル ([MCP](/blogs/wiki/concepts/mcp/))・計算資源・ガードレールによって条件づけられた **統治された自律性** である。AI が現実化しているのは「技術の欲望」そのものではなく、**制度化された最適化の連鎖** とみる方が理論的に強い。AI 時代はテクニウム概念を **実在論から制度論へ押し戻す**。
 
-## 「操舵可能な技術生態系」への再定義
+## 「操舵可能な技術生態系 (STE)」への再定義
 
-「テクニウム概念への批判と超克」(2026-05-19) で提案された再定義案。
+「テクニウム概念への批判と超克」(2026-05-19) で提案され、続く「操舵可能な技術生態系（STE）── ケヴィン・ケリーの Technium を AI ガバナンスの語彙に置き換える」(2026-05-20) で **五部品の概念設計** として整備された再定義案。
 
 問いの変換: 「技術が何を欲するか (What does technology want?)」から「**どのような選択環境が、どのような技術を増殖させるのか**」へ。
 
-要点は五つ:
+### 五部品の定義
 
-1. **欲望ではなく選択環境を分析単位にする**（評価基準・所有形態・資本コスト・法制度・軍事需要・教育・身体習慣）
-2. **成長ではなくメンテナンスと可逆性を中核指標にする**（何を保ち、何を縮退させ、何をやめられるか）
-3. **単一の最適解ではなく複数の技術圏 (cosmotechnics) を認める**
-4. **人間を外部観察者でも宿主でもなく、継続的な操舵者として位置づける**
-5. **AI を神話化せず、プロトコル・評価器・資源制約・所有構造のなかで理解する**
+STE は次の五部品から構成される:
+
+| 構成要素 | 分析上の意味 | 実務上の含意 | 系譜 |
+|---|---|---|---|
+| **Steerable** | 方向づけ・介入・停止・代替が可能 | kill switch、ロールバック、退出権、複線化 | Collingridge、Beer の管理サイバネティクス |
+| **Technical** | 物＋コード＋規格＋組織＋契約 | API、権限、保守、契約設計まで対象化 | IIASA (hardware/software/orgware)、Star、Akrich |
+| **Ecology** | 相互依存・脆弱性・多層性 | 局所最適ではなく全体系評価 | Star のインフラ論（relational / ecological / breakdown 性質） |
+| **Selection Environment** | 何が採用・拡張・淘汰されるかを決める条件 | 規制、評価、調達、課金、UI を設計変数にする | Jasanoff、Hughes、Latour/Akrich |
+| **Reversibility** | やめられる・直せる・移れる・戻せる | repairability、exportability、sunset plan | EU 修理指令、FTC、Jackson |
+
+### AI 時代の 8 つの操舵メカニズム
+
+STE が実務語彙として機能するための具体的な操舵装置:
+
+1. **法・標準** — NIST AI RMF (2023/1)、Generative AI Profile (2024/7)、EU AI Act (2024-08-01 発効、2026-08-02 適用)、OECD AI Principles (2024/5 更新)
+2. **所有・市場・競争** — UK CMA が UK・EEA IaaS 市場で Microsoft/AWS 30-40%、Google 5-10% と認定、3 社を vertically integrated providers と位置づけ
+3. **評価・ベンチマーク** — OpenAI evals、Anthropic Collective Constitutional AI (Polis 経由 ~1,000 人 input)
+4. **UI・script** — 既定値、拒否挙動、提案文の選好 (Akrich の script 概念)
+5. **教育・専門職** — eval culture、安全運用、repair skills
+6. **電力・計算資源** — IEA: データセンター電力 415 TWh (2024) → 945 TWh (2030 base case)。OECD national compute blueprint
+7. **配置アーキテクチャ** — Apple PCC、Google AI Edge、on-device vs cloud の主権・可搬性比較
+8. **修理・保守・撤退** — EU Directive (EU) 2024/1799 (修理する権利)、FTC の repair restriction 論
+
+### 設計原理
 
 具体的な設計原理: 介入可能性 (interruptibility)・停止可能性 (stoppability)・権限の段階化 (graduated permissions)・ログによる責任追跡 (auditable logs)・局所実行 (local execution)・データ可搬性 (portability)・代替可能性 (substitutability)。これらは [自己改善型エージェント](/blogs/wiki/concepts/self-improving-agents/) の運用ガバナンスにも直結する。
+
+四レイヤー（プロダクト / AI システム / 組織 / 政策）それぞれに「介入点を増やす」原則を持つ。
+
+### STE が Technium を置き換える条件
+
+STE は Technium を分析概念として置き換えうるが、「文明叙事詩」としての魅力は引き継がない。条件は、**何が操舵装置で、誰が操舵者で、どこから降りられるかを、毎回明示すること**。
 
 ## 関連 Wiki
 
@@ -97,3 +128,4 @@ Shoshana Zuboff『The Age of Surveillance Capitalism』(2019) は、監視資本
 ## ソース記事
 
 - [テクニウム概念への批判と超克 ── ケヴィン・ケリーから「操舵可能な技術生態系」へ](/blogs/posts/2026/05/technium-critique-and-transcendence/) — 2026-05-19
+- [操舵可能な技術生態系（STE）── ケヴィン・ケリーの Technium を AI ガバナンスの語彙に置き換える](/blogs/posts/2026/05/steerable-tech-ecology-design/) — 2026-05-20
