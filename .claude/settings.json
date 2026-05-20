@@ -21,7 +21,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "if command -v lefthook >/dev/null 2>&1; then lefthook install >&2 || echo '[SessionStart] lefthook install failed (continuing without hook bootstrap)' >&2; fi"
+            "command": "if command -v lefthook >/dev/null 2>&1; then git config --local core.hooksPath \"$(git rev-parse --path-format=absolute --git-common-dir)/hooks\" 2>/dev/null || true; lefthook install --force >&2 || echo '[SessionStart] lefthook install failed (continuing without hook bootstrap)' >&2; fi"
           }
         ]
       }
