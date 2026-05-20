@@ -9,7 +9,10 @@
       "Bash(curl -fsS -o /dev/null *)",
       "Bash(gh search *)",
       "Bash(git ls-tree *)",
-      "Bash(hugo --gc)"
+      "Bash(hugo --gc)",
+      "Bash(hugo --source *)",
+      "Bash(python3 .claude/skills/wiki-lint/scripts/wiki_lint.py *)",
+      "Bash(unzip -p *)"
     ]
   },
   "hooks": {
