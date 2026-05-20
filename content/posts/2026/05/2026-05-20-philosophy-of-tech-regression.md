@@ -204,8 +204,8 @@ tags: ["技術哲学", "local-first", "human-oversight", "resilience-engineering
 
 ## 関連記事
 
-- [テクニウム批判と超克 — ケヴィン・ケリーの『止められない技術』言説に対する別ルート](/blogs/posts/2026/05/2026-05-19-technium-critique-and-transcendence/) — 本稿のメタ前提（複雑化を所与としない）と地続き
-- [前田太郎のパラサイトヒューマン](/blogs/posts/2026/05/2026-05-19-maeda-taro-parasite-human/) — 身体技能・embodied cognition と「残すべき能力」の議論
+- [テクニウム批判と超克 — ケヴィン・ケリーの『止められない技術』言説に対する別ルート](/blogs/posts/2026/05/technium-critique-and-transcendence/) — 本稿のメタ前提（複雑化を所与としない）と地続き
+- [前田太郎のパラサイトヒューマン](/blogs/posts/2026/05/maeda-taro-parasite-human/) — 身体技能・embodied cognition と「残すべき能力」の議論
 - [AI 疲れへのアンサー: Claude Code のハーネス機能は本当に必要か](/blogs/posts/2026/03/2026-03-26-ai-fatigue-claude-code-simplicity/) — Anthropic「最初に最も単純な解を」原則の実務適用
 
 ## 出典
@@ -230,20 +230,20 @@ tags: ["技術哲学", "local-first", "human-oversight", "resilience-engineering
 [^18]: Bihouix et al., "What is low tech?" (HAL working paper) — <https://hal.univ-lorraine.fr/hal-03598528v3/document>
 [^19]: Internet Encyclopedia of Philosophy, "Philosophy of Technology" — <https://iep.utm.edu/technolo/>
 [^20]: EBSCO Research Starters, "Jacques Ellul's *The Technological Society*" — <https://www.ebsco.com/research-starters/literature-and-writing/jacques-elluls-technological-society>
-[^21]: Kerschner & Ehlers, "A framework of attitudes towards technology in theory and practice" (Ecological Economics, 2016, S0921800920322230) — <https://www.sciencedirect.com/science/article/abs/pii/S0921800916302129>
+[^21]: Kerschner & Ehlers, "A framework of attitudes towards technology in theory and practice" (Ecological Economics, 2016, S0921800916302129) — <https://www.sciencedirect.com/science/article/abs/pii/S0921800916302129>
 [^22]: Feenberg, "Critical Theory of Technology" (chapter from *Between Reason and Experience*) — <https://www.sfu.ca/~andrewf/books/critbio.pdf>
 [^23]: Internet Encyclopedia of Philosophy, "Philosophy of Technology" — <https://iep.utm.edu/technolo/>
 [^24]: EBSCO Research Starters, "Jacques Ellul's *The Technological Society*" — <https://www.ebsco.com/research-starters/literature-and-writing/jacques-elluls-technological-society>
 [^25]: University of Minnesota Press, *The Obsolescence of the Human, Volume 1* — <https://www.upress.umn.edu/9781517912659/the-obsolescence-of-the-human/>
 [^26]: STEPS Centre, "Concept of 'Intermediate Technology' introduced" — <https://steps-centre.org/timeline/concept-of-intermediate-technology-introduced/> (1962 年導入を裏付け)。Small Is Beautiful (1973) の大衆化については Schumacher Center for a New Economics — <https://centerforneweconomics.org/envision/legacy/small-is-beautiful/> を参照
 [^27]: Mumford, "Authoritarian and Democratic Technics" (1964 reprint, UFMG) — <https://www.mom.arq.ufmg.br/mom/02_babel/textos/mumford_authoritarian.pdf>
-[^28]: Kerschner & Ehlers (2016), ScienceDirect S0921800920322230 — <https://www.sciencedirect.com/science/article/abs/pii/S0921800916302129>
+[^28]: Kerschner & Ehlers (2016), ScienceDirect S0921800916302129 — <https://www.sciencedirect.com/science/article/abs/pii/S0921800916302129>
 [^29]: Winner, "Do Artifacts Have Politics?" (Daedalus, 1980, Georgia Tech reprint) — <https://faculty.cc.gatech.edu/~beki/cs4001/Winner.pdf>
 [^30]: Lehman, "Laws of Software Evolution Revisited" (1996, Kent State reprint) — <https://www.cs.kent.edu/~jmaletic/cs63902/Papers/Lehman96.pdf>
 [^31]: Ink & Switch local-first essay — <https://www.inkandswitch.com/essay/local-first/>
 [^32]: NIST AI Risk Management Framework — <https://www.nist.gov/itl/ai-risk-management-framework>
 [^33]: EBSCO Research Starters, "Jacques Ellul's *The Technological Society*" — <https://www.ebsco.com/research-starters/literature-and-writing/jacques-elluls-technological-society>
-[^34]: Kerschner & Ehlers (2016), ScienceDirect S0921800920322230 — <https://www.sciencedirect.com/science/article/abs/pii/S0921800916302129>
+[^34]: Kerschner & Ehlers (2016), ScienceDirect S0921800916302129 — <https://www.sciencedirect.com/science/article/abs/pii/S0921800916302129>
 [^35]: Winner, "Do Artifacts Have Politics?" — <https://faculty.cc.gatech.edu/~beki/cs4001/Winner.pdf>
 [^36]: Chughtai, "Human Values and Digital Work: An Ethnographic Study of Device Paradigm" (*Journal of Contemporary Ethnography*, 49(1), 2020) — <https://journals.sagepub.com/doi/abs/10.1177/0891241619855130>。なお Borgmann 自身の device paradigm は *Technology and the Character of Contemporary Life* (University of Chicago Press, 1984) を一次原典として参照すると確実。
 [^37]: Feenberg, "Critical Theory of Technology" — <https://www.sfu.ca/~andrewf/books/critbio.pdf>
@@ -263,11 +263,11 @@ tags: ["技術哲学", "local-first", "human-oversight", "resilience-engineering
 [^51]: Fairphone, "Design for repairability" — <https://www.fairphone.com/hub/en/impact/design-2/>
 [^52]: European Commission JRC, "New EU labels help consumers choose more repairable electronics" — <https://joint-research-centre.ec.europa.eu/jrc-news-and-updates/new-eu-labels-help-consumers-choose-more-repairable-electronics-2025-06-20_en>
 [^53]: Bainbridge, "Ironies of Automation" — <https://davidjusth.com/s/Ironies-of-Automation_Bainbridge_1983.pdf>
-[^54]: Kerschner & Ehlers (2016), ScienceDirect S0921800920322230 — <https://www.sciencedirect.com/science/article/abs/pii/S0921800916302129>
+[^54]: Kerschner & Ehlers (2016), ScienceDirect S0921800916302129 — <https://www.sciencedirect.com/science/article/abs/pii/S0921800916302129>
 [^55]: EU AI Act Service Desk, "Article 14: Human Oversight" — <https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-14>
 [^56]: Anthropic, "Building Effective Agents" — <https://www.anthropic.com/engineering/building-effective-agents>
 [^57]: Korhonen et al., "Critical perspectives on the circular and local-first economy" (Aalto University) — <https://aaltodoc.aalto.fi/items/473870e8-2fc4-44f6-8562-7dff022f2206>
-[^58]: Kerschner & Ehlers (2016), ScienceDirect S0921800920322230 — <https://www.sciencedirect.com/science/article/abs/pii/S0921800916302129>
+[^58]: Kerschner & Ehlers (2016), ScienceDirect S0921800916302129 — <https://www.sciencedirect.com/science/article/abs/pii/S0921800916302129>
 [^59]: EU AI Act Service Desk, "Article 14: Human Oversight" — <https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-14>
 [^60]: Ink & Switch local-first essay — <https://www.inkandswitch.com/essay/local-first/>
 [^61]: MDN Web Docs, "Graceful degradation" — <https://developer.mozilla.org/en-US/docs/Glossary/Graceful_degradation>
