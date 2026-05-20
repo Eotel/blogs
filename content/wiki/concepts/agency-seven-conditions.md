@@ -36,7 +36,7 @@ tags:
 | **境界** | 自分と環境を区別する持続境界を持つこと | 市場のように散在した過程となり、単一主体にしにくい | autopoiesis、法的人格、territory |
 | **継続性** | 時間をまたいで同一性を保つこと | その場限りの反応にとどまる | Sessions、persistence、法的継続体 |
 | **自己保存** | 継続が当人にとって賭け金であること | 損失が外在化し、欲望ではなく仕様遵守になる | Spinoza の conatus、Maturana の basic circularity |
-| **内在的評価** | 何を良い状態とみなすかの基準があること | 行為はただの機械的更新になりやすい | active inference の prior preferences |
+| **内在的評価** | 何を良い状態とみなすかの基準があること | 行為はただの機械的更新になりやすい | active inference の prior preferences (EFE の pragmatic/extrinsic value 項) |
 | **記憶** | 過去の結果を将来行為へ接続すること | 反復的な学習や執着が弱い | Reflexion、MemGPT、Sessions |
 | **反事実的計画** | 未来の可能世界を比較して行為を選ぶこと | いまこの場の反応しか説明できない | ReAct、多段 agent、expected free energy |
 | **責任・帰属** | 行為の帰結を誰に帰属させるかが制度的に定まること | 擬人化が責任逃れを生む | OpenAI HITL、企業統治、プラットフォーム法 |
