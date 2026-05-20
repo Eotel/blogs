@@ -2,7 +2,7 @@
 title: "Cache-Augmented Generation (CAG)"
 description: "権威ある有限コーパスをロングコンテキストに事前ロードし KV キャッシュを再利用する手法。RAG と対比される設計だが、3 つの別物が同じ略称で呼ばれている"
 date: 2026-05-20
-lastmod: 2026-05-20
+lastmod: 2026-05-21
 aliases: ["CAG", "Cache-Augmented Generation", "Context-Augmented Generation", "Cache-CAG", "Context-CAG"]
 related_posts:
   - "/posts/2026/05/rag-cag-llm-knowledge-context-cache-design/"
@@ -27,9 +27,11 @@ Cache-Augmented Generation (CAG) は、Chan et al. (2024) の「[Don't Do RAG: W
 
 ## Cache-CAG (Chan et al. 2024) の手順
 
-1. **Knowledge preloading**: 権威あるコーパスをロングコンテキストに丸ごとロード
-2. **Inference from the stored cache**: KV キャッシュを再利用しながら多数の質問に回答
-3. **Fast cache reset**: セッション切り替え時にキャッシュを安価にリセット
+Chan et al. の論文 (Section 2 Methodology) では 3 段階で構成される:
+
+1. **External Knowledge Preloading**: 権威あるコーパスをロングコンテキストに丸ごとロード
+2. **Inference**: KV キャッシュを再利用しながら多数の質問に回答
+3. **Cache Reset**: セッション切り替え時にキャッシュを安価にリセット
 
 検索コンポーネントが消えるため、リトリーバーの複雑性や検索ミスが原理的に発生しない。代わりに、ロングコンテキスト利用率とコーパス版数管理に新しい依存が生じる。
 
@@ -59,8 +61,8 @@ Cache-CAG が有効な前提条件:
 
 しばしば混同されるが、キャッシュには性質の異なる 2 種類がある:
 
-- **計算の再利用**: OpenAI prompt caching、Anthropic prompt caching、vLLM Automatic Prefix Caching、TensorRT-LLM KV reuse などはプレフィックスの KV 状態を内部で再利用するだけで、出力されるトークンは変わらない (OpenAI は「the output generated will be identical」と明言)。
-- **回答の再利用**: Semantic Cache (Redis 等) や Exact Response Cache (LangChain 等) は過去の応答そのものを再生する。これは応答の選択に参加しており、freshness window やテナント分離が**性能ではなく正しさの問題**になる。
+- **計算の再利用**: OpenAI prompt caching、Anthropic prompt caching、vLLM Automatic Prefix Caching、TensorRT-LLM KV reuse などは、共通プレフィックスの prefill 計算を内部で省略するだけで、出力されるトークンは変わらない (OpenAI は「the output generated will be identical」と明言)。実装の詳細はベンダーごとに異なり、OpenAI / vLLM / TensorRT-LLM が内部 KV 状態の再利用を明示するのに対し、Anthropic は API レベルのプレフィックスキャッシュとして記述している。
+- **回答の再利用**: Semantic Cache (Redis VL の `SemanticCache` 等) や Exact-Match Response Cache (LangChain の `InMemoryCache` / `SQLiteCache` / `RedisCache` 等) は過去の応答そのものを再生する。これは応答の選択に参加しており、freshness window やテナント分離が**性能ではなく正しさの問題**になる。
 
 ## 関連ページ
 
