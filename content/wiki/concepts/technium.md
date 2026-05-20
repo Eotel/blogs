@@ -14,6 +14,7 @@ aliases:
   - "steerable technical ecology"
 related_posts:
   - "/posts/2026/05/technium-critique-and-transcendence/"
+  - "/posts/2026/05/emergence-without-will-and-desiring-subjects/"
   - "/posts/2026/05/steerable-tech-ecology-design/"
   - "/posts/2026/05/2026-05-20-philosophy-of-tech-regression/"
 tags:
@@ -125,9 +126,11 @@ STE は Technium を分析概念として置き換えうるが、「文明叙事
 - [自己改善型エージェント](/blogs/wiki/concepts/self-improving-agents/) — 「機械の欲望」ではなく「制度化された最適化ループ」として読み直す対象
 - [マルチエージェント協調パターン](/blogs/wiki/concepts/multi-agent-coordination-patterns/) — 「集合知性」を技術的に解体した実装語彙
 - [Model Context Protocol (MCP)](/blogs/wiki/concepts/mcp/) — 統治された自律性の標準化されたインターフェース
+- [主体性の七条件](/blogs/wiki/concepts/agency-seven-conditions/) — 「テクニウムは欲望機械か」を判定するフレーム
 - [技術縮退](/blogs/wiki/concepts/tech-regression/) — 「複雑化そのものを善とする」言説への対置軸として、意図的に依存半径を縮める設計判断を扱うメタ概念
 
 ## ソース記事
 
 - [テクニウム概念への批判と超克 ── ケヴィン・ケリーから「操舵可能な技術生態系」へ](/blogs/posts/2026/05/technium-critique-and-transcendence/) — 2026-05-19
+- [意志なき創発と欲望ある主体 — AI・制度・市場を貫く主体性の境界線](/blogs/posts/2026/05/emergence-without-will-and-desiring-subjects/) — 2026-05-20
 - [操舵可能な技術生態系（STE）── ケヴィン・ケリーの Technium を AI ガバナンスの語彙に置き換える](/blogs/posts/2026/05/steerable-tech-ecology-design/) — 2026-05-20

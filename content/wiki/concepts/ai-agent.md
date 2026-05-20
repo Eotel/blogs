@@ -99,6 +99,7 @@ related_posts:
   - "/posts/2026/05/design-md-culture/"
   - "/posts/2026/03/2026-03-03-fbc113dfc0629b475ce1ccf808e859a0/"
   - "/posts/2026/03/2026-03-05-1128207db83f7ca1a2c940dba0fdc2c9/"
+  - "/posts/2026/05/emergence-without-will-and-desiring-subjects/"
 tags: ["agent", "LLM", "自律実行", "マネージドエージェント"]
 ---
 
@@ -149,10 +150,12 @@ LangChain 創設者 Harrison Chase が指摘する重要な概念。エージェ
 - [スケーラブル・オーバーサイト](/blogs/wiki/concepts/scalable-oversight/) — 強くなる AI への監督アプローチ
 - [TimesFM](/blogs/wiki/tools/timesfm/) — 時系列予測専用基盤モデル
 - [エージェントフレンドリー CLI](/blogs/wiki/concepts/agent-friendly-cli/) — LLM エージェントが確実に操作できる CLI の設計原則
+- [主体性の七条件](/blogs/wiki/concepts/agency-seven-conditions/) — エージェントを「欲望ある主体」としてどこまで扱えるかの判定フレーム
 
 ## ソース記事
 
 - [前田太郎のパラサイトヒューマン ── 寄生する計算機から現代 AI エージェントへ](/blogs/posts/2026/05/maeda-taro-parasite-human/) — 2026-05-19
+- [意志なき創発と欲望ある主体 — AI・制度・市場を貫く主体性の境界線](/blogs/posts/2026/05/emergence-without-will-and-desiring-subjects/) — 2026-05-20
 - [AI エージェント QA 手法](/blogs/posts/2026/03/ai-agent-qa/) — 2026-03
 - [Claude Code Agent Teams](/blogs/posts/2026/03/claude-code-agent-teams/) — 2026-03
 - [AutoAgent](/blogs/posts/2026/04/autoagent-self-improving-agents/) — 2026-04
