@@ -7,8 +7,8 @@ draft: false
 author: "eotel"
 model: "claude-opus-4-7"
 description: "「バグバウンティはもう終わった」は本当か。HackerOne 8,100 万ドル、Google VRP 1,710 万ドル、Apple 累計 3,500 万ドルなど一次資料を統計化し、AI 時代の市場再編と二極化、企業の多層購買モデルを読み解く。"
-ShowToc: true
-TocOpen: false
+showToc: true
+tocOpen: false
 categories: ["セキュリティ"]
 tags: ["bug-bounty", "VRP", "脆弱性開示", "HackerOne", "Google-VRP", "Apple-Security-Bounty", "AI-security", "AppSec", "PTaaS", "バグハンター"]
 ---
@@ -113,7 +113,9 @@ Intigriti は 2026 年の公式見解で、AI により**入口（top-of-funnel�
 
 > the baseline goes up, but the top-of-funnel widens faster than most programs can absorb, and the duplication surface area explodes. When the cost of generating findings drops, the bottleneck shifts to validation, prioritization, and trust.
 >
-> — [Intigriti, "AI: The Future of Bug Bounty"](https://www.intigriti.com/blog/business-insights/ai-future-of-bug-bounty)DARPA の CGC と AIxCC は自動化が脆弱性発見・修正に有望であることを示したが、いずれも比較的制約の強い環境だ。現実の bug bounty では、**再現性・現実の影響・責任ある調整**が依然として人間の重心である。
+> — [Intigriti, "AI: The Future of Bug Bounty"](https://www.intigriti.com/blog/business-insights/ai-future-of-bug-bounty)
+
+DARPA の CGC と AIxCC は自動化が脆弱性発見・修正に有望であることを示したが、いずれも比較的制約の強い環境だ。現実の bug bounty では、**再現性・現実の影響・責任ある調整**が依然として人間の重心である。
 
 ### AI が代替しやすい作業と代替しにくい作業
 
@@ -232,7 +234,7 @@ VDP を全資産の入口にし、Bug Bounty は認可・ビジネスロジッ�
 ## 参考一次資料
 
 - HackerOne. [2025 Hacker-Powered Security Report — 210% spike in AI vulnerability reports](https://www.hackerone.com/press-release/hackerone-report-finds-210-spike-ai-vulnerability-reports-amid-rise-ai-autonomy)
-- HackerOne. [Hackers community page (累計 $380M+、2M+ researchers)](https://www.hackerone.com/hackers)
+- HackerOne. [Hackers community page (累計 $380M+、1.5M+ researchers)](https://www.hackerone.com/hackers)
 - HackerOne. [Hackers surpass 300 million all-time earnings on HackerOne platform](https://www.hackerone.com/press-release/hackers-surpass-300-million-all-time-earnings-hackerone-platform)
 - HackerOne. [Smart Deduplication with Agentic AI](https://www.hackerone.com/blog/smart-deduplication-agentic-ai)
 - HackerOne. [2025 HPSR Researcher Signals](https://www.hackerone.com/blog/2025-hpsr-researcher-signals)
