@@ -5,6 +5,7 @@ date: 2026-04-06
 lastmod: 2026-05-19
 aliases: ["AI Agent", "エージェント", "autonomous agent"]
 related_posts:
+  - "/posts/2026/05/2026-05-20-philosophy-of-tech-regression/"
   - "/posts/2026/05/maeda-taro-parasite-human/"
   - "/posts/2026/03/ai-agent-qa/"
   - "/posts/2026/03/claude-code-agent-teams/"
