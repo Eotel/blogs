@@ -223,6 +223,12 @@ VDP を全資産の入口にし、Bug Bounty は認可・ビジネスロジッ�
 
 要するに、**滅びるのは「ハンター」という職能ではなく、AI 以前の作業分解に依存した稼ぎ方**だ。今後の市場は、低難度の大量提出ではなく、高難度の文脈・証明・調整にお金を払い続けるだろう。だからこそ、この市場を正しく表す言葉は「滅び」ではなく、**再編**である。
 
+## 関連 Wiki
+
+- [Bug Bounty](/blogs/wiki/concepts/bug-bounty/) — BBP / VDP / VRP / PTaaS / Red Team / ASM の関係、主要プラットフォーム・VRP の統計、AI 時代の構造変化、制度面の整理
+- [Exposure Management](/blogs/wiki/concepts/exposure-management/) — ASM の上位概念。BBP の前段として位置づけ
+- [プロンプトインジェクション](/blogs/wiki/concepts/prompt-injection/) — HackerOne 2025 で valid report が +540% 急増した AI 固有脆弱性
+
 ## 参考一次資料
 
 - HackerOne. [2025 Hacker-Powered Security Report — 210% spike in AI vulnerability reports](https://www.hackerone.com/press-release/hackerone-report-finds-210-spike-ai-vulnerability-reports-amid-rise-ai-autonomy)
