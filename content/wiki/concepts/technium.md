@@ -12,6 +12,7 @@ aliases:
   - "steerable technical ecology"
 related_posts:
   - "/posts/2026/05/technium-critique-and-transcendence/"
+  - "/posts/2026/05/2026-05-20-philosophy-of-tech-regression/"
 tags:
   - "技術哲学"
   - "ケヴィン・ケリー"
@@ -93,6 +94,7 @@ Shoshana Zuboff『The Age of Surveillance Capitalism』(2019) は、監視資本
 - [自己改善型エージェント](/blogs/wiki/concepts/self-improving-agents/) — 「機械の欲望」ではなく「制度化された最適化ループ」として読み直す対象
 - [マルチエージェント協調パターン](/blogs/wiki/concepts/multi-agent-coordination-patterns/) — 「集合知性」を技術的に解体した実装語彙
 - [Model Context Protocol (MCP)](/blogs/wiki/concepts/mcp/) — 統治された自律性の標準化されたインターフェース
+- [技術縮退](/blogs/wiki/concepts/tech-regression/) — 「複雑化そのものを善とする」言説への対置軸として、意図的に依存半径を縮める設計判断を扱うメタ概念
 
 ## ソース記事
 

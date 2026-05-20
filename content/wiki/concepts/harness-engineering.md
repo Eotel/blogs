@@ -22,6 +22,7 @@ related_posts:
   - "/posts/2026/03/2026-03-27-prompt-to-harness-engineering/"
   - "/posts/2026-03-09-harness-engineering/"
   - "/posts/2026/03/2026-03-03-95278de03de967bcc74ff8b320222044/"
+  - "/posts/2026/05/2026-05-20-philosophy-of-tech-regression/"
 tags: ["agent", "品質保証", "CLAUDE.md", "設計パターン", "ロックイン"]
 ---
 
@@ -131,6 +132,7 @@ CreaoAI は「AIファーストハーネスエンジニアリング」を実践�
 - [RAG](/blogs/wiki/concepts/rag/) — ハーネスとの組み合わせ判断
 - [エージェントフレンドリー CLI](/blogs/wiki/concepts/agent-friendly-cli/) — ハーネスが操作する CLI の設計要件
 - [NTT データ AI ネイティブ開発](/blogs/wiki/guides/ntt-data-ai-native-dev/) — 大企業でのハーネスエンジニアリング実践事例
+- [技術縮退](/blogs/wiki/concepts/tech-regression/) — ハーネスを「止められる自動化」として位置づける上位メタ概念
 
 ## ソース記事
 
