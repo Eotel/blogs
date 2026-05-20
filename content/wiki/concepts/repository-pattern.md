@@ -11,7 +11,7 @@ tags: ["アーキテクチャ", "repository-pattern", "ddd", "design-pattern"]
 
 ## 概要
 
-Repository Pattern は、aggregate root に対する global access を抽象化する DDD パターン。永続化技術 (ORM、SQL、外部 API) への依存を domain / application から切り離し、aggregate 単位の不変条件保護と検索 API の集約を担う。Eric Evans が *Domain-Driven Design* で形式化した。
+Repository Pattern は、永続化技術 (ORM、SQL、外部 API) への依存を domain / application から切り離し、データ集約への global access を抽象化する設計パターン。最初に Martin Fowler が 2002 年の *Patterns of Enterprise Application Architecture* で [Repository](https://martinfowler.com/eaaCatalog/repository.html) として提示し、その翌年に Eric Evans が *Domain-Driven Design* (2003) で aggregate root への global access という DDD 固有の文脈に統合した。
 
 ## Evans の原典
 
@@ -23,9 +23,9 @@ Repository Pattern は、aggregate root に対する global access を抽象化�
 
 ## 「必須ではない」が公式見解
 
-Microsoft Learn も DDD/CQRS の文脈で次のように明記:
+Microsoft Learn の DDD/CQRS 実装ガイドには「**Repositories shouldn't be mandatory**」という節があり、本文で次のように記されている:
 
-> Repositories shouldn't be mandatory. Custom repositories are useful for the reasons cited earlier [...] However, it isn't an essential pattern to implement in a DDD design or even in general .NET development.
+> Custom repositories are useful for the reasons cited earlier, and that is the approach for the ordering microservice in eShopOnContainers. However, it isn't an essential pattern to implement in a DDD design or even in general .NET development.
 >
 > — [Designing the infrastructure persistence layer](https://learn.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-design)
 

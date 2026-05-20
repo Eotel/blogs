@@ -1,6 +1,6 @@
 ---
 title: "Hexagonal Architecture（ヘキサゴナルアーキテクチャ / Ports and Adapters）"
-description: "Cockburn が 2005 年に Ports and Adapters の別名として提示した設計様式。UI なし・DB なしでもアプリを動かせるよう inside / outside を非対称に分離する原理"
+description: "Alistair Cockburn が考案し 2005 年の原典で整理した設計様式。Ports and Adapters は同じパターンの説明的な別名。UI なし・DB なしでもアプリを動かせるよう inside / outside を非対称に分離する原理"
 date: 2026-05-20
 lastmod: 2026-05-20
 aliases: ["hexagonal architecture", "ヘキサゴナルアーキテクチャ", "ports and adapters", "ports-and-adapters", "ポーツアンドアダプタ"]
@@ -11,7 +11,7 @@ tags: ["アーキテクチャ", "hexagonal-architecture", "ports-and-adapters", 
 
 ## 概要
 
-Hexagonal Architecture は、Alistair Cockburn が 2005 年に **Ports and Adapters** の別名として提示した設計様式。「UI なし・DB なしでもアプリケーションを動かせるようにする」ことが原典の意図であり、自動回帰テスト、ヘッドレス実行、外部プログラム連携を容易にすることが動機。重要なのは「左と右」ではなく「内側と外側」の非対称であり、六角形は "6 が重要だから" ではなく、複数のポートを描きやすくするための視覚的比喩。
+Hexagonal Architecture は、Alistair Cockburn が考案し 2005 年の原典 ([Hexagonal architecture](https://alistair.cockburn.us/hexagonal-architecture)) で整理した設計様式。同じパターンの説明的な別名として **Ports and Adapters** が用いられる。「UI なし・DB なしでもアプリケーションを動かせるようにする」ことが原典の意図であり、自動回帰テスト、ヘッドレス実行、外部プログラム連携を容易にすることが動機。重要なのは「左と右」ではなく「内側と外側」の非対称であり、六角形は "6 が重要だから" ではなく、複数のポートを描きやすくするための視覚的比喩。
 
 Cockburn 原典:
 
