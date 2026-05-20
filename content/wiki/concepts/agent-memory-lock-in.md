@@ -8,6 +8,7 @@ related_posts:
   - "/posts/2026/04/agent-harness-memory-lock-in/"
   - "/posts/2026/04/claude-managed-agents/"
   - "/posts/2026/04/anthropic-vs-openai-harness-strategy/"
+  - "/posts/2026/05/2026-05-20-philosophy-of-tech-regression/"
 tags: ["エージェント", "メモリ", "ロックイン", "LangChain", "ハーネス"]
 ---
 

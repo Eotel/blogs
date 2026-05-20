@@ -1,0 +1,115 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Bug Bounty Market Timeline">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="バグバウンティ市場再編の主要イベント (2016-2026)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=20;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="20" width="1040" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="axis" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#333333;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="120" as="sourcePoint" />
+            <mxPoint x="1540" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="y2016" value="2016" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="100" y="95" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y2020" value="2020" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="260" y="95" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y2021" value="2021" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="420" y="95" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y2022" value="2022" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="580" y="95" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y2023" value="2023" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="740" y="95" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y2024" value="2024" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="900" y="95" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y2025" value="2025" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="95" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y2026" value="2026" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="95" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="e2016" value="DARPA Cyber Grand Challenge&#10;自動化研究のマイルストーン" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="80" y="170" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="e2020" value="CISA BOD 20-01&#10;米連邦機関に VDP 公表を要求" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="240" y="170" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="e2021a" value="HackerOne&#10;$8.7M Google VRP&#10;Critical 中央値 $3,000" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="400" y="170" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="e2021b" value="YesWeHack&#10;報奨総額 +140% YoY" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="400" y="280" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e2022a" value="HackerOne&#10;65,000+ valid bugs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="560" y="170" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e2022b" value="Google VRP $12M+&#10;Android 単独 $4.8M" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="560" y="260" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e2022c" value="Apple 累計 $20M&#10;DOJ CFAA 起訴方針改定" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="560" y="350" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e2023a" value="Microsoft Bounty $13.8M&#10;AI Bounty 導入" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="720" y="170" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e2023b" value="HackerOne&#10;61% が GenAI で hacking" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="720" y="260" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e2024a" value="Google VRP 約 $12M&#10;AI / Cloud VRP 強化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="880" y="170" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e2024b" value="Meta Bounty $2.3M+&#10;約 10,000 報告 / 約 600 valid" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="880" y="260" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e2024c" value="Microsoft $16.6M&#10;DARPA AIxCC 進行" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="880" y="350" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e2025a" value="Google VRP $17.1M&#10;747 受賞研究者" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="170" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e2025b" value="Microsoft $17M&#10;Apple 累計 $35M+ / 800+ 研究者" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="260" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e2025c" value="HackerOne&#10;Bug bounty $81M / AI report +210%" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="350" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e2025d" value="HackerOne&#10;560+ autonomous valid" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="440" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e2026a" value="Bugcrowd&#10;82% が AI をワークフローに" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="170" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e2026b" value="Intigriti&#10;検証・優先順位がボトルネック" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="260" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e2026c" value="Apple&#10;未検証 AI 報告で 180 日 pause" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="350" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="legend1" value="制度・自動化研究" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="80" y="540" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend2" value="プラットフォーム成長期 (2021-22)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="260" y="540" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend3" value="AI 統合期 (2023-24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="500" y="540" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend4" value="高単価・再価格付け (2025)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="700" y="540" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend5" value="検証ボトルネック顕在化 (2026)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="920" y="540" width="220" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
