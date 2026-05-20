@@ -8,6 +8,7 @@ related_posts:
   - "/posts/2026/04/2026-04-15-ai-agents-virtual-shibuya-simulation/"
   - "/posts/2026/04/2026-04-27-claude-code-kabukicho-ai-simulation/"
   - "/posts/2026/04/2026-04-14-claude-code-world-ai-simulator/"
+  - "/posts/2026/05/emergence-without-will-and-desiring-subjects/"
 tags: ["AIエージェント", "マルチエージェント", "創発", "都市開発", "シミュレーション", "Claude Code"]
 ---
 
@@ -58,9 +59,11 @@ tags: ["AIエージェント", "マルチエージェント", "創発", "都市�
 - [AI エージェント](/blogs/wiki/concepts/ai-agent/) — シミュレーションの構成単位
 - [マルチエージェント調整パターン](/blogs/wiki/concepts/multi-agent-coordination-patterns/) — 複数エージェントの協調設計
 - [Claude Code](/blogs/wiki/tools/claude-code/) — 大規模マルチエージェント実行環境
+- [主体性の七条件](/blogs/wiki/concepts/agency-seven-conditions/) — 多エージェント創発を「主体性なき秩序」として捉える判定フレーム
 
 ## ソース記事
 
 - [仮想渋谷に AI エージェントを解き放つ — 社会シミュレーションが都市・安全保障・月面開発に活きる理由](/blogs/posts/2026/04/2026-04-15-ai-agents-virtual-shibuya-simulation/) — 2026-04-15
 - [Claude Code × 1,255 体の AI で歌舞伎町の夜をシミュレーション](/blogs/posts/2026/04/2026-04-27-claude-code-kabukicho-ai-simulation/) — 2026-04-27
 - [Claude Code で作る「世界AIシミュレーター」— 20カ国AIエージェントが自律外交・紛争するリアルタイム地政学ゲーム](/blogs/posts/2026/04/2026-04-14-claude-code-world-ai-simulator/) — 2026-04-14
+- [意志なき創発と欲望ある主体 — AI・制度・市場を貫く主体性の境界線](/blogs/posts/2026/05/emergence-without-will-and-desiring-subjects/) — 2026-05-20

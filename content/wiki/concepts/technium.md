@@ -12,6 +12,7 @@ aliases:
   - "steerable technical ecology"
 related_posts:
   - "/posts/2026/05/technium-critique-and-transcendence/"
+  - "/posts/2026/05/emergence-without-will-and-desiring-subjects/"
 tags:
   - "技術哲学"
   - "ケヴィン・ケリー"
@@ -93,7 +94,9 @@ Shoshana Zuboff『The Age of Surveillance Capitalism』(2019) は、監視資本
 - [自己改善型エージェント](/blogs/wiki/concepts/self-improving-agents/) — 「機械の欲望」ではなく「制度化された最適化ループ」として読み直す対象
 - [マルチエージェント協調パターン](/blogs/wiki/concepts/multi-agent-coordination-patterns/) — 「集合知性」を技術的に解体した実装語彙
 - [Model Context Protocol (MCP)](/blogs/wiki/concepts/mcp/) — 統治された自律性の標準化されたインターフェース
+- [主体性の七条件](/blogs/wiki/concepts/agency-seven-conditions/) — 「テクニウムは欲望機械か」を判定するフレーム
 
 ## ソース記事
 
 - [テクニウム概念への批判と超克 ── ケヴィン・ケリーから「操舵可能な技術生態系」へ](/blogs/posts/2026/05/technium-critique-and-transcendence/) — 2026-05-19
+- [意志なき創発と欲望ある主体 — AI・制度・市場を貫く主体性の境界線](/blogs/posts/2026/05/emergence-without-will-and-desiring-subjects/) — 2026-05-20
