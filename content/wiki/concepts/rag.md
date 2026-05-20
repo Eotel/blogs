@@ -2,9 +2,10 @@
 title: "RAG (Retrieval-Augmented Generation)"
 description: "外部データベースから情報検索し、それを基に LLM が応答を生成する技術"
 date: 2026-04-06
-lastmod: 2026-05-12
+lastmod: 2026-05-20
 aliases: ["RAG", "検索拡張生成"]
 related_posts:
+  - "/posts/2026/05/rag-cag-llm-knowledge-context-cache-design/"
   - "/posts/2026/04/karpathy-llm-wiki/"
   - "/posts/2026/03/rag-adaptive-search-strategy/"
   - "/posts/2024/02/2024-02-12-d1d192cc863cb9fbb1417f49a3067e53/"
@@ -53,8 +54,20 @@ Karpathy は RAG を「毎日同じ本を初めて読む人に質問を投げる
 
 モデルの推論能力が高いほど検索戦略の判断精度が向上するため、モデル進化と共に RAG 全体の性能が自然にスケールする構造となっている。読み込むテキスト量は従来と同等以下でも回答精度は向上する。
 
+## RAG と CAG の関係
+
+ロングコンテキストモデルの登場以降、「RAG はもう不要で CAG (Cache-Augmented Generation) で十分」という言説が増えたが、これは複数の問題を 1 軸に潰している。実際には RAG / CAG は対立せず、3 つの直交する設計軸として整理するのが正確:
+
+- **知識**: 学習外の情報をどう取り込むか → RAG が解く
+- **コンテキスト**: ユーザー識別・セッション・業務状態をどう運ぶか → Context Manager が解く
+- **計算**: 同じプレフィックスをどこまで再利用するか → プロンプト / KV キャッシュが解く
+
+Chan et al. (2024) の CAG (Cache-Augmented Generation) は「権威ある有限コーパスを長コンテキストに事前ロードし、KV キャッシュを再利用する」狭義の手法で、コーパスが大規模・動的・ACL 制約付きのときは RAG が依然として最適解。詳細は [Cache-Augmented Generation](/blogs/wiki/concepts/cache-augmented-generation/) を参照。
+
 ## 関連ページ
 
+- [Cache-Augmented Generation (CAG)](/blogs/wiki/concepts/cache-augmented-generation/) — RAG と対比される事前ロード型アプローチ
+- [Context Rot (コンテキスト劣化)](/blogs/wiki/concepts/context-rot/) — ロングコンテキスト RAG が抱える失敗モード
 - [LLM Wiki パターン](/blogs/wiki/concepts/llm-wiki-pattern/) — RAG の限界を超える知識積み上げ型アプローチ
 - [AI エージェント](/blogs/wiki/concepts/ai-agent/) — RAG を内部で利用するシステム
 - [MemPalace](/blogs/wiki/tools/mempalace/) — ベクトル検索による永続メモリシステム
@@ -64,6 +77,7 @@ Karpathy は RAG を「毎日同じ本を初めて読む人に質問を投げる
 
 ## ソース記事
 
+- [RAG vs CAG という雑な対立をやめる — 知識・コンテキスト・キャッシュの 3 軸で LLM を設計する](/blogs/posts/2026/05/rag-cag-llm-knowledge-context-cache-design/) — 2026-05-20
 - [Karpathy の LLM Wiki](/blogs/posts/2026/04/karpathy-llm-wiki/) — 2026-04
 - [AIが自分で調べ方を選ぶRAG — モデル推論能力でスケールする新手法](/blogs/posts/2026/03/rag-adaptive-search-strategy/) — 2026-03-17
 - [生成AI: RAG](/blogs/posts/2024/02/2024-02-12-d1d192cc863cb9fbb1417f49a3067e53/) — 2024-02-12
