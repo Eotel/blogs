@@ -2,9 +2,10 @@
 title: "ハーネスエンジニアリング"
 description: "AI エージェントの出力品質を保証する設計パターン。検証層・制約層・フィードバック層で構成"
 date: 2026-04-06
-lastmod: 2026-05-12
+lastmod: 2026-05-21
 aliases: ["Harness Engineering"]
 related_posts:
+  - "/posts/2026/05/2026-05-21-knowledge-pipeline-over-harness/"
   - "/posts/2026/03/harness-engineering/"
   - "/posts/2026/03/ai-agent-qa/"
   - "/posts/2026/03/claude-code-review/"
@@ -121,6 +122,12 @@ CreaoAI は「AIファーストハーネスエンジニアリング」を実践�
 
 コンテキストウィンドウの拡大（20k〜1M トークン）により、100 ファイル以下のコードベースはハーネスがファイルをそのまま読み込める。RAG の「断片的コンテキスト問題」を回避できるため、より正確な依存関係・型・インターフェースを参照できる。100 ファイルを超える場合は GraphRAG 等のインデックス戦略が有効。
 
+## ハーネスを磨く前に検索を整える — 順番の問題
+
+ハーネスを磨いても、上流の検索が腐っていれば agent は腐る。コード生成のようにコンテキストにコードベース全体を載せられる領域なら RAG なしで動くが、社内文書・規程・チケット・Slack・複数リポジトリ・PDF・スキャン画像が混ざる領域では、ハーネスの巧拙より「上流の検索が何を返すか」のほうが支配的になる。
+
+AI agent の性能を上げる正しい順番は **知識化 → 検索 → 評価 → エージェント最適化** であり、ハーネス改善はこの順序の最後に来る。良い parser・metadata・hybrid retrieval・rerank・citation・ACL・鮮度監視が揃っていれば、上の LLM や agent は素直に性能を出す。詳細は [RAG](/blogs/wiki/concepts/rag/) の「本気の意味検索 — RAG を支える 7 段パイプライン」を参照。
+
 ## 関連ページ
 
 - [AI エージェント](/blogs/wiki/concepts/ai-agent/) — ハーネスで品質保証される対象
@@ -136,6 +143,7 @@ CreaoAI は「AIファーストハーネスエンジニアリング」を実践�
 
 ## ソース記事
 
+- [ハーネスより先にナレッジ作成と『本気の意味検索』を整える — RAG の前にやることリスト](/blogs/posts/2026/05/2026-05-21-knowledge-pipeline-over-harness/) — 2026-05-21（ハーネス改善より検索パイプライン改善が先という対比論）
 - [ハーネスエンジニアリング](/blogs/posts/2026/03/harness-engineering/) — 2026-03
 - [AI エージェント QA 手法](/blogs/posts/2026/03/ai-agent-qa/) — 2026-03
 - [Anthropic vs OpenAI：Harness 戦略はなぜ真逆なのか](/blogs/posts/2026/04/anthropic-vs-openai-harness-strategy/) — 2026-04-13

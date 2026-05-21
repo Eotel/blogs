@@ -2,9 +2,10 @@
 title: "RAG (Retrieval-Augmented Generation)"
 description: "外部データベースから情報検索し、それを基に LLM が応答を生成する技術"
 date: 2026-04-06
-lastmod: 2026-05-20
-aliases: ["RAG", "検索拡張生成"]
+lastmod: 2026-05-21
+aliases: ["RAG", "検索拡張生成", "意味検索", "semantic search"]
 related_posts:
+  - "/posts/2026/05/2026-05-21-knowledge-pipeline-over-harness/"
   - "/posts/2026/05/rag-cag-llm-knowledge-context-cache-design/"
   - "/posts/2026/04/karpathy-llm-wiki/"
   - "/posts/2026/03/rag-adaptive-search-strategy/"
@@ -22,7 +23,7 @@ related_posts:
   - "/posts/2026/03/2026-03-11-gemini-embedding-2/"
   - "/posts/2026/03/2026-03-18-opendataloader-pdf-to-markdown/"
   - "/posts/2026/03/2026-03-05-7eb04a726f76f2ff880bc2b18efa42b2/"
-tags: ["RAG", "LLM", "ベクトル検索", "ナレッジマネジメント", "アダプティブ検索"]
+tags: ["RAG", "LLM", "ベクトル検索", "ナレッジマネジメント", "アダプティブ検索", "ハイブリッド検索", "rerank", "GraphRAG"]
 ---
 
 ## 概要
@@ -54,6 +55,34 @@ Karpathy は RAG を「毎日同じ本を初めて読む人に質問を投げる
 
 モデルの推論能力が高いほど検索戦略の判断精度が向上するため、モデル進化と共に RAG 全体の性能が自然にスケールする構造となっている。読み込むテキスト量は従来と同等以下でも回答精度は向上する。
 
+## 本気の意味検索 — RAG を支える 7 段パイプライン
+
+RAG = 「embedding 類似検索」と単純化すると実運用で必ずハマる。Elastic / Azure AI Search / OpenSearch / Weaviate / Qdrant / Milvus / Vespa など主要製品はいずれも、**多段の知識化と検索パイプライン** に収束している。最小構成は次の 7 段。
+
+1. **解析** — layout-aware parse + OCR（Google Document AI / Azure Document Intelligence / Unstructured / LlamaParse）
+2. **正規化** — Markdown / element JSON / header path を保つ
+3. **enrichment** — metadata（owner / ACL / 鮮度 / version / citation span）を付与
+4. **候補生成** — BM25（lexical） + dense + sparse（SPLADE） + late interaction（[ColBERT](https://arxiv.org/abs/2004.12832)）
+5. **融合** — RRF（Reciprocal Rank Fusion）で異種スコアを順位だけで統合
+6. **rerank** — cross-encoder で precision を押し上げる
+7. **応答生成 + 評価** — citation engine と golden set / Ragas / LangSmith
+
+「単純なベクトル検索」が落とすもの:
+
+- 識別子・版数・パス・法令番号など rare token の厳密一致
+- 単一ベクトルへの圧縮損失（late interaction が補う）
+- ACL・鮮度・引用・version — これらはメタデータ層で別途運ぶ
+
+embedding 類似検索は **意味検索システムの一部** ではあっても **意味検索システムそのもの** ではない。
+
+詳細は [ハーネスより先にナレッジ作成と『本気の意味検索』を整える](/blogs/posts/2026/05/2026-05-21-knowledge-pipeline-over-harness/) を参照。
+
+## GraphRAG が必要になる条件 — 必要ない条件
+
+Microsoft Research の [GraphRAG](https://arxiv.org/abs/2404.16130) は entity knowledge graph + community summaries で **文書群全体の概観・多段関係** を問う質問に強い（global search / local search / DRIFT search）。逆に、FAQ・条文検索・該当箇所検索のような focused query では GraphRAG は過剰設計になりやすい。LightRAG のような軽量化研究が出ていること自体、graph 系 indexing のコストが課題であることを示している。
+
+実務では graph は corpus 全体の俯瞰や高価値領域に限定し、通常の検索は hybrid + rerank で回すのが現実的。
+
 ## RAG と CAG の関係
 
 ロングコンテキストモデルの登場以降、「RAG はもう不要で CAG (Cache-Augmented Generation) で十分」という言説が増えたが、これは複数の問題を 1 軸に潰している。実際には RAG / CAG は対立せず、3 つの直交する設計軸として整理するのが正確:
@@ -77,6 +106,7 @@ Chan et al. (2024) の CAG (Cache-Augmented Generation) は「権威ある有限
 
 ## ソース記事
 
+- [ハーネスより先にナレッジ作成と『本気の意味検索』を整える — RAG の前にやることリスト](/blogs/posts/2026/05/2026-05-21-knowledge-pipeline-over-harness/) — 2026-05-21
 - [RAG vs CAG という雑な対立をやめる — 知識・コンテキスト・キャッシュの 3 軸で LLM を設計する](/blogs/posts/2026/05/rag-cag-llm-knowledge-context-cache-design/) — 2026-05-20
 - [Karpathy の LLM Wiki](/blogs/posts/2026/04/karpathy-llm-wiki/) — 2026-04
 - [AIが自分で調べ方を選ぶRAG — モデル推論能力でスケールする新手法](/blogs/posts/2026/03/rag-adaptive-search-strategy/) — 2026-03-17
