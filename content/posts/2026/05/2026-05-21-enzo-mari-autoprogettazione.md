@@ -1,14 +1,26 @@
 ---
-title: "「1%しか理解されなかった」エンツォ・マーリ ── Autoprogettazione を AI 時代の判断教育として読み直す"
-slug: "enzo-mari-autoprogettazione"
+title: 「1%しか理解されなかった」エンツォ・マーリ ── Autoprogettazione を AI 時代の判断教育として読み直す
+slug: enzo-mari-autoprogettazione
 date: 2026-05-21
 lastmod: 2026-05-21
 draft: false
-author: "eotel"
-model: "claude-opus-4-7"
-description: "「1% しか理解されなかった」と嘆いたエンツォ・マーリの 1974 年 Autoprogettazione を一次資料で読み直し、Fab Lab・OSHWA・IKEA・generative design との距離を測りながら、AI 時代の「判断教育」として再翻訳する。"
-categories: ["その他"]
-tags: ["エンツォ・マーリ", "デザイン哲学", "autoprogettazione", "技術哲学", "生成AI"]
+author: eotel
+model: claude-opus-4-7
+description: 「1% しか理解されなかった」と嘆いたエンツォ・マーリの 1974 年 Autoprogettazione を一次資料で読み直し、Fab
+  Lab・OSHWA・IKEA・generative design との距離を測りながら、AI 時代の「判断教育」として再翻訳する。
+categories:
+- その他
+tags:
+- エンツォ・マーリ
+- デザイン哲学
+- autoprogettazione
+- 技術哲学
+- 生成AI
+audio_url: https://github.com/Eotel/blogs/releases/download/audio/2026-05-21-enzo-mari-autoprogettazione.m4a
+audio_lang: ja
+audio_generated_at: '2026-05-21T05:01:42Z'
+audio_source: notebooklm
+audio_format: debate
 ---
 
 エンツォ・マーリ (Enzo Mari, 1932–2020) は、1974 年に粗木板と釘だけで家具を組む図面集『Proposta per un'autoprogettazione』を公開した。一般向けに無償で配布され、新聞報道され、数千件の請求が届いた。にもかかわらず、晩年のマーリ自身は、企画の意図を理解した人は **「1% しかいなかった」** と述べている [^designmuseum]。

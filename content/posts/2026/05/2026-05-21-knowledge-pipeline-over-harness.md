@@ -1,14 +1,27 @@
 ---
-title: "ハーネスより先にナレッジ作成と『本気の意味検索』を整える — RAG の前にやることリスト"
-slug: "2026-05-21-knowledge-pipeline-over-harness"
+title: ハーネスより先にナレッジ作成と『本気の意味検索』を整える — RAG の前にやることリスト
+slug: 2026-05-21-knowledge-pipeline-over-harness
 date: 2026-05-21
 lastmod: 2026-05-21
 draft: false
-author: "eotel"
-model: "claude-opus-4-7"
-description: "ハーネスより先に整えるべきは『知識化 → hybrid retrieval → rerank → 評価』の検索パイプラインだ。Elastic・Azure AI Search・Weaviate・GraphRAG 等の一次情報から、RAG の前にやるべき順番を整理する。"
-categories: ["AI/LLM"]
-tags: ["RAG", "ハイブリッド検索", "意味検索", "GraphRAG", "rerank", "Harness Engineering"]
+author: eotel
+model: claude-opus-4-7
+description: ハーネスより先に整えるべきは『知識化 → hybrid retrieval → rerank → 評価』の検索パイプラインだ。Elastic・Azure
+  AI Search・Weaviate・GraphRAG 等の一次情報から、RAG の前にやるべき順番を整理する。
+categories:
+- AI/LLM
+tags:
+- RAG
+- ハイブリッド検索
+- 意味検索
+- GraphRAG
+- rerank
+- Harness Engineering
+audio_url: https://github.com/Eotel/blogs/releases/download/audio/2026-05-21-knowledge-pipeline-over-harness.m4a
+audio_lang: ja
+audio_generated_at: '2026-05-21T04:56:10Z'
+audio_source: notebooklm
+audio_format: debate
 ---
 
 ![AI システムにおける薄い『Harness』レイヤーと、その下に厚く積み上がった Knowledge Pipeline（Parse → Metadata → BM25/Dense → Hybrid → Rerank → Citation を要約した 6 ステージ表現。本文で詳述する 7 段パイプラインを視覚的に圧縮した俯瞰図）を対比したコンセプチュアルなヒーロー画像。下層のパイプラインが上層のハーネスを支えている様子をフラットでミニマルなデザインで表現](/blogs/images/knowledge-pipeline-over-harness-hero.png)

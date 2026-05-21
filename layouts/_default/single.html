@@ -11,6 +11,8 @@
     <div class="post-meta">{{- partial "post-meta.html" . -}}</div>
   </header>
 
+  {{- partial "audio-player.html" . }}
+
   {{- if (.Param "showToc") | default true }}
     {{- partial "toc.html" . }}
   {{- end }}

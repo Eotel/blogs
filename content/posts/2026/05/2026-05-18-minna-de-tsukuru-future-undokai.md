@@ -1,28 +1,35 @@
 ---
-title: "みんなで作るという文化 — 未来の運動会プロジェクト群が示す共創方法論"
-description: "「未来の運動会」は競技そのものを参加者が共同で発明するプロジェクト群。YCAM・CCBT・SIAF・スポーツ庁という 4 つの器に支えられ、ハッカソン → 本番 → 振り返りの循環で各地に広がる共創フォーマットを、Sports Time Machine の源流から札幌での雪上開催まで辿って整理する。"
-slug: "minna-de-tsukuru-future-undokai"
+title: みんなで作るという文化 — 未来の運動会プロジェクト群が示す共創方法論
+description: 「未来の運動会」は競技そのものを参加者が共同で発明するプロジェクト群。YCAM・CCBT・SIAF・スポーツ庁という 4 つの器に支えられ、ハッカソン
+  → 本番 → 振り返りの循環で各地に広がる共創フォーマットを、Sports Time Machine の源流から札幌での雪上開催まで辿って整理する。
+slug: minna-de-tsukuru-future-undokai
 date: 2026-05-18
 lastmod: 2026-05-18
 draft: false
-author: "eotel"
-model: "claude-opus-4-7"
-categories: ["その他"]
+author: eotel
+model: claude-opus-4-7
+categories:
+- その他
 tags:
-  - 未来の運動会
-  - 共創
-  - 運動会協会
-  - ハッカソン
-  - スポーツハッカソン
-  - メディアアート
-  - YCAM
-  - CCBT
-  - SIAF
-  - スポーツ庁
-  - Sports Time Machine
-  - 犬飼博士
-  - 運楽家
-  - 市民参加
+- 未来の運動会
+- 共創
+- 運動会協会
+- ハッカソン
+- スポーツハッカソン
+- メディアアート
+- YCAM
+- CCBT
+- SIAF
+- スポーツ庁
+- Sports Time Machine
+- 犬飼博士
+- 運楽家
+- 市民参加
+audio_url: https://github.com/Eotel/blogs/releases/download/audio/2026-05-18-minna-de-tsukuru-future-undokai.m4a
+audio_lang: ja
+audio_generated_at: '2026-05-21T05:19:30Z'
+audio_source: notebooklm
+audio_format: deep_dive
 ---
 
 「運動会」と聞いて思い浮かぶのは、たいてい誰かが用意した種目を順番にこなしていく一日だろう。

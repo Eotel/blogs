@@ -1,15 +1,33 @@
 ---
-title: "ヘキサゴナルアーキテクチャの実務ガイド ── 原典 inside/outside 原理から DDD・Clean Architecture・フレームワーク別パターンまで"
-slug: "2026-05-20-hexagonal-architecture-practical-guide"
+title: ヘキサゴナルアーキテクチャの実務ガイド ── 原典 inside/outside 原理から DDD・Clean Architecture・フレームワーク別パターンまで
+slug: 2026-05-20-hexagonal-architecture-practical-guide
 date: 2026-05-20
 lastmod: 2026-05-20
 draft: false
-author: "eotel"
-model: "claude-opus-4-7"
-description: "ヘキサゴナルアーキテクチャ（Ports and Adapters）を Cockburn 原典・Martin の Clean Architecture・Palermo の Onion・Evans の DDD を一次資料で読み比べ、ORM と Domain Entity、Repository、トランザクション境界、認可、GraphQL resolver の論点と、Django・FastAPI・Rails・NestJS・Spring Boot・Go での実装パターンを整理する。"
+author: eotel
+model: claude-opus-4-7
+description: ヘキサゴナルアーキテクチャ（Ports and Adapters）を Cockburn 原典・Martin の Clean Architecture・Palermo
+  の Onion・Evans の DDD を一次資料で読み比べ、ORM と Domain Entity、Repository、トランザクション境界、認可、GraphQL
+  resolver の論点と、Django・FastAPI・Rails・NestJS・Spring Boot・Go での実装パターンを整理する。
 showToc: true
-categories: ["Web開発"]
-tags: ["architecture", "hexagonal-architecture", "ports-and-adapters", "ddd", "clean-architecture", "onion-architecture", "modular-monolith", "repository-pattern", "design-pattern", "アーキテクチャ"]
+categories:
+- Web開発
+tags:
+- architecture
+- hexagonal-architecture
+- ports-and-adapters
+- ddd
+- clean-architecture
+- onion-architecture
+- modular-monolith
+- repository-pattern
+- design-pattern
+- アーキテクチャ
+audio_url: https://github.com/Eotel/blogs/releases/download/audio/2026-05-20-hexagonal-architecture-practical-guide.m4a
+audio_lang: ja
+audio_generated_at: '2026-05-21T05:19:30Z'
+audio_source: notebooklm
+audio_format: deep_dive
 ---
 
 ヘキサゴナルアーキテクチャ（**Ports and Adapters** とも呼ばれる）は「層の名前」ではなく、**アプリケーション核心を inside として守り、外部技術を outside に押し出す**ための設計原理です。本稿では Cockburn の原典、Martin の Clean Architecture、Palermo の Onion Architecture、Evans の DDD、各種フレームワーク公式文書を一次資料として参照しながら、現代実務での適用判断を整理します。

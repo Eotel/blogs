@@ -144,6 +144,21 @@ Hugo + PaperMod で構築された技術ブログ。GitHub Pages でホスティ
 - **gist 自体を起こす段は `/gist-writer <topic>` スキルを使う**: 既存 `content/wiki/` を input にして `*.blog.md` の draft を `.claude/temp/` に生成し、ユーザー確認後 `gh gist create --public` で公開する。フロントマターは gist 側に書かず、`import-gists.sh` の自動生成に任せる。詳細は `.claude/skills/gist-writer/SKILL.md`
 - **gist 自体を起こす段は `/gist-writer <topic>` スキルを使う**: 既存 `content/wiki/` を input にして `*.blog.md` の draft を `.claude/temp/` に生成し、ユーザー確認後 `gh gist create --public` で公開する。フロントマターは gist 側に書かず、`import-gists.sh` の自動生成に任せる。詳細は `.claude/skills/gist-writer/SKILL.md`
 
+## 音声化スキル（NotebookLM）
+
+公開済みの blog post から **日本語** の NotebookLM Audio Overview（ポッドキャスト風 2 ホスト対談）を生成する `/notebooklm-radio` スキル。
+
+- 起動: 対話的に選ぶなら **`./scripts/notebooklm-radio-tui.sh`** (fzf ベース)。フラグ駆動は `./scripts/notebooklm-radio.sh <target> [--language ja --length short --format deep_dive --focus "..."]` または `/notebooklm-radio` 経由
+- 実体: `scripts/notebooklm-radio-tui.sh` (fzf 対話 UI) + `scripts/notebooklm-radio.sh` (本体) + `scripts/notebooklm_radio_frontmatter.py` (PEP 723 inline + uv run)
+- 配信: m4a は **GitHub Release `audio` (rolling tag)** に upload。`audio_url` は `https://github.com/Eotel/blogs/releases/download/audio/<slug>.m4a`。`static/audio/` は `.gitignore` 済 (ローカル cache のみ)。**`gh release delete audio` 厳禁 — 全音声リンクが切れる**
+- 出力: `static/audio/<slug>/overview.m4a`（NotebookLM 既定の m4a を直接配信、`audio/mp4`）
+- 記事への紐付け: フロントマターに `audio_url` `audio_lang` `audio_generated_at` `audio_source` `audio_format` を追記し、`layouts/partials/audio-player.html` が `<audio>` を出す
+- 認証 profile: **`blogs` で分離**（個人作業の NotebookLM と混ぜない）。月 1 回程度 `nlm login --profile blogs` の再ログインが必要
+- 言語固定: `nlm audio create --language ja` + `NOTEBOOKLM_HL=ja` (.envrc) で二重化。**v1 は日本語のみ**
+- `/blog` との自動連携はしない（NotebookLM 側障害で公開フローを止めないため）。マージ後に手動で `/notebooklm-radio <URL>` を回す
+- `nlm doctor` は cookie 存在しか見ない → 真の認証チェックは `nlm notebook list --profile blogs --json` を実機で叩く（スクリプトの preflight が実装済み）
+- 詳細は `.claude/skills/notebooklm-radio/SKILL.md` および `docs/exec-plans/active/2026-05-21-notebooklm-radio-skill.md`
+
 ## カテゴリ一覧
 
 AI/LLM, セキュリティ, クラウド/インフラ, Web開発, プログラミング言語, モバイル, データベース, ツール/開発環境, ビジネス/キャリア, 地域/グルメ, その他

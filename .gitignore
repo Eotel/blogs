@@ -38,3 +38,9 @@ apm_modules/
 
 # Personal source notes (drafts staged locally before /blog or /wiki-ingest)
 sources/
+
+# NotebookLM audio cache (uploaded to GitHub Release Assets, not committed)
+static/audio/
+
+# Local operational state (audit logs, run history)
+.claude/state/

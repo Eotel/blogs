@@ -1,13 +1,24 @@
 ---
 slug: 2026-05-08-agent-friendly-cli-for-llm
-title: "Agent-friendly CLIとは何か: ncliに学ぶLLM時代のCLI設計"
-description: "ncliを題材に、LLMやCoding Agentが安全に扱えるCLIの設計条件を、MCP・ACP・JSON出力・エラー設計・認証の観点から整理する。"
+title: 'Agent-friendly CLIとは何か: ncliに学ぶLLM時代のCLI設計'
+description: ncliを題材に、LLMやCoding Agentが安全に扱えるCLIの設計条件を、MCP・ACP・JSON出力・エラー設計・認証の観点から整理する。
 date: 2026-05-08
 lastmod: 2026-05-08
 draft: false
-author: "eotel"
-categories: ["AI/LLM"]
-tags: ["llm", "mcp", "coding-agent", "agent-friendly-cli", "ncli"]
+author: eotel
+categories:
+- AI/LLM
+tags:
+- llm
+- mcp
+- coding-agent
+- agent-friendly-cli
+- ncli
+audio_url: https://github.com/Eotel/blogs/releases/download/audio/2026-05-08-agent-friendly-cli-for-llm.m4a
+audio_lang: ja
+audio_generated_at: '2026-05-21T02:56:56Z'
+audio_source: notebooklm
+audio_format: deep_dive
 ---
 
 Coding Agent が日常的にコードを書き、調査し、外部サービスを更新するようになると、CLI の意味が少し変わってくる。人間がターミナルで便利に叩くための道具から、LLM が安全に読めて、失敗から復帰できて、スクリプトにも組み込める「実行可能なインターフェース」へ寄っていく。

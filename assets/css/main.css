@@ -712,6 +712,36 @@ pagefind-modal-trigger button,
 .post-meta a { color: var(--secondary); }
 .post-meta a:hover { color: var(--ink); }
 
+.audio-overview {
+    margin: 20px 0 28px;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface, transparent);
+}
+.audio-overview__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 0.8125rem;
+    color: var(--secondary);
+}
+.audio-overview__badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: var(--ink);
+    color: var(--bg, #fff);
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+}
+.audio-overview__player {
+    width: 100%;
+}
+
 .post-content {
     font-size: 1.0625rem;
     line-height: 1.85;
