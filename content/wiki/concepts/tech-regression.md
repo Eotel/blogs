@@ -2,7 +2,7 @@
 title: "技術縮退 (technical regression)"
 description: "必須機能を残しながら、依存半径・媒介層・ブラックボックス性・技能外部化・保守負荷を意図的に減らす設計と統治の選択を表すメタ概念。local-first・graceful degradation・repairability・human oversight をひとつの判断軸でつなぐ"
 date: 2026-05-20
-lastmod: 2026-05-20
+lastmod: 2026-05-21
 aliases:
   - "Technical Regression"
   - "Philosophy of Technical Regression"
@@ -12,6 +12,7 @@ aliases:
   - "intentional simplification"
 related_posts:
   - "/posts/2026/05/2026-05-20-philosophy-of-tech-regression/"
+  - "/posts/2026/05/enzo-mari-autoprogettazione/"
 tags:
   - "技術哲学"
   - "local-first"
@@ -94,6 +95,7 @@ AI 自動化と技術縮退は対立しない。Bainbridge (1983) "Ironies of Au
 ## 関連 Wiki
 
 - [テクニウム (technium)](/blogs/wiki/concepts/technium/) — 「複雑化そのものを善とする」言説への対置軸
+- [Autoprogettazione (エンツォ・マーリ)](/blogs/wiki/concepts/autoprogettazione/) — 「判断の遅さ」を 1974 年に教育として制度化した先行事例
 - [ハーネスエンジニアリング](/blogs/wiki/concepts/harness-engineering/) — 「止められる自動化」の実装層
 - [スケーラブル・オーバーサイト](/blogs/wiki/concepts/scalable-oversight/) — human oversight の研究領域
 - [AI エージェント](/blogs/wiki/concepts/ai-agent/) — Anthropic の段階的複雑化原則の適用先
@@ -105,3 +107,4 @@ AI 自動化と技術縮退は対立しない。Bainbridge (1983) "Ironies of Au
 ## ソース記事
 
 - [技術縮退の哲学 — local-first・graceful degradation・AI oversight をひとつの設計判断にまとめる](/blogs/posts/2026/05/2026-05-20-philosophy-of-tech-regression/) — 2026-05-20
+- [「1%しか理解されなかった」エンツォ・マーリ ── Autoprogettazione を AI 時代の判断教育として読み直す](/blogs/posts/2026/05/enzo-mari-autoprogettazione/) — 2026-05-21
