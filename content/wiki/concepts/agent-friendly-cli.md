@@ -88,6 +88,7 @@ MYAPP_TOKEN=xxx myapp --token-from-env deploy
 
 Claude Code は Bash ツールで CLI を呼び出す。エージェントフレンドリーな CLI を使うと:
 
+
 - ツール実行結果を JSON でパースできる
 - エラーから自律回復できる（Hint を次のアクションに使う）
 - `--dry-run` で安全に計画段階の確認ができる
