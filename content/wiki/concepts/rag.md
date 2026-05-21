@@ -8,7 +8,7 @@ related_posts:
   - "/blogs/posts/2026/05/2026-05-21-knowledge-pipeline-over-harness/"
   - "/blogs/posts/2026/05/rag-cag-llm-knowledge-context-cache-design/"
   - "/blogs/posts/2026/04/karpathy-llm-wiki/"
-  - "/blogs/posts/2026/03/rag-adaptive-search-strategy/"
+  - "/blogs/posts/2026/03/2026-03-17-rag-adaptive-search-strategy/"
   - "/blogs/posts/2024/02/2024-02-12-d1d192cc863cb9fbb1417f49a3067e53/"
   - "/blogs/posts/2024/08/2024-08-01-9e4638d4420bcf5b99ba203726921888/"
   - "/blogs/posts/2024/03/2024-03-14-05df197941702710ea55013287157a16/"

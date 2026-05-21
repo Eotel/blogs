@@ -5,10 +5,10 @@ date: 2026-04-15
 lastmod: 2026-05-12
 aliases: ["ローカルLLM", "local-llm", "オープンソースLLM比較"]
 related_posts:
-  - "/blogs/posts/2026/04/gemma4-vs-qwen35-local-llm/"
-  - "/blogs/posts/2026/04/microsoft-bitnet-open-source-1bit-llm/"
-  - "/blogs/posts/2026/04/gemma4-api-economy-disruption/"
-  - "/blogs/posts/2026/04/claude-rate-limit-mac-mini-local-model/"
+  - "/blogs/posts/2026/04/2026-04-07-gemma4-vs-qwen35-local-llm/"
+  - "/blogs/posts/2026/04/2026-04-07-microsoft-bitnet-open-source-1bit-llm/"
+  - "/blogs/posts/2026/04/2026-04-07-gemma4-api-economy-disruption/"
+  - "/blogs/posts/2026/04/2026-04-15-claude-rate-limit-mac-mini-local-model/"
   - "/blogs/posts/2026/03/2026-03-04-9c65e3a8bc648a1493bf0a8fe0fa3bb8/"
   - "/blogs/posts/2026/03/2026-03-04-cde933b6eb635a778d7b053610aca40a/"
   - "/blogs/posts/2026/03/2026-03-04-f7bad4476f8bec3e58bcf01848bfb807/"

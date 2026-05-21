@@ -5,9 +5,9 @@ date: 2026-04-07
 lastmod: 2026-05-12
 aliases: ["Gemma4", "gemma-4"]
 related_posts:
-  - "/blogs/posts/2026/04/gemma4-api-economy-disruption/"
-  - "/blogs/posts/2026/04/gemma4-vs-qwen35-local-llm/"
-  - "/blogs/posts/2026/04/gemma4-31b-abliterated-crack/"
+  - "/blogs/posts/2026/04/2026-04-07-gemma4-api-economy-disruption/"
+  - "/blogs/posts/2026/04/2026-04-07-gemma4-vs-qwen35-local-llm/"
+  - "/blogs/posts/2026/04/2026-04-06-gemma4-31b-abliterated-crack/"
   - "/blogs/posts/2026/04/2026-04-06-openclaw-gemma4-local-setup/"
 tags: ["Gemma", "Google", "オープンソースLLM", "MoE", "エッジAI", "Apache2.0"]
 ---

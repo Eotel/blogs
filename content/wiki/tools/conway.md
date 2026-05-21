@@ -5,7 +5,7 @@ date: 2026-04-03
 lastmod: 2026-05-18
 aliases: ["Conway", "claude-conway"]
 related_posts:
-  - "/blogs/posts/2026/04/anthropic-conway-agent/"
+  - "/blogs/posts/2026/04/2026-04-03-anthropic-conway-agent/"
 tags: ["anthropic", "claude", "agent", "always-on", "webhook"]
 ---
 

@@ -5,8 +5,8 @@ date: 2026-04-16
 lastmod: 2026-05-12
 aliases: ["AI UGC", "AI動画広告", "AI video generation"]
 related_posts:
-  - "/blogs/posts/2026/04/ai-ugc-video-ad-tools-comparison/"
-  - "/blogs/posts/2026/04/arcads-ai-ugc-ads/"
+  - "/blogs/posts/2026/04/2026-04-02-ai-ugc-video-ad-tools-comparison/"
+  - "/blogs/posts/2026/04/2026-04-02-arcads-ai-ugc-ads/"
   - "/blogs/posts/2026/03/2026-03-17-ai-ugc-instagram-testing/"
 tags: ["AI広告", "UGC", "動画生成", "マーケティング自動化"]
 ---

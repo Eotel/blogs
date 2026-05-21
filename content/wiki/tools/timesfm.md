@@ -5,7 +5,7 @@ date: 2026-04-14
 lastmod: 2026-05-12
 aliases: ["Times FM", "Time Series Foundation Model", "google/timesfm"]
 related_posts:
-  - "/blogs/posts/2026/04/google-timesfm-prediction-ai/"
+  - "/blogs/posts/2026/04/2026-04-14-google-timesfm-prediction-ai/"
 tags: ["TimesFM", "Google", "時系列予測", "ゼロショット", "機械学習", "予測AI"]
 ---
 

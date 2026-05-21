@@ -5,9 +5,9 @@ date: 2026-04-11
 lastmod: 2026-04-16
 aliases: ["マルチエージェントパターン", "multi-agent-coordination"]
 related_posts:
-  - "/blogs/posts/2026/04/anthropic-multi-agent-coordination-patterns/"
+  - "/blogs/posts/2026/04/2026-04-11-anthropic-multi-agent-coordination-patterns/"
   - "/blogs/posts/2026/04/claude-managed-agents-architecture/"
-  - "/blogs/posts/2026/04/claude-managed-agents/"
+  - "/blogs/posts/2026/04/2026-04-10-claude-managed-agents/"
 tags: ["マルチエージェント", "AIアーキテクチャ", "設計パターン", "Anthropic", "エージェント"]
 ---
 

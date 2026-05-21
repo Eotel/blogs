@@ -5,7 +5,7 @@ date: 2026-04-15
 lastmod: 2026-04-15
 aliases: ["draw.io AI生成", "drawio自動生成"]
 related_posts:
-  - "/blogs/posts/2026/03/genai-drawio-creator/"
+  - "/blogs/posts/2026/03/2026-03-17-genai-drawio-creator/"
 tags: ["draw.io", "Amazon Bedrock", "Claude", "図解生成", "arXiv"]
 ---
 

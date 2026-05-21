@@ -5,7 +5,7 @@ date: 2026-04-08
 lastmod: 2026-05-12
 aliases: ["モノコ", "monoco.jp"]
 related_posts:
-  - "/blogs/posts/2026/04/monoco-curated-ec/"
+  - "/blogs/posts/2026/04/2026-04-08-monoco-curated-ec/"
 tags: ["EC", "キュレーション", "ブランディング", "オンラインセレクトショップ"]
 ---
 

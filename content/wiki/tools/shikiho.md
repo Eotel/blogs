@@ -5,7 +5,7 @@ date: 2026-04-15
 lastmod: 2026-05-18
 aliases: ["会社四季報", "四季報Web", "四季報Pro"]
 related_posts:
-  - "/blogs/posts/2026/04/shikiho-financial-7points/"
+  - "/blogs/posts/2026/04/2026-04-07-shikiho-financial-7points/"
 tags: ["四季報", "財務分析", "株式投資", "投資", "ROE"]
 ---
 

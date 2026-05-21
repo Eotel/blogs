@@ -5,7 +5,7 @@ date: 2026-04-14
 lastmod: 2026-05-12
 aliases: ["bitnet.cpp", "BitNet b1.58"]
 related_posts:
-  - "/blogs/posts/2026/04/microsoft-bitnet-open-source-1bit-llm/"
+  - "/blogs/posts/2026/04/2026-04-07-microsoft-bitnet-open-source-1bit-llm/"
 tags: ["BitNet", "Microsoft", "1-bit LLM", "CPU推論", "量子化", "ローカルLLM"]
 ---
 

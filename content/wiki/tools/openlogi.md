@@ -5,7 +5,7 @@ date: 2026-04-15
 lastmod: 2026-04-15
 aliases: ["OPENLOGI", "openlogi"]
 related_posts:
-  - "/blogs/posts/2026/04/openlogi-ec-fulfillment/"
+  - "/blogs/posts/2026/04/2026-04-08-openlogi-ec-fulfillment/"
 tags: ["EC", "物流", "フルフィルメント", "Shopify", "API連携"]
 ---
 

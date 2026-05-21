@@ -7,7 +7,7 @@ aliases: ["ヴァイブコーディング", "バイブコーディング"]
 related_posts:
   - "/blogs/posts/2026/03/vibe-coding-skills/"
   - "/blogs/posts/2026/03/claude-md-less-is-more/"
-  - "/blogs/posts/2026/03/vibe-coding-cs-writing-skills/"
+  - "/blogs/posts/2026/03/2026-03-17-vibe-coding-cs-writing-skills/"
   - "/blogs/posts/2026/02/2026-02-26-7d1b02f7130f2fe523f3fee58d5b916f/"
   - "/blogs/posts/2026/03/2026-03-01-44d3e82b0c355de783233377c5f8fcff/"
   - "/blogs/posts/2026/03/2026-03-04-179a96f4a2907544469cb7055564ac6c/"

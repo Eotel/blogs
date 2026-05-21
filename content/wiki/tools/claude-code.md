@@ -6,9 +6,9 @@ lastmod: 2026-05-12
 aliases: ["claude-code"]
 related_posts:
   - "/blogs/posts/2026/04/claude-code-context-compression/"
-  - "/blogs/posts/2026/04/claude-code-silent-degradation/"
+  - "/blogs/posts/2026/04/2026-04-03-claude-code-silent-degradation/"
   - "/blogs/posts/2026/04/karpathy-llm-wiki/"
-  - "/blogs/posts/2026/04/claude-thinking-nerfed/"
+  - "/blogs/posts/2026/04/2026-04-13-claude-thinking-nerfed/"
   - "/blogs/posts/2026/04/2026-04-15-claude-code-routines/"
   - "/blogs/posts/2026/04/2026-04-15-claude-code-routines-desktop-update/"
   - "/blogs/posts/2026/04/2026-04-16-claude-code-team-onboarding/"

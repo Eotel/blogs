@@ -5,10 +5,10 @@ date: 2026-04-14
 lastmod: 2026-05-18
 aliases: ["CMA", "Managed Agents"]
 related_posts:
-  - "/blogs/posts/2026/04/claude-managed-agents/"
+  - "/blogs/posts/2026/04/2026-04-10-claude-managed-agents/"
   - "/blogs/posts/2026/04/claude-managed-agents-architecture/"
-  - "/blogs/posts/2026/04/anthropic-vs-openai-harness-strategy/"
-  - "/blogs/posts/2026/04/agent-harness-memory-lock-in/"
+  - "/blogs/posts/2026/04/2026-04-13-anthropic-vs-openai-harness-strategy/"
+  - "/blogs/posts/2026/04/2026-04-12-agent-harness-memory-lock-in/"
 tags: ["claude", "anthropic", "agent", "mcp", "architecture"]
 ---
 

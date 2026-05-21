@@ -5,9 +5,9 @@ date: 2026-04-15
 lastmod: 2026-04-15
 aliases: ["キュレーションEC", "リテールDX", "curated-ec"]
 related_posts:
-  - "/blogs/posts/2026/04/monoco-curated-ec/"
-  - "/blogs/posts/2026/04/intmart-s-mart/"
-  - "/blogs/posts/2026/04/openlogi-ec-fulfillment/"
+  - "/blogs/posts/2026/04/2026-04-08-monoco-curated-ec/"
+  - "/blogs/posts/2026/04/2026-04-14-intmart-s-mart/"
+  - "/blogs/posts/2026/04/2026-04-08-openlogi-ec-fulfillment/"
 tags: ["EC", "キュレーション", "リテールDX", "買物困難者", "デジタルサイネージ"]
 ---
 

@@ -5,7 +5,7 @@ date: 2026-04-15
 lastmod: 2026-04-15
 aliases: ["ClaudeのEQ", "脳内トレース", "claude-thought-tracing"]
 related_posts:
-  - "/blogs/posts/2026/04/claude-eq-thought-tracing/"
+  - "/blogs/posts/2026/04/2026-04-13-claude-eq-thought-tracing/"
 tags: ["claude", "EQ", "プロンプト", "対話", "llm"]
 ---
 

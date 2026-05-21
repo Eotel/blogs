@@ -5,7 +5,7 @@ date: 2026-04-16
 lastmod: 2026-04-16
 aliases: ["アブリテレーション", "abliteration", "拒否方向除去"]
 related_posts:
-  - "/blogs/posts/2026/04/gemma4-31b-abliterated-crack/"
+  - "/blogs/posts/2026/04/2026-04-06-gemma4-31b-abliterated-crack/"
 tags: ["Abliteration", "AI安全性", "LLM", "量子化", "セーフティ"]
 ---
 

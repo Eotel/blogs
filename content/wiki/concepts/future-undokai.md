@@ -13,7 +13,7 @@ aliases:
   - "みんなで作る運動会"
   - "運動会協会"
 related_posts:
-  - "/blogs/posts/2026/05/2026-05-18-minna-de-tsukuru-future-undokai/"
+  - "/blogs/posts/2026/05/minna-de-tsukuru-future-undokai/"
 tags:
   - 未来の運動会
   - 共創

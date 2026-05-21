@@ -5,8 +5,8 @@ date: 2026-04-14
 lastmod: 2026-04-14
 aliases: []
 related_posts:
-  - "/blogs/posts/2026/04/edinet-xbrl-python/"
-  - "/blogs/posts/2026/04/buffett-code-analysis/"
+  - "/blogs/posts/2026/04/2026-04-06-edinet-xbrl-python/"
+  - "/blogs/posts/2026/04/2026-04-07-buffett-code-analysis/"
 tags: ["Python", "XBRL", "EDINET", "金融データ", "財務分析"]
 ---
 

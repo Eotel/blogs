@@ -5,7 +5,7 @@ date: 2026-04-15
 lastmod: 2026-05-12
 aliases: ["Qwen3.5", "通義千問"]
 related_posts:
-  - "/blogs/posts/2026/04/gemma4-vs-qwen35-local-llm/"
+  - "/blogs/posts/2026/04/2026-04-07-gemma4-vs-qwen35-local-llm/"
   - "/blogs/posts/2026/03/2026-03-05-c15ed5806e48bd6c5ec74e5cf494cfd2/"
   - "/blogs/posts/2026/03/2026-03-09-qwen35-27b/"
 tags: ["Qwen", "オープンソースLLM", "Alibaba", "ローカルLLM", "コーディング"]

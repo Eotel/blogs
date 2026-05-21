@@ -5,7 +5,7 @@ date: 2026-04-15
 lastmod: 2026-05-12
 aliases: ["Gemini Agentモード"]
 related_posts:
-  - "/blogs/posts/2026/04/gemini-agent-mode/"
+  - "/blogs/posts/2026/04/2026-04-07-gemini-agent-mode/"
   - "/blogs/posts/2026/03/2026-03-05-946ec0898ef07511328522277fd9ecfa/"
 tags: ["Gemini", "AIエージェント", "Google Workspace", "自動化"]
 ---

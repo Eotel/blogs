@@ -5,7 +5,7 @@ date: 2026-04-15
 lastmod: 2026-04-15
 aliases: ["かんけいじんこう", "関係人口創出"]
 related_posts:
-  - "/blogs/posts/2026/04/kankei-jinkou/"
+  - "/blogs/posts/2026/04/2026-04-09-kankei-jinkou/"
 tags: ["地方創生", "関係人口", "地域活性化", "二地域居住"]
 ---
 

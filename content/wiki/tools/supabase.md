@@ -5,7 +5,7 @@ date: 2026-04-06
 lastmod: 2026-05-19
 aliases: ["supabase"]
 related_posts:
-  - "/blogs/posts/2026/03/supabase-agent-skills/"
+  - "/blogs/posts/2026/03/2026-03-30-supabase-agent-skills/"
   - "/blogs/posts/2026/05/2026-05-19-multi-tenant-saas-architecture-guide/"
 tags: ["BaaS", "PostgreSQL", "API", "RLS", "Claude Code", "マルチテナント"]
 ---

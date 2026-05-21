@@ -5,7 +5,7 @@ date: 2026-04-15
 lastmod: 2026-05-18
 aliases: ["エスマート", "S-mart", "intmart"]
 related_posts:
-  - "/blogs/posts/2026/04/intmart-s-mart/"
+  - "/blogs/posts/2026/04/2026-04-14-intmart-s-mart/"
 tags: ["EC", "リテールDX", "買物困難者", "デジタルサイネージ", "小売"]
 ---
 
