@@ -13,6 +13,7 @@
     markdownlint-cli2
     ast-grep
     git-secrets
+    htmltest             # built HTML の内部リンク検証 (scripts/htmltest.sh から呼ぶ)
     ruff
     black
 
@@ -40,6 +41,11 @@
   scripts.hugo-check = {
     exec = "hugo --gc --quiet --destination .claude/temp/hugo-check";
     description = "lefthook pre-push と同等の build チェック";
+  };
+
+  scripts.link-check = {
+    exec = ''exec ${./scripts/htmltest.sh} "$@"'';
+    description = "Hugo を build して htmltest で内部リンク (/blogs/...) を検証";
   };
 
   scripts.drawio-export = {

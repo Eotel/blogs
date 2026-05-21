@@ -90,3 +90,21 @@ pre-push:
       run: |
         ast-grep scan
         # lefthook 2.x filter satisfier: {files}
+    # link-check: htmltest で built HTML の内部リンクを検証。
+    # 既存 backlog (404 リンク) があるため warn-only — exit 0 で push をブロックしない。
+    # 詳細を出すには devenv shell で `link-check` を手動実行する。
+    - name: link-check
+      files: "echo lefthook.yml"
+      run: |
+        if ! command -v htmltest >/dev/null 2>&1 || ! command -v hugo >/dev/null 2>&1; then
+          echo "htmltest/hugo not installed locally — skipping (devenv shell で有効)"
+        else
+          OUT=$(scripts/htmltest.sh 2>&1) || true
+          ERR=$(printf '%s\n' "$OUT" | grep -c 'target does not exist' || true)
+          if [ "${ERR:-0}" -eq 0 ]; then
+            echo "✓ htmltest: no broken internal links"
+          else
+            echo "⚠️  htmltest: $ERR broken internal link(s) — \`link-check\` で詳細"
+          fi
+        fi
+        # lefthook 2.x filter satisfier: {files}
