@@ -13,7 +13,7 @@ aliases:
   - "みんなで作る運動会"
   - "運動会協会"
 related_posts:
-  - "/posts/2026/05/2026-05-18-minna-de-tsukuru-future-undokai/"
+  - "/blogs/posts/2026/05/2026-05-18-minna-de-tsukuru-future-undokai/"
 tags:
   - 未来の運動会
   - 共創
@@ -123,7 +123,7 @@ CCBT が犬飼博士に与えている肩書「運楽家」は、運動会を楽
 
 ## ソース記事
 
-- [みんなで作るという文化 — 未来の運動会プロジェクト群が示す共創方法論](/blogs/posts/2026/05/2026-05-18-minna-de-tsukuru-future-undokai/) — 2026-05-18
+- [みんなで作るという文化 — 未来の運動会プロジェクト群が示す共創方法論](/blogs/posts/2026/05/minna-de-tsukuru-future-undokai/) — 2026-05-18
 
 ## 参照
 

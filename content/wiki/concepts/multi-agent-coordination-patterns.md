@@ -5,9 +5,9 @@ date: 2026-04-11
 lastmod: 2026-04-16
 aliases: ["マルチエージェントパターン", "multi-agent-coordination"]
 related_posts:
-  - "/posts/2026/04/anthropic-multi-agent-coordination-patterns/"
-  - "/posts/2026/04/claude-managed-agents-architecture/"
-  - "/posts/2026/04/claude-managed-agents/"
+  - "/blogs/posts/2026/04/anthropic-multi-agent-coordination-patterns/"
+  - "/blogs/posts/2026/04/claude-managed-agents-architecture/"
+  - "/blogs/posts/2026/04/claude-managed-agents/"
 tags: ["マルチエージェント", "AIアーキテクチャ", "設計パターン", "Anthropic", "エージェント"]
 ---
 
@@ -73,5 +73,5 @@ Anthropic が 2026年4月に公開した、複数 AI エージェントを協調
 
 ## ソース記事
 
-- [Anthropic が解説するマルチエージェント調整パターン 5 選](/blogs/posts/2026/04/anthropic-multi-agent-coordination-patterns/) — 2026-04-11
+- [Anthropic が解説するマルチエージェント調整パターン 5 選](/blogs/posts/2026/04/2026-04-11-anthropic-multi-agent-coordination-patterns/) — 2026-04-11
 - [Claude Managed Agents のアーキテクチャ: Brain / Session / Hands の分離設計](/blogs/posts/2026/04/claude-managed-agents-architecture/) — 2026-04-10

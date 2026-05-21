@@ -5,10 +5,10 @@ date: 2026-04-14
 lastmod: 2026-05-18
 aliases: ["CMA", "Managed Agents"]
 related_posts:
-  - "/posts/2026/04/claude-managed-agents/"
-  - "/posts/2026/04/claude-managed-agents-architecture/"
-  - "/posts/2026/04/anthropic-vs-openai-harness-strategy/"
-  - "/posts/2026/04/agent-harness-memory-lock-in/"
+  - "/blogs/posts/2026/04/claude-managed-agents/"
+  - "/blogs/posts/2026/04/claude-managed-agents-architecture/"
+  - "/blogs/posts/2026/04/anthropic-vs-openai-harness-strategy/"
+  - "/blogs/posts/2026/04/agent-harness-memory-lock-in/"
 tags: ["claude", "anthropic", "agent", "mcp", "architecture"]
 ---
 
@@ -78,7 +78,7 @@ LangChain 共同創設者・CEO の Harrison Chase はブログ「Your Harness, 
 
 ## ソース記事
 
-- [Claude Managed Agents: パブリックベータ公開](/blogs/posts/2026/04/claude-managed-agents/) — 2026-04-10
+- [Claude Managed Agents: パブリックベータ公開](/blogs/posts/2026/04/2026-04-10-claude-managed-agents/) — 2026-04-10
 - [Claude Managed Agents のアーキテクチャ](/blogs/posts/2026/04/claude-managed-agents-architecture/) — 2026-04-10
-- [Anthropic vs OpenAI：Harness 戦略の比較](/blogs/posts/2026/04/anthropic-vs-openai-harness-strategy/) — 2026-04-13
-- [エージェントハーネスとメモリのロックイン問題](/blogs/posts/2026/04/agent-harness-memory-lock-in/) — 2026-04-12
+- [Anthropic vs OpenAI：Harness 戦略の比較](/blogs/posts/2026/04/2026-04-13-anthropic-vs-openai-harness-strategy/) — 2026-04-13
+- [エージェントハーネスとメモリのロックイン問題](/blogs/posts/2026/04/2026-04-12-agent-harness-memory-lock-in/) — 2026-04-12

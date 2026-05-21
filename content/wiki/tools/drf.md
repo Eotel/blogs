@@ -5,14 +5,14 @@ date: 2026-04-06
 lastmod: 2026-05-12
 aliases: ["DRF", "django-rest-framework"]
 related_posts:
-  - "/posts/2021/04/2021-04-24-16261462f740c7681a19e6310d5b8115/"
-  - "/posts/2023/03/2023-03-24-780eabebc7de7ffe9b5f62bd8a59565e/"
-  - "/posts/2023/04/2023-04-05-2a96d9bd7e7cfb5224360179f0656020/"
-  - "/posts/2023/04/2023-04-23-47edb4831ff832dadd5ce77b563b5cc5/"
-  - "/posts/2023/04/2023-04-29-46723c4fa2639b9bc78fe52cdad903b0/"
-  - "/posts/2023/05/2023-05-12-2299ed5cf019576fb2675b14afe30f92/"
-  - "/posts/2023/08/2023-08-22-92c5eb49f98b8e7a52ab4afc7801ed92/"
-  - "/posts/2026/02/2026-02-24-5d604ad7617c043a1bb80b6a43ffbb48/"
+  - "/blogs/posts/2021/04/2021-04-24-16261462f740c7681a19e6310d5b8115/"
+  - "/blogs/posts/2023/03/2023-03-24-780eabebc7de7ffe9b5f62bd8a59565e/"
+  - "/blogs/posts/2023/04/2023-04-05-2a96d9bd7e7cfb5224360179f0656020/"
+  - "/blogs/posts/2023/04/2023-04-23-47edb4831ff832dadd5ce77b563b5cc5/"
+  - "/blogs/posts/2023/04/2023-04-29-46723c4fa2639b9bc78fe52cdad903b0/"
+  - "/blogs/posts/2023/05/2023-05-12-2299ed5cf019576fb2675b14afe30f92/"
+  - "/blogs/posts/2023/08/2023-08-22-92c5eb49f98b8e7a52ab4afc7801ed92/"
+  - "/blogs/posts/2026/02/2026-02-24-5d604ad7617c043a1bb80b6a43ffbb48/"
 tags: ["Django", "API", "REST", "Python"]
 ---
 

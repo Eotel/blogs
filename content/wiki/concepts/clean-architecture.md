@@ -5,8 +5,8 @@ date: 2026-05-20
 lastmod: 2026-05-20
 aliases: ["clean architecture", "クリーンアーキテクチャ", "uncle bob clean architecture"]
 related_posts:
-  - "/posts/2026/05/2026-05-20-hexagonal-architecture-practical-guide/"
-  - "/posts/2026/03/2026-03-03-0617418777ad8f46ddf3f1d9bfbfb06f/"
+  - "/blogs/posts/2026/05/2026-05-20-hexagonal-architecture-practical-guide/"
+  - "/blogs/posts/2026/03/2026-03-03-0617418777ad8f46ddf3f1d9bfbfb06f/"
 tags: ["アーキテクチャ", "clean-architecture", "design-pattern", "solid"]
 ---
 

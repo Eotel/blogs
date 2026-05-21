@@ -5,7 +5,7 @@ date: 2026-04-03
 lastmod: 2026-05-18
 aliases: ["Conway", "claude-conway"]
 related_posts:
-  - "/posts/2026/04/anthropic-conway-agent/"
+  - "/blogs/posts/2026/04/anthropic-conway-agent/"
 tags: ["anthropic", "claude", "agent", "always-on", "webhook"]
 ---
 
@@ -52,4 +52,4 @@ Anthropic が内部テスト中の常駐型 AI エージェント環境（コー
 
 ## ソース記事
 
-- [Anthropic Conway とは — 24時間稼働する常駐型AIエージェントの全貌](/blogs/posts/2026/04/anthropic-conway-agent/) — 2026-04-03
+- [Anthropic Conway とは — 24時間稼働する常駐型AIエージェントの全貌](/blogs/posts/2026/04/2026-04-03-anthropic-conway-agent/) — 2026-04-03

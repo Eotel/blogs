@@ -5,7 +5,7 @@ date: 2026-04-15
 lastmod: 2026-04-15
 aliases: ["buffett-code", "バフェットコード"]
 related_posts:
-  - "/posts/2026/04/buffett-code-analysis/"
+  - "/blogs/posts/2026/04/buffett-code-analysis/"
 tags: ["財務分析", "EDINET", "XBRL", "投資", "MCP", "Python"]
 ---
 
@@ -42,4 +42,4 @@ Claude Code などの AI ツールから直接バフェット・コードの財�
 
 ## ソース記事
 
-- [バフェット・コード徹底分析 — EDINET XBRLを活用した企業分析SaaSの全貌](/blogs/posts/2026/04/buffett-code-analysis/) — 2026-04-07
+- [バフェット・コード徹底分析 — EDINET XBRLを活用した企業分析SaaSの全貌](/blogs/posts/2026/04/2026-04-07-buffett-code-analysis/) — 2026-04-07

@@ -5,7 +5,7 @@ date: 2026-04-06
 lastmod: 2026-04-06
 aliases: ["エクスポージャー管理"]
 related_posts:
-  - "/posts/2026/03/exposure-management/"
+  - "/blogs/posts/2026/03/exposure-management/"
 tags: ["脆弱性管理", "リスク評価", "セキュリティ"]
 ---
 

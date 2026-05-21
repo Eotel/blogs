@@ -5,8 +5,8 @@ date: 2026-04-23
 lastmod: 2026-05-12
 aliases: ["dflash-mlx", "Block Diffusion Flash Speculative Decoding"]
 related_posts:
-  - "/posts/2026/04/2026-04-15-dflash-mlx-apple-silicon-llm/"
-  - "/posts/2026/05/2026-05-12-speculative-tts-acceleration-2026/"
+  - "/blogs/posts/2026/04/2026-04-15-dflash-mlx-apple-silicon-llm/"
+  - "/blogs/posts/2026/05/2026-05-12-speculative-tts-acceleration-2026/"
 tags: ["Apple Silicon", "MLX", "ローカルLLM", "推論高速化", "推測デコード"]
 ---
 

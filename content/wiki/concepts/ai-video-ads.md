@@ -5,9 +5,9 @@ date: 2026-04-16
 lastmod: 2026-05-12
 aliases: ["AI UGC", "AI動画広告", "AI video generation"]
 related_posts:
-  - "/posts/2026/04/ai-ugc-video-ad-tools-comparison/"
-  - "/posts/2026/04/arcads-ai-ugc-ads/"
-  - "/posts/2026/03/2026-03-17-ai-ugc-instagram-testing/"
+  - "/blogs/posts/2026/04/ai-ugc-video-ad-tools-comparison/"
+  - "/blogs/posts/2026/04/arcads-ai-ugc-ads/"
+  - "/blogs/posts/2026/03/2026-03-17-ai-ugc-instagram-testing/"
 tags: ["AI広告", "UGC", "動画生成", "マーケティング自動化"]
 ---
 
@@ -56,6 +56,6 @@ AI を活用して動画広告を自動生成するツールカテゴリ。特�
 
 ## ソース記事
 
-- [AI UGC動画広告ツール徹底比較](/blogs/posts/2026/04/ai-ugc-video-ad-tools-comparison/) — 2026-04-02
-- [Arcads 完全ガイド](/blogs/posts/2026/04/arcads-ai-ugc-ads/) — 2026-04-02
+- [AI UGC動画広告ツール徹底比較](/blogs/posts/2026/04/2026-04-02-ai-ugc-video-ad-tools-comparison/) — 2026-04-02
+- [Arcads 完全ガイド](/blogs/posts/2026/04/2026-04-02-arcads-ai-ugc-ads/) — 2026-04-02
 - [AI生成UGCをInstagramで大量テストして売上を作る仕組み](/blogs/posts/2026/03/2026-03-17-ai-ugc-instagram-testing/) — 2026-03-17

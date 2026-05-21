@@ -5,7 +5,7 @@ date: 2026-04-23
 lastmod: 2026-05-12
 aliases: ["Agent Package Manager", "エージェントパッケージマネージャー"]
 related_posts:
-  - "/posts/2026/04/2026-04-17-apm-agent-package-manager/"
+  - "/blogs/posts/2026/04/2026-04-17-apm-agent-package-manager/"
 tags: ["AI エージェント", "Claude Code", "開発ツール", "パッケージ管理"]
 ---
 

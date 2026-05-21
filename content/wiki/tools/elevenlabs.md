@@ -5,9 +5,9 @@ date: 2026-05-12
 lastmod: 2026-05-12
 aliases: ["11labs", "Eleven Labs", "Flash v2.5", "Eleven v3", "Scribe", "Scribe v2", "Conversational AI"]
 related_posts:
-  - "/posts/2026/05/2026-05-12-tts-stt-frontier-2026-05/"
-  - "/posts/2026/04/2026-04-17-video-use-claude-code-video-editing/"
-  - "/posts/2026/03/2026-03-30-mistral-voxtral-tts/"
+  - "/blogs/posts/2026/05/2026-05-12-tts-stt-frontier-2026-05/"
+  - "/blogs/posts/2026/04/2026-04-17-video-use-claude-code-video-editing/"
+  - "/blogs/posts/2026/03/2026-03-30-mistral-voxtral-tts/"
 tags: ["ElevenLabs", "TTS", "STT", "音声AI", "voice-cloning"]
 ---
 
@@ -33,7 +33,7 @@ tags: ["ElevenLabs", "TTS", "STT", "音声AI", "voice-cloning"]
 
 ## Conversational AI（voice agent ラッパ）
 
-ElevenLabs 自身が提供する **voice agent オーケストレーション層**。STT (Scribe) + LLM (任意) + TTS (Flash) を 1 endpoint に束ね、barge-in や turn-taking を組み込み済みで提供する。Pipecat や LiveKit Agents を自前で組まなくても voice agent を立てられる、という立ち位置で [Deepgram Voice Agent API](#) と競合する。
+ElevenLabs 自身が提供する **voice agent オーケストレーション層**。STT (Scribe) + LLM (任意) + TTS (Flash) を 1 endpoint に束ね、barge-in や turn-taking を組み込み済みで提供する。Pipecat や LiveKit Agents を自前で組まなくても voice agent を立てられる、という立ち位置で [Deepgram Voice Agent API](https://developers.deepgram.com/docs/voice-agent) と競合する。
 
 ## Scribe と動画ワークフロー
 

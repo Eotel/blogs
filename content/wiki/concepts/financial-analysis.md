@@ -5,8 +5,8 @@ date: 2026-04-15
 lastmod: 2026-04-15
 aliases: ["財務指標", "四季報財務欄", "投資指標"]
 related_posts:
-  - "/posts/2026/04/shikiho-financial-7points/"
-  - "/posts/2026/04/buffett-code-analysis/"
+  - "/blogs/posts/2026/04/shikiho-financial-7points/"
+  - "/blogs/posts/2026/04/buffett-code-analysis/"
 tags: ["財務分析", "四季報", "投資", "ROE", "自己資本比率"]
 ---
 
@@ -57,5 +57,5 @@ tags: ["財務分析", "四季報", "投資", "ROE", "自己資本比率"]
 
 ## ソース記事
 
-- [四季報の財務欄から「安心な投資先」を探す7つのポイント](/blogs/posts/2026/04/shikiho-financial-7points/) — 2026-04-07
-- [バフェット・コード徹底分析](/blogs/posts/2026/04/buffett-code-analysis/) — 2026-04-07
+- [四季報の財務欄から「安心な投資先」を探す7つのポイント](/blogs/posts/2026/04/2026-04-07-shikiho-financial-7points/) — 2026-04-07
+- [バフェット・コード徹底分析](/blogs/posts/2026/04/2026-04-07-buffett-code-analysis/) — 2026-04-07

@@ -5,7 +5,7 @@ date: 2026-04-08
 lastmod: 2026-05-12
 aliases: ["モノコ", "monoco.jp"]
 related_posts:
-  - "/posts/2026/04/monoco-curated-ec/"
+  - "/blogs/posts/2026/04/monoco-curated-ec/"
 tags: ["EC", "キュレーション", "ブランディング", "オンラインセレクトショップ"]
 ---
 
@@ -42,4 +42,4 @@ tags: ["EC", "キュレーション", "ブランディング", "オンライン�
 
 ## ソース記事
 
-- [MONOCO（モノコ）：「使い惚れ」だけを届けるキュレーションECの実力](/blogs/posts/2026/04/monoco-curated-ec/) — 2026-04-08
+- [MONOCO（モノコ）：「使い惚れ」だけを届けるキュレーションECの実力](/blogs/posts/2026/04/2026-04-08-monoco-curated-ec/) — 2026-04-08

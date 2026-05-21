@@ -5,7 +5,7 @@ date: 2026-05-20
 lastmod: 2026-05-21
 aliases: ["CAG", "Cache-Augmented Generation", "Context-Augmented Generation", "Cache-CAG", "Context-CAG"]
 related_posts:
-  - "/posts/2026/05/rag-cag-llm-knowledge-context-cache-design/"
+  - "/blogs/posts/2026/05/rag-cag-llm-knowledge-context-cache-design/"
 tags: ["CAG", "RAG", "LLM", "プロンプトキャッシュ", "ロングコンテキスト"]
 ---
 

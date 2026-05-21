@@ -5,24 +5,23 @@ date: 2026-04-06
 lastmod: 2026-05-21
 aliases: ["RAG", "検索拡張生成", "意味検索", "semantic search"]
 related_posts:
-  - "/posts/2026/05/2026-05-21-knowledge-pipeline-over-harness/"
-  - "/posts/2026/05/rag-cag-llm-knowledge-context-cache-design/"
-  - "/posts/2026/04/karpathy-llm-wiki/"
-  - "/posts/2026/03/rag-adaptive-search-strategy/"
-  - "/posts/2024/02/2024-02-12-d1d192cc863cb9fbb1417f49a3067e53/"
-  - "/posts/2024/04/2024-04-12-7495152700831224546a8c1630d54138/"
-  - "/posts/2024/08/2024-08-01-9e4638d4420bcf5b99ba203726921888/"
-  - "/posts/2024/03/2024-03-14-05df197941702710ea55013287157a16/"
-  - "/posts/2026/02/2026-02-27-066b5a501b99b2a36e1e5e4496d1ead0/"
-  - "/posts/2026/03/2026-03-04-911137ea2e4da5af4ed98a6f29e995fb/"
-  - "/posts/2026/03/2026-03-05-783efe7ccb15ece292b5d6210664c397/"
-  - "/posts/2026/03/2026-03-05-cb9c696dbeb648e3286f2976b9a3eac6/"
-  - "/posts/2026/03/2026-03-05-d6238d29f67740e50870a83860a480fc/"
-  - "/posts/2026/03/2026-03-10-qwen-finetuning-vs-rag/"
-  - "/posts/2026/03/2026-03-11-bytedance-deerflow/"
-  - "/posts/2026/03/2026-03-11-gemini-embedding-2/"
-  - "/posts/2026/03/2026-03-18-opendataloader-pdf-to-markdown/"
-  - "/posts/2026/03/2026-03-05-7eb04a726f76f2ff880bc2b18efa42b2/"
+  - "/blogs/posts/2026/05/2026-05-21-knowledge-pipeline-over-harness/"
+  - "/blogs/posts/2026/05/rag-cag-llm-knowledge-context-cache-design/"
+  - "/blogs/posts/2026/04/karpathy-llm-wiki/"
+  - "/blogs/posts/2026/03/rag-adaptive-search-strategy/"
+  - "/blogs/posts/2024/02/2024-02-12-d1d192cc863cb9fbb1417f49a3067e53/"
+  - "/blogs/posts/2024/08/2024-08-01-9e4638d4420bcf5b99ba203726921888/"
+  - "/blogs/posts/2024/03/2024-03-14-05df197941702710ea55013287157a16/"
+  - "/blogs/posts/2026/02/2026-02-27-066b5a501b99b2a36e1e5e4496d1ead0/"
+  - "/blogs/posts/2026/03/2026-03-04-911137ea2e4da5af4ed98a6f29e995fb/"
+  - "/blogs/posts/2026/03/2026-03-05-783efe7ccb15ece292b5d6210664c397/"
+  - "/blogs/posts/2026/03/2026-03-05-cb9c696dbeb648e3286f2976b9a3eac6/"
+  - "/blogs/posts/2026/03/2026-03-05-d6238d29f67740e50870a83860a480fc/"
+  - "/blogs/posts/2026/03/2026-03-10-qwen-finetuning-vs-rag/"
+  - "/blogs/posts/2026/03/2026-03-11-bytedance-deerflow/"
+  - "/blogs/posts/2026/03/2026-03-11-gemini-embedding-2/"
+  - "/blogs/posts/2026/03/2026-03-18-opendataloader-pdf-to-markdown/"
+  - "/blogs/posts/2026/03/2026-03-05-7eb04a726f76f2ff880bc2b18efa42b2/"
 tags: ["RAG", "LLM", "ベクトル検索", "ナレッジマネジメント", "アダプティブ検索", "ハイブリッド検索", "rerank", "GraphRAG"]
 ---
 
@@ -109,9 +108,8 @@ Chan et al. (2024) の CAG (Cache-Augmented Generation) は「権威ある有限
 - [ハーネスより先にナレッジ作成と『本気の意味検索』を整える — RAG の前にやることリスト](/blogs/posts/2026/05/2026-05-21-knowledge-pipeline-over-harness/) — 2026-05-21
 - [RAG vs CAG という雑な対立をやめる — 知識・コンテキスト・キャッシュの 3 軸で LLM を設計する](/blogs/posts/2026/05/rag-cag-llm-knowledge-context-cache-design/) — 2026-05-20
 - [Karpathy の LLM Wiki](/blogs/posts/2026/04/karpathy-llm-wiki/) — 2026-04
-- [AIが自分で調べ方を選ぶRAG — モデル推論能力でスケールする新手法](/blogs/posts/2026/03/rag-adaptive-search-strategy/) — 2026-03-17
+- [AIが自分で調べ方を選ぶRAG — モデル推論能力でスケールする新手法](/blogs/posts/2026/03/2026-03-17-rag-adaptive-search-strategy/) — 2026-03-17
 - [生成AI: RAG](/blogs/posts/2024/02/2024-02-12-d1d192cc863cb9fbb1417f49a3067e53/) — 2024-02-12
-- [GetAI: RAG](/blogs/posts/2024/04/2024-04-12-7495152700831224546a8c1630d54138/) — 2024-04-12
 - [ColPali](/blogs/posts/2024/08/2024-08-01-9e4638d4420bcf5b99ba203726921888/) — 2024-08-01
 - [AWS: Bedrock: KnowlegeBase](/blogs/posts/2024/03/2024-03-14-05df197941702710ea55013287157a16/) — 2024-03-14
 - [# コンテキストエンジニアリング — AI を「使う人」と「使いこなす人」の違い](/blogs/posts/2026/02/2026-02-27-066b5a501b99b2a36e1e5e4496d1ead0/) — 2026-02-27

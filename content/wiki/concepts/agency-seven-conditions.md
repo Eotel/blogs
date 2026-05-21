@@ -11,7 +11,7 @@ aliases:
   - "desiring subject"
   - "agency boundary"
 related_posts:
-  - "/posts/2026/05/emergence-without-will-and-desiring-subjects/"
+  - "/blogs/posts/2026/05/emergence-without-will-and-desiring-subjects/"
 tags:
   - "主体性"
   - "AIエージェント"

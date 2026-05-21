@@ -5,7 +5,7 @@ date: 2026-04-15
 lastmod: 2026-04-15
 aliases: ["OPENLOGI", "openlogi"]
 related_posts:
-  - "/posts/2026/04/openlogi-ec-fulfillment/"
+  - "/blogs/posts/2026/04/openlogi-ec-fulfillment/"
 tags: ["EC", "物流", "フルフィルメント", "Shopify", "API連携"]
 ---
 
@@ -52,4 +52,4 @@ Shopify、Amazon、楽天、Yahoo!ショッピングなど主要ECサイトとAP
 
 ## ソース記事
 
-- [オープンロジ（OPENLOGI）とは — 固定費ゼロの物流フルフィルメントプラットフォーム](/blogs/posts/2026/04/openlogi-ec-fulfillment/) — 2026-04-08
+- [オープンロジ（OPENLOGI）とは — 固定費ゼロの物流フルフィルメントプラットフォーム](/blogs/posts/2026/04/2026-04-08-openlogi-ec-fulfillment/) — 2026-04-08

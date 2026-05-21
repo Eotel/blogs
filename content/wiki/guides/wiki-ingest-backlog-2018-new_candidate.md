@@ -5,8 +5,7 @@ date: 2026-05-12
 lastmod: 2026-05-12
 aliases: ["wiki ingest backlog", "未蒸留記事"]
 related_posts:
-  - "/posts/2018/11/2018-11-29-7860072c223b1ad2b14e80f66d689b6c/"
-  - "/posts/2018/11/2018-11-29-964906e42fea961fd276f451263d6064/"
+
 tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 ---
 
@@ -16,5 +15,3 @@ tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 
 ## レビュー対象
 
-- [王子](/blogs/posts/2018/11/2018-11-29-7860072c223b1ad2b14e80f66d689b6c/) — 2018-11-29 / new_candidate
-- [巣鴨 駒込 西ヶ原](/blogs/posts/2018/11/2018-11-29-964906e42fea961fd276f451263d6064/) — 2018-11-29 / new_candidate

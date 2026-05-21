@@ -225,4 +225,4 @@ AGENTS.md（振る舞い）、SKILL.md（能力）、DESIGN.md（外観）。こ
 - [Claude Harness (tool)](/blogs/wiki/tools/claude-harness/) — harness.toml の SSoT 思想
 - [Claude Code 時代の仕様書の役割 (post)](/blogs/posts/2026/03/2026-03-10-claude-code-spec-driven-dev/) — requirements/design/tasks の 3 層
 - [Anthropic の 3 エージェント・ハーネス設計 (post)](/blogs/posts/2026/03/2026-03-27-anthropic-harness-design-three-agents/) — Planner / Generator / Evaluator
-- [ハーネスエンジニアリングとは (post)](/blogs/posts/2026/03/2026-03-09-harness-engineering/) — 基礎概念
+- [ハーネスエンジニアリングとは (post)](/blogs/posts/2026/03/harness-engineering/) — 基礎概念

@@ -5,7 +5,7 @@ date: 2026-05-09
 lastmod: 2026-05-09
 aliases: ["agent-friendly CLI", "LLM CLI設計"]
 related_posts:
-  - "/posts/2026/05/2026-05-08-agent-friendly-cli-for-llm/"
+  - "/blogs/posts/2026/05/2026-05-08-agent-friendly-cli-for-llm/"
 tags: ["CLI", "AIエージェント", "開発ツール", "設計パターン", "LLM"]
 ---
 
@@ -87,6 +87,7 @@ MYAPP_TOKEN=xxx myapp --token-from-env deploy
 ## Claude Code での活用
 
 Claude Code は Bash ツールで CLI を呼び出す。エージェントフレンドリーな CLI を使うと:
+
 - ツール実行結果を JSON でパースできる
 - エラーから自律回復できる（Hint を次のアクションに使う）
 - `--dry-run` で安全に計画段階の確認ができる

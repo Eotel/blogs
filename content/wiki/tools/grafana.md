@@ -5,7 +5,7 @@ date: 2026-04-06
 lastmod: 2026-05-12
 aliases: ["grafana"]
 related_posts:
-  - "/posts/2024/10/2024-10-01-6495729e069ac72f7d752353a6caf03d/"
+  - "/blogs/posts/2024/10/2024-10-01-6495729e069ac72f7d752353a6caf03d/"
 tags: ["監視", "可視化", "CloudWatch", "Prometheus"]
 ---
 

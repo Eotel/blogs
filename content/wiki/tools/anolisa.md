@@ -5,7 +5,7 @@ date: 2026-04-23
 lastmod: 2026-05-12
 aliases: ["anolisa", "Agentic OS", "Alibaba Anolisa"]
 related_posts:
-  - "/posts/2026/04/2026-04-21-alibaba-anolisa-agentic-os/"
+  - "/blogs/posts/2026/04/2026-04-21-alibaba-anolisa-agentic-os/"
 tags: ["alibaba", "agent", "ebpf", "agentic-os", "security", "linux"]
 ---
 

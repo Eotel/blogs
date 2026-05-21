@@ -5,8 +5,8 @@ date: 2026-04-15
 lastmod: 2026-05-12
 aliases: ["Gemini Agentモード"]
 related_posts:
-  - "/posts/2026/04/gemini-agent-mode/"
-  - "/posts/2026/03/2026-03-05-946ec0898ef07511328522277fd9ecfa/"
+  - "/blogs/posts/2026/04/gemini-agent-mode/"
+  - "/blogs/posts/2026/03/2026-03-05-946ec0898ef07511328522277fd9ecfa/"
 tags: ["Gemini", "AIエージェント", "Google Workspace", "自動化"]
 ---
 
@@ -42,5 +42,5 @@ Google AI Ultra プランのサブスクライバー向けに提供（2026年4�
 
 ## ソース記事
 
-- [Gemini Agentモード：Google Workspaceを丸ごと自動化するAIエージェントの実力](/blogs/posts/2026/04/gemini-agent-mode/) — 2026-04-07
+- [Gemini Agentモード：Google Workspaceを丸ごと自動化するAIエージェントの実力](/blogs/posts/2026/04/2026-04-07-gemini-agent-mode/) — 2026-04-07
 - [Google Antigravity × Claude Code × Gemini × Nano Banana — AI時代の開発環境レイアウト設計](/blogs/posts/2026/03/2026-03-05-946ec0898ef07511328522277fd9ecfa/) — 2026-03-05

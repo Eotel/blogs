@@ -5,7 +5,7 @@ date: 2026-05-16
 lastmod: 2026-05-16
 aliases: ["multi-language version manager", "runtime version manager"]
 related_posts:
-  - "/posts/2026/05/2026-05-13-package-manager-history-2026/"
+  - "/blogs/posts/2026/05/2026-05-13-package-manager-history-2026/"
 tags: ["パッケージ管理", "開発環境", "asdf", "mise", "proto"]
 ---
 

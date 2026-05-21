@@ -4,8 +4,7 @@ description: "全記事 wiki-ingest で、既存 Wiki への高信頼統合に�
 date: 2026-05-12
 lastmod: 2026-05-12
 aliases: ["wiki ingest backlog", "未蒸留記事"]
-related_posts:
-  - "/posts/hello/"
+related_posts: []
 tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 ---
 
@@ -15,4 +14,4 @@ tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 
 ## レビュー対象
 
-- [はじめての記事](/blogs/posts/hello/) — 2026-03-08 / new_candidate
+（現在 root セクションの新規候補なし。hello.md は flat duplicate として削除済み。）

@@ -5,7 +5,7 @@ date: 2026-05-16
 lastmod: 2026-05-16
 aliases: ["remark-cli", "remarkjs"]
 related_posts:
-  - "/posts/2026/05/2026-05-13-remark-cli-setup-guide/"
+  - "/blogs/posts/2026/05/2026-05-13-remark-cli-setup-guide/"
 tags: ["markdown", "lint", "unified", "ast", "developer-tools"]
 ---
 

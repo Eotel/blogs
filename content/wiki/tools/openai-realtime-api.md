@@ -5,7 +5,7 @@ date: 2026-05-12
 lastmod: 2026-05-12
 aliases: ["gpt-realtime", "gpt-realtime-2", "gpt-realtime-whisper", "gpt-realtime-translate", "OpenAI Realtime", "Realtime API"]
 related_posts:
-  - "/posts/2026/05/2026-05-12-tts-stt-frontier-2026-05/"
+  - "/blogs/posts/2026/05/2026-05-12-tts-stt-frontier-2026-05/"
 tags: ["OpenAI", "Realtime API", "TTS", "STT", "音声AI"]
 ---
 

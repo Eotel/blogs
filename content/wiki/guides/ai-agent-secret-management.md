@@ -5,7 +5,7 @@ date: 2026-04-06
 lastmod: 2026-04-06
 aliases: ["AI agent secret management", "シークレット管理"]
 related_posts:
-  - "/posts/2026/03/1password-unified-access-ai-agent/"
+  - "/blogs/posts/2026/03/1password-unified-access-ai-agent/"
 tags: ["セキュリティ", "シークレット管理", "AI エージェント", "1Password"]
 ---
 

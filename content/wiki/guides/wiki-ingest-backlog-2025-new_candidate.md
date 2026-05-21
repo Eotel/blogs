@@ -5,10 +5,7 @@ date: 2026-05-12
 lastmod: 2026-05-12
 aliases: ["wiki ingest backlog", "未蒸留記事"]
 related_posts:
-  - "/posts/2025/01/2025-01-16-03adf5ea7621a192be0ed9a26aadcaeb/"
-  - "/posts/2025/01/2025-01-16-9cfb5d41dc02a506040ba2c21bf0b900/"
-  - "/posts/2025/03/2025-03-11-2f5b4cf71b527643260a5a1ea5bf634c/"
-  - "/posts/2025/07/2025-07-16-c16cec8c79f21ea70a381189e7aa5a4b/"
+
 tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 ---
 
@@ -18,7 +15,3 @@ tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 
 ## レビュー対象
 
-- [リクルーティング](/blogs/posts/2025/01/2025-01-16-03adf5ea7621a192be0ed9a26aadcaeb/) — 2025-01-16 / new_candidate
-- [補助金助成金](/blogs/posts/2025/01/2025-01-16-9cfb5d41dc02a506040ba2c21bf0b900/) — 2025-01-16 / new_candidate
-- [Wix](/blogs/posts/2025/03/2025-03-11-2f5b4cf71b527643260a5a1ea5bf634c/) — 2025-03-11 / new_candidate
-- [Azure OpenAI](/blogs/posts/2025/07/2025-07-16-c16cec8c79f21ea70a381189e7aa5a4b/) — 2025-07-16 / new_candidate

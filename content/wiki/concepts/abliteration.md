@@ -5,7 +5,7 @@ date: 2026-04-16
 lastmod: 2026-04-16
 aliases: ["アブリテレーション", "abliteration", "拒否方向除去"]
 related_posts:
-  - "/posts/2026/04/gemma4-31b-abliterated-crack/"
+  - "/blogs/posts/2026/04/gemma4-31b-abliterated-crack/"
 tags: ["Abliteration", "AI安全性", "LLM", "量子化", "セーフティ"]
 ---
 
@@ -49,4 +49,4 @@ LLM の学習済み拒否メカニズムを**再学習なし**で除去する技
 
 ## ソース記事
 
-- [Gemma 4 31B の脱獄モデル「CRACK」登場 — Abliteration 技術でセーフティを除去](/blogs/posts/2026/04/gemma4-31b-abliterated-crack/) — 2026-04-06
+- [Gemma 4 31B の脱獄モデル「CRACK」登場 — Abliteration 技術でセーフティを除去](/blogs/posts/2026/04/2026-04-06-gemma4-31b-abliterated-crack/) — 2026-04-06

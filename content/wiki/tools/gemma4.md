@@ -5,10 +5,10 @@ date: 2026-04-07
 lastmod: 2026-05-12
 aliases: ["Gemma4", "gemma-4"]
 related_posts:
-  - "/posts/2026/04/gemma4-api-economy-disruption/"
-  - "/posts/2026/04/gemma4-vs-qwen35-local-llm/"
-  - "/posts/2026/04/gemma4-31b-abliterated-crack/"
-  - "/posts/2026/04/2026-04-06-openclaw-gemma4-local-setup/"
+  - "/blogs/posts/2026/04/gemma4-api-economy-disruption/"
+  - "/blogs/posts/2026/04/gemma4-vs-qwen35-local-llm/"
+  - "/blogs/posts/2026/04/gemma4-31b-abliterated-crack/"
+  - "/blogs/posts/2026/04/2026-04-06-openclaw-gemma4-local-setup/"
 tags: ["Gemma", "Google", "オープンソースLLM", "MoE", "エッジAI", "Apache2.0"]
 ---
 
@@ -86,7 +86,7 @@ Apple Silicon では標準の mlx_lm は未対応（2026年4月時点）。[vMLX
 
 ## ソース記事
 
-- [Gemma 4 がAPI経済を破壊する — オープンモデルがSaaS課金モデルを変える理由](/blogs/posts/2026/04/gemma4-api-economy-disruption/) — 2026-04-07
-- [Gemma 4 31B vs Qwen3.5-27B — ローカルLLM最強はどちらか](/blogs/posts/2026/04/gemma4-vs-qwen35-local-llm/) — 2026-04-07
-- [Gemma 4 31B の脱獄モデル「CRACK」登場 — Abliteration 技術でセーフティを除去](/blogs/posts/2026/04/gemma4-31b-abliterated-crack/) — 2026-04-06
+- [Gemma 4 がAPI経済を破壊する — オープンモデルがSaaS課金モデルを変える理由](/blogs/posts/2026/04/2026-04-07-gemma4-api-economy-disruption/) — 2026-04-07
+- [Gemma 4 31B vs Qwen3.5-27B — ローカルLLM最強はどちらか](/blogs/posts/2026/04/2026-04-07-gemma4-vs-qwen35-local-llm/) — 2026-04-07
+- [Gemma 4 31B の脱獄モデル「CRACK」登場 — Abliteration 技術でセーフティを除去](/blogs/posts/2026/04/2026-04-06-gemma4-31b-abliterated-crack/) — 2026-04-06
 - [OpenClaw + Ollama + Gemma4 でローカル無料AIエージェントを構築する](/blogs/posts/2026/04/2026-04-06-openclaw-gemma4-local-setup/) — 2026-04-06

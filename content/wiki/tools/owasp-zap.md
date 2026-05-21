@@ -5,7 +5,7 @@ date: 2026-04-06
 lastmod: 2026-05-12
 aliases: ["ZAP", "owasp-zap"]
 related_posts:
-  - "/posts/2026/03/2026-03-18-zapier-hubspot-asana/"
+  - "/blogs/posts/2026/03/2026-03-18-zapier-hubspot-asana/"
 tags: ["脆弱性スキャン", "Web セキュリティ", "OWASP"]
 ---
 

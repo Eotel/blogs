@@ -5,9 +5,9 @@ date: 2026-04-15
 lastmod: 2026-04-15
 aliases: ["キュレーションEC", "リテールDX", "curated-ec"]
 related_posts:
-  - "/posts/2026/04/monoco-curated-ec/"
-  - "/posts/2026/04/intmart-s-mart/"
-  - "/posts/2026/04/openlogi-ec-fulfillment/"
+  - "/blogs/posts/2026/04/monoco-curated-ec/"
+  - "/blogs/posts/2026/04/intmart-s-mart/"
+  - "/blogs/posts/2026/04/openlogi-ec-fulfillment/"
 tags: ["EC", "キュレーション", "リテールDX", "買物困難者", "デジタルサイネージ"]
 ---
 
@@ -66,6 +66,6 @@ int mart design 株式会社が提供するデジタルディスプレイお買�
 
 ## ソース記事
 
-- [MONOCO：「使い惚れ」だけを届けるキュレーションECの実力](/blogs/posts/2026/04/monoco-curated-ec/) — 2026-04-08
-- [S_mart（エスマート）とは？買物困難者を救うデジタル店舗サービス](/blogs/posts/2026/04/intmart-s-mart/) — 2026-04-14
-- [オープンロジ（OPENLOGI）とは](/blogs/posts/2026/04/openlogi-ec-fulfillment/) — 2026-04-08
+- [MONOCO：「使い惚れ」だけを届けるキュレーションECの実力](/blogs/posts/2026/04/2026-04-08-monoco-curated-ec/) — 2026-04-08
+- [S_mart（エスマート）とは？買物困難者を救うデジタル店舗サービス](/blogs/posts/2026/04/2026-04-14-intmart-s-mart/) — 2026-04-14
+- [オープンロジ（OPENLOGI）とは](/blogs/posts/2026/04/2026-04-08-openlogi-ec-fulfillment/) — 2026-04-08

@@ -5,25 +5,25 @@ date: 2026-04-06
 lastmod: 2026-05-21
 aliases: ["Harness Engineering"]
 related_posts:
-  - "/posts/2026/05/2026-05-21-knowledge-pipeline-over-harness/"
-  - "/posts/2026/03/harness-engineering/"
-  - "/posts/2026/03/ai-agent-qa/"
-  - "/posts/2026/03/claude-code-review/"
-  - "/posts/2026/04/anthropic-vs-openai-harness-strategy/"
-  - "/posts/2026/04/agent-harness-memory-lock-in/"
-  - "/posts/2026/04/2026-04-16-ai-agent-harness-confusion/"
-  - "/posts/2026/04/2026-04-17-ai-first-harness-engineering-creao/"
-  - "/posts/2026/04/2026-04-17-agent-harness-rag-context-size/"
-  - "/posts/2026/04/2026-04-14-claude-harness-v4-hokage/"
-  - "/posts/2026/04/2026-04-23-harness-engineering-agent-vs-user-harness/"
-  - "/posts/2026/04/2026-04-23-harness-engineering-beyond-rule-files/"
-  - "/posts/2026/05/2026-05-11-aws-agent-toolkit-strands-skills/"
-  - "/posts/2026/03/2026-03-02-f5f7afe224494ea830b0e01b607fbbc8/"
-  - "/posts/2026/03/2026-03-04-14eeecd540a136f4a5f87371a03f8145/"
-  - "/posts/2026/03/2026-03-27-prompt-to-harness-engineering/"
-  - "/posts/2026-03-09-harness-engineering/"
-  - "/posts/2026/03/2026-03-03-95278de03de967bcc74ff8b320222044/"
-  - "/posts/2026/05/2026-05-20-philosophy-of-tech-regression/"
+  - "/blogs/posts/2026/05/2026-05-21-knowledge-pipeline-over-harness/"
+  - "/blogs/posts/2026/03/harness-engineering/"
+  - "/blogs/posts/2026/03/ai-agent-qa/"
+  - "/blogs/posts/2026/03/claude-code-review/"
+  - "/blogs/posts/2026/04/anthropic-vs-openai-harness-strategy/"
+  - "/blogs/posts/2026/04/agent-harness-memory-lock-in/"
+  - "/blogs/posts/2026/04/2026-04-16-ai-agent-harness-confusion/"
+  - "/blogs/posts/2026/04/2026-04-17-ai-first-harness-engineering-creao/"
+  - "/blogs/posts/2026/04/2026-04-17-agent-harness-rag-context-size/"
+  - "/blogs/posts/2026/04/2026-04-14-claude-harness-v4-hokage/"
+  - "/blogs/posts/2026/04/2026-04-23-harness-engineering-agent-vs-user-harness/"
+  - "/blogs/posts/2026/04/2026-04-23-harness-engineering-beyond-rule-files/"
+  - "/blogs/posts/2026/05/2026-05-11-aws-agent-toolkit-strands-skills/"
+  - "/blogs/posts/2026/03/2026-03-02-f5f7afe224494ea830b0e01b607fbbc8/"
+  - "/blogs/posts/2026/03/2026-03-04-14eeecd540a136f4a5f87371a03f8145/"
+  - "/blogs/posts/2026/03/2026-03-27-prompt-to-harness-engineering/"
+  - "/blogs/posts/2026-03-09-harness-engineering/"
+  - "/blogs/posts/2026/03/2026-03-03-95278de03de967bcc74ff8b320222044/"
+  - "/blogs/posts/2026/05/2026-05-20-philosophy-of-tech-regression/"
 tags: ["agent", "品質保証", "CLAUDE.md", "設計パターン", "ロックイン"]
 ---
 
@@ -146,8 +146,8 @@ AI agent の性能を上げる正しい順番は **知識化 → 検索 → 評�
 - [ハーネスより先にナレッジ作成と『本気の意味検索』を整える — RAG の前にやることリスト](/blogs/posts/2026/05/2026-05-21-knowledge-pipeline-over-harness/) — 2026-05-21（ハーネス改善より検索パイプライン改善が先という対比論）
 - [ハーネスエンジニアリング](/blogs/posts/2026/03/harness-engineering/) — 2026-03
 - [AI エージェント QA 手法](/blogs/posts/2026/03/ai-agent-qa/) — 2026-03
-- [Anthropic vs OpenAI：Harness 戦略はなぜ真逆なのか](/blogs/posts/2026/04/anthropic-vs-openai-harness-strategy/) — 2026-04-13
-- [エージェントハーネスとメモリのロックイン問題](/blogs/posts/2026/04/agent-harness-memory-lock-in/) — 2026-04-12
+- [Anthropic vs OpenAI：Harness 戦略はなぜ真逆なのか](/blogs/posts/2026/04/2026-04-13-anthropic-vs-openai-harness-strategy/) — 2026-04-13
+- [エージェントハーネスとメモリのロックイン問題](/blogs/posts/2026/04/2026-04-12-agent-harness-memory-lock-in/) — 2026-04-12
 - [AI エージェントの「ハーネス」を巡る混乱](/blogs/posts/2026/04/2026-04-16-ai-agent-harness-confusion/) — 2026-04-16
 - [「AIファースト」戦略の本当の意味 — ハーネスエンジニアリングで 25 人チームが 6 週間を 1 日に短縮した方法](/blogs/posts/2026/04/2026-04-17-ai-first-harness-engineering-creao/) — 2026-04-17
 - [RAG なしでも高精度に動く Agent Harness の秘密](/blogs/posts/2026/04/2026-04-17-agent-harness-rag-context-size/) — 2026-04-17
@@ -158,5 +158,5 @@ AI agent の性能を上げる正しい順番は **知識化 → 検索 → 評�
 - [ハーネスエンジニアリング入門 — AIエージェントの性能はモデルではなく周辺設計で決まる](/blogs/posts/2026/03/2026-03-02-f5f7afe224494ea830b0e01b607fbbc8/) — 2026-03-02
 - [ハーネスエンジニアリング実践知 — 「AIを使う人」と「AIを設計する人」の決定的な差](/blogs/posts/2026/03/2026-03-04-14eeecd540a136f4a5f87371a03f8145/) — 2026-03-04
 - [Prompt Engineering から Harness Engineering へ: AI エンジニアリングの進化と「仕組みの設計力」の時代](/blogs/posts/2026/03/2026-03-27-prompt-to-harness-engineering/) — 2026-03-27
-- [Harness Engineering ベストプラクティス 2026 — AI コーディングエージェントを安定稼働させる設計術](/blogs/posts/2026-03-09-harness-engineering/) — 2026-03-09
+- [Harness Engineering ベストプラクティス 2026 — AI コーディングエージェントを安定稼働させる設計術](/blogs/posts/2026/03/harness-engineering/) — 2026-03-09
 - [AI が書いた CLAUDE.md は逆効果 --- 「コンテキストファイルの自動生成は精度を下げる」という研究](/blogs/posts/2026/03/2026-03-03-95278de03de967bcc74ff8b320222044/) — 2026-03-03

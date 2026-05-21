@@ -5,7 +5,7 @@ date: 2026-05-19
 lastmod: 2026-05-19
 aliases: ["multi-tenant", "multitenant", "マルチテナント", "マルチテナンシー", "SaaS マルチテナンシー"]
 related_posts:
-  - "/posts/2026/05/2026-05-19-multi-tenant-saas-architecture-guide/"
+  - "/blogs/posts/2026/05/2026-05-19-multi-tenant-saas-architecture-guide/"
 tags: ["マルチテナント", "SaaS", "アーキテクチャ", "AWS", "PostgreSQL"]
 ---
 

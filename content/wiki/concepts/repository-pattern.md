@@ -5,7 +5,7 @@ date: 2026-05-20
 lastmod: 2026-05-20
 aliases: ["repository pattern", "リポジトリパターン", "repository design pattern"]
 related_posts:
-  - "/posts/2026/05/2026-05-20-hexagonal-architecture-practical-guide/"
+  - "/blogs/posts/2026/05/2026-05-20-hexagonal-architecture-practical-guide/"
 tags: ["アーキテクチャ", "repository-pattern", "ddd", "design-pattern"]
 ---
 

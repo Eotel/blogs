@@ -5,8 +5,8 @@ date: 2026-04-14
 lastmod: 2026-04-14
 aliases: []
 related_posts:
-  - "/posts/2026/04/edinet-xbrl-python/"
-  - "/posts/2026/04/buffett-code-analysis/"
+  - "/blogs/posts/2026/04/edinet-xbrl-python/"
+  - "/blogs/posts/2026/04/buffett-code-analysis/"
 tags: ["Python", "XBRL", "EDINET", "金融データ", "財務分析"]
 ---
 
@@ -71,5 +71,5 @@ documents = response.json()
 
 ## ソース記事
 
-- [EDINET XBRL を Python で扱う](/blogs/posts/2026/04/edinet-xbrl-python/) — 2026-04-06
-- [バフェット・コード徹底分析](/blogs/posts/2026/04/buffett-code-analysis/) — 2026-04-07
+- [EDINET XBRL を Python で扱う](/blogs/posts/2026/04/2026-04-06-edinet-xbrl-python/) — 2026-04-06
+- [バフェット・コード徹底分析](/blogs/posts/2026/04/2026-04-07-buffett-code-analysis/) — 2026-04-07

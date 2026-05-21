@@ -5,9 +5,9 @@ date: 2026-05-19
 lastmod: 2026-05-21
 aliases: ["Parasite Human", "Parasitic Humanoid", "パラサイトヒューマンネット", "PHN", "PH"]
 related_posts:
-  - "/posts/2026/05/maeda-taro-parasite-human/"
-  - "/posts/2026/05/2026-05-20-philosophy-of-tech-regression/"
-  - "/posts/2026/05/enzo-mari-autoprogettazione/"
+  - "/blogs/posts/2026/05/maeda-taro-parasite-human/"
+  - "/blogs/posts/2026/05/2026-05-20-philosophy-of-tech-regression/"
+  - "/blogs/posts/2026/05/enzo-mari-autoprogettazione/"
 tags: ["パラサイトヒューマン", "前田太郎", "テレイグジスタンス", "agent", "身体性AI"]
 ---
 

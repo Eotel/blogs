@@ -5,7 +5,7 @@ date: 2026-05-09
 lastmod: 2026-05-09
 aliases: ["CanIRun", "ローカルLLMチェッカー"]
 related_posts:
-  - "/posts/2026/04/2026-04-22-canirun-ai-local-model-checker/"
+  - "/blogs/posts/2026/04/2026-04-22-canirun-ai-local-model-checker/"
 tags: ["ローカルLLM", "GPU", "VRAM", "ツール", "LLM"]
 ---
 

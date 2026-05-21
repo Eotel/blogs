@@ -5,8 +5,8 @@ date: 2026-04-06
 lastmod: 2026-05-12
 aliases: ["duckdb"]
 related_posts:
-  - "/posts/2026/03/duckdb-columnar-arrow/"
-  - "/posts/2026/03/2026-03-12-claude-code-sqlite-duckdb/"
+  - "/blogs/posts/2026/03/duckdb-columnar-arrow/"
+  - "/blogs/posts/2026/03/2026-03-12-claude-code-sqlite-duckdb/"
 tags: ["データベース", "OLAP", "SQL", "Python"]
 ---
 

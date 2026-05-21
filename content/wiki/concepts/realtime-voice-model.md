@@ -5,10 +5,10 @@ date: 2026-05-12
 lastmod: 2026-05-12
 aliases: ["TTS", "STT", "speech-to-speech", "S2S", "full-duplex voice", "voice model", "音声モデル", "リアルタイム音声"]
 related_posts:
-  - "/posts/2026/05/2026-05-12-tts-stt-frontier-2026-05/"
-  - "/posts/2026/03/2026-03-30-mistral-voxtral-tts/"
-  - "/posts/2026/03/2026-03-25-insanely-fast-whisper/"
-  - "/posts/2026/03/2026-03-04-1a39b3cc62c29543a5e6de566017beeb/"
+  - "/blogs/posts/2026/05/2026-05-12-tts-stt-frontier-2026-05/"
+  - "/blogs/posts/2026/03/2026-03-30-mistral-voxtral-tts/"
+  - "/blogs/posts/2026/03/2026-03-25-insanely-fast-whisper/"
+  - "/blogs/posts/2026/03/2026-03-04-1a39b3cc62c29543a5e6de566017beeb/"
 tags: ["TTS", "STT", "音声AI", "Realtime API", "voice-agent"]
 ---
 

@@ -5,7 +5,7 @@ date: 2026-04-06
 lastmod: 2026-05-12
 aliases: ["fastapi"]
 related_posts:
-  - "/posts/2024/06/2024-06-24-399b69f65db859d43cac092e76c96ee7/"
+  - "/blogs/posts/2024/06/2024-06-24-399b69f65db859d43cac092e76c96ee7/"
 tags: ["Python", "API", "Web フレームワーク", "ASGI"]
 ---
 

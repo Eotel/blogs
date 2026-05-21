@@ -5,7 +5,7 @@ date: 2026-04-16
 lastmod: 2026-04-16
 aliases: ["Danswer", "onyx"]
 related_posts:
-  - "/posts/2026/04/onyx-open-source-ai-platform/"
+  - "/blogs/posts/2026/04/onyx-open-source-ai-platform/"
 tags: ["RAG", "AIエージェント", "オープンソース", "セルフホスト", "Docker"]
 ---
 
@@ -58,4 +58,4 @@ chmod +x install.sh
 
 ## ソース記事
 
-- [Onyx（旧 Danswer）完全ガイド — 無料で使えるオープンソース AI プラットフォーム](/blogs/posts/2026/04/onyx-open-source-ai-platform/) — 2026-04-03
+- [Onyx（旧 Danswer）完全ガイド — 無料で使えるオープンソース AI プラットフォーム](/blogs/posts/2026/04/2026-04-03-onyx-open-source-ai-platform/) — 2026-04-03

@@ -11,7 +11,7 @@ categories: ["AI/LLM"]
 tags: ["claude", "anthropic", "agent", "mcp", "architecture"]
 ---
 
-[前回の記事](/blogs/posts/2026/04/claude-managed-agents/)では Claude Managed Agents の概要と業界インパクトを紹介した。本記事では、Anthropic のエンジニアリングブログ「Scaling Managed Agents: Decoupling the brain from the hands」に基づき、内部アーキテクチャを掘り下げる。
+[前回の記事](/blogs/posts/2026/04/2026-04-10-claude-managed-agents/)では Claude Managed Agents の概要と業界インパクトを紹介した。本記事では、Anthropic のエンジニアリングブログ「Scaling Managed Agents: Decoupling the brain from the hands」に基づき、内部アーキテクチャを掘り下げる。
 
 ## 全体アーキテクチャ
 

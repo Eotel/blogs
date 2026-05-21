@@ -279,7 +279,7 @@ tags: ["AIエージェント", "哲学", "主体性", "創発", "active inferenc
 - [パラサイトヒューマン — 前田太郎の構想](/blogs/posts/2026/05/maeda-taro-parasite-human/) — 本稿「欲望の身体的条件」と相互参照
 - [ヌースフィアとオメガ点：テイヤール・ド・シャルダンと AI シンギュラリティ](/blogs/posts/2026/05/teilhard-noosphere-omega-singularity/) — 集合知収束論との比較
 - [加藤周一の雑種文化論](/blogs/posts/2026/05/kato-shuichi-hybridity/) — 主体性の混成についての近接論
-- [Anthropic Mythos — Mark Fisher の資本主義リアリズムを通して](/blogs/posts/2026/04/anthropic-mythos-mark-fisher/) — Marx/Deleuze/Guattari 系の「欲望機械」議論
+- [Anthropic Mythos — Mark Fisher の資本主義リアリズムを通して](/blogs/posts/2026/04/2026-04-13-anthropic-mythos-mark-fisher/) — Marx/Deleuze/Guattari 系の「欲望機械」議論
 - [Anthropic の自動アライメント研究者 (AAR)](/blogs/posts/2026/04/2026-04-15-anthropic-automated-alignment-researchers/) — 責任帰属の実装側
 - [Harness Engineering — エージェントハーネスとユーザーハーネス](/blogs/posts/2026/04/2026-04-23-harness-engineering-agent-vs-user-harness/) — 「主体らしさの工学的合成」の実務側
 

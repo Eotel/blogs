@@ -5,7 +5,7 @@ date: 2026-04-06
 lastmod: 2026-05-12
 aliases: ["SPF", "DKIM", "DMARC", "メール認証"]
 related_posts:
-  - "/posts/2026/03/2026-03-03-cbe1f317a7559e8cdfed70450e123798/"
+  - "/blogs/posts/2026/03/2026-03-03-cbe1f317a7559e8cdfed70450e123798/"
 tags: ["メール認証", "SPF", "DKIM", "DMARC", "セキュリティ"]
 ---
 

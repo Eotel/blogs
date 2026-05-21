@@ -5,7 +5,7 @@ date: 2026-05-12
 lastmod: 2026-05-12
 aliases: ["AI自動化アフィリエイト", "SNS自動化", "AI収益化"]
 related_posts:
-  - "/posts/2026/04/2026-04-23-claude-code-sns-automation-affiliate/"
+  - "/blogs/posts/2026/04/2026-04-23-claude-code-sns-automation-affiliate/"
 tags: ["AIエージェント", "アフィリエイト", "SNS自動化", "マーケティング", "Claude Code"]
 ---
 

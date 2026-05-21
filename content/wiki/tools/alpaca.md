@@ -5,7 +5,7 @@ date: 2026-05-09
 lastmod: 2026-05-12
 aliases: ["alpaca-py", "Alpaca Markets", "アルパカ証券"]
 related_posts:
-  - "/posts/2026/04/2026-04-27-claude-code-stock-trading-automation/"
+  - "/blogs/posts/2026/04/2026-04-27-claude-code-stock-trading-automation/"
 tags: ["株式投資", "自動売買", "Python", "API", "米国株", "GitHub Actions"]
 ---
 

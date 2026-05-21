@@ -5,7 +5,7 @@ date: 2026-04-14
 lastmod: 2026-05-18
 aliases: []
 related_posts:
-  - "/posts/2026/04/mempalace-ai-memory/"
+  - "/blogs/posts/2026/04/mempalace-ai-memory/"
 tags: ["MemPalace", "LLMメモリ", "ChromaDB", "MCP", "オープンソース"]
 ---
 
@@ -51,4 +51,4 @@ tags: ["MemPalace", "LLMメモリ", "ChromaDB", "MCP", "オープンソース"]
 
 ## ソース記事
 
-- [MemPalace とは？LongMemEval 96.6%を記録した AI メモリシステムの仕組みと論争](/blogs/posts/2026/04/mempalace-ai-memory/) — 2026-04-13
+- [MemPalace とは？LongMemEval 96.6%を記録した AI メモリシステムの仕組みと論争](/blogs/posts/2026/04/2026-04-13-mempalace-ai-memory/) — 2026-04-13

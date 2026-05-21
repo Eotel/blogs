@@ -13,11 +13,11 @@ aliases:
   - "STE"
   - "steerable technical ecology"
 related_posts:
-  - "/posts/2026/05/technium-critique-and-transcendence/"
-  - "/posts/2026/05/emergence-without-will-and-desiring-subjects/"
-  - "/posts/2026/05/steerable-tech-ecology-design/"
-  - "/posts/2026/05/2026-05-20-philosophy-of-tech-regression/"
-  - "/posts/2026/05/enzo-mari-autoprogettazione/"
+  - "/blogs/posts/2026/05/technium-critique-and-transcendence/"
+  - "/blogs/posts/2026/05/emergence-without-will-and-desiring-subjects/"
+  - "/blogs/posts/2026/05/steerable-tech-ecology-design/"
+  - "/blogs/posts/2026/05/2026-05-20-philosophy-of-tech-regression/"
+  - "/blogs/posts/2026/05/enzo-mari-autoprogettazione/"
 tags:
   - "技術哲学"
   - "ケヴィン・ケリー"

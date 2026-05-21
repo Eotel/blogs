@@ -5,7 +5,7 @@ date: 2026-05-12
 lastmod: 2026-05-12
 aliases: ["Speculative TTS", "speculative decoding for TTS", "投機的デコード TTS", "VADUSA", "Llasa+", "SSD speech speculative decoding"]
 related_posts:
-  - "/posts/2026/05/2026-05-12-speculative-tts-acceleration-2026/"
+  - "/blogs/posts/2026/05/2026-05-12-speculative-tts-acceleration-2026/"
 tags: ["TTS", "音声合成", "投機的デコード", "推論高速化"]
 ---
 
