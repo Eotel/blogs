@@ -11,7 +11,7 @@ categories: ["AI/LLM"]
 tags: ["RAG", "ハイブリッド検索", "意味検索", "GraphRAG", "rerank", "Harness Engineering"]
 ---
 
-![AI システムにおける薄い『Harness』レイヤーと、その下に厚く積み上がった 6 段の Knowledge Pipeline（Parse → Metadata → BM25/Dense → Hybrid → Rerank → Citation）を対比したコンセプチュアルなヒーロー画像。下層のパイプラインが上層のハーネスを支えている様子をフラットでミニマルなデザインで表現](/blogs/images/knowledge-pipeline-over-harness-hero.png)
+![AI システムにおける薄い『Harness』レイヤーと、その下に厚く積み上がった Knowledge Pipeline（Parse → Metadata → BM25/Dense → Hybrid → Rerank → Citation を要約した 6 ステージ表現。本文で詳述する 7 段パイプラインを視覚的に圧縮した俯瞰図）を対比したコンセプチュアルなヒーロー画像。下層のパイプラインが上層のハーネスを支えている様子をフラットでミニマルなデザインで表現](/blogs/images/knowledge-pipeline-over-harness-hero.png)
 
 ## はじめに — ハーネスを磨いても、検索が腐っていれば agent は腐る
 
@@ -205,7 +205,7 @@ LlamaIndex は、`MarkdownNodeParser` で header path を metadata に持たせ�
 | 中規模 | Elastic / OpenSearch / Azure AI Search の hybrid + RRF + cross-encoder | lexical と semantic、ACL、更新運用がまとまる | vector only に寄せる |
 | 大規模 | Vespa か managed enterprise search を中核に、必要箇所のみ graph overlay | 高 QPS・巨大 corpus・multi-stage ranking に向く | 全文書を GraphRAG 化する |
 
-小規模では [pgvector](https://github.com/pgvector/pgvector) が exact NN を default にし、ANN は「recall を犠牲に速度を取る選択肢」として後から追加する方針を取っている点が効く。中規模で hybrid + RRF + cross-encoder rerank をすぐ始めるなら、Azure AI Search の hybrid + semantic ranker、Elastic/OpenSearch の hybrid + RRF + rerank が最も現実的な選択肢になる。なお「[RAG vs CAG という雑な対立をやめる](/blogs/posts/2026/05/2026-05-20-rag-cag-llm-knowledge-context-cache-design/)」で整理した『知識・コンテキスト・キャッシュの 3 軸』のうち、ここで扱っているのは『知識』軸の話だ。プロンプトキャッシュやロングコンテキストの話と混ぜないこと。
+小規模では [pgvector](https://github.com/pgvector/pgvector) が exact NN を default にし、ANN は「recall を犠牲に速度を取る選択肢」として後から追加する方針を取っている点が効く。中規模で hybrid + RRF + cross-encoder rerank をすぐ始めるなら、Azure AI Search の hybrid + semantic ranker、Elastic/OpenSearch の hybrid + RRF + rerank が最も現実的な選択肢になる。なお「[RAG vs CAG という雑な対立をやめる](/blogs/posts/2026/05/rag-cag-llm-knowledge-context-cache-design/)」で整理した『知識・コンテキスト・キャッシュの 3 軸』のうち、ここで扱っているのは『知識』軸の話だ。プロンプトキャッシュやロングコンテキストの話と混ぜないこと。
 
 ## 評価と運用設計
 
