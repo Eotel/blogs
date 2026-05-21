@@ -729,13 +729,16 @@ pagefind-modal-trigger button,
     color: var(--secondary);
 }
 .audio-overview__badge {
-    display: inline-block;
-    padding: 2px 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 12px 6px;
     border-radius: 999px;
     background: var(--ink);
     color: var(--bg, #fff);
     font-weight: 600;
     font-size: 0.75rem;
+    line-height: 1;
     letter-spacing: 0.04em;
 }
 .audio-overview__player {

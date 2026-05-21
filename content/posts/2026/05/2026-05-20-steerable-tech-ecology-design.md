@@ -1,14 +1,30 @@
 ---
-title: "操舵可能な技術生態系（STE）── ケヴィン・ケリーの Technium を AI ガバナンスの語彙に置き換える"
-slug: "steerable-tech-ecology-design"
+title: 操舵可能な技術生態系（STE）── ケヴィン・ケリーの Technium を AI ガバナンスの語彙に置き換える
+slug: steerable-tech-ecology-design
 date: 2026-05-20
 lastmod: 2026-05-20
 draft: false
-author: "eotel"
-model: "claude-opus-4-7"
-description: "ケヴィン・ケリーの Technium に代わる中範囲概念として「操舵可能な技術生態系 (Steerable Technological Ecosystem, STE)」を提案する。AI ガバナンス、修理する権利、cosmotechnics、EU AI Act、national compute を貫く設計語彙として、steerable / technical / ecology / selection environment / reversibility の五部品を Mumford・Ellul・Hughes・Latour・Jasanoff・Hui・Jackson の系譜から構築する。"
-categories: ["AI/LLM"]
-tags: ["技術哲学", "ケヴィン・ケリー", "テクニウム", "AIガバナンス", "修理する権利", "cosmotechnics", "STS"]
+author: eotel
+model: claude-opus-4-7
+description: ケヴィン・ケリーの Technium に代わる中範囲概念として「操舵可能な技術生態系 (Steerable Technological Ecosystem,
+  STE)」を提案する。AI ガバナンス、修理する権利、cosmotechnics、EU AI Act、national compute を貫く設計語彙として、steerable
+  / technical / ecology / selection environment / reversibility の五部品を Mumford・Ellul・Hughes・Latour・Jasanoff・Hui・Jackson
+  の系譜から構築する。
+categories:
+- AI/LLM
+tags:
+- 技術哲学
+- ケヴィン・ケリー
+- テクニウム
+- AIガバナンス
+- 修理する権利
+- cosmotechnics
+- STS
+audio_url: https://github.com/Eotel/blogs/releases/download/audio/2026-05-20-steerable-tech-ecology-design.m4a
+audio_lang: ja
+audio_generated_at: '2026-05-21T05:48:36Z'
+audio_source: notebooklm
+audio_format: deep_dive
 ---
 
 ![Steerable Technological Ecosystem の五部品（Steerable / Technical / Ecology / Selection Environment / Reversibility）が歯車のように連動する概念図](/blogs/images/steerable-tech-ecology-five-components.png)

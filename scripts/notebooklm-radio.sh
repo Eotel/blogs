@@ -412,9 +412,31 @@ if [ "$PREV_DEFAULT_PROFILE" != "$PROFILE" ]; then
 fi
 
 DOWNLOAD_EXIT=0
-nlm download audio "$NOTEBOOK_ID" \
-    --id "$ARTIFACT_ID" \
-    --output "$AUDIO_OUT_PATH" || DOWNLOAD_EXIT=$?
+# nlm 0.6.10 sometimes mangles the audio download URL (appends an `s512` image
+# size hint that yields HTTP 404). The failure is transient — a fresh
+# `nlm download audio` call regenerates the URL and usually succeeds. Retry up
+# to 4 times with short backoff before giving up.
+#
+# --id is omitted on purpose: each notebook has exactly one audio in our flow
+# (--force creates a new notebook rather than appending), so letting nlm pick
+# the latest audio is correct, and --id is independently broken for some text-
+# mode artifacts in 0.6.10.
+for ATTEMPT in 1 2 3 4; do
+    DOWNLOAD_EXIT=0
+    nlm download audio "$NOTEBOOK_ID" \
+        --output "$AUDIO_OUT_PATH" || DOWNLOAD_EXIT=$?
+    if [ "$DOWNLOAD_EXIT" -eq 0 ] && [ -s "$AUDIO_OUT_PATH" ]; then
+        if [ "$ATTEMPT" -gt 1 ]; then
+            echo "[notebooklm-radio] download succeeded on attempt $ATTEMPT" >&2
+        fi
+        break
+    fi
+    if [ "$ATTEMPT" -lt 4 ]; then
+        echo "[notebooklm-radio] download attempt $ATTEMPT failed (exit $DOWNLOAD_EXIT) — retrying in 5s" >&2
+        rm -f "$AUDIO_OUT_PATH"
+        sleep 5
+    fi
+done
 
 if [ "$RESTORE_PROFILE" -eq 1 ]; then
     nlm login switch "$PREV_DEFAULT_PROFILE" >/dev/null

@@ -1,14 +1,27 @@
 ---
 slug: 2026-05-11-transaction-strategies-saga-outbox-catalog
-title: "ACID から Saga まで — トランザクション戦略 10 種の地図と判断軸"
+title: ACID から Saga まで — トランザクション戦略 10 種の地図と判断軸
 date: 2026-05-11
 lastmod: 2026-05-11
 draft: false
-author: "eotel"
-model: "claude-opus-4-7"
-description: "分散トランザクションの 10 戦略（ACID・2PC・Saga 2方式・補償・Outbox・Inbox・TCC・Event Sourcing・CQRS）を一覧比較。判断フローと PostgreSQL + Python による Outbox 実装例つき。"
-categories: ["クラウド/インフラ"]
-tags: ["分散トランザクション", "saga", "outbox", "tcc", "event-sourcing", "postgresql"]
+author: eotel
+model: claude-opus-4-7
+description: 分散トランザクションの 10 戦略（ACID・2PC・Saga 2方式・補償・Outbox・Inbox・TCC・Event Sourcing・CQRS）を一覧比較。判断フローと
+  PostgreSQL + Python による Outbox 実装例つき。
+categories:
+- クラウド/インフラ
+tags:
+- 分散トランザクション
+- saga
+- outbox
+- tcc
+- event-sourcing
+- postgresql
+audio_url: https://github.com/Eotel/blogs/releases/download/audio/2026-05-11-transaction-strategies-saga-outbox-catalog.m4a
+audio_lang: ja
+audio_generated_at: '2026-05-21T05:53:14Z'
+audio_source: notebooklm
+audio_format: critique
 ---
 
 [前回の記事](/blogs/posts/2026/05/2026-05-11-modular-monolith-large-services/)で「modular monolith なら Saga や outbox は要らない」と書いた。逆に言えば、デプロイ単位を分けた瞬間からこれらの仕組みが要る。本稿はその「分けたあとの世界」で使える戦略を一覧で並べ、選び方の地図を示す試みだ。スコープはアプリケーション層のパターンに限定し、DB 内部の MVCC / WAL / 2PL、Raft や Paxos などのコンセンサスアルゴリズム、Spanner の TrueTime、ブロックチェーン的合意は本稿の外に置く。

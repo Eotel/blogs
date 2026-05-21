@@ -3,9 +3,15 @@
 #
 # Walks the user through:
 #   1. Select a blog post (fzf with preview; ★ marks posts that already have audio_url)
-#   2. Pick language (BCP-47), length, format
-#   3. Optionally type a focus prompt
-#   4. Confirm and dispatch to scripts/notebooklm-radio.sh
+#   2. Pick language (BCP-47)
+#   3. Pick length
+#   4. Pick format
+#   5. Optionally type a focus prompt
+#   6. Confirm and dispatch to scripts/notebooklm-radio.sh
+#
+# Each stage past the first supports going back: Esc on an fzf picker, ":b"
+# on the focus prompt, or "n" on the final confirm rewinds one step. Ctrl-C
+# (or ":q" / "q") aborts the whole script.
 #
 # Usage:
 #   ./scripts/notebooklm-radio-tui.sh
@@ -128,7 +134,121 @@ build_index() {
 }
 
 # ---------------------------------------------------------------
-# Stage 1: pick post
+# Stage helpers — each returns: 0=advance, 1=back, 2=abort.
+# Globals listed in the "Sets:" comments are mutated in place so the
+# step machine below can dispatch with positional/global state.
+# ---------------------------------------------------------------
+
+# Sets: DATE STAR SLUG TITLE MD_PATH FORCE_ARGS
+# Going "back" from stage 2 lands here and re-shows the picker.
+stage_select_post() {
+    local selected
+    selected=$(printf '%s\n' "$INDEX" | fzf \
+        --delimiter=$'\t' \
+        --with-nth=1,2,4 \
+        --preview="head -40 {5}" \
+        --preview-window=right:55%:wrap \
+        --bind="scroll-up:up,scroll-down:down,preview-scroll-up:preview-up,preview-scroll-down:preview-down" \
+        --header="blog post を選択   ★=audio あり   ↑↓/wheel=移動 / typing=絞り込み / Enter=決定 / Esc=中止" \
+        --prompt="post > " \
+        --height=90% \
+        --layout=reverse \
+        --info=inline) || return 2
+    [ -z "$selected" ] && return 2
+
+    DATE=$(printf '%s' "$selected" | awk -F'\t' '{print $1}')
+    STAR=$(printf '%s' "$selected" | awk -F'\t' '{print $2}')
+    SLUG=$(printf '%s' "$selected" | awk -F'\t' '{print $3}')
+    TITLE=$(printf '%s' "$selected" | awk -F'\t' '{print $4}')
+    MD_PATH=$(printf '%s' "$selected" | awk -F'\t' '{print $5}')
+
+    FORCE_ARGS=()
+    if [ "$STAR" = "★" ]; then
+        echo ""
+        echo "この post には既に audio_url が設定されています: $SLUG"
+        local regen
+        read -r -p "再生成しますか? [y]es / [n]o (post 選び直し) / [q]uit > " regen
+        case "$regen" in
+            y|Y|yes|YES) FORCE_ARGS+=(--force) ;;
+            q|Q|quit|QUIT) return 2 ;;
+            *) return 1 ;;  # re-display post picker
+        esac
+    fi
+    return 0
+}
+
+# Generic single-select picker with Esc=back / Ctrl-C=abort.
+# Args: var_name header prompt options default
+#
+# Implementation note: `--expect=esc` rebinds Esc from "abort" to
+# "accept with key=esc" — fzf then prints "esc\n" as the first line of
+# stdout, with the (empty) selection on the second line. Real abort
+# (Ctrl-C / Ctrl-G) still produces exit code != 0.
+stage_pick() {
+    local var_name="$1" header="$2" prompt="$3" options="$4" default="$5"
+    local out rc=0 key sel
+    out=$(printf '%s\n' "$options" | fzf \
+        --header="$header   Enter=決定 / Esc=戻る / Ctrl-C=中止" \
+        --prompt="$prompt > " \
+        --expect=esc \
+        --height=40% \
+        --layout=reverse \
+        --no-mouse \
+        --info=inline) || rc=$?
+    if [ "$rc" -ne 0 ]; then
+        return 2
+    fi
+    key=$(printf '%s\n' "$out" | sed -n '1p')
+    sel=$(printf '%s\n' "$out" | sed -n '2p')
+    if [ "$key" = "esc" ]; then
+        return 1
+    fi
+    sel=${sel:-$default}
+    printf -v "$var_name" '%s' "$sel"
+    return 0
+}
+
+# Sets: FOCUS. ":b" → back, ":q" → abort, empty Enter → no focus.
+stage_focus() {
+    echo ""
+    echo "==> Focus prompt（ホストに伝える追加指示）"
+    echo "    例: 「セキュリティ観点を強調」「初学者向けにかみくだいて」"
+    echo "    Enter=省略 / :b=戻る / :q=中止"
+    read -r -e -p "focus > " FOCUS
+    case "$FOCUS" in
+        :b|:back) FOCUS=""; return 1 ;;
+        :q|:quit) return 2 ;;
+    esac
+    return 0
+}
+
+# Final review. y → run, n/empty → back to focus, q → abort.
+stage_confirm() {
+    echo ""
+    echo "==> 生成内容の確認"
+    printf '  post     : %s  %s\n' "$DATE" "$TITLE"
+    printf '  md       : %s\n' "$MD_PATH"
+    printf '  language : %s\n' "$LANGUAGE"
+    printf '  length   : %s\n' "$LENGTH"
+    printf '  format   : %s\n' "$FORMAT"
+    if [ -n "$FOCUS" ]; then
+        printf '  focus    : %s\n' "$FOCUS"
+    fi
+    if [ ${#FORCE_ARGS[@]} -gt 0 ]; then
+        printf '  flags    : --force (既存 audio を上書き)\n'
+    fi
+    echo ""
+    local ans
+    read -r -p "[y]es 実行 / [n]o focus に戻る / [q]uit 中止 > " ans
+    case "$ans" in
+        y|Y|yes|YES) return 0 ;;
+        q|Q|quit|QUIT) return 2 ;;
+        *) return 1 ;;
+    esac
+}
+
+# ---------------------------------------------------------------
+# Build the index once
 # ---------------------------------------------------------------
 
 echo "==> blog post index を構築中..." >&2
@@ -136,58 +256,19 @@ INDEX=$(build_index | sort -r -t $'\t' -k1)
 POST_COUNT=$(printf '%s\n' "$INDEX" | wc -l | tr -d ' ')
 echo "    $POST_COUNT 件" >&2
 
-SELECTED=$(printf '%s\n' "$INDEX" | fzf \
-    --delimiter=$'\t' \
-    --with-nth=1,2,4 \
-    --preview="head -40 {5}" \
-    --preview-window=right:55%:wrap \
-    --bind="scroll-up:up,scroll-down:down,preview-scroll-up:preview-up,preview-scroll-down:preview-down" \
-    --header="blog post を選択   ★=audio あり   ↑↓/wheel=移動 / typing=絞り込み / Enter=決定 / Esc=中止" \
-    --prompt="post > " \
-    --height=90% \
-    --layout=reverse \
-    --info=inline)
-
-if [ -z "$SELECTED" ]; then
-    echo "中止." >&2
-    exit 0
-fi
-
-DATE=$(printf '%s' "$SELECTED" | awk -F'\t' '{print $1}')
-STAR=$(printf '%s' "$SELECTED" | awk -F'\t' '{print $2}')
-SLUG=$(printf '%s' "$SELECTED" | awk -F'\t' '{print $3}')
-TITLE=$(printf '%s' "$SELECTED" | awk -F'\t' '{print $4}')
-MD_PATH=$(printf '%s' "$SELECTED" | awk -F'\t' '{print $5}')
-
+# Mutable state filled in by stage_*
+DATE=""
+STAR=""
+SLUG=""
+TITLE=""
+MD_PATH=""
+LANGUAGE=""
+LENGTH=""
+FORMAT=""
+FOCUS=""
 FORCE_ARGS=()
-if [ "$STAR" = "★" ]; then
-    echo ""
-    echo "この post には既に audio_url が設定されています: $SLUG"
-    read -r -p "再生成しますか? [y/N] " REGEN
-    case "$REGEN" in
-        y|Y|yes|YES) FORCE_ARGS+=(--force) ;;
-        *) echo "中止."; exit 0 ;;
-    esac
-fi
 
-# ---------------------------------------------------------------
-# Stage 2-4: small fzf pickers for enum-typed options
-# ---------------------------------------------------------------
-
-pick_one() {
-    local header="$1"
-    local prompt="$2"
-    local options="$3"
-    printf '%s\n' "$options" | fzf \
-        --header="$header" \
-        --prompt="$prompt > " \
-        --height=40% \
-        --layout=reverse \
-        --no-mouse \
-        --info=inline
-}
-
-LANGUAGE=$(pick_one "audio 言語 (BCP-47)" "language" "ja
+LANG_OPTIONS="ja
 en
 en-US
 en-GB
@@ -197,56 +278,42 @@ es
 fr
 de
 pt-BR
-it") || true
-LANGUAGE=${LANGUAGE:-ja}
-
-LENGTH=$(pick_one "audio 長さ" "length" "default
+it"
+LENGTH_OPTIONS="default
 short
-long") || true
-LENGTH=${LENGTH:-default}
-
-FORMAT=$(pick_one "audio 形式" "format" "deep_dive
+long"
+FORMAT_OPTIONS="deep_dive
 brief
 critique
-debate") || true
-FORMAT=${FORMAT:-deep_dive}
+debate"
 
 # ---------------------------------------------------------------
-# Stage 5: free-form focus prompt
+# Step machine — each stage may return: advance(0), back(1), abort(2)
 # ---------------------------------------------------------------
 
-echo ""
-echo "==> Focus prompt（ホストに伝える追加指示。空 Enter で省略）"
-echo "    例: 「セキュリティ観点を強調」「初学者向けにかみくだいて」"
-read -r -e -p "focus > " FOCUS
+abort() { echo "中止." >&2; exit 0; }
+
+step=1
+while true; do
+    rc=0
+    case "$step" in
+        1) stage_select_post || rc=$?
+           case "$rc" in 0) step=2 ;; 1) step=1 ;; 2) abort ;; esac ;;
+        2) stage_pick LANGUAGE "audio 言語 (BCP-47)" "language" "$LANG_OPTIONS" "ja" || rc=$?
+           case "$rc" in 0) step=3 ;; 1) step=1 ;; 2) abort ;; esac ;;
+        3) stage_pick LENGTH "audio 長さ" "length" "$LENGTH_OPTIONS" "default" || rc=$?
+           case "$rc" in 0) step=4 ;; 1) step=2 ;; 2) abort ;; esac ;;
+        4) stage_pick FORMAT "audio 形式" "format" "$FORMAT_OPTIONS" "deep_dive" || rc=$?
+           case "$rc" in 0) step=5 ;; 1) step=3 ;; 2) abort ;; esac ;;
+        5) stage_focus || rc=$?
+           case "$rc" in 0) step=6 ;; 1) step=4 ;; 2) abort ;; esac ;;
+        6) stage_confirm || rc=$?
+           case "$rc" in 0) break ;; 1) step=5 ;; 2) abort ;; esac ;;
+    esac
+done
 
 # ---------------------------------------------------------------
-# Stage 6: confirm
-# ---------------------------------------------------------------
-
-echo ""
-echo "==> 生成内容の確認"
-printf '  post     : %s  %s\n' "$DATE" "$TITLE"
-printf '  md       : %s\n' "$MD_PATH"
-printf '  language : %s\n' "$LANGUAGE"
-printf '  length   : %s\n' "$LENGTH"
-printf '  format   : %s\n' "$FORMAT"
-if [ -n "$FOCUS" ]; then
-    printf '  focus    : %s\n' "$FOCUS"
-fi
-if [ ${#FORCE_ARGS[@]} -gt 0 ]; then
-    printf '  flags    : --force (既存 audio を上書き)\n'
-fi
-echo ""
-read -r -p "この内容で notebooklm-radio.sh を実行しますか? [y/N] " CONFIRM
-
-case "$CONFIRM" in
-    y|Y|yes|YES) ;;
-    *) echo "中止."; exit 0 ;;
-esac
-
-# ---------------------------------------------------------------
-# Stage 7: dispatch
+# Dispatch
 # ---------------------------------------------------------------
 
 ARGS=(
