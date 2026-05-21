@@ -21,7 +21,7 @@ related_posts:
   - "/blogs/posts/2026/03/2026-03-02-f5f7afe224494ea830b0e01b607fbbc8/"
   - "/blogs/posts/2026/03/2026-03-04-14eeecd540a136f4a5f87371a03f8145/"
   - "/blogs/posts/2026/03/2026-03-27-prompt-to-harness-engineering/"
-  - "/blogs/posts/2026-03-09-harness-engineering/"
+  - "/blogs/posts/2026/03/harness-engineering/"
   - "/blogs/posts/2026/03/2026-03-03-95278de03de967bcc74ff8b320222044/"
   - "/blogs/posts/2026/05/2026-05-20-philosophy-of-tech-regression/"
 tags: ["agent", "品質保証", "CLAUDE.md", "設計パターン", "ロックイン"]

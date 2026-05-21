@@ -52,7 +52,7 @@ related_posts:
   - "/blogs/posts/2026/04/2026-04-06-openclaw-gemma4-local-setup/"
   - "/blogs/posts/2026/04/2026-04-07-openclaw-video-generation/"
   - "/blogs/posts/2026/04/2026-04-12-openclaw-vs-hermes/"
-  - "/blogs/posts/2026-03-10-openclaw-claude-code-setup/"
+  - "/blogs/posts/2026/03/openclaw-claude-code-setup/"
   - "/blogs/posts/2026/03/2026-03-05-1128207db83f7ca1a2c940dba0fdc2c9/"
 tags: ["agent", "オープンソース", "フレームワーク", "ローカルエージェント"]
 ---
