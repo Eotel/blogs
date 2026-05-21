@@ -5,14 +5,14 @@ date: 2026-05-11
 lastmod: 2026-05-12
 aliases: ["Agent Skills", "SKILL.md", "Skills format", "Agent Skills format"]
 related_posts:
-  - "/posts/2026/03/2026-03-10-claude-code-skills-guide/"
-  - "/posts/2026/04/2026-04-17-apm-agent-package-manager/"
-  - "/posts/2026/05/2026-05-11-aws-agent-toolkit-strands-skills/"
-  - "/posts/2026/02/2026-02-27-1f9912da7aa40da008ba4cb88d519c13/"
-  - "/posts/2026/02/2026-02-27-fb664679cf44fad6134bf9ff360ec7c1/"
-  - "/posts/2026/03/2026-03-04-5681ba524366e175aa03f28ba194d17c/"
-  - "/posts/2026/03/2026-03-04-e5839407fe23c117b54ce5ed77dac5fa/"
-  - "/posts/2026/03/2026-03-11-claude-code-skill-creator/"
+  - "/blogs/posts/2026/03/2026-03-10-claude-code-skills-guide/"
+  - "/blogs/posts/2026/04/2026-04-17-apm-agent-package-manager/"
+  - "/blogs/posts/2026/05/2026-05-11-aws-agent-toolkit-strands-skills/"
+  - "/blogs/posts/2026/02/2026-02-27-1f9912da7aa40da008ba4cb88d519c13/"
+  - "/blogs/posts/2026/02/2026-02-27-fb664679cf44fad6134bf9ff360ec7c1/"
+  - "/blogs/posts/2026/03/2026-03-04-5681ba524366e175aa03f28ba194d17c/"
+  - "/blogs/posts/2026/03/2026-03-04-e5839407fe23c117b54ce5ed77dac5fa/"
+  - "/blogs/posts/2026/03/2026-03-11-claude-code-skill-creator/"
 tags: ["skills", "agent", "interop", "claude", "aws"]
 ---
 

@@ -5,10 +5,10 @@ date: 2026-04-23
 lastmod: 2026-05-12
 aliases: ["Social Simulation", "マルチエージェントシミュレーション"]
 related_posts:
-  - "/posts/2026/04/2026-04-15-ai-agents-virtual-shibuya-simulation/"
-  - "/posts/2026/04/2026-04-27-claude-code-kabukicho-ai-simulation/"
-  - "/posts/2026/04/2026-04-14-claude-code-world-ai-simulator/"
-  - "/posts/2026/05/emergence-without-will-and-desiring-subjects/"
+  - "/blogs/posts/2026/04/2026-04-15-ai-agents-virtual-shibuya-simulation/"
+  - "/blogs/posts/2026/04/2026-04-27-claude-code-kabukicho-ai-simulation/"
+  - "/blogs/posts/2026/04/2026-04-14-claude-code-world-ai-simulator/"
+  - "/blogs/posts/2026/05/emergence-without-will-and-desiring-subjects/"
 tags: ["AIエージェント", "マルチエージェント", "創発", "都市開発", "シミュレーション", "Claude Code"]
 ---
 

@@ -5,7 +5,7 @@ date: 2026-05-09
 lastmod: 2026-05-12
 aliases: ["Google MCP", "Workspace MCP"]
 related_posts:
-  - "/posts/2026/04/2026-04-23-google-workspace-mcp-server/"
+  - "/blogs/posts/2026/04/2026-04-23-google-workspace-mcp-server/"
 tags: ["MCP", "Google", "Gmail", "Google Calendar", "Claude Code", "自動化"]
 ---
 

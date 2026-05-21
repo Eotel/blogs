@@ -11,8 +11,8 @@ aliases:
   - "縮退の哲学"
   - "intentional simplification"
 related_posts:
-  - "/posts/2026/05/2026-05-20-philosophy-of-tech-regression/"
-  - "/posts/2026/05/enzo-mari-autoprogettazione/"
+  - "/blogs/posts/2026/05/2026-05-20-philosophy-of-tech-regression/"
+  - "/blogs/posts/2026/05/enzo-mari-autoprogettazione/"
 tags:
   - "技術哲学"
   - "local-first"

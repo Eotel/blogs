@@ -5,7 +5,7 @@ date: 2026-04-15
 lastmod: 2026-04-15
 aliases: ["draw.io AI生成", "drawio自動生成"]
 related_posts:
-  - "/posts/2026/03/genai-drawio-creator/"
+  - "/blogs/posts/2026/03/2026-03-17-genai-drawio-creator/"
 tags: ["draw.io", "Amazon Bedrock", "Claude", "図解生成", "arXiv"]
 ---
 
@@ -41,4 +41,4 @@ AWS Japan AI チームが開発した、自然言語のテキストから draw.i
 
 ## ソース記事
 
-- [AWS Japan AI チームが draw.io 図解自動生成を arXiv 論文化](/blogs/posts/2026/03/genai-drawio-creator/) — 2026-03-17
+- [AWS Japan AI チームが draw.io 図解自動生成を arXiv 論文化](/blogs/posts/2026/03/2026-03-17-genai-drawio-creator/) — 2026-03-17

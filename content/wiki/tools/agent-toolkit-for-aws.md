@@ -5,7 +5,7 @@ date: 2026-05-11
 lastmod: 2026-05-11
 aliases: ["agent-toolkit-for-aws", "AWS Agent Toolkit"]
 related_posts:
-  - "/posts/2026/05/2026-05-11-aws-agent-toolkit-strands-skills/"
+  - "/blogs/posts/2026/05/2026-05-11-aws-agent-toolkit-strands-skills/"
 tags: ["aws", "agent", "mcp", "skills", "toolkit"]
 ---
 

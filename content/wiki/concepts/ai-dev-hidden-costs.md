@@ -5,7 +5,7 @@ date: 2026-05-09
 lastmod: 2026-05-09
 aliases: ["AI開発 隠れたコスト", "vibe-coding コスト"]
 related_posts:
-  - "/posts/2026/04/2026-04-23-ai-driven-dev-hidden-costs/"
+  - "/blogs/posts/2026/04/2026-04-23-ai-driven-dev-hidden-costs/"
 tags: ["AI開発", "技術的負債", "開発コスト", "vibe-coding", "エンジニアリング"]
 ---
 

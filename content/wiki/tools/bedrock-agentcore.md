@@ -5,7 +5,7 @@ date: 2026-05-11
 lastmod: 2026-05-12
 aliases: ["Bedrock AgentCore", "AgentCore", "AgentCore Runtime"]
 related_posts:
-  - "/posts/2026/05/2026-05-11-aws-agent-toolkit-strands-skills/"
+  - "/blogs/posts/2026/05/2026-05-11-aws-agent-toolkit-strands-skills/"
 tags: ["aws", "bedrock", "agent", "runtime", "deployment"]
 ---
 

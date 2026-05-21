@@ -5,7 +5,7 @@ date: 2026-05-12
 lastmod: 2026-05-12
 aliases: ["tach", "tach-org/tach", "gauge-sh/tach"]
 related_posts:
-  - "/posts/2026/05/2026-05-12-packwerk-equivalents-python-typescript-dotnet/"
+  - "/blogs/posts/2026/05/2026-05-12-packwerk-equivalents-python-typescript-dotnet/"
 tags: ["python", "modular-monolith", "アーキテクチャ", "静的解析", "rust"]
 ---
 

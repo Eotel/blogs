@@ -5,7 +5,7 @@ date: 2026-04-15
 lastmod: 2026-04-15
 aliases: ["ClaudeのEQ", "脳内トレース", "claude-thought-tracing"]
 related_posts:
-  - "/posts/2026/04/claude-eq-thought-tracing/"
+  - "/blogs/posts/2026/04/2026-04-13-claude-eq-thought-tracing/"
 tags: ["claude", "EQ", "プロンプト", "対話", "llm"]
 ---
 
@@ -42,4 +42,4 @@ Claude Code では「アダプティブ・シンキング」として、タス�
 
 ## ソース記事
 
-- [ClaudeのEQとは？「脳内トレース能力」が変えるAI対話の本質](/blogs/posts/2026/04/claude-eq-thought-tracing/) — 2026-04-13
+- [ClaudeのEQとは？「脳内トレース能力」が変えるAI対話の本質](/blogs/posts/2026/04/2026-04-13-claude-eq-thought-tracing/) — 2026-04-13

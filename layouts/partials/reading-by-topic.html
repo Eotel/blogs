@@ -6,7 +6,7 @@
   {{- range $name, $taxonomy := $terms }}
     {{- $count := len $taxonomy.Pages }}
     {{- if gt $count 0 }}
-      {{- $counted = $counted | append (dict "name" $name "count" $count "permalink" (printf "/categories/%s/" (urlize $name))) }}
+      {{- $counted = $counted | append (dict "name" $name "count" $count "permalink" (printf "categories/%s/" (urlize $name))) }}
     {{- end }}
   {{- end }}
   {{- if $counted }}

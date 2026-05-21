@@ -5,10 +5,10 @@ date: 2026-04-27
 lastmod: 2026-05-12
 aliases: ["django-mptt", "django-tree-queries", "MPTT 移行"]
 related_posts:
-  - "/posts/2026/04/2026-04-20-django-mptt-unmaintained-tree-queries/"
-  - "/posts/2023/04/2023-04-25-c42e36d3c5893501e8d0396aa267007a/"
-  - "/posts/2023/04/2023-04-28-4c89ec514b6469e6d0ad10c3f3e07c76/"
-  - "/posts/2023/05/2023-05-04-5f493f7ba9d7f25c820cfc50bea433e9/"
+  - "/blogs/posts/2026/04/2026-04-20-django-mptt-unmaintained-tree-queries/"
+  - "/blogs/posts/2023/04/2023-04-25-c42e36d3c5893501e8d0396aa267007a/"
+  - "/blogs/posts/2023/04/2023-04-28-4c89ec514b6469e6d0ad10c3f3e07c76/"
+  - "/blogs/posts/2023/05/2023-05-04-5f493f7ba9d7f25c820cfc50bea433e9/"
 tags: ["Django", "Python", "django-mptt", "django-tree-queries", "MPTT", "Recursive CTE", "ORM"]
 ---
 

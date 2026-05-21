@@ -5,7 +5,7 @@ date: 2026-05-09
 lastmod: 2026-05-09
 aliases: ["エージェントメモリ", "fake memory", "agent memory design"]
 related_posts:
-  - "/posts/2026/04/2026-04-27-ai-agent-fake-memory-markdown-vs-graph/"
+  - "/blogs/posts/2026/04/2026-04-27-ai-agent-fake-memory-markdown-vs-graph/"
 tags: ["AIエージェント", "メモリ", "ナレッジグラフ", "ベクトル検索", "設計パターン"]
 ---
 

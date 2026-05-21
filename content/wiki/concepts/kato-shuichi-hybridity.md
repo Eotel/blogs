@@ -9,8 +9,8 @@ aliases:
   - "Hybrid Culture"
   - "Kato Shuichi hybridity"
 related_posts:
-  - "/posts/2026/05/kato-shuichi-hybridity/"
-  - "/posts/2026/05/technium-critique-and-transcendence/"
+  - "/blogs/posts/2026/05/kato-shuichi-hybridity/"
+  - "/blogs/posts/2026/05/technium-critique-and-transcendence/"
 tags:
   - "加藤周一"
   - "雑種文化論"

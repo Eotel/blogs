@@ -5,10 +5,10 @@ date: 2026-05-09
 lastmod: 2026-05-12
 aliases: ["Claude Code コスト削減", "トークン削減"]
 related_posts:
-  - "/posts/2026/04/2026-04-23-claude-code-plan-mode-cost-reduction/"
-  - "/posts/2026/04/2026-04-17-claude-caveman-token-reduction/"
-  - "/posts/2026/04/2026-04-23-claude-code-local-llm-vllm/"
-  - "/posts/2026/04/2026-04-07-rtk-rust-token-killer-claude-code/"
+  - "/blogs/posts/2026/04/2026-04-23-claude-code-plan-mode-cost-reduction/"
+  - "/blogs/posts/2026/04/2026-04-17-claude-caveman-token-reduction/"
+  - "/blogs/posts/2026/04/2026-04-23-claude-code-local-llm-vllm/"
+  - "/blogs/posts/2026/04/2026-04-07-rtk-rust-token-killer-claude-code/"
 tags: ["Claude Code", "コスト削減", "Plan Mode", "vLLM", "トークン最適化"]
 ---
 

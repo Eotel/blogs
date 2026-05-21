@@ -5,7 +5,7 @@ date: 2026-05-20
 lastmod: 2026-05-20
 aliases: ["hexagonal architecture", "ヘキサゴナルアーキテクチャ", "ports and adapters", "ports-and-adapters", "ポーツアンドアダプタ"]
 related_posts:
-  - "/posts/2026/05/2026-05-20-hexagonal-architecture-practical-guide/"
+  - "/blogs/posts/2026/05/2026-05-20-hexagonal-architecture-practical-guide/"
 tags: ["アーキテクチャ", "hexagonal-architecture", "ports-and-adapters", "design-pattern"]
 ---
 

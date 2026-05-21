@@ -5,8 +5,8 @@ date: 2026-04-06
 lastmod: 2026-05-19
 aliases: ["supabase"]
 related_posts:
-  - "/posts/2026/03/supabase-agent-skills/"
-  - "/posts/2026/05/2026-05-19-multi-tenant-saas-architecture-guide/"
+  - "/blogs/posts/2026/03/2026-03-30-supabase-agent-skills/"
+  - "/blogs/posts/2026/05/2026-05-19-multi-tenant-saas-architecture-guide/"
 tags: ["BaaS", "PostgreSQL", "API", "RLS", "Claude Code", "マルチテナント"]
 ---
 
@@ -65,5 +65,5 @@ Supabase の RLS は **マルチテナント SaaS の shared-schema 分離パタ
 
 ## ソース記事
 
-- [Supabase × Claude Code: agent-skills でパフォーマンスと RLS の正確性を高める](/blogs/posts/2026/03/supabase-agent-skills/) — 2026-03-30
+- [Supabase × Claude Code: agent-skills でパフォーマンスと RLS の正確性を高める](/blogs/posts/2026/03/2026-03-30-supabase-agent-skills/) — 2026-03-30
 - [マルチテナント SaaS アーキテクチャ設計ガイド ── silo / bridge / pool から hybrid 運用まで](/blogs/posts/2026/05/2026-05-19-multi-tenant-saas-architecture-guide/) — 2026-05-19

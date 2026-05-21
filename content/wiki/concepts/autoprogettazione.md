@@ -12,7 +12,7 @@ aliases:
   - "判断教育"
   - "judgement school"
 related_posts:
-  - "/posts/2026/05/enzo-mari-autoprogettazione/"
+  - "/blogs/posts/2026/05/enzo-mari-autoprogettazione/"
 tags:
   - "エンツォ・マーリ"
   - "デザイン哲学"

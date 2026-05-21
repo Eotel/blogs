@@ -5,7 +5,7 @@ date: 2026-05-09
 lastmod: 2026-05-12
 aliases: ["vllm", "ローカルLLM推論"]
 related_posts:
-  - "/posts/2026/04/2026-04-23-claude-code-local-llm-vllm/"
+  - "/blogs/posts/2026/04/2026-04-23-claude-code-local-llm-vllm/"
 tags: ["ローカルLLM", "GPU", "OpenAI互換", "Python", "コスト削減"]
 ---
 

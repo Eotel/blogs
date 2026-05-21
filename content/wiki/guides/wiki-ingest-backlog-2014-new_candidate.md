@@ -4,8 +4,7 @@ description: "全記事 wiki-ingest で、既存 Wiki への高信頼統合に�
 date: 2026-05-12
 lastmod: 2026-05-12
 aliases: ["wiki ingest backlog", "未蒸留記事"]
-related_posts:
-  - "/posts/2014/11/2014-11-14-46572e461740894b2cf8/"
+related_posts: []
 tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 ---
 
@@ -15,4 +14,3 @@ tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 
 ## レビュー対象
 
-- [# onename.io](/blogs/posts/2014/11/2014-11-14-46572e461740894b2cf8/) — 2014-11-14 / new_candidate

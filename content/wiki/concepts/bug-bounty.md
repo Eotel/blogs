@@ -5,7 +5,7 @@ date: 2026-05-20
 lastmod: 2026-05-20
 aliases: ["バグバウンティ", "BBP", "Bug Bounty Program", "脆弱性報奨金"]
 related_posts:
-  - "/posts/2026/05/security-bounty-hunter-reorganization/"
+  - "/blogs/posts/2026/05/security-bounty-hunter-reorganization/"
 tags: ["bug-bounty", "脆弱性開示", "VRP", "AppSec", "セキュリティ"]
 ---
 

@@ -4,9 +4,7 @@ description: "全記事 wiki-ingest で、既存 Wiki への高信頼統合に�
 date: 2026-05-12
 lastmod: 2026-05-12
 aliases: ["wiki ingest backlog", "未蒸留記事"]
-related_posts:
-  - "/posts/2017/03/2017-03-12-d9a83ef0140d9b919444f2e1cccea8e1/"
-  - "/posts/2017/06/2017-06-15-cb128f56c38e0c4ad481ed71ac13b406/"
+related_posts: []
 tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 ---
 
@@ -16,5 +14,3 @@ tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 
 ## レビュー対象
 
-- [横浜中華街](/blogs/posts/2017/03/2017-03-12-d9a83ef0140d9b919444f2e1cccea8e1/) — 2017-03-12 / review_candidate
-- [Apple Watch](/blogs/posts/2017/06/2017-06-15-cb128f56c38e0c4ad481ed71ac13b406/) — 2017-06-15 / review_candidate

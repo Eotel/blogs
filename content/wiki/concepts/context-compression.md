@@ -5,11 +5,11 @@ date: 2026-04-06
 lastmod: 2026-05-20
 aliases: ["Context Compression", "コンテキスト管理"]
 related_posts:
-  - "/posts/2026/05/rag-cag-llm-knowledge-context-cache-design/"
-  - "/posts/2026/04/claude-code-context-compression/"
-  - "/posts/2026/04/2026-04-17-claude-code-context-rot-session-management/"
-  - "/posts/2026/04/2026-04-17-claude-caveman-token-reduction/"
-  - "/posts/2026/04/2026-04-15-claude-rate-limit-mac-mini-local-model/"
+  - "/blogs/posts/2026/05/rag-cag-llm-knowledge-context-cache-design/"
+  - "/blogs/posts/2026/04/claude-code-context-compression/"
+  - "/blogs/posts/2026/04/2026-04-17-claude-code-context-rot-session-management/"
+  - "/blogs/posts/2026/04/2026-04-17-claude-caveman-token-reduction/"
+  - "/blogs/posts/2026/04/2026-04-15-claude-rate-limit-mac-mini-local-model/"
 tags: ["LLM", "claude-code", "コンテキスト", "トークン削減"]
 ---
 

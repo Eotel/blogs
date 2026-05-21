@@ -5,17 +5,17 @@ date: 2026-04-06
 lastmod: 2026-05-12
 aliases: ["ollama"]
 related_posts:
-  - "/posts/2026/03/claude-code-ollama-local-free/"
-  - "/posts/2026/03/kali-ollama-mcp-pentesting/"
-  - "/posts/2026/03/2026-03-04-9c65e3a8bc648a1493bf0a8fe0fa3bb8/"
-  - "/posts/2026/03/2026-03-04-cde933b6eb635a778d7b053610aca40a/"
-  - "/posts/2026/03/2026-03-04-f7bad4476f8bec3e58bcf01848bfb807/"
-  - "/posts/2026/03/2026-03-05-bf2e6519b561967327735da3f05142be/"
-  - "/posts/2026/03/2026-03-06-4103685108dfb6be44f9a0ec050655a7/"
-  - "/posts/2026/03/2026-03-06-9023009193920fd0ad17eda629351b18/"
-  - "/posts/2026/03/2026-03-13-claude-code-local-llm-kv-cache/"
-  - "/posts/2026/04/2026-04-06-openclaw-gemma4-local-setup/"
-  - "/posts/2026/03/2026-03-04-85421d98965c435640844d40965f12f7/"
+  - "/blogs/posts/2026/03/claude-code-ollama-local-free/"
+  - "/blogs/posts/2026/03/kali-ollama-mcp-pentesting/"
+  - "/blogs/posts/2026/03/2026-03-04-9c65e3a8bc648a1493bf0a8fe0fa3bb8/"
+  - "/blogs/posts/2026/03/2026-03-04-cde933b6eb635a778d7b053610aca40a/"
+  - "/blogs/posts/2026/03/2026-03-04-f7bad4476f8bec3e58bcf01848bfb807/"
+  - "/blogs/posts/2026/03/2026-03-05-bf2e6519b561967327735da3f05142be/"
+  - "/blogs/posts/2026/03/2026-03-06-4103685108dfb6be44f9a0ec050655a7/"
+  - "/blogs/posts/2026/03/2026-03-06-9023009193920fd0ad17eda629351b18/"
+  - "/blogs/posts/2026/03/2026-03-13-claude-code-local-llm-kv-cache/"
+  - "/blogs/posts/2026/04/2026-04-06-openclaw-gemma4-local-setup/"
+  - "/blogs/posts/2026/03/2026-03-04-85421d98965c435640844d40965f12f7/"
 tags: ["LLM", "ローカル実行", "オープンソース"]
 ---
 

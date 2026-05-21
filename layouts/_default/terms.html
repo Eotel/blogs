@@ -12,7 +12,7 @@
   <ul class="terms__list">
     {{- range $terms.ByCount }}
     <li class="terms__entry">
-      <a class="terms__name" href="{{ printf "/%s/%s/" $type (urlize .Name) | relURL }}">{{ .Name }}</a>
+      <a class="terms__name" href="{{ printf "%s/%s/" $type (urlize .Name) | relURL }}">{{ .Name }}</a>
       <span class="terms__count">{{ .Count }}</span>
     </li>
     {{- end }}

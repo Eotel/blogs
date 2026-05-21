@@ -5,7 +5,7 @@ date: 2026-05-11
 lastmod: 2026-05-12
 aliases: ["TrussC", "trussc", "tcx"]
 related_posts:
-  - "/posts/2026/05/2026-05-11-truss-c-openframeworks-alternative/"
+  - "/blogs/posts/2026/05/2026-05-11-truss-c-openframeworks-alternative/"
 tags: ["truss-c", "creative-coding", "c++", "openframeworks", "sokol", "webgpu", "mcp"]
 ---
 

@@ -5,8 +5,8 @@ date: 2026-05-20
 lastmod: 2026-05-20
 aliases: ["cqrs", "command query responsibility segregation", "command-query responsibility segregation"]
 related_posts:
-  - "/posts/2026/05/2026-05-20-hexagonal-architecture-practical-guide/"
-  - "/posts/2026/05/2026-05-11-transaction-strategies-saga-outbox-catalog/"
+  - "/blogs/posts/2026/05/2026-05-20-hexagonal-architecture-practical-guide/"
+  - "/blogs/posts/2026/05/2026-05-11-transaction-strategies-saga-outbox-catalog/"
 tags: ["アーキテクチャ", "cqrs", "ddd", "design-pattern"]
 ---
 

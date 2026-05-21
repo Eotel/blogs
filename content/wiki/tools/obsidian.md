@@ -5,11 +5,11 @@ date: 2026-04-23
 lastmod: 2026-05-12
 aliases: ["オブシディアン", "PKM", "Personal Knowledge Management", "第二の脳"]
 related_posts:
-  - "/posts/2026/04/2026-04-17-obsidian-pkm-second-brain/"
-  - "/posts/2026/04/2026-04-22-obsidian-claude-code-personal-os/"
-  - "/posts/2026/04/2026-04-23-claude-code-obsidian-second-brain/"
-  - "/posts/2026/03/2026-03-05-00a5a21b56da09807d7c114573cbcf14/"
-  - "/posts/2026/04/2026-04-09-exbrain-claude-code-obsidian-ai-brain/"
+  - "/blogs/posts/2026/04/2026-04-17-obsidian-pkm-second-brain/"
+  - "/blogs/posts/2026/04/2026-04-22-obsidian-claude-code-personal-os/"
+  - "/blogs/posts/2026/04/2026-04-23-claude-code-obsidian-second-brain/"
+  - "/blogs/posts/2026/03/2026-03-05-00a5a21b56da09807d7c114573cbcf14/"
+  - "/blogs/posts/2026/04/2026-04-09-exbrain-claude-code-obsidian-ai-brain/"
 tags: ["PKM", "ナレッジ管理", "Markdown", "ツール", "Claude Code", "LLM Wiki"]
 ---
 

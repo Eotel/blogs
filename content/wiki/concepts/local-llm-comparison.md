@@ -5,15 +5,15 @@ date: 2026-04-15
 lastmod: 2026-05-12
 aliases: ["ローカルLLM", "local-llm", "オープンソースLLM比較"]
 related_posts:
-  - "/posts/2026/04/gemma4-vs-qwen35-local-llm/"
-  - "/posts/2026/04/microsoft-bitnet-open-source-1bit-llm/"
-  - "/posts/2026/04/gemma4-api-economy-disruption/"
-  - "/posts/2026/04/claude-rate-limit-mac-mini-local-model/"
-  - "/posts/2026/03/2026-03-04-9c65e3a8bc648a1493bf0a8fe0fa3bb8/"
-  - "/posts/2026/03/2026-03-04-cde933b6eb635a778d7b053610aca40a/"
-  - "/posts/2026/03/2026-03-04-f7bad4476f8bec3e58bcf01848bfb807/"
-  - "/posts/2026/03/2026-03-06-4103685108dfb6be44f9a0ec050655a7/"
-  - "/posts/2026/03/2026-03-13-claude-code-local-llm-kv-cache/"
+  - "/blogs/posts/2026/04/2026-04-07-gemma4-vs-qwen35-local-llm/"
+  - "/blogs/posts/2026/04/2026-04-07-microsoft-bitnet-open-source-1bit-llm/"
+  - "/blogs/posts/2026/04/2026-04-07-gemma4-api-economy-disruption/"
+  - "/blogs/posts/2026/04/2026-04-15-claude-rate-limit-mac-mini-local-model/"
+  - "/blogs/posts/2026/03/2026-03-04-9c65e3a8bc648a1493bf0a8fe0fa3bb8/"
+  - "/blogs/posts/2026/03/2026-03-04-cde933b6eb635a778d7b053610aca40a/"
+  - "/blogs/posts/2026/03/2026-03-04-f7bad4476f8bec3e58bcf01848bfb807/"
+  - "/blogs/posts/2026/03/2026-03-06-4103685108dfb6be44f9a0ec050655a7/"
+  - "/blogs/posts/2026/03/2026-03-13-claude-code-local-llm-kv-cache/"
 tags: ["ローカルLLM", "Gemma", "Qwen", "BitNet", "オープンソースLLM", "Apple Silicon"]
 ---
 
@@ -81,10 +81,10 @@ Gemma 4 の Apache 2.0 ライセンスと E2B モデルのスマートフォン�
 
 ## ソース記事
 
-- [Gemma 4 31B vs Qwen3.5-27B — ローカルLLM最強はどちらか](/blogs/posts/2026/04/gemma4-vs-qwen35-local-llm/) — 2026-04-07
-- [Microsoft BitNet 完全オープンソース化：GPUなしで1000億パラメータLLMをCPUで動かす時代へ](/blogs/posts/2026/04/microsoft-bitnet-open-source-1bit-llm/) — 2026-04-07
-- [Gemma 4 が API 経済を破壊する](/blogs/posts/2026/04/gemma4-api-economy-disruption/) — 2026-04-07
-- [Claude のレート制限対策に Mac Mini とローカルモデルを活用する](/blogs/posts/2026/04/claude-rate-limit-mac-mini-local-model/) — 2026-04-15
+- [Gemma 4 31B vs Qwen3.5-27B — ローカルLLM最強はどちらか](/blogs/posts/2026/04/2026-04-07-gemma4-vs-qwen35-local-llm/) — 2026-04-07
+- [Microsoft BitNet 完全オープンソース化：GPUなしで1000億パラメータLLMをCPUで動かす時代へ](/blogs/posts/2026/04/2026-04-07-microsoft-bitnet-open-source-1bit-llm/) — 2026-04-07
+- [Gemma 4 が API 経済を破壊する](/blogs/posts/2026/04/2026-04-07-gemma4-api-economy-disruption/) — 2026-04-07
+- [Claude のレート制限対策に Mac Mini とローカルモデルを活用する](/blogs/posts/2026/04/2026-04-15-claude-rate-limit-mac-mini-local-model/) — 2026-04-15
 - [Ollama で Qwen3 を動かす初心者ガイド — 日本語最強ローカルLLMを自分のPCで使う方法](/blogs/posts/2026/03/2026-03-04-9c65e3a8bc648a1493bf0a8fe0fa3bb8/) — 2026-03-04
 - [ローカル LLM を金融取引の意思決定サポートに応用する — コードレビュー 4 段階カスタマイズの転用](/blogs/posts/2026/03/2026-03-04-cde933b6eb635a778d7b053610aca40a/) — 2026-03-04
 - [ローカル LLM を社内業務に特化させる 4 段階カスタマイズ — Qwen3 を「より賢く」する仕組み](/blogs/posts/2026/03/2026-03-04-f7bad4476f8bec3e58bcf01848bfb807/) — 2026-03-04

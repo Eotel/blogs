@@ -5,8 +5,8 @@ date: 2026-04-23
 lastmod: 2026-05-20
 aliases: ["Context Rot", "コンテキスト腐敗", "コンテキスト劣化"]
 related_posts:
-  - "/posts/2026/05/rag-cag-llm-knowledge-context-cache-design/"
-  - "/posts/2026/04/2026-04-17-claude-code-context-rot-session-management/"
+  - "/blogs/posts/2026/05/rag-cag-llm-knowledge-context-cache-design/"
+  - "/blogs/posts/2026/04/2026-04-17-claude-code-context-rot-session-management/"
 tags: ["Claude Code", "コンテキスト管理", "LLM", "セッション管理", "プロンプトエンジニアリング", "ロングコンテキスト"]
 ---
 

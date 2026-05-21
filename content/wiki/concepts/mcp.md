@@ -5,20 +5,20 @@ date: 2026-04-06
 lastmod: 2026-05-12
 aliases: ["MCP", "Model Context Protocol"]
 related_posts:
-  - "/posts/2026/03/openclaw-claude-code-setup/"
-  - "/posts/2026/03/sd-202604/"
-  - "/posts/2026/05/2026-05-11-truss-c-openframeworks-alternative/"
-  - "/posts/2026/05/2026-05-11-aws-agent-toolkit-strands-skills/"
-  - "/posts/2026/03/2026-03-01-0ee19b59603fd68d6a0295e4e94ac6f9/"
-  - "/posts/2026/03/2026-03-03-8feec16470c6e442ce0b999e472ec095/"
-  - "/posts/2026/03/2026-03-03-eccd6b7eeb61d1f6278961cf6717e3ec/"
-  - "/posts/2026/03/2026-03-04-4aef4c49d26cce4394f04e3ffebfb7fe/"
-  - "/posts/2026/03/2026-03-04-a0e7a789ef7534c7cb6136d7fb00572e/"
-  - "/posts/2026/03/2026-03-04-ae50e162a7b49d5efc0a3b1f21a449db/"
-  - "/posts/2026/03/2026-03-05-1f81385148befa3ee0e980408c174676/"
-  - "/posts/2026/03/2026-03-10-freee-mcp-claude-code/"
-  - "/posts/2026/03/2026-03-22-mcp-oauth21-security/"
-  - "/posts/2026/03/2026-03-25-claude-code-expert-agents/"
+  - "/blogs/posts/2026/03/openclaw-claude-code-setup/"
+  - "/blogs/posts/2026/03/sd-202604/"
+  - "/blogs/posts/2026/05/2026-05-11-truss-c-openframeworks-alternative/"
+  - "/blogs/posts/2026/05/2026-05-11-aws-agent-toolkit-strands-skills/"
+  - "/blogs/posts/2026/03/2026-03-01-0ee19b59603fd68d6a0295e4e94ac6f9/"
+  - "/blogs/posts/2026/03/2026-03-03-8feec16470c6e442ce0b999e472ec095/"
+  - "/blogs/posts/2026/03/2026-03-03-eccd6b7eeb61d1f6278961cf6717e3ec/"
+  - "/blogs/posts/2026/03/2026-03-04-4aef4c49d26cce4394f04e3ffebfb7fe/"
+  - "/blogs/posts/2026/03/2026-03-04-a0e7a789ef7534c7cb6136d7fb00572e/"
+  - "/blogs/posts/2026/03/2026-03-04-ae50e162a7b49d5efc0a3b1f21a449db/"
+  - "/blogs/posts/2026/03/2026-03-05-1f81385148befa3ee0e980408c174676/"
+  - "/blogs/posts/2026/03/2026-03-10-freee-mcp-claude-code/"
+  - "/blogs/posts/2026/03/2026-03-22-mcp-oauth21-security/"
+  - "/blogs/posts/2026/03/2026-03-25-claude-code-expert-agents/"
 tags: ["MCP", "protocol", "agent", "integration"]
 ---
 

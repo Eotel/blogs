@@ -5,10 +5,10 @@ date: 2026-04-05
 lastmod: 2026-05-12
 aliases: ["LLM Wiki", "Karpathy Wiki"]
 related_posts:
-  - "/posts/2026/04/karpathy-llm-wiki/"
-  - "/posts/2026/04/2026-04-22-obsidian-claude-code-personal-os/"
-  - "/posts/2026/04/2026-04-23-claude-code-obsidian-second-brain/"
-  - "/posts/2026/04/2026-04-09-exbrain-claude-code-obsidian-ai-brain/"
+  - "/blogs/posts/2026/04/karpathy-llm-wiki/"
+  - "/blogs/posts/2026/04/2026-04-22-obsidian-claude-code-personal-os/"
+  - "/blogs/posts/2026/04/2026-04-23-claude-code-obsidian-second-brain/"
+  - "/blogs/posts/2026/04/2026-04-09-exbrain-claude-code-obsidian-ai-brain/"
 tags: ["LLM", "ナレッジマネジメント", "AIエージェント", "RAG", "Obsidian"]
 ---
 

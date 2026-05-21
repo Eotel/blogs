@@ -5,15 +5,15 @@ date: 2026-04-06
 lastmod: 2026-05-12
 aliases: ["redis"]
 related_posts:
-  - "/posts/2026/03/redis-fenced-lock-python/"
-  - "/posts/2026/03/redis-shared-state-antipattern/"
-  - "/posts/2015/04/2015-04-21-ecf1cb51339d7447a19e/"
-  - "/posts/2023/05/2023-05-05-6f0abad12df8bc996fece3fef54f29e1/"
-  - "/posts/2023/07/2023-07-13-9b947258d31059c56fec5000faa190ca/"
-  - "/posts/2023/07/2023-07-14-0e2885fa164ec64417cf750beafb9e04/"
-  - "/posts/2023/11/2023-11-06-44e397ac03deaa013c125c49c0d33904/"
-  - "/posts/2024/01/2024-01-05-c45b85d58be2dac1c4375750d75b0904/"
-  - "/posts/2026/03/2026-03-02-92ce5b95cd28ffb9ca25100b1991d6d3/"
+  - "/blogs/posts/2026/03/redis-fenced-lock-python/"
+  - "/blogs/posts/2026/03/redis-shared-state-antipattern/"
+  - "/blogs/posts/2015/04/2015-04-21-ecf1cb51339d7447a19e/"
+  - "/blogs/posts/2023/05/2023-05-05-6f0abad12df8bc996fece3fef54f29e1/"
+  - "/blogs/posts/2023/07/2023-07-13-9b947258d31059c56fec5000faa190ca/"
+  - "/blogs/posts/2023/07/2023-07-14-0e2885fa164ec64417cf750beafb9e04/"
+  - "/blogs/posts/2023/11/2023-11-06-44e397ac03deaa013c125c49c0d33904/"
+  - "/blogs/posts/2024/01/2024-01-05-c45b85d58be2dac1c4375750d75b0904/"
+  - "/blogs/posts/2026/03/2026-03-02-92ce5b95cd28ffb9ca25100b1991d6d3/"
 tags: ["Redis", "キャッシュ", "データストア", "Django"]
 ---
 

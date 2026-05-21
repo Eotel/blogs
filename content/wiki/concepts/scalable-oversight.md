@@ -5,8 +5,8 @@ date: 2026-04-23
 lastmod: 2026-04-23
 aliases: ["Scalable Oversight", "自動アライメント研究", "AAR"]
 related_posts:
-  - "/posts/2026/04/2026-04-15-anthropic-automated-alignment-researchers/"
-  - "/posts/2026/05/2026-05-20-philosophy-of-tech-regression/"
+  - "/blogs/posts/2026/04/2026-04-15-anthropic-automated-alignment-researchers/"
+  - "/blogs/posts/2026/05/2026-05-20-philosophy-of-tech-regression/"
 tags: ["Anthropic", "AI安全性", "アライメント", "スケーラブルオーバーサイト", "Claude"]
 ---
 

@@ -5,8 +5,8 @@ date: 2026-05-11
 lastmod: 2026-05-12
 aliases: ["modular monolith", "モジュラーモノリス", "modulith", "majestic monolith"]
 related_posts:
-  - "/posts/2026/05/2026-05-11-modular-monolith-large-services/"
-  - "/posts/2026/05/2026-05-12-packwerk-equivalents-python-typescript-dotnet/"
+  - "/blogs/posts/2026/05/2026-05-11-modular-monolith-large-services/"
+  - "/blogs/posts/2026/05/2026-05-12-packwerk-equivalents-python-typescript-dotnet/"
 tags: ["アーキテクチャ", "modular-monolith", "microservices", "monolith"]
 ---
 

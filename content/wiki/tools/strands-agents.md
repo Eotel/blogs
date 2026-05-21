@@ -5,7 +5,7 @@ date: 2026-05-11
 lastmod: 2026-05-12
 aliases: ["Strands Agents SDK", "strands-agents"]
 related_posts:
-  - "/posts/2026/05/2026-05-11-aws-agent-toolkit-strands-skills/"
+  - "/blogs/posts/2026/05/2026-05-11-aws-agent-toolkit-strands-skills/"
 tags: ["aws", "agent", "sdk", "open-source", "bedrock"]
 ---
 

@@ -32,3 +32,9 @@ devenv.local.yaml
 
 # APM dependencies
 apm_modules/
+
+# macOS
+.DS_Store
+
+# Personal source notes (drafts staged locally before /blog or /wiki-ingest)
+sources/

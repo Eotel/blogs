@@ -5,7 +5,7 @@ date: 2026-04-06
 lastmod: 2026-04-06
 aliases: ["FdI"]
 related_posts:
-  - "/posts/2026/03/vercel-no-infra-engineer/"
+  - "/blogs/posts/2026/03/vercel-no-infra-engineer/"
 tags: ["IaC", "Vercel", "クラウド", "アーキテクチャ"]
 ---
 

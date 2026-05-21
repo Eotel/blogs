@@ -285,7 +285,7 @@ consumer は受信メッセージのヘッダから `event_id`（リレーが ou
 
 ## 関連するトピックへの分岐
 
-- **分散ロック**: 「同時に 1 つしか走らせたくない処理」は別問題で、トランザクションパターンよりロックの責務。`SELECT FOR UPDATE` でほぼ事足りるが、サービスを跨ぐ排他は別途必要になることがある。Redis ベースの実装は [redis-py の Lock をサブクラス化してフェンシングトークンを実装する](/blogs/posts/2026/03/2026-03-17-redis-fenced-lock-python/) で扱った。
+- **分散ロック**: 「同時に 1 つしか走らせたくない処理」は別問題で、トランザクションパターンよりロックの責務。`SELECT FOR UPDATE` でほぼ事足りるが、サービスを跨ぐ排他は別途必要になることがある。Redis ベースの実装は [redis-py の Lock をサブクラス化してフェンシングトークンを実装する](/blogs/posts/2026/03/redis-fenced-lock-python/) で扱った。
 - **そもそも分散しない選択**: 本稿で並べた仕組みの大半は「分けた瞬間に必要になるもの」だ。逆方向の答えは [Modular Monolith に回帰する大手サービス](/blogs/posts/2026/05/2026-05-11-modular-monolith-large-services/) にある。Saga や Outbox を 1 つも書かずに済むなら、それがいちばん安い。
 - **Exactly-once は幻想**: 厳密な exactly-once は「ネットワークありの世界では存在しない」が正しい。実装上は「at-least-once 配送 + 受信側冪等化 = 結果として exactly-once 相当」になる。Kafka の "exactly-once semantics" も内部はこの組み合わせで実現されている。
 
