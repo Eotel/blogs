@@ -69,7 +69,7 @@ Claude Code 単体で入れるなら、plugin marketplace から直接入れる�
 /plugin marketplace add greensock/gsap-skills
 ```
 
-Cursor は **Settings → Rules → Add Rule → Remote Rule (Github)** から `greensock/gsap-skills` を指定するか、上の `npx skills add` を使います。手動で配置する場合の skill ディレクトリは README のマッピング表どおりで、主なものを抜粋します。
+Cursor は **Settings → Rules → Add Rule → Remote Rule (GitHub)** から `greensock/gsap-skills` を指定するか、上の `npx skills add` を使います。手動で配置する場合の skill ディレクトリは README のマッピング表どおりで、主なものを抜粋します。
 
 | エージェント | skill ディレクトリ |
 |---|---|
@@ -172,7 +172,7 @@ gsap-skills は、技術的には [Wiki: Skills フォーマット（SKILL.md �
 
 ## まとめ
 
-- `greensock/gsap-skills` は GreenSock 公式の Agent Skills 集で、8 つの `SKILL.md`（`gsap-core` / `timeline` / `scrolltrigger` / `plugins` / `utils` / `react` / `performance` / `frameworks`）と `llms.txt` インデックスから構成されています。
+- `greensock/gsap-skills` は GreenSock 公式の Agent Skills 集で、8 つの `SKILL.md`（`gsap-core` / `gsap-timeline` / `gsap-scrolltrigger` / `gsap-plugins` / `gsap-utils` / `gsap-react` / `gsap-performance` / `gsap-frameworks`）と `llms.txt` インデックスから構成されています。
 - インストールは `npx skills add https://github.com/greensock/gsap-skills` が万能経路。Claude Code は plugin marketplace 経由も使えます。
 - 中身は API リファレンスではなく、**「エージェントが間違えやすいところを潰す指示」** が主軸です。`useGSAP` の cleanup、scope を持たない selector、`.npmrc` auth token、Club GSAP メンバーシップ前提のコード、これらを最初から書かせない構造になっています。
 - 2025 年 4 月以降 GSAP は全プラグイン含めて 100% 無料です。古い前提で書かれたコードを生成させないためにも、エージェントに gsap-skills を入れておく価値があります。
