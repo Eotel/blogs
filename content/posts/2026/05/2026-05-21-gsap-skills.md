@@ -180,6 +180,7 @@ gsap-skills は、技術的には [Wiki: Skills フォーマット（SKILL.md �
 
 ## 関連 Wiki
 
+- [gsap-skills](/blogs/wiki/tools/gsap-skills/) — 本記事を要約したツール Wiki
 - [Skills フォーマット（SKILL.md 互換層）](/blogs/wiki/concepts/agent-skills-format/)
 - [Claude Code](/blogs/wiki/tools/claude-code/)
 - [Strands Agents](/blogs/wiki/tools/strands-agents/)
