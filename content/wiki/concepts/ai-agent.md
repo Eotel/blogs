@@ -148,6 +148,8 @@ LangChain 創設者 Harrison Chase が指摘する重要な概念。エージェ
 - [スケーラブル・オーバーサイト](/blogs/wiki/concepts/scalable-oversight/) — 強くなる AI への監督アプローチ
 - [TimesFM](/blogs/wiki/tools/timesfm/) — 時系列予測専用基盤モデル
 - [エージェントフレンドリー CLI](/blogs/wiki/concepts/agent-friendly-cli/) — LLM エージェントが確実に操作できる CLI の設計原則
+- [microsandbox](/blogs/wiki/tools/microsandbox/) — エージェントの untrusted code を隔離実行する microVM サンドボックス
+- [microVM](/blogs/wiki/concepts/microvm/) — エージェントのコード実行サンドボックスを支える隔離技術
 
 ## ソース記事
 
