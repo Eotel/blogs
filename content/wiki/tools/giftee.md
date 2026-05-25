@@ -5,7 +5,7 @@ date: 2026-04-15
 lastmod: 2026-04-15
 aliases: ["ギフティ", "giftee for Business", "e街プラットフォーム"]
 related_posts:
-  - "/posts/2026/04/giftee/"
+  - "/blogs/posts/2026/04/2026-04-08-giftee/"
 tags: ["eギフト", "EC", "デジタルギフト", "企業分析", "東証プライム"]
 ---
 
@@ -39,4 +39,4 @@ LINEやURLでデジタルギフトを送受信できるサービス。コンビ�
 
 ## ソース記事
 
-- [giftee（ギフティ）：eギフトプラットフォームの全貌](/blogs/posts/2026/04/giftee/) — 2026-04-08
+- [giftee（ギフティ）：eギフトプラットフォームの全貌](/blogs/posts/2026/04/2026-04-08-giftee/) — 2026-04-08

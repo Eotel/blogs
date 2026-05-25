@@ -5,7 +5,7 @@ date: 2026-05-12
 lastmod: 2026-05-12
 aliases: ["wiki ingest backlog", "未蒸留記事"]
 related_posts:
-  - "/posts/2011/12/2011-12-25-1519248/"
+  - "/blogs/posts/2011/12/2011-12-25-1519248/"
 tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 ---
 

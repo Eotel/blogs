@@ -5,7 +5,7 @@ date: 2026-05-16
 lastmod: 2026-05-16
 aliases: ["moonrepo", "moon monorepo"]
 related_posts:
-  - "/posts/2026/05/2026-05-13-moon-monorepo-orchestration/"
+  - "/blogs/posts/2026/05/2026-05-13-moon-monorepo-orchestration/"
 tags: ["monorepo", "task-runner", "build-system", "rust", "toolchain"]
 ---
 

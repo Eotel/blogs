@@ -5,7 +5,7 @@ date: 2026-05-12
 lastmod: 2026-05-12
 aliases: ["Cartesia AI", "Sonic", "Sonic-3", "Sonic Turbo", "sonic-3"]
 related_posts:
-  - "/posts/2026/05/2026-05-12-tts-stt-frontier-2026-05/"
+  - "/blogs/posts/2026/05/2026-05-12-tts-stt-frontier-2026-05/"
 tags: ["Cartesia", "TTS", "音声AI", "state-space-model", "voice-cloning"]
 ---
 

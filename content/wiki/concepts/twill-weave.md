@@ -5,7 +5,7 @@ date: 2026-05-16
 lastmod: 2026-05-16
 aliases: ["twill", "ツイル", "斜文織"]
 related_posts:
-  - "/posts/2026/05/2026-05-13-twill-fabrics-and-kersey/"
+  - "/blogs/posts/2026/05/2026-05-13-twill-fabrics-and-kersey/"
 tags: ["生地", "織物", "twill", "ファッション"]
 ---
 

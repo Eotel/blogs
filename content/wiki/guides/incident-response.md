@@ -5,7 +5,7 @@ date: 2026-04-06
 lastmod: 2026-05-12
 aliases: ["インシデント対応", "Incident Response", "ポストモーテム"]
 related_posts:
-  - "/posts/2026/03/2026-03-03-eedc66063d009b77e7289cb9e639f2a2/"
+  - "/blogs/posts/2026/03/2026-03-03-eedc66063d009b77e7289cb9e639f2a2/"
 tags: ["SRE", "インシデント管理", "DevOps"]
 ---
 

@@ -5,7 +5,7 @@ date: 2026-04-23
 lastmod: 2026-04-23
 aliases: ["pytest chaos", "カオスエンジニアリング Python"]
 related_posts:
-  - "/posts/2026/04/2026-04-17-pytest-chaos-engineering/"
+  - "/blogs/posts/2026/04/2026-04-17-pytest-chaos-engineering/"
 tags: ["Python", "pytest", "カオスエンジニアリング", "テスト", "CI/CD", "Claude Code"]
 ---
 
@@ -108,6 +108,8 @@ jobs:
 `.claude/agents/chaos-engineer.md` にドメイン固有の観点を持つエージェントを定義し、コードベースの障害シナリオ分析とテストコード生成を自動化できる。
 
 3軸の優先度分類（金融・トレーディング例）:
+
+
 - **A. 金融判断・安全性**: 取引ロジック・残高計算
 - **B. 状態整合性**: DB トランザクション・べき等性
 - **C. 自己修正機構**: 自動診断・回復処理

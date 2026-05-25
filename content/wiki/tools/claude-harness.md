@@ -5,7 +5,7 @@ date: 2026-04-27
 lastmod: 2026-05-12
 aliases: ["claude-code-harness", "Claude Code Harness"]
 related_posts:
-  - "/posts/2026/04/2026-04-14-claude-harness-v4-hokage/"
+  - "/blogs/posts/2026/04/2026-04-14-claude-harness-v4-hokage/"
 tags: ["Claude Code", "Claude Harness", "AI開発", "OSS", "Go", "ハーネスエンジニアリング"]
 ---
 

@@ -5,8 +5,8 @@ date: 2026-05-11
 lastmod: 2026-05-12
 aliases: ["packwerk", "Shopify Packwerk"]
 related_posts:
-  - "/posts/2026/05/2026-05-11-modular-monolith-large-services/"
-  - "/posts/2026/05/2026-05-12-packwerk-equivalents-python-typescript-dotnet/"
+  - "/blogs/posts/2026/05/2026-05-11-modular-monolith-large-services/"
+  - "/blogs/posts/2026/05/2026-05-12-packwerk-equivalents-python-typescript-dotnet/"
 tags: ["ruby", "rails", "modular-monolith", "アーキテクチャ", "shopify", "静的解析"]
 ---
 

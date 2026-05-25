@@ -5,13 +5,13 @@ date: 2026-05-09
 lastmod: 2026-05-12
 aliases: ["HubSpot", "ハブスポット"]
 related_posts:
-  - "/posts/2026/04/2026-04-23-hubspot-hscachebuster/"
-  - "/posts/2026/04/2026-04-28-hubspot-pro-merits/"
-  - "/posts/2025/03/2025-03-25-35d3a45a26e53c6245aac6e52d9917f8/"
-  - "/posts/2026/03/2026-03-18-geo-marketing/"
-  - "/posts/2026/03/2026-03-18-hubspot-line-items-api/"
-  - "/posts/2026/03/2026-03-18-restaurant-marketing-hubspot/"
-  - "/posts/2026/03/2026-03-18-zapier-hubspot-asana/"
+  - "/blogs/posts/2026/04/2026-04-23-hubspot-hscachebuster/"
+  - "/blogs/posts/2026/04/2026-04-28-hubspot-pro-merits/"
+  - "/blogs/posts/2025/03/2025-03-25-35d3a45a26e53c6245aac6e52d9917f8/"
+  - "/blogs/posts/2026/03/2026-03-18-geo-marketing/"
+  - "/blogs/posts/2026/03/2026-03-18-hubspot-line-items-api/"
+  - "/blogs/posts/2026/03/2026-03-18-restaurant-marketing-hubspot/"
+  - "/blogs/posts/2026/03/2026-03-18-zapier-hubspot-asana/"
 tags: ["HubSpot", "CRM", "マーケティングオートメーション", "SaaS", "BtoB"]
 ---
 

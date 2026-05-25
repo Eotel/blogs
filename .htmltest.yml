@@ -1,0 +1,34 @@
+# htmltest — built HTML の内部リンク検証
+# docs: https://github.com/wjdp/htmltest/blob/master/docs/options.md
+#
+# 走り方: scripts/htmltest.sh (devenv shell から `link-check` でも可)
+#
+# baseURL = https://eotel.github.io/blogs/ なので href は /blogs/... 形式。
+# scripts/htmltest.sh が hugo の出力を .claude/temp/htmltest/blogs/ に置き、
+# DirectoryPath=.claude/temp/htmltest にすることで "/blogs/foo/" を
+# ".claude/temp/htmltest/blogs/foo/" として解決させる。
+
+DirectoryPath: .claude/temp/htmltest
+OutputDir: .claude/temp/.htmltest-cache    # default は ./tmp/.htmltest なので CLAUDE.md ルールに合わせて .claude/temp/ に逃がす
+LogLevel: 2                 # 1=debug 2=info 3=warning 4=error
+CheckDoctype: false
+CheckExternal: false        # external URL は url-liveness-checker agent 側で別途検証
+CheckInternal: true
+CheckInternalHash: false    # 内部 anchor (#section) は false にして偽陽性を避ける
+CheckMailto: false
+CheckImages: true
+IgnoreAltMissing: true       # alt 空は a11y 警告であって broken link ではないので skip
+EnforceHTTPS: false
+
+IgnoreDirectoryMissingTrailingSlash: true
+IgnoreEmptyHref: true
+IgnoreSSLVerify: true
+
+# 検索系の見せかけ URL や、Pagefind が生成する hash 風 fragment を skip。
+# /blogs/pagefind/ は CI で `npx pagefind --site public` が後段生成するため、
+# scripts/htmltest.sh だけ走らせるローカル検証では存在しない。
+IgnoreURLs:
+  - "^javascript:"
+  - "^mailto:"
+  - "^#"
+  - "^/blogs/pagefind/"

@@ -5,7 +5,7 @@ date: 2026-04-13
 lastmod: 2026-04-16
 aliases: ["adaptive thinking", "effort level", "claude thinking depth"]
 related_posts:
-  - "/posts/2026/04/claude-thinking-nerfed/"
+  - "/blogs/posts/2026/04/2026-04-13-claude-thinking-nerfed/"
 tags: ["claude", "claude-code", "思考深度", "Anthropic", "llm"]
 ---
 
@@ -63,4 +63,4 @@ export CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING=1
 
 ## ソース記事
 
-- [Claude の思考深度が67%低下？AMD AIディレクターの分析が示す「サイレント・ダウングレード」問題](/blogs/posts/2026/04/claude-thinking-nerfed/) — 2026-04-13
+- [Claude の思考深度が67%低下？AMD AIディレクターの分析が示す「サイレント・ダウングレード」問題](/blogs/posts/2026/04/2026-04-13-claude-thinking-nerfed/) — 2026-04-13

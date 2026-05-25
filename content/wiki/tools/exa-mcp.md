@@ -5,8 +5,8 @@ date: 2026-05-09
 lastmod: 2026-05-12
 aliases: ["Exa", "exa-mcp", "Exa neural search"]
 related_posts:
-  - "/posts/2026/04/2026-04-25-exa-for-claude-mcp-plugin/"
-  - "/posts/2026/03/2026-03-05-b4b02c682a675d88c7200e82dba16420/"
+  - "/blogs/posts/2026/04/2026-04-25-exa-for-claude-mcp-plugin/"
+  - "/blogs/posts/2026/03/2026-03-05-b4b02c682a675d88c7200e82dba16420/"
 tags: ["MCP", "Claude Code", "検索", "AIエージェント", "Web検索"]
 ---
 

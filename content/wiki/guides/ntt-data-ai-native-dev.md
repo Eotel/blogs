@@ -5,7 +5,7 @@ date: 2026-05-09
 lastmod: 2026-05-09
 aliases: ["NTT Data AI native", "AI ネイティブ開発"]
 related_posts:
-  - "/posts/2026/04/2026-04-20-ntt-data-ai-native-development/"
+  - "/blogs/posts/2026/04/2026-04-20-ntt-data-ai-native-development/"
 tags: ["AI開発", "エンタープライズ", "NTT Data", "チーム開発", "ハーネスエンジニアリング"]
 ---
 

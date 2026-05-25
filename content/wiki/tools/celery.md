@@ -5,13 +5,13 @@ date: 2026-04-06
 lastmod: 2026-05-12
 aliases: ["celery"]
 related_posts:
-  - "/posts/2026/03/2026-03-30-claude-code-celery-orchestration/"
-  - "/posts/2023/04/2023-04-07-bfe76b81c50797270ccec6b441c406b4/"
-  - "/posts/2023/04/2023-04-11-78b54a5cbcfdc5b5710bcd664c6d76e0/"
-  - "/posts/2023/04/2023-04-12-91decc44392237a42510180061261903/"
-  - "/posts/2023/04/2023-04-12-e5690198c788d5e603c954253ac2f65f/"
-  - "/posts/2023/04/2023-04-12-fcf2fccad526d38b08a0aacc67d1b3d1/"
-  - "/posts/2023/07/2023-07-13-9b947258d31059c56fec5000faa190ca/"
+  - "/blogs/posts/2026/03/2026-03-30-claude-code-celery-orchestration/"
+  - "/blogs/posts/2023/04/2023-04-07-bfe76b81c50797270ccec6b441c406b4/"
+  - "/blogs/posts/2023/04/2023-04-11-78b54a5cbcfdc5b5710bcd664c6d76e0/"
+  - "/blogs/posts/2023/04/2023-04-12-91decc44392237a42510180061261903/"
+  - "/blogs/posts/2023/04/2023-04-12-e5690198c788d5e603c954253ac2f65f/"
+  - "/blogs/posts/2023/04/2023-04-12-fcf2fccad526d38b08a0aacc67d1b3d1/"
+  - "/blogs/posts/2023/07/2023-07-13-9b947258d31059c56fec5000faa190ca/"
 tags: ["Python", "Django", "タスクキュー", "Redis"]
 ---
 

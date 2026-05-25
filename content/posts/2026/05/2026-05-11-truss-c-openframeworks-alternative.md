@@ -1,14 +1,28 @@
 ---
 slug: 2026-05-11-truss-c-openframeworks-alternative
-title: "TrussC: openFrameworks に着想を得た sokol ベースの C++ クリエイティブコーディングフレームワーク"
+title: 'TrussC: openFrameworks に着想を得た sokol ベースの C++ クリエイティブコーディングフレームワーク'
 date: 2026-05-11
 lastmod: 2026-05-11
 draft: false
-author: "eotel"
-model: "claude-opus-4-7"
-description: "TrussC は openFrameworks に着想を得た sokol ベースの C++20 クリエイティブコーディングフレームワーク。OpenGL 非依存、MCP サーバのコア組み込み、シーングラフ＝アプリ本体、ホットリロード自動分割など、コードを読まないと見えない独自性まで踏み込んで整理する。"
-categories: ["ツール/開発環境"]
-tags: ["truss-c", "openframeworks", "c++", "creative-coding", "sokol", "webgpu", "mcp"]
+author: eotel
+model: claude-opus-4-7
+description: TrussC は openFrameworks に着想を得た sokol ベースの C++20 クリエイティブコーディングフレームワーク。OpenGL
+  非依存、MCP サーバのコア組み込み、シーングラフ＝アプリ本体、ホットリロード自動分割など、コードを読まないと見えない独自性まで踏み込んで整理する。
+categories:
+- ツール/開発環境
+tags:
+- truss-c
+- openframeworks
+- c++
+- creative-coding
+- sokol
+- webgpu
+- mcp
+audio_url: https://github.com/Eotel/blogs/releases/download/audio/2026-05-11-truss-c-openframeworks-alternative.m4a
+audio_lang: ja
+audio_generated_at: '2026-05-21T05:55:04Z'
+audio_source: notebooklm
+audio_format: debate
 ---
 
 ## TL;DR

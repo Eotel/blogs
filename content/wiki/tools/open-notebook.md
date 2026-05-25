@@ -5,7 +5,7 @@ date: 2026-05-09
 lastmod: 2026-05-09
 aliases: ["open-notebook", "NotebookLM OSS代替"]
 related_posts:
-  - "/posts/2026/04/2026-04-22-open-notebook-notebooklm-oss/"
+  - "/blogs/posts/2026/04/2026-04-22-open-notebook-notebooklm-oss/"
 tags: ["OSS", "NotebookLM", "ナレッジ管理", "ローカルLLM", "Ollama", "セルフホスト"]
 ---
 

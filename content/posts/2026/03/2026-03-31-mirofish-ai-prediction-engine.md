@@ -11,7 +11,7 @@ tags: ["agent", "llm", "github", "rag"]
 slug: "2026-03-31-mirofish-ai-prediction-engine"
 ---
 
-[以前の記事](/posts/2026/03/2026-03-10-mirofish-vibe-coding/)で紹介した AI 予測エンジン「MiroFish」が、公開から約3週間で GitHub Star 4.7万超にまで急成長しています。本記事では、その後の動向とコミュニティの広がりを追います。
+[以前の記事](/blogs/posts/2026/03/2026-03-10-mirofish-vibe-coding/)で紹介した AI 予測エンジン「MiroFish」が、公開から約3週間で GitHub Star 4.7万超にまで急成長しています。本記事では、その後の動向とコミュニティの広がりを追います。
 
 ## 3週間での急成長
 
@@ -63,4 +63,4 @@ MiroFish は、公開からわずか3週間で GitHub Star 4.7万超という驚
 - [MiroFish GitHub リポジトリ](https://github.com/666ghj/MiroFish)
 - [MiroFish-Offline (ローカル版フォーク)](https://github.com/nikmcfly/MiroFish-Offline)
 - [MiroFish: The AI Swarm Engine That Simulates the Future](https://emelia.io/hub/mirofish-ai-swarm-prediction)
-- [前回の記事: MiroFish — 20歳の学生が10日間の Vibe Coding で作った AI 未来予測エンジン](/posts/2026/03/2026-03-10-mirofish-vibe-coding/)
+- [前回の記事: MiroFish — 20歳の学生が10日間の Vibe Coding で作った AI 未来予測エンジン](/blogs/posts/2026/03/2026-03-10-mirofish-vibe-coding/)

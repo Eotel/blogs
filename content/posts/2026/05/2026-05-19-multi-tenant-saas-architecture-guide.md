@@ -1,14 +1,27 @@
 ---
 slug: 2026-05-19-multi-tenant-saas-architecture-guide
-title: "マルチテナント SaaS アーキテクチャ設計ガイド ── silo / bridge / pool から hybrid 運用まで"
+title: マルチテナント SaaS アーキテクチャ設計ガイド ── silo / bridge / pool から hybrid 運用まで
 date: 2026-05-19
 lastmod: 2026-05-19
 draft: false
-author: "eotel"
-model: "claude-opus-4-7"
-description: "マルチテナント SaaS の設計を、silo / bridge / pool（AWS）、instance / database / table / row（Google Cloud Spanner）、Azure の multitenant guidance を横並びで読み比べ、いつどのモデルを選ぶかを判断軸として整理する。データ分離・認証・デプロイ・観測性・コスト配賦・コンプライアンス・DR をカバーし、PostgreSQL RLS と Terraform のスニペット付き。"
-categories: ["クラウド/インフラ"]
-tags: ["マルチテナント", "SaaS", "PostgreSQL", "RLS", "AWS"]
+author: eotel
+model: claude-opus-4-7
+description: マルチテナント SaaS の設計を、silo / bridge / pool（AWS）、instance / database / table
+  / row（Google Cloud Spanner）、Azure の multitenant guidance を横並びで読み比べ、いつどのモデルを選ぶかを判断軸として整理する。データ分離・認証・デプロイ・観測性・コスト配賦・コンプライアンス・DR
+  をカバーし、PostgreSQL RLS と Terraform のスニペット付き。
+categories:
+- クラウド/インフラ
+tags:
+- マルチテナント
+- SaaS
+- PostgreSQL
+- RLS
+- AWS
+audio_url: https://github.com/Eotel/blogs/releases/download/audio/2026-05-19-multi-tenant-saas-architecture-guide.m4a
+audio_lang: ja
+audio_generated_at: '2026-05-21T05:40:30Z'
+audio_source: notebooklm
+audio_format: debate
 ---
 
 「マルチテナント SaaS」と一口に言っても、その実装は単一の設計判断ではなく、コンピュート・データ・認証・観測性・運用にまたがる **分離度合いのポートフォリオ** だ。AWS は silo / bridge / pool という語彙でこれを説明し、Google Cloud Spanner は instance / database / table / row という階層で語り、Azure は「共有された資源から分離された資源までの連続体」として位置づけている。本稿では、これらのベンダーガイダンスを突き合わせながら、実プロダクトに落とすときに直面する判断軸を整理する。

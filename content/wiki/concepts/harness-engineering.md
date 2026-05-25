@@ -2,26 +2,28 @@
 title: "ハーネスエンジニアリング"
 description: "AI エージェントの出力品質を保証する設計パターン。検証層・制約層・フィードバック層で構成"
 date: 2026-04-06
-lastmod: 2026-05-12
+lastmod: 2026-05-21
 aliases: ["Harness Engineering"]
 related_posts:
-  - "/posts/2026/03/harness-engineering/"
-  - "/posts/2026/03/ai-agent-qa/"
-  - "/posts/2026/03/claude-code-review/"
-  - "/posts/2026/04/anthropic-vs-openai-harness-strategy/"
-  - "/posts/2026/04/agent-harness-memory-lock-in/"
-  - "/posts/2026/04/2026-04-16-ai-agent-harness-confusion/"
-  - "/posts/2026/04/2026-04-17-ai-first-harness-engineering-creao/"
-  - "/posts/2026/04/2026-04-17-agent-harness-rag-context-size/"
-  - "/posts/2026/04/2026-04-14-claude-harness-v4-hokage/"
-  - "/posts/2026/04/2026-04-23-harness-engineering-agent-vs-user-harness/"
-  - "/posts/2026/04/2026-04-23-harness-engineering-beyond-rule-files/"
-  - "/posts/2026/05/2026-05-11-aws-agent-toolkit-strands-skills/"
-  - "/posts/2026/03/2026-03-02-f5f7afe224494ea830b0e01b607fbbc8/"
-  - "/posts/2026/03/2026-03-04-14eeecd540a136f4a5f87371a03f8145/"
-  - "/posts/2026/03/2026-03-27-prompt-to-harness-engineering/"
-  - "/posts/2026-03-09-harness-engineering/"
-  - "/posts/2026/03/2026-03-03-95278de03de967bcc74ff8b320222044/"
+  - "/blogs/posts/2026/05/2026-05-21-knowledge-pipeline-over-harness/"
+  - "/blogs/posts/2026/03/harness-engineering/"
+  - "/blogs/posts/2026/03/ai-agent-qa/"
+  - "/blogs/posts/2026/03/claude-code-review/"
+  - "/blogs/posts/2026/04/2026-04-13-anthropic-vs-openai-harness-strategy/"
+  - "/blogs/posts/2026/04/2026-04-12-agent-harness-memory-lock-in/"
+  - "/blogs/posts/2026/04/2026-04-16-ai-agent-harness-confusion/"
+  - "/blogs/posts/2026/04/2026-04-17-ai-first-harness-engineering-creao/"
+  - "/blogs/posts/2026/04/2026-04-17-agent-harness-rag-context-size/"
+  - "/blogs/posts/2026/04/2026-04-14-claude-harness-v4-hokage/"
+  - "/blogs/posts/2026/04/2026-04-23-harness-engineering-agent-vs-user-harness/"
+  - "/blogs/posts/2026/04/2026-04-23-harness-engineering-beyond-rule-files/"
+  - "/blogs/posts/2026/05/2026-05-11-aws-agent-toolkit-strands-skills/"
+  - "/blogs/posts/2026/03/2026-03-02-f5f7afe224494ea830b0e01b607fbbc8/"
+  - "/blogs/posts/2026/03/2026-03-04-14eeecd540a136f4a5f87371a03f8145/"
+  - "/blogs/posts/2026/03/2026-03-27-prompt-to-harness-engineering/"
+  - "/blogs/posts/2026/03/harness-engineering/"
+  - "/blogs/posts/2026/03/2026-03-03-95278de03de967bcc74ff8b320222044/"
+  - "/blogs/posts/2026/05/2026-05-20-philosophy-of-tech-regression/"
 tags: ["agent", "品質保証", "CLAUDE.md", "設計パターン", "ロックイン"]
 ---
 
@@ -120,6 +122,12 @@ CreaoAI は「AIファーストハーネスエンジニアリング」を実践�
 
 コンテキストウィンドウの拡大（20k〜1M トークン）により、100 ファイル以下のコードベースはハーネスがファイルをそのまま読み込める。RAG の「断片的コンテキスト問題」を回避できるため、より正確な依存関係・型・インターフェースを参照できる。100 ファイルを超える場合は GraphRAG 等のインデックス戦略が有効。
 
+## ハーネスを磨く前に検索を整える — 順番の問題
+
+ハーネスを磨いても、上流の検索が腐っていれば agent は腐る。コード生成のようにコンテキストにコードベース全体を載せられる領域なら RAG なしで動くが、社内文書・規程・チケット・Slack・複数リポジトリ・PDF・スキャン画像が混ざる領域では、ハーネスの巧拙より「上流の検索が何を返すか」のほうが支配的になる。
+
+AI agent の性能を上げる正しい順番は **知識化 → 検索 → 評価 → エージェント最適化** であり、ハーネス改善はこの順序の最後に来る。良い parser・metadata・hybrid retrieval・rerank・citation・ACL・鮮度監視が揃っていれば、上の LLM や agent は素直に性能を出す。詳細は [RAG](/blogs/wiki/concepts/rag/) の「本気の意味検索 — RAG を支える 7 段パイプライン」を参照。
+
 ## 関連ページ
 
 - [AI エージェント](/blogs/wiki/concepts/ai-agent/) — ハーネスで品質保証される対象
@@ -131,13 +139,15 @@ CreaoAI は「AIファーストハーネスエンジニアリング」を実践�
 - [RAG](/blogs/wiki/concepts/rag/) — ハーネスとの組み合わせ判断
 - [エージェントフレンドリー CLI](/blogs/wiki/concepts/agent-friendly-cli/) — ハーネスが操作する CLI の設計要件
 - [NTT データ AI ネイティブ開発](/blogs/wiki/guides/ntt-data-ai-native-dev/) — 大企業でのハーネスエンジニアリング実践事例
+- [技術縮退](/blogs/wiki/concepts/tech-regression/) — ハーネスを「止められる自動化」として位置づける上位メタ概念
 
 ## ソース記事
 
+- [ハーネスより先にナレッジ作成と『本気の意味検索』を整える — RAG の前にやることリスト](/blogs/posts/2026/05/2026-05-21-knowledge-pipeline-over-harness/) — 2026-05-21（ハーネス改善より検索パイプライン改善が先という対比論）
 - [ハーネスエンジニアリング](/blogs/posts/2026/03/harness-engineering/) — 2026-03
 - [AI エージェント QA 手法](/blogs/posts/2026/03/ai-agent-qa/) — 2026-03
-- [Anthropic vs OpenAI：Harness 戦略はなぜ真逆なのか](/blogs/posts/2026/04/anthropic-vs-openai-harness-strategy/) — 2026-04-13
-- [エージェントハーネスとメモリのロックイン問題](/blogs/posts/2026/04/agent-harness-memory-lock-in/) — 2026-04-12
+- [Anthropic vs OpenAI：Harness 戦略はなぜ真逆なのか](/blogs/posts/2026/04/2026-04-13-anthropic-vs-openai-harness-strategy/) — 2026-04-13
+- [エージェントハーネスとメモリのロックイン問題](/blogs/posts/2026/04/2026-04-12-agent-harness-memory-lock-in/) — 2026-04-12
 - [AI エージェントの「ハーネス」を巡る混乱](/blogs/posts/2026/04/2026-04-16-ai-agent-harness-confusion/) — 2026-04-16
 - [「AIファースト」戦略の本当の意味 — ハーネスエンジニアリングで 25 人チームが 6 週間を 1 日に短縮した方法](/blogs/posts/2026/04/2026-04-17-ai-first-harness-engineering-creao/) — 2026-04-17
 - [RAG なしでも高精度に動く Agent Harness の秘密](/blogs/posts/2026/04/2026-04-17-agent-harness-rag-context-size/) — 2026-04-17
@@ -148,5 +158,5 @@ CreaoAI は「AIファーストハーネスエンジニアリング」を実践�
 - [ハーネスエンジニアリング入門 — AIエージェントの性能はモデルではなく周辺設計で決まる](/blogs/posts/2026/03/2026-03-02-f5f7afe224494ea830b0e01b607fbbc8/) — 2026-03-02
 - [ハーネスエンジニアリング実践知 — 「AIを使う人」と「AIを設計する人」の決定的な差](/blogs/posts/2026/03/2026-03-04-14eeecd540a136f4a5f87371a03f8145/) — 2026-03-04
 - [Prompt Engineering から Harness Engineering へ: AI エンジニアリングの進化と「仕組みの設計力」の時代](/blogs/posts/2026/03/2026-03-27-prompt-to-harness-engineering/) — 2026-03-27
-- [Harness Engineering ベストプラクティス 2026 — AI コーディングエージェントを安定稼働させる設計術](/blogs/posts/2026-03-09-harness-engineering/) — 2026-03-09
+- [Harness Engineering ベストプラクティス 2026 — AI コーディングエージェントを安定稼働させる設計術](/blogs/posts/2026/03/harness-engineering/) — 2026-03-09
 - [AI が書いた CLAUDE.md は逆効果 --- 「コンテキストファイルの自動生成は精度を下げる」という研究](/blogs/posts/2026/03/2026-03-03-95278de03de967bcc74ff8b320222044/) — 2026-03-03

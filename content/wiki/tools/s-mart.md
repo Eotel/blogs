@@ -5,7 +5,7 @@ date: 2026-04-15
 lastmod: 2026-05-18
 aliases: ["エスマート", "S-mart", "intmart"]
 related_posts:
-  - "/posts/2026/04/intmart-s-mart/"
+  - "/blogs/posts/2026/04/2026-04-14-intmart-s-mart/"
 tags: ["EC", "リテールDX", "買物困難者", "デジタルサイネージ", "小売"]
 ---
 
@@ -70,4 +70,4 @@ S_mart は「実物大表示 + 在庫レス + SKU 無制限」で これらを�
 
 ## ソース記事
 
-- [S_mart（エスマート）とは？買物困難者を救うデジタル店舗サービスの仕組みと評価](/blogs/posts/2026/04/intmart-s-mart/) — 2026-04-14
+- [S_mart（エスマート）とは？買物困難者を救うデジタル店舗サービスの仕組みと評価](/blogs/posts/2026/04/2026-04-14-intmart-s-mart/) — 2026-04-14

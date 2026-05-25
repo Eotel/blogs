@@ -5,7 +5,7 @@ date: 2026-05-09
 lastmod: 2026-05-09
 aliases: ["AI BPR", "Appreciative Inquiry", "アプリシエイティブインクワイアリー"]
 related_posts:
-  - "/posts/2026/04/2026-04-22-aws-ai-bpr-methodology/"
+  - "/blogs/posts/2026/04/2026-04-22-aws-ai-bpr-methodology/"
 tags: ["AI活用", "BPR", "組織変革", "AWS", "Appreciative Inquiry"]
 ---
 

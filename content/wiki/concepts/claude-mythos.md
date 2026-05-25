@@ -5,8 +5,8 @@ date: 2026-04-15
 lastmod: 2026-04-15
 aliases: ["Claude Mythos Preview", "Project Glasswing"]
 related_posts:
-  - "/posts/2026/04/claude-mythos-preview/"
-  - "/posts/2026/04/anthropic-mythos-mark-fisher/"
+  - "/blogs/posts/2026/04/2026-04-12-claude-mythos-preview/"
+  - "/blogs/posts/2026/04/2026-04-13-anthropic-mythos-mark-fisher/"
 tags: ["claude", "anthropic", "security", "フロンティアモデル", "llm"]
 ---
 
@@ -40,5 +40,5 @@ Claude Mythos Preview が複数の異なるコンテキストで哲学者マー�
 
 ## ソース記事
 
-- [Claude Mythos Preview とは？数千件のゼロデイ脆弱性を発見した AI モデルの衝撃](/blogs/posts/2026/04/claude-mythos-preview/) — 2026-04-12
-- [Anthropic Mythos が哲学者マーク・フィッシャーの名前を出し続ける奇妙な現象](/blogs/posts/2026/04/anthropic-mythos-mark-fisher/) — 2026-04-13
+- [Claude Mythos Preview とは？数千件のゼロデイ脆弱性を発見した AI モデルの衝撃](/blogs/posts/2026/04/2026-04-12-claude-mythos-preview/) — 2026-04-12
+- [Anthropic Mythos が哲学者マーク・フィッシャーの名前を出し続ける奇妙な現象](/blogs/posts/2026/04/2026-04-13-anthropic-mythos-mark-fisher/) — 2026-04-13

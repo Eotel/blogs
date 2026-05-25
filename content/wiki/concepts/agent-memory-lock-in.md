@@ -5,9 +5,10 @@ date: 2026-04-15
 lastmod: 2026-04-15
 aliases: ["ハーネスとメモリのロックイン", "agent-memory-portability"]
 related_posts:
-  - "/posts/2026/04/agent-harness-memory-lock-in/"
-  - "/posts/2026/04/claude-managed-agents/"
-  - "/posts/2026/04/anthropic-vs-openai-harness-strategy/"
+  - "/blogs/posts/2026/04/2026-04-12-agent-harness-memory-lock-in/"
+  - "/blogs/posts/2026/04/2026-04-10-claude-managed-agents/"
+  - "/blogs/posts/2026/04/2026-04-13-anthropic-vs-openai-harness-strategy/"
+  - "/blogs/posts/2026/05/2026-05-20-philosophy-of-tech-regression/"
 tags: ["エージェント", "メモリ", "ロックイン", "LangChain", "ハーネス"]
 ---
 
@@ -75,6 +76,6 @@ Claude Agent SDK のように内部でクローズドソースのコードを使
 
 ## ソース記事
 
-- [エージェントハーネスとメモリのロックイン問題](/blogs/posts/2026/04/agent-harness-memory-lock-in/) — 2026-04-12
-- [Claude Managed Agents: パブリックベータ公開](/blogs/posts/2026/04/claude-managed-agents/) — 2026-04-10
-- [Anthropic vs OpenAI：Harness 戦略はなぜ真逆なのか](/blogs/posts/2026/04/anthropic-vs-openai-harness-strategy/) — 2026-04-13
+- [エージェントハーネスとメモリのロックイン問題](/blogs/posts/2026/04/2026-04-12-agent-harness-memory-lock-in/) — 2026-04-12
+- [Claude Managed Agents: パブリックベータ公開](/blogs/posts/2026/04/2026-04-10-claude-managed-agents/) — 2026-04-10
+- [Anthropic vs OpenAI：Harness 戦略はなぜ真逆なのか](/blogs/posts/2026/04/2026-04-13-anthropic-vs-openai-harness-strategy/) — 2026-04-13

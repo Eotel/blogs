@@ -5,7 +5,7 @@ date: 2026-05-12
 lastmod: 2026-05-12
 aliases: ["dependency-cruiser", "dep-cruiser"]
 related_posts:
-  - "/posts/2026/05/2026-05-12-packwerk-equivalents-python-typescript-dotnet/"
+  - "/blogs/posts/2026/05/2026-05-12-packwerk-equivalents-python-typescript-dotnet/"
 tags: ["typescript", "javascript", "modular-monolith", "アーキテクチャ", "静的解析"]
 ---
 

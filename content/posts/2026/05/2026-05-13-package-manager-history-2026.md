@@ -201,7 +201,7 @@ Python 側は更にドラマチックだ。Flask / Sentry の作者である Arm
 
 ## 関連 Wiki / 参考
 
-- 既存 post: [nix](/blogs/posts/2025/01/2025-01-05-82cb06f0d6388a21ec3e8cadd36cde18/) / [uv](/blogs/posts/2025/01/2025-01-05-17269f63a6f363fbd18dd95de6522a73/)
+- 既存 post: [uv](/blogs/posts/2025/01/2025-01-05-17269f63a6f363fbd18dd95de6522a73/)
 - 隣接 Wiki: [APM (Agent Package Manager)](/blogs/wiki/tools/apm/)
 
 ### Wiki 化候補トピック（`/wiki-ingest` 用メモ）

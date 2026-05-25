@@ -1,0 +1,30 @@
+{{- /*
+  Audio Overview player (NotebookLM-generated).
+  Rendered only when frontmatter contains `audio_url`.
+  Place this partial near the top of single.html so listeners can start
+  the podcast while skim-reading.
+*/ -}}
+{{- with .Param "audio_url" -}}
+  {{- $url := . -}}
+  {{- $lang := $.Param "audio_lang" | default "ja" -}}
+  {{- $generated := $.Param "audio_generated_at" -}}
+  {{- $source := $.Param "audio_source" | default "notebooklm" -}}
+  {{- $format := $.Param "audio_format" | default "deep_dive" -}}
+  {{- $mime := "audio/mp4" -}}
+  {{- if hasSuffix $url ".mp3" }}{{ $mime = "audio/mpeg" }}{{ end -}}
+  {{- if hasSuffix $url ".wav" }}{{ $mime = "audio/wav" }}{{ end -}}
+  <aside class="audio-overview" aria-label="この記事の音声解説">
+    <div class="audio-overview__meta">
+      <span class="audio-overview__badge">音声解説</span>
+      <span class="audio-overview__source">{{ $source }} · {{ $format }} · {{ $lang }}</span>
+      {{- with $generated }}
+      <span class="audio-overview__date">{{ . }}</span>
+      {{- end }}
+    </div>
+    <audio controls preload="metadata" class="audio-overview__player">
+      <source src="{{ $url | relURL }}" type="{{ $mime }}">
+      お使いのブラウザは <code>audio</code> 要素をサポートしていません。
+      <a href="{{ $url | relURL }}">こちらから音声ファイルをダウンロード</a> してください。
+    </audio>
+  </aside>
+{{- end -}}

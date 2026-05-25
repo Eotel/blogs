@@ -5,7 +5,7 @@ date: 2026-04-06
 lastmod: 2026-04-06
 aliases: ["Columnar Storage", "列指向"]
 related_posts:
-  - "/posts/2026/03/duckdb-columnar-arrow/"
+  - "/blogs/posts/2026/03/duckdb-columnar-arrow/"
 tags: ["データベース", "OLAP", "Parquet", "Arrow"]
 ---
 

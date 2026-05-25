@@ -5,10 +5,10 @@ date: 2026-04-06
 lastmod: 2026-05-12
 aliases: ["Prompt Injection"]
 related_posts:
-  - "/posts/2026/03/vibe-hacking/"
-  - "/posts/2026/03/claude-code-security-theater/"
-  - "/posts/2026/03/2026-03-02-67f7657965c1f660dfbad9b0e88d0414/"
-  - "/posts/2026/03/2026-03-31-chatgpt-dns-tunneling-data-leak/"
+  - "/blogs/posts/2026/03/vibe-hacking/"
+  - "/blogs/posts/2026/03/claude-code-security-theater/"
+  - "/blogs/posts/2026/03/2026-03-02-67f7657965c1f660dfbad9b0e88d0414/"
+  - "/blogs/posts/2026/03/2026-03-31-chatgpt-dns-tunneling-data-leak/"
 tags: ["セキュリティ", "LLM", "脆弱性", "攻撃"]
 ---
 

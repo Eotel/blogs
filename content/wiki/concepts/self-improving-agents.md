@@ -5,7 +5,7 @@ date: 2026-04-06
 lastmod: 2026-04-06
 aliases: ["Self-Improving Agents", "メタエージェント"]
 related_posts:
-  - "/posts/2026/04/autoagent-self-improving-agents/"
+  - "/blogs/posts/2026/04/autoagent-self-improving-agents/"
 tags: ["agent", "LLM", "自動最適化"]
 ---
 
@@ -35,6 +35,8 @@ AI エージェントの構成一式（ハーネス: システムプロンプト
 ## 創発的な改善行動
 
 設計者が意図しなかった行動が自然に出現する:
+
+
 - スポットチェック（小さな編集の高速検証）
 - 強制検証ループ（自己修正ターンのバジェット組み込み）
 - 自前テスト作成（ユニットテストの自律生成）

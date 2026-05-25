@@ -2,13 +2,14 @@
 title: "コンテキスト圧縮"
 description: "LLM の会話が長くなった際にコンテキストウィンドウを管理する戦略群"
 date: 2026-04-06
-lastmod: 2026-04-23
+lastmod: 2026-05-20
 aliases: ["Context Compression", "コンテキスト管理"]
 related_posts:
-  - "/posts/2026/04/claude-code-context-compression/"
-  - "/posts/2026/04/2026-04-17-claude-code-context-rot-session-management/"
-  - "/posts/2026/04/2026-04-17-claude-caveman-token-reduction/"
-  - "/posts/2026/04/2026-04-15-claude-rate-limit-mac-mini-local-model/"
+  - "/blogs/posts/2026/05/rag-cag-llm-knowledge-context-cache-design/"
+  - "/blogs/posts/2026/04/claude-code-context-compression/"
+  - "/blogs/posts/2026/04/2026-04-17-claude-code-context-rot-session-management/"
+  - "/blogs/posts/2026/04/2026-04-17-claude-caveman-token-reduction/"
+  - "/blogs/posts/2026/04/2026-04-15-claude-rate-limit-mac-mini-local-model/"
 tags: ["LLM", "claude-code", "コンテキスト", "トークン削減"]
 ---
 
@@ -41,9 +42,12 @@ LLM のコンテキストウィンドウには上限がある。会話が長く�
 
 ## 関連ページ
 
+- [Context Rot](/blogs/wiki/concepts/context-rot/) — 圧縮しないと起きる現象
+- [Cache-Augmented Generation (CAG)](/blogs/wiki/concepts/cache-augmented-generation/) — 圧縮ではなく安定プレフィックスを KV キャッシュとして再利用するアプローチ
 - [Claude Code](/blogs/wiki/tools/claude-code/) — この圧縮戦略を実装しているツール
 - [LLM Wiki パターン](/blogs/wiki/concepts/llm-wiki-pattern/) — 知識の永続化という関連アプローチ
 
 ## ソース記事
 
+- [RAG vs CAG という雑な対立をやめる — 知識・コンテキスト・キャッシュの 3 軸で LLM を設計する](/blogs/posts/2026/05/rag-cag-llm-knowledge-context-cache-design/) — 2026-05-20
 - [Claude Code のコンテキスト圧縮戦略 — ソースコードから見える5つのアプローチ](/blogs/posts/2026/04/claude-code-context-compression/) — 2026-04-02

@@ -5,8 +5,8 @@ date: 2026-04-06
 lastmod: 2026-05-12
 aliases: ["autoagent"]
 related_posts:
-  - "/posts/2026/04/autoagent-self-improving-agents/"
-  - "/posts/2026/03/2026-03-05-bdc5082e2f5f8160644bd0ba01f52c76/"
+  - "/blogs/posts/2026/04/autoagent-self-improving-agents/"
+  - "/blogs/posts/2026/03/2026-03-05-bdc5082e2f5f8160644bd0ba01f52c76/"
 tags: ["agent", "python", "github", "自動最適化"]
 ---
 

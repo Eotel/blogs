@@ -5,7 +5,7 @@ date: 2026-05-11
 lastmod: 2026-05-12
 aliases: ["sokol", "sokol_gfx", "floooh/sokol"]
 related_posts:
-  - "/posts/2026/05/2026-05-11-truss-c-openframeworks-alternative/"
+  - "/blogs/posts/2026/05/2026-05-11-truss-c-openframeworks-alternative/"
 tags: ["c", "creative-coding", "graphics", "webgpu", "metal", "vulkan", "directx", "cross-platform"]
 ---
 

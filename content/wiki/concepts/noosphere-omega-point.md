@@ -12,8 +12,8 @@ aliases:
   - "Pierre Teilhard de Chardin"
   - "complexity-consciousness"
 related_posts:
-  - "/posts/2026/05/teilhard-noosphere-omega-singularity/"
-  - "/posts/2026/05/technium-critique-and-transcendence/"
+  - "/blogs/posts/2026/05/teilhard-noosphere-omega-singularity/"
+  - "/blogs/posts/2026/05/technium-critique-and-transcendence/"
 tags:
   - "テイヤール・ド・シャルダン"
   - "ヌースフィア"

@@ -4,8 +4,7 @@ description: "全記事 wiki-ingest で、既存 Wiki への高信頼統合に�
 date: 2026-05-12
 lastmod: 2026-05-12
 aliases: ["wiki ingest backlog", "未蒸留記事"]
-related_posts:
-  - "/posts/2019/01/2019-01-16-d28d71ee1c7855780f7d20ddcf28c53f/"
+related_posts: []
 tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 ---
 
@@ -15,4 +14,3 @@ tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 
 ## レビュー対象
 
-- [雪国のクリームシチュールー](/blogs/posts/2019/01/2019-01-16-d28d71ee1c7855780f7d20ddcf28c53f/) — 2019-01-16 / new_candidate

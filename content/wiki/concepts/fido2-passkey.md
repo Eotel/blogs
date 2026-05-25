@@ -5,7 +5,7 @@ date: 2026-04-06
 lastmod: 2026-05-12
 aliases: ["FIDO2", "パスキー", "Passkey", "WebAuthn"]
 related_posts:
-  - "/posts/2026/03/2026-03-02-c18862bd01d56d81c66ae0bf0fe9263b/"
+  - "/blogs/posts/2026/03/2026-03-02-c18862bd01d56d81c66ae0bf0fe9263b/"
 tags: ["認証", "FIDO2", "パスキー", "セキュリティ"]
 ---
 

@@ -4,9 +4,7 @@ description: "全記事 wiki-ingest で、既存 Wiki への高信頼統合に�
 date: 2026-05-12
 lastmod: 2026-05-12
 aliases: ["wiki ingest backlog", "未蒸留記事"]
-related_posts:
-  - "/posts/2018/01/2018-01-23-5d4652c00dfd893ca87ba4d709951089/"
-  - "/posts/2018/11/2018-11-29-1b85fbc4b04eeb4060893df6771ea384/"
+related_posts: []
 tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 ---
 
@@ -16,5 +14,3 @@ tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 
 ## レビュー対象
 
-- [都道府県](/blogs/posts/2018/01/2018-01-23-5d4652c00dfd893ca87ba4d709951089/) — 2018-01-23 / review_candidate
-- [千駄木 谷中 根津](/blogs/posts/2018/11/2018-11-29-1b85fbc4b04eeb4060893df6771ea384/) — 2018-11-29 / review_candidate

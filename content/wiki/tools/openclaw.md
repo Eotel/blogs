@@ -5,55 +5,55 @@ date: 2026-04-06
 lastmod: 2026-05-12
 aliases: ["openclaw"]
 related_posts:
-  - "/posts/2026/03/openclaw-claude-code-setup/"
-  - "/posts/2026/03/openclaw-overview/"
-  - "/posts/2026/03/openclaw-agent-runtime/"
-  - "/posts/2026/03/openclaw-china-security-warning/"
-  - "/posts/2026/04/gemini-agent-mode/"
-  - "/posts/2026/04/claude-managed-agents-architecture/"
-  - "/posts/2026/04/claw-code-local/"
-  - "/posts/2026/03/2026-03-02-7f8ba24f4d98fb8b93ec3d1a507cffec/"
-  - "/posts/2026/03/2026-03-02-8f10c70d04ed25f68a744081c16baa76/"
-  - "/posts/2026/03/2026-03-03-1ddcd07ed2cfe5a9510119208b4376e2/"
-  - "/posts/2026/03/2026-03-05-630f39a50673da78f8e5114781f6c8ff/"
-  - "/posts/2026/03/2026-03-05-6ab9658fb38eda6969e26ddc2a91217c/"
-  - "/posts/2026/03/2026-03-05-7a124c55c1c58515e7f6370d59fd25ec/"
-  - "/posts/2026/03/2026-03-05-7ed089c4237d5da02049b58d9678da5b/"
-  - "/posts/2026/03/2026-03-05-9344deb1d9e60907c9fbc5db4fd0f226/"
-  - "/posts/2026/03/2026-03-05-b4b02c682a675d88c7200e82dba16420/"
-  - "/posts/2026/03/2026-03-08-openclaw-telegram-forum-topics/"
-  - "/posts/2026/03/2026-03-09-openclaw-ai-team/"
-  - "/posts/2026/03/2026-03-09-shenzhen-openclaw-opc/"
-  - "/posts/2026/03/2026-03-10-openclaw-tiktok-marketing/"
-  - "/posts/2026/03/2026-03-10-openclaw-xiaohongshu-agent/"
-  - "/posts/2026/03/2026-03-11-claude-code-vs-openclaw/"
-  - "/posts/2026/03/2026-03-11-github-malware-openclaw-installer/"
-  - "/posts/2026/03/2026-03-11-openclaw-markdown-agent-stack/"
-  - "/posts/2026/03/2026-03-11-openclaw-trading-backtest/"
-  - "/posts/2026/03/2026-03-11-openclaw-x-knowledge-management/"
-  - "/posts/2026/03/2026-03-11-opik-openclaw-observability/"
-  - "/posts/2026/03/2026-03-11-opik-openclaw/"
-  - "/posts/2026/03/2026-03-12-openclaw-alex-finn/"
-  - "/posts/2026/03/2026-03-12-openclaw-knowledge-management/"
-  - "/posts/2026/03/2026-03-12-openclaw-stock-monitoring/"
-  - "/posts/2026/03/2026-03-12-perplexity-personal-computer/"
-  - "/posts/2026/03/2026-03-13-openclaw-nullclaw-small-board/"
-  - "/posts/2026/03/2026-03-15-openclaw-skills-collection/"
-  - "/posts/2026/03/2026-03-17-nemoclaw-openclaw-security/"
-  - "/posts/2026/03/2026-03-17-nvidia-nemoclaw-openclaw/"
-  - "/posts/2026/03/2026-03-17-openclaw-x-follower-growth/"
-  - "/posts/2026/03/2026-03-18-claude-cowork-dispatch-mind-uploading/"
-  - "/posts/2026/03/2026-03-18-openclaw-vibe-marketer/"
-  - "/posts/2026/03/2026-03-20-openclaw-gold-rush/"
-  - "/posts/2026/03/2026-03-21-claude-code-channels/"
-  - "/posts/2026/03/2026-03-21-clawrouter-openclaw-cost/"
-  - "/posts/2026/03/2026-03-21-openclaw-felix-ai-agent-company/"
-  - "/posts/2026/03/2026-03-27-openclaw-youtube-automation/"
-  - "/posts/2026/04/2026-04-06-openclaw-gemma4-local-setup/"
-  - "/posts/2026/04/2026-04-07-openclaw-video-generation/"
-  - "/posts/2026/04/2026-04-12-openclaw-vs-hermes/"
-  - "/posts/2026-03-10-openclaw-claude-code-setup/"
-  - "/posts/2026/03/2026-03-05-1128207db83f7ca1a2c940dba0fdc2c9/"
+  - "/blogs/posts/2026/03/openclaw-claude-code-setup/"
+  - "/blogs/posts/2026/03/openclaw-overview/"
+  - "/blogs/posts/2026/03/openclaw-agent-runtime/"
+  - "/blogs/posts/2026/03/openclaw-china-security-warning/"
+  - "/blogs/posts/2026/04/2026-04-07-gemini-agent-mode/"
+  - "/blogs/posts/2026/04/claude-managed-agents-architecture/"
+  - "/blogs/posts/2026/04/2026-04-05-claw-code-local/"
+  - "/blogs/posts/2026/03/2026-03-02-7f8ba24f4d98fb8b93ec3d1a507cffec/"
+  - "/blogs/posts/2026/03/2026-03-02-8f10c70d04ed25f68a744081c16baa76/"
+  - "/blogs/posts/2026/03/2026-03-03-1ddcd07ed2cfe5a9510119208b4376e2/"
+  - "/blogs/posts/2026/03/2026-03-05-630f39a50673da78f8e5114781f6c8ff/"
+  - "/blogs/posts/2026/03/2026-03-05-6ab9658fb38eda6969e26ddc2a91217c/"
+  - "/blogs/posts/2026/03/2026-03-05-7a124c55c1c58515e7f6370d59fd25ec/"
+  - "/blogs/posts/2026/03/2026-03-05-7ed089c4237d5da02049b58d9678da5b/"
+  - "/blogs/posts/2026/03/2026-03-05-9344deb1d9e60907c9fbc5db4fd0f226/"
+  - "/blogs/posts/2026/03/2026-03-05-b4b02c682a675d88c7200e82dba16420/"
+  - "/blogs/posts/2026/03/2026-03-08-openclaw-telegram-forum-topics/"
+  - "/blogs/posts/2026/03/2026-03-09-openclaw-ai-team/"
+  - "/blogs/posts/2026/03/2026-03-09-shenzhen-openclaw-opc/"
+  - "/blogs/posts/2026/03/2026-03-10-openclaw-tiktok-marketing/"
+  - "/blogs/posts/2026/03/2026-03-10-openclaw-xiaohongshu-agent/"
+  - "/blogs/posts/2026/03/2026-03-11-claude-code-vs-openclaw/"
+  - "/blogs/posts/2026/03/2026-03-11-github-malware-openclaw-installer/"
+  - "/blogs/posts/2026/03/2026-03-11-openclaw-markdown-agent-stack/"
+  - "/blogs/posts/2026/03/2026-03-11-openclaw-trading-backtest/"
+  - "/blogs/posts/2026/03/2026-03-11-openclaw-x-knowledge-management/"
+  - "/blogs/posts/2026/03/2026-03-11-opik-openclaw-observability/"
+  - "/blogs/posts/2026/03/2026-03-11-opik-openclaw/"
+  - "/blogs/posts/2026/03/2026-03-12-openclaw-alex-finn/"
+  - "/blogs/posts/2026/03/2026-03-12-openclaw-knowledge-management/"
+  - "/blogs/posts/2026/03/2026-03-12-openclaw-stock-monitoring/"
+  - "/blogs/posts/2026/03/2026-03-12-perplexity-personal-computer/"
+  - "/blogs/posts/2026/03/2026-03-13-openclaw-nullclaw-small-board/"
+  - "/blogs/posts/2026/03/2026-03-15-openclaw-skills-collection/"
+  - "/blogs/posts/2026/03/2026-03-17-nemoclaw-openclaw-security/"
+  - "/blogs/posts/2026/03/2026-03-17-nvidia-nemoclaw-openclaw/"
+  - "/blogs/posts/2026/03/2026-03-17-openclaw-x-follower-growth/"
+  - "/blogs/posts/2026/03/2026-03-18-claude-cowork-dispatch-mind-uploading/"
+  - "/blogs/posts/2026/03/2026-03-18-openclaw-vibe-marketer/"
+  - "/blogs/posts/2026/03/2026-03-20-openclaw-gold-rush/"
+  - "/blogs/posts/2026/03/2026-03-21-claude-code-channels/"
+  - "/blogs/posts/2026/03/2026-03-21-clawrouter-openclaw-cost/"
+  - "/blogs/posts/2026/03/2026-03-21-openclaw-felix-ai-agent-company/"
+  - "/blogs/posts/2026/03/2026-03-27-openclaw-youtube-automation/"
+  - "/blogs/posts/2026/04/2026-04-06-openclaw-gemma4-local-setup/"
+  - "/blogs/posts/2026/04/2026-04-07-openclaw-video-generation/"
+  - "/blogs/posts/2026/04/2026-04-12-openclaw-vs-hermes/"
+  - "/blogs/posts/2026/03/openclaw-claude-code-setup/"
+  - "/blogs/posts/2026/03/2026-03-05-1128207db83f7ca1a2c940dba0fdc2c9/"
 tags: ["agent", "オープンソース", "フレームワーク", "ローカルエージェント"]
 ---
 
@@ -102,9 +102,9 @@ OpenClaw のアーキテクチャを参考に、Claude Code 風の AI コーデ�
 - [OpenClaw 概要](/blogs/posts/2026/03/openclaw-overview/) — 2026-03
 - [OpenClaw エージェントランタイム全体像](/blogs/posts/2026/03/openclaw-agent-runtime/) — 2026-03
 - [OpenClaw セキュリティ警告](/blogs/posts/2026/03/openclaw-china-security-warning/) — 2026-03
-- [Gemini Agentモード：Google Workspaceを自動化するAIエージェント](/blogs/posts/2026/04/gemini-agent-mode/) — 2026-04-07
+- [Gemini Agentモード：Google Workspaceを自動化するAIエージェント](/blogs/posts/2026/04/2026-04-07-gemini-agent-mode/) — 2026-04-07
 - [Claude Managed Agents のアーキテクチャ：Brain / Session / Hands の分離設計](/blogs/posts/2026/04/claude-managed-agents-architecture/) — 2026-04-10
-- [claw-code-local — Claude Code 風の AI コーディングエージェントをローカル LLM で動かす](/blogs/posts/2026/04/claw-code-local/) — 2026-04-05
+- [claw-code-local — Claude Code 風の AI コーディングエージェントをローカル LLM で動かす](/blogs/posts/2026/04/2026-04-05-claw-code-local/) — 2026-04-05
 - [Second Me — AI に「自分の分身」を持つ時代と OpenClaw との本質的な違い](/blogs/posts/2026/03/2026-03-02-7f8ba24f4d98fb8b93ec3d1a507cffec/) — 2026-03-02
 - [OpenClaw で 13 体の AI チームを組織する — 低スペック PC で営業・SNS 運用を完全自動化](/blogs/posts/2026/03/2026-03-02-8f10c70d04ed25f68a744081c16baa76/) — 2026-03-02
 - [「OpenClawで5人解雇」は本当か — AIエージェント煽りの構造とファクトチェック](/blogs/posts/2026/03/2026-03-03-1ddcd07ed2cfe5a9510119208b4376e2/) — 2026-03-03
@@ -145,5 +145,5 @@ OpenClaw のアーキテクチャを参考に、Claude Code 風の AI コーデ�
 - [OpenClaw + Ollama + Gemma4 でローカル無料AIエージェントを構築する](/blogs/posts/2026/04/2026-04-06-openclaw-gemma4-local-setup/) — 2026-04-06
 - [OpenClaw に動画生成機能が正式搭載へ — AI エージェントが制作まで完結する時代](/blogs/posts/2026/04/2026-04-07-openclaw-video-generation/) — 2026-04-07
 - [OpenClaw vs Hermes: AIエージェントプラットフォームの勢力図に変化](/blogs/posts/2026/04/2026-04-12-openclaw-vs-hermes/) — 2026-04-12
-- [OpenClaw × Claude Code セットアップガイド — AI エージェントチームを構築する2つのアプローチ](/blogs/posts/2026-03-10-openclaw-claude-code-setup/) — 2026-03-10
+- [OpenClaw × Claude Code セットアップガイド — AI エージェントチームを構築する2つのアプローチ](/blogs/posts/2026/03/openclaw-claude-code-setup/) — 2026-03-10
 - [Felix AI CEO × 人間ゼロの会社が30日で売上1,200万円、VCを「金の使い道がない」と断った話](/blogs/posts/2026/03/2026-03-05-1128207db83f7ca1a2c940dba0fdc2c9/) — 2026-03-05
