@@ -2,7 +2,7 @@
 title: "microsandbox"
 description: "libkrun ベースの microVM で AI エージェントの untrusted code を隔離実行する self-hosted な OSS サンドボックス"
 date: 2026-05-25
-lastmod: 2026-05-25
+lastmod: 2026-05-26
 aliases: ["microsandbox", "msb"]
 related_posts:
   - "/posts/2026/05/2026-05-25-microsandbox-microvm-isolation-for-ai-agents/"
@@ -24,13 +24,13 @@ AI エージェントが生成した untrusted code を安全かつ高速に実�
 
 ## アーキテクチャ
 
-仮想化ランタイムに **libkrun**、ネットワークスタックに Rust 製ユーザー空間 TCP/IP スタックの **smoltcp** を用いる（README が依存として両者を明示）。フル仮想化のオーバーヘッドを抑えつつ KVM によるハードウェア分離を提供し、ネットワークの出入りをホスト側で握ることが、下記のシークレット注入の制御点になっている。
+仮想化ランタイムに **libkrun**、ネットワークスタックに Rust 製ユーザー空間 TCP/IP スタックの **smoltcp** を用いる（README が謝辞で両者に言及。smoltcp は Cargo 依存、libkrun はシステムライブラリ依存）。フル仮想化のオーバーヘッドを抑えつつ KVM によるハードウェア分離を提供し、ネットワークの出入りをホスト側で握ることが、下記のシークレット注入の制御点になっている。
 
 要件は「Linux with KVM enabled, or macOS with Apple Silicon」。
 
 ## シークレットをネットワーク層で守る
 
-microsandbox の最大の差別化点。本物のクレデンシャルはホスト側に置き、VM 内のプロセスにはプレースホルダだけを渡す。VM が**許可された宛先への TLS 接続**を行うときに限り、ホスト側で本物の値を差し込む（"Inject secrets only for approved TLS destinations"）。
+microsandbox の最大の差別化点。本物のクレデンシャルはホスト側に置き、VM 内のプロセスにはプレースホルダだけを渡す。VM が**承認済みの TLS 宛先**に通信するときに限り、ホスト側で本物の値を差し込む（公式は「シークレットは VM に入らず、承認済みの宛先にのみ供給される」と説明）。
 
 このため、VM 内の悪意あるコードが環境変数を読んでも本物の鍵はなく、許可外の宛先（攻撃者のサーバ等）へ送り出そうとしても注入対象外で持ち出し（exfiltration）が成立しない。[プロンプトインジェクション](/blogs/wiki/concepts/prompt-injection/)でエージェントが乗っ取られた場合のシークレット流出を構造的に防ぐ実行レイヤの対策にあたる。
 
