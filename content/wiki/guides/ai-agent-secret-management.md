@@ -17,6 +17,7 @@ AI エージェント（Claude Code、Cursor）はローカルの .env から平
 
 - [Claude Code](/blogs/wiki/tools/claude-code/) — シークレット管理が必要な環境
 - [プロンプトインジェクション](/blogs/wiki/concepts/prompt-injection/) — シークレット漏洩につながる攻撃
+- [microsandbox](/blogs/wiki/tools/microsandbox/) — 実行サンドボックス側でネットワーク層からシークレットを守るアプローチ（供給側の本ガイドと補完関係）
 
 ## ソース記事
 

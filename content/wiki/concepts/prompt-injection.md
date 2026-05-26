@@ -27,6 +27,7 @@ tags: ["セキュリティ", "LLM", "脆弱性", "攻撃"]
 - [AI エージェント](/blogs/wiki/concepts/ai-agent/) — 攻撃対象となるシステム
 - [Claude Code](/blogs/wiki/tools/claude-code/) — セキュリティ機能の実装
 - [Exposure Management](/blogs/wiki/concepts/exposure-management/) — 脆弱性を「攻撃成立可能性」で評価する考え方
+- [microsandbox](/blogs/wiki/tools/microsandbox/) — 乗っ取られても鍵が漏れないようシークレットをネットワーク層で守る実行サンドボックス
 
 ## ソース記事
 
