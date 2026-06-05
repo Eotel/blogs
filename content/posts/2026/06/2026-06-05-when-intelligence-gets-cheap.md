@@ -61,7 +61,7 @@ OpenAI の Sam Altman も、2025 年 2 月のブログ「[Three Observations](ht
 
 > towards intelligence too cheap to meter: […] 15 cents per million input tokens, 60 cents per million output tokens, MMLU of 82%, and fast.
 >
-> （メーターで測るまでもなく安いインテリジェンスへ——入力 100 万トークン 15 セント、出力 100 万トークン 60 セント、MMLU 82%、しかも高速。\[…\] は GPT-4o mini 発表ページへの URL の省略）
+> （メーターで測るまでもなく安いインテリジェンスへ——入力 100 万トークン 15 セント、出力 100 万トークン 60 セント、MMLU 82%、しかも高速。[…] は GPT-4o mini 発表ページへの URL の省略）
 
 「too cheap to meter」には元ネタがある。1954 年、米国原子力委員会の Lewis Strauss 委員長が原子力発電の未来についてこう演説した。
 
