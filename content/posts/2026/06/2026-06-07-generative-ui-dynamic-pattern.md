@@ -1,14 +1,27 @@
 ---
-title: "Generative UI に第 4 の選択肢 — yusukebe「AI時代のUIはどこへ行く？その2！」が提案する Dynamic パターン"
-slug: "2026-06-07-generative-ui-dynamic-pattern"
+title: Generative UI に第 4 の選択肢 — yusukebe「AI時代のUIはどこへ行く？その2！」が提案する Dynamic パターン
+slug: 2026-06-07-generative-ui-dynamic-pattern
 date: 2026-06-07
 lastmod: 2026-06-07
 draft: false
-author: "eotel"
-model: "claude-opus-4-8"
-description: "Hono 作者 yusukebe さんがフロントエンド・PHPカンファレンス北海道2026で発表した「AI時代のUIはどこへ行く？その2！」を読み解く。Generative UI を Static / Declarative / Open-ended のスペクトラムとして整理し、Cloudflare Dynamic Workers を使った第 4 の Dynamic パターンを提案する内容だ。"
-categories: ["AI/LLM"]
-tags: ["generative-ui", "cloudflare-workers", "dynamic-workers", "llm", "frontend"]
+author: eotel
+model: claude-opus-4-8
+description: Hono 作者 yusukebe さんがフロントエンド・PHPカンファレンス北海道2026で発表した「AI時代のUIはどこへ行く？その2！」を読み解く。Generative
+  UI を Static / Declarative / Open-ended のスペクトラムとして整理し、Cloudflare Dynamic Workers
+  を使った第 4 の Dynamic パターンを提案する内容だ。
+categories:
+- AI/LLM
+tags:
+- generative-ui
+- cloudflare-workers
+- dynamic-workers
+- llm
+- frontend
+audio_url: https://github.com/Eotel/blogs/releases/download/audio/2026-06-07-generative-ui-dynamic-pattern.m4a
+audio_lang: ja
+audio_generated_at: '2026-06-08T07:40:33Z'
+audio_source: notebooklm
+audio_format: deep_dive
 ---
 
 2026 年 6 月 6 日に札幌で開催された[フロントエンド・PHPカンファレンス北海道2026](https://fortee.jp/frontend-phpcon-do-2026)で、[Hono](https://hono.dev/) の作者であり Cloudflare に勤務する和田裕介（[yusukebe](https://github.com/yusukebe)）さんが「[AI時代のUIはどこへ行く？その2！](https://speakerdeck.com/yusukebe/aishi-dai-nouihadokohexing-ku-sono2)」というタイトルで登壇した。タイトルの通り、2025 年 9 月のフロントエンドカンファレンス北海道2025 での発表「[AI時代のUIはどこへ行く？](https://speakerdeck.com/yusukebe/aishi-dai-nouihadokohexing-ku)」の続編にあたる。
