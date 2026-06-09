@@ -1,0 +1,93 @@
+<mxfile host="app.diagrams.net" type="device">
+  <diagram id="eosw-roadmap" name="roadmap">
+    <mxGraphModel dx="1100" dy="800" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1280" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="bg" value="" style="rounded=0;fillColor=#ffffff;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="1280" height="900" as="geometry" />
+        </mxCell>
+
+        <mxCell id="title1" value="① 配信モデルの三世代 — 複雑性の所有者がシフトする" style="text;html=1;align=left;verticalAlign=middle;fontSize=24;fontStyle=1;fontColor=#1a2330;" vertex="1" parent="1">
+          <mxGeometry x="60" y="40" width="1160" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="g1" value="Software 1.0 / ローカル&#10;&#10;複雑性の所有者：&#10;エンドユーザー&#10;（インストール・保守）" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#eef2f7;strokeColor=#9fb3c8;fontSize=16;fontColor=#1a2330;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="60" y="100" width="320" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="g2" value="Software 2.0 / SaaS&#10;&#10;複雑性の所有者：&#10;ベンダー&#10;（インフラ・更新）" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#dce8f5;strokeColor=#6f9fc8;fontSize=16;fontColor=#1a2330;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="480" y="100" width="320" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="g3" value="Software 3.0 / AaaS&#10;Agent-as-a-Service&#10;&#10;複雑性の所有者：&#10;エージェント&#10;（理解・構築・実行）" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#c7e0d4;strokeColor=#4f9d7c;fontSize=16;fontColor=#13321f;align=center;verticalAlign=middle;spacing=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="900" y="100" width="320" height="150" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a1" style="endArrow=block;html=1;strokeColor=#5a6b7b;strokeWidth=3;" edge="1" parent="1" source="g1" target="g2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" style="endArrow=block;html=1;strokeColor=#5a6b7b;strokeWidth=3;" edge="1" parent="1" source="g2" target="g3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="alabel" value="「複雑性を最も引き取れる主体が引き取り、最も扱えない主体が解放される」" style="text;html=1;align=center;verticalAlign=middle;fontSize=14;fontColor=#5a6b7b;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="262" width="1160" height="28" as="geometry" />
+        </mxCell>
+
+        <mxCell id="sep" value="" style="line;strokeColor=#d0d7de;strokeWidth=1;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="320" width="1160" height="10" as="geometry" />
+        </mxCell>
+
+        <mxCell id="title2" value="② Agentic Engineering の4段階ロードマップ" style="text;html=1;align=left;verticalAlign=middle;fontSize=24;fontStyle=1;fontColor=#1a2330;" vertex="1" parent="1">
+          <mxGeometry x="60" y="350" width="1160" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s1" value="Stage I&#10;Tool-Augmented&#10;2023–2025&#10;&#10;コード補完・単発の Issue 修正&#10;In-context learning / RAG" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#fde7d6;strokeColor=#e0a96d;fontSize=14;fontColor=#3a2a14;align=center;verticalAlign=top;spacingTop=12;spacing=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="60" y="420" width="270" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" value="Stage II&#10;Single-Task Autonomous&#10;2025–2027&#10;&#10;仕様→デプロイをタスク単位で所有&#10;プランニング＋自己修正" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#fbd9b8;strokeColor=#d98e3e;fontSize=14;fontColor=#3a2a14;align=center;verticalAlign=top;spacingTop=12;spacing=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="370" y="420" width="270" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" value="Stage III&#10;Multi-Agent Teams&#10;2026–2029&#10;&#10;専門エージェントが協調&#10;共有メモリ・可観測性が基盤に" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#f7c79a;strokeColor=#c8792b;fontSize=14;fontColor=#3a2a14;align=center;verticalAlign=top;spacingTop=12;spacing=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="680" y="420" width="270" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="s4" value="Stage IV&#10;Self-Evolving Ecosystems&#10;2028+&#10;&#10;自己改善・サブエージェント生成&#10;「ソフトウェア」と「エージェント」が溶ける" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#f0b277;strokeColor=#b3651c;fontSize=14;fontColor=#3a2a14;align=center;verticalAlign=top;spacingTop=12;spacing=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="990" y="420" width="270" height="150" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b1" style="endArrow=block;html=1;strokeColor=#b3651c;strokeWidth=3;" edge="1" parent="1" source="s1" target="s2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b2" style="endArrow=block;html=1;strokeColor=#b3651c;strokeWidth=3;" edge="1" parent="1" source="s2" target="s3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b3" style="endArrow=block;html=1;strokeColor=#b3651c;strokeWidth=3;" edge="1" parent="1" source="s3" target="s4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="hr" value="人間の役割の変化" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#1a2330;" vertex="1" parent="1">
+          <mxGeometry x="60" y="600" width="300" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="h1" value="著者＋レビュアー" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#eef2f7;strokeColor=#9fb3c8;fontSize=13;fontColor=#1a2330;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="60" y="636" width="270" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="h2" value="意図のアーキテクト＋監査役" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#eef2f7;strokeColor=#9fb3c8;fontSize=13;fontColor=#1a2330;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="370" y="636" width="270" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="h3" value="PM＋アーキテクト＋監査役" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#eef2f7;strokeColor=#9fb3c8;fontSize=13;fontColor=#1a2330;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="680" y="636" width="270" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="h4" value="ゴール設定者＋倫理ガバナー" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#eef2f7;strokeColor=#9fb3c8;fontSize=13;fontColor=#1a2330;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="990" y="636" width="270" height="46" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cliff" value="⚠ EvoClaw ベンチマーク：孤立タスクでは 80%超 → 継続的進化では最大 38%。長期保守とエラー伝播が現在地の壁。" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#fcebec;strokeColor=#d98a8f;fontSize=14;fontColor=#6e1f25;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="60" y="720" width="1200" height="56" as="geometry" />
+        </mxCell>
+
+        <mxCell id="src" value="出典：Zhenfeng Cao, “The End of Software Engineering” (arXiv:2606.05608, 2026) の Table 1・Table 3 をもとに作図" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;fontColor=#8a96a3;" vertex="1" parent="1">
+          <mxGeometry x="60" y="800" width="1160" height="24" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
