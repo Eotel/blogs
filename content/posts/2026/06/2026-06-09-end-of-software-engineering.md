@@ -76,7 +76,7 @@ SaaS が企業をサーバールームから解放したように、**AaaS（Age
 
 ## Agentic Engineering という新しい規律
 
-論文は、この実務を従来のソフトウェアエンジニアリングと別物の規律 **Agentic Engineering** として立てる。これは LangChain が 2026 年 4 月に提唱した概念（論文の引用 [7], Kumar and Ramagopal）として、次のように定義される。
+論文は、この実務を従来のソフトウェアエンジニアリングと別物の規律 **Agentic Engineering** として立てる。論文は「LangChain が 2026 年 4 月に提唱した」概念だとするが、正確には引用 [7] は **Cisco の Renuka Kumar と Prashanth Ramagopal** が LangChain のブログに寄稿した記事（"Agentic Engineering: How Swarms of AI Agents Are Redefining Software Engineering", 2026-04）で、LangChain は提唱者ではなく掲載媒体だ。そこでの定義はこうなっている。
 
 > a multi-agent coordination model where AI agents function as digital team members—each with defined roles, shared memory, and a unified observability layer—to drive software through the entire delivery pipeline, not merely to generate code faster.
 >
@@ -145,7 +145,7 @@ SaaS が企業をサーバールームから解放したように、**AaaS（Age
 論文の **骨格**（コード = 使い捨ての道具という再定義、複雑性スケーリングの非対称性、配信モデルの三世代）は説得力がある。一方で、いくつかの点は割り引いて読むのが妥当だ。
 
 - **単著のポジションペーパーである。** 査読を経た実証研究ではなく、第一原理の議論と二次引用で構成された見通しの文書だ。`P(n) ∈ Θ(2ⁿ)` は「最悪ケースの上界」であって、現実のシステムがその構成をすべて実現するわけではない（論文自身も "real systems do not realize all configurations" と断っている）。複雑性の議論はレトリックとして強いが、定量的予測としては弱い。
-- **引用される個別の数値は一次情報で確かめる価値がある。** Lingma SWE-GPT の 30.20%、LangChain パイロットの 93% 削減、そして上で触れた Hermes Agent の「17 万 9000 GitHub stars 超」といった数字は、いずれも論文が引いた二次情報だ。とりわけ単一リポジトリで 17 万 9000 stars という数字は現実離れしており（GitHub のトップでも約 40 万、Nous Research の該当リポジトリも独立に確認しづらい）、論文側の検証の甘さを示唆する。本記事もこれらを「論文によれば」という距離で紹介している。実務判断に使うなら元の Ma et al. / Kumar and Ramagopal / Deng et al. を直接当たるべきだ。
+- **引用される個別の数値は一次情報で確かめる価値がある。** Lingma SWE-GPT の 30.20%、LangChain パイロットの 93% 削減、Hermes Agent の「17 万 9000 GitHub stars 超」といった数字は、いずれも論文が引いた二次情報だ。本記事もこれらを「論文によれば」という距離で紹介している。実務判断に使うなら元の Ma et al. / Kumar and Ramagopal / Deng et al. を直接当たるべきだ。
 - **EvoClaw の崖こそが本論の良心だ。** タイトルの煽りに反して、継続的進化での 38% という数字が「いま何ができて何ができないか」を最も誠実に語っている。長期保守・エラー伝播・技術的負債への無自覚という 4 課題は、現場で AI エージェントを使った人なら肌感覚と一致するはずだ。「完全自律」を売り文句にするプロダクトは、まずこの継続設定での性能を聞くべきだ、という実務的な物差しになる。
 
 総じて、この論文は「予言」としてより「**現在地の地図**」として価値がある。コードが成果物そのものから推論の道具へ滑っていく方向は確かに見えていて、その方向で自分の役割（意図の設計・オーケストレーション・評価ハーネスの構築・ガバナンス）を再定義しておくのは、Stage I の終盤にいる今こそ妥当な投資だ。
