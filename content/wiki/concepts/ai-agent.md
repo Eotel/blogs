@@ -153,6 +153,7 @@ LangChain 創設者 Harrison Chase が指摘する重要な概念。エージェ
 - [microsandbox](/blogs/wiki/tools/microsandbox/) — エージェントの untrusted code を隔離実行する microVM サンドボックス
 - [microVM](/blogs/wiki/concepts/microvm/) — エージェントのコード実行サンドボックスを支える隔離技術
 - [主体性の七条件](/blogs/wiki/concepts/agency-seven-conditions/) — エージェントを「欲望ある主体」としてどこまで扱えるかの判定フレーム
+- [Agentic Engineering](/blogs/wiki/concepts/agentic-engineering/) — AI エージェントを中核に据えた開発パラダイムと AaaS
 
 ## ソース記事
 

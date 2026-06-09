@@ -46,6 +46,7 @@ AI エージェントの構成一式（ハーネス: システムプロンプト
 
 - [AutoAgent](/blogs/wiki/tools/autoagent/) — このパターンを実装した OSS ライブラリ
 - [LLM Wiki パターン](/blogs/wiki/concepts/llm-wiki-pattern/) — AI による知識保守という関連パターン
+- [Agentic Engineering](/blogs/wiki/concepts/agentic-engineering/) — 自己改善は Stage IV（自己進化エコシステム）に対応する
 
 ## ソース記事
 

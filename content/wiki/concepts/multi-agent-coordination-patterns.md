@@ -70,6 +70,7 @@ Anthropic が 2026年4月に公開した、複数 AI エージェントを協調
 - [エージェントメモリのロックイン](/blogs/wiki/concepts/agent-memory-lock-in/)
 - [ハーネスエンジニアリング](/blogs/wiki/concepts/harness-engineering/)
 - [社会シミュレーション](/blogs/wiki/concepts/social-simulation/) — マルチエージェントを使った仮想社会のシミュレーション
+- [Agentic Engineering](/blogs/wiki/concepts/agentic-engineering/) — マルチエージェント協調を Stage III に据える開発パラダイム
 
 ## ソース記事
 
