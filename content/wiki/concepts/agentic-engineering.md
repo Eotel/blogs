@@ -2,10 +2,11 @@
 title: "Agentic Engineering（エージェンティックエンジニアリング）"
 description: "コードを「決定ロジックの担い手」から「使い捨ての道具」へ変える、AI エージェント中心のソフトウェア開発パラダイム。配信モデルは SaaS から AaaS へ"
 date: 2026-06-09
-lastmod: 2026-06-09
+lastmod: 2026-06-20
 aliases: ["Agentic Engineering", "エージェンティックエンジニアリング", "Agent-as-a-Service", "AaaS"]
 related_posts:
-  - "/blogs/posts/2026/06/end-of-software-engineering/"
+  - "/posts/2026/06/end-of-software-engineering/"
+  - "/posts/2026/06/when-intelligence-gets-cheap/"
 tags: ["AIエージェント", "ソフトウェアエンジニアリング", "LLM"]
 ---
 
@@ -66,3 +67,4 @@ SaaS が企業をサーバールームから解放したように、**Agent-as-a
 ## ソース記事
 
 - [「ソフトウェアエンジニアリングの終わり」を読む — コードが「使い捨ての道具」になる世界の見取り図](/blogs/posts/2026/06/end-of-software-engineering/) — 2026-06-09
+- [ストレージは Gmail を、帯域は YouTube を生んだ — インテリジェンスが安くなったら何が生まれるか](/blogs/posts/2026/06/when-intelligence-gets-cheap/) — 2026-06-05
