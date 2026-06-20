@@ -2,10 +2,11 @@
 title: "microsandbox"
 description: "libkrun ベースの microVM で AI エージェントの untrusted code を隔離実行する self-hosted な OSS サンドボックス"
 date: 2026-05-25
-lastmod: 2026-05-26
+lastmod: 2026-06-20
 aliases: ["microsandbox", "msb"]
 related_posts:
   - "/posts/2026/05/2026-05-25-microsandbox-microvm-isolation-for-ai-agents/"
+  - "/posts/2026/06/2026-06-07-generative-ui-dynamic-pattern/"
 tags: ["microsandbox", "microvm", "libkrun", "AI エージェント", "セキュリティ"]
 ---
 
@@ -56,6 +57,7 @@ self-host したいチーム向けのオープンソース選択肢。マネー�
 ## 関連ページ
 
 - [microVM](/blogs/wiki/concepts/microvm/) — microsandbox が採用する隔離技術の概念
+- [Generative UI](/blogs/wiki/concepts/generative-ui/) — V8 isolate（Cloudflare Dynamic Workers）と比較される AI コード実行基盤
 - [AI エージェント](/blogs/wiki/concepts/ai-agent/) — untrusted code 実行が課題になるシステム
 - [プロンプトインジェクション](/blogs/wiki/concepts/prompt-injection/) — シークレット注入が防ぐ攻撃
 - [AI エージェント時代のシークレット管理](/blogs/wiki/guides/ai-agent-secret-management/) — 供給側の対策と補完関係
@@ -64,3 +66,4 @@ self-host したいチーム向けのオープンソース選択肢。マネー�
 ## ソース記事
 
 - [microsandbox の仕組み — libkrun の microVM で AI エージェントのコードを隔離実行する](/blogs/posts/2026/05/2026-05-25-microsandbox-microvm-isolation-for-ai-agents/) — 2026-05-25
+- [Generative UI に第 4 の選択肢 — yusukebe「AI時代のUIはどこへ行く？その2！」が提案する Dynamic パターン](/blogs/posts/2026/06/2026-06-07-generative-ui-dynamic-pattern/) — 2026-06-07
