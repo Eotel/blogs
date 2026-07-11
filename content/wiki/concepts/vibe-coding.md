@@ -2,7 +2,7 @@
 title: "Vibe Coding"
 description: "感覚的・直感的に AI に指示を出すコーディング手法。詳細なルール不要。CS 基礎知識と文章力が成果に直結する"
 date: 2026-04-06
-lastmod: 2026-05-12
+lastmod: 2026-07-11
 aliases: ["ヴァイブコーディング", "バイブコーディング"]
 related_posts:
   - "/blogs/posts/2026/03/vibe-coding-skills/"
@@ -12,6 +12,7 @@ related_posts:
   - "/blogs/posts/2026/03/2026-03-01-44d3e82b0c355de783233377c5f8fcff/"
   - "/blogs/posts/2026/03/2026-03-04-179a96f4a2907544469cb7055564ac6c/"
   - "/blogs/posts/2026/03/2026-03-10-mirofish-vibe-coding/"
+  - "/posts/2026/06/when-intelligence-gets-cheap/"
 tags: ["vibe-coding", "プロンプト", "開発手法", "CHI2026", "文章力"]
 ---
 
@@ -64,3 +65,4 @@ Vibe Coding の反対側が Vibe Hacking（AI による攻撃の民主化）。�
 - [バイブコーディングでデザインを劇的に改善する方法 — UI コンポーネント名で「構造」を指示する](/blogs/posts/2026/03/2026-03-01-44d3e82b0c355de783233377c5f8fcff/) — 2026-03-01
 - [Anything の Research Agents — 「コードを書く前に調べる」AI エージェントが Vibe Coding の次に来るもの](/blogs/posts/2026/03/2026-03-04-179a96f4a2907544469cb7055564ac6c/) — 2026-03-04
 - [MiroFish — 20歳の学生が10日間の Vibe Coding で作った AI 未来予測エンジンが GitHub Trending 1位に](/blogs/posts/2026/03/2026-03-10-mirofish-vibe-coding/) — 2026-03-10
+- [ストレージは Gmail を、帯域は YouTube を生んだ — インテリジェンスが安くなったら何が生まれるか](/blogs/posts/2026/06/when-intelligence-gets-cheap/) — 2026-06-05
