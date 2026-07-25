@@ -6,6 +6,7 @@ lastmod: 2026-05-26
 aliases: ["microsandbox", "msb"]
 related_posts:
   - "/posts/2026/05/2026-05-25-microsandbox-microvm-isolation-for-ai-agents/"
+  - "/posts/2026/06/2026-06-07-generative-ui-dynamic-pattern/"
 tags: ["microsandbox", "microvm", "libkrun", "AI エージェント", "セキュリティ"]
 ---
 
@@ -64,3 +65,4 @@ self-host したいチーム向けのオープンソース選択肢。マネー�
 ## ソース記事
 
 - [microsandbox の仕組み — libkrun の microVM で AI エージェントのコードを隔離実行する](/blogs/posts/2026/05/2026-05-25-microsandbox-microvm-isolation-for-ai-agents/) — 2026-05-25
+- [Generative UI に第 4 の選択肢 — yusukebe「AI時代のUIはどこへ行く？その2！」が提案する Dynamic パターン](/blogs/posts/2026/06/2026-06-07-generative-ui-dynamic-pattern/) — 2026-06-07
