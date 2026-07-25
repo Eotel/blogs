@@ -6,6 +6,7 @@ lastmod: 2026-04-06
 aliases: ["Self-Improving Agents", "メタエージェント"]
 related_posts:
   - "/blogs/posts/2026/04/autoagent-self-improving-agents/"
+  - "/posts/2026/06/end-of-software-engineering/"
 tags: ["agent", "LLM", "自動最適化"]
 ---
 
@@ -46,8 +47,9 @@ AI エージェントの構成一式（ハーネス: システムプロンプト
 
 - [AutoAgent](/blogs/wiki/tools/autoagent/) — このパターンを実装した OSS ライブラリ
 - [LLM Wiki パターン](/blogs/wiki/concepts/llm-wiki-pattern/) — AI による知識保守という関連パターン
-- [Agentic Engineering](/blogs/wiki/concepts/agentic-engineering/) — 自己改善は Stage IV（自己進化エコシステム）に対応する
+- [Agentic Engineering](/blogs/wiki/concepts/agentic-engineering/) — 自己改善は Stage IV（自己進化エコシステム）に対応する。EvoClaw ベンチマークが示す現在の限界も参照
 
 ## ソース記事
 
 - [AutoAgent — AIがAIを育てる自己改善エージェントOSSライブラリ](/blogs/posts/2026/04/autoagent-self-improving-agents/) — 2026-04-05
+- [「ソフトウェアエンジニアリングの終わり」を読む — コードが「使い捨ての道具」になる世界の見取り図](/blogs/posts/2026/06/end-of-software-engineering/) — 2026-06-09

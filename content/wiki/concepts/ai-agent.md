@@ -100,6 +100,8 @@ related_posts:
   - "/blogs/posts/2026/03/2026-03-03-fbc113dfc0629b475ce1ccf808e859a0/"
   - "/blogs/posts/2026/03/2026-03-05-1128207db83f7ca1a2c940dba0fdc2c9/"
   - "/blogs/posts/2026/05/emergence-without-will-and-desiring-subjects/"
+  - "/posts/2026/06/when-intelligence-gets-cheap/"
+  - "/posts/2026/06/2026-06-07-generative-ui-dynamic-pattern/"
 tags: ["agent", "LLM", "自律実行", "マネージドエージェント"]
 ---
 
@@ -154,9 +156,13 @@ LangChain 創設者 Harrison Chase が指摘する重要な概念。エージェ
 - [microVM](/blogs/wiki/concepts/microvm/) — エージェントのコード実行サンドボックスを支える隔離技術
 - [主体性の七条件](/blogs/wiki/concepts/agency-seven-conditions/) — エージェントを「欲望ある主体」としてどこまで扱えるかの判定フレーム
 - [Agentic Engineering](/blogs/wiki/concepts/agentic-engineering/) — AI エージェントを中核に据えた開発パラダイムと AaaS
+- [LLMflation](/blogs/wiki/concepts/llmflation/) — 推論コストの崩壊がエージェント普及を加速する経済的背景
+- [Generative UI](/blogs/wiki/concepts/generative-ui/) — エージェントが UI を動的生成する 4 パターンスペクトラム
 
 ## ソース記事
 
+- [ストレージは Gmail を、帯域は YouTube を生んだ — インテリジェンスが安くなったら何が生まれるか](/blogs/posts/2026/06/when-intelligence-gets-cheap/) — 2026-06-05
+- [Generative UI に第 4 の選択肢 — yusukebe「AI時代のUIはどこへ行く？その2！」が提案する Dynamic パターン](/blogs/posts/2026/06/2026-06-07-generative-ui-dynamic-pattern/) — 2026-06-07
 - [前田太郎のパラサイトヒューマン ── 寄生する計算機から現代 AI エージェントへ](/blogs/posts/2026/05/maeda-taro-parasite-human/) — 2026-05-19
 - [意志なき創発と欲望ある主体 — AI・制度・市場を貫く主体性の境界線](/blogs/posts/2026/05/emergence-without-will-and-desiring-subjects/) — 2026-05-20
 - [AI エージェント QA 手法](/blogs/posts/2026/03/ai-agent-qa/) — 2026-03

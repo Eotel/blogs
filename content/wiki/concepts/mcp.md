@@ -19,6 +19,7 @@ related_posts:
   - "/blogs/posts/2026/03/2026-03-10-freee-mcp-claude-code/"
   - "/blogs/posts/2026/03/2026-03-22-mcp-oauth21-security/"
   - "/blogs/posts/2026/03/2026-03-25-claude-code-expert-agents/"
+  - "/posts/2026/06/2026-06-07-generative-ui-dynamic-pattern/"
 tags: ["MCP", "protocol", "agent", "integration"]
 ---
 
@@ -38,6 +39,7 @@ Anthropic が主導する、AI モデルと外部システムの連携のため�
 - [Claude Code](/blogs/wiki/tools/claude-code/) — MCP の主要クライアント実装
 - [GenAI-DrawIO-Creator](/blogs/wiki/tools/draw-io-ai/) — MCP 経由で図を生成する Claude Code 連携ツール
 - [TrussC](/blogs/wiki/tools/trussc/) — MCP サーバをコアに組み込み、アプリ自身が AI から JSON-RPC で操作できるクリエイティブコーディングフレームワーク
+- [Generative UI](/blogs/wiki/concepts/generative-ui/) — microsandbox の MCP サーバ連携など、エージェントが UI を生成するパターン
 
 ## ソース記事
 
@@ -54,3 +56,4 @@ Anthropic が主導する、AI モデルと外部システムの連携のため�
 - [freee MCP × Claude Code で確定申告の仕訳1,428件を20分で終わらせた話](/blogs/posts/2026/03/2026-03-10-freee-mcp-claude-code/) — 2026-03-10
 - [MCP のセキュリティが OAuth 2.1 で大幅進化：AI エージェントと社内データを安全に接続する仕組み](/blogs/posts/2026/03/2026-03-22-mcp-oauth21-security/) — 2026-03-22
 - [Claude Codeで「専門家チーム」を構築する：カスタムエージェントとCoworkの活用法](/blogs/posts/2026/03/2026-03-25-claude-code-expert-agents/) — 2026-03-25
+- [Generative UI に第 4 の選択肢 — yusukebe「AI時代のUIはどこへ行く？その2！」が提案する Dynamic パターン](/blogs/posts/2026/06/2026-06-07-generative-ui-dynamic-pattern/) — 2026-06-07
