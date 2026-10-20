@@ -61,7 +61,6 @@ related_posts:
   - "/blogs/posts/2023/08/2023-08-16-cc38a10d5e6691dc15bfd654f42327fe/"
   - "/blogs/posts/2023/08/2023-08-20-8ecdcf723003b75e230b1134ced76d98/"
   - "/blogs/posts/2023/09/2023-09-03-48f3d4e50716f4507f5ac3979b94133d/"
-  - "/blogs/posts/2023/10/2023-10-01-3ab8dd96be79984a5d2cb31a95bd1c1e/"
   - "/blogs/posts/2023/10/2023-10-11-1750338e7ba776ce20d7927270484c7b/"
   - "/blogs/posts/2023/11/2023-11-06-555c59c60329f5cfad2043b4153015e8/"
 
@@ -137,7 +136,6 @@ tags: ["wiki-ingest", "LLM Wiki", "backlog"]
 - [Django 動的モデル生成](/blogs/posts/2023/08/2023-08-16-cc38a10d5e6691dc15bfd654f42327fe/) — 2023-08-16 / review_candidate
 - [pandas  SettingWithCopyWarning:  A value is trying to be set on a copy of a slice from a DataFrame.](/blogs/posts/2023/08/2023-08-20-8ecdcf723003b75e230b1134ced76d98/) — 2023-08-20 / review_candidate
 - [RDS MySQL 接続確認](/blogs/posts/2023/09/2023-09-03-48f3d4e50716f4507f5ac3979b94133d/) — 2023-09-03 / review_candidate
-- [MySQL: 𠮷（つちよし）](/blogs/posts/2023/10/2023-10-01-3ab8dd96be79984a5d2cb31a95bd1c1e/) — 2023-10-01 / review_candidate
 - [utf8 -> cp932](/blogs/posts/2023/10/2023-10-11-1750338e7ba776ce20d7927270484c7b/) — 2023-10-11 / review_candidate
 - [MPTT  tree_id](/blogs/posts/2023/11/2023-11-06-555c59c60329f5cfad2043b4153015e8/) — 2023-11-06 / review_candidate
 
