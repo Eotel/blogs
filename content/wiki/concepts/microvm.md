@@ -6,6 +6,7 @@ lastmod: 2026-05-25
 aliases: ["micro-VM", "マイクロVM", "microVM"]
 related_posts:
   - "/posts/2026/05/2026-05-25-microsandbox-microvm-isolation-for-ai-agents/"
+  - "/posts/2026/06/2026-06-07-generative-ui-dynamic-pattern/"
 tags: ["microvm", "セキュリティ", "仮想化", "サンドボックス"]
 ---
 
@@ -41,12 +42,27 @@ tags: ["microvm", "セキュリティ", "仮想化", "サンドボックス"]
 
 「コードを外部に出せない」なら self-host できる microVM、「インフラを管理したくない」ならマネージド型、「状態を持ち越したい」ならコンテナ型、と用途で選ぶ。
 
+## V8 isolate との比較
+
+[Cloudflare Dynamic Workers](/blogs/wiki/tools/cloudflare-dynamic-workers/) が AI コード実行に V8 isolate を採用しているように、分離の強さと起動コストにはトレードオフがある。
+
+| | V8 isolate（Dynamic Workers 等） | microVM（Firecracker / libkrun） |
+|---|---|---|
+| 分離の実体 | V8 プロセス内隔離 | 専用カーネル（ハードウェア仮想化） |
+| 起動速度 | ミリ秒 | 数十〜100ms 程度 |
+| 分離の強さ | V8 脆弱性の影響を受けうる | コンテナ脱出・カーネルエクスプロイトに対して一段厚い壁 |
+
+リクエストごとに UI コードを実行する [Generative UI](/blogs/wiki/concepts/generative-ui/) の Dynamic パターンでは isolate の軽さが効く。セキュリティ要件が高い untrusted code の実行では microVM が選ばれる。
+
 ## 関連ページ
 
 - [microsandbox](/blogs/wiki/tools/microsandbox/) — libkrun の microVM を使う self-hosted サンドボックス
+- [Cloudflare Dynamic Workers](/blogs/wiki/tools/cloudflare-dynamic-workers/) — V8 isolate ベースの軽量サンドボックス（比較対象）
+- [Generative UI](/blogs/wiki/concepts/generative-ui/) — AI コード実行基盤として microVM / isolate を比較する文脈
 - [AI エージェント](/blogs/wiki/concepts/ai-agent/) — microVM サンドボックスの主要ユースケース
 - [プロンプトインジェクション](/blogs/wiki/concepts/prompt-injection/) — サンドボックスが実効的防御になる攻撃
 
 ## ソース記事
 
 - [microsandbox の仕組み — libkrun の microVM で AI エージェントのコードを隔離実行する](/blogs/posts/2026/05/2026-05-25-microsandbox-microvm-isolation-for-ai-agents/) — 2026-05-25
+- [Generative UI に第 4 の選択肢 — yusukebe「AI時代のUIはどこへ行く？その2！」が提案する Dynamic パターン](/blogs/posts/2026/06/2026-06-07-generative-ui-dynamic-pattern/) — 2026-06-07

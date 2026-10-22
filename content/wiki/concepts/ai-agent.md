@@ -100,6 +100,9 @@ related_posts:
   - "/blogs/posts/2026/03/2026-03-03-fbc113dfc0629b475ce1ccf808e859a0/"
   - "/blogs/posts/2026/03/2026-03-05-1128207db83f7ca1a2c940dba0fdc2c9/"
   - "/blogs/posts/2026/05/emergence-without-will-and-desiring-subjects/"
+  - "/posts/2026/06/when-intelligence-gets-cheap/"
+  - "/posts/2026/06/2026-06-07-generative-ui-dynamic-pattern/"
+  - "/posts/2026/06/end-of-software-engineering/"
 tags: ["agent", "LLM", "自律実行", "マネージドエージェント"]
 ---
 

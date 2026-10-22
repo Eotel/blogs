@@ -6,6 +6,7 @@ lastmod: 2026-05-26
 aliases: ["microsandbox", "msb"]
 related_posts:
   - "/posts/2026/05/2026-05-25-microsandbox-microvm-isolation-for-ai-agents/"
+  - "/posts/2026/06/2026-06-07-generative-ui-dynamic-pattern/"
 tags: ["microsandbox", "microvm", "libkrun", "AI エージェント", "セキュリティ"]
 ---
 
