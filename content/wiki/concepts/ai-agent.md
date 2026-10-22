@@ -2,7 +2,7 @@
 title: "AI エージェント"
 description: "自律的にタスク実行できる AI システム。複数ステップの処理を自己制御で進める"
 date: 2026-04-06
-lastmod: 2026-05-19
+lastmod: 2026-06-20
 aliases: ["AI Agent", "エージェント", "autonomous agent"]
 related_posts:
   - "/blogs/posts/2026/05/2026-05-20-philosophy-of-tech-regression/"
@@ -100,6 +100,9 @@ related_posts:
   - "/blogs/posts/2026/03/2026-03-03-fbc113dfc0629b475ce1ccf808e859a0/"
   - "/blogs/posts/2026/03/2026-03-05-1128207db83f7ca1a2c940dba0fdc2c9/"
   - "/blogs/posts/2026/05/emergence-without-will-and-desiring-subjects/"
+  - "/posts/2026/06/when-intelligence-gets-cheap/"
+  - "/posts/2026/06/2026-06-07-generative-ui-dynamic-pattern/"
+  - "/posts/2026/06/end-of-software-engineering/"
 tags: ["agent", "LLM", "自律実行", "マネージドエージェント"]
 ---
 
@@ -159,6 +162,9 @@ LangChain 創設者 Harrison Chase が指摘する重要な概念。エージェ
 
 - [前田太郎のパラサイトヒューマン ── 寄生する計算機から現代 AI エージェントへ](/blogs/posts/2026/05/maeda-taro-parasite-human/) — 2026-05-19
 - [意志なき創発と欲望ある主体 — AI・制度・市場を貫く主体性の境界線](/blogs/posts/2026/05/emergence-without-will-and-desiring-subjects/) — 2026-05-20
+- [ストレージは Gmail を、帯域は YouTube を生んだ — インテリジェンスが安くなったら何が生まれるか](/blogs/posts/2026/06/when-intelligence-gets-cheap/) — 2026-06-05
+- [Generative UI に第 4 の選択肢 — yusukebe「AI時代のUIはどこへ行く？その2！」が提案する Dynamic パターン](/blogs/posts/2026/06/2026-06-07-generative-ui-dynamic-pattern/) — 2026-06-07
+- [「ソフトウェアエンジニアリングの終わり」を読む — コードが「使い捨ての道具」になる世界の見取り図](/blogs/posts/2026/06/end-of-software-engineering/) — 2026-06-09
 - [AI エージェント QA 手法](/blogs/posts/2026/03/ai-agent-qa/) — 2026-03
 - [Claude Code Agent Teams](/blogs/posts/2026/03/claude-code-agent-teams/) — 2026-03
 - [AutoAgent](/blogs/posts/2026/04/autoagent-self-improving-agents/) — 2026-04
