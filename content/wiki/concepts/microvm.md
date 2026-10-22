@@ -2,10 +2,11 @@
 title: "microVM"
 description: "専用カーネルを持つ軽量仮想マシン。コンテナの共有カーネルより強い分離を、VM より速い起動で実現する"
 date: 2026-05-25
-lastmod: 2026-05-25
+lastmod: 2026-07-11
 aliases: ["micro-VM", "マイクロVM", "microVM"]
 related_posts:
   - "/posts/2026/05/2026-05-25-microsandbox-microvm-isolation-for-ai-agents/"
+  - "/posts/2026/06/2026-06-07-generative-ui-dynamic-pattern/"
 tags: ["microvm", "セキュリティ", "仮想化", "サンドボックス"]
 ---
 
@@ -47,6 +48,12 @@ tags: ["microvm", "セキュリティ", "仮想化", "サンドボックス"]
 - [AI エージェント](/blogs/wiki/concepts/ai-agent/) — microVM サンドボックスの主要ユースケース
 - [プロンプトインジェクション](/blogs/wiki/concepts/prompt-injection/) — サンドボックスが実効的防御になる攻撃
 
+## 関連ページ（追記）
+
+- [Cloudflare Dynamic Workers](/blogs/wiki/tools/cloudflare-dynamic-workers/) — V8 isolate ベースの軽量サンドボックス（microVM との比較対象）
+- [Generative UI](/blogs/wiki/concepts/generative-ui/) — isolate と microVM のトレードオフが現れる UI 生成の文脈
+
 ## ソース記事
 
 - [microsandbox の仕組み — libkrun の microVM で AI エージェントのコードを隔離実行する](/blogs/posts/2026/05/2026-05-25-microsandbox-microvm-isolation-for-ai-agents/) — 2026-05-25
+- [Generative UI に第 4 の選択肢 — yusukebe「AI時代のUIはどこへ行く？その2！」が提案する Dynamic パターン](/blogs/posts/2026/06/2026-06-07-generative-ui-dynamic-pattern/) — 2026-06-07
