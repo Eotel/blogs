@@ -8,6 +8,7 @@ related_posts:
   - "/blogs/posts/2026/04/2026-04-11-anthropic-multi-agent-coordination-patterns/"
   - "/blogs/posts/2026/04/claude-managed-agents-architecture/"
   - "/blogs/posts/2026/04/2026-04-10-claude-managed-agents/"
+  - "/posts/2026/06/end-of-software-engineering/"
 tags: ["マルチエージェント", "AIアーキテクチャ", "設計パターン", "Anthropic", "エージェント"]
 ---
 
@@ -76,3 +77,4 @@ Anthropic が 2026年4月に公開した、複数 AI エージェントを協調
 
 - [Anthropic が解説するマルチエージェント調整パターン 5 選](/blogs/posts/2026/04/2026-04-11-anthropic-multi-agent-coordination-patterns/) — 2026-04-11
 - [Claude Managed Agents のアーキテクチャ: Brain / Session / Hands の分離設計](/blogs/posts/2026/04/claude-managed-agents-architecture/) — 2026-04-10
+- [「ソフトウェアエンジニアリングの終わり」を読む — コードが「使い捨ての道具」になる世界の見取り図](/blogs/posts/2026/06/end-of-software-engineering/) — 2026-06-09
