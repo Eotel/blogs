@@ -5,7 +5,7 @@ date: 2026-06-09
 lastmod: 2026-06-09
 aliases: ["Agentic Engineering", "エージェンティックエンジニアリング", "Agent-as-a-Service", "AaaS"]
 related_posts:
-  - "/blogs/posts/2026/06/end-of-software-engineering/"
+  - "/posts/2026/06/end-of-software-engineering/"
 tags: ["AIエージェント", "ソフトウェアエンジニアリング", "LLM"]
 ---
 
